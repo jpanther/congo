@@ -1,6 +1,6 @@
-# Hugo Congo Theme
+# Congo
 
-Congo is designed to be a lightweight and fast theme for Hugo. It's based upon Tailwind CSS with a clean and minimalist design.
+Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tailwind CSS with a clean and minimalist design.
 
 ## Features
 
