@@ -1,5 +1,5 @@
 {
-  "name": "hugo-congo",
+  "name": "congo",
   "version": "1.0.0",
   "description": "Congo theme for Hugo",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpanther/hugo-congo.git"
+    "url": "git+https://github.com/jpanther/Congo.git"
   },
   "keywords": [
     "hugo",
@@ -20,9 +20,9 @@
   "author": "James Panther",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jpanther/hugo-congo/issues"
+    "url": "https://github.com/jpanther/Congo/issues"
   },
-  "homepage": "https://github.com/jpanther/hugo-congo#readme",
+  "homepage": "https://github.com/jpanther/Congo#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "prettier": "^2.3.2",

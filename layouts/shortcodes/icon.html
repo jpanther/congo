@@ -1,4 +1,4 @@
 <span class="relative inline-block align-text-bottom icon">
-  {{- $icon:=print "themes/congo/assets/icons/" . ".svg" -}}
-  {{ readFile $icon | safeHTML }}
+  {{ $icon := resources.Get (print "icons/" . ".svg") }}
+  {{ $icon | safeHTML }}
 </span>

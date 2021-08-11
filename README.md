@@ -43,16 +43,16 @@ Change into the directory for your Hugo website, initialise a new repository and
 ```bash
 cd mywebsite
 git init
-git submodule add https://github.com/jpanther/hugo-congo.git themes/congo
+git submodule add https://github.com/jpanther/Congo.git themes/congo
 ```
 
 _**Note:** You need to substitute `mywebsite` for the correct folder name you used in Step 2._
 
 #### Install manually
 
-Download the latest version of the theme from: [https://github.com/jpanther/hugo-congo/archive/master.zip](https://github.com/jpanther/hugo-congo/archive/master.zip)
+Download the latest version of the theme from: [https://github.com/jpanther/Congo/archive/master.zip](https://github.com/jpanther/Congo/archive/master.zip)
 
-Extract the archive and you should have a folder named `hugo-congo-master`.
+Extract the archive and you should have a folder named `Congo-master`.
 
 Rename the folder to `congo` and move it to the `themes/` directory inside your `mywebsite` folder.
 
