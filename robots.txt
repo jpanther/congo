@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://jpanther.github.io/Congo/sitemap.xml
