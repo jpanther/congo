@@ -1,0 +1,32 @@
+{
+  "name": "hugo-congo",
+  "version": "1.0.0",
+  "description": "Congo theme for Hugo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./static/css/main.css --jit -w",
+    "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./static/css/main.css --jit --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpanther/hugo-congo.git"
+  },
+  "keywords": [
+    "hugo",
+    "hugo-theme",
+    "tailwind",
+    "dark-mode"
+  ],
+  "author": "James Panther",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpanther/hugo-congo/issues"
+  },
+  "homepage": "https://github.com/jpanther/hugo-congo#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "prettier": "^2.3.2",
+    "prettier-plugin-go-template": "^0.0.11",
+    "tailwindcss": "^2.2.7"
+  }
+}

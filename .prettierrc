@@ -1,0 +1,11 @@
+{
+  "printWidth": 100,
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ]
+}

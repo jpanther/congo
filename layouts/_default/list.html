@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ partial "section-heading.html" . }}
+  <section>
+    {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+      <h2 class="mt-12 text-2xl font-bold first:mt-8">{{ .Key }}</h2>
+      <hr class="border-gray-400 border-dotted w-36" />
+      {{ range .Pages }}
+        {{ partial "article-link.html" . }}
+      {{ end }}
+    {{ end }}
+  </section>
+  {{ partial "pagination.html" . }}
+{{ end }}

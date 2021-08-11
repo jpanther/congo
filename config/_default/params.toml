@@ -1,0 +1,9 @@
+[verification]
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""
+
+[fathomAnalytics]
+  # site = "ABC12345"
+  # domain = "llama.yoursite.com"

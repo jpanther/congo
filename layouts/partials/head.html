@@ -1,0 +1,68 @@
+<head>
+  <meta charset="utf-8" />
+  {{ with .Site.LanguageCode }}
+    <meta http-equiv="content-language" content="{{ . }}" />
+  {{ end }}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {{/* Title */}}
+  {{ if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    <meta name="title" content="{{ .Site.Title }}" />
+  {{- else -}}
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+    <meta name="title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+  {{- end }}
+  {{/* Metadata */}}
+  {{ with .Params.Description -}}
+    <meta name="description" content="{{ . }}" />
+  {{- else -}}
+    <meta name="description" content="{{ $.Site.Params.Description }}" />
+  {{- end }}
+  {{ with .Site.Params.keywords -}}
+    <meta name="keywords" content="{{ . }}" />
+  {{- end }}
+  <base href="{{ .Site.BaseURL }}" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{/* Styles */}}
+  <link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
+  {{ if (fileExists "static/css/custom.css") -}}
+    <link type="text/css" rel="stylesheet" href="{{ "css/custom.css" | absURL }}" />
+  {{- end }}
+  {{/* Icons */}}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | absURL }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | absURL }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | absURL }}" />
+  <link rel="manifest" href="{{ "/site.webmanifest" | absURL }}" />
+  {{/* Site Verification */}}
+  {{ with .Site.Params.verification.google }}
+    <meta name="google-site-verification" content="{{ . }}" />
+  {{ end }}
+  {{ with .Site.Params.verification.bing }}
+    <meta name="msvalidate.01" content="{{ . }}" />
+  {{ end }}
+  {{ with .Site.Params.verification.pinterest }}
+    <meta name="p:domain_verify" content="{{ . }}" />
+  {{ end }}
+  {{ with .Site.Params.verification.yandex }}
+    <meta name="yandex-verification" content="{{ . }}" />
+  {{ end }}
+  {{/* Social */}}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{/* Generator */}}
+  {{ hugo.Generator }}
+  {{/* Me */}}
+  {{ with .Site.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
+  {{ with .Site.Author.email }}<link href="mailto:{{ . }}" rel="me" />{{ end }}
+  {{ with .Site.Author.twitter }}<link href="{{ . }}" rel="me" />{{ end }}
+  {{ with .Site.Author.keybase }}<link href="{{ . }}" rel="me" />{{ end }}
+  {{ with .Site.Author.github }}<link href="{{ . }}" rel="me" />{{ end }}
+  {{ with .Site.Author.linkedin }}<link href="{{ . }}" rel="me" />{{ end }}
+  {{/* Analytics */}}
+  {{ partialCached "analytics.html" .Site }}
+  {{/* Extend head - eg. for custom analytics scripts, etc. */}}
+  {{ if templates.Exists "partials/extend-head.html" }}
+    {{ partialCached "extend-head.html" .Site }}
+  {{ end }}
+</head>

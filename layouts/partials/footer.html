@@ -1,0 +1,34 @@
+<footer class="py-10 text-sm">
+  {{/* Copyright */}}
+  <p class="text-gray-400 dark:text-gray-500">
+    {{- with .Site.Copyright }}
+      {{ . | emojify | markdownify }}
+    {{- else }}
+      &copy;
+      {{ now.Format "2006" }}
+      {{ .Site.Author.name }}
+    {{- end }}
+  </p>
+  {{/* Theme attribution */}}
+  {{ if .Site.Params.attribution | default true }}
+    <p class="text-xs text-gray-300 dark:text-gray-600">
+      Powered by
+      <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a>
+      &amp;
+      <a class="hover:underline" href="https://git.io/hugo-congo" target="_blank">Congo</a>
+    </p>
+  {{ end }}
+</footer>
+
+{{/* Extend footer - eg. for extra scripts, etc. */}}
+{{ if templates.Exists "partials/extend-footer.html" }}
+  {{ partialCached "extend-footer.html" . }}
+{{ end }}
+
+{{/* Include mermaid.js only on pages that use the shortcode */}}
+{{- if (in (string .Content) "class=\"mermaid\"") -}}
+  <script src="https://unpkg.com/mermaid@8.11.4/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ theme: "default" });
+  </script>
+{{- end -}}

@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <article class="max-w-full prose dark:prose-light">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <section>{{ .Content | emojify }}</section>
+  </article>
+{{ end }}

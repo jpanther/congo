@@ -1,0 +1,23 @@
+<article>
+  <h3 class="mt-6 text-xl font-semibold">
+    {{ if isset .Params "externalurl" }}
+      <a class="hover:underline" href="{{ .Params.externalurl }}" target="_blank" rel="external"
+        >{{ .Title }}</a
+      >
+      <span
+        class="text-sm cursor-default"
+        style="vertical-align: super;"
+        title="Link to external site"
+        >&#8599;</span
+      >
+    {{ else }}
+      <a class="hover:underline" href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ end }}
+    {{ if templates.Exists "partials/extend-article-link.html" }}
+      {{ partial "extend-article-link.html" . }}
+    {{ end }}
+  </h3>
+  <div class="text-sm text-gray-400 dark:text-gray-500">
+    {{ partial "meta.html" . }}
+  </div>
+</article>
