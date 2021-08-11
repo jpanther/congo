@@ -1,0 +1,28 @@
+baseURL = "https://example.com"
+theme = "Congo"
+languageCode = "en-AU"
+title = "Congo"
+
+[author]
+  name = "Freddy Blogger"
+  image = "https://i.pravatar.cc/150?img=11"
+  twitter = "https://twitter.com/"
+  github = "https://github.com/"
+  linkedin = "https://linkedin.com/"
+
+[[menu.main]]
+  name = "Blog"
+  pageRef = "blog"
+  weight = 10
+[[menu.main]]
+  name = "About"
+  pageRef = "about"
+  weight = 20
+[[menu.main]]
+  name = "Tags"
+  url = "tags"
+  weight = 30
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
