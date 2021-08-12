@@ -1,3 +1,12 @@
+# Site configuration for the Congo demo site
+# --------------------------------------------------------------------------
+# NOTE: You should not use this file as a template for your configuration
+# as it does not contain all the required theme settings!
+#
+# Refer to the theme docs for configuration instructions if you're unsure.
+# https://github.com/jpanther/Congo#readme
+# --------------------------------------------------------------------------
+
 baseURL = "https://example.com"
 theme = "Congo"
 languageCode = "en-AU"
@@ -26,3 +35,6 @@ title = "Congo"
 [taxonomies]
   category = "categories"
   tag = "tags"
+
+[markup.highlight]
+  noClasses = false
