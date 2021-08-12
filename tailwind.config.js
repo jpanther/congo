@@ -46,6 +46,9 @@ module.exports = {
               code: {
                 color: theme("colors.secondary.700"),
               },
+              "pre code": {
+                color: theme("colors.gray.700"),
+              },
               pre: {
                 backgroundColor: theme("colors.gray.50"),
               },
