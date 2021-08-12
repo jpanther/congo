@@ -2,14 +2,15 @@
 
 Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tailwind CSS with a clean and minimalist design.
 
+[Screenshot](https://raw.githubusercontent.com/jpanther/Congo/stable/images/screenshot.png)
+
 ## Features
 
 - Built with [Tailwind CSS JIT](https://tailwindcss.com/docs/just-in-time-mode) for minified stylesheets without any excess code
 - Theme can be easily edited using simple [Tailwind colour definitions and styles](https://tailwindcss.com/docs)
 - Dark mode support (auto-switching based upon browser)
 - Highly customisable [configuration](#configuration)
-- Custom content types and menus
-- Custom taxonomies
+- Flexible with any content types, taxonomies and menus
 - SVG social icons from [FontAwesome 5](https://fontawesome.com/)
 - SEO friendly
 - [Fathom Analytics](https://usefathom.com/ref/RLAJSV) and Google Analytics
@@ -50,9 +51,9 @@ _**Note:** You need to substitute `mywebsite` for the correct folder name you us
 
 #### Install manually
 
-Download the latest version of the theme from: [https://github.com/jpanther/Congo/archive/master.zip](https://github.com/jpanther/Congo/archive/master.zip)
+Download the latest version of the theme from: [https://github.com/jpanther/Congo/archive/stable.zip](https://github.com/jpanther/Congo/archive/stable.zip)
 
-Extract the archive and you should have a folder named `Congo-master`.
+Extract the archive and you should have a folder named `Congo-stable`.
 
 Rename the folder to `congo` and move it to the `themes/` directory inside your `mywebsite` folder.
 
