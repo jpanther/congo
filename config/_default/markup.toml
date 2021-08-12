@@ -1,5 +1,6 @@
-[highlight]
-  noClasses = false
-
+[goldmark]
 [goldmark.renderer]
   unsafe = true
+
+[highlight]
+  noClasses = false
