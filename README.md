@@ -2,7 +2,7 @@
 
 Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tailwind CSS with a clean and minimalist design.
 
-[Screenshot](https://raw.githubusercontent.com/jpanther/Congo/stable/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/jpanther/Congo/stable/images/screenshot.png)
 
 ## Features
 
@@ -11,6 +11,7 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
 - Dark mode support (auto-switching based upon browser)
 - Highly customisable [configuration](#configuration)
 - Flexible with any content types, taxonomies and menus
+- Diagrams and visualisations using [MermaidJS](https://mermaid-js.github.io/)
 - SVG social icons from [FontAwesome 5](https://fontawesome.com/)
 - SEO friendly
 - [Fathom Analytics](https://usefathom.com/ref/RLAJSV) and Google Analytics
@@ -188,6 +189,72 @@ npm run dev
 ```
 
 Now whenever you make a change, the (non-minified) CSS files will be rebuilt automatically. This mode is useful to run when using `hugo server` to preview your site during development. Remember to perform a full build before publishing your website.
+
+## Shortcodes
+
+In addition to all the [default Hugo shortcodes](https://gohugo.io/content-management/shortcodes/), Congo adds a few extras for additional functionality.
+
+### Alert
+
+`alert` outputs its contents as a stylised message box within your article. It's useful for drawing attention to important information that you don't want the reader to miss.
+
+The input is written in Markdown so you can format it however you please.
+
+**Usage:**
+
+```md
+{{< alert >}}
+**Warning!** This action is destructive!
+{{< /alert >}}
+```
+
+### Icon
+
+`icon` outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size.
+
+**Usage:**
+
+```md
+{{< icon "github" >}}
+```
+
+Icons are populated using Hugo pipelines which makes them very flexible. Congo ships with a default set of icons for social, email, and generic links. If you want to add your own icons, you can simply place them in `/assets/icons/` and reference them using the `icon` shortcode passing in the icon's filename (without the `.svg.` extension).
+
+Icons can also be used in partials by calling the icon partial.
+
+**Usage:**
+
+```go
+  {{ partial "icon.html" "github" }}
+```
+
+### Lead
+
+`lead` is used to bring emphasis to the start of an article. It can be used to style an introduction, or to call out an important piece of information. Simply wrap any Markdown content in the `lead` shortcode.
+
+```md
+{{< lead >}}
+When life gives you lemons, make lemonade.
+{{< /lead >}}
+```
+
+### Mermaid
+
+`mermaid` allows you to draw detailed diagrams and visualisations using text. It uses MermaidJS under the hood and supports a wide variety of diagrams, charts and other output formats.
+
+Simply write your Mermaid syntax within the `mermaid` shortcode and let the plugin do the rest.
+
+**Usage:**
+
+```md
+{{<mermaid>}}
+graph LR;
+A[Lemons]-->B[Lemonade];
+B-->C[Profit]
+{{</mermaid>}}
+```
+
+Refer to the [official Mermaid docs](https://mermaid-js.github.io/) for details on syntax and supported diagram types.
 
 ## Contributing
 
