@@ -1,8 +1,17 @@
+# -- Site Verification --
+# Provide the verification strings for the providers below and the
+# corresponding meta tags will be added to the site <head>.
+
 [verification]
   # google = ""
   # bing = ""
   # pinterest = ""
   # yandex = ""
+
+
+# -- Fathom Analytics --
+# To enable Fathom Analytics on your site, specify your site code below.
+# If you also use a custom domain with Fathom, you can add it at `domain`.
 
 [fathomAnalytics]
   # site = "ABC12345"

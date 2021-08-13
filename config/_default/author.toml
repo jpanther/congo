@@ -1,3 +1,8 @@
+# -- Site Author Details --
+# To display the author box below each article, configure the settings below.
+# The author image should be placed inside the `/static` folder.
+# Uncomment any links to enable them. The icons will be displayed in the order listed.
+
 [author]
   # name = "Your name here"
   # image = "/img/author.jpg"

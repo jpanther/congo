@@ -1,3 +1,6 @@
+# -- Markup --
+# These settings are required for the theme to function.
+
 [goldmark]
 [goldmark.renderer]
   unsafe = true
