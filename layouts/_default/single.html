@@ -7,7 +7,7 @@
       </div>
     </header>
     <section class="prose dark:prose-light">
-      {{ partial "heading-anchor.html" .Content | emojify }}
+      {{ .Content | emojify }}
     </section>
     <footer>
       {{ partialCached "author.html" . }}

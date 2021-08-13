@@ -22,7 +22,6 @@
   {{ with .Site.Params.keywords -}}
     <meta name="keywords" content="{{ . }}" />
   {{- end }}
-  <base href="{{ .Site.BaseURL }}" />
   <link rel="canonical" href="{{ .Permalink }}" />
   {{/* Styles */}}
   <link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}" />

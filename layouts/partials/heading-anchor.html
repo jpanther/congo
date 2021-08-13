@@ -1,1 +1,0 @@
-{{ . | replaceRE "(<h[2-4] id=\"([^\"]+)\".+)(</h[2-9]+>)" `${1}&nbsp;<a class="heading-anchor" href="#${2}" aria-label="Anchor">#</a> ${3}` | safeHTML }}

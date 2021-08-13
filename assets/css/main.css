@@ -9,20 +9,22 @@
 
 /* Heading anchors */
 .prose .heading-anchor {
-  @apply absolute top-0 w-6 no-underline opacity-0 -left-6;
+  @apply absolute top-0 no-underline opacity-0;
+  width: 1.1em;
+  left: -1.1em;
 }
 .prose .heading-anchor:hover {
-  @apply underline bg-transparent opacity-100 text-primary-600;
+  @apply underline bg-transparent text-primary-600;
 }
-.prose h2:focus > .heading-anchor,
+.prose .heading-anchor:hover,
+.prose .heading-anchor:focus,
 .prose h2:hover > .heading-anchor,
-.prose h3:focus > .heading-anchor,
 .prose h3:hover > .heading-anchor,
-.prose h4:focus > .heading-anchor,
 .prose h4:hover > .heading-anchor {
   @apply opacity-100;
 }
 
+/* Prose escape hatch */
 .no-prose > p {
   @apply mt-0 last:mb-0;
 }
