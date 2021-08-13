@@ -32,7 +32,7 @@ title = "Congo"
   weight = 20
 [[menu.main]]
   name = "Tags"
-  url = "tags"
+  pageRef = "tags"
   weight = 30
 
 [markup.goldmark]
