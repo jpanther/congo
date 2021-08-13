@@ -110,6 +110,9 @@ module.exports = {
                 color: theme("colors.gray.200"),
                 backgroundColor: theme("colors.gray.700"),
               },
+              "pre code": {
+                color: theme("colors.gray.200"),
+              },
               thead: {
                 color: theme("colors.white"),
                 borderBottomColor: theme("colors.gray.400"),
