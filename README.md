@@ -18,6 +18,7 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
 - Heading anchors
 - HTML and Emoji support in articles
 - SEO friendly
+- RSS feeds
 - Fathom Analytics and Google Analytics support
 - Favicons support
 - Comments support

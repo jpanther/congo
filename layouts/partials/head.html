@@ -23,6 +23,9 @@
     <meta name="keywords" content="{{ . }}" />
   {{- end }}
   <link rel="canonical" href="{{ .Permalink }}" />
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
   {{/* Styles */}}
   <link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
   {{ if (fileExists "static/css/custom.css") -}}
