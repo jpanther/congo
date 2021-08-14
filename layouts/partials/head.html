@@ -29,10 +29,14 @@
     <link type="text/css" rel="stylesheet" href="{{ "css/custom.css" | absURL }}" />
   {{- end }}
   {{/* Icons */}}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | absURL }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | absURL }}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | absURL }}" />
-  <link rel="manifest" href="{{ "/site.webmanifest" | absURL }}" />
+  {{ if templates.Exists "partials/favicons.html" }}
+    {{ partialCached "favicons.html" .Site }}
+  {{ else }}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | absURL }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | absURL }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | absURL }}" />
+    <link rel="manifest" href="{{ "/site.webmanifest" | absURL }}" />
+  {{ end }}
   {{/* Site Verification */}}
   {{ with .Site.Params.verification.google }}
     <meta name="google-site-verification" content="{{ . }}" />

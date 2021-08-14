@@ -18,12 +18,11 @@
       <a class="hover:underline" href="https://git.io/hugo-congo" target="_blank">Congo</a>
     </p>
   {{ end }}
+  {{/* Extend footer - eg. for extra scripts, etc. */}}
+  {{ if templates.Exists "partials/extend-footer.html" }}
+    {{ partialCached "extend-footer.html" . }}
+  {{ end }}
 </footer>
-
-{{/* Extend footer - eg. for extra scripts, etc. */}}
-{{ if templates.Exists "partials/extend-footer.html" }}
-  {{ partialCached "extend-footer.html" . }}
-{{ end }}
 
 {{/* Include mermaid.js only on pages that use the shortcode */}}
 {{- if (in (string .Content) "class=\"mermaid\"") -}}
