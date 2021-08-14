@@ -3,7 +3,7 @@
     <header>
       <h1 class="mt-0 text-4xl font-extrabold">{{ .Title }}</h1>
       <div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
-        {{ partial "meta.html" . }}
+        {{ partial "article-meta.html" . }}
       </div>
     </header>
     <section class="prose dark:prose-light">
@@ -11,6 +11,7 @@
     </section>
     <footer>
       {{ partialCached "author.html" . }}
+      {{ partial "article-pagination.html" . }}
     </footer>
     {{/* Comments */}}
     {{ if templates.Exists "partials/comments.html" }}

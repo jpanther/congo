@@ -1,28 +1,30 @@
-<div class="flex items-center pt-8">
-  {{ with .Site.Author.image }}
-    <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . }}" />
-  {{ end }}
-  <div>
-    {{ with .Site.Author.name }}
-      <div class="font-semibold leading-6 text-gray-800 dark:text-gray-300">
-        {{ . }}
-      </div>
+{{ if .Site.Params.article.showAuthor | default true }}
+  <div class="flex items-center pt-8">
+    {{ with .Site.Author.image }}
+      <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . }}" />
     {{ end }}
-    {{ with .Site.Author.links }}
-      <div class="flex flex-wrap text-lg text-gray-400 dark:text-gray-500">
-        {{ range $links := . }}
-          {{ range $name, $url := $links }}
-            <a
-              class="mr-2 hover:text-primary-700 dark:hover:text-primary-400"
-              href="{{ $url }}"
-              target="_blank"
-              alt="{{ $name | title }}"
-              rel="me"
-              >{{ partial "icon.html" $name }}</a
-            >
+    <div>
+      {{ with .Site.Author.name }}
+        <div class="font-semibold leading-6 text-gray-800 dark:text-gray-300">
+          {{ . }}
+        </div>
+      {{ end }}
+      {{ with .Site.Author.links }}
+        <div class="flex flex-wrap text-lg text-gray-400 dark:text-gray-500">
+          {{ range $links := . }}
+            {{ range $name, $url := $links }}
+              <a
+                class="mr-2 hover:text-primary-700 dark:hover:text-primary-400"
+                href="{{ $url }}"
+                target="_blank"
+                alt="{{ $name | title }}"
+                rel="me"
+                >{{ partial "icon.html" $name }}</a
+              >
+            {{ end }}
           {{ end }}
-        {{ end }}
-      </div>
-    {{ end }}
+        </div>
+      {{ end }}
+    </div>
   </div>
-</div>
+{{ end }}

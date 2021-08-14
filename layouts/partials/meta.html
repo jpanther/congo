@@ -1,8 +1,0 @@
-<time datetime="{{ .Date }}">{{ .Date.Format "2 January 2006" }}</time>
-{{ if ne .ReadingTime 0 }}
-  <span class="px-1">&middot;</span>
-  <span title="Reading time">
-    {{ .ReadingTime }}
-    min{{ if gt .ReadingTime 1 }}s{{ end }}
-  </span>
-{{ end }}
