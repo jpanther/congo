@@ -9,7 +9,7 @@
       </div>
     {{ end }}
     {{ with .Site.Author.links }}
-      <div class="flex text-lg text-gray-400 dark:text-gray-500">
+      <div class="flex flex-wrap text-lg text-gray-400 dark:text-gray-500">
         {{ range $links := . }}
           {{ range $name, $url := $links }}
             <a

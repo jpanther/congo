@@ -9,11 +9,13 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
 ## Features
 
 - Built with Tailwind CSS JIT for minified stylesheets without any excess code
+- Fully responsive layout
 - Dark mode (auto-switching based upon browser)
 - Highly customisable configuration
 - Flexible with any content types, taxonomies and menus
 - Diagrams and visualisations using Mermaid JS
 - SVG icons from FontAwesome 5
+- Heading anchors
 - HTML and Emoji support in articles
 - SEO friendly
 - Fathom Analytics and Google Analytics support
