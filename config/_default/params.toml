@@ -1,11 +1,14 @@
 # -- Theme Options --
 # These options control how the theme functions and allow you to
 # customise the display of your website.
+#
+# Refer to the README for more details about each of these parameters.
 
 [article]
   showDate = true
   dateFormat = "2 January 2006"
   showReadingTime = true
+  showHeadingAnchors = true
   showAuthor = true
   showPagination = true
 
@@ -15,20 +18,11 @@
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
 
-# -- Site Verification --
-# Provide the verification strings for the providers below and the
-# corresponding meta tags will be added to the site <head>.
-
 [verification]
   # google = ""
   # bing = ""
   # pinterest = ""
   # yandex = ""
-
-
-# -- Fathom Analytics --
-# To enable Fathom Analytics on your site, specify your site code below.
-# If you also use a custom domain with Fathom, you can add it at `domain`.
 
 [fathomAnalytics]
   # site = "ABC12345"

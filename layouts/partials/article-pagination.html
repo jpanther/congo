@@ -1,4 +1,4 @@
-{{ if .Site.Params.article.showPagination | default true }}
+{{ if .Params.showPagination | default (.Site.Params.article.showPagination | default true) }}
   {{ if or .NextInSection .PrevInSection }}
     <div class="pt-8">
       <hr class="border-gray-300 border-dotted dark:border-gray-600" />

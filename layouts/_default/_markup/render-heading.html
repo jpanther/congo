@@ -1,1 +1,1 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }} <a class="heading-anchor" href="#{{ .Anchor | safeURL }}" aria-label="Anchor">#</a></h{{ .Level }}>
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }} {{ if .Page.Params.showHeadingAnchors | default (.Page.Site.Params.article.showHeadingAnchors | default true) }}<a class="heading-anchor" href="#{{ .Anchor | safeURL }}" aria-label="Anchor">#</a>{{ end }}</h{{ .Level }}>

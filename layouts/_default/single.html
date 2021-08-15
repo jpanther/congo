@@ -17,7 +17,7 @@
       {{ .Content | emojify }}
     </section>
     <footer>
-      {{ partialCached "author.html" . }}
+      {{ partial "author.html" . }}
       {{ partial "article-pagination.html" . }}
     </footer>
     {{/* Comments */}}
