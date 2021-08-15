@@ -1,10 +1,9 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {{ $excludedKinds := slice "taxonomy" "term" }}
   {{ range .Data.Pages }}
-    {{ if not (in $excludedKinds .Kind) }}
-      {{ if not (isset .Params "externalurl") }}
+    {{ if not (in .Site.Params.sitemap.excludedKinds .Kind) }}
+      {{ if and (.Param "xml" | default true) (not (isset .Params "externalurl")) }}
         {{- if .Permalink -}}
           <url>
             <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}

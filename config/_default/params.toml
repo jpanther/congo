@@ -12,6 +12,9 @@
 [taxonomy]
   showTermCount = true
 
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
 # -- Site Verification --
 # Provide the verification strings for the providers below and the
 # corresponding meta tags will be added to the site <head>.

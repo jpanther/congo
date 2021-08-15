@@ -45,6 +45,8 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
   - [Configuration](#configuration)
     - [Getting started](#getting-started)
     - [Organising content](#organising-content)
+    - [Parameters](#parameters)
+  - [Front Matter](#front-matter)
   - [Shortcodes](#shortcodes)
     - [Alert](#alert)
     - [Icon](#icon)
@@ -147,7 +149,9 @@ It's also useful to set the author configuration in the `config/_default/author.
 
 [author]
 name = "Your name"
-twitter = "https://twitter.com/username"
+links = [
+  { twitter = "https://twitter.com/username" }
+]
 ```
 
 ### Organising content
@@ -181,6 +185,32 @@ When you create a new taxonomy, you will need to adjust the navigation links on 
   pageRef = "topics"
   weight = 20
 ```
+
+### Parameters
+
+Congo provides a large number of configuration parameters that control how the theme functions. The table below outlines every available parameter in the `config/_default/params.toml` file.
+
+<!-- prettier-ignore-start -->
+|Name|Type|Default|Description|
+| --- | --- | --- | --- |
+|`article.showDate`|boolean|`true`|Whether or not the article date is displayed.|
+|`article.dateFormat`|string|`"2 January 2006"`|How the article date is formatted. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
+|`article.showReadingTime`|boolean|`true`|Whether or not reading time is displayed.|
+|`article.showAuthor`|boolean|`true`|Whether or not the author box is displayed in the article footer.|
+|`article.showPagination`|boolean|`true`|Whether or not the next/previous article links are displayed in the article footer.|
+|`taxonomy.showTermCount`|boolean|`true`|Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.|
+|`sitemap.excludedKinds`|array of strings|`["taxonomy", "term"]`|Kinds of content that should be excluded from the generated `sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values.|
+<!-- prettier-ignore-end -->
+
+## Front Matter
+
+In addition to the default Hugo front matter parameters, Congo adds a number of additional options to customise the presentation of individual articles. All the available theme parameters are listed below. Keep in mind that you only need to specify these parameters in your front matter when you want to override the default.
+
+<!-- prettier-ignore-start -->
+|Name|Type|Default|Description|
+| --- | --- | --- | --- |
+|`xml`|boolean|`true`|Whether or not this article is included in the generated sitemap.xml file.|
+<!-- prettier-ignore-end -->
 
 ## Shortcodes
 
