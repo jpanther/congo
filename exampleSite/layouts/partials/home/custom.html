@@ -1,0 +1,33 @@
+<script type="text/javascript">
+  function displayFunction() {
+    var pageDiv = document.getElementById("page");
+    var profileDiv = document.getElementById("profile");
+    var layoutSpan = document.getElementById("layout");
+    if (pageDiv.style.display === "none") {
+      pageDiv.style.display = "block";
+      profileDiv.style.display = "none";
+      layoutSpan.innerHTML = "page";
+    } else {
+      pageDiv.style.display = "none";
+      profileDiv.style.display = "block";
+      layoutSpan.innerHTML = "profile";
+    }
+  }
+</script>
+
+<div class="flex px-4 py-3 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+  <span class="pr-3 text-primary-400">
+    {{ partial "icon.html" "exclamation-triangle" }}
+  </span>
+  <span class="no-prose dark:text-gray-300">
+    This is a demo of the `<code id="layout" class="">page</code>` homepage layout.
+    <button class="px-2 py-2 font-bold" onclick="displayFunction()">Switch</button>
+  </span>
+</div>
+
+<div id="page">
+  {{ partial "partials/home/page.html" . }}
+</div>
+<div id="profile">
+  {{ partial "partials/home/profile.html" . }}
+</div>

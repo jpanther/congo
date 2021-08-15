@@ -12,6 +12,7 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
 - Fully responsive layout
 - Dark mode (auto-switching based upon browser)
 - Highly customisable configuration
+- Multiple homepage layouts
 - Flexible with any content types, taxonomies and menus
 - Diagrams and visualisations using Mermaid JS
 - SVG icons from FontAwesome 5
@@ -44,9 +45,14 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
     - [4. Set up your configuration files](#4-set-up-your-configuration-files)
   - [Configuration](#configuration)
     - [Getting started](#getting-started)
+    - [Homepage layout](#homepage-layout)
+      - [Page layout](#page-layout)
+      - [Profile layout](#profile-layout)
+      - [Custom layout](#custom-layout)
+      - [Recent articles](#recent-articles)
     - [Organising content](#organising-content)
     - [Parameters](#parameters)
-  - [Front Matter](#front-matter)
+  - [Front matter](#front-matter)
   - [Shortcodes](#shortcodes)
     - [Alert](#alert)
     - [Icon](#icon)
@@ -121,11 +127,11 @@ Refer to the Hugo docs for more information or read the next section to learn mo
 
 Congo is a highly customisable theme and uses some of the latest Hugo features to simplify how it is configured.
 
-The theme ships with a default configuration that gets you up and running with a basic blog or static website. This default configuration can be found in the `themes/congo/config/_default/` folder.
+The theme ships with a default configuration that gets you up and running with a basic blog or static website.
 
 > Configuration files bundled with the theme are provided in TOML format as this is the default Hugo syntax. Feel free to convert your config to YAML or JSON as you wish.
 
-The default theme configuration is documented in each file so you can freely adjust the settings to meet your needs.
+The default theme configuration is documented in each file so you can freely adjust the settings to meet your needs. If you followed the installation instructions above, you should adjust your theme configuration by modifying the files in the `config/_default/` folder of your Hugo project.
 
 ### Getting started
 
@@ -153,6 +159,46 @@ links = [
   { twitter = "https://twitter.com/username" }
 ]
 ```
+
+### Homepage layout
+
+Congo provides a fully flexible homepage layout. There are two main templates to choose from with additional settings to adjust the design. Alternatively, you can also provide your own template and have complete control over the homepage content.
+
+The layout of the homepage is controlled by the `homepage.layout` setting in the `params.toml` configuration file. Additionally, all layouts have the option to include a listing of recent articles.
+
+#### Page layout
+
+The default layout is the page layout. It's simply a normal content page that displays your Markdown content. It's great for static websites and provides a lot of flexibility.
+
+![Page layout](https://raw.githubusercontent.com/jpanther/Congo/stable/images/home-page.jpg)
+
+To enable the page layout, set `homepage.layout = "page"` in the `params.toml` configuration file.
+
+#### Profile layout
+
+The profile layout is great for personal websites and blogs. It puts the author's details front and centre by providing an image and links to social profiles.
+
+The author information is provided in the `author.toml` configuration file. Additionally, any Markdown content that is provided in the homepage content will be placed below the author profile. This allows extra flexibility for displaying a bio or other custom content using shortcodes.
+
+![Profile layout](https://raw.githubusercontent.com/jpanther/Congo/stable/images/home-profile.jpg)
+
+To enable the profile layout, set `homepage.layout = "profile"` in the `params.toml` configuration file.
+
+#### Custom layout
+
+If the built-in homepage layouts aren't sufficient for your needs, you have the option to provide your own custom layout. This allows you to have total control over the page content and essentially gives you a blank slate to work with.
+
+To enable the custom layout, set `homepage.layout = "custom"` in the `params.toml` configuration file.
+
+With the configuration value set, create a new `custom.html` file and place it in `layouts/partials/home/custom.html`. Now whatever is in the `custom.html` file will be placed in the content area of the site homepage. You can use whatever HTML, Tailwind, or Hugo templating functions to define your layout.
+
+#### Recent articles
+
+All homepage layouts have the option of displaying recent articles below the main page content. To enable this, simply set the `homepage.showList` setting to `true` in the `params.toml` configuration file.
+
+![Profile layout with recent articles](https://raw.githubusercontent.com/jpanther/Congo/stable/images/home-profile-list.jpg)
+
+The articles listed in this section are derived from the `homepage.listSections` setting which allows for whatever content types you are using on your website. For instance, if you had content sections for _posts_ and _projects_ you could set this setting to `["posts", "projects"]` and all the articles in these two sections would be used to populate the recent list. The theme expects this setting to be an array so if you only use one section for all your content, you should set this accordingly: `["blog"]`.
 
 ### Organising content
 
@@ -195,23 +241,27 @@ Many of the article defaults here can be overridden on a per article basis by sp
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
+|`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file.|
+|`homepage.showList`|boolean|`false`|Whether or not recent articles are listed on the homepage beneath the page content.|
+|`homepage.listSections`|array of strings|`["blog"]`|The sections of content to include in the recent list when `homepage.showList` is `true`.|
 |`article.showDate`|boolean|`true`|Whether or not article dates are displayed.|
 |`article.dateFormat`|string|`"2 January 2006"`|How article dates are formatted. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
-|`article.showReadingTime`|boolean|`true`|Whether or not article reading times are displayed.|
-|`article.showHeadingAnchors`|boolean|`true`|Whether or not heading anchor links are displayed alongside headings within articles.|
 |`article.showAuthor`|boolean|`true`|Whether or not the author box is displayed in the article footer.|
+|`article.showDraftLabel`|boolean|`true`|Whether or not the draft indicator is shown next to articles when site is built with `--buildDrafts`.|
+|`article.showHeadingAnchors`|boolean|`true`|Whether or not heading anchor links are displayed alongside headings within articles.|
 |`article.showPagination`|boolean|`true`|Whether or not the next/previous article links are displayed in the article footer.|
-|`taxonomy.showTermCount`|boolean|`true`|Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.|
+|`article.showReadingTime`|boolean|`true`|Whether or not article reading times are displayed.|
 |`sitemap.excludedKinds`|array of strings|`["taxonomy", "term"]`|Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values.|
+|`taxonomy.showTermCount`|boolean|`true`|Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.|
+|`fathomAnalytics.site`|string|_Not set_|The site code generated by Fathom Analytics for the website. Refer to the [Analytics docs](#analyticshtml) below for more details.|
+|`fathomAnalytics.domain`|string|_Not set_|If using a custom domain with Fathom Analytics, provide it here to serve `script.js` from the custom domain.|
 |`verification.google`|string|_Not set_|The site verification string provided by Google to be included in the site metadata.|
 |`verification.bing`|string|_Not set_|The site verification string provided by Bing to be included in the site metadata.|
 |`verification.pinterest`|string|_Not set_|The site verification string provided by Pinterest to be included in the site metadata.|
 |`verification.yandex`|string|_Not set_|The site verification string provided by Yandex to be included in the site metadata.|
-|`fathomAnalytics.site`|string|_Not set_|The site code generated by Fathom Analytics for the website. Refer to the [Analytics docs](#analyticshtml) below for more details.|
-|`fathomAnalytics.domain`|string|_Not set_|If using a custom domain with Fathom Analytics, provide it here to serve `script.js` from the custom domain.|
 <!-- prettier-ignore-end -->
 
-## Front Matter
+## Front matter
 
 In addition to the [default Hugo front matter parameters](https://gohugo.io/content-management/front-matter/#front-matter-variables), Congo adds a number of additional options to customise the presentation of individual articles. All the available theme parameters are listed below.
 

@@ -9,22 +9,7 @@
           {{ . }}
         </div>
       {{ end }}
-      {{ with .Site.Author.links }}
-        <div class="flex flex-wrap text-lg text-gray-400 dark:text-gray-500">
-          {{ range $links := . }}
-            {{ range $name, $url := $links }}
-              <a
-                class="mr-2 hover:text-primary-700 dark:hover:text-primary-400"
-                href="{{ $url }}"
-                target="_blank"
-                alt="{{ $name | title }}"
-                rel="me"
-                >{{ partial "icon.html" $name }}</a
-              >
-            {{ end }}
-          {{ end }}
-        </div>
-      {{ end }}
+      {{ partialCached "author-links.html" . }}
     </div>
   </div>
 {{ end }}

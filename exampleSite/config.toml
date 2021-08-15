@@ -13,14 +13,18 @@ languageCode = "en-AU"
 title = "Congo"
 
 [author]
-  name = "Freddy Blogger"
-  image = "https://i.pravatar.cc/150?img=11"
+  name = "Congo Profile"
+  image = "/img/author.jpg"
   links = [
     { twitter = "https://twitter.com/" },
     { facebook = "https://facebook.com/" },
     { linkedin = "https://linkedin.com/" },
     { youtube = "https://youtube.com/" },
   ]
+
+[params.homepage]
+  layout = "custom"
+  showList = true
 
 [[menu.main]]
   name = "Blog"

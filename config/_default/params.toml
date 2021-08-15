@@ -4,13 +4,19 @@
 #
 # Refer to the README for more details about each of these parameters.
 
+[homepage]
+  layout = "page" # valid options: page, profile, custom
+  showList = false
+  listSections = ["blog"]
+
 [article]
   showDate = true
   dateFormat = "2 January 2006"
-  showReadingTime = true
-  showHeadingAnchors = true
   showAuthor = true
+  showDraftLabel = true
+  showHeadingAnchors = true
   showPagination = true
+  showReadingTime = true
 
 [taxonomy]
   showTermCount = true
@@ -18,12 +24,12 @@
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
 
+[fathomAnalytics]
+  # site = "ABC12345"
+  # domain = "llama.yoursite.com"
+
 [verification]
   # google = ""
   # bing = ""
   # pinterest = ""
   # yandex = ""
-
-[fathomAnalytics]
-  # site = "ABC12345"
-  # domain = "llama.yoursite.com"
