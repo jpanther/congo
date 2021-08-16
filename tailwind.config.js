@@ -59,6 +59,11 @@ module.exports = {
                 fontSize: "0.9rem",
                 fontWeight: "600",
               },
+              mark: {
+                backgroundColor: theme("colors.secondary.200"),
+                padding: "0.1rem 0.2rem",
+                borderRadius: "0.12rem",
+              },
             },
           ],
         },
@@ -123,6 +128,9 @@ module.exports = {
               kbd: {
                 backgroundColor: theme("colors.gray.700"),
                 color: theme("colors.gray.300"),
+              },
+              mark: {
+                backgroundColor: theme("colors.secondary.400"),
               },
             },
           ],
