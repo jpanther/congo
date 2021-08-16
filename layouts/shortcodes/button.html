@@ -1,0 +1,7 @@
+<a
+  class="px-4 py-2 !text-white !no-underline rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  {{ with .Get "href" }}href="{{ . }}"{{ end }}
+  {{ with .Get "target" }}target="{{ . }}"{{ end }}
+  role="button"
+  >{{ .Inner }}
+</a>

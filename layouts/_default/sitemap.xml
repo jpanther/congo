@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{ range .Data.Pages }}
     {{ if not (in .Site.Params.sitemap.excludedKinds .Kind) }}
-      {{ if and (.Param "xml" | default true) (not (isset .Params "externalurl")) }}
+      {{ if and (.Param "xml" | default true) (not (isset .Params "externalUrl")) }}
         {{- if .Permalink -}}
           <url>
             <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}

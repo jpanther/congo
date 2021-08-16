@@ -1,7 +1,7 @@
 <article>
   <h3 class="mt-6 text-xl font-semibold">
-    {{ if isset .Params "externalurl" }}
-      <a class="hover:underline" href="{{ .Params.externalurl }}" target="_blank" rel="external"
+    {{ if isset .Params "externalUrl" }}
+      <a class="hover:underline" href="{{ .Params.externalUrl }}" target="_blank" rel="external"
         >{{ .Title }}</a
       >
       <span
@@ -14,11 +14,7 @@
       <a class="hover:underline" href="{{ .Permalink }}">{{ .Title }}</a>
     {{ end }}
     {{ if and .Draft .Site.Params.article.showDraftLabel }}
-      <span
-        class="ml-1 px-1 py-[2px] text-xs font-normal border rounded-md text-primary-700 dark:text-primary-400 border-primary-400 dark:border-primary-600 inline-block align-middle mb-1"
-      >
-        Draft
-      </span>
+      {{ partial "badge.html" "Draft" }}
     {{ end }}
     {{ if templates.Exists "partials/extend-article-link.html" }}
       {{ partial "extend-article-link.html" . }}
