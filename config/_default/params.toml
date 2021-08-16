@@ -18,6 +18,9 @@
   showPagination = true
   showReadingTime = true
 
+[list]
+  groupByYear = true
+
 [taxonomy]
   showTermCount = true
 

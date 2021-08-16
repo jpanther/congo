@@ -6,7 +6,7 @@
         <span>
           {{ if .NextInSection }}
             <a class="flex" href="{{ .NextInSection.Permalink }}">
-              <span class="mr-3">←</span>
+              <span class="mr-3">&larr;</span>
               <span class="flex flex-col">
                 <span class="button__text">{{ .NextInSection.Title }}</span>
                 {{ if .Site.Params.article.showDate | default true }}
@@ -35,7 +35,7 @@
                   </time>
                 {{ end }}
               </span>
-              <span class="ml-3">→</span>
+              <span class="ml-3">&rarr;</span>
             </a>
           {{ end }}
         </span>
