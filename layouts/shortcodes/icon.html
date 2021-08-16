@@ -1,4 +1,8 @@
 <span class="relative inline-block align-text-bottom icon">
-  {{ $icon := resources.Get (print "icons/" . ".svg") }}
-  {{ $icon.Content | safeHTML }}
+  {{ $icon := resources.Get (printf "icons/%s.svg" ($.Get 0)) }}
+  {{ if $icon }}
+    {{ $icon.Content | safeHTML }}
+  {{ else }}
+    <em>Icon not found.</em>
+  {{ end }}
 </span>
