@@ -56,8 +56,12 @@
   {{/* Social */}}
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
+  {{/* Schema */}}
+  {{ template "_internal/schema.html" . }}
   {{/* Generator */}}
-  {{ hugo.Generator }}
+  {{ if .Site.Params.attribution | default true }}
+    {{ hugo.Generator }}
+  {{ end }}
   {{/* Me */}}
   {{ with .Site.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
   {{ with .Site.Author.links }}
