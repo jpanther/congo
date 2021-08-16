@@ -7,10 +7,12 @@
           <a class="text-xl font-medium hover:underline" href="{{ .Page.Permalink }}"
             >{{ .Page.Title }}</a
           >
-          <span class="text-base text-gray-400">
-            <span class="px-1">&middot;</span>
-            {{ .Count }}
-          </span>
+          {{ if $.Site.Params.taxonomy.showTermCount | default true }}
+            <span class="text-base text-gray-400">
+              <span class="px-1">&middot;</span>
+              {{ .Count }}
+            </span>
+          {{ end }}
         </h2>
       </article>
     {{ end }}

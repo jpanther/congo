@@ -1,9 +1,23 @@
+# -- Site Configuration --
 theme = "congo"
+
+# Speficiy the base URL for the website.
 # baseURL = "https://your_domain.com/"
+
+# The language code of the language that the website is written in.
+# This can be a base language (ie. "en") or a specific variant (ie. "en-AU").
 languageCode = "en"
 
+# The website title. This will be displayed in the site header.
 title = "Congo"
+
+# A default copyright message is generated automatically.
+# Uncomment the line below to provide a custom copyright Markdown string.
 # copyright = "Copy, _right?_ :thinking_face:"
 
+# To automatically convert strings such as :bang: to emoji, set this to true.
 enableEmoji = true
+
+# Congo will generate a robots file that allows search engines to index
+# the entire site. If you don't want a robots file, set this to false.
 enableRobotsTXT = true

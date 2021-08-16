@@ -1,11 +1,11 @@
-<header class="flex justify-between py-10 font-semibold ">
+<header class="flex justify-between py-6 font-semibold sm:py-10">
   <div>
     <a class="hover:underline" rel="me" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   </div>
   <nav>
-    <ul class="flex list-none">
+    <ul class="flex flex-col list-none sm:flex-row">
       {{ range .Site.Menus.main }}
-        <li class="mr-7 last:mr-0">
+        <li class="text-right sm:mr-7 sm:last:mr-0">
           <a class="hover:underline" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
         </li>
       {{ end }}

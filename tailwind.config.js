@@ -46,6 +46,9 @@ module.exports = {
               code: {
                 color: theme("colors.secondary.700"),
               },
+              "pre code": {
+                color: theme("colors.gray.700"),
+              },
               pre: {
                 backgroundColor: theme("colors.gray.50"),
               },
@@ -55,6 +58,11 @@ module.exports = {
                 borderRadius: "0.25rem",
                 fontSize: "0.9rem",
                 fontWeight: "600",
+              },
+              mark: {
+                backgroundColor: theme("colors.secondary.200"),
+                padding: "0.1rem 0.2rem",
+                borderRadius: "0.12rem",
               },
             },
           ],
@@ -107,6 +115,9 @@ module.exports = {
                 color: theme("colors.gray.200"),
                 backgroundColor: theme("colors.gray.700"),
               },
+              "pre code": {
+                color: theme("colors.gray.200"),
+              },
               thead: {
                 color: theme("colors.white"),
                 borderBottomColor: theme("colors.gray.400"),
@@ -117,6 +128,9 @@ module.exports = {
               kbd: {
                 backgroundColor: theme("colors.gray.700"),
                 color: theme("colors.gray.300"),
+              },
+              mark: {
+                backgroundColor: theme("colors.secondary.400"),
               },
             },
           ],

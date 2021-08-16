@@ -1,0 +1,8 @@
+<article class="max-w-full prose dark:prose-light">
+  {{ with .Title }}
+    <header>
+      <h1>{{ . | emojify }}</h1>
+    </header>
+  {{ end }}
+  <section>{{ .Content | emojify }}</section>
+</article>

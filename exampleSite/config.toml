@@ -1,28 +1,59 @@
+# Site configuration for the Congo demo site
+# --------------------------------------------------------------------------
+# IMPORTANT: You should not use this file as a template for configuration
+# as it does not contain all the required theme settings!
+#
+# Refer to the theme docs for configuration instructions if you're unsure.
+# https://github.com/jpanther/Congo#readme
+# --------------------------------------------------------------------------
+
 baseURL = "https://example.com"
 theme = "Congo"
 languageCode = "en-AU"
 title = "Congo"
+enableEmoji = true
 
 [author]
-  name = "Freddy Blogger"
-  image = "https://i.pravatar.cc/150?img=11"
-  twitter = "https://twitter.com/"
-  github = "https://github.com/"
-  linkedin = "https://linkedin.com/"
-
-[[menu.main]]
-  name = "Blog"
-  pageRef = "blog"
-  weight = 10
-[[menu.main]]
-  name = "About"
-  pageRef = "about"
-  weight = 20
-[[menu.main]]
-  name = "Tags"
-  url = "tags"
-  weight = 30
+  name = "Congo"
+  image = "/img/author.jpg"
+  links = [
+    { twitter = "https://twitter.com/" },
+    { facebook = "https://facebook.com/" },
+    { linkedin = "https://linkedin.com/" },
+    { youtube = "https://youtube.com/" },
+  ]
 
 [taxonomies]
-  category = "categories"
   tag = "tags"
+
+[params.homepage]
+  layout = "custom"
+  showList = true
+  listSections = "samples"
+
+[params.list]
+  groupByYear = false
+
+[[menu.main]]
+  name = "Docs"
+  pageRef = "docs"
+  weight = 10
+[[menu.main]]
+  name = "Samples"
+  pageRef = "samples"
+  weight = 20
+# [[menu.main]]
+#   name = "Users"
+#   pageRef = "users"
+#   weight = 30
+[[menu.main]]
+  name = "GitHub"
+  url = "https://github.com/jpanther/Congo"
+  weight = 40
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false

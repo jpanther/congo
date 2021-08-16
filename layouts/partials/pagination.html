@@ -1,41 +1,34 @@
-<!-- See: https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/ -->
-<!-- Assign .Paginator object to a $paginator variable -->
 {{ $paginator := .Paginator }}
-<!-- If there's more than one page. -->
 {{ if gt $paginator.TotalPages 1 }}
-  <ul class="Pagination">
-    <!-- Previous page. -->
+  <ul class="flex flex-row mt-8">
     {{ if $paginator.HasPrev }}
-      <li class="Pagination-item Pagination-item--previous">
+      <li>
         <a
           href="{{ $paginator.Prev.URL }}"
-          class="Pagination-itemLink Pagination-itemLink--previous"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-white rounded"
           rel="prev"
         >
           &larr;
         </a>
       </li>
     {{ end }}
-
-
-    <!-- Page numbers. -->
     {{ range $paginator.Pagers }}
-      <li
-        class="Pagination-item{{ if eq . $paginator }}
-          Pagination-item--current
-        {{ end }}"
-      >
-        <a href="{{ .URL }}" class="Pagination-itemLink"> {{ .PageNumber }} </a>
+      <li>
+        <a
+          href="{{ .URL }}"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-white rounded {{ if eq . $paginator }}
+            bg-primary-200 dark:bg-primary-400 dark:text-gray-800
+          {{ end }}"
+        >
+          {{ .PageNumber }}
+        </a>
       </li>
     {{ end }}
-
-
-    <!-- Next page. -->
     {{ if $paginator.HasNext }}
-      <li class="Pagination-item Pagination-item--next">
+      <li>
         <a
           href="{{ $paginator.Next.URL }}"
-          class="Pagination-itemLink Pagination-itemLink--next"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-white rounded"
           rel="next"
         >
           &rarr;

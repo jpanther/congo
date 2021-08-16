@@ -1,0 +1,18 @@
+{{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
+  <time datetime="{{ .Date }}">
+    {{ .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" }}
+  </time>
+{{ end }}
+{{ if and
+  (.Params.showDate | default (.Site.Params.article.showDate | default true))
+  (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true))
+  (ne .ReadingTime 0)
+}}
+  <span class="px-1">&middot;</span>
+{{ end }}
+{{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
+  <span title="Reading time">
+    {{ .ReadingTime }}
+    min{{ if gt .ReadingTime 1 }}s{{ end }}
+  </span>
+{{ end }}

@@ -1,0 +1,45 @@
+{{ if .Params.showPagination | default (.Site.Params.article.showPagination | default true) }}
+  {{ if or .NextInSection .PrevInSection }}
+    <div class="pt-8">
+      <hr class="border-gray-300 border-dotted dark:border-gray-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          {{ if .NextInSection }}
+            <a class="flex" href="{{ .NextInSection.Permalink }}">
+              <span class="mr-3">&larr;</span>
+              <span class="flex flex-col">
+                <span class="button__text">{{ .NextInSection.Title }}</span>
+                {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
+                  <time
+                    class="-mt-1 text-xs text-gray-400 dark:text-gray-500"
+                    datetime="{{ .Date }}"
+                  >
+                    {{ .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" }}
+                  </time>
+                {{ end }}
+              </span>
+            </a>
+          {{ end }}
+        </span>
+        <span>
+          {{ if .PrevInSection }}
+            <a class="flex text-right" href="{{ .PrevInSection.Permalink }}">
+              <span class="flex flex-col">
+                <span>{{ .PrevInSection.Title }}</span>
+                {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
+                  <time
+                    class="-mt-1 text-xs text-gray-400 dark:text-gray-500"
+                    datetime="{{ .Date }}"
+                  >
+                    {{ .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" }}
+                  </time>
+                {{ end }}
+              </span>
+              <span class="ml-3">&rarr;</span>
+            </a>
+          {{ end }}
+        </span>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

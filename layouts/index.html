@@ -1,8 +1,16 @@
 {{ define "main" }}
-  <article class="max-w-full prose dark:prose-light">
-    <header>
-      <h1>{{ .Title }}</h1>
-    </header>
-    <section>{{ .Content | emojify }}</section>
-  </article>
+  {{ $partial := print "partials/home/" .Site.Params.homepage.layout ".html" }}
+  {{ if templates.Exists $partial }}
+    {{ partial $partial . }}
+  {{ else }}
+    {{ partial "partials/home/page.html" . }}
+  {{ end }}
+  {{ if .Site.Params.homepage.showList | default false }}
+    <section>
+      <h2 class="text-2xl font-extrabold">Recent</h2>
+      {{ range first 5 (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.homepage.listSections)).Pages }}
+        {{ partial "article-link.html" . }}
+      {{ end }}
+    </section>
+  {{ end }}
 {{ end }}

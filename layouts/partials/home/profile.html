@@ -1,0 +1,21 @@
+<article
+  class="flex flex-col items-center justify-center text-center
+  {{ if not .Site.Params.homepage.showList -}}
+    h-full
+  {{- else -}}
+    mb-8
+  {{- end }}"
+>
+  <header class="flex flex-col items-center mb-3">
+    {{ with .Site.Author.image }}
+      <img class="mb-2 rounded-full w-36 h-36" src="{{ . }}" />
+    {{ end }}
+    <h1 class="text-4xl font-extrabold">
+      {{ .Site.Author.name | default .Site.Title }}
+    </h1>
+    <div class="mt-1 text-2xl">
+      {{ partialCached "author-links.html" . }}
+    </div>
+  </header>
+  <section class="prose dark:prose-light">{{ .Content | emojify }}</section>
+</article>

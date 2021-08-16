@@ -1,50 +1,15 @@
-<div class="flex items-center pt-8">
-  {{ with .Site.Author.image }}
-    <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . }}" />
-  {{ end }}
-  <div>
-    {{ with .Site.Author.name }}
-      <div class="font-semibold leading-6 text-gray-800 dark:text-gray-300">
-        {{ . }}
-      </div>
+{{ if .Params.showAuthor | default (.Site.Params.article.showAuthor | default true) }}
+  <div class="flex items-center">
+    {{ with .Site.Author.image }}
+      <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . }}" />
     {{ end }}
-    <div class="flex text-lg text-gray-400 dark:text-gray-500">
-      {{ with .Site.Author.twitter }}
-        <a
-          class="mr-2 hover:text-primary-700 dark:hover:text-primary-400"
-          href="{{ . }}"
-          target="_blank"
-          title="Twitter"
-          >{{ partial "icon.html" "twitter-brands" }}</a
-        >
+    <div>
+      {{ with .Site.Author.name }}
+        <div class="font-semibold leading-6 text-gray-800 dark:text-gray-300">
+          {{ . }}
+        </div>
       {{ end }}
-      {{ with .Site.Author.github }}
-        <a
-          class="mr-2 hover:text-primary-700 dark:hover:text-primary-400"
-          href="{{ . }}"
-          target="_blank"
-          title="GitHub"
-          >{{ partial "icon.html" "github-brands" }}</a
-        >
-      {{ end }}
-      {{ with .Site.Author.keybase }}
-        <a
-          class="mr-2 hover:text-primary-700 dark:hover:text-primary-400"
-          href="{{ . }}"
-          target="_blank"
-          title="Keybase"
-          >{{ partial "icon.html" "keybase-brands" }}</a
-        >
-      {{ end }}
-      {{ with .Site.Author.linkedin }}
-        <a
-          class="mr-2 hover:text-primary-700 dark:hover:text-primary-400"
-          href="{{ . }}"
-          target="_blank"
-          title="Linkedin"
-          >{{ partial "icon.html" "linkedin-brands" }}</a
-        >
-      {{ end }}
+      {{ partialCached "author-links.html" . }}
     </div>
   </div>
-</div>
+{{ end }}

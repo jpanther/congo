@@ -1,16 +1,25 @@
 {{ define "main" }}
   <article class="max-w-prose">
     <header>
-      <h1 class="mt-0 text-4xl font-extrabold">{{ .Title }}</h1>
+      <h1 class="mt-0 text-4xl font-extrabold">{{ .Title | emojify }}</h1>
       <div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
-        {{ partial "meta.html" . }}
+        {{ partial "article-meta.html" . }}
+        {{ if and .Draft .Site.Params.article.showDraftLabel }}
+          <span
+            class="ml-2 px-1 py-[2px] text-xs font-normal border rounded-md text-primary-700 dark:text-primary-400 border-primary-400 dark:border-primary-600 inline-block align-middle mb-1"
+          >
+            Draft
+          </span>
+        {{ end }}
       </div>
     </header>
     <section class="prose dark:prose-light">
-      {{ partial "heading-anchor.html" .Content | emojify }}
+      {{ .Content | emojify }}
     </section>
-    <footer>
-      {{ partialCached "author.html" . }}
+    <footer class="pt-8">
+      {{ partial "author.html" . }}
+      {{ partial "sharing-links.html" . }}
+      {{ partial "article-pagination.html" . }}
     </footer>
     {{/* Comments */}}
     {{ if templates.Exists "partials/comments.html" }}
