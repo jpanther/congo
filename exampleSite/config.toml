@@ -15,7 +15,7 @@ enableEmoji = true
 
 [author]
   name = "Congo"
-  image = "/img/author.jpg"
+  image = "img/author.jpg"
   links = [
     { twitter = "https://twitter.com/" },
     { facebook = "https://facebook.com/" },
