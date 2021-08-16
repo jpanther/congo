@@ -9,7 +9,7 @@
               <span class="mr-3">&larr;</span>
               <span class="flex flex-col">
                 <span class="button__text">{{ .NextInSection.Title }}</span>
-                {{ if .Site.Params.article.showDate | default true }}
+                {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
                   <time
                     class="-mt-1 text-xs text-gray-400 dark:text-gray-500"
                     datetime="{{ .Date }}"
@@ -26,7 +26,7 @@
             <a class="flex text-right" href="{{ .PrevInSection.Permalink }}">
               <span class="flex flex-col">
                 <span>{{ .PrevInSection.Title }}</span>
-                {{ if .Site.Params.article.showDate | default true }}
+                {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
                   <time
                     class="-mt-1 text-xs text-gray-400 dark:text-gray-500"
                     datetime="{{ .Date }}"
