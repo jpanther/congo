@@ -1,7 +1,7 @@
 {{ if .Params.showAuthor | default (.Site.Params.article.showAuthor | default true) }}
   <div class="flex items-center">
     {{ with .Site.Author.image }}
-      <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . }}" />
+      <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . | absURL }}" />
     {{ end }}
     <div>
       {{ with .Site.Author.name }}
