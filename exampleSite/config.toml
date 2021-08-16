@@ -11,9 +11,10 @@ baseURL = "https://example.com"
 theme = "Congo"
 languageCode = "en-AU"
 title = "Congo"
+enableEmoji = true
 
 [author]
-  name = "Congo Profile"
+  name = "Congo"
   image = "/img/author.jpg"
   links = [
     { twitter = "https://twitter.com/" },
@@ -22,25 +23,33 @@ title = "Congo"
     { youtube = "https://youtube.com/" },
   ]
 
+[taxonomies]
+  tag = "tags"
+
 [params.homepage]
   layout = "custom"
   showList = true
+  listSections = "samples"
 
 [params.list]
   groupByYear = false
 
 [[menu.main]]
-  name = "Blog"
-  pageRef = "blog"
+  name = "Docs"
+  pageRef = "docs"
   weight = 10
 [[menu.main]]
-  name = "About"
-  pageRef = "about"
+  name = "Samples"
+  pageRef = "samples"
   weight = 20
+# [[menu.main]]
+#   name = "Users"
+#   pageRef = "users"
+#   weight = 30
 [[menu.main]]
-  name = "Tags"
-  pageRef = "tags"
-  weight = 30
+  name = "GitHub"
+  url = "https://github.com/jpanther/Congo"
+  weight = 40
 
 [markup.goldmark]
 [markup.goldmark.renderer]

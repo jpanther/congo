@@ -3,7 +3,7 @@ title: "Placeholder Text"
 date: "2019-03-09"
 draft: true
 description: "Lorem Ipsum Dolor Si Amet"
-tags: ["markdown", "text"]
+tags: ["markdown", "text", "sample"]
 xml: false
 ---
 
