@@ -26,6 +26,9 @@ title = "Congo"
   layout = "custom"
   showList = true
 
+[params.list]
+  groupByYear = false
+
 [[menu.main]]
   name = "Blog"
   pageRef = "blog"
