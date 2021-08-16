@@ -1,0 +1,172 @@
+<!doctype html><html lang=en-au><head>
+<meta charset=utf-8>
+<meta http-equiv=content-language content="en-AU">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Shortcodes &#183; Congo</title>
+<meta name=title content="Shortcodes &#183; Congo">
+<meta name=description content="All the shortcodes available in Congo.">
+<link rel=canonical href=https://jpanther.github.io/Congo/docs/shortcodes/>
+<link type=text/css rel=stylesheet href=https://jpanther.github.io/Congo/css/main.css>
+<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/favicon-16x16.png>
+<link rel=manifest href=https://jpanther.github.io/site.webmanifest>
+<meta property="og:title" content="Shortcodes">
+<meta property="og:description" content="All the shortcodes available in Congo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jpanther.github.io/Congo/docs/shortcodes/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2020-08-11T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-08-11T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Shortcodes">
+<meta name=twitter:description content="All the shortcodes available in Congo.">
+<meta itemprop=name content="Shortcodes">
+<meta itemprop=description content="All the shortcodes available in Congo."><meta itemprop=datePublished content="2020-08-11T00:00:00+00:00">
+<meta itemprop=dateModified content="2020-08-11T00:00:00+00:00">
+<meta itemprop=wordCount content="392">
+<meta itemprop=keywords content="shortcodes,mermaid,icon,lead,docs,">
+<meta name=generator content="Hugo 0.87.0">
+<meta name=author content="Congo">
+<link href=https://twitter.com/ rel=me>
+<link href=https://facebook.com/ rel=me>
+<link href=https://linkedin.com/ rel=me>
+<link href=https://youtube.com/ rel=me>
+</head>
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
+<div>
+<a class=hover:underline rel=me href=https://jpanther.github.io/Congo/>Congo</a>
+</div>
+<nav>
+<ul class="flex flex-col list-none sm:flex-row">
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/docs/ title=Documentation>Docs</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/samples/ title="Content Samples">Samples</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=https://github.com/jpanther/Congo title>GitHub</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=flex-grow>
+<article class=max-w-prose>
+<header>
+<h1 class="mt-0 text-4xl font-extrabold">Shortcodes</h1>
+<div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
+<span title="Reading time">
+2
+mins
+</span>
+</div>
+</header>
+<section class="prose dark:prose-light">
+<p>In addition to all the <a href=https://gohugo.io/content-management/shortcodes/>default Hugo shortcodes</a>, Congo adds a few extras for additional functionality.</p>
+<h2 id=alert>Alert <a class=heading-anchor href=#alert aria-label=Anchor>#</a></h2>
+<p><code>alert</code> outputs its contents as a stylised message box within your article. It&rsquo;s useful for drawing attention to important information that you don&rsquo;t want the reader to miss.</p>
+<p>The input is written in Markdown so you can format it however you please.</p>
+<p><strong>Example:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>alert</span> <span class=p>&gt;</span>}}
+<span class=gs>**Warning!**</span> This action is destructive!
+{{<span class=p>&lt;</span> <span class=p>/</span><span class=nt>alert</span> <span class=p>&gt;</span>}}
+</code></pre></div><div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 text-primary-400">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg>
+</span>
+</span>
+<span class="no-prose dark:text-gray-300"><strong>Warning!</strong> This action is destructive!</span>
+</div>
+<h2 id=badge>Badge <a class=heading-anchor href=#badge aria-label=Anchor>#</a></h2>
+<p><code>badge</code> outputs a styled badge component which is useful for displaying metadata.</p>
+<p><strong>Example:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>badge</span> <span class=p>&gt;</span>}}
+New article!
+{{<span class=p>&lt;</span> <span class=p>/</span><span class=nt>badge</span> <span class=p>&gt;</span>}}
+</code></pre></div><span class="ml-1 px-1 py-[2px] text-xs font-normal border rounded-md text-primary-700 dark:text-primary-400 border-primary-400 dark:border-primary-600 inline-block align-middle mb-1">
+New article!
+</span>
+<h2 id=button>Button <a class=heading-anchor href=#button aria-label=Anchor>#</a></h2>
+<p><code>button</code> outputs a styled button component which can be used to highlight a primary action. It has two optional variables <code>href</code> and <code>target</code> which can be used to specify the URL and target of the link.</p>
+<p><strong>Example:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>button</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;#button&#34;</span> <span class=na>target</span><span class=o>=</span><span class=s>&#34;_self&#34;</span> <span class=p>&gt;</span>}}
+Call to action
+{{<span class=p>&lt;</span> <span class=p>/</span><span class=nt>button</span> <span class=p>&gt;</span>}}
+</code></pre></div><a class="px-4 py-2 !text-white !no-underline rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href=#button target=_self role=button>
+Call to action
+</a>
+<h2 id=icon>Icon <a class=heading-anchor href=#icon aria-label=Anchor>#</a></h2>
+<p><code>icon</code> outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size.</p>
+<p><strong>Example:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>icon</span> <span class=err>&#34;</span><span class=na>github</span><span class=err>&#34;</span> <span class=p>&gt;</span>}}
+</code></pre></div><p><strong>Output:</strong> <span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentcolor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+</p>
+<p>Icons are populated using Hugo pipelines which makes them very flexible. Congo ships with a default set of icons for social, email, and generic links. If you want to add your own icons, you can simply place them in <code>/assets/icons/</code> and reference them using the <code>icon</code> shortcode passing in the icon&rsquo;s filename (without the <code>.svg.</code> extension).</p>
+<p>Icons can also be used in partials by calling the <a href=/docs/partials/#icon>icon partial</a>.</p>
+<h2 id=lead>Lead <a class=heading-anchor href=#lead aria-label=Anchor>#</a></h2>
+<p><code>lead</code> is used to bring emphasis to the start of an article. It can be used to style an introduction, or to call out an important piece of information. Simply wrap any Markdown content in the <code>lead</code> shortcode.</p>
+<p><strong>Example:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>lead</span> <span class=p>&gt;</span>}}
+When life gives you lemons, make lemonade.
+{{<span class=p>&lt;</span> <span class=p>/</span><span class=nt>lead</span> <span class=p>&gt;</span>}}
+</code></pre></div><p class="!mb-9 text-xl">
+When life gives you lemons, make lemonade.
+</p>
+<h2 id=mermaid>Mermaid <a class=heading-anchor href=#mermaid aria-label=Anchor>#</a></h2>
+<p><code>mermaid</code> allows you to draw detailed diagrams and visualisations using text. It uses MermaidJS under the hood and supports a wide variety of diagrams, charts and other output formats.</p>
+<p>Simply write your Mermaid syntax within the <code>mermaid</code> shortcode and let the plugin do the rest.</p>
+<p>Refer to the <a href=https://mermaid-js.github.io/>official Mermaid docs</a> for details on syntax and supported diagram types.</p>
+<p><strong>Example:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-md data-lang=md>{{<span class=p>&lt;</span> <span class=nt>mermaid</span> <span class=p>&gt;</span>}}
+graph LR;
+A[Lemons]--&gt;B[Lemonade];
+B--&gt;C[Profit]
+{{<span class=p>&lt;</span> <span class=p>/</span><span class=nt>mermaid</span> <span class=p>&gt;</span>}}
+</code></pre></div><div class=mermaid align=center>
+graph LR;
+A[Lemons]-->B[Lemonade];
+B-->C[Profit]
+</div>
+</section>
+<footer class=pt-8>
+<div class=pt-8>
+<hr class="border-gray-300 border-dotted dark:border-gray-600">
+<div class="flex justify-between pt-3">
+<span>
+<a class=flex href=https://jpanther.github.io/Congo/docs/front-matter/>
+<span class=mr-3>&larr;</span>
+<span class="flex flex-col">
+<span class=button__text>Front Matter</span>
+</span>
+</a>
+</span>
+<span>
+<a class="flex text-right" href=https://jpanther.github.io/Congo/docs/partials/>
+<span class="flex flex-col">
+<span>Partials</span>
+</span>
+<span class=ml-3>&rarr;</span>
+</a>
+</span>
+</div>
+</div>
+</footer>
+</article>
+</main><footer class="py-10 text-sm">
+<p class="text-gray-400 dark:text-gray-500">
+&copy;
+2021
+Congo
+</p>
+<p class="text-xs text-gray-300 dark:text-gray-600">
+Powered by
+<a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a>
+&
+<a class=hover:underline href=https://git.io/hugo-congo target=_blank>Congo</a>
+</p>
+</footer>
+<script src=https://unpkg.com/mermaid@8.11.4/dist/mermaid.min.js></script>
+<script>mermaid.initialize({theme:"default"})</script></body>
+</html>

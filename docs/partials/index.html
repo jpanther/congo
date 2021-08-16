@@ -1,0 +1,148 @@
+<!doctype html><html lang=en-au><head>
+<meta charset=utf-8>
+<meta http-equiv=content-language content="en-AU">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Partials &#183; Congo</title>
+<meta name=title content="Partials &#183; Congo">
+<meta name=description content="All the partials available in Congo.">
+<link rel=canonical href=https://jpanther.github.io/Congo/docs/partials/>
+<link type=text/css rel=stylesheet href=https://jpanther.github.io/Congo/css/main.css>
+<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/favicon-16x16.png>
+<link rel=manifest href=https://jpanther.github.io/site.webmanifest>
+<meta property="og:title" content="Partials">
+<meta property="og:description" content="All the partials available in Congo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jpanther.github.io/Congo/docs/partials/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2020-08-10T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-08-10T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Partials">
+<meta name=twitter:description content="All the partials available in Congo.">
+<meta itemprop=name content="Partials">
+<meta itemprop=description content="All the partials available in Congo."><meta itemprop=datePublished content="2020-08-10T00:00:00+00:00">
+<meta itemprop=dateModified content="2020-08-10T00:00:00+00:00">
+<meta itemprop=wordCount content="598">
+<meta itemprop=keywords content="partials,analytics,privacy,comments,favicons,icon,docs,">
+<meta name=generator content="Hugo 0.87.0">
+<meta name=author content="Congo">
+<link href=https://twitter.com/ rel=me>
+<link href=https://facebook.com/ rel=me>
+<link href=https://linkedin.com/ rel=me>
+<link href=https://youtube.com/ rel=me>
+</head>
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
+<div>
+<a class=hover:underline rel=me href=https://jpanther.github.io/Congo/>Congo</a>
+</div>
+<nav>
+<ul class="flex flex-col list-none sm:flex-row">
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/docs/ title=Documentation>Docs</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/samples/ title="Content Samples">Samples</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=https://github.com/jpanther/Congo title>GitHub</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=flex-grow>
+<article class=max-w-prose>
+<header>
+<h1 class="mt-0 text-4xl font-extrabold">Partials</h1>
+<div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
+<span title="Reading time">
+3
+mins
+</span>
+</div>
+</header>
+<section class="prose dark:prose-light">
+<h2 id=analytics>Analytics <a class=heading-anchor href=#analytics aria-label=Anchor>#</a></h2>
+<p>Congo provides built-in support for Fathom Analytics and Google Analytics. Fathom is a paid alternative to Google Analytics that respects user privacy. If you&rsquo;re interested you can use this affiliate link to <a href=https://usefathom.com/ref/RLAJSV>receive $10 credit</a> and try the service.</p>
+<h3 id=fathom-analytics>Fathom Analytics <a class=heading-anchor href=#fathom-analytics aria-label=Anchor>#</a></h3>
+<p>To enable Fathom Analytics support, simply provide your Fathom site code in the <code>config/_default/params.toml</code> file. If you also use the custom domain feature of Fathom and would like to serve their script from your domain, you can also additionally provide the <code>domain</code> configuration value. If you don&rsquo;t provide a <code>domain</code> value, the script will load directly from Fathom DNS.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=c># config/_default/params.toml</span>
+
+<span class=p>[</span><span class=nx>fathomAnalytics</span><span class=p>]</span>
+  <span class=nx>site</span> <span class=p>=</span> <span class=s2>&#34;ABC12345&#34;</span>
+  <span class=nx>domain</span> <span class=p>=</span> <span class=s2>&#34;llama.yoursite.com&#34;</span>
+</code></pre></div><h3 id=google-analytics>Google Analytics <a class=heading-anchor href=#google-analytics aria-label=Anchor>#</a></h3>
+<p>Google Analytics support is provided through the internal Hugo partial. Simply provide the <code>googleAnalytics</code> key in the <code>config/_default/config.toml</code> file and the script will be added automatically.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=c># config/_default/config.toml</span>
+
+<span class=nx>googleAnalytics</span> <span class=p>=</span> <span class=s2>&#34;UA-PROPERTY_ID&#34;</span>
+</code></pre></div><h3 id=custom-analytics-providers>Custom analytics providers <a class=heading-anchor href=#custom-analytics-providers aria-label=Anchor>#</a></h3>
+<p>If you wish to use a different analytics provider on your website you can also override the analytics partial and provide your own script. Simply create the file <code>layouts/partials/analytics.html</code> in your project and it will automatically include it in the <code>&lt;head></code> of the website.</p>
+<h2 id=comments>Comments <a class=heading-anchor href=#comments aria-label=Anchor>#</a></h2>
+<p>To add comments to your articles, Congo includes support for a comments partial that is included at the base of each article page. Simply provide a <code>layouts/partials/comments.html</code> which contains the code required to display your chosen comments.</p>
+<p>You can use either the built-in Hugo Disqus template, or provide your own custom code. Refer to the <a href=https://gohugo.io/content-management/comments/>Hugo docs</a> for further information.</p>
+<h2 id=favicons>Favicons <a class=heading-anchor href=#favicons aria-label=Anchor>#</a></h2>
+<p>Congo provides a default set of blank favicons to get started but you can provide your own assets to override them. The easiest way to obtain new favicon assets is to generate them using a third-party provider like <a href=https://favicon.io>favicon.io</a>.</p>
+<p>Icon assets should be placed directly in the <code>static/</code> folder of your website and named as per the listing below. If you use <a href=https://favicon.io>favicon.io</a>, these will be the filenames that are automatically generated for you, but you can provide your own assets if you wish.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>static/
+├─ android-chrome-192x192.png
+├─ android-chrome-512x512.png
+├─ apple-touch-icon.png
+├─ favicon-16x16.png
+├─ favicon-32x32.png
+├─ favicon.ico
+└─ site.webmanifest
+</code></pre></div><p>Alternatively, you can also completely override the default favicon behaviour and provide your own favicon HTML tags and assets. Simply provide a <code>layouts/partials/favicons.html</code> file in your project and this will be injected into the site <code>&lt;head></code> in place of the default assets.</p>
+<h2 id=icon>Icon <a class=heading-anchor href=#icon aria-label=Anchor>#</a></h2>
+<p>Similar to the <a href=/docs/shortcodes/#icon>icon shortcode</a>, you can include icons in your own templates and partials by using Congo&rsquo;s <code>icon.html</code> partial. The partial takes one parameter which is the name of the icon to be included.</p>
+<p><strong>Example:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go>  <span class=p>{{</span> <span class=nx>partial</span> <span class=s>&#34;icon.html&#34;</span> <span class=s>&#34;github&#34;</span> <span class=p>}}</span>
+</code></pre></div><p>Congo includes a number of built-in icons for social, links and other purposes. You can also provide your own icon assets by including the SVG in <code>assets/icons/</code>.</p>
+<h2 id=extensions>Extensions <a class=heading-anchor href=#extensions aria-label=Anchor>#</a></h2>
+<p>Congo also provides for a number of extension partials that allow for expanding upon base functionality.</p>
+<h3 id=article-link>Article link <a class=heading-anchor href=#article-link aria-label=Anchor>#</a></h3>
+<p>If you wish to insert additional code after article links, create a <code>layouts/partials/extend-article-link.html</code> file. This is especially powerful when combined with the <a href=/docs/shortcodes/#badge><code>badge</code></a> shortcode which can be used to highlight metadata for certain articles.</p>
+<h3 id=head-and-footer>Head and Footer <a class=heading-anchor href=#head-and-footer aria-label=Anchor>#</a></h3>
+<p>The theme allows for inserting additional code directly into the <code>&lt;head></code> and <code>&lt;footer></code> sections of the template. These can be useful for providing scripts or other logic that isn&rsquo;t part of the theme.</p>
+<p>Simply create either <code>layouts/partials/extend-head.html</code> or <code>layouts/partials/extend-footer.html</code> and these will automatically be included in your website build. Both partials are injected as the last items in <code>&lt;head></code> and <code>&lt;footer></code> so they can be used to override theme defaults.</p>
+</section>
+<footer class=pt-8>
+<div class=pt-8>
+<hr class="border-gray-300 border-dotted dark:border-gray-600">
+<div class="flex justify-between pt-3">
+<span>
+<a class=flex href=https://jpanther.github.io/Congo/docs/shortcodes/>
+<span class=mr-3>&larr;</span>
+<span class="flex flex-col">
+<span class=button__text>Shortcodes</span>
+</span>
+</a>
+</span>
+<span>
+<a class="flex text-right" href=https://jpanther.github.io/Congo/docs/advanced-customisation/>
+<span class="flex flex-col">
+<span>Advanced Customisation</span>
+</span>
+<span class=ml-3>&rarr;</span>
+</a>
+</span>
+</div>
+</div>
+</footer>
+</article>
+</main><footer class="py-10 text-sm">
+<p class="text-gray-400 dark:text-gray-500">
+&copy;
+2021
+Congo
+</p>
+<p class="text-xs text-gray-300 dark:text-gray-600">
+Powered by
+<a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a>
+&
+<a class=hover:underline href=https://git.io/hugo-congo target=_blank>Congo</a>
+</p>
+</footer>
+</body>
+</html>

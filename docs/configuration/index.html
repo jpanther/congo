@@ -1,0 +1,253 @@
+<!doctype html><html lang=en-au><head>
+<meta charset=utf-8>
+<meta http-equiv=content-language content="en-AU">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Configuration &#183; Congo</title>
+<meta name=title content="Configuration &#183; Congo">
+<meta name=description content="All the configuration variables available in Congo.">
+<link rel=canonical href=https://jpanther.github.io/Congo/docs/configuration/>
+<link type=text/css rel=stylesheet href=https://jpanther.github.io/Congo/css/main.css>
+<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/favicon-16x16.png>
+<link rel=manifest href=https://jpanther.github.io/site.webmanifest>
+<meta property="og:title" content="Configuration">
+<meta property="og:description" content="All the configuration variables available in Congo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jpanther.github.io/Congo/docs/configuration/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2020-08-14T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-08-14T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Configuration">
+<meta name=twitter:description content="All the configuration variables available in Congo.">
+<meta itemprop=name content="Configuration">
+<meta itemprop=description content="All the configuration variables available in Congo."><meta itemprop=datePublished content="2020-08-14T00:00:00+00:00">
+<meta itemprop=dateModified content="2020-08-14T00:00:00+00:00">
+<meta itemprop=wordCount content="581">
+<meta itemprop=keywords content="config,docs,">
+<meta name=generator content="Hugo 0.87.0">
+<meta name=author content="Congo">
+<link href=https://twitter.com/ rel=me>
+<link href=https://facebook.com/ rel=me>
+<link href=https://linkedin.com/ rel=me>
+<link href=https://youtube.com/ rel=me>
+</head>
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
+<div>
+<a class=hover:underline rel=me href=https://jpanther.github.io/Congo/>Congo</a>
+</div>
+<nav>
+<ul class="flex flex-col list-none sm:flex-row">
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/docs/ title=Documentation>Docs</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/samples/ title="Content Samples">Samples</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=https://github.com/jpanther/Congo title>GitHub</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=flex-grow>
+<article class=max-w-prose>
+<header>
+<h1 class="mt-0 text-4xl font-extrabold">Configuration</h1>
+<div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
+<span title="Reading time">
+3
+mins
+</span>
+</div>
+</header>
+<section class="prose dark:prose-light">
+<p>Congo is a highly customisable theme and uses some of the latest Hugo features to simplify how it is configured.</p>
+<p>The theme ships with a default configuration that gets you up and running with a basic blog or static website.</p>
+<blockquote>
+<p>Configuration files bundled with the theme are provided in TOML format as this is the default Hugo syntax. Feel free to convert your config to YAML or JSON if you wish.</p>
+</blockquote>
+<p>The default theme configuration is documented in each file so you can freely adjust the settings to meet your needs.</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 text-primary-400">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg>
+</span>
+</span>
+<span class="no-prose dark:text-gray-300">As outlined in the <a href=/docs/installation/#set-up-your-configuration-files>installation instructions</a>, you should adjust your theme configuration by modifying the files in the <code>config/_default/</code> folder of your Hugo project and delete the <code>config.toml</code> file in your project root.</span>
+</div>
+<h2 id=parameters>Parameters <a class=heading-anchor href=#parameters aria-label=Anchor>#</a></h2>
+<p>Congo provides a large number of configuration parameters that control how the theme functions. The table below outlines every available parameter in the <code>config/_default/params.toml</code> file.</p>
+<p>Many of the article defaults here can be overridden on a per article basis by specifying it in the front matter. Refer to the <a href=/docs/front-matter/>Front Matter</a> section for further details.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>homepage.layout</code></td>
+<td>string</td>
+<td><code>"page"</code></td>
+<td>The layout of the homepage. Valid values are <code>page</code>, <code>profile</code> or <code>custom</code>. When set to <code>custom</code>, you must provide your own layout by creating a <code>/layouts/partials/home/custom.html</code> file. Refer to the <a href=/docs/homepage-layout/>Homepage Layout</a> section for more details.</td>
+</tr>
+<tr>
+<td><code>homepage.showList</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Whether or not recent articles are listed on the homepage beneath the page content. Refer to the <a href=/docs/homepage-layout/#recent-articles>Recent Articles</a> docs for more details.</td>
+</tr>
+<tr>
+<td><code>homepage.listSections</code></td>
+<td>array of strings</td>
+<td><code>["blog"]</code></td>
+<td>The sections of content to include in the recent list when <code>homepage.showList</code> is <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>article.showDate</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not article dates are displayed.</td>
+</tr>
+<tr>
+<td><code>article.dateFormat</code></td>
+<td>string</td>
+<td><code>"2 January 2006"</code></td>
+<td>How article dates are formatted. Refer to the <a href=https://gohugo.io/functions/format/#gos-layout-string>Hugo docs</a> for acceptable formats.</td>
+</tr>
+<tr>
+<td><code>article.showAuthor</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not the author box is displayed in the article footer.</td>
+</tr>
+<tr>
+<td><code>article.showDraftLabel</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not the draft indicator is shown next to articles when site is built with <code>--buildDrafts</code>.</td>
+</tr>
+<tr>
+<td><code>article.showHeadingAnchors</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not heading anchor links are displayed alongside headings within articles.</td>
+</tr>
+<tr>
+<td><code>article.showPagination</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not the next/previous article links are displayed in the article footer.</td>
+</tr>
+<tr>
+<td><code>article.showReadingTime</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not article reading times are displayed.</td>
+</tr>
+<tr>
+<td><code>article.sharingLinks</code></td>
+<td>array of strings</td>
+<td><em>Not set</em></td>
+<td>Which sharing links to display at the end of each article. When not provided, or set to <code>false</code> no links will be displayed.</td>
+</tr>
+<tr>
+<td><code>list.groupByYear</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not articles are grouped under years in the article listing.</td>
+</tr>
+<tr>
+<td><code>sitemap.excludedKinds</code></td>
+<td>array of strings</td>
+<td><code>["taxonomy", "term"]</code></td>
+<td>Kinds of content that should be excluded from the generated <code>/sitemap.xml</code> file. Refer to the <a href=https://gohugo.io/templates/section-templates/#page-kinds>Hugo docs</a> for acceptable values.</td>
+</tr>
+<tr>
+<td><code>taxonomy.showTermCount</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.</td>
+</tr>
+<tr>
+<td><code>fathomAnalytics.site</code></td>
+<td>string</td>
+<td><em>Not set</em></td>
+<td>The site code generated by Fathom Analytics for the website. Refer to the <a href=#analyticshtml>Analytics docs</a> below for more details.</td>
+</tr>
+<tr>
+<td><code>fathomAnalytics.domain</code></td>
+<td>string</td>
+<td><em>Not set</em></td>
+<td>If using a custom domain with Fathom Analytics, provide it here to serve <code>script.js</code> from the custom domain.</td>
+</tr>
+<tr>
+<td><code>verification.google</code></td>
+<td>string</td>
+<td><em>Not set</em></td>
+<td>The site verification string provided by Google to be included in the site metadata.</td>
+</tr>
+<tr>
+<td><code>verification.bing</code></td>
+<td>string</td>
+<td><em>Not set</em></td>
+<td>The site verification string provided by Bing to be included in the site metadata.</td>
+</tr>
+<tr>
+<td><code>verification.pinterest</code></td>
+<td>string</td>
+<td><em>Not set</em></td>
+<td>The site verification string provided by Pinterest to be included in the site metadata.</td>
+</tr>
+<tr>
+<td><code>verification.yandex</code></td>
+<td>string</td>
+<td><em>Not set</em></td>
+<td>The site verification string provided by Yandex to be included in the site metadata.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<footer class=pt-8>
+<div class=pt-8>
+<hr class="border-gray-300 border-dotted dark:border-gray-600">
+<div class="flex justify-between pt-3">
+<span>
+<a class=flex href=https://jpanther.github.io/Congo/docs/getting-started/>
+<span class=mr-3>&larr;</span>
+<span class="flex flex-col">
+<span class=button__text>Getting Started</span>
+</span>
+</a>
+</span>
+<span>
+<a class="flex text-right" href=https://jpanther.github.io/Congo/docs/homepage-layout/>
+<span class="flex flex-col">
+<span>Homepage Layout</span>
+</span>
+<span class=ml-3>&rarr;</span>
+</a>
+</span>
+</div>
+</div>
+</footer>
+</article>
+</main><footer class="py-10 text-sm">
+<p class="text-gray-400 dark:text-gray-500">
+&copy;
+2021
+Congo
+</p>
+<p class="text-xs text-gray-300 dark:text-gray-600">
+Powered by
+<a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a>
+&
+<a class=hover:underline href=https://git.io/hugo-congo target=_blank>Congo</a>
+</p>
+</footer>
+</body>
+</html>

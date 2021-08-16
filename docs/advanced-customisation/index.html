@@ -1,0 +1,133 @@
+<!doctype html><html lang=en-au><head>
+<meta charset=utf-8>
+<meta http-equiv=content-language content="en-AU">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Advanced Customisation &#183; Congo</title>
+<meta name=title content="Advanced Customisation &#183; Congo">
+<meta name=description content="Learn how to build Congo manually.">
+<link rel=canonical href=https://jpanther.github.io/Congo/docs/advanced-customisation/>
+<link type=text/css rel=stylesheet href=https://jpanther.github.io/Congo/css/main.css>
+<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/favicon-16x16.png>
+<link rel=manifest href=https://jpanther.github.io/site.webmanifest>
+<meta property="og:title" content="Advanced Customisation">
+<meta property="og:description" content="Learn how to build Congo manually.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jpanther.github.io/Congo/docs/advanced-customisation/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2020-08-09T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-08-09T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Advanced Customisation">
+<meta name=twitter:description content="Learn how to build Congo manually.">
+<meta itemprop=name content="Advanced Customisation">
+<meta itemprop=description content="Learn how to build Congo manually."><meta itemprop=datePublished content="2020-08-09T00:00:00+00:00">
+<meta itemprop=dateModified content="2020-08-09T00:00:00+00:00">
+<meta itemprop=wordCount content="293">
+<meta itemprop=keywords content="advanced,css,docs,">
+<meta name=generator content="Hugo 0.87.0">
+<meta name=author content="Congo">
+<link href=https://twitter.com/ rel=me>
+<link href=https://facebook.com/ rel=me>
+<link href=https://linkedin.com/ rel=me>
+<link href=https://youtube.com/ rel=me>
+</head>
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
+<div>
+<a class=hover:underline rel=me href=https://jpanther.github.io/Congo/>Congo</a>
+</div>
+<nav>
+<ul class="flex flex-col list-none sm:flex-row">
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/docs/ title=Documentation>Docs</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=/Congo/samples/ title="Content Samples">Samples</a>
+</li>
+<li class="text-right sm:mr-7 sm:last:mr-0">
+<a class=hover:underline href=https://github.com/jpanther/Congo title>GitHub</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=flex-grow>
+<article class=max-w-prose>
+<header>
+<h1 class="mt-0 text-4xl font-extrabold">Advanced Customisation</h1>
+<div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
+<span title="Reading time">
+2
+mins
+</span>
+</div>
+</header>
+<section class="prose dark:prose-light">
+<p>There are a couple of ways you can make style changes to Congo.</p>
+<p>If you just need to add or override some simple styles, you can do so by creating a <code>custom.css</code> file in your project&rsquo;s <code>static/css/</code> folder. This file will be loaded automatically after the theme&rsquo;s default styles.</p>
+<p>Alternatively, if you&rsquo;d like to make a major change, you can take advantage of Tailwind CSS&rsquo;s JIT compiler and rebuild the entire theme CSS from scratch.</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 text-primary-400">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg>
+</span>
+</span>
+<span class="no-prose dark:text-gray-300"><strong>Note:</strong> Building the theme manually is intended for advanced users.</span>
+</div>
+<p>Change into the <code>themes/congo/</code> folder and install the project dependencies.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>npm install
+</code></pre></div><p>Once installed, you can edit the <code>themes/congo/tailwind.config.js</code> to change the styles that are applied throughout the theme. You can also adjust specific styles in <code>themes/congo/assets/css/main.css</code>.</p>
+<p>To allow for easy theme colour changes, Congo defines a <code>primary</code> and <code>secondary</code> colour palette that is used throughout the theme. In order to change the colour across the entire theme, simply edit the <code>tailwind.config.js</code> file accordingly.</p>
+<p>For example, to change to a green colour scheme, you could apply these changes:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js>  <span class=c1>// themes/congo/tailwind.config.js
+</span><span class=c1></span>
+  <span class=nx>theme</span><span class=o>:</span> <span class=p>{</span>
+    <span class=nx>colors</span><span class=o>:</span> <span class=p>{</span>
+      <span class=nx>transparent</span><span class=o>:</span> <span class=s2>&#34;transparent&#34;</span><span class=p>,</span>
+      <span class=nx>white</span><span class=o>:</span> <span class=nx>colors</span><span class=p>.</span><span class=nx>white</span><span class=p>,</span>
+      <span class=nx>gray</span><span class=o>:</span> <span class=nx>colors</span><span class=p>.</span><span class=nx>gray</span><span class=p>,</span>
+      <span class=nx>primary</span><span class=o>:</span> <span class=nx>colors</span><span class=p>.</span><span class=nx>lime</span><span class=p>,</span>
+      <span class=nx>secondary</span><span class=o>:</span> <span class=nx>colors</span><span class=p>.</span><span class=nx>teal</span><span class=p>,</span>
+    <span class=p>},</span>
+    <span class=p>...</span>
+  <span class=p>}</span>
+</code></pre></div><p>For a full list of colours available, and their corresponding configuration values, see the official <a href=https://tailwindcss.com/docs/customizing-colors#color-palette-reference>Tailwind docs</a>.</p>
+<p>After editing the configuration, you need to rebuild the theme&rsquo;s stylesheets.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>npm run build
+</code></pre></div><p>This will automatically output a minified CSS file to <code>/themes/congo/static/css/main.css</code>.</p>
+<p>To aid with testing style changes, you can also run the Tailwind JIT comiler in watch mode.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>npm run dev
+</code></pre></div><p>Now whenever you make a change, the (non-minified) CSS files will be rebuilt automatically. This mode is useful to run when using <code>hugo server</code> to preview your site during development. Remember to perform a full build before publishing your website.</p>
+</section>
+<footer class=pt-8>
+<div class=pt-8>
+<hr class="border-gray-300 border-dotted dark:border-gray-600">
+<div class="flex justify-between pt-3">
+<span>
+<a class=flex href=https://jpanther.github.io/Congo/docs/partials/>
+<span class=mr-3>&larr;</span>
+<span class="flex flex-col">
+<span class=button__text>Partials</span>
+</span>
+</a>
+</span>
+<span>
+</span>
+</div>
+</div>
+</footer>
+</article>
+</main><footer class="py-10 text-sm">
+<p class="text-gray-400 dark:text-gray-500">
+&copy;
+2021
+Congo
+</p>
+<p class="text-xs text-gray-300 dark:text-gray-600">
+Powered by
+<a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a>
+&
+<a class=hover:underline href=https://git.io/hugo-congo target=_blank>Congo</a>
+</p>
+</footer>
+</body>
+</html>
