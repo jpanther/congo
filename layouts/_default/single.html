@@ -16,8 +16,9 @@
     <section class="prose dark:prose-light">
       {{ .Content | emojify }}
     </section>
-    <footer>
+    <footer class="pt-8">
       {{ partial "author.html" . }}
+      {{ partial "sharing-links.html" . }}
       {{ partial "article-pagination.html" . }}
     </footer>
     {{/* Comments */}}

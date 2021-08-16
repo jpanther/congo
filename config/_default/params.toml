@@ -17,6 +17,7 @@
   showHeadingAnchors = true
   showPagination = true
   showReadingTime = true
+  # sharingLinks = ["facebook", "twitter", "reddit", "linkedin", "email"]
 
 [list]
   groupByYear = true
