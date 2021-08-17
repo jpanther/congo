@@ -34,7 +34,8 @@ Note that the variable names provided in this table use dot notation to simplify
 | --- | --- | --- | --- |
 |`theme`|string|`"congo"`|This must be set to `"congo"` for the theme to function.|
 |`baseURL`|string|_Not set_|The URL to the root of the website.|
-|`languageCode`|string|`"en"`|The language of the website. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `"en-AU"`)."
+|`languageCode`|string|`"en"`|The language of the website for site metadata purposes. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `"en-AU"`)."|
+|`defaultContentLanguage`|string|`"en"`|This value determines the language of theme components."|
 |`title`|string|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
 |`copyright`|string|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.
 |`enableEmoji`|boolean|`true`|Whether emoji strings in content should be converted to emoji symbols.|

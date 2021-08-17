@@ -1,0 +1,35 @@
+article:
+  anchor_label: "Anchor"
+  draft: "Draft"
+  reading_time:
+    one: "{{ .Count }} min"
+    other: "{{ .Count }} mins"
+  reading_time_title: "Reading time"
+
+author:
+  byline_title: "Author"
+
+error:
+  404_title: "Page Not Found :confused:"
+  404_error: "Error 404"
+  404_description: "It seems that the page you've requested does not exist."
+
+footer:
+  powered_by: "Powered by"
+
+homepage:
+  recent: "Recent"
+
+list:
+  externalurl_title: "Link to external site"
+  no_articles: "There's no articles to list here yet."
+
+sharing:
+  email: "Send via email"
+  facebook: "Share on Facebook"
+  linkedin: "Share on LinkedIn"
+  reddit: "Submit to Reddit"
+  twitter: "Tweet on Twitter"
+
+shortcode:
+  no_icon: "Icon not found."

@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <h1 class="mb-3 text-4xl font-extrabold">Page Not Found 🤷‍♂️</h1>
-  <p class="mt-8 mb-12 text-gray-400 dark:text-gray-500">Error 404</p>
+  <h1 class="mb-3 text-4xl font-extrabold">{{ i18n "error.404_title" | emojify }}</h1>
+  <p class="mt-8 mb-12 text-gray-400 dark:text-gray-500">{{ i18n "error.404_error" | emojify }}</p>
   <div class="prose dark:prose-light">
-    <p>It seems that the page you've requested does not exist.</p>
+    <p>{{ i18n "error.404_description" | emojify }}</p>
   </div>
 {{ end }}

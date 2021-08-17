@@ -10,6 +10,7 @@
 baseURL = "https://jpanther.github.io/Congo/"
 theme = "Congo"
 languageCode = "en-AU"
+defaultContentLanguage = "en"
 title = "Congo"
 enableEmoji = true
 relativeURLs = true

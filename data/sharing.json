@@ -1,27 +1,27 @@
 {
   "email": {
     "icon": "email",
-    "title": "Send via email",
+    "title": "sharing.email",
     "url": "mailto:?body=%s&subject=%s"
   },
   "facebook": {
     "icon": "facebook",
-    "title": "Share on Facebook",
+    "title": "sharing.facebook",
     "url": "https://www.facebook.com/sharer/sharer.php?u=%s&quote=%s"
   },
   "linkedin": {
     "icon": "linkedin",
-    "title": "Share on LinkedIn",
+    "title": "sharing.linkedin",
     "url": "https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s"
   },
   "reddit": {
     "icon": "reddit",
-    "title": "Submit to Reddit",
+    "title": "sharing.reddit",
     "url": "https://reddit.com/submit/?url=%s&resubmit=true&title=%s"
   },
   "twitter": {
     "icon": "twitter",
-    "title": "Tweet on Twitter",
+    "title": "sharing.twitter",
     "url": "https://twitter.com/intent/tweet/?url=%s&text=%s"
   }
 }

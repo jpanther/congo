@@ -9,13 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- i18n support
+
 ### Changed
 
 - Consolidated author configuration parameters into `config.toml`
 
 ### Fixed
 
-- Fixes URLs being incorrect in some cases when the site is deployed in a subfolder
+- URLs being incorrect in some cases when the site is deployed in a subfolder
 
 ## [1.0.0] - 2020-08-16
 
