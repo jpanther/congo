@@ -1,0 +1,33 @@
+# Changelog
+
+All notable changes to Congo will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.0] - 2020-08-16
+
+### Initial release 🎉
+
+- Built with Tailwind CSS JIT for minified stylesheets without any excess code
+- Fully responsive layout
+- Dark mode (auto-switching based upon browser)
+- Highly customisable configuration
+- Multiple homepage layouts
+- Flexible with any content types, taxonomies and menus
+- Ability to link to posts on third-party websites
+- Diagrams and visualisations using Mermaid JS
+- SVG icons from FontAwesome 5
+- Heading anchors, Buttons, Badges and more
+- HTML and Emoji support in articles
+- SEO friendly with links for sharing to social media
+- RSS feeds
+- Fathom Analytics and Google Analytics support
+- Favicons support
+- Comments support
+- Advanced customisation using simple Tailwind colour definitions and styles
+- Fully documented
+
+[1.0.0]: https://github.com/jpanther/Congo/releases/tag/v1.0.0
