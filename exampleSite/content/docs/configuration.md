@@ -21,7 +21,32 @@ The default theme configuration is documented in each file so you can freely adj
 As outlined in the [installation instructions](/docs/installation/#set-up-your-configuration-files), you should adjust your theme configuration by modifying the files in the `config/_default/` folder of your Hugo project and delete the `config.toml` file in your project root.
 {{< /alert >}}
 
-## Parameters
+## Site Configuration
+
+Standard Hugo configuration variables are respected throughout the theme, however there are some specific things that should be configured for the best experience.
+
+The site configuration is managed through the `config/_default/config.toml` file. The table below outlines all the settings that the Congo takes advantage of.
+
+Note that the variable names provided in this table use dot notation to simplify the TOML data structure (ie. `author.name` refers to `[author] name`).
+
+<!-- prettier-ignore-start -->
+|Name|Type|Default|Description|
+| --- | --- | --- | --- |
+|`theme`|string|`"congo"`|This must be set to `"congo"` for the theme to function.|
+|`baseURL`|string|_Not set_|The URL to the root of the website.|
+|`languageCode`|string|`"en"`|The language of the website. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `"en-AU"`)."
+|`title`|string|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
+|`copyright`|string|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.
+|`enableEmoji`|boolean|`true`|Whether emoji strings in content should be converted to emoji symbols.|
+|`enableRobotsTXT`|boolean|`true`|When enabled a `robots.txt` file will be created in the site root that allows search engines to crawl the entire site. Set to `false` if you wish to provide your own file.|
+|`author.name`|string|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
+|`author.image`|string|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `static/` folder.|
+|`author.links`|array of objects|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
+|`[permalinks]`||_Not set_|Refer to the [Hugo docs](https://gohugo.io/content-management/urls/#permalinks) for permalink configuration.|
+|`[taxonomies]`||_Not set_|Refer to the [Hugo docs](https://gohugo.io/content-management/taxonomies/) for taxonomy configuration.|
+<!-- prettier-ignore-end -->
+
+## Theme Parameters
 
 Congo provides a large number of configuration parameters that control how the theme functions. The table below outlines every available parameter in the `config/_default/params.toml` file.
 

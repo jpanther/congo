@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Consolidated author configuration parameters into `config.toml`
+
 ### Fixed
 
 - Fixes URLs being incorrect in some cases when the site is deployed in a subfolder

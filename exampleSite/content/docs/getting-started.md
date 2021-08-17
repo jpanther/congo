@@ -22,21 +22,19 @@ A few things you need to set for a new installation:
 
 baseURL = "https://your_domain.com"
 languageCode = "en-AU"
-
 title = "My awesome website"
-```
-
-It's also useful to set the author configuration in the `config/_default/author.toml` file. You can also add links to your profiles here to enable them in the theme.
-
-```toml
-# config/_default/author.toml
 
 [author]
 name = "Your name"
+image = "img/author.jpg"
 links = [
   { twitter = "https://twitter.com/username" }
 ]
 ```
+
+The `[author]` configuration determines how the author information is displayed on the website. The image should be placed in the site's `static/` folder. Links will be displayed in the order they are listed.
+
+Further detail about these configuration options is covered in the [Configuration](/docs/configuration/) section.
 
 ## Organising content
 
