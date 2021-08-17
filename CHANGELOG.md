@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [Unreleased]
+
+### Fixed
+
+- Fixes URLs being incorrect in some cases when the site is deployed in a subfolder
+
 ## [1.0.0] - 2020-08-16
 
 ### Initial release 🎉
@@ -30,4 +36,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/jpanther/Congo/releases/tag/v1.0.0
