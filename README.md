@@ -2,10 +2,10 @@
 
 Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tailwind CSS with a clean and minimalist design.
 
-🌏 [Demo site](https://jpanther.github.io/Congo/)  
-📑 [Theme documentation](https://jpanther.github.io/Congo/docs/)
+🌏 [Demo site](https://jpanther.github.io/congo/)  
+📑 [Theme documentation](https://jpanther.github.io/congo/docs/)
 
-![Screenshot](https://raw.githubusercontent.com/jpanther/Congo/stable/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/jpanther/congo/stable/images/screenshot.png)
 
 ## Features
 
@@ -26,13 +26,13 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
 - Favicons support
 - Comments support
 - Advanced customisation using simple Tailwind colour definitions and styles
-- [Fully documented](https://jpanther.github.io/Congo/docs/)
+- [Fully documented](https://jpanther.github.io/congo/docs/)
 
 ---
 
 ## Installation
 
-This is a simplified set of instructions and assumes a basic understanding of building Hugo sites and installing themes. For detailed instructions, refer to the full [theme documentation](https://jpanther.github.io/Congo/docs/).
+This is a simplified set of instructions and assumes a basic understanding of building Hugo sites and installing themes. For detailed instructions, refer to the full [theme documentation](https://jpanther.github.io/congo/docs/).
 
 There are a couple of ways to install the Congo theme into your Hugo website. The git method is the easiest to keep the theme up-to-date, but you can also download and install manually if you don't have git available.
 
@@ -43,12 +43,12 @@ Change into the directory for your Hugo website, initialise a new repository and
 ```bash
 cd mywebsite
 git init
-git submodule add -b stable https://github.com/jpanther/Congo.git themes/congo
+git submodule add -b stable https://github.com/jpanther/congo.git themes/congo
 ```
 
 ### Install manually
 
-Download the latest release of the theme from: [https://github.com/jpanther/Congo/releases](https://github.com/jpanther/Congo/releases)
+Download the latest release of the theme from: [https://github.com/jpanther/congo/releases](https://github.com/jpanther/congo/releases)
 
 Extract the archive, rename the folder to `congo` and move it to the `themes/` directory inside your Hugo project.
 
@@ -60,7 +60,7 @@ You're now all set up to use Congo. From here you can add some content and start
 
 ## Configuration
 
-For all the theme options and detailed configuration instructions, refer to the [Congo docs](https://jpanther.github.io/Congo/docs/).
+For all the theme options and detailed configuration instructions, refer to the [Congo docs](https://jpanther.github.io/congo/docs/).
 
 A few things you need to set for a new installation:
 

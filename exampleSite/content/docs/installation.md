@@ -34,7 +34,7 @@ Change into the directory for your Hugo website, initialise a new repository and
 ```bash
 cd mywebsite
 git init
-git submodule add -b stable https://github.com/jpanther/Congo.git themes/congo
+git submodule add -b stable https://github.com/jpanther/congo.git themes/congo
 ```
 
 {{< alert >}}
@@ -45,7 +45,7 @@ git submodule add -b stable https://github.com/jpanther/Congo.git themes/congo
 
 Download the latest release of the theme.
 
-{{< button href="https://github.com/jpanther/Congo/releases" target="_blank" >}}Download from Github{{< /button >}}
+{{< button href="https://github.com/jpanther/congo/releases" target="_blank" >}}Download from Github{{< /button >}}
 
 Extract the archive, rename the folder to `congo` and move it to the `themes/` directory inside your your `mywebsite` folder.
 
