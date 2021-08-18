@@ -57,7 +57,7 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{/* Schema */}}
-  {{ template "_internal/schema.html" . }}
+  {{ partial "schema.html" . }}
   {{/* Generator */}}
   {{ if .Site.Params.attribution | default true }}
     {{ hugo.Generator }}

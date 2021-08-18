@@ -17,11 +17,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Recent articles partial
 - CSS transitions
 - Hugo module support
+- JSON-LD structured metadata
 
 ### Changed
 
 - ⚠️ Renamed parameter: `homepage.showList` -> `homepage.showRecent`
-- ⚠️ Renamed parameter: `homepage.listSections` -> `homepage.mainSections`
+- ⚠️ Renamed parameter: `homepage.listSections` -> `mainSections`
 - ⚠️ Consolidated author configuration parameters into `config.toml`
 - General style tweaks to enhance design consistency
 

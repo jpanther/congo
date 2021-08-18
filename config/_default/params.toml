@@ -5,10 +5,12 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/Congo/docs/configuration/#theme-parameters
 
+# description = "My awesome website"
+# mainSections = ["section1", "section2"]
+
 [homepage]
   layout = "page" # valid options: page, profile, custom
   showRecent = false
-  # mainSections = ["section1", "section2"]
 
 [article]
   showDate = true

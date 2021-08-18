@@ -56,9 +56,10 @@ Many of the article defaults here can be overridden on a per article basis by sp
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
+|`description`|string|_Not set_|The description of the website for metadata purposes.|
+|`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout](/docs/homepage-layout/) section for more details.|
 |`homepage.showRecent`|boolean|`false`|Whether or not to display the recent articles list on the homepage.|
-|`homepage.mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`article.showDate`|boolean|`true`|Whether or not article dates are displayed.|
 |`article.dateFormat`|string|`"2 January 2006"`|How article dates are formatted. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
 |`article.showAuthor`|boolean|`true`|Whether or not the author box is displayed in the article footer.|
