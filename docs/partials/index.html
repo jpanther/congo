@@ -8,10 +8,10 @@
 <meta name=description content="All the partials available in Congo.">
 <link rel=canonical href=https://jpanther.github.io/Congo/docs/partials/>
 <link type=text/css rel=stylesheet href=https://jpanther.github.io/Congo/css/main.css>
-<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/favicon-16x16.png>
-<link rel=manifest href=https://jpanther.github.io/site.webmanifest>
+<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/Congo/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/Congo/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/Congo/favicon-16x16.png>
+<link rel=manifest href=https://jpanther.github.io/Congo/site.webmanifest>
 <meta property="og:title" content="Partials">
 <meta property="og:description" content="All the partials available in Congo.">
 <meta property="og:type" content="article">
@@ -21,11 +21,7 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Partials">
 <meta name=twitter:description content="All the partials available in Congo.">
-<meta itemprop=name content="Partials">
-<meta itemprop=description content="All the partials available in Congo."><meta itemprop=datePublished content="2020-08-10T00:00:00+00:00">
-<meta itemprop=dateModified content="2020-08-10T00:00:00+00:00">
-<meta itemprop=wordCount content="598">
-<meta itemprop=keywords content="partials,analytics,privacy,comments,favicons,icon,docs,">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Documentation","name":"Partials","headline":"Partials","description":"All the partials available in Congo.","inLanguage":"en-AU","author":{"@type":"Person","name":"Congo"},"creator":{"@type":"Person","name":"Congo"},"copyrightHolder":"Congo","copyrightYear":"2020","dateCreated":"2020-08-10T00:00:00\u002b00:00","datePublished":"2020-08-10T00:00:00\u002b00:00","dateModified":"2020-08-10T00:00:00\u002b00:00","url":"https:\/\/jpanther.github.io\/Congo\/docs\/partials\/","wordCount":"598","keywords":["partials","analytics","privacy","comments","favicons","icon","docs"]}</script>
 <meta name=generator content="Hugo 0.87.0">
 <meta name=author content="Congo">
 <link href=https://twitter.com/ rel=me>
@@ -35,18 +31,18 @@
 </head>
 <body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
 <div>
-<a class=hover:underline rel=me href=https://jpanther.github.io/Congo/>Congo</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" rel=me href=https://jpanther.github.io/Congo/>Congo</a>
 </div>
 <nav>
 <ul class="flex flex-col list-none sm:flex-row">
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=/Congo/docs/ title=Documentation>Docs</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/Congo/docs/ title=Documentation>Docs</a>
 </li>
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=/Congo/samples/ title="Content Samples">Samples</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/Congo/samples/ title="Content Samples">Samples</a>
 </li>
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=https://github.com/jpanther/Congo title>GitHub</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://github.com/jpanther/Congo title>GitHub</a>
 </li>
 </ul>
 </nav>
@@ -54,11 +50,21 @@
 <main class=flex-grow>
 <article class=max-w-prose>
 <header>
+<ol class="text-sm text-gray-400 dark:text-gray-500">
+<li class="inline hidden">
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/>Welcome to Congo! :tada:</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class=inline>
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/docs/>Documentation</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class="inline hidden">
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/docs/partials/>Partials</a><span class="px-1 text-primary-500">/</span>
+</li>
+</ol>
 <h1 class="mt-0 text-4xl font-extrabold">Partials</h1>
 <div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
 <span title="Reading time">
-3
-mins
+3 mins
 </span>
 </div>
 </header>
@@ -95,36 +101,36 @@ mins
 └─ site.webmanifest
 </code></pre></div><p>Alternatively, you can also completely override the default favicon behaviour and provide your own favicon HTML tags and assets. Simply provide a <code>layouts/partials/favicons.html</code> file in your project and this will be injected into the site <code>&lt;head></code> in place of the default assets.</p>
 <h2 id=icon>Icon <a class=heading-anchor href=#icon aria-label=Anchor>#</a></h2>
-<p>Similar to the <a href=/docs/shortcodes/#icon>icon shortcode</a>, you can include icons in your own templates and partials by using Congo&rsquo;s <code>icon.html</code> partial. The partial takes one parameter which is the name of the icon to be included.</p>
+<p>Similar to the <a href=../../docs/shortcodes/#icon>icon shortcode</a>, you can include icons in your own templates and partials by using Congo&rsquo;s <code>icon.html</code> partial. The partial takes one parameter which is the name of the icon to be included.</p>
 <p><strong>Example:</strong></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go>  <span class=p>{{</span> <span class=nx>partial</span> <span class=s>&#34;icon.html&#34;</span> <span class=s>&#34;github&#34;</span> <span class=p>}}</span>
 </code></pre></div><p>Congo includes a number of built-in icons for social, links and other purposes. You can also provide your own icon assets by including the SVG in <code>assets/icons/</code>.</p>
 <h2 id=extensions>Extensions <a class=heading-anchor href=#extensions aria-label=Anchor>#</a></h2>
 <p>Congo also provides for a number of extension partials that allow for expanding upon base functionality.</p>
 <h3 id=article-link>Article link <a class=heading-anchor href=#article-link aria-label=Anchor>#</a></h3>
-<p>If you wish to insert additional code after article links, create a <code>layouts/partials/extend-article-link.html</code> file. This is especially powerful when combined with the <a href=/docs/shortcodes/#badge><code>badge</code></a> shortcode which can be used to highlight metadata for certain articles.</p>
+<p>If you wish to insert additional code after article links, create a <code>layouts/partials/extend-article-link.html</code> file. This is especially powerful when combined with the <a href=../../docs/shortcodes/#badge><code>badge</code></a> shortcode which can be used to highlight metadata for certain articles.</p>
 <h3 id=head-and-footer>Head and Footer <a class=heading-anchor href=#head-and-footer aria-label=Anchor>#</a></h3>
 <p>The theme allows for inserting additional code directly into the <code>&lt;head></code> and <code>&lt;footer></code> sections of the template. These can be useful for providing scripts or other logic that isn&rsquo;t part of the theme.</p>
 <p>Simply create either <code>layouts/partials/extend-head.html</code> or <code>layouts/partials/extend-footer.html</code> and these will automatically be included in your website build. Both partials are injected as the last items in <code>&lt;head></code> and <code>&lt;footer></code> so they can be used to override theme defaults.</p>
 </section>
 <footer class=pt-8>
-<div class=pt-8>
+<div class="pt-8 article-pagination">
 <hr class="border-gray-300 border-dotted dark:border-gray-600">
 <div class="flex justify-between pt-3">
 <span>
 <a class=flex href=https://jpanther.github.io/Congo/docs/shortcodes/>
-<span class=mr-3>&larr;</span>
+<span class="mr-3 article-pagination-direction">&larr;</span>
 <span class="flex flex-col">
-<span class=button__text>Shortcodes</span>
+<span class=article-pagination-title>Shortcodes</span>
 </span>
 </a>
 </span>
 <span>
 <a class="flex text-right" href=https://jpanther.github.io/Congo/docs/advanced-customisation/>
 <span class="flex flex-col">
-<span>Advanced Customisation</span>
+<span class=article-pagination-title>Advanced Customisation</span>
 </span>
-<span class=ml-3>&rarr;</span>
+<span class="ml-3 article-pagination-direction">&rarr;</span>
 </a>
 </span>
 </div>
@@ -139,9 +145,9 @@ Congo
 </p>
 <p class="text-xs text-gray-300 dark:text-gray-600">
 Powered by
-<a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a>
+<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank>Hugo</a>
 &
-<a class=hover:underline href=https://git.io/hugo-congo target=_blank>Congo</a>
+<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank>Congo</a>
 </p>
 </footer>
 </body>

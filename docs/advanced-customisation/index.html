@@ -8,10 +8,10 @@
 <meta name=description content="Learn how to build Congo manually.">
 <link rel=canonical href=https://jpanther.github.io/Congo/docs/advanced-customisation/>
 <link type=text/css rel=stylesheet href=https://jpanther.github.io/Congo/css/main.css>
-<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/favicon-16x16.png>
-<link rel=manifest href=https://jpanther.github.io/site.webmanifest>
+<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/Congo/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/Congo/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/Congo/favicon-16x16.png>
+<link rel=manifest href=https://jpanther.github.io/Congo/site.webmanifest>
 <meta property="og:title" content="Advanced Customisation">
 <meta property="og:description" content="Learn how to build Congo manually.">
 <meta property="og:type" content="article">
@@ -21,11 +21,7 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Advanced Customisation">
 <meta name=twitter:description content="Learn how to build Congo manually.">
-<meta itemprop=name content="Advanced Customisation">
-<meta itemprop=description content="Learn how to build Congo manually."><meta itemprop=datePublished content="2020-08-09T00:00:00+00:00">
-<meta itemprop=dateModified content="2020-08-09T00:00:00+00:00">
-<meta itemprop=wordCount content="293">
-<meta itemprop=keywords content="advanced,css,docs,">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Documentation","name":"Advanced Customisation","headline":"Advanced Customisation","description":"Learn how to build Congo manually.","inLanguage":"en-AU","author":{"@type":"Person","name":"Congo"},"creator":{"@type":"Person","name":"Congo"},"copyrightHolder":"Congo","copyrightYear":"2020","dateCreated":"2020-08-09T00:00:00\u002b00:00","datePublished":"2020-08-09T00:00:00\u002b00:00","dateModified":"2020-08-09T00:00:00\u002b00:00","url":"https:\/\/jpanther.github.io\/Congo\/docs\/advanced-customisation\/","wordCount":"293","keywords":["advanced","css","docs"]}</script>
 <meta name=generator content="Hugo 0.87.0">
 <meta name=author content="Congo">
 <link href=https://twitter.com/ rel=me>
@@ -35,18 +31,18 @@
 </head>
 <body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
 <div>
-<a class=hover:underline rel=me href=https://jpanther.github.io/Congo/>Congo</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" rel=me href=https://jpanther.github.io/Congo/>Congo</a>
 </div>
 <nav>
 <ul class="flex flex-col list-none sm:flex-row">
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=/Congo/docs/ title=Documentation>Docs</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/Congo/docs/ title=Documentation>Docs</a>
 </li>
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=/Congo/samples/ title="Content Samples">Samples</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/Congo/samples/ title="Content Samples">Samples</a>
 </li>
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=https://github.com/jpanther/Congo title>GitHub</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://github.com/jpanther/Congo title>GitHub</a>
 </li>
 </ul>
 </nav>
@@ -54,11 +50,21 @@
 <main class=flex-grow>
 <article class=max-w-prose>
 <header>
+<ol class="text-sm text-gray-400 dark:text-gray-500">
+<li class="inline hidden">
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/>Welcome to Congo! :tada:</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class=inline>
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/docs/>Documentation</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class="inline hidden">
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/docs/advanced-customisation/>Advanced Customisation</a><span class="px-1 text-primary-500">/</span>
+</li>
+</ol>
 <h1 class="mt-0 text-4xl font-extrabold">Advanced Customisation</h1>
 <div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
 <span title="Reading time">
-2
-mins
+2 mins
 </span>
 </div>
 </header>
@@ -99,14 +105,14 @@ mins
 </code></pre></div><p>Now whenever you make a change, the (non-minified) CSS files will be rebuilt automatically. This mode is useful to run when using <code>hugo server</code> to preview your site during development. Remember to perform a full build before publishing your website.</p>
 </section>
 <footer class=pt-8>
-<div class=pt-8>
+<div class="pt-8 article-pagination">
 <hr class="border-gray-300 border-dotted dark:border-gray-600">
 <div class="flex justify-between pt-3">
 <span>
 <a class=flex href=https://jpanther.github.io/Congo/docs/partials/>
-<span class=mr-3>&larr;</span>
+<span class="mr-3 article-pagination-direction">&larr;</span>
 <span class="flex flex-col">
-<span class=button__text>Partials</span>
+<span class=article-pagination-title>Partials</span>
 </span>
 </a>
 </span>
@@ -124,9 +130,9 @@ Congo
 </p>
 <p class="text-xs text-gray-300 dark:text-gray-600">
 Powered by
-<a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a>
+<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank>Hugo</a>
 &
-<a class=hover:underline href=https://git.io/hugo-congo target=_blank>Congo</a>
+<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank>Congo</a>
 </p>
 </footer>
 </body>

@@ -8,10 +8,10 @@
 <meta name=description content="How to install the Congo theme.">
 <link rel=canonical href=https://jpanther.github.io/Congo/docs/installation/>
 <link type=text/css rel=stylesheet href=https://jpanther.github.io/Congo/css/main.css>
-<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/favicon-16x16.png>
-<link rel=manifest href=https://jpanther.github.io/site.webmanifest>
+<link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/Congo/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/Congo/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/Congo/favicon-16x16.png>
+<link rel=manifest href=https://jpanther.github.io/Congo/site.webmanifest>
 <meta property="og:title" content="Installation">
 <meta property="og:description" content="How to install the Congo theme.">
 <meta property="og:type" content="article">
@@ -21,11 +21,7 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Installation">
 <meta name=twitter:description content="How to install the Congo theme.">
-<meta itemprop=name content="Installation">
-<meta itemprop=description content="How to install the Congo theme."><meta itemprop=datePublished content="2020-08-16T00:00:00+00:00">
-<meta itemprop=dateModified content="2020-08-16T00:00:00+00:00">
-<meta itemprop=wordCount content="318">
-<meta itemprop=keywords content="installation,docs,">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Documentation","name":"Installation","headline":"Installation","description":"How to install the Congo theme.","inLanguage":"en-AU","author":{"@type":"Person","name":"Congo"},"creator":{"@type":"Person","name":"Congo"},"copyrightHolder":"Congo","copyrightYear":"2020","dateCreated":"2020-08-16T00:00:00\u002b00:00","datePublished":"2020-08-16T00:00:00\u002b00:00","dateModified":"2020-08-16T00:00:00\u002b00:00","url":"https:\/\/jpanther.github.io\/Congo\/docs\/installation\/","wordCount":"318","keywords":["installation","docs"]}</script>
 <meta name=generator content="Hugo 0.87.0">
 <meta name=author content="Congo">
 <link href=https://twitter.com/ rel=me>
@@ -35,18 +31,18 @@
 </head>
 <body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
 <div>
-<a class=hover:underline rel=me href=https://jpanther.github.io/Congo/>Congo</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" rel=me href=https://jpanther.github.io/Congo/>Congo</a>
 </div>
 <nav>
 <ul class="flex flex-col list-none sm:flex-row">
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=/Congo/docs/ title=Documentation>Docs</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/Congo/docs/ title=Documentation>Docs</a>
 </li>
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=/Congo/samples/ title="Content Samples">Samples</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/Congo/samples/ title="Content Samples">Samples</a>
 </li>
 <li class="text-right sm:mr-7 sm:last:mr-0">
-<a class=hover:underline href=https://github.com/jpanther/Congo title>GitHub</a>
+<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://github.com/jpanther/Congo title>GitHub</a>
 </li>
 </ul>
 </nav>
@@ -54,11 +50,21 @@
 <main class=flex-grow>
 <article class=max-w-prose>
 <header>
+<ol class="text-sm text-gray-400 dark:text-gray-500">
+<li class="inline hidden">
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/>Welcome to Congo! :tada:</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class=inline>
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/docs/>Documentation</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class="inline hidden">
+<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/Congo/docs/installation/>Installation</a><span class="px-1 text-primary-500">/</span>
+</li>
+</ol>
 <h1 class="mt-0 text-4xl font-extrabold">Installation</h1>
 <div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
 <span title="Reading time">
-2
-mins
+2 mins
 </span>
 </div>
 </header>
@@ -86,8 +92,9 @@ git submodule add -b stable https://github.com/jpanther/Congo.git themes/congo
 </div>
 <h3 id=install-manually>Install manually <a class=heading-anchor href=#install-manually aria-label=Anchor>#</a></h3>
 <p>Download the latest release of the theme.</p>
-<a class="px-4 py-2 !text-white !no-underline rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href=https://github.com/jpanther/Congo/releases target=_blank role=button>Download from Github
-</a>
+<button class="px-4 py-1 !text-white !no-underline rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href=https://github.com/jpanther/Congo/releases target=_blank role=button>
+Download from Github
+</button>
 <p>Extract the archive, rename the folder to <code>congo</code> and move it to the <code>themes/</code> directory inside your your <code>mywebsite</code> folder.</p>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
 <span class="pr-3 text-primary-400">
@@ -102,7 +109,7 @@ git submodule add -b stable https://github.com/jpanther/Congo.git themes/congo
 <p>Refer to the Hugo docs for more information or read the next section to learn more about configuring the theme.</p>
 </section>
 <footer class=pt-8>
-<div class=pt-8>
+<div class="pt-8 article-pagination">
 <hr class="border-gray-300 border-dotted dark:border-gray-600">
 <div class="flex justify-between pt-3">
 <span>
@@ -110,9 +117,9 @@ git submodule add -b stable https://github.com/jpanther/Congo.git themes/congo
 <span>
 <a class="flex text-right" href=https://jpanther.github.io/Congo/docs/getting-started/>
 <span class="flex flex-col">
-<span>Getting Started</span>
+<span class=article-pagination-title>Getting Started</span>
 </span>
-<span class=ml-3>&rarr;</span>
+<span class="ml-3 article-pagination-direction">&rarr;</span>
 </a>
 </span>
 </div>
@@ -127,9 +134,9 @@ Congo
 </p>
 <p class="text-xs text-gray-300 dark:text-gray-600">
 Powered by
-<a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a>
+<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank>Hugo</a>
 &
-<a class=hover:underline href=https://git.io/hugo-congo target=_blank>Congo</a>
+<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank>Congo</a>
 </p>
 </footer>
 </body>
