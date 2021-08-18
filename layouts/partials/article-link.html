@@ -11,7 +11,7 @@
         >&#8599;</span
       >
     {{ else }}
-      <a class="hover:underline" href="{{ .Permalink }}">{{ .Title }}</a>
+      <a class="hover:underline underline-primary-500" href="{{ .Permalink }}">{{ .Title }}</a>
     {{ end }}
     {{ if and .Draft .Site.Params.article.showDraftLabel }}
       {{ partial "badge.html" "Draft" }}

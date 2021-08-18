@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 
+body a,
+body button {
+  @apply transition;
+}
+
 /* Scale SVG icons to text size */
 .icon svg {
   height: 1em;
@@ -27,6 +32,15 @@
 /* Prose escape hatch */
 .no-prose > p {
   @apply mt-0 last:mb-0;
+}
+
+/* Article pagination */
+.article-pagination a:hover .article-pagination-title {
+  @apply underline underline-primary-500;
+}
+
+.article-pagination a:hover .article-pagination-direction {
+  @apply text-primary-700 dark:text-primary-400;
 }
 
 /* -- Chroma Highlight -- */

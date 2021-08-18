@@ -8,7 +8,7 @@
   (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true))
   (ne .ReadingTime 0)
 }}
-  <span class="px-1">&middot;</span>
+  <span class="px-1 text-primary-500">&middot;</span>
 {{ end }}
 {{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
   <span title="{{ i18n "article.reading_time_title" }}">

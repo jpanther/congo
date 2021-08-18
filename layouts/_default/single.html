@@ -8,11 +8,7 @@
       <div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
         {{ partial "article-meta.html" . }}
         {{ if and .Draft .Site.Params.article.showDraftLabel }}
-          <span
-            class="ml-2 px-1 py-[2px] text-xs font-normal border rounded-md text-primary-700 dark:text-primary-400 border-primary-400 dark:border-primary-600 inline-block align-middle mb-1"
-          >
-            {{ i18n "article.draft" | emojify }}
-          </span>
+          <span class="pl-2">{{ partial "badge.html" (i18n "article.draft" | emojify) }}</span>
         {{ end }}
       </div>
     </header>

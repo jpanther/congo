@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "section-heading.html" . }}
+  {{ partial "section-header.html" . }}
   {{ if gt .Pages 0 }}
     <section>
       {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
