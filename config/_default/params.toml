@@ -14,6 +14,7 @@
   showDate = true
   dateFormat = "2 January 2006"
   showAuthor = true
+  showBreadcrumbs = false
   showDraftLabel = true
   showHeadingAnchors = true
   showPagination = true
@@ -21,6 +22,7 @@
   # sharingLinks = ["facebook", "twitter", "reddit", "linkedin", "email"]
 
 [list]
+  showBreadcrumbs = false
   groupByYear = true
 
 [taxonomy]

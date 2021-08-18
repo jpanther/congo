@@ -35,6 +35,10 @@ relativeURLs = true
 
 [params.list]
   groupByYear = false
+  showBreadcrumbs = true
+
+[params.article]
+  showBreadcrumbs = true
 
 [[menu.main]]
   name = "Docs"
