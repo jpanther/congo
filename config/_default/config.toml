@@ -1,23 +1,45 @@
 # -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/Congo/docs/getting-started/
+
 theme = "congo"
 
-# Speficiy the base URL for the website.
 # baseURL = "https://your_domain.com/"
-
-# The language code of the language that the website is written in.
-# This can be a base language (ie. "en") or a specific variant (ie. "en-AU").
 languageCode = "en"
+defaultContentLanguage = "en"
 
-# The website title. This will be displayed in the site header.
 title = "Congo"
-
-# A default copyright message is generated automatically.
-# Uncomment the line below to provide a custom copyright Markdown string.
 # copyright = "Copy, _right?_ :thinking_face:"
 
-# To automatically convert strings such as :bang: to emoji, set this to true.
 enableEmoji = true
-
-# Congo will generate a robots file that allows search engines to index
-# the entire site. If you don't want a robots file, set this to false.
 enableRobotsTXT = true
+
+[author]
+  # name = "Your name here"
+  # image = "img/author.jpg"
+  # links = [
+  #   { email = "mailto:hello@your_domain.com" },
+  #   { link = "https://link-to-some-website.com/" },
+  #   { codepen = "https://codepen.io/username" },
+  #   { dev = "https://dev.to/username" },
+  #   { discord = "https://discord.gg/invitecode" },
+  #   { dribbble = "https://dribbble.com/username" },
+  #   { facebook = "https://facebook.com/username" },
+  #   { github = "https://github.com/username" },
+  #   { gitlab = "https://gitlab.com/username" },
+  #   { instagram = "https://instagram.com/username" },
+  #   { keybase = "https://keybase.io/username" },
+  #   { lastfm = "https://lastfm.com/user/username" },
+  #   { linkedin = "https://linkedin.com/in/username" },
+  #   { mastodon = "https://mastodon.instance/@username" },
+  #   { medium = "https://medium.com/username" },
+  #   { reddit = "https://reddit.com/user/username" },
+  #   { slack = "https://workspace.url/team/userid" },
+  #   { snapchat = "https://snapchat.com/add/username" },
+  #   { soundcloud = "https://soundcloud.com/username" },
+  #   { steam = "https://steamcommunity.com/profiles/userid" },
+  #   { tiktok = "https://tiktok.com/@username" },
+  #   { twitch = "https://twitch.tv/username" },
+  #   { twitter = "https://twitter.com/username" },
+  #   { youtube = "https://youtube.com/username" },
+  # ]

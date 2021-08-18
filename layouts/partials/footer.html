@@ -12,10 +12,20 @@
   {{/* Theme attribution */}}
   {{ if .Site.Params.attribution | default true }}
     <p class="text-xs text-gray-300 dark:text-gray-600">
-      Powered by
-      <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a>
+      {{ i18n "footer.powered_by" }}
+      <a
+        class="hover:underline underline-primary-300 hover:text-primary-400"
+        href="https://gohugo.io/"
+        target="_blank"
+        >Hugo</a
+      >
       &amp;
-      <a class="hover:underline" href="https://git.io/hugo-congo" target="_blank">Congo</a>
+      <a
+        class="hover:underline underline-primary-300 hover:text-primary-400"
+        href="https://git.io/hugo-congo"
+        target="_blank"
+        >Congo</a
+      >
     </p>
   {{ end }}
   {{/* Extend footer - eg. for extra scripts, etc. */}}

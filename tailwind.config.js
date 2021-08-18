@@ -19,6 +19,12 @@ module.exports = {
       primary: colors.violet,
       secondary: colors.fuchsia,
     },
+    underlineOffset: {
+      small: "2px",
+    },
+    underlineThickness: {
+      bold: "2px",
+    },
     extend: {
       typography: (theme) => ({
         DEFAULT: {
@@ -27,12 +33,17 @@ module.exports = {
               a: {
                 color: theme("colors.primary.700"),
                 textDecoration: "underline",
+                textDecorationColor: theme("colors.primary.300"),
                 fontWeight: "500",
                 "&:hover": {
                   backgroundColor: theme("colors.primary.600"),
+                  borderRadius: "0.09rem",
                   color: theme("colors.white"),
                   textDecoration: "none",
                 },
+              },
+              blockquote: {
+                borderLeftColor: theme("colors.primary.200"),
               },
               h2: {
                 position: "relative",
@@ -73,6 +84,7 @@ module.exports = {
               color: theme("colors.gray.400"),
               a: {
                 color: theme("colors.primary.400"),
+                textDecorationColor: theme("colors.gray.500"),
               },
               strong: {
                 color: theme("colors.white"),
@@ -88,7 +100,7 @@ module.exports = {
               },
               blockquote: {
                 color: theme("colors.gray.200"),
-                borderLeftColor: theme("colors.gray.600"),
+                borderLeftColor: theme("colors.primary.900"),
               },
               h1: {
                 color: theme("colors.white"),
@@ -143,5 +155,5 @@ module.exports = {
       typography: ["dark"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-underline-utils")],
 };

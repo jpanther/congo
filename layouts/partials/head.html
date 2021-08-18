@@ -35,10 +35,10 @@
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}
   {{ else }}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | absURL }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | absURL }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | absURL }}" />
-    <link rel="manifest" href="{{ "/site.webmanifest" | absURL }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}" />
+    <link rel="manifest" href="{{ "site.webmanifest" | absURL }}" />
   {{ end }}
   {{/* Site Verification */}}
   {{ with .Site.Params.verification.google }}
@@ -57,7 +57,7 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{/* Schema */}}
-  {{ template "_internal/schema.html" . }}
+  {{ partial "schema.html" . }}
   {{/* Generator */}}
   {{ if .Site.Params.attribution | default true }}
     {{ hugo.Generator }}

@@ -39,9 +39,11 @@ To enable the custom layout, set `homepage.layout = "custom"` in the `params.tom
 
 With the configuration value set, create a new `custom.html` file and place it in `layouts/partials/home/custom.html`. Now whatever is in the `custom.html` file will be placed in the content area of the site homepage. You can use whatever HTML, Tailwind, or Hugo templating functions to define your layout.
 
+To include recent articles on the custom layout, use the `recent-articles.html` partial.
+
 ## Recent articles
 
-All homepage layouts have the option of displaying recent articles below the main page content. To enable this, simply set the `homepage.showList` setting to `true` in the `params.toml` configuration file.
+All homepage layouts have the option of displaying recent articles below the main page content. To enable this, simply set the `homepage.showRecent` setting to `true` in the `params.toml` configuration file.
 
 ![Profile layout with recent articles](home-profile-list.jpg)
 

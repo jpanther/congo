@@ -8,11 +8,10 @@
   (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true))
   (ne .ReadingTime 0)
 }}
-  <span class="px-1">&middot;</span>
+  <span class="px-1 text-primary-500">&middot;</span>
 {{ end }}
 {{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
-  <span title="Reading time">
-    {{ .ReadingTime }}
-    min{{ if gt .ReadingTime 1 }}s{{ end }}
+  <span title="{{ i18n "article.reading_time_title" }}">
+    {{ i18n "article.reading_time" .ReadingTime | emojify }}
   </span>
 {{ end }}

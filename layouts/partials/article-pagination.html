@@ -1,14 +1,14 @@
 {{ if .Params.showPagination | default (.Site.Params.article.showPagination | default true) }}
   {{ if or .NextInSection .PrevInSection }}
-    <div class="pt-8">
+    <div class="pt-8 article-pagination">
       <hr class="border-gray-300 border-dotted dark:border-gray-600" />
       <div class="flex justify-between pt-3">
         <span>
           {{ if .NextInSection }}
             <a class="flex" href="{{ .NextInSection.Permalink }}">
-              <span class="mr-3">&larr;</span>
+              <span class="mr-3 article-pagination-direction">&larr;</span>
               <span class="flex flex-col">
-                <span class="button__text">{{ .NextInSection.Title }}</span>
+                <span class="article-pagination-title">{{ .NextInSection.Title }}</span>
                 {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
                   <time
                     class="-mt-1 text-xs text-gray-400 dark:text-gray-500"
@@ -25,7 +25,7 @@
           {{ if .PrevInSection }}
             <a class="flex text-right" href="{{ .PrevInSection.Permalink }}">
               <span class="flex flex-col">
-                <span>{{ .PrevInSection.Title }}</span>
+                <span class="article-pagination-title">{{ .PrevInSection.Title }}</span>
                 {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
                   <time
                     class="-mt-1 text-xs text-gray-400 dark:text-gray-500"
@@ -35,7 +35,7 @@
                   </time>
                 {{ end }}
               </span>
-              <span class="ml-3">&rarr;</span>
+              <span class="ml-3 article-pagination-direction">&rarr;</span>
             </a>
           {{ end }}
         </span>

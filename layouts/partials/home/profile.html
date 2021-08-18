@@ -1,12 +1,9 @@
 <article
-  class="flex flex-col items-center justify-center text-center
-  {{ if not .Site.Params.homepage.showList -}}
+  class="flex flex-col items-center justify-center text-center {{ if not .Site.Params.homepage.showRecent }}
     h-full
-  {{- else -}}
-    mb-8
-  {{- end }}"
+  {{ end }}"
 >
-  <header class="flex flex-col items-center mb-3">
+  <header class="flex flex-col mb-3">
     {{ with .Site.Author.image }}
       <img class="mb-2 rounded-full w-36 h-36" src="{{ . | absURL }}" />
     {{ end }}
@@ -19,3 +16,6 @@
   </header>
   <section class="prose dark:prose-light">{{ .Content | emojify }}</section>
 </article>
+<section class="text-center">
+  {{ partial "recent-articles.html" . }}
+</section>

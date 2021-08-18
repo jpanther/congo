@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "section-heading.html" . }}
+  {{ partial "section-header.html" . }}
   {{ if gt .Pages 0 }}
     <section>
       {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
@@ -16,7 +16,7 @@
   {{ else }}
     <section class="mt-10 prose dark:prose-light">
       <p class="py-8 border-t">
-        <em>There's no articles to list here yet.</em>
+        <em>{{ i18n "list.no_articles" | emojify }}</em>
       </p>
     </section>
   {{ end }}

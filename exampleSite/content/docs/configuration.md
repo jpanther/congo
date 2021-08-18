@@ -21,7 +21,33 @@ The default theme configuration is documented in each file so you can freely adj
 As outlined in the [installation instructions](/docs/installation/#set-up-your-configuration-files), you should adjust your theme configuration by modifying the files in the `config/_default/` folder of your Hugo project and delete the `config.toml` file in your project root.
 {{< /alert >}}
 
-## Parameters
+## Site Configuration
+
+Standard Hugo configuration variables are respected throughout the theme, however there are some specific things that should be configured for the best experience.
+
+The site configuration is managed through the `config/_default/config.toml` file. The table below outlines all the settings that the Congo takes advantage of.
+
+Note that the variable names provided in this table use dot notation to simplify the TOML data structure (ie. `author.name` refers to `[author] name`).
+
+<!-- prettier-ignore-start -->
+|Name|Type|Default|Description|
+| --- | --- | --- | --- |
+|`theme`|string|`"congo"`|This must be set to `"congo"` for the theme to function.|
+|`baseURL`|string|_Not set_|The URL to the root of the website.|
+|`languageCode`|string|`"en"`|The language of the website for site metadata purposes. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `"en-AU"`)."|
+|`defaultContentLanguage`|string|`"en"`|This value determines the language of theme components."|
+|`title`|string|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
+|`copyright`|string|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.
+|`enableEmoji`|boolean|`true`|Whether emoji strings in content should be converted to emoji symbols.|
+|`enableRobotsTXT`|boolean|`true`|When enabled a `robots.txt` file will be created in the site root that allows search engines to crawl the entire site. Set to `false` if you wish to provide your own file.|
+|`author.name`|string|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
+|`author.image`|string|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `static/` folder.|
+|`author.links`|array of objects|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
+|`[permalinks]`||_Not set_|Refer to the [Hugo docs](https://gohugo.io/content-management/urls/#permalinks) for permalink configuration.|
+|`[taxonomies]`||_Not set_|Refer to the [Hugo docs](https://gohugo.io/content-management/taxonomies/) for taxonomy configuration.|
+<!-- prettier-ignore-end -->
+
+## Theme Parameters
 
 Congo provides a large number of configuration parameters that control how the theme functions. The table below outlines every available parameter in the `config/_default/params.toml` file.
 
@@ -30,18 +56,21 @@ Many of the article defaults here can be overridden on a per article basis by sp
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
+|`description`|string|_Not set_|The description of the website for metadata purposes.|
+|`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout](/docs/homepage-layout/) section for more details.|
-|`homepage.showList`|boolean|`false`|Whether or not recent articles are listed on the homepage beneath the page content. Refer to the [Recent Articles](/docs/homepage-layout/#recent-articles) docs for more details.|
-|`homepage.listSections`|array of strings|`["blog"]`|The sections of content to include in the recent list when `homepage.showList` is `true`.|
+|`homepage.showRecent`|boolean|`false`|Whether or not to display the recent articles list on the homepage.|
 |`article.showDate`|boolean|`true`|Whether or not article dates are displayed.|
 |`article.dateFormat`|string|`"2 January 2006"`|How article dates are formatted. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
 |`article.showAuthor`|boolean|`true`|Whether or not the author box is displayed in the article footer.|
+|`article.showBreadcrumbs`|boolean|`false`|Whether or not breadcrumbs are displayed in the article header.|
 |`article.showDraftLabel`|boolean|`true`|Whether or not the draft indicator is shown next to articles when site is built with `--buildDrafts`.|
 |`article.showHeadingAnchors`|boolean|`true`|Whether or not heading anchor links are displayed alongside headings within articles.|
 |`article.showPagination`|boolean|`true`|Whether or not the next/previous article links are displayed in the article footer.|
 |`article.showReadingTime`|boolean|`true`|Whether or not article reading times are displayed.|
 |`article.sharingLinks`|array of strings|_Not set_|Which sharing links to display at the end of each article. When not provided, or set to `false` no links will be displayed.|
-|`list.groupByYear`|boolean|`true`|Whether or not articles are grouped under years in the article listing.|
+|`list.showBreadcrumbs`|boolean|`false`|Whether or not breadcrumbs are displayed in the header on list pages.|
+|`list.groupByYear`|boolean|`true`|Whether or not articles are grouped by year on list pages.|
 |`sitemap.excludedKinds`|array of strings|`["taxonomy", "term"]`|Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values.|
 |`taxonomy.showTermCount`|boolean|`true`|Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.|
 |`fathomAnalytics.site`|string|_Not set_|The site code generated by Fathom Analytics for the website. Refer to the [Analytics docs](#analyticshtml) below for more details.|

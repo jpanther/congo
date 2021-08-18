@@ -4,14 +4,16 @@
 # as it does not contain all the required theme settings!
 #
 # Refer to the theme docs for configuration instructions if you're unsure.
-# https://github.com/jpanther/Congo#readme
+# https://jpanther.github.io/Congo/docs/
 # --------------------------------------------------------------------------
 
-baseURL = "https://example.com"
+baseURL = "https://jpanther.github.io/Congo/"
 theme = "Congo"
 languageCode = "en-AU"
+defaultContentLanguage = "en"
 title = "Congo"
 enableEmoji = true
+relativeURLs = true
 
 [author]
   name = "Congo"
@@ -28,11 +30,15 @@ enableEmoji = true
 
 [params.homepage]
   layout = "custom"
-  showList = true
-  listSections = "samples"
+  showRecent = true
+  mainSections = ["samples"]
 
 [params.list]
   groupByYear = false
+  showBreadcrumbs = true
+
+[params.article]
+  showBreadcrumbs = true
 
 [[menu.main]]
   name = "Docs"

@@ -1,5 +1,9 @@
 {
+  "htmlWhitespaceSensitivity": "css",
   "printWidth": 100,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
   "overrides": [
     {
       "files": ["*.html"],

@@ -6,7 +6,7 @@
         <a
           class="bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-primary-400 dark:hover:text-gray-800 m-1 hover:bg-primary-500 hover:text-white rounded min-w-[2.4rem] inline-block text-center p-1"
           href="{{ printf .url $.Permalink $.Title }}"
-          title="{{ .title }}"
+          title="{{ i18n .title }}"
           >{{ partial "icon.html" .icon }}</a
         >
       {{ end }}

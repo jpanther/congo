@@ -69,19 +69,12 @@ A few things you need to set for a new installation:
 
 baseURL = "https://your_domain.com"
 languageCode = "en-AU"
-
 title = "My awesome website"
-```
-
-It's also useful to set the author configuration in the `config/_default/author.toml` file. You can also add links to your profiles here to enable them in the theme.
-
-```toml
-# config/_default/author.toml
 
 [author]
 name = "Your name"
 links = [
-  { twitter = "https://twitter.com/username" }
+  { twitter = "https://twitter.com/jpanther" }
 ]
 ```
 

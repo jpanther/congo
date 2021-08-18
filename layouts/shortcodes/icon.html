@@ -3,6 +3,6 @@
   {{ if $icon }}
     {{ $icon.Content | safeHTML }}
   {{ else }}
-    <em>Icon not found.</em>
+    <em>{{ i18n "shortcode.icon_none" }}</em>
   {{ end }}
 </span>

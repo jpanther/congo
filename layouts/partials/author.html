@@ -5,6 +5,9 @@
     {{ end }}
     <div>
       {{ with .Site.Author.name }}
+        <div class="text-[0.6rem] leading-3 text-gray-400 dark:text-gray-500 uppercase">
+          {{ i18n "author.byline_title" | emojify }}
+        </div>
         <div class="font-semibold leading-6 text-gray-800 dark:text-gray-300">
           {{ . }}
         </div>
