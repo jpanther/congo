@@ -17,9 +17,6 @@ error:
 footer:
   powered_by: "Powered by"
 
-homepage:
-  recent: "Recent"
-
 list:
   externalurl_title: "Link to external site"
   no_articles: "There's no articles to list here yet."
@@ -32,4 +29,5 @@ sharing:
   twitter: "Tweet on Twitter"
 
 shortcode:
-  no_icon: "Icon not found."
+  recent_articles: "Recent"
+  icon_none: "Icon not found."

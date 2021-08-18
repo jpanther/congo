@@ -5,12 +5,4 @@
   {{ else }}
     {{ partial "partials/home/page.html" . }}
   {{ end }}
-  {{ if .Site.Params.homepage.showList | default false }}
-    <section>
-      <h2 class="text-2xl font-extrabold">{{ i18n "homepage.recent" | emojify }}</h2>
-      {{ range first 5 (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.homepage.listSections)).Pages }}
-        {{ partial "article-link.html" . }}
-      {{ end }}
-    </section>
-  {{ end }}
 {{ end }}

@@ -7,8 +7,8 @@
 
 [homepage]
   layout = "page" # valid options: page, profile, custom
-  showList = false
-  listSections = ["blog"]
+  showRecent = false
+  # mainSections = ["section1", "section2"]
 
 [article]
   showDate = true

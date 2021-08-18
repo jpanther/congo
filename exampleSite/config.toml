@@ -30,8 +30,8 @@ relativeURLs = true
 
 [params.homepage]
   layout = "custom"
-  showList = true
-  listSections = "samples"
+  showRecent = true
+  mainSections = ["samples"]
 
 [params.list]
   groupByYear = false
