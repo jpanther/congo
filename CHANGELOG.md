@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
-## [Unreleased]
+## [1.1.0] - 2020-08-18
 
 ### Added
 
@@ -53,5 +53,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/jpanther/Congo/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/jpanther/Congo/releases/tag/v1.0.0
