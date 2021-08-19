@@ -1,9 +1,11 @@
 # Congo
 
-Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tailwind CSS with a clean and minimalist design.
+Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises to your content.
 
 🌏 [Demo site](https://jpanther.github.io/congo/)  
-📑 [Theme documentation](https://jpanther.github.io/congo/docs/)
+📑 [Theme documentation](https://jpanther.github.io/congo/docs/)  
+🐛 [Bug reports & issues](https://github.com/jpanther/congo/issues)  
+💡 [Questions & feature requests](https://github.com/jpanther/congo/discussions)
 
 ![Screenshot](https://raw.githubusercontent.com/jpanther/congo/stable/images/screenshot.png)
 
@@ -139,10 +141,10 @@ Now whenever you make a change, the (non-minified) CSS files will be rebuilt aut
 
 Congo is still very much a work in progress. I intend to keep adding features and making changes as required.
 
-### Bugs & Suggestions
+Feel free to get in touch with any issues or suggestions for new features you'd like to see.
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see. Please use GitHub issues for all bug reports and suggestions to help keep everything in one spot.
+- 🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/jpanther/congo/issues)
+- 💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/jpanther/congo/discussions)
+- 🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/jpanther/congo/discussions)
 
-If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose.
-
-All development occurs on the `dev` branch and new PRs should be forked from here.
+If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/jpanther/congo/CONTRIBUTING.md).
