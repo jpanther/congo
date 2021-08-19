@@ -1,14 +1,14 @@
 # Congo theme for Hugo
 
-name = "Congo"
+name = "congo"
 license = "MIT"
-licenselink = "https://github.com/jpanther/Congo/blob/master/LICENSE"
+licenselink = "https://github.com/jpanther/congo/blob/master/LICENSE"
 description = "A simple, lightweight theme for Hugo built with Tailwind CSS."
 
 min_version = "0.86.1"
 
-homepage = "https://github.com/jpanther/Congo/"
-demosite = "https://jpanther.github.io/Congo/"
+homepage = "https://github.com/jpanther/congo/"
+demosite = "https://jpanther.github.io/congo/"
 
 tags = ["blog", "minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
 features = ["syntax higlighting", "dark mode", "emoji"]

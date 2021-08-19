@@ -1,0 +1,47 @@
+name: 🐛 Bug Report
+description: Report a new problem encountered using the theme
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Before proceeding, please check that a similar issue has not already been reported. [View open issues](https://github.com/jpanther/congo/issues)
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the issue and how to reproduce it, including what you expected to happen.
+    validations:
+      required: true
+  - type: input
+    id: theme-version
+    attributes:
+      label: Theme version
+      description: What version of the theme are you using?
+      placeholder: eg. v1.1.0
+    validations:
+      required: true
+  - type: input
+    id: hugo-version
+    attributes:
+      label: Hugo version
+      description: What version of Hugo are you using?
+      placeholder: eg. v0.86.1
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Hugo log output
+      description: Please copy and paste any relevant Hugo log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell

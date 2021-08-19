@@ -1,11 +1,13 @@
 # Congo
 
-Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tailwind CSS with a clean and minimalist design.
+Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises to your content.
 
-🌏 [Demo site](https://jpanther.github.io/Congo/)  
-📑 [Theme documentation](https://jpanther.github.io/Congo/docs/)
+🌏 [Demo site](https://jpanther.github.io/congo/)  
+📑 [Theme documentation](https://jpanther.github.io/congo/docs/)  
+🐛 [Bug reports & issues](https://github.com/jpanther/congo/issues)  
+💡 [Questions & feature requests](https://github.com/jpanther/congo/discussions)
 
-![Screenshot](https://raw.githubusercontent.com/jpanther/Congo/stable/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/jpanther/congo/stable/images/screenshot.png)
 
 ## Features
 
@@ -26,13 +28,13 @@ Congo is designed to be a fast, lightweight theme for Hugo. It's based upon Tail
 - Favicons support
 - Comments support
 - Advanced customisation using simple Tailwind colour definitions and styles
-- [Fully documented](https://jpanther.github.io/Congo/docs/)
+- [Fully documented](https://jpanther.github.io/congo/docs/)
 
 ---
 
 ## Installation
 
-This is a simplified set of instructions and assumes a basic understanding of building Hugo sites and installing themes. For detailed instructions, refer to the full [theme documentation](https://jpanther.github.io/Congo/docs/).
+This is a simplified set of instructions and assumes a basic understanding of building Hugo sites and installing themes. For detailed instructions, refer to the full [theme documentation](https://jpanther.github.io/congo/docs/).
 
 There are a couple of ways to install the Congo theme into your Hugo website. The git method is the easiest to keep the theme up-to-date, but you can also download and install manually if you don't have git available.
 
@@ -43,12 +45,12 @@ Change into the directory for your Hugo website, initialise a new repository and
 ```bash
 cd mywebsite
 git init
-git submodule add -b stable https://github.com/jpanther/Congo.git themes/congo
+git submodule add -b stable https://github.com/jpanther/congo.git themes/congo
 ```
 
 ### Install manually
 
-Download the latest release of the theme from: [https://github.com/jpanther/Congo/releases](https://github.com/jpanther/Congo/releases)
+Download the latest release of the theme from: [https://github.com/jpanther/congo/releases](https://github.com/jpanther/congo/releases)
 
 Extract the archive, rename the folder to `congo` and move it to the `themes/` directory inside your Hugo project.
 
@@ -60,7 +62,7 @@ You're now all set up to use Congo. From here you can add some content and start
 
 ## Configuration
 
-For all the theme options and detailed configuration instructions, refer to the [Congo docs](https://jpanther.github.io/Congo/docs/).
+For all the theme options and detailed configuration instructions, refer to the [Congo docs](https://jpanther.github.io/congo/docs/).
 
 A few things you need to set for a new installation:
 
@@ -139,10 +141,10 @@ Now whenever you make a change, the (non-minified) CSS files will be rebuilt aut
 
 Congo is still very much a work in progress. I intend to keep adding features and making changes as required.
 
-### Bugs & Suggestions
+Feel free to get in touch with any issues or suggestions for new features you'd like to see.
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see. Please use GitHub issues for all bug reports and suggestions to help keep everything in one spot.
+- 🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/jpanther/congo/issues)
+- 💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/jpanther/congo/discussions)
+- 🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/jpanther/congo/discussions)
 
-If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose.
-
-All development occurs on the `dev` branch and new PRs should be forked from here.
+If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/jpanther/congo/CONTRIBUTING.md).

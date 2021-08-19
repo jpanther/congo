@@ -17,4 +17,4 @@ Real websites that are built with Congo.
 | Website | Details |
 | ------- | ------- |
 
-**Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/Congo/blob/dev/exampleSite/content/users.md).
+**Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
