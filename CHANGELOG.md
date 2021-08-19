@@ -12,7 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- Fix style issue with `button` shortcode
+- Minor style issue with `button` shortcode
+- Hugo Modules would fail when using default theme config file
 
 ## [1.1.1] - 2020-08-19
 
