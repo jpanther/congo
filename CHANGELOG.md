@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Icons for Foursquare and Pinterest
+
 ### Fixed
 
 - Minor style issue with `button` shortcode
