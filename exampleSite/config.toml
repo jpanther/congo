@@ -8,7 +8,7 @@
 # --------------------------------------------------------------------------
 
 baseURL = "https://jpanther.github.io/congo/"
-theme = "Congo"
+theme = "congo"
 languageCode = "en-AU"
 defaultContentLanguage = "en"
 title = "Congo"
