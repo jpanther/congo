@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💡 Feature Request
+    url: https://github.com/jpanther/congo/discussions
+    about: Request and discuss enhancements using GitHub Discussions
+  - name: 🙋‍♀️ Question
+    url: https://github.com/jpanther/congo/discussions
+    about: Please ask and answer general questions using GitHub Discussions

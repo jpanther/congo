@@ -1,0 +1,45 @@
+name: 💬 i18n Issue
+description: Report an issue with i18n or translations
+labels: [i18n]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue report!
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: Which language are you using?
+      placeholder: eg. English
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What's the issue?
+      description: Describe the translation issue and how to reproduce it.
+    validations:
+      required: true
+  - type: input
+    id: theme-version
+    attributes:
+      label: Theme version
+      description: What version of the theme are you using?
+      placeholder: eg. v1.1.0
+    validations:
+      required: true
+  - type: input
+    id: hugo-version
+    attributes:
+      label: Hugo version
+      description: What version of Hugo are you using?
+      placeholder: eg. v0.86.1
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Hugo log output
+      description: Please copy and paste any relevant Hugo log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
