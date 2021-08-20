@@ -32,9 +32,9 @@ Note that the variable names provided in this table use dot notation to simplify
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
-|`theme`|string|`"congo"`|This must be set to `"congo"` for the theme to function.|
+|`theme`|string|`"congo"`|When using Hugo Modules this config value should be removed. For all other installation types, this must be set to `"congo"` for the theme to function.|
 |`baseURL`|string|_Not set_|The URL to the root of the website.|
-|`languageCode`|string|`"en"`|The language of the website for site metadata purposes. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `"en-AU"`)."|
+|`languageCode`|string|`en`|The language of the website for site metadata purposes. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `en-AU`)."|
 |`defaultContentLanguage`|string|`"en"`|This value determines the language of theme components."|
 |`title`|string|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
 |`copyright`|string|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.
@@ -56,6 +56,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
+|`colorScheme`|string|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean` and `fire`.|
 |`description`|string|_Not set_|The description of the website for metadata purposes.|
 |`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout](/docs/homepage-layout/) section for more details.|

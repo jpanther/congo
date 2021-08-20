@@ -46,7 +46,7 @@ body button {
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {
-  @apply text-gray-700 rounded-md bg-gray-50 dark:bg-gray-700 dark:text-gray-200;
+  @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
 }
 /* Other */
 .chroma .x {
@@ -73,13 +73,13 @@ body button {
 }
 /* LineNumbersTable */
 .chroma .lnt {
-  @apply text-gray-600 dark:text-gray-300;
+  @apply text-neutral-600 dark:text-neutral-300;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
 }
 /* LineNumbers */
 .chroma .ln {
-  @apply text-gray-600 dark:text-gray-300;
+  @apply text-neutral-600 dark:text-neutral-300;
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
 }
@@ -300,31 +300,31 @@ body button {
 }
 /* Comment */
 .chroma .c {
-  @apply italic text-gray-400 dark:text-gray-500;
+  @apply italic text-neutral-400 dark:text-neutral-500;
 }
 /* CommentHashbang */
 .chroma .ch {
-  @apply italic font-semibold text-gray-400 dark:text-gray-500;
+  @apply italic font-semibold text-neutral-400 dark:text-neutral-500;
 }
 /* CommentMultiline */
 .chroma .cm {
-  @apply italic text-gray-400 dark:text-gray-500;
+  @apply italic text-neutral-400 dark:text-neutral-500;
 }
 /* CommentSingle */
 .chroma .c1 {
-  @apply italic text-gray-400 dark:text-gray-500;
+  @apply italic text-neutral-400 dark:text-neutral-500;
 }
 /* CommentSpecial */
 .chroma .cs {
-  @apply italic text-gray-400 dark:text-gray-500;
+  @apply italic text-neutral-400 dark:text-neutral-500;
 }
 /* CommentPreproc */
 .chroma .cp {
-  @apply italic text-gray-400 dark:text-gray-500;
+  @apply italic text-neutral-400 dark:text-neutral-500;
 }
 /* CommentPreprocFile */
 .chroma .cpf {
-  @apply italic text-gray-400 dark:text-gray-500;
+  @apply italic text-neutral-400 dark:text-neutral-500;
 }
 /* Generic */
 .chroma .g {
@@ -341,7 +341,7 @@ body button {
 }
 /* GenericHeading */
 .chroma .gh {
-  @apply font-semibold text-gray-500;
+  @apply font-semibold text-neutral-500;
 }
 /* GenericInserted */
 .chroma .gi {
@@ -361,11 +361,11 @@ body button {
 }
 /* GenericSubheading */
 .chroma .gu {
-  @apply text-gray-500;
+  @apply text-neutral-500;
 }
 /* GenericTraceback */
 .chroma .gt {
-  @apply text-gray-500;
+  @apply text-neutral-500;
 }
 /* GenericUnderline */
 .chroma .gl {

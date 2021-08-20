@@ -1,7 +1,11 @@
 <article>
   <h3 class="mt-6 text-xl font-semibold">
     {{ if isset .Params "externalUrl" }}
-      <a class="hover:underline" href="{{ .Params.externalUrl }}" target="_blank" rel="external"
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="{{ .Params.externalUrl }}"
+        target="_blank"
+        rel="external"
         >{{ .Title }}</a
       >
       <span
@@ -12,7 +16,7 @@
       >
     {{ else }}
       <a
-        class="hover:underline hover:underline-primary-500 hover:underline-offset-small"
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
         href="{{ .Permalink }}"
         >{{ .Title }}</a
       >
@@ -24,7 +28,7 @@
       {{ partial "extend-article-link.html" . }}
     {{ end }}
   </h3>
-  <div class="text-sm text-gray-400 dark:text-gray-500">
+  <div class="text-sm text-neutral-400 dark:text-neutral-500">
     {{ partial "article-meta.html" . }}
   </div>
 </article>

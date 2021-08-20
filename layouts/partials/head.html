@@ -27,6 +27,12 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
   {{/* Styles */}}
+  {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}
+  {{ if not $cssScheme }}
+    {{ $cssScheme = resources.Get "css/schemes/congo.css" }}
+  {{ end }}
+  {{ $stylesheet := $cssScheme | resources.Minify }}
+  <link type="text/css" rel="stylesheet" href="{{ $stylesheet.Permalink }}" />
   <link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
   {{ if (fileExists "static/css/custom.css") -}}
     <link type="text/css" rel="stylesheet" href="{{ "css/custom.css" | absURL }}" />
