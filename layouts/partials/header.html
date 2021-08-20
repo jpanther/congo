@@ -1,7 +1,7 @@
 <header class="flex justify-between py-6 font-semibold sm:py-10">
   <div>
     <a
-      class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small"
+      class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
       rel="me"
       href="{{ .Site.BaseURL }}"
       >{{ .Site.Title }}</a
@@ -12,7 +12,7 @@
       {{ range .Site.Menus.main }}
         <li class="text-right sm:mr-7 sm:last:mr-0">
           <a
-            class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small"
+            class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
             href="{{ .URL | absURL }}"
             title="{{ .Title }}"
             >{{ .Name }}</a

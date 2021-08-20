@@ -8,7 +8,9 @@
     {{ template "crumb" (dict "p1" .p1.Site.Home "p2" .p2 ) }}
   {{ end }}
   <li class="inline {{ if or (eq .p1 .p2) (.p1.IsHome) }}hidden{{ end }}">
-    <a class="hover:underline underline-gray-300 dark:underline-gray-600" href="{{ .p1.Permalink }}"
+    <a
+      class="hover:underline hover:underline-gray-300 dark:underline-gray-600"
+      href="{{ .p1.Permalink }}"
       >{{ .p1.Title }}</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
