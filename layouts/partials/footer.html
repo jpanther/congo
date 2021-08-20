@@ -35,7 +35,7 @@
 </footer>
 
 {{/* Include mermaid.js only on pages that use the shortcode */}}
-{{- if (in (string .Content) "class=\"mermaid\"") -}}
+{{- if .Page.HasShortcode "mermaid" -}}
   <script src="https://unpkg.com/mermaid@8.11.4/dist/mermaid.min.js"></script>
   <script>
     mermaid.initialize({ theme: "default" });
