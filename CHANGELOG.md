@@ -15,6 +15,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Multiple colour schemes
 - Edit links on article pages
 - Icons for Foursquare and Pinterest
+- Asset fingerprinting and SRI
+- CSS minification for custom stylesheets
+
+### Changed
+
+- Static assets are now managed through Hugo Pipelines
 
 ### Fixed
 
