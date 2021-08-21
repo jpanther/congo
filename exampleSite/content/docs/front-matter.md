@@ -19,6 +19,9 @@ Front matter parameter default values are inherited from the theme's [base confi
 |`externalUrl`|string|_Not set_|If this article is published on a third-party website, the URL to this article. Providing a URL will prevent a content page being generated and any references to this article will link directly to the third-party website.|
 |`showDate`|boolean|`article.showDate`|Whether or not article dates are displayed.|
 |`showAuthor`|boolean|`article.showAuthor`|Whether or not the author box is displayed in the article footer.|
+|`showEdit`|boolean|`article.showEdit`|Whether or not the link to edit the article content should be displayed.|
+|`editURL`|string|`article.editURL`|When `showEdit` is active, the URL for the edit link.|
+|`editAppendPath`|boolean|`article.editAppendPath`|When `showEdit` is active, whether or not the path to the current article should be appended to the URL set at `editURL`.|
 |`showHeadingAnchors`|boolean|`article.showHeadingAnchors`|Whether or not heading anchor links are displayed alongside headings within this article.|
 |`showPagination`|boolean|`article.showPagination`|Whether or not the next/previous article links are displayed in the article footer.|
 |`showReadingTime`|boolean|`article.showReadingTime`|Whether or not article reading times are displayed.|

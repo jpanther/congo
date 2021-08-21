@@ -9,14 +9,11 @@
               <span class="mr-3 article-pagination-direction">&larr;</span>
               <span class="flex flex-col">
                 <span class="article-pagination-title">{{ .NextInSection.Title }}</span>
-                {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-                  <time
-                    class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500"
-                    datetime="{{ .Date }}"
-                  >
-                    {{ .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" }}
-                  </time>
-                {{ end }}
+                <span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+                  {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
+                    {{ partial "meta/date.html" . }}
+                  {{ end }}
+                </span>
               </span>
             </a>
           {{ end }}
@@ -26,14 +23,11 @@
             <a class="flex text-right" href="{{ .PrevInSection.Permalink }}">
               <span class="flex flex-col">
                 <span class="article-pagination-title">{{ .PrevInSection.Title }}</span>
-                {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-                  <time
-                    class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500"
-                    datetime="{{ .Date }}"
-                  >
-                    {{ .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" }}
-                  </time>
-                {{ end }}
+                <span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+                  {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
+                    {{ partial "meta/date.html" . }}
+                  {{ end }}
+                </span>
               </span>
               <span class="ml-3 article-pagination-direction">&rarr;</span>
             </a>

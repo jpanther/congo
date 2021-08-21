@@ -1,5 +1,5 @@
 <article>
-  <h3 class="mt-6 text-xl font-semibold">
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
     {{ if isset .Params "externalUrl" }}
       <a
         class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
@@ -22,7 +22,9 @@
       >
     {{ end }}
     {{ if and .Draft .Site.Params.article.showDraftLabel }}
-      {{ partial "badge.html" "Draft" }}
+      <div class="ml-2">
+        {{ partial "badge.html" "Draft" }}
+      </div>
     {{ end }}
     {{ if templates.Exists "partials/extend-article-link.html" }}
       {{ partial "extend-article-link.html" . }}

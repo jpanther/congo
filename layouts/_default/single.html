@@ -8,10 +8,7 @@
         {{ .Title | emojify }}
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
-        {{ partial "article-meta.html" . }}
-        {{ if and .Draft .Site.Params.article.showDraftLabel }}
-          <span class="pl-2">{{ partial "badge.html" (i18n "article.draft" | emojify) }}</span>
-        {{ end }}
+        {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
       </div>
     </header>
     <section class="prose dark:prose-light">
@@ -22,7 +19,6 @@
       {{ partial "sharing-links.html" . }}
       {{ partial "article-pagination.html" . }}
     </footer>
-    {{/* Comments */}}
     {{ if templates.Exists "partials/comments.html" }}
       {{ partial "comments.html" . }}
     {{ end }}

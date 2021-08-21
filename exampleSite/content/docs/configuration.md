@@ -66,6 +66,9 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.showAuthor`|boolean|`true`|Whether or not the author box is displayed in the article footer.|
 |`article.showBreadcrumbs`|boolean|`false`|Whether or not breadcrumbs are displayed in the article header.|
 |`article.showDraftLabel`|boolean|`true`|Whether or not the draft indicator is shown next to articles when site is built with `--buildDrafts`.|
+|`article.showEdit`|boolean|`false`|Whether or not the link to edit the article content should be displayed.|
+|`article.editURL`|string|_Not set_|When `article.showEdit` is active, the URL for the edit link.|
+|`article.editAppendPath`|boolean|`true`|When `article.showEdit` is active, whether or not the path to the current article should be appended to the URL set at `article.editURL`.|
 |`article.showHeadingAnchors`|boolean|`true`|Whether or not heading anchor links are displayed alongside headings within articles.|
 |`article.showPagination`|boolean|`true`|Whether or not the next/previous article links are displayed in the article footer.|
 |`article.showReadingTime`|boolean|`true`|Whether or not article reading times are displayed.|
