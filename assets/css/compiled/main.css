@@ -2039,6 +2039,10 @@ body a, body button {
   margin-top: 1.5rem;
 }
 
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -2366,14 +2370,14 @@ body a, body button {
   line-height: 1.75rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-\[0\.6rem\] {
