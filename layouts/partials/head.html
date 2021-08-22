@@ -27,10 +27,35 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
   {{/* Styles */}}
-  <link type="text/css" rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
-  {{ if (fileExists "static/css/custom.css") -}}
-    <link type="text/css" rel="stylesheet" href="{{ "css/custom.css" | absURL }}" />
-  {{- end }}
+  {{ $schemeCSS := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}
+  {{ if not $schemeCSS }}
+    {{ $schemeCSS = resources.Get "css/schemes/congo.css" }}
+  {{ end }}
+  {{ $schemeStyles := $schemeCSS | resources.Minify | resources.Fingerprint "sha512" }}
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="{{ $schemeStyles.Permalink }}"
+    integrity="{{ $schemeStyles.Data.Integrity }}"
+  />
+  {{ $mainCSS := resources.Get "css/compiled/main.css" }}
+  {{ $mainStyles := $mainCSS | resources.Minify | resources.Fingerprint "sha512" }}
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="{{ $mainStyles.Permalink }}"
+    integrity="{{ $mainStyles.Data.Integrity }}"
+  />
+  {{ $customCSS := resources.Get "css/custom.css" }}
+  {{ if $customCSS }}
+    {{ $customStyles := $customCSS | resources.Minify | resources.Fingerprint "sha512" }}
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ $customStyles.Permalink }}"
+      integrity="{{ $customStyles.Data.Integrity }}"
+    />
+  {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}

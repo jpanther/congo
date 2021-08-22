@@ -1,17 +1,39 @@
-{{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-  <time datetime="{{ .Date }}">
-    {{ .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" }}
-  </time>
+{{/* Determine the correct context and scope */}}
+{{/* This allows for different logic depending on where the partial is called */}}
+{{ $context := . }}
+{{ $scope := default nil }}
+
+{{ if (reflect.IsMap . ) }}
+  {{ $context = .context }}
+  {{ $scope = cond (not .scope) nil .scope }}
 {{ end }}
-{{ if and
-  (.Params.showDate | default (.Site.Params.article.showDate | default true))
-  (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true))
-  (ne .ReadingTime 0)
-}}
-  <span class="px-1 text-primary-500">&middot;</span>
-{{ end }}
-{{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
-  <span title="{{ i18n "article.reading_time_title" }}">
-    {{ i18n "article.reading_time" .ReadingTime | emojify }}
-  </span>
+
+{{ with $context }}
+  {{ $meta := newScratch }}
+
+  {{/* Gather partials for this context */}}
+  {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
+    {{ $meta.Add "partials" (slice (partial "meta/date.html" .)) }}
+  {{ end }}
+
+  {{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
+    {{ $meta.Add "partials" (slice (partial "meta/reading-time.html" .)) }}
+  {{ end }}
+
+  {{ if and (eq $scope "single") (.Params.showEdit | default (.Site.Params.article.showEdit | default false)) }}
+    {{ $meta.Add "partials" (slice (partial "meta/edit.html" .)) }}
+  {{ end }}
+
+
+  <div class="flex flex-row items-center">
+    {{/* Output partials */}}
+    {{ with ($meta.Get "partials") }}
+      {{ delimit . "<span class=\"px-2 text-primary-500\">&middot;</span>" }}
+    {{ end }}
+
+    {{/* Output draft label */}}
+    {{ if and (eq $scope "single") (and .Draft .Site.Params.article.showDraftLabel) }}
+      <span class="pl-2">{{ partial "badge.html" (i18n "article.draft" | emojify) }}</span>
+    {{ end }}
+  </div>
 {{ end }}

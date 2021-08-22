@@ -32,9 +32,9 @@ Note that the variable names provided in this table use dot notation to simplify
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
-|`theme`|string|`"congo"`|This must be set to `"congo"` for the theme to function.|
+|`theme`|string|`"congo"`|When using Hugo Modules this config value should be removed. For all other installation types, this must be set to `"congo"` for the theme to function.|
 |`baseURL`|string|_Not set_|The URL to the root of the website.|
-|`languageCode`|string|`"en"`|The language of the website for site metadata purposes. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `"en-AU"`)."|
+|`languageCode`|string|`en`|The language of the website for site metadata purposes. It can be a top-level language (ie. `"en"`) or a sub-variant (ie. `en-AU`)."|
 |`defaultContentLanguage`|string|`"en"`|This value determines the language of theme components."|
 |`title`|string|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
 |`copyright`|string|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.
@@ -56,6 +56,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
+|`colorScheme`|string|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean` and `fire`.|
 |`description`|string|_Not set_|The description of the website for metadata purposes.|
 |`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout](/docs/homepage-layout/) section for more details.|
@@ -65,6 +66,9 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.showAuthor`|boolean|`true`|Whether or not the author box is displayed in the article footer.|
 |`article.showBreadcrumbs`|boolean|`false`|Whether or not breadcrumbs are displayed in the article header.|
 |`article.showDraftLabel`|boolean|`true`|Whether or not the draft indicator is shown next to articles when site is built with `--buildDrafts`.|
+|`article.showEdit`|boolean|`false`|Whether or not the link to edit the article content should be displayed.|
+|`article.editURL`|string|_Not set_|When `article.showEdit` is active, the URL for the edit link.|
+|`article.editAppendPath`|boolean|`true`|When `article.showEdit` is active, whether or not the path to the current article should be appended to the URL set at `article.editURL`.|
 |`article.showHeadingAnchors`|boolean|`true`|Whether or not heading anchor links are displayed alongside headings within articles.|
 |`article.showPagination`|boolean|`true`|Whether or not the next/previous article links are displayed in the article footer.|
 |`article.showReadingTime`|boolean|`true`|Whether or not article reading times are displayed.|

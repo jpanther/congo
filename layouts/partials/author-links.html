@@ -1,5 +1,5 @@
 {{ with .Site.Author.links }}
-  <div class="flex flex-wrap text-gray-400 dark:text-gray-500">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
     {{ range $links := . }}
       {{ range $name, $url := $links }}
         <a
@@ -7,7 +7,7 @@
           href="{{ $url }}"
           target="_blank"
           alt="{{ $name | title }}"
-          rel="me"
+          rel="me noopener noreferrer"
           >{{ partial "icon.html" $name }}</a
         >
       {{ end }}

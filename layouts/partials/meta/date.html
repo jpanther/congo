@@ -1,0 +1,4 @@
+<time datetime="{{ .Date }}">
+  {{- .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" -}}
+</time>
+{{- /* Trim EOF */ -}}

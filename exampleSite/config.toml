@@ -39,6 +39,9 @@ relativeURLs = true
 
 [params.article]
   showBreadcrumbs = true
+  showEdit = true
+  editURL = "https://github.com/jpanther/congo/tree/dev/exampleSite/content/"
+  editAppendPath = true
 
 [[menu.main]]
   name = "Docs"

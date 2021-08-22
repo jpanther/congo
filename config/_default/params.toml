@@ -5,6 +5,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
+colorScheme = "congo"
 # description = "My awesome website"
 # mainSections = ["section1", "section2"]
 
@@ -18,6 +19,9 @@
   showAuthor = true
   showBreadcrumbs = false
   showDraftLabel = true
+  showEdit = false
+  # editURL = "https://github.com/username/repo/"
+  editAppendPath = true
   showHeadingAnchors = true
   showPagination = true
   showReadingTime = true

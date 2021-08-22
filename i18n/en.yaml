@@ -1,6 +1,7 @@
 article:
   anchor_label: "Anchor"
   draft: "Draft"
+  edit_title: "Edit content"
   reading_time:
     one: "{{ .Count }} min"
     other: "{{ .Count }} mins"

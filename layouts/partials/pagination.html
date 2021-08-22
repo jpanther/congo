@@ -5,7 +5,7 @@
       <li>
         <a
           href="{{ $paginator.Prev.URL }}"
-          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-white rounded"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded"
           rel="prev"
         >
           &larr;
@@ -16,8 +16,8 @@
       <li>
         <a
           href="{{ .URL }}"
-          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-white rounded {{ if eq . $paginator }}
-            bg-primary-200 dark:bg-primary-400 dark:text-gray-800
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded {{ if eq . $paginator }}
+            bg-primary-200 dark:bg-primary-400 dark:text-neutral-800
           {{ end }}"
         >
           {{ .PageNumber }}
@@ -28,7 +28,7 @@
       <li>
         <a
           href="{{ $paginator.Next.URL }}"
-          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-white rounded"
+          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded"
           rel="next"
         >
           &rarr;

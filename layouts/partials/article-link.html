@@ -1,26 +1,36 @@
 <article>
-  <h3 class="mt-6 text-xl font-semibold">
-    {{ if isset .Params "externalUrl" }}
-      <a class="hover:underline" href="{{ .Params.externalUrl }}" target="_blank" rel="external"
-        >{{ .Title }}</a
+  <h3 class="flex items-center mt-6 text-xl font-semibold">
+    {{ with .Params.externalUrl }}
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="{{ . }}"
+        target="_blank"
+        rel="external"
+        >{{ $.Title }}</a
       >
       <span
-        class="text-sm cursor-default"
-        style="vertical-align: super;"
+        class="-mt-2 text-xs cursor-default text-neutral-400 dark:text-neutral-500"
         title="{{ i18n "list.externalurl_title" }}"
-        >&#8599;</span
       >
+        &#8599;
+      </span>
     {{ else }}
-      <a class="hover:underline underline-primary-500" href="{{ .Permalink }}">{{ .Title }}</a>
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        href="{{ .Permalink }}"
+        >{{ .Title }}</a
+      >
     {{ end }}
     {{ if and .Draft .Site.Params.article.showDraftLabel }}
-      {{ partial "badge.html" "Draft" }}
+      <div class="ml-2">
+        {{ partial "badge.html" "Draft" }}
+      </div>
     {{ end }}
     {{ if templates.Exists "partials/extend-article-link.html" }}
       {{ partial "extend-article-link.html" . }}
     {{ end }}
   </h3>
-  <div class="text-sm text-gray-400 dark:text-gray-500">
+  <div class="text-sm text-neutral-400 dark:text-neutral-500">
     {{ partial "article-meta.html" . }}
   </div>
 </article>
