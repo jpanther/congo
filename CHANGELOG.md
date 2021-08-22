@@ -4,8 +4,6 @@ All notable changes to Congo will be documented in this file. Things that need a
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
----
-
 ## [Unreleased]
 
 ### Added
@@ -26,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Hugo Modules would fail when using default theme config file
 - Some content not centred correctly on the profile homepage layout
 - Some links missing the correct styles when in Firefox
+- `externalUrl` front matter not working on some list pages
 
 ## [1.1.1] - 2020-08-19
 
