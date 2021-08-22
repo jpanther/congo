@@ -7,7 +7,8 @@
 <meta name=title content="Markdown Syntax Guide &#183; Congo">
 <meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
 <link rel=canonical href=https://jpanther.github.io/congo/samples/markdown-syntax/>
-<link type=text/css rel=stylesheet href=https://jpanther.github.io/congo/css/main.css>
+<link type=text/css rel=stylesheet href=https://jpanther.github.io/congo/css/schemes/congo.min.b48d6ba061dc77186a2524fb8aac5ac3823b2679a9299ca60325abbccc9c1764c884715f0ba24b4e2776cb3814df4af1f4c854b87207cd5d4c7a254da9b55751.css integrity="sha512-tI1roGHcdxhqJST7iqxaw4I7JnmpKZymAyWrvMycF2TIhHFfC6JLTid2yzgU30rx9MhUuHIHzV1MeiVNqbVXUQ==">
+<link type=text/css rel=stylesheet href=https://jpanther.github.io/congo/css/compiled/main.min.e3dab301c0ecc8319dd605a1b763dac85e7504a5211359653df0be00619c5d8fa4da3f0d0e2dde3b15547025dc373359eaa9336a604f5e8bc757a0049d4d3c4a.css integrity="sha512-49qzAcDsyDGd1gWht2PayF51BKUhE1llPfC+AGGcXY+k2j8NDi3eOxVUcCXcNzNZ6qkzamBPXovHV6AEnU08Sg==">
 <link rel=apple-touch-icon sizes=180x180 href=https://jpanther.github.io/congo/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://jpanther.github.io/congo/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=https://jpanther.github.io/congo/favicon-16x16.png>
@@ -29,20 +30,20 @@
 <link href=https://linkedin.com/ rel=me>
 <link href=https://youtube.com/ rel=me>
 </head>
-<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-white text-grey-900 sm:px-14 md:px-24 lg:px-32 dark:bg-gray-800 dark:text-white max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10">
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10 text-neutral-800 dark:text-neutral">
 <div>
-<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" rel=me href=https://jpanther.github.io/congo/>Congo</a>
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" rel=me href=https://jpanther.github.io/congo/>Congo</a>
 </div>
 <nav>
 <ul class="flex flex-col list-none sm:flex-row">
-<li class="text-right sm:mr-7 sm:last:mr-0">
-<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/congo/docs/ title=Documentation>Docs</a>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=https://jpanther.github.io/congo/docs/ title=Documentation>Docs</a>
 </li>
-<li class="text-right sm:mr-7 sm:last:mr-0">
-<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://jpanther.github.io/congo/samples/ title="Content Samples">Samples</a>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=https://jpanther.github.io/congo/samples/ title="Content Samples">Samples</a>
 </li>
-<li class="text-right sm:mr-7 sm:last:mr-0">
-<a class="hover:underline underline-primary-500 underline-thickness-bold underline-offset-small" href=https://github.com/jpanther/congo title>GitHub</a>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=https://github.com/jpanther/congo title>GitHub</a>
 </li>
 </ul>
 </nav>
@@ -50,26 +51,29 @@
 <main class=flex-grow>
 <article class=max-w-prose>
 <header>
-<ol class="text-sm text-gray-400 dark:text-gray-500">
+<ol class="text-sm text-neutral-400 dark:text-neutral-500">
 <li class="inline hidden">
-<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/congo/>Welcome to Congo! :tada:</a><span class="px-1 text-primary-500">/</span>
+<a class="hover:underline hover:underline-neutral-300 dark:underline-neutral-600" href=https://jpanther.github.io/congo/>Welcome to Congo! :tada:</a><span class="px-1 text-primary-500">/</span>
 </li>
 <li class=inline>
-<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/congo/samples/>Content Samples</a><span class="px-1 text-primary-500">/</span>
+<a class="hover:underline hover:underline-neutral-300 dark:underline-neutral-600" href=https://jpanther.github.io/congo/samples/>Content Samples</a><span class="px-1 text-primary-500">/</span>
 </li>
 <li class="inline hidden">
-<a class="hover:underline underline-gray-300 dark:underline-gray-600" href=https://jpanther.github.io/congo/samples/markdown-syntax/>Markdown Syntax Guide</a><span class="px-1 text-primary-500">/</span>
+<a class="hover:underline hover:underline-neutral-300 dark:underline-neutral-600" href=https://jpanther.github.io/congo/samples/markdown-syntax/>Markdown Syntax Guide</a><span class="px-1 text-primary-500">/</span>
 </li>
 </ol>
-<h1 class="mt-0 text-4xl font-extrabold">Markdown Syntax Guide</h1>
-<div class="mt-8 mb-12 text-base text-gray-400 dark:text-gray-500">
-<time datetime="2019-03-11 00:00:00 +0000 UTC">
-11 March 2019
-</time>
-<span class="px-1 text-primary-500">&#183;</span>
-<span title="Reading time">
-3 mins
+<h1 class="mt-0 text-4xl font-extrabold text-neutral-800 dark:text-neutral">
+Markdown Syntax Guide
+</h1>
+<div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
+<div class="flex flex-row items-center">
+<time datetime="2019-03-11 00:00:00 +0000 UTC">11 March 2019</time><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">3 mins</span><span class="px-2 text-primary-500">&#183;</span>
+<span class=mb-[2px]>
+<a href=https://github.com/jpanther/congo/tree/dev/exampleSite/content/samples/markdown-syntax.md class="text-lg hover:text-primary-500" rel="noopener noreferrer" target=_blank title="Edit content"><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>
 </span>
+</a>
+</span>
+</div>
 </div>
 </header>
 <section class="prose dark:prose-light">
@@ -217,30 +221,30 @@
 <div class="flex items-center">
 <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src=https://jpanther.github.io/congo/img/author.jpg>
 <div>
-<div class="text-[0.6rem] leading-3 text-gray-400 dark:text-gray-500 uppercase">
+<div class="text-[0.6rem] leading-3 text-neutral-400 dark:text-neutral-500 uppercase">
 Author
 </div>
-<div class="font-semibold leading-6 text-gray-800 dark:text-gray-300">
+<div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
 Congo
 </div>
-<div class="flex flex-wrap text-gray-400 dark:text-gray-500">
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://twitter.com/ target=_blank alt=Twitter rel=me><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+<div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://twitter.com/ target=_blank alt=Twitter rel="me noopener noreferrer"><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
 </span>
 </a>
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://facebook.com/ target=_blank alt=Facebook rel=me><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14.0 55.52 4.84 55.52 4.84v61h-31.28c-30.8.0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://facebook.com/ target=_blank alt=Facebook rel="me noopener noreferrer"><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14.0 55.52 4.84 55.52 4.84v61h-31.28c-30.8.0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
 </span>
 </a>
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://linkedin.com/ target=_blank alt=Linkedin rel=me><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://linkedin.com/ target=_blank alt=Linkedin rel="me noopener noreferrer"><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
 </span>
 </a>
-<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://youtube.com/ target=_blank alt=Youtube rel=me><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" class="svg-inline--fa fa-youtube fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78.0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+<a class="px-1 hover:text-primary-700 dark:hover:text-primary-400" href=https://youtube.com/ target=_blank alt=Youtube rel="me noopener noreferrer"><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" class="svg-inline--fa fa-youtube fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78.0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
 </span>
 </a>
 </div>
 </div>
 </div>
 <div class="pt-8 article-pagination">
-<hr class="border-gray-300 border-dotted dark:border-gray-600">
+<hr class="border-dotted border-neutral-300 dark:border-neutral-600">
 <div class="flex justify-between pt-3">
 <span>
 </span>
@@ -248,9 +252,9 @@ Congo
 <a class="flex text-right" href=https://jpanther.github.io/congo/samples/rich-content/>
 <span class="flex flex-col">
 <span class=article-pagination-title>Rich Content</span>
-<time class="-mt-1 text-xs text-gray-400 dark:text-gray-500" datetime="2019-03-11 00:00:00 +0000 UTC">
-11 March 2019
-</time>
+<span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+<time datetime="2019-03-11 00:00:00 +0000 UTC">11 March 2019</time>
+</span>
 </span>
 <span class="ml-3 article-pagination-direction">&rarr;</span>
 </a>
@@ -260,16 +264,16 @@ Congo
 </footer>
 </article>
 </main><footer class="py-10 text-sm">
-<p class="text-gray-400 dark:text-gray-500">
+<p class="text-neutral-400 dark:text-neutral-500">
 &copy;
 2021
 Congo
 </p>
-<p class="text-xs text-gray-300 dark:text-gray-600">
+<p class="text-xs text-neutral-300 dark:text-neutral-600">
 Powered by
-<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank>Hugo</a>
+<a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a>
 &
-<a class="hover:underline underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank>Congo</a>
+<a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank rel="noopener noreferrer">Congo</a>
 </p>
 </footer>
 </body>
