@@ -2075,6 +2075,10 @@ body a, body button {
   margin-left: 0.25rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .\!mb-9 {
   margin-bottom: 2.25rem !important;
 }
@@ -2089,10 +2093,6 @@ body a, body button {
 
 .mb-\[2px\] {
   margin-bottom: 2px;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 
 .block {
@@ -2685,12 +2685,12 @@ body a, body button {
 }
 
 @media (min-width: 640px) {
-  .sm\:mr-7 {
-    margin-right: 1.75rem;
-  }
-
   .sm\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .sm\:mr-7 {
+    margin-right: 1.75rem;
   }
 
   .sm\:w-1\/2 {
