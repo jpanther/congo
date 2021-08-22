@@ -2091,6 +2091,10 @@ body a, body button {
   margin-bottom: 2px;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -2683,6 +2687,10 @@ body a, body button {
 @media (min-width: 640px) {
   .sm\:mr-7 {
     margin-right: 1.75rem;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .sm\:w-1\/2 {
