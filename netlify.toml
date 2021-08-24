@@ -1,0 +1,15 @@
+[build]
+  base = "exampleSite"
+  command = "hugo --minify"
+  publish = "exampleSite/public"
+
+[build.environment]
+HUGO_VERSION = "0.86.1"
+HUGO_THEMESDIR = "../.."
+HUGO_THEME = "repo"
+
+[context.production.environment]
+HUGO_BASEURL = "$URL"
+
+[context.deploy-preview.environment]
+HUGO_BASEURL = "$DEPLOY_PRIME_URL"
