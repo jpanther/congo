@@ -5,8 +5,6 @@ draft: false
 description: "All the shortcodes available in Congo."
 slug: "shortcodes"
 tags: ["shortcodes", "mermaid", "icon", "lead", "docs"]
-showDate: false
-showAuthor: false
 ---
 
 In addition to all the [default Hugo shortcodes](https://gohugo.io/content-management/shortcodes/), Congo adds a few extras for additional functionality.

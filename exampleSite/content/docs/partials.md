@@ -5,8 +5,6 @@ draft: false
 description: "All the partials available in Congo."
 slug: "partials"
 tags: ["partials", "analytics", "privacy", "comments", "favicons", "icon", "docs"]
-showDate: false
-showAuthor: false
 ---
 
 ## Analytics
