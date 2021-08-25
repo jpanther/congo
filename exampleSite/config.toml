@@ -7,7 +7,6 @@
 # https://jpanther.github.io/congo/docs/
 # --------------------------------------------------------------------------
 
-baseURL = "https://jpanther.github.io/congo/"
 theme = "congo"
 languageCode = "en-AU"
 defaultContentLanguage = "en"
@@ -51,10 +50,10 @@ relativeURLs = true
   name = "Samples"
   pageRef = "samples"
   weight = 20
-# [[menu.main]]
-#   name = "Users"
-#   pageRef = "users"
-#   weight = 30
+[[menu.main]]
+  name = "Users"
+  pageRef = "users"
+  weight = 30
 [[menu.main]]
   name = "GitHub"
   url = "https://github.com/jpanther/congo"
