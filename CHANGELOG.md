@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 - Missing dark style for group subheadings on article listings
 - Fathom Analytics script included twice when using custom domain
+- Recent heading on homepage profile layout misaligned
 
 ## [1.2.0] - 2021-08-22
 ### Added
