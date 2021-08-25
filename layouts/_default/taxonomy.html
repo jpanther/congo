@@ -6,7 +6,7 @@
         <h2>
           <a
             class="text-xl font-medium hover:underline hover:underline-primary-500 hover:underline-offset-small"
-            href="{{ .Page.Permalink }}"
+            href="{{ .Page.RelPermalink }}"
             >{{ .Page.Title }}</a
           >
           {{ if $.Site.Params.taxonomy.showTermCount | default true }}

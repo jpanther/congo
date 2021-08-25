@@ -12,7 +12,6 @@ languageCode = "en-AU"
 defaultContentLanguage = "en"
 title = "Congo"
 enableEmoji = true
-relativeURLs = true
 
 [author]
   name = "Congo"

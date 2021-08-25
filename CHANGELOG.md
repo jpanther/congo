@@ -9,6 +9,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fathom Analytics script included twice when using custom domain
 - Recent heading on homepage profile layout misaligned
 
+### Changed
+- URLs are relative by default which allows the theme to be more flexible in different deployment scenarios
+
 ## [1.2.0] - 2021-08-22
 ### Added
 - Multiple colour schemes
