@@ -66,7 +66,7 @@ Alternatively, you can also completely override the default favicon behaviour an
 
 ## Icon
 
-Similar to the [icon shortcode](/docs/shortcodes/#icon), you can include icons in your own templates and partials by using Congo's `icon.html` partial. The partial takes one parameter which is the name of the icon to be included.
+Similar to the [icon shortcode]({{< ref "shortcodes#icon" >}}), you can include icons in your own templates and partials by using Congo's `icon.html` partial. The partial takes one parameter which is the name of the icon to be included.
 
 **Example:**
 
@@ -82,7 +82,7 @@ Congo also provides for a number of extension partials that allow for expanding 
 
 ### Article link
 
-If you wish to insert additional code after article links, create a `layouts/partials/extend-article-link.html` file. This is especially powerful when combined with the [`badge`](/docs/shortcodes/#badge) shortcode which can be used to highlight metadata for certain articles.
+If you wish to insert additional code after article links, create a `layouts/partials/extend-article-link.html` file. This is especially powerful when combined with the [`badge`]({{< ref "shortcodes#badge" >}}) shortcode which can be used to highlight metadata for certain articles.
 
 ### Head and Footer
 

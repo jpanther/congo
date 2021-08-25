@@ -9,7 +9,7 @@ Congo brings your content to life. :heart_eyes:
 
 This section contains some demo pages that show how Congo renders different types of content. These pages come from Hugo's official [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample) repository.
 
-You can also see an example [taxonomy listing](/tags/) page.
+You can also see an example [taxonomy listing]({{< ref "tags" >}}) page.
 
 _**Sidenote:** This page is just a standard Congo article listing and Hugo has been configured to generate a `samples` content type._
 

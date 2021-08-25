@@ -10,7 +10,7 @@ showAuthor: false
 ---
 
 {{< alert >}}
-This section assumes you have already [installed the Congo theme](/docs/installation/).
+This section assumes you have already [installed the Congo theme]({{< ref "docs/installation" >}}).
 {{< /alert >}}
 
 The config files that ship with Congo contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.
@@ -34,7 +34,7 @@ links = [
 
 The `[author]` configuration determines how the author information is displayed on the website. The image should be placed in the site's `static/` folder. Links will be displayed in the order they are listed.
 
-Further detail about these configuration options is covered in the [Configuration](/docs/configuration/) section.
+Further detail about these configuration options is covered in the [Configuration]({{< ref "configuration" >}}) section.
 
 ## Organising content
 
@@ -68,4 +68,4 @@ When you create a new taxonomy, you will need to adjust the navigation links on 
   weight = 20
 ```
 
-These steps are the bare minimum configuration. If you now run `hugo server` you will be presented with a blank Congo website. Detailed configuration is covered in the [Configuration](/docs/configuration/) section.
+These steps are the bare minimum configuration. If you now run `hugo server` you will be presented with a blank Congo website. Detailed configuration is covered in the [Configuration]({{< ref "configuration" >}}) section.
