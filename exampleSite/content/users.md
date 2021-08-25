@@ -8,13 +8,15 @@ tags: ["users"]
 showDate: false
 showAuthor: false
 showReadingTime: false
+showEdit: false
 ---
 
 {{< lead >}}
 Real websites that are built with Congo.
 {{< /lead >}}
 
-| Website | Details |
-| ------- | ------- |
+| Website                                          | Details                      |
+| ------------------------------------------------ | ---------------------------- |
+| [jamespanther.com](https://www.jamespanther.com) | Personal site - Theme author |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
