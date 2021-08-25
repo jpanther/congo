@@ -1,5 +1,5 @@
 [build]
-  command = "cd exampleSite && hugo --gc --minify"
+  command = "cd exampleSite && hugo --gc --minify -b $URL"
   publish = "exampleSite/public"
 
 [build.environment]
