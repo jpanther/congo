@@ -57,6 +57,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`colorScheme`|string|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean` and `fire`.|
 |`description`|string|_Not set_|The description of the website for metadata purposes.|
 |`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
+|`robots`|string|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout]({{< ref "homepage-layout" >}}) section for more details.|
 |`homepage.showRecent`|boolean|`false`|Whether or not to display the recent articles list on the homepage.|
 |`article.showDate`|boolean|`true`|Whether or not article dates are displayed.|

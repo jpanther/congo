@@ -4,13 +4,16 @@ All notable changes to Congo will be documented in this file. Things that need a
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- New `robots` parameter to add metadata to guide robots on how to handle specific content
+
+### Changed
+- URLs are relative by default which allows the theme to be more flexible in different deployment scenarios
+
 ### Fixed
 - Missing dark style for group subheadings on article listings
 - Fathom Analytics script included twice when using custom domain
 - Recent heading on homepage profile layout misaligned
-
-### Changed
-- URLs are relative by default which allows the theme to be more flexible in different deployment scenarios
 
 ## [1.2.0] - 2021-08-22
 ### Added
