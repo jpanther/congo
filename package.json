@@ -1,12 +1,12 @@
 {
   "name": "hugo-congo-theme",
-  "version": "v1.2.0",
+  "version": "1.2.1",
   "description": "Congo theme for Hugo",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
-    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts"
+    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ -p 8008"
   },
   "repository": {
     "type": "git",

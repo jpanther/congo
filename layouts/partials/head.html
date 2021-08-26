@@ -22,9 +22,15 @@
   {{ with .Site.Params.keywords -}}
     <meta name="keywords" content="{{ . }}" />
   {{- end }}
+  {{ with .Site.Params.robots }}
+    <meta name="robots" content="{{ . }}" />
+  {{ end }}
+  {{ with .Params.robots }}
+    <meta name="robots" content="{{ . }}" />
+  {{ end }}
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
   {{ end -}}
   {{/* Styles */}}
   {{ $schemeCSS := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}
@@ -35,7 +41,7 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="{{ $schemeStyles.Permalink }}"
+    href="{{ $schemeStyles.RelPermalink }}"
     integrity="{{ $schemeStyles.Data.Integrity }}"
   />
   {{ $mainCSS := resources.Get "css/compiled/main.css" }}
@@ -43,7 +49,7 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="{{ $mainStyles.Permalink }}"
+    href="{{ $mainStyles.RelPermalink }}"
     integrity="{{ $mainStyles.Data.Integrity }}"
   />
   {{ $customCSS := resources.Get "css/custom.css" }}
@@ -52,7 +58,7 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="{{ $customStyles.Permalink }}"
+      href="{{ $customStyles.RelPermalink }}"
       integrity="{{ $customStyles.Data.Integrity }}"
     />
   {{ end }}
@@ -60,10 +66,10 @@
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}
   {{ else }}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}" />
-    <link rel="manifest" href="{{ "site.webmanifest" | absURL }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}" />
+    <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
   {{ end }}
   {{/* Site Verification */}}
   {{ with .Site.Params.verification.google }}

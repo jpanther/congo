@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.2.1] - 2021-08-26
+
+### Added
+
+- New `robots` parameter to add metadata to guide robots on how to handle specific content
+
+### Changed
+
+- URLs are relative by default which allows the theme to be more flexible in different deployment scenarios
+
+### Fixed
+
+- Missing dark style for group subheadings on article listings
+- Fathom Analytics script included twice when using custom domain
+- Recent heading on homepage profile layout misaligned
+
 ## [1.2.0] - 2021-08-22
 
 ### Added
@@ -79,7 +95,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/jpanther/Congo/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/jpanther/Congo/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/jpanther/congo/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/jpanther/congo/compare/v1.0.0...v1.1.0

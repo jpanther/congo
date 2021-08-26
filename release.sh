@@ -15,14 +15,14 @@ if [ $branch = "dev" ]; then
 	if output=$(git status --porcelain) && [ -z "$output" ]; then
 		
 		# get the version number
-		echo "Enter the release version (eg. v1.0.0):"
+		echo "Enter the release version (eg. 1.2.0):"
 		read version
 
-		echo "Started releasing Congo $version..."
+		echo "Started releasing Congo v$version..."
 
 		# update package version
 		jq --arg version "$version" '.version=$version' package.json > package.tmp && mv package.tmp package.json
-		sed -i -e "1s/^\(\/\*! Congo \)v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/\1$version/" assets/css/main.css
+		sed -i "" -e "1s/^\(\/\*! Congo \)v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/\1v$version/" assets/css/main.css
 
 		# update changelog
 		chan release $version || exit
@@ -32,7 +32,7 @@ if [ $branch = "dev" ]; then
 		npm run build
 
 		# commit version updates
-		git commit -a -m "🔨 Preparing release $version"
+		git commit -a -m "🔨 Preparing release v$version"
 		git push
 
 		# switch to stable branch
@@ -42,7 +42,7 @@ if [ $branch = "dev" ]; then
 		git pull
 
 		# merge in changes from dev branch
-		git merge --no-ff dev -m "🔖 Release $version"
+		git merge --no-ff dev -m "🔖 Release v$version"
 
 		# create tag
 		git tag $version
@@ -54,7 +54,7 @@ if [ $branch = "dev" ]; then
 		# publish GitHub release
 		timeout 2 chan gh-release $version
 
-		echo "Congo $version successfully released! 🎉"
+		echo "Congo v$version successfully released! 🎉"
 		echo "Returning to dev branch..."
 
 		git checkout dev

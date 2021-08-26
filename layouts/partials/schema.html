@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "{{ .Site.Title | safeJS }}",
-    "url": "{{ .Site.BaseURL | safeURL }}",
+    "url": "{{ (site.GetPage "/").Permalink | safeURL }}",
     "description": "{{ .Site.Params.description | safeJS }}"
   }
   </script>

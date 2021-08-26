@@ -4,7 +4,7 @@
   {{- if .Get "link" -}}
     <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
   {{- end -}}
-  <img src="{{ $image.Permalink }}"
+  <img src="{{ $image.RelPermalink }}"
     {{- if or (.Get "alt") (.Get "caption") }}
     alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
     {{- end -}}
@@ -25,5 +25,3 @@
   {{- end }}
   </figure>
 {{ end }}
-
-

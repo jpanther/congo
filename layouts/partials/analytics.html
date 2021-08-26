@@ -2,8 +2,9 @@
   {{ with .Site.Params.fathomAnalytics.site }}
     {{ if isset $.Site.Params.fathomanalytics "domain" }}
       <script src="https://{{ $.Site.Params.fathomanalytics.domain }}/script.js" data-site="{{ . }}" defer></script>
+    {{ else }}
+      <script src="https://cdn.usefathom.com/script.js" data-site="{{ . }}" defer></script>
     {{ end }}
-    <script src="https://cdn.usefathom.com/script.js" data-site="{{ . }}" defer></script>  
   {{ end }}
   {{ template "_internal/google_analytics.html" . }}
 {{ end }}

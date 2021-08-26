@@ -5,8 +5,6 @@ draft: false
 description: "Learn how to build Congo manually."
 slug: "advanced-customisation"
 tags: ["advanced", "css", "docs"]
-showDate: false
-showAuthor: false
 ---
 
 There are a few ways you can make style changes to Congo.
