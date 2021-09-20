@@ -1,0 +1,33 @@
+article:
+  anchor_label: "锚点"
+  draft: "草稿"
+  edit_title: "编辑内容"
+  reading_time:
+    other: "{{ .Count }} 分钟"
+  reading_time_title: "预计阅读"
+
+author:
+  byline_title: "作者"
+
+error:
+  404_title: "找不到网页 :confused:"
+  404_error: "404 错误"
+  404_description: "您请求的页面似乎不存在。"
+
+footer:
+  powered_by: "由 {{ .Hugo }} 强力驱动"
+
+list:
+  externalurl_title: "链接到外部网站"
+  no_articles: "这里还没有任何文章可以列出。"
+
+sharing:
+  email: "通过电子邮件发送"
+  facebook: "分享到 Facebook"
+  linkedin: "分享到 LinkedIn"
+  reddit: "提交到 Reddit"
+  twitter: "分享到 Twitter"
+
+shortcode:
+  recent_articles: "最近的文章"
+  icon_none: "未找到图标。"

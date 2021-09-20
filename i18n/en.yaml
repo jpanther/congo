@@ -16,7 +16,7 @@ error:
   404_description: "It seems that the page you've requested does not exist."
 
 footer:
-  powered_by: "Powered by"
+  powered_by: "Powered by {{ .Hugo }}"
 
 list:
   externalurl_title: "Link to external site"
