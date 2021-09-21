@@ -1,6 +1,6 @@
 name: Labeller
 
-on: [pull_request]
+on: [pull_request_target]
 
 jobs:
   label:
