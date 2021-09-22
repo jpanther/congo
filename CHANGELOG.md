@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Site logo support
 - Chinese translation ([#2](https://github.com/jpanther/congo/pull/2))
 
 ## [1.2.1] - 2021-08-26
