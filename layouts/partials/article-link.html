@@ -23,7 +23,7 @@
     {{ end }}
     {{ if and .Draft .Site.Params.article.showDraftLabel }}
       <div class="ml-2">
-        {{ partial "badge.html" "Draft" }}
+        {{ partial "badge.html" (i18n "article.draft" | emojify) }}
       </div>
     {{ end }}
     {{ if templates.Exists "partials/extend-article-link.html" }}

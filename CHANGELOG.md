@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.3.0] - 2021-09-29
+
+### Added
+
+- Site logo support
+- Chinese translation ([#2](https://github.com/jpanther/congo/pull/2))
+
+### Changed
+
+- Upgrade to Tailwind v2.2.16
+
 ## [1.2.1] - 2021-08-26
 
 ### Added
@@ -95,7 +106,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.2.1...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/jpanther/Congo/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/jpanther/Congo/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/jpanther/Congo/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/jpanther/congo/compare/v1.1.0...v1.1.1

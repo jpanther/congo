@@ -54,7 +54,8 @@ Many of the article defaults here can be overridden on a per article basis by sp
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
-|`colorScheme`|string|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean` and `fire`.|
+|`colorScheme`|string|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean` and `fire`. Refer to [Advanced Customisation]({{< ref "advanced-customisation#colour-schemes" >}}) for more details.|
+|`logo`|string|_Not set_|The relative path to the site logo file within the Hugo assets folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
 |`description`|string|_Not set_|The description of the website for metadata purposes.|
 |`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`robots`|string|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|

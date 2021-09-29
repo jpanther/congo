@@ -1,11 +1,25 @@
-<header class="flex justify-between py-6 font-semibold sm:py-10 text-neutral-800 dark:text-neutral">
+<header
+  class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-800 dark:text-neutral"
+>
   <div>
-    <a
-      class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
-      rel="me"
-      href="{{ "/" | relURL }}"
-      >{{ .Site.Title }}</a
-    >
+    {{ if .Site.Params.Logo -}}
+      {{ $logo := resources.Get .Site.Params.Logo }}
+      {{ if $logo }}
+        <img
+          src="{{ $logo.RelPermalink }}"
+          width="{{ div $logo.Width 2 }}"
+          height="{{ div $logo.Height 2 }}"
+          alt="{{ .Site.Title }}"
+        />
+      {{ end }}
+    {{ else }}
+      <a
+        class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+        rel="me"
+        href="{{ "/" | relURL }}"
+        >{{ .Site.Title }}</a
+      >
+    {{- end }}
   </div>
   <nav>
     <ul class="flex flex-col list-none sm:flex-row">
