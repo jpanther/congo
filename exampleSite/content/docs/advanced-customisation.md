@@ -21,7 +21,7 @@ Use one of the existing theme stylesheets as a template. You are free to define 
 
 ## Overriding the stylesheet
 
-Sometimes you need to add a custom style to style your own HTML elements. Congo provides for this scenario by allowing you to overrid the default styles in your own CSS stylesheet. Simply create a `custom.css` file in your project's `assets/css/` folder.
+Sometimes you need to add a custom style to style your own HTML elements. Congo provides for this scenario by allowing you to override the default styles in your own CSS stylesheet. Simply create a `custom.css` file in your project's `assets/css/` folder.
 
 The `custom.css` file will be minified by Hugo and loaded automatically after all the other theme styles which means anything in your custom file will take precedence over the defaults.
 
@@ -54,7 +54,7 @@ npm run dev
 This will automatically output a CSS file to `/themes/congo/assets/css/compiled/main.css`.
 
 {{< alert >}}
-**Note:** You should make manual edits to the compiled CSS file.
+**Note:** You should not make manual edits to the compiled CSS file.
 {{< /alert >}}
 
 Now whenever you make a change, the CSS files will be rebuilt automatically. This mode is useful to run when using `hugo server` to preview your site during development. Asset files will be minified by Hugo at site build time.
