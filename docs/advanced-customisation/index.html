@@ -8,7 +8,7 @@
 <meta name=description content="Learn how to build Congo manually.">
 <link rel=canonical href=https://jpanther.github.io/congo/docs/advanced-customisation/>
 <link type=text/css rel=stylesheet href=/congo/css/schemes/congo.min.b48d6ba061dc77186a2524fb8aac5ac3823b2679a9299ca60325abbccc9c1764c884715f0ba24b4e2776cb3814df4af1f4c854b87207cd5d4c7a254da9b55751.css integrity="sha512-tI1roGHcdxhqJST7iqxaw4I7JnmpKZymAyWrvMycF2TIhHFfC6JLTid2yzgU30rx9MhUuHIHzV1MeiVNqbVXUQ==">
-<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.ea854f5324e6f022fce8a455002c667df804536940ec2e12411e4a8cab77790e8403bc0acc8feb64a7f08e3cac0e869a37f8cba59650d1fe3f3e83fe54a49c8a.css integrity="sha512-6oVPUyTm8CL86KRVACxmffgEU2lA7C4SQR5KjKt3eQ6EA7wKzI/rZKfwjjysDoaaN/jLpZZQ0f4/PoP+VKScig==">
+<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.c7290b6ac74545a6de646d08ba3464ec3c13dadadc7f19d2445e0ab22286078236df7c5645eaac6cb086d207f9f2e077c66fd9e542f30b735865adf01b858059.css integrity="sha512-xykLasdFRabeZG0IujRk7DwT2trcfxnSRF4KsiKGB4I233xWReqsbLCG0gf58uB3xm/Z5ULzC3NYZa3wG4WAWQ==">
 <link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/congo/favicon-16x16.png>
@@ -22,15 +22,15 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Advanced Customisation">
 <meta name=twitter:description content="Learn how to build Congo manually.">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Documentation","name":"Advanced Customisation","headline":"Advanced Customisation","description":"Learn how to build Congo manually.","inLanguage":"en-AU","author":{"@type":"Person","name":"Congo"},"creator":{"@type":"Person","name":"Congo"},"copyrightHolder":"Congo","copyrightYear":"2020","dateCreated":"2020-08-09T00:00:00\u002b00:00","datePublished":"2020-08-09T00:00:00\u002b00:00","dateModified":"2020-08-09T00:00:00\u002b00:00","url":"https:\/\/jpanther.github.io\/congo\/docs\/advanced-customisation\/","wordCount":"471","keywords":["advanced","css","docs"]}</script>
-<meta name=generator content="Hugo 0.87.0">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Documentation","name":"Advanced Customisation","headline":"Advanced Customisation","description":"Learn how to build Congo manually.","inLanguage":"en-AU","author":{"@type":"Person","name":"Congo"},"creator":{"@type":"Person","name":"Congo"},"copyrightHolder":"Congo","copyrightYear":"2020","dateCreated":"2020-08-09T00:00:00\u002b00:00","datePublished":"2020-08-09T00:00:00\u002b00:00","dateModified":"2020-08-09T00:00:00\u002b00:00","url":"https:\/\/jpanther.github.io\/congo\/docs\/advanced-customisation\/","wordCount":"472","keywords":["advanced","css","docs"]}</script>
+<meta name=generator content="Hugo 0.88.1">
 <meta name=author content="Congo">
 <link href=https://twitter.com/ rel=me>
 <link href=https://facebook.com/ rel=me>
 <link href=https://linkedin.com/ rel=me>
 <link href=https://youtube.com/ rel=me>
 </head>
-<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:py-10 text-neutral-800 dark:text-neutral">
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-800 dark:text-neutral">
 <div>
 <a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" rel=me href=/congo/>Congo</a>
 </div>
@@ -87,7 +87,7 @@ Advanced Customisation
 <p>Congo defines a three-colour palette that is used throughout the theme. The three colours are defined as <code>neutral</code>, <code>primary</code> and <code>secondary</code> variants, each containing ten shades of colour.</p>
 <p>Use one of the existing theme stylesheets as a template. You are free to define your own colours, but for some inspiration, check out the official <a href=https://tailwindcss.com/docs/customizing-colors#color-palette-reference>Tailwind colour palette reference</a>.</p>
 <h2 id=overriding-the-stylesheet>Overriding the stylesheet <a class=heading-anchor href=#overriding-the-stylesheet aria-label=Anchor>#</a></h2>
-<p>Sometimes you need to add a custom style to style your own HTML elements. Congo provides for this scenario by allowing you to overrid the default styles in your own CSS stylesheet. Simply create a <code>custom.css</code> file in your project&rsquo;s <code>assets/css/</code> folder.</p>
+<p>Sometimes you need to add a custom style to style your own HTML elements. Congo provides for this scenario by allowing you to override the default styles in your own CSS stylesheet. Simply create a <code>custom.css</code> file in your project&rsquo;s <code>assets/css/</code> folder.</p>
 <p>The <code>custom.css</code> file will be minified by Hugo and loaded automatically after all the other theme styles which means anything in your custom file will take precedence over the defaults.</p>
 <h2 id=building-from-source>Building from source <a class=heading-anchor href=#building-from-source aria-label=Anchor>#</a></h2>
 <p>If you&rsquo;d like to make a major change, you can take advantage of Tailwind CSS&rsquo;s JIT compiler and rebuild the entire theme CSS from scratch.</p>
@@ -111,7 +111,7 @@ Advanced Customisation
 <span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg>
 </span>
 </span>
-<span class="no-prose dark:text-neutral-300"><strong>Note:</strong> You should make manual edits to the compiled CSS file.</span>
+<span class="no-prose dark:text-neutral-300"><strong>Note:</strong> You should not make manual edits to the compiled CSS file.</span>
 </div>
 <p>Now whenever you make a change, the CSS files will be rebuilt automatically. This mode is useful to run when using <code>hugo server</code> to preview your site during development. Asset files will be minified by Hugo at site build time.</p>
 </section>
@@ -142,8 +142,7 @@ Advanced Customisation
 Congo
 </p>
 <p class="text-xs text-neutral-300 dark:text-neutral-600">
-Powered by
-<a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a>
+Powered by <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a>
 &
 <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank rel="noopener noreferrer">Congo</a>
 </p>
