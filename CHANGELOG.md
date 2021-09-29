@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Site logo support
 - Chinese translation ([#2](https://github.com/jpanther/congo/pull/2))
 
+### Changed
+
+- Upgrade to Tailwind v2.2.16
+
 ## [1.2.1] - 2021-08-26
 
 ### Added
