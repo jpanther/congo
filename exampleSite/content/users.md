@@ -19,5 +19,6 @@ Real websites that are built with Congo.
 | -------------------------------------------- | ---------------------------- |
 | [jamespanther.com](https://jamespanther.com) | Personal site - Theme author |
 | [zekeriyaay.com](https://zekeriyaay.com)     | Personal cheat sheets site   |
+| [srisco.dev](https://srisco.dev)             | Personal site                |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
