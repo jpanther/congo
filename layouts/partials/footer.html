@@ -2,6 +2,8 @@
   {{/* Copyright */}}
   <p class="text-neutral-400 dark:text-neutral-500">
     {{- with .Site.Copyright }}
+      &copy;
+      {{ now.Format "2006" }}
       {{ . | emojify | markdownify }}
     {{- else }}
       &copy;
