@@ -1,4 +1,8 @@
 <footer class="py-10 text-sm">
+  {{/* Footer Pre */}}
+  {{ if templates.Exists "partials/pre-footer.html" }}
+    {{ partialCached "pre-footer.html" . }}
+  {{ end }}
   {{/* Copyright */}}
   <p class="text-neutral-400 dark:text-neutral-500">
     {{- with .Site.Copyright }}
