@@ -11,7 +11,7 @@ There are a few ways you can make style changes to Congo.
 
 ## Colour schemes
 
-Congo ships with a few colour schemes out of the box. To change the basic colour scheme, you can set the `colorScheme` theme parameter to one of the default configurations. Valid options are `congo` (the default), `avocado`, `fire` and `ocean`.
+Congo ships with a few colour schemes out of the box. To change the basic colour scheme, you can set the `colorScheme` theme parameter to one of the default configurations. Valid options are `congo` (the default), `avocado`, `fire`, `ocean` and `slate`.
 
 In addition to the default scheme, you can also create your own and restyle the entire website to your liking. Schemes are created by by placing a `<scheme-name>.css` file in the `assets/css/schemes/` folder. Once the file is created, simply refer to it by name in the theme configuration.
 
