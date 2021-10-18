@@ -34,6 +34,40 @@ The `[author]` configuration determines how the author information is displayed 
 
 Further detail about these configuration options is covered in the [Configuration]({{< ref "configuration" >}}) section.
 
+## Colour schemes
+
+Congo ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `congo` (default), `avocado`, `fire`, `ocean` and `slate`.
+
+```toml
+# config/_default/params.toml
+
+colorScheme = "congo"
+```
+
+Congo defines a three-colour palette that is used throughout the theme. Each main colour contains ten shades which are based upon the colours that are included in [Tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference).
+
+#### Congo (default)
+
+{{< swatches "#71717a" "#8b5cf6" "#d946ef" >}}
+
+#### Avocado
+
+{{< swatches "#78716c" "#84cc16" "#10b981" >}}
+
+#### Fire
+
+{{< swatches "#78716c" "#f97316" "#f43f5e" >}}
+
+#### Ocean
+
+{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
+
+#### Slate
+
+{{< swatches "#6B7280" "#6B7280" "#6B7280" >}}
+
+Although these are the default schemes, you can also create your own. Refer to the [Advanced Customisation]({{< ref "advanced-customisation#colour-schemes" >}}) section for details.
+
 ## Organising content
 
 By default, Congo doesn't force you to use a particular content type. In doing so you are free to define your content as you wish. You might prefer _pages_ for a static site, _posts_ for a blog, or _projects_ for a portfolio.
