@@ -7,7 +7,7 @@ slug: "front-matter"
 tags: ["front matter", "config", "docs"]
 ---
 
-In addition to the [default Hugo front matter parameters](https://gohugo.io/content-management/front-matter/#front-matter-variables), Congo adds a number of additional options to customise the presentation of individual articles. All the available theme parameters are listed below.
+In addition to the [default Hugo front matter parameters](https://gohugo.io/content-management/front-matter/#front-matter-variables), Congo adds a number of additional options to customise the presentation of individual articles. All the available theme front matter parameters are listed below.
 
 Front matter parameter default values are inherited from the theme's [base configuration]({{< ref "configuration" >}}), so you only need to specify these parameters in your front matter when you want to override the default.
 
