@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Main menu is now optional
+- Upgrade to Mermaid v8.13.3
 
 ### Fixed
 
