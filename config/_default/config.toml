@@ -12,6 +12,8 @@ title = "Congo"
 enableEmoji = true
 enableRobotsTXT = true
 
+summaryLength = 0
+
 [author]
   # name = "Your name here"
   # image = "img/author.jpg"

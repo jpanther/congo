@@ -2299,6 +2299,11 @@ body a, body button {
   padding-right: 0.25rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-\[1px\] {
   padding-top: 1px;
   padding-bottom: 1px;

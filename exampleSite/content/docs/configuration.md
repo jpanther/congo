@@ -38,6 +38,7 @@ Note that the variable names provided in this table use dot notation to simplify
 |`copyright`|string|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.
 |`enableEmoji`|boolean|`true`|Whether emoji strings in content should be converted to emoji symbols.|
 |`enableRobotsTXT`|boolean|`true`|When enabled a `robots.txt` file will be created in the site root that allows search engines to crawl the entire site. Set to `false` if you wish to provide your own file.|
+|`summaryLength`|integer|`0`|The number of words that are used to generate the article summary when one is not provided in the [front matter]({{< ref "front-matter" >}}). A value of `0` will use the first sentence. This value has no effect when summaries are hidden.|
 |`author.name`|string|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
 |`author.image`|string|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `static/` folder.|
 |`author.links`|array of objects|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
@@ -74,6 +75,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.showReadingTime`|boolean|`true`|Whether or not article reading times are displayed.|
 |`article.sharingLinks`|array of strings|_Not set_|Which sharing links to display at the end of each article. When not provided, or set to `false` no links will be displayed.|
 |`list.showBreadcrumbs`|boolean|`false`|Whether or not breadcrumbs are displayed in the header on list pages.|
+|`list.showSummary`|boolean|`false`|Whether or not article summaries are displayed on list pages. If a summary is not provided in the [front matter]({{< ref "front-matter" >}}), one will be auto generated using the `summaryLength` parameter in the [site configuration](#site-configuration).|
 |`list.groupByYear`|boolean|`true`|Whether or not articles are grouped by year on list pages.|
 |`sitemap.excludedKinds`|array of strings|`["taxonomy", "term"]`|Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values.|
 |`taxonomy.showTermCount`|boolean|`true`|Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.|

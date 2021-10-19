@@ -14,16 +14,19 @@ Front matter parameter default values are inherited from the theme's [base confi
 <!-- prettier-ignore-start -->
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
+|`description`|string|_Not set_|The text description for the article. It is used in the HTML metadata.|
 |`externalUrl`|string|_Not set_|If this article is published on a third-party website, the URL to this article. Providing a URL will prevent a content page being generated and any references to this article will link directly to the third-party website.|
-|`showDate`|boolean|`article.showDate`|Whether or not article dates are displayed.|
-|`showAuthor`|boolean|`article.showAuthor`|Whether or not the author box is displayed in the article footer.|
-|`showEdit`|boolean|`article.showEdit`|Whether or not the link to edit the article content should be displayed.|
 |`editURL`|string|`article.editURL`|When `showEdit` is active, the URL for the edit link.|
 |`editAppendPath`|boolean|`article.editAppendPath`|When `showEdit` is active, whether or not the path to the current article should be appended to the URL set at `editURL`.|
 |`menu`|string or array|_Not set_|When a value is provided, a link to this article will appear in the named menus. Valid values are `main` or `footer`.|
 |`robots`|string|_Not set_|String that indicates how robots should handle this article. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
+|`showAuthor`|boolean|`article.showAuthor`|Whether or not the author box is displayed in the article footer.|
+|`showDate`|boolean|`article.showDate`|Whether or not article dates are displayed.|
+|`showEdit`|boolean|`article.showEdit`|Whether or not the link to edit the article content should be displayed.|
 |`showHeadingAnchors`|boolean|`article.showHeadingAnchors`|Whether or not heading anchor links are displayed alongside headings within this article.|
 |`showPagination`|boolean|`article.showPagination`|Whether or not the next/previous article links are displayed in the article footer.|
 |`showReadingTime`|boolean|`article.showReadingTime`|Whether or not article reading times are displayed.|
+|`showSummary`|boolean|`list.showSummary`|Whether or not the article summary should be displayed on list pages.|
+|`summary`|string|_Auto generated using `summaryLength` (see [site configuration]({{< ref "configuration#site-configuration" >}}))_|When `showSummary` is enabled, this is the Markdown string to be used as the summary for this article.|
 |`xml`|boolean|`true` unless excluded by `sitemap.excludedKinds`|Whether or not this article is included in the generated `/sitemap.xml` file.|
 <!-- prettier-ignore-end -->
