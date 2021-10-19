@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Slate colour scheme ([#9](https://github.com/jpanther/congo/pull/9))
 - Icons for ORCID and ResearchGate ([#9](https://github.com/jpanther/congo/pull/9))
 
+### Changed
+
+- Main menu is now optional
+
 ## [1.3.0] - 2021-09-29
 
 ### Added

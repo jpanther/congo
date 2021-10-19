@@ -1,6 +1,7 @@
 <header
   class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-800 dark:text-neutral"
 >
+  {{/* Site logo/title */}}
   <div>
     {{ if .Site.Params.Logo -}}
       {{ $logo := resources.Get .Site.Params.Logo }}
@@ -21,18 +22,21 @@
       >
     {{- end }}
   </div>
-  <nav>
-    <ul class="flex flex-col list-none sm:flex-row">
-      {{ range .Site.Menus.main }}
-        <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
-          <a
-            class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
-            href="{{ .URL }}"
-            title="{{ .Title }}"
-            >{{ .Name }}</a
-          >
-        </li>
-      {{ end }}
-    </ul>
-  </nav>
+  {{/* Main menu */}}
+  {{ if .Site.Menus.main }}
+    <nav>
+      <ul class="flex flex-col list-none sm:flex-row">
+        {{ range .Site.Menus.main }}
+          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+            <a
+              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              href="{{ .URL }}"
+              title="{{ .Title }}"
+              >{{ .Name }}</a
+            >
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
 </header>
