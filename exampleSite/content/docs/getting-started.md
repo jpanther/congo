@@ -84,7 +84,13 @@ topic = "topics"
 
 This will replace the default _tags_ and _categories_ with _topics_. Refer to the [Hugo Taxonomy docs](https://gohugo.io/content-management/taxonomies/) for more information on naming taxonomies.
 
-When you create a new taxonomy, you will need to adjust the navigation links on the website to point to the new sections:
+When you create a new taxonomy, you will need to adjust the navigation links on the website to point to the correct sections.
+
+## Menus
+
+Congo has two menus that can be customised to suit the content and layout of your site. The `main` menu appears in the site header and the `footer` menu appears at the bottom of the page just above the copyright notice.
+
+Both menus are configured in the `menus.toml` file.
 
 ```toml
 # config/_default/menus.toml
@@ -98,6 +104,20 @@ When you create a new taxonomy, you will need to adjust the navigation links on 
   name = "Topics"
   pageRef = "topics"
   weight = 20
+
+[[footer]]
+  name = "Privacy"
+  url = "https://external-link"
 ```
 
-These steps are the bare minimum configuration. If you now run `hugo server` you will be presented with a blank Congo website. Detailed configuration is covered in the [Configuration]({{< ref "configuration" >}}) section.
+The `name` parameter specifies the text that is used in the menu link. You can also optionally provide a `title` which fills the HTML title attribute for the link.
+
+The `pageRef` parameter allows you to easily reference Hugo content pages and taxonomies. It is the quickest way to configure the menu as you can simply refer to any Hugo content item and it will automatically build the correct link. To link to external URLs, the `url` parameter can be used.
+
+Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
+
+Both menus are completely optional and can be commented out if not required. Use the template provided in the file as a guide.
+
+## Detailed configuration
+
+The steps above are the bare minimum configuration. If you now run `hugo server` you will be presented with a blank Congo website. Detailed configuration is covered in the [Configuration]({{< ref "configuration" >}}) section.
