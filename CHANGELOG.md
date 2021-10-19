@@ -17,6 +17,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Main menu is now optional
 
+### Fixed
+
+- Site logo not linked to home page ([#13](https://github.com/jpanther/congo/issues/13))
+
 ## [1.3.0] - 2021-09-29
 
 ### Added

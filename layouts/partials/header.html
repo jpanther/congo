@@ -6,12 +6,14 @@
     {{ if .Site.Params.Logo -}}
       {{ $logo := resources.Get .Site.Params.Logo }}
       {{ if $logo }}
-        <img
-          src="{{ $logo.RelPermalink }}"
-          width="{{ div $logo.Width 2 }}"
-          height="{{ div $logo.Height 2 }}"
-          alt="{{ .Site.Title }}"
-        />
+        <a href="{{ "/" | relURL }}">
+          <img
+            src="{{ $logo.RelPermalink }}"
+            width="{{ div $logo.Width 2 }}"
+            height="{{ div $logo.Height 2 }}"
+            alt="{{ .Site.Title }}"
+          />
+        </a>
       {{ end }}
     {{ else }}
       <a
