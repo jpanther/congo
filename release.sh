@@ -45,7 +45,7 @@ if [ $branch = "dev" ]; then
 		git merge --no-ff dev -m "🔖 Release v$version"
 
 		# create tag
-		git tag $version
+		git tag "v$version"
 
 		# push commit and tag to remote
 		git push
