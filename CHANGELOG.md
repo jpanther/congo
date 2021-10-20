@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Main menu is now optional
 - Upgrade to Mermaid v8.13.3
+- Upgrade to Tailwind v2.2.17
 
 ### Fixed
 
