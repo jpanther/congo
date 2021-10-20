@@ -16,7 +16,7 @@ error:
   404_description: "It seems that the page you've requested does not exist."
 
 footer:
-  powered_by: "Powered by {{ .Hugo }}"
+  powered_by: "Powered by {{ .Hugo }} &amp; {{ .Congo }}"
 
 list:
   externalurl_title: "Link to external site"
@@ -26,6 +26,7 @@ sharing:
   email: "Send via email"
   facebook: "Share on Facebook"
   linkedin: "Share on LinkedIn"
+  pinterest: "Pin on Pinterest"
   reddit: "Submit to Reddit"
   twitter: "Tweet on Twitter"
 

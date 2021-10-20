@@ -6,6 +6,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.4.0] - 2021-10-20
+
+### Added
+
+- Footer menu
+- Article summary support
+- Slate colour scheme ([#9](https://github.com/jpanther/congo/pull/9))
+- Icons for ORCID and ResearchGate ([#9](https://github.com/jpanther/congo/pull/9))
+- Pinterest sharing links
+- Sharing links can now be specified in front matter
+
+### Changed
+
+- Main menu is now optional
+- Upgrade to Mermaid v8.13.3
+- Upgrade to Tailwind v2.2.17
+
+### Fixed
+
+- Site logo not linked to home page ([#13](https://github.com/jpanther/congo/issues/13))
+
 ## [1.3.0] - 2021-09-29
 
 ### Added
@@ -55,13 +76,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Some links missing the correct styles when in Firefox
 - `externalUrl` front matter not working on some list pages
 
-## [1.1.1] - 2020-08-19
+## [1.1.1] - 2021-08-19
 
 ### Fixed
 
 - Hotfix for exampleSite and GitHub configuration
 
-## [1.1.0] - 2020-08-18
+## [1.1.0] - 2021-08-18
 
 ### Added
 
@@ -83,7 +104,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - URLs being incorrect in some cases when the site is deployed in a subfolder
 
-## [1.0.0] - 2020-08-16
+## [1.0.0] - 2021-08-16
 
 ### Added
 
@@ -106,7 +127,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.3.0...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/jpanther/Congo/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/jpanther/Congo/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/jpanther/Congo/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/jpanther/Congo/compare/v1.1.1...v1.2.0

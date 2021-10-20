@@ -33,4 +33,9 @@
   <div class="text-sm text-neutral-400 dark:text-neutral-500">
     {{ partial "article-meta.html" . }}
   </div>
+  {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
+    <div class="py-1 prose">
+      {{ .Summary | emojify }}
+    </div>
+  {{ end }}
 </article>

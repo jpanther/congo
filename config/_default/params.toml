@@ -27,10 +27,11 @@ colorScheme = "congo"
   showHeadingAnchors = true
   showPagination = true
   showReadingTime = true
-  # sharingLinks = ["facebook", "twitter", "reddit", "linkedin", "email"]
+  # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
 
 [list]
   showBreadcrumbs = false
+  showSummary = false
   groupByYear = true
 
 [taxonomy]

@@ -34,6 +34,40 @@ The `[author]` configuration determines how the author information is displayed 
 
 Further detail about these configuration options is covered in the [Configuration]({{< ref "configuration" >}}) section.
 
+## Colour schemes
+
+Congo ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `congo` (default), `avocado`, `fire`, `ocean` and `slate`.
+
+```toml
+# config/_default/params.toml
+
+colorScheme = "congo"
+```
+
+Congo defines a three-colour palette that is used throughout the theme. Each main colour contains ten shades which are based upon the colours that are included in [Tailwind](https://tailwindcss.com/docs/customizing-colors#color-palette-reference).
+
+#### Congo (default)
+
+{{< swatches "#71717a" "#8b5cf6" "#d946ef" >}}
+
+#### Avocado
+
+{{< swatches "#78716c" "#84cc16" "#10b981" >}}
+
+#### Fire
+
+{{< swatches "#78716c" "#f97316" "#f43f5e" >}}
+
+#### Ocean
+
+{{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
+
+#### Slate
+
+{{< swatches "#6B7280" "#6B7280" "#6B7280" >}}
+
+Although these are the default schemes, you can also create your own. Refer to the [Advanced Customisation]({{< ref "advanced-customisation#colour-schemes" >}}) section for details.
+
 ## Organising content
 
 By default, Congo doesn't force you to use a particular content type. In doing so you are free to define your content as you wish. You might prefer _pages_ for a static site, _posts_ for a blog, or _projects_ for a portfolio.
@@ -50,7 +84,13 @@ topic = "topics"
 
 This will replace the default _tags_ and _categories_ with _topics_. Refer to the [Hugo Taxonomy docs](https://gohugo.io/content-management/taxonomies/) for more information on naming taxonomies.
 
-When you create a new taxonomy, you will need to adjust the navigation links on the website to point to the new sections:
+When you create a new taxonomy, you will need to adjust the navigation links on the website to point to the correct sections.
+
+## Menus
+
+Congo has two menus that can be customised to suit the content and layout of your site. The `main` menu appears in the site header and the `footer` menu appears at the bottom of the page just above the copyright notice.
+
+Both menus are configured in the `menus.toml` file.
 
 ```toml
 # config/_default/menus.toml
@@ -64,6 +104,20 @@ When you create a new taxonomy, you will need to adjust the navigation links on 
   name = "Topics"
   pageRef = "topics"
   weight = 20
+
+[[footer]]
+  name = "Privacy"
+  url = "https://external-link"
 ```
 
-These steps are the bare minimum configuration. If you now run `hugo server` you will be presented with a blank Congo website. Detailed configuration is covered in the [Configuration]({{< ref "configuration" >}}) section.
+The `name` parameter specifies the text that is used in the menu link. You can also optionally provide a `title` which fills the HTML title attribute for the link.
+
+The `pageRef` parameter allows you to easily reference Hugo content pages and taxonomies. It is the quickest way to configure the menu as you can simply refer to any Hugo content item and it will automatically build the correct link. To link to external URLs, the `url` parameter can be used.
+
+Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
+
+Both menus are completely optional and can be commented out if not required. Use the template provided in the file as a guide.
+
+## Detailed configuration
+
+The steps above are the bare minimum configuration. If you now run `hugo server` you will be presented with a blank Congo website. Detailed configuration is covered in the [Configuration]({{< ref "configuration" >}}) section.

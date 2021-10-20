@@ -101,4 +101,4 @@ config/_default/
 
 You're now all set up to use Congo. From here you can add some content and start the Hugo server.
 
-Refer to the Hugo docs for more information or read the next section to learn more about configuring the theme.
+Refer to the [Hugo docs](https://gohugo.io/getting-started/) for more information or continue to the [Getting Started]({{< ref "getting-started" >}}) section to learn more about configuring the theme.

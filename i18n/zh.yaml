@@ -15,7 +15,7 @@ error:
   404_description: "您请求的页面似乎不存在。"
 
 footer:
-  powered_by: "由 {{ .Hugo }} 强力驱动"
+  powered_by: "由 {{ .Hugo }} &amp; {{ .Congo }} 强力驱动"
 
 list:
   externalurl_title: "链接到外部网站"
