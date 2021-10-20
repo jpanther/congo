@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.4.0] - 2021-10-20
+
 ### Added
 
 - Footer menu
@@ -125,7 +127,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.3.0...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/jpanther/Congo/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/jpanther/Congo/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/jpanther/Congo/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/jpanther/Congo/compare/v1.1.1...v1.2.0
