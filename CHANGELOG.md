@@ -74,13 +74,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Some links missing the correct styles when in Firefox
 - `externalUrl` front matter not working on some list pages
 
-## [1.1.1] - 2020-08-19
+## [1.1.1] - 2021-08-19
 
 ### Fixed
 
 - Hotfix for exampleSite and GitHub configuration
 
-## [1.1.0] - 2020-08-18
+## [1.1.0] - 2021-08-18
 
 ### Added
 
@@ -102,7 +102,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - URLs being incorrect in some cases when the site is deployed in a subfolder
 
-## [1.0.0] - 2020-08-16
+## [1.0.0] - 2021-08-16
 
 ### Added
 
