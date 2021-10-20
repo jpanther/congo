@@ -113,6 +113,12 @@ links = [
 ]
 ```
 
+## Keep Congo Updated
+
+Run `go get github.com/jpanther/congo@upgrade` to get Congo's latest version.
+
+If you run into the error starting with `go mod download: github.com/jpanther/congo@v1.3.0: invalid version`, then you'll need to get the latest version.
+
 ## Advanced customisation
 
 Refer to the [theme documentation](https://jpanther.github.io/congo/docs/advanced-customisation/) for details on customising Congo, including rebuilding the theme from scratch.
@@ -129,4 +135,4 @@ Feel free to get in touch with any issues or suggestions for new features you'd 
 - 💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/jpanther/congo/discussions)
 - 🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/jpanther/congo/discussions)
 
-If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/jpanther/congo/CONTRIBUTING.md).
+If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/jpanther/congo/blob/dev/CONTRIBUTING.md).
