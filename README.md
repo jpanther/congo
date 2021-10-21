@@ -77,7 +77,7 @@ Detailed instructions for each method can be found in the [Installation](https:/
 
 As new releases are posted, you can update the theme using Hugo. Simply run `hugo mod get -u` from your project directory and the theme will automatically update to the latest release.
 
-Detailed [update instructions](https://jpanther.github.io/congo/docs/installation/#installing-updates) are avaiable in the docs.
+Detailed [update instructions](https://jpanther.github.io/congo/docs/installation/#installing-updates) are available in the docs.
 
 ---
 
