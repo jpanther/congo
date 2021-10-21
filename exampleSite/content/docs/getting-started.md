@@ -13,7 +13,7 @@ This section assumes you have already [installed the Congo theme]({{< ref "docs/
 
 The config files that ship with Congo contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.
 
-A few things you need to set for a new installation:
+There are a few things you should set in `config.toml` for a new installation:
 
 ```toml
 # config/_default/config.toml
