@@ -2,5 +2,5 @@ i18n:
   - i18n/*
 
 documentation:
-  - *.md
+  - "*.md"
   - exampleSite/content/*
