@@ -4,9 +4,9 @@
       <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . | relURL }}" />
     {{ end }}
     <div>
-      {{ with .Site.Author.name }}
+      {{ with .Site.Author.name | markdownify | emojify }}
         <div class="text-[0.6rem] leading-3 text-neutral-400 dark:text-neutral-500 uppercase">
-          {{ i18n "author.byline_title" | emojify }}
+          {{ i18n "author.byline_title" | markdownify | emojify }}
         </div>
         <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
           {{ . }}
