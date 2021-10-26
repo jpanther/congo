@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - French translation ([#18](https://github.com/jpanther/congo/pull/18))
+- Grouping by year can now be specificed in front matter on list pages
 
 ### Changed
 
