@@ -116,6 +116,23 @@
       </script>
     {{ end }}
   {{ end }}
+  {{/* Chart */}}
+  {{ if .Page.HasShortcode "chart" }}
+    {{ $chartJS := resources.Get "vendor/chart/chart.min.js" }}
+    {{ if $chartJS }}
+      {{ $chartJS := $chartJS | resources.Fingerprint "sha512" }}
+      <script defer src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          function css(name) {
+            return getComputedStyle(document.documentElement).getPropertyValue(name);
+          }
+          Chart.defaults.font.size = 14
+          Chart.defaults.backgroundColor = css("--color-primary-300")
+        });
+      </script>
+    {{ end }}
+  {{ end }}
   {{/* Analytics */}}
   {{ partialCached "analytics.html" .Site }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}
