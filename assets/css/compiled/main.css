@@ -2143,6 +2143,10 @@ body a, body button {
   height: 9rem;
 }
 
+.max-h-\[10rem\] {
+  max-height: 10rem;
+}
+
 .w-36 {
   width: 9rem;
 }
@@ -2169,6 +2173,10 @@ body a, body button {
 
 .max-w-prose {
   max-width: 65ch;
+}
+
+.max-w-\[10rem\] {
+  max-width: 10rem;
 }
 
 .max-w-full {
@@ -2273,6 +2281,16 @@ body a, body button {
 
 .bg-primary-600 {
   background-color: var(--color-primary-600);
+}
+
+.object-scale-down {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 
 .p-1 {

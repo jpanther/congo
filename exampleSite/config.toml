@@ -27,6 +27,9 @@ summaryLength = 0
 [taxonomies]
   tag = "tags"
 
+[params]
+  # logo = "logo.jpg"
+
 [params.homepage]
   layout = "custom"
   showRecent = true
