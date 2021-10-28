@@ -4,6 +4,9 @@
   "description": "Congo theme for Hugo",
   "main": "index.js",
   "scripts": {
+    "preinstall": "rimraf assets/vendor",
+    "postinstall": "vendor-copy",
+    "assets": "rimraf assets/vendor && vendor-copy",
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
     "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ -p 8008"
@@ -26,9 +29,18 @@
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "mermaid": "^8.13.3",
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "^0.0.11",
+    "rimraf": "^3.0.2",
     "tailwind-underline-utils": "^1.1.3",
-    "tailwindcss": "^2.2.17"
-  }
+    "tailwindcss": "^2.2.17",
+    "vendor-copy": "^3.0.1"
+  },
+  "vendorCopy": [
+    {
+      "from": "node_modules/mermaid/dist/mermaid.min.js",
+      "to": "assets/vendor/mermaid/mermaid.min.js"
+    }
+  ]
 }

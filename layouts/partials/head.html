@@ -100,6 +100,19 @@
       {{ range $name, $url := $links }}<link href="{{ $url }}" rel="me" />{{ end }}
     {{ end }}
   {{ end }}
+  {{/* Mermaid */}}
+  {{ if .Page.HasShortcode "mermaid" }}
+    {{ $mermaidJS := resources.Get "vendor/mermaid/mermaid.min.js" }}
+    {{ if $mermaidJS }}
+      {{ $mermaidJS := $mermaidJS | resources.Fingerprint "sha512" }}
+      <script defer src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          mermaid.initialize({ theme: "default" });
+        });
+      </script>
+    {{ end }}
+  {{ end }}
   {{/* Analytics */}}
   {{ partialCached "analytics.html" .Site }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}

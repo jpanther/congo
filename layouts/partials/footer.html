@@ -41,11 +41,3 @@
     {{ partialCached "extend-footer.html" . }}
   {{ end }}
 </footer>
-
-{{/* Include mermaid.js only on pages that use the shortcode */}}
-{{- if .Page.HasShortcode "mermaid" -}}
-  <script src="https://unpkg.com/mermaid@8.13.3/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ theme: "default" });
-  </script>
-{{- end -}}
