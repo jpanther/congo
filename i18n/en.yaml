@@ -16,6 +16,8 @@ error:
   404_description: "It seems that the page you've requested does not exist."
 
 footer:
+  dark_appearance: "Switch to dark appearance"
+  light_appearance: "Switch to light appearance"
   powered_by: "Powered by {{ .Hugo }} &amp; {{ .Congo }}"
 
 list:

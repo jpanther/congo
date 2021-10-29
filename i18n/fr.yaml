@@ -1,7 +1,7 @@
 article:
   anchor_label: "Ancre"
   draft: "Brouillon"
-  edit_title: "Editer" 
+  edit_title: "Editer"
   reading_time:
     one: "{{ .Count }} min"
     other: "{{ .Count }} mins"
@@ -16,6 +16,8 @@ error:
   404_description: "Il semble que la page que vous cherchiez n'existe pas."
 
 footer:
+  # dark_appearance: "Switch to dark appearance"
+  # light_appearance: "Switch to light appearance"
   powered_by: "Propulsé par {{ .Hugo }} &amp; {{ .Congo }}"
 
 list:
