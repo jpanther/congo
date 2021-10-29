@@ -62,6 +62,24 @@
       integrity="{{ $customStyles.Data.Integrity }}"
     />
   {{ end }}
+  <script>
+    function loadPreferredScheme() {
+      if (localStorage.preferredScheme === 'dark' || (!('preferredScheme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+    function setPreferredScheme(scheme) {
+      if (scheme == "default") {
+        localStorage.removeItem("preferredScheme");
+      } else {
+        localStorage.preferredScheme = scheme;
+      }
+      loadPreferredScheme();
+    }
+    loadPreferredScheme();
+  </script>
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}
