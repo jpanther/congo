@@ -56,6 +56,8 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
 |`colorScheme`|string|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean`, `fire` and `slate`. Refer to the [Colour Schemes]({{< ref "getting-started#colour-schemes" >}}) section for more details.|
+|`darkMode`|boolean or string|`"auto"`|The preferred theme appearance for dark mode. Set to `true` to force dark appearance or `false` to force light appearance. Using `"auto"` will defer to the user's operating system preference.|
+|`darkToggle`|boolean|`false`|When `darkMode` is set to `"auto"`, this parameter determines whether or not to show the appearance toggle in the site footer. The browser's local storage is used to persist the user's preference.|
 |`logo`|string|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
 |`description`|string|_Not set_|The description of the website for metadata purposes.|
 |`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|

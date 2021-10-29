@@ -6,6 +6,8 @@
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
 colorScheme = "congo"
+# darkMode = "auto"
+# darkToggle = false
 # logo = "img/logo.jpg"
 # description = "My awesome website"
 # mainSections = ["section1", "section2"]

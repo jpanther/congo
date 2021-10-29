@@ -10,7 +10,7 @@ module.exports = {
       "./themes/congo/content/**/*.{html,md}",
     ],
   },
-  darkMode: "media",
+  darkMode: "class",
   theme: {
     colors: {
       transparent: "transparent",

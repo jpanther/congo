@@ -14,7 +14,7 @@ Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io
 - Built with Tailwind CSS JIT for minified stylesheets without any excess code
 - Fully responsive layout
 - Multiple colour schemes (or fully customise your own)
-- Dark mode (auto-switching based upon browser)
+- Dark mode (forced on/off or auto-switching with user toggle)
 - Highly customisable configuration
 - Multiple homepage layouts
 - Flexible with any content types, taxonomies and menus
