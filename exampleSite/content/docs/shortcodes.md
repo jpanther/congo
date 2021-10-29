@@ -93,6 +93,8 @@ data: {
 {{< /chart >}}
 <!-- prettier-ignore-end -->
 
+You can see some additional Chart.js examples on the [charts samples]({{< ref "charts" >}}) page.
+
 ## Icon
 
 `icon` outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size.
@@ -148,3 +150,5 @@ graph LR;
 A[Lemons]-->B[Lemonade];
 B-->C[Profit]
 {{< /mermaid >}}
+
+You can see some additional Mermaid examples on the [diagrams and flowcharts samples]({{< ref "diagrams-flowcharts" >}}) page.
