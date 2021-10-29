@@ -47,7 +47,7 @@
           onclick="setPreferredAppearance('dark');"
           oncontextmenu="setPreferredAppearance('default'); return false;"
           class="inline px-2 py-1 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400"
-          title="Switch to dark appearance"
+          title="{{ i18n "footer.dark_appearance" }}"
         >
           {{ partial "icon.html" "moon" }}
         </button>
@@ -56,7 +56,7 @@
           onclick="setPreferredAppearance('light');"
           oncontextmenu="setPreferredAppearance('default'); return false;"
           class="hidden px-2 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
-          title="Switch to light appearance"
+          title="{{ i18n "footer.light_appearance" }}"
         >
           {{ partial "icon.html" "sun" }}
         </button>
