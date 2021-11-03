@@ -60,6 +60,10 @@
     {
       "from": "node_modules/katex/dist/contrib/auto-render.min.js",
       "to": "assets/vendor/katex/auto-render.min.js"
+    },
+    {
+      "from": "node_modules/katex/dist/fonts/",
+      "to": "assets/vendor/katex/fonts/"
     }
   ]
 }
