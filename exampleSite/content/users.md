@@ -4,7 +4,7 @@ date: 2020-08-14
 draft: false
 description: "Some real-life Congo examples."
 slug: "users"
-tags: ["users"]
+tags: ["users", "sample"]
 showDate: false
 showAuthor: false
 showReadingTime: false

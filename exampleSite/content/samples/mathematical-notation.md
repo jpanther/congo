@@ -2,7 +2,7 @@
 title: Mathematical notation
 date: 2019-03-08
 description: A brief sample of mathematical notation in Congo.
-tags: ["sample", "katex", "maths"]
+tags: ["sample", "katex", "maths", "shortcodes"]
 ---
 
 KaTeX can be used to render mathematical notation within articles.
