@@ -111,6 +111,9 @@ module.exports = {
               code: {
                 color: theme("colors.secondary.700"),
               },
+              "a code": {
+                color: theme("colors.secondary.700"),
+              },
               "pre code": {
                 color: theme("colors.neutral.700"),
               },
@@ -150,6 +153,10 @@ module.exports = {
               a: {
                 color: theme("colors.primary.400"),
                 textDecorationColor: theme("colors.neutral.500"),
+                "&:hover": {
+                  color: theme("colors.neutral.DEFAULT"),
+                  textDecoration: "none",
+                },
               },
               strong: {
                 color: theme("colors.neutral.DEFAULT"),
@@ -186,7 +193,7 @@ module.exports = {
                 color: theme("colors.secondary.400"),
               },
               "a code": {
-                color: theme("colors.neutral.DEFAULT"),
+                color: theme("colors.secondary.400"),
               },
               pre: {
                 color: theme("colors.neutral.200"),

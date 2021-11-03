@@ -30,6 +30,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "chart.js": "^3.6.0",
+    "katex": "^0.15.1",
     "mermaid": "^8.13.3",
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "^0.0.11",
@@ -38,7 +39,8 @@
     "tailwindcss": "^2.2.17",
     "vendor-copy": "^3.0.1"
   },
-  "vendorCopy": [
+  "vendorCopy": [],
+  "devVendorCopy": [
     {
       "from": "node_modules/mermaid/dist/mermaid.min.js",
       "to": "assets/vendor/mermaid/mermaid.min.js"
@@ -46,6 +48,22 @@
     {
       "from": "node_modules/chart.js/dist/chart.min.js",
       "to": "assets/vendor/chart/chart.min.js"
+    },
+    {
+      "from": "node_modules/katex/dist/katex.min.js",
+      "to": "assets/vendor/katex/katex.min.js"
+    },
+    {
+      "from": "node_modules/katex/dist/katex.min.css",
+      "to": "assets/vendor/katex/katex.min.css"
+    },
+    {
+      "from": "node_modules/katex/dist/contrib/auto-render.min.js",
+      "to": "assets/vendor/katex/auto-render.min.js"
+    },
+    {
+      "from": "node_modules/katex/dist/fonts/",
+      "to": "assets/vendor/katex/fonts/"
     }
   ]
 }
