@@ -21,6 +21,7 @@ Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io
 - Ability to link to posts on third-party websites
 - Diagrams and visualisations using Mermaid
 - Charts using Chart.js
+- Mathematical notation using KaTeX
 - SVG icons from FontAwesome 5
 - Heading anchors, Buttons, Badges and more
 - HTML and Emoji support in articles 🎉
