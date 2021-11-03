@@ -1,39 +1,55 @@
 {{/* Mermaid */}}
 {{ if .Page.HasShortcode "mermaid" }}
   {{ $mermaidJS := resources.Get "vendor/mermaid/mermaid.min.js" }}
-  {{ if $mermaidJS }}
-    {{ $mermaidJS := $mermaidJS | resources.Fingerprint "sha512" }}      <script defer src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-        function css(name) {
-          return getComputedStyle(document.documentElement).getPropertyValue(name);
-        }
-        mermaid.initialize({ theme: "base", themeVariables: { background: css("--color-neutral"), primaryColor: css("--color-primary-200"), secondaryColor: css("--color-secondary-200"), tertiaryColor: css("--color-neutral-100"), primaryBorderColor: css("--color-primary-400"), secondaryBorderColor: css("--color-secondary-400"), tertiaryBorderColor: css("--color-neutral-400"), lineColor: css("--color-neutral-600"), fontFamily: "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif", fontSize: "16px" }});
-      });
-    </script>
-  {{ end }}
+  {{ $mermaidJS := $mermaidJS | resources.Fingerprint "sha512" }}      <script defer src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      function css(name) {
+        return getComputedStyle(document.documentElement).getPropertyValue(name);
+      }
+      mermaid.initialize({ theme: "base", themeVariables: { background: css("--color-neutral"), primaryColor: css("--color-primary-200"), secondaryColor: css("--color-secondary-200"), tertiaryColor: css("--color-neutral-100"), primaryBorderColor: css("--color-primary-400"), secondaryBorderColor: css("--color-secondary-400"), tertiaryBorderColor: css("--color-neutral-400"), lineColor: css("--color-neutral-600"), fontFamily: "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif", fontSize: "16px" }});
+    });
+  </script>
 {{ end }}
 {{/* Chart */}}
 {{ if .Page.HasShortcode "chart" }}
   {{ $chartJS := resources.Get "vendor/chart/chart.min.js" }}
-  {{ if $chartJS }}
-    {{ $chartJS := $chartJS | resources.Fingerprint "sha512" }}
-    <script defer src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-        function css(name) {
-          return getComputedStyle(document.documentElement).getPropertyValue(name);
-        }
-        Chart.defaults.font.size = 14;
-        Chart.defaults.backgroundColor = css("--color-primary-300");
-        Chart.defaults.elements.point.borderColor = css("--color-primary-400");
-        Chart.defaults.elements.bar.borderColor = css("--color-primary-500");
-        Chart.defaults.elements.bar.borderWidth = 1;
-        Chart.defaults.elements.line.borderColor = css("--color-primary-400");
-        Chart.defaults.elements.arc.backgroundColor = css("--color-primary-200");
-        Chart.defaults.elements.arc.borderColor = css("--color-primary-500");
-        Chart.defaults.elements.arc.borderWidth = 1;
-      });
-    </script>
+  {{ $chartJS := $chartJS | resources.Fingerprint "sha512" }}
+  <script defer src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      function css(name) {
+        return getComputedStyle(document.documentElement).getPropertyValue(name);
+      }
+      Chart.defaults.font.size = 14;
+      Chart.defaults.backgroundColor = css("--color-primary-300");
+      Chart.defaults.elements.point.borderColor = css("--color-primary-400");
+      Chart.defaults.elements.bar.borderColor = css("--color-primary-500");
+      Chart.defaults.elements.bar.borderWidth = 1;
+      Chart.defaults.elements.line.borderColor = css("--color-primary-400");
+      Chart.defaults.elements.arc.backgroundColor = css("--color-primary-200");
+      Chart.defaults.elements.arc.borderColor = css("--color-primary-500");
+      Chart.defaults.elements.arc.borderWidth = 1;
+    });
+  </script>
+{{ end }}
+{{/* Katex */}}
+{{ if .Page.HasShortcode "katex" }}
+  {{ $katexCSS := resources.Get "vendor/katex/katex.min.css" }}
+  {{ $katexCSS := $katexCSS | resources.Fingerprint "sha512" }}
+  <link
+    type="text/css" rel="stylesheet"
+    href="{{ $katexCSS.RelPermalink }}"
+    integrity="{{ $katexCSS.Data.Integrity }}"
+  />
+  {{ $katexJS := resources.Get "vendor/katex/katex.min.js" }}
+  {{ $katexJS := $katexJS | resources.Fingerprint "sha512" }}
+  <script defer src="{{ $katexJS.RelPermalink }}" integrity="{{ $katexJS.Data.Integrity }}"></script>
+  {{ $katexRenderJS := resources.Get "vendor/katex/auto-render.min.js" }}
+  {{ $katexRenderJS := $katexRenderJS | resources.Fingerprint "sha512" }}
+  <script defer src="{{ $katexRenderJS.RelPermalink }}" integrity="{{ $katexRenderJS.Data.Integrity }}" onload="renderMathInElement(document.body);"></script>
+  {{ $katexFonts := resources.Match "vendor/katex/fonts/*" }}
+  {{ range $katexFonts }}
+    <!-- {{ .RelPermalink }} -->
   {{ end }}
 {{ end }}
