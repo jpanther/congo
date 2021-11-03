@@ -787,7 +787,7 @@ video {
 }
 
 .prose a code {
-  color: #111827;
+  color: var(--color-secondary-700);
 }
 
 .prose pre {
@@ -2457,6 +2457,11 @@ body a, body button {
           text-decoration-color: var(--color-neutral-500);
 }
 
+.dark .dark\:prose-light a:hover {
+  color: var(--color-neutral);
+  text-decoration: none;
+}
+
 .dark .dark\:prose-light strong {
   color: var(--color-neutral);
 }
@@ -2503,7 +2508,7 @@ body a, body button {
 }
 
 .dark .dark\:prose-light a code {
-  color: var(--color-neutral);
+  color: var(--color-secondary-400);
 }
 
 .dark .dark\:prose-light pre {
