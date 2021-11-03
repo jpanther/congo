@@ -23,8 +23,9 @@ languageCode = "en-AU"
 title = "My awesome website"
 
 [author]
-name = "Your name"
+name = "My name"
 image = "img/author.jpg"
+bio = "A little bit about me"
 links = [
   { twitter = "https://twitter.com/username" }
 ]

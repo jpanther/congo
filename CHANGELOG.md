@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - KaTeX support using `katex` shortcode
 - Dark mode toggle with new theme parameters for managing light/dark appearance
 - French translation ([#18](https://github.com/jpanther/congo/pull/18))
+- Author bio in article footer
 - Grouping by year can now be specificed in front matter on list pages
 
 ### Changed

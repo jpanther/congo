@@ -17,6 +17,7 @@ summaryLength = 0
 [author]
   name = "Congo"
   image = "img/author.jpg"
+  bio = "This is an example author bio, and although there's a stock photo of a dog here, this article was actually created by a human. :dog:"
   links = [
     { twitter = "https://twitter.com/" },
     { facebook = "https://facebook.com/" },

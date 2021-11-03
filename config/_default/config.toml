@@ -17,6 +17,7 @@ summaryLength = 0
 [author]
   # name = "Your name here"
   # image = "img/author.jpg"
+  # bio = "A little bit about you"
   # links = [
   #   { email = "mailto:hello@your_domain.com" },
   #   { link = "https://link-to-some-website.com/" },

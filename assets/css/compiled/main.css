@@ -2088,6 +2088,10 @@ body a, body button {
   justify-content: space-between;
 }
 
+.place-self-center {
+  place-self: center;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -2584,6 +2588,10 @@ body a, body button {
 
 .dark .dark\:text-neutral-300 {
   color: var(--color-neutral-300);
+}
+
+.dark .dark\:text-neutral-400 {
+  color: var(--color-neutral-400);
 }
 
 .dark .dark\:text-primary-400 {

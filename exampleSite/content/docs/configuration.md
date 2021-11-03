@@ -41,6 +41,7 @@ Note that the variable names provided in this table use dot notation to simplify
 |`summaryLength`|integer|`0`|The number of words that are used to generate the article summary when one is not provided in the [front matter]({{< ref "front-matter" >}}). A value of `0` will use the first sentence. This value has no effect when summaries are hidden.|
 |`author.name`|string|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
 |`author.image`|string|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `static/` folder.|
+|`author.bio`|string|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers.|
 |`author.links`|array of objects|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
 |`permalinks`||_Not set_|Refer to the [Hugo docs](https://gohugo.io/content-management/urls/#permalinks) for permalink configuration.|
 |`taxonomies`||_Not set_|Refer to the [Organising content]({{< ref "getting-started#organising-content" >}}) section for taxonomy configuration.|
