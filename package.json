@@ -29,6 +29,7 @@
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "chart.js": "^3.6.0",
     "mermaid": "^8.13.3",
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "^0.0.11",
@@ -41,6 +42,10 @@
     {
       "from": "node_modules/mermaid/dist/mermaid.min.js",
       "to": "assets/vendor/mermaid/mermaid.min.js"
+    },
+    {
+      "from": "node_modules/chart.js/dist/chart.min.js",
+      "to": "assets/vendor/chart/chart.min.js"
     }
   ]
 }

@@ -59,6 +59,42 @@ Call to action
 Call to action
 {{< /button >}}
 
+## Chart
+
+`chart` uses the Chart.js library to embed charts into articles using simple structured data. It supports a number of [different chart styles](https://www.chartjs.org/docs/latest/samples/) and everything can be configured from within the shortcode. Simply provide the chart parameters between the shortcode tags and Chart.js will do the rest.
+
+Refer to the [official Chart.js docs](https://www.chartjs.org/docs/latest/general/) for details on syntax and supported chart types.
+
+**Example:**
+
+```js
+{{</* chart */>}}
+type: 'bar',
+data: {
+  labels: ['Tomato', 'Blueberry', 'Banana', 'Lime', 'Orange'],
+  datasets: [{
+    label: '# of votes',
+    data: [12, 19, 3, 5, 2, 3],
+  }]
+}
+{{</* /chart */>}}
+```
+
+<!-- prettier-ignore-start -->
+{{< chart >}}
+type: 'bar',
+data: {
+  labels: ['Tomato', 'Blueberry', 'Banana', 'Lime', 'Orange'],
+  datasets: [{
+    label: '# of votes',
+    data: [12, 19, 3, 5, 3],
+  }]
+}
+{{< /chart >}}
+<!-- prettier-ignore-end -->
+
+You can see some additional Chart.js examples on the [charts samples]({{< ref "charts" >}}) page.
+
 ## Icon
 
 `icon` outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size.
@@ -93,7 +129,7 @@ When life gives you lemons, make lemonade.
 
 ## Mermaid
 
-`mermaid` allows you to draw detailed diagrams and visualisations using text. It uses MermaidJS under the hood and supports a wide variety of diagrams, charts and other output formats.
+`mermaid` allows you to draw detailed diagrams and visualisations using text. It uses Mermaid under the hood and supports a wide variety of diagrams, charts and other output formats.
 
 Simply write your Mermaid syntax within the `mermaid` shortcode and let the plugin do the rest.
 
@@ -114,3 +150,5 @@ graph LR;
 A[Lemons]-->B[Lemonade];
 B-->C[Profit]
 {{< /mermaid >}}
+
+You can see some additional Mermaid examples on the [diagrams and flowcharts samples]({{< ref "diagrams-flowcharts" >}}) page.

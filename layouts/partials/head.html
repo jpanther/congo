@@ -141,6 +141,29 @@
       </script>
     {{ end }}
   {{ end }}
+  {{/* Chart */}}
+  {{ if .Page.HasShortcode "chart" }}
+    {{ $chartJS := resources.Get "vendor/chart/chart.min.js" }}
+    {{ if $chartJS }}
+      {{ $chartJS := $chartJS | resources.Fingerprint "sha512" }}
+      <script defer src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          function css(name) {
+            return getComputedStyle(document.documentElement).getPropertyValue(name);
+          }
+          Chart.defaults.font.size = 14
+          Chart.defaults.backgroundColor = css("--color-primary-300")
+          Chart.defaults.elements.point.borderColor = css("--color-primary-400")
+          Chart.defaults.elements.bar.borderColor = css("--color-primary-500")
+          Chart.defaults.elements.bar.borderWidth = 1
+          Chart.defaults.elements.line.borderColor = css("--color-primary-400")
+          Chart.defaults.elements.radar.backgroundColor = css("--color-primary-200")
+          Chart.defaults.elements.radar.borderColor = css("--color-primary-400")
+        });
+      </script>
+    {{ end }}
+  {{ end }}
   {{/* Analytics */}}
   {{ partialCached "analytics.html" .Site }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}
