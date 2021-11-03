@@ -77,6 +77,7 @@ data: {
       'rgba(54, 162, 235, 0.7)',
       'rgba(255, 205, 86, 0.7)'
     ],
+    borderWidth: 0,
     hoverOffset: 4
   }]
 }
