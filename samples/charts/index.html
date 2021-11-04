@@ -8,7 +8,7 @@
 <meta name=description content="Guide to Chart.js usage in Congo">
 <link rel=canonical href=https://jpanther.github.io/congo/samples/charts/>
 <link type=text/css rel=stylesheet href=/congo/css/schemes/congo.min.b48d6ba061dc77186a2524fb8aac5ac3823b2679a9299ca60325abbccc9c1764c884715f0ba24b4e2776cb3814df4af1f4c854b87207cd5d4c7a254da9b55751.css integrity="sha512-tI1roGHcdxhqJST7iqxaw4I7JnmpKZymAyWrvMycF2TIhHFfC6JLTid2yzgU30rx9MhUuHIHzV1MeiVNqbVXUQ==">
-<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.24cd30b01ad70514ec8354fd0d945650b6a5a5b10a6b2afe479b445c074a2b4f1011f24bd4cd9e345e995016a487911508caa96e572306cf4e9ad79a47def4cb.css integrity="sha512-JM0wsBrXBRTsg1T9DZRWULalpbEKayr+R5tEXAdKK08QEfJL1M2eNF6ZUBakh5EVCMqpblcjBs9OmteaR970yw==">
+<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.aca2297023c90faf162c0dcb8c066ab0b686298ed41f1e1349a00a96a70076d08c5f2b1efe10c6132c4e35e7857d2ff71f3e08da2b9121fa9cf6c2a2f0941d93.css integrity="sha512-rKIpcCPJD68WLA3LjAZqsLaGKY7UHx4TSaAKlqcAdtCMXyse/hDGEyxONeeFfS/3Hz4I2iuRIfqc9sKi8JQdkw==">
 <script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
 <link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
@@ -30,7 +30,7 @@
 <link href=https://facebook.com/ rel=me>
 <link href=https://linkedin.com/ rel=me>
 <link href=https://youtube.com/ rel=me>
-<script defer src=/congo/vendor/chart/chart.min.18c1b35047af85687c4dcfe78d2d1b0e9c20c5d0892d00561b76760adf8918ea559c49a3bcdc7ab6ce2fe80d9725fd473abb4eb1f86fde104aa4af64139cfc01.js integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="></script>
+<script defer src=/congo/lib/chart/chart.min.18c1b35047af85687c4dcfe78d2d1b0e9c20c5d0892d00561b76760adf8918ea559c49a3bcdc7ab6ce2fe80d9725fd473abb4eb1f86fde104aa4af64139cfc01.js integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="></script>
 <script>document.addEventListener('DOMContentLoaded',b=>{function a(a){return getComputedStyle(document.documentElement).getPropertyValue(a)}Chart.defaults.font.size=14,Chart.defaults.backgroundColor=a("--color-primary-300"),Chart.defaults.elements.point.borderColor=a("--color-primary-400"),Chart.defaults.elements.bar.borderColor=a("--color-primary-500"),Chart.defaults.elements.bar.borderWidth=1,Chart.defaults.elements.line.borderColor=a("--color-primary-400"),Chart.defaults.elements.arc.backgroundColor=a("--color-primary-200"),Chart.defaults.elements.arc.borderColor=a("--color-primary-500"),Chart.defaults.elements.arc.borderWidth=1})</script>
 </head>
 <body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-800 dark:text-neutral">
@@ -83,18 +83,18 @@ Charts
 <p>The examples below are a small selection taken from the <a href=https://www.chartjs.org/docs/latest/samples>official Chart.js docs</a>. You can also <a href=https://raw.githubusercontent.com/jpanther/congo/dev/exampleSite/content/samples/charts.md>view the page source</a> on GitHub to see the markup.</p>
 <h2 id=bar-chart>Bar chart <a class=heading-anchor href=#bar-chart aria-label=Anchor>#</a></h2>
 <div class=chart>
-<canvas id=983451726></canvas>
-<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("983451726"),c=new Chart(a,{type:'bar',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],backgroundColor:['rgba(255, 99, 132, 0.2)','rgba(255, 159, 64, 0.2)','rgba(255, 205, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(54, 162, 235, 0.2)','rgba(153, 102, 255, 0.2)','rgba(201, 203, 207, 0.2)'],borderColor:['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)','rgb(75, 192, 192)','rgb(54, 162, 235)','rgb(153, 102, 255)','rgb(201, 203, 207)'],borderWidth:1}]}})})</script>
+<canvas id=296578431></canvas>
+<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("296578431"),c=new Chart(a,{type:'bar',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],backgroundColor:['rgba(255, 99, 132, 0.2)','rgba(255, 159, 64, 0.2)','rgba(255, 205, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(54, 162, 235, 0.2)','rgba(153, 102, 255, 0.2)','rgba(201, 203, 207, 0.2)'],borderColor:['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)','rgb(75, 192, 192)','rgb(54, 162, 235)','rgb(153, 102, 255)','rgb(201, 203, 207)'],borderWidth:1}]}})})</script>
 </div>
 <h2 id=line-chart>Line chart <a class=heading-anchor href=#line-chart aria-label=Anchor>#</a></h2>
 <div class=chart>
-<canvas id=396548712></canvas>
-<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("396548712"),c=new Chart(a,{type:'line',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],tension:.2}]}})})</script>
+<canvas id=839127645></canvas>
+<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("839127645"),c=new Chart(a,{type:'line',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],tension:.2}]}})})</script>
 </div>
 <h2 id=doughnut-chart>Doughnut chart <a class=heading-anchor href=#doughnut-chart aria-label=Anchor>#</a></h2>
 <div class=chart>
-<canvas id=715682934></canvas>
-<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("715682934"),c=new Chart(a,{type:'doughnut',data:{labels:['Red','Blue','Yellow'],datasets:[{label:'My First Dataset',data:[300,50,100],backgroundColor:['rgba(255, 99, 132, 0.7)','rgba(54, 162, 235, 0.7)','rgba(255, 205, 86, 0.7)'],borderWidth:0,hoverOffset:4}]}})})</script>
+<canvas id=783564219></canvas>
+<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("783564219"),c=new Chart(a,{type:'doughnut',data:{labels:['Red','Blue','Yellow'],datasets:[{label:'My First Dataset',data:[300,50,100],backgroundColor:['rgba(255, 99, 132, 0.7)','rgba(54, 162, 235, 0.7)','rgba(255, 205, 86, 0.7)'],borderWidth:0,hoverOffset:4}]}})})</script>
 </div>
 </section>
 <footer class=pt-8>
