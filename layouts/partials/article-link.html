@@ -34,7 +34,7 @@
     {{ partial "article-meta.html" . }}
   </div>
   {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
-    <div class="py-1 prose">
+    <div class="py-1 prose dark:prose-light">
       {{ .Summary | emojify }}
     </div>
   {{ end }}

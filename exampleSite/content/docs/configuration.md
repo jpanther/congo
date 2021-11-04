@@ -41,6 +41,7 @@ Note that the variable names provided in this table use dot notation to simplify
 |`summaryLength`|integer|`0`|The number of words that are used to generate the article summary when one is not provided in the [front matter]({{< ref "front-matter" >}}). A value of `0` will use the first sentence. This value has no effect when summaries are hidden.|
 |`author.name`|string|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
 |`author.image`|string|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `static/` folder.|
+|`author.bio`|string|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers.|
 |`author.links`|array of objects|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
 |`permalinks`||_Not set_|Refer to the [Hugo docs](https://gohugo.io/content-management/urls/#permalinks) for permalink configuration.|
 |`taxonomies`||_Not set_|Refer to the [Organising content]({{< ref "getting-started#organising-content" >}}) section for taxonomy configuration.|
@@ -56,6 +57,8 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |Name|Type|Default|Description|
 | --- | --- | --- | --- |
 |`colorScheme`|string|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean`, `fire` and `slate`. Refer to the [Colour Schemes]({{< ref "getting-started#colour-schemes" >}}) section for more details.|
+|`darkMode`|boolean or string|`"auto"`|The preferred theme appearance for dark mode. Set to `true` to force dark appearance or `false` to force light appearance. Using `"auto"` will defer to the user's operating system preference.|
+|`darkToggle`|boolean|`false`|When `darkMode` is set to `"auto"`, this parameter determines whether or not to show the appearance toggle in the site footer. The browser's local storage is used to persist the user's preference.|
 |`logo`|string|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
 |`description`|string|_Not set_|The description of the website for metadata purposes.|
 |`mainSections`|array of strings|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|

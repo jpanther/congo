@@ -9,28 +9,49 @@ tags: ["installation", "docs"]
 
 Simply follow the standard Hugo [Quick Start](https://gohugo.io/getting-started/quick-start/) procedure to get up and running quickly.
 
-Detailed instructions can be found below.
+Detailed installation instructions can be found below. Instructions for [updating the theme](#installing-updates) are also available.
 
-## Install Hugo
+## Installation
 
-You can find specific instructions for your platform in the official [Hugo docs](https://gohugo.io/getting-started/installing.).
+These instructions will get you up and running using Hugo and Congo from a completely blank state. Most of the dependencies mentioned in this guide can be installed using the package manager of choice for your platform.
 
+### Install Hugo
+
+If you haven't used Hugo before, you will need to [install it onto your local machine](https://gohugo.io/getting-started/installing). You can check if it's already installed by running the command `hugo version`.
+
+{{< alert >}}
 Make sure you are using **Hugo version 0.86.1** or later as the theme takes advantage of some of the latest Hugo features.
+{{< /alert >}}
 
-## Create a new site
+You can find detailed installation instructions for your platform in the [Hugo docs](https://gohugo.io/getting-started/installing).
 
-Run the command `hugo new site mywebsite` to create a new Hugo site in a folder named `mywebsite`.
+### Create a new site
 
-## Download the Congo theme
+Run the command `hugo new site mywebsite` to create a new Hugo site in a directory named `mywebsite`.
 
-There are a couple of ways to install the Congo theme into your Hugo website. The Hugo Modules method is the easiest, then the git method if you're familiar with submodules, but you can also download and install manually if you don't have `go` or `git` available.
+Note that you can name the project directory whatever you choose, but the instructions below will assume it's named `mywebsite`. If you use a different name, be sure to substitute it accordingly.
 
-### Install using Hugo
+### Download the Congo theme
 
-This method is the quickest and easiest for keeping the theme up-to-date. Hugo Modules uses Go to initialise and manage modules so you need to ensure you have Go installed before proceeding.
+There several different ways to install the Congo theme into your Hugo website. From easiest to most difficult to install and maintain, they are:
+
+- [Hugo module](#install-using-hugo) (recommended)
+- [Git submodule](#install-using-git)
+- [Manual file copy](#install-manually)
+
+If you're unsure, choose the Hugo module method.
+
+#### Install using Hugo
+
+This method is the quickest and easiest for keeping the theme up-to-date. Hugo uses **Go** to initialise and manage modules so you need to ensure you have `go` installed before proceeding.
 
 1. [Download](https://golang.org/dl/) and install Go. You can check if it's already installed by using the command `go version`.
-2. From your Hugo project's directory, initiate the Hugo Modules system for your website:
+
+   {{< alert >}}
+   Make sure you are using **Go version 1.12** or later as Hugo requires this for modules to work correctly.
+   {{< /alert >}}
+
+2. From your Hugo project directory (that you created above), initialise modules for your website:
 
    ```shell
    # If you're managing your project on GitHub
@@ -50,9 +71,11 @@ This method is the quickest and easiest for keeping the theme up-to-date. Hugo M
 4. Start your server using `hugo server` and the theme will be downloaded automatically.
 5. Continue to [set up the theme configuration files](#set-up-theme-configuration-files).
 
-### Install using git
+#### Install using git
 
-Change into the directory for your Hugo website, initialise a new repository and add Congo as a submodule.
+For this method you'll need to ensure you have **Git** installed on your local machine.
+
+Change into the directory for your Hugo website (that you created above), initialise a new `git` repository and add Congo as a submodule.
 
 ```bash
 cd mywebsite
@@ -60,13 +83,9 @@ git init
 git submodule add -b stable https://github.com/jpanther/congo.git themes/congo
 ```
 
-{{< alert >}}
-**Note:** You need to substitute `mywebsite` for the correct folder name you used when creating your Hugo site.
-{{< /alert >}}
-
 Then continue to [set up the theme configuration files](#set-up-theme-configuration-files).
 
-### Install manually
+#### Install manually
 
 1. Download the latest release of the theme source code.
 
@@ -75,9 +94,13 @@ Then continue to [set up the theme configuration files](#set-up-theme-configurat
 2. Extract the archive, rename the folder to `congo` and move it to the `themes/` directory inside your Hugo project's root folder.
 3. Continue to [set up the theme configuration files](#set-up-theme-configuration-files).
 
-## Set up theme configuration files
+### Set up theme configuration files
 
-In the root folder of your website, delete the `config.toml` file that was generated by Hugo. Copy the `*.toml` config files from the theme into your `config/_default/` folder. If you installed using Hugo Modules, you should not copy the `module.toml` file! This will ensure you have all the correct theme settings and will enable you to easily customise the theme.
+In the root folder of your website, delete the `config.toml` file that was generated by Hugo. Copy the `*.toml` config files from the theme into your `config/_default/` folder. This will ensure you have all the correct theme settings and will enable you to easily customise the theme to your needs.
+
+{{< alert >}}
+**Note:** You should not overwrite the `module.toml` file if one already exists in your project!
+{{< /alert >}}
 
 Depending on how you installed the theme you will find the theme config files in different places:
 
@@ -99,6 +122,56 @@ config/_default/
 **Important:** If you didn't use Hugo Modules to install Congo, you must add the line `theme = "congo"` to the top of your `config.toml` file.
 {{< /alert >}}
 
-You're now all set up to use Congo. From here you can add some content and start the Hugo server.
+### Next steps
 
-Refer to the [Hugo docs](https://gohugo.io/getting-started/) for more information or continue to the [Getting Started]({{< ref "getting-started" >}}) section to learn more about configuring the theme.
+The basic Congo installation is now complete. Continue to the [Getting Started]({{< ref "getting-started" >}}) section to learn more about configuring the theme.
+
+---
+
+## Installing updates
+
+From time to time there will be [new releases](https://github.com/jpanther/congo/releases) posted that apply fixes and add new functionality to the theme. In order to take advantage of these changes, you will need to update the theme files on your website.
+
+How you go about this will depend on the installation method you chose when the theme was originally installed. Instructions for each method can be found below.
+
+- [Hugo module](#update-using-hugo)
+- [Git submodule](#update-using-git)
+- [Manual file copy](#update-manually)
+
+### Update using Hugo
+
+Hugo makes updating modules super easy. Simply change into your project directory and execute the following command:
+
+```shell
+hugo mod get -u
+```
+
+Hugo will automatically update any modules that are required for your project. It does this by inspecting your `module.toml` and `go.mod` files. If you have any issues with the update, check to ensure these files are still configured correctly.
+
+Then simply rebuild your site and check everything works as expected.
+
+### Update using git
+
+Git submodules can be updated using the `git` command. Simply execute the following command and the latest version of the theme will be downloaded into your local repository:
+
+```shell
+git submodule update --remote --merge
+```
+
+Once the submodule has been updated, rebuild your site and check everything works as expected.
+
+### Update manually
+
+Updating Congo manually requires you to download the latest copy of the theme and replace the old version in your project.
+
+{{< alert >}}
+Note that any local customisations you have made to the theme files will be lost during this process.
+{{< /alert >}}
+
+1. Download the latest release of the theme source code.
+
+   {{< button href="https://github.com/jpanther/congo/releases/latest" target="_blank" >}}Download from Github{{< /button >}}
+
+2. Extract the archive, rename the folder to `congo` and move it to the `themes/` directory inside your Hugo project's root folder. You will need to overwrite the existing directory to replace all the theme files.
+
+3. Rebuild your site and check everything works as expected.

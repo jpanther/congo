@@ -18,6 +18,7 @@ Front matter parameter default values are inherited from the theme's [base confi
 |`externalUrl`|string|_Not set_|If this article is published on a third-party website, the URL to this article. Providing a URL will prevent a content page being generated and any references to this article will link directly to the third-party website.|
 |`editURL`|string|`article.editURL`|When `showEdit` is active, the URL for the edit link.|
 |`editAppendPath`|boolean|`article.editAppendPath`|When `showEdit` is active, whether or not the path to the current article should be appended to the URL set at `editURL`.|
+|`groupByYear`|boolean|`list.groupByYear`|Whether or not articles are grouped by year on list pages.|
 |`menu`|string or array|_Not set_|When a value is provided, a link to this article will appear in the named menus. Valid values are `main` or `footer`.|
 |`robots`|string|_Not set_|String that indicates how robots should handle this article. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`sharingLinks`|array of strings|`article.sharingLinks`|Which sharing links to display at the end of this article. When not provided, or set to `false` no links will be displayed.|

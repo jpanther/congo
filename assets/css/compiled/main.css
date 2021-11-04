@@ -1,6 +1,6 @@
-/*! Congo v1.4.0 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v1.5.0 | MIT License | https://github.com/jpanther/congo */
 
-/*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -787,7 +787,7 @@ video {
 }
 
 .prose a code {
-  color: #111827;
+  color: var(--color-secondary-700);
 }
 
 .prose pre {
@@ -1057,10 +1057,8 @@ body a, body button {
   color: var(--color-primary-700);
 }
 
-@media (prefers-color-scheme: dark) {
-  .article-pagination a:hover .article-pagination-direction {
-    color: var(--color-primary-400);
-  }
+.dark .article-pagination a:hover .article-pagination-direction {
+  color: var(--color-primary-400);
 }
 
 /* -- Chroma Highlight -- */
@@ -1073,14 +1071,9 @@ body a, body button {
   color: var(--color-neutral-700);
 }
 
-@media (prefers-color-scheme: dark) {
-  .prose .chroma {
-    background-color: var(--color-neutral-700);
-  }
-
-  .prose .chroma {
-    color: var(--color-neutral-200);
-  }
+.dark .prose .chroma {
+  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-200);
 }
 
 /* Other */
@@ -1129,10 +1122,8 @@ body a, body button {
   padding-right: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .hl {
-    background-color: var(--color-primary-900);
-  }
+.dark .chroma .hl {
+  background-color: var(--color-primary-900);
 }
 
 .chroma .lntd .hl {
@@ -1146,10 +1137,8 @@ body a, body button {
   color: var(--color-neutral-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .lnt {
-    color: var(--color-neutral-300);
-  }
+.dark .chroma .lnt {
+  color: var(--color-neutral-300);
 }
 
 .chroma .lnt {
@@ -1163,10 +1152,8 @@ body a, body button {
   color: var(--color-neutral-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .ln {
-    color: var(--color-neutral-300);
-  }
+.dark .chroma .ln {
+  color: var(--color-neutral-300);
 }
 
 .chroma .ln {
@@ -1180,10 +1167,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .k {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .k {
+  color: var(--color-primary-300);
 }
 
 /* KeywordConstant */
@@ -1193,10 +1178,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .kc {
-    color: var(--color-secondary-500);
-  }
+.dark .chroma .kc {
+  color: var(--color-secondary-500);
 }
 
 /* KeywordDeclaration */
@@ -1205,10 +1188,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .kd {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .kd {
+  color: var(--color-primary-300);
 }
 
 /* KeywordNamespace */
@@ -1217,10 +1198,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .kn {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .kn {
+  color: var(--color-primary-300);
 }
 
 /* KeywordPseudo */
@@ -1229,10 +1208,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .kp {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .kp {
+  color: var(--color-primary-300);
 }
 
 /* KeywordReserved */
@@ -1241,10 +1218,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .kr {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .kr {
+  color: var(--color-primary-300);
 }
 
 /* KeywordType */
@@ -1253,10 +1228,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .kt {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .kt {
+  color: var(--color-secondary-600);
 }
 
 /* Name */
@@ -1265,10 +1238,8 @@ body a, body button {
   color: var(--color-secondary-900);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .n {
-    color: var(--color-secondary-200);
-  }
+.dark .chroma .n {
+  color: var(--color-secondary-200);
 }
 
 /* NameAttribute */
@@ -1277,10 +1248,8 @@ body a, body button {
   color: var(--color-secondary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .na {
-    color: var(--color-secondary-300);
-  }
+.dark .chroma .na {
+  color: var(--color-secondary-300);
 }
 
 /* NameBuiltin */
@@ -1289,10 +1258,8 @@ body a, body button {
   color: var(--color-secondary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nb {
-    color: var(--color-secondary-300);
-  }
+.dark .chroma .nb {
+  color: var(--color-secondary-300);
 }
 
 /* NameBuiltinPseudo */
@@ -1301,10 +1268,8 @@ body a, body button {
   color: var(--color-secondary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .bp {
-    color: var(--color-secondary-300);
-  }
+.dark .chroma .bp {
+  color: var(--color-secondary-300);
 }
 
 /* NameClass */
@@ -1313,10 +1278,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nc {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .nc {
+  color: var(--color-primary-300);
 }
 
 /* NameConstant */
@@ -1326,10 +1289,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .no {
-    color: var(--color-secondary-500);
-  }
+.dark .chroma .no {
+  color: var(--color-secondary-500);
 }
 
 /* NameDecorator */
@@ -1338,10 +1299,8 @@ body a, body button {
   color: var(--color-secondary-900);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nd {
-    color: var(--color-secondary-200);
-  }
+.dark .chroma .nd {
+  color: var(--color-secondary-200);
 }
 
 /* NameEntity */
@@ -1350,10 +1309,8 @@ body a, body button {
   color: var(--color-secondary-900);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .ni {
-    color: var(--color-secondary-200);
-  }
+.dark .chroma .ni {
+  color: var(--color-secondary-200);
 }
 
 /* NameException */
@@ -1363,10 +1320,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .ne {
-    color: var(--color-secondary-500);
-  }
+.dark .chroma .ne {
+  color: var(--color-secondary-500);
 }
 
 /* NameFunction */
@@ -1375,10 +1330,8 @@ body a, body button {
   color: var(--color-secondary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nf {
-    color: var(--color-secondary-500);
-  }
+.dark .chroma .nf {
+  color: var(--color-secondary-500);
 }
 
 /* NameFunctionMagic */
@@ -1387,10 +1340,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .fm {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .fm {
+  color: var(--color-primary-300);
 }
 
 /* NameLabel */
@@ -1399,10 +1350,8 @@ body a, body button {
   color: var(--color-secondary-900);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nl {
-    color: var(--color-secondary-200);
-  }
+.dark .chroma .nl {
+  color: var(--color-secondary-200);
 }
 
 /* NameNamespace */
@@ -1411,10 +1360,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nn {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .nn {
+  color: var(--color-primary-300);
 }
 
 /* NameOther */
@@ -1423,10 +1370,8 @@ body a, body button {
   color: var(--color-secondary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nx {
-    color: var(--color-secondary-300);
-  }
+.dark .chroma .nx {
+  color: var(--color-secondary-300);
 }
 
 /* NameProperty */
@@ -1441,10 +1386,8 @@ body a, body button {
   color: var(--color-secondary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nt {
-    color: var(--color-secondary-300);
-  }
+.dark .chroma .nt {
+  color: var(--color-secondary-300);
 }
 
 /* NameVariable */
@@ -1453,10 +1396,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .nv {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .nv {
+  color: var(--color-secondary-600);
 }
 
 /* NameVariableClass */
@@ -1465,10 +1406,8 @@ body a, body button {
   color: var(--color-primary-600);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .vc {
-    color: var(--color-primary-300);
-  }
+.dark .chroma .vc {
+  color: var(--color-primary-300);
 }
 
 /* NameVariableGlobal */
@@ -1478,10 +1417,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .vg {
-    color: var(--color-secondary-500);
-  }
+.dark .chroma .vg {
+  color: var(--color-secondary-500);
 }
 
 /* NameVariableInstance */
@@ -1490,10 +1427,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .vi {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .vi {
+  color: var(--color-secondary-600);
 }
 
 /* NameVariableMagic */
@@ -1502,10 +1437,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .vm {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .vm {
+  color: var(--color-secondary-600);
 }
 
 /* Literal */
@@ -1514,10 +1447,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .l {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .l {
+  color: var(--color-primary-400);
 }
 
 /* LiteralDate */
@@ -1526,10 +1457,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .ld {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .ld {
+  color: var(--color-primary-400);
 }
 
 /* LiteralString */
@@ -1538,10 +1467,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .s {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .s {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringAffix */
@@ -1550,10 +1477,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .sa {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .sa {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringBacktick */
@@ -1562,10 +1487,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .sb {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .sb {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringChar */
@@ -1574,10 +1497,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .sc {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .sc {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringDelimiter */
@@ -1586,10 +1507,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .dl {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .dl {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringDoc */
@@ -1598,10 +1517,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .sd {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .sd {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringDouble */
@@ -1610,10 +1527,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .s2 {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .s2 {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringEscape */
@@ -1623,10 +1538,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .se {
-    color: var(--color-secondary-500);
-  }
+.dark .chroma .se {
+  color: var(--color-secondary-500);
 }
 
 /* LiteralStringHeredoc */
@@ -1635,10 +1548,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .sh {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .sh {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringInterpol */
@@ -1647,10 +1558,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .si {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .si {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringOther */
@@ -1659,10 +1568,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .sx {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .sx {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringRegex */
@@ -1672,10 +1579,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .sr {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .sr {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringSingle */
@@ -1684,10 +1589,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .s1 {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .s1 {
+  color: var(--color-primary-400);
 }
 
 /* LiteralStringSymbol */
@@ -1697,10 +1600,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .ss {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .ss {
+  color: var(--color-primary-400);
 }
 
 /* LiteralNumber */
@@ -1709,10 +1610,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .m {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .m {
+  color: var(--color-secondary-600);
 }
 
 /* LiteralNumberBin */
@@ -1721,10 +1620,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .mb {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .mb {
+  color: var(--color-secondary-600);
 }
 
 /* LiteralNumberFloat */
@@ -1733,10 +1630,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .mf {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .mf {
+  color: var(--color-secondary-600);
 }
 
 /* LiteralNumberHex */
@@ -1745,10 +1640,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .mh {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .mh {
+  color: var(--color-secondary-600);
 }
 
 /* LiteralNumberInteger */
@@ -1757,10 +1650,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .mi {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .mi {
+  color: var(--color-secondary-600);
 }
 
 /* LiteralNumberIntegerLong */
@@ -1769,10 +1660,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .il {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .il {
+  color: var(--color-secondary-600);
 }
 
 /* LiteralNumberOct */
@@ -1781,10 +1670,8 @@ body a, body button {
   color: var(--color-secondary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .mo {
-    color: var(--color-secondary-600);
-  }
+.dark .chroma .mo {
+  color: var(--color-secondary-600);
 }
 
 /* Operator */
@@ -1800,10 +1687,8 @@ body a, body button {
   color: var(--color-primary-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .ow {
-    color: var(--color-primary-600);
-  }
+.dark .chroma .ow {
+  color: var(--color-primary-600);
 }
 
 /* Punctuation */
@@ -1818,10 +1703,8 @@ body a, body button {
   color: var(--color-neutral-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .c {
-    color: var(--color-neutral-500);
-  }
+.dark .chroma .c {
+  color: var(--color-neutral-500);
 }
 
 /* CommentHashbang */
@@ -1832,10 +1715,8 @@ body a, body button {
   color: var(--color-neutral-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .ch {
-    color: var(--color-neutral-500);
-  }
+.dark .chroma .ch {
+  color: var(--color-neutral-500);
 }
 
 /* CommentMultiline */
@@ -1845,10 +1726,8 @@ body a, body button {
   color: var(--color-neutral-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .cm {
-    color: var(--color-neutral-500);
-  }
+.dark .chroma .cm {
+  color: var(--color-neutral-500);
 }
 
 /* CommentSingle */
@@ -1858,10 +1737,8 @@ body a, body button {
   color: var(--color-neutral-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .c1 {
-    color: var(--color-neutral-500);
-  }
+.dark .chroma .c1 {
+  color: var(--color-neutral-500);
 }
 
 /* CommentSpecial */
@@ -1871,10 +1748,8 @@ body a, body button {
   color: var(--color-neutral-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .cs {
-    color: var(--color-neutral-500);
-  }
+.dark .chroma .cs {
+  color: var(--color-neutral-500);
 }
 
 /* CommentPreproc */
@@ -1884,10 +1759,8 @@ body a, body button {
   color: var(--color-neutral-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .cp {
-    color: var(--color-neutral-500);
-  }
+.dark .chroma .cp {
+  color: var(--color-neutral-500);
 }
 
 /* CommentPreprocFile */
@@ -1897,10 +1770,8 @@ body a, body button {
   color: var(--color-neutral-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .cpf {
-    color: var(--color-neutral-500);
-  }
+.dark .chroma .cpf {
+  color: var(--color-neutral-500);
 }
 
 /* Generic */
@@ -1937,10 +1808,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .gi {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .gi {
+  color: var(--color-primary-400);
 }
 
 /* GenericOutput */
@@ -1949,10 +1818,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .go {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .go {
+  color: var(--color-primary-400);
 }
 
 /* GenericPrompt */
@@ -1961,10 +1828,8 @@ body a, body button {
   color: var(--color-primary-800);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chroma .gp {
-    color: var(--color-primary-400);
-  }
+.dark .chroma .gp {
+  color: var(--color-primary-400);
 }
 
 /* GenericStrong */
@@ -2143,6 +2008,10 @@ body a, body button {
   height: 9rem;
 }
 
+.max-h-\[10rem\] {
+  max-height: 10rem;
+}
+
 .w-36 {
   width: 9rem;
 }
@@ -2171,6 +2040,10 @@ body a, body button {
   max-width: 65ch;
 }
 
+.max-w-\[10rem\] {
+  max-width: 10rem;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -2181,6 +2054,10 @@ body a, body button {
 
 .cursor-default {
   cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .list-none {
@@ -2209,6 +2086,10 @@ body a, body button {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.place-self-center {
+  place-self: center;
 }
 
 .overflow-hidden {
@@ -2255,6 +2136,14 @@ body a, body button {
   border-color: var(--color-primary-400);
 }
 
+.border-neutral-200 {
+  border-color: var(--color-neutral-200);
+}
+
+.border-neutral-700 {
+  border-color: var(--color-neutral-700);
+}
+
 .bg-neutral {
   background-color: var(--color-neutral);
 }
@@ -2273,6 +2162,16 @@ body a, body button {
 
 .bg-primary-600 {
   background-color: var(--color-primary-600);
+}
+
+.object-scale-down {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 
 .p-1 {
@@ -2489,6 +2388,14 @@ body a, body button {
   margin-top: 2rem;
 }
 
+.hover\:border-primary-400:hover {
+  border-color: var(--color-primary-400);
+}
+
+.hover\:border-primary-500:hover {
+  border-color: var(--color-primary-500);
+}
+
 .hover\:bg-primary-600:hover {
   background-color: var(--color-primary-600);
 }
@@ -2509,12 +2416,12 @@ body a, body button {
   color: var(--color-primary-400);
 }
 
-.hover\:text-neutral:hover {
-  color: var(--color-neutral);
-}
-
 .hover\:text-primary-500:hover {
   color: var(--color-primary-500);
+}
+
+.hover\:text-neutral:hover {
+  color: var(--color-neutral);
 }
 
 .hover\:underline:hover {
@@ -2544,165 +2451,180 @@ body a, body button {
   text-decoration-thickness: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:prose-light {
-    color: var(--color-neutral-400);
-  }
+.dark .dark\:prose-light {
+  color: var(--color-neutral-400);
+}
 
-  .dark\:prose-light a {
-    color: var(--color-primary-400);
-    -webkit-text-decoration-color: var(--color-neutral-500);
-            text-decoration-color: var(--color-neutral-500);
-  }
+.dark .dark\:prose-light a {
+  color: var(--color-primary-400);
+  -webkit-text-decoration-color: var(--color-neutral-500);
+          text-decoration-color: var(--color-neutral-500);
+}
 
-  .dark\:prose-light strong {
-    color: var(--color-neutral);
-  }
+.dark .dark\:prose-light a:hover {
+  color: var(--color-neutral);
+  text-decoration: none;
+}
 
-  .dark\:prose-light ol > li::before {
-    color: var(--color-neutral-400);
-  }
+.dark .dark\:prose-light strong {
+  color: var(--color-neutral);
+}
 
-  .dark\:prose-light ul > li::before {
-    background-color: var(--color-neutral-600);
-  }
+.dark .dark\:prose-light ol > li::before {
+  color: var(--color-neutral-400);
+}
 
-  .dark\:prose-light hr {
-    border-color: var(--color-neutral-500);
-  }
+.dark .dark\:prose-light ul > li::before {
+  background-color: var(--color-neutral-600);
+}
 
-  .dark\:prose-light blockquote {
-    color: var(--color-neutral-200);
-    border-left-color: var(--color-primary-900);
-  }
+.dark .dark\:prose-light hr {
+  border-color: var(--color-neutral-500);
+}
 
-  .dark\:prose-light h1 {
-    color: var(--color-neutral);
-  }
+.dark .dark\:prose-light blockquote {
+  color: var(--color-neutral-200);
+  border-left-color: var(--color-primary-900);
+}
 
-  .dark\:prose-light h2 {
-    color: var(--color-neutral);
-  }
+.dark .dark\:prose-light h1 {
+  color: var(--color-neutral);
+}
 
-  .dark\:prose-light h3 {
-    color: var(--color-neutral);
-  }
+.dark .dark\:prose-light h2 {
+  color: var(--color-neutral);
+}
 
-  .dark\:prose-light h4 {
-    color: var(--color-neutral);
-  }
+.dark .dark\:prose-light h3 {
+  color: var(--color-neutral);
+}
 
-  .dark\:prose-light figure figcaption {
-    color: var(--color-neutral-400);
-  }
+.dark .dark\:prose-light h4 {
+  color: var(--color-neutral);
+}
 
-  .dark\:prose-light code {
-    color: var(--color-secondary-400);
-  }
+.dark .dark\:prose-light figure figcaption {
+  color: var(--color-neutral-400);
+}
 
-  .dark\:prose-light a code {
-    color: var(--color-neutral);
-  }
+.dark .dark\:prose-light code {
+  color: var(--color-secondary-400);
+}
 
-  .dark\:prose-light pre {
-    color: var(--color-neutral-200);
-    background-color: var(--color-neutral-700);
-  }
+.dark .dark\:prose-light a code {
+  color: var(--color-secondary-400);
+}
 
-  .dark\:prose-light pre code {
-    color: var(--color-neutral-200);
-  }
+.dark .dark\:prose-light pre {
+  color: var(--color-neutral-200);
+  background-color: var(--color-neutral-700);
+}
 
-  .dark\:prose-light thead {
-    color: var(--color-neutral);
-    border-bottom-color: var(--color-neutral-500);
-  }
+.dark .dark\:prose-light pre code {
+  color: var(--color-neutral-200);
+}
 
-  .dark\:prose-light tbody tr {
-    border-bottom-color: var(--color-neutral-700);
-  }
+.dark .dark\:prose-light thead {
+  color: var(--color-neutral);
+  border-bottom-color: var(--color-neutral-500);
+}
 
-  .dark\:prose-light kbd {
-    background-color: var(--color-neutral-700);
-    color: var(--color-neutral-300);
-  }
+.dark .dark\:prose-light tbody tr {
+  border-bottom-color: var(--color-neutral-700);
+}
 
-  .dark\:prose-light mark {
-    background-color: var(--color-secondary-400);
-  }
+.dark .dark\:prose-light kbd {
+  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-300);
+}
 
-  .dark\:border-neutral-600 {
-    border-color: var(--color-neutral-600);
-  }
+.dark .dark\:prose-light mark {
+  background-color: var(--color-secondary-400);
+}
 
-  .dark\:border-primary-600 {
-    border-color: var(--color-primary-600);
-  }
+.dark .dark\:inline {
+  display: inline;
+}
 
-  .dark\:bg-neutral-800 {
-    background-color: var(--color-neutral-800);
-  }
+.dark .dark\:hidden {
+  display: none;
+}
 
-  .dark\:bg-primary-400 {
-    background-color: var(--color-primary-400);
-  }
+.dark .dark\:border-neutral-600 {
+  border-color: var(--color-neutral-600);
+}
 
-  .dark\:bg-neutral-700 {
-    background-color: var(--color-neutral-700);
-  }
+.dark .dark\:border-primary-600 {
+  border-color: var(--color-primary-600);
+}
 
-  .dark\:bg-primary-900 {
-    background-color: var(--color-primary-900);
-  }
+.dark .dark\:bg-neutral-800 {
+  background-color: var(--color-neutral-800);
+}
 
-  .dark\:bg-primary-800 {
-    background-color: var(--color-primary-800);
-  }
+.dark .dark\:bg-primary-400 {
+  background-color: var(--color-primary-400);
+}
 
-  .dark\:text-neutral-500 {
-    color: var(--color-neutral-500);
-  }
+.dark .dark\:bg-neutral-700 {
+  background-color: var(--color-neutral-700);
+}
 
-  .dark\:text-neutral {
-    color: var(--color-neutral);
-  }
+.dark .dark\:bg-primary-900 {
+  background-color: var(--color-primary-900);
+}
 
-  .dark\:text-neutral-300 {
-    color: var(--color-neutral-300);
-  }
+.dark .dark\:bg-primary-800 {
+  background-color: var(--color-primary-800);
+}
 
-  .dark\:text-primary-400 {
-    color: var(--color-primary-400);
-  }
+.dark .dark\:text-neutral-500 {
+  color: var(--color-neutral-500);
+}
 
-  .dark\:text-neutral-600 {
-    color: var(--color-neutral-600);
-  }
+.dark .dark\:text-neutral {
+  color: var(--color-neutral);
+}
 
-  .dark\:text-neutral-800 {
-    color: var(--color-neutral-800);
-  }
+.dark .dark\:text-neutral-300 {
+  color: var(--color-neutral-300);
+}
 
-  .dark\:underline-neutral-600 {
-    -webkit-text-decoration-color: var(--color-neutral-600);
-            text-decoration-color: var(--color-neutral-600);
-  }
+.dark .dark\:text-neutral-400 {
+  color: var(--color-neutral-400);
+}
 
-  .dark\:hover\:bg-primary-400:hover {
-    background-color: var(--color-primary-400);
-  }
+.dark .dark\:text-primary-400 {
+  color: var(--color-primary-400);
+}
 
-  .dark\:hover\:\!bg-primary-700:hover {
-    background-color: var(--color-primary-700) !important;
-  }
+.dark .dark\:text-neutral-600 {
+  color: var(--color-neutral-600);
+}
 
-  .dark\:hover\:text-primary-400:hover {
-    color: var(--color-primary-400);
-  }
+.dark .dark\:text-neutral-800 {
+  color: var(--color-neutral-800);
+}
 
-  .dark\:hover\:text-neutral-800:hover {
-    color: var(--color-neutral-800);
-  }
+.dark .dark\:underline-neutral-600 {
+  -webkit-text-decoration-color: var(--color-neutral-600);
+          text-decoration-color: var(--color-neutral-600);
+}
+
+.dark .dark\:hover\:bg-primary-400:hover {
+  background-color: var(--color-primary-400);
+}
+
+.dark .dark\:hover\:\!bg-primary-700:hover {
+  background-color: var(--color-primary-700) !important;
+}
+
+.dark .dark\:hover\:text-primary-400:hover {
+  color: var(--color-primary-400);
+}
+
+.dark .dark\:hover\:text-neutral-800:hover {
+  color: var(--color-neutral-800);
 }
 
 @media (min-width: 640px) {

@@ -62,6 +62,31 @@
       integrity="{{ $customStyles.Data.Integrity }}"
     />
   {{ end }}
+  {{ if eq (.Site.Params.darkMode | default "auto") "auto" }}
+    <script>
+      function loadPreferredAppearance() {
+        if (localStorage.preferredAppearance === "dark" || (!("preferredAppearance" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+      function setPreferredAppearance(scheme) {
+        if (scheme == "default") {
+          localStorage.removeItem("preferredAppearance");
+        } else {
+          localStorage.preferredAppearance = scheme;
+        }
+        loadPreferredAppearance();
+      }
+      loadPreferredAppearance();
+      window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance);
+    </script>
+  {{ else }}
+    <script>
+      localStorage.removeItem("preferredAppearance");
+    </script>
+  {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}
@@ -100,6 +125,8 @@
       {{ range $name, $url := $links }}<link href="{{ $url }}" rel="me" />{{ end }}
     {{ end }}
   {{ end }}
+  {{/* Vendor */}}
+  {{ partial "vendor.html" . }}
   {{/* Analytics */}}
   {{ partialCached "analytics.html" .Site }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}

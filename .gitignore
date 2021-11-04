@@ -137,6 +137,9 @@ hugo.exe
 hugo.darwin
 hugo.linux
 
+# Temporary lock file while building
+.hugo_build.lock
+
 # End of https://www.toptal.com/developers/gitignore/api/hugo
 
 exampleSite/public/

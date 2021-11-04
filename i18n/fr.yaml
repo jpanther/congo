@@ -1,0 +1,37 @@
+article:
+  anchor_label: "Ancre"
+  draft: "Brouillon"
+  edit_title: "Editer"
+  reading_time:
+    one: "{{ .Count }} min"
+    other: "{{ .Count }} mins"
+  reading_time_title: "Temps de lecture"
+
+author:
+  byline_title: "Auteur"
+
+error:
+  404_title: "Cette page n'existe pas :confused:"
+  404_error: "Erreur 404"
+  404_description: "Il semble que la page que vous cherchiez n'existe pas."
+
+footer:
+  # dark_appearance: "Switch to dark appearance"
+  # light_appearance: "Switch to light appearance"
+  powered_by: "Propulsé par {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Lien d'article externe."
+  no_articles: "Il n'y a pas encore d'articles ici."
+
+sharing:
+  email: "Envoyer par email"
+  facebook: "Poster sur Facebook"
+  linkedin: "Poster sur LinkedIn"
+  pinterest: "Poster sur Pinterest"
+  reddit: "Poster sur Reddit"
+  twitter: "Tweeter"
+
+shortcode:
+  recent_articles: "Recent"
+  icon_none: "Icone non trouvée."

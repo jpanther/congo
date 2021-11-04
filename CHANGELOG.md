@@ -6,6 +6,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.5.0] - 2021-11-04
+
+### Added
+
+- Chart.js support using `chart` shortcode
+- KaTeX support using `katex` shortcode
+- Dark mode toggle with new theme parameters for managing light/dark appearance
+- French translation ([#18](https://github.com/jpanther/congo/pull/18))
+- Author bio in article footer
+- Grouping by year can now be specificed in front matter on list pages
+
+### Changed
+
+- Site name, author and menus will now render Markdown and Emoji
+- Bundled Mermaid for better vendor dependency management
+- Mermaid diagrams are now themed to match the configured colour scheme
+- Upgrade to Tailwind v2.2.19
+
+### Fixed
+
+- Site logo image dimensions are unconstrained ([#19](https://github.com/jpanther/congo/issues/19))
+- Article summary styled incorrectly in dark mode
+- Links containing `code` blocks styled incorrectly
+
 ## [1.4.0] - 2021-10-20
 
 ### Added
@@ -127,7 +151,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.4.0...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/jpanther/Congo/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/jpanther/Congo/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/jpanther/Congo/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/jpanther/Congo/compare/v1.2.0...v1.2.1
