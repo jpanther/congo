@@ -1,0 +1,206 @@
+<!doctype html><html lang=en-au><head>
+<meta charset=utf-8>
+<meta http-equiv=content-language content="en-AU">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Hosting & Deployment &#183; Congo</title>
+<meta name=title content="Hosting & Deployment &#183; Congo">
+<meta name=description content="Learn how to deploy a Congo site.">
+<link rel=canonical href=https://jpanther.github.io/congo/docs/hosting-deployment/>
+<link type=text/css rel=stylesheet href=/congo/css/schemes/congo.min.b48d6ba061dc77186a2524fb8aac5ac3823b2679a9299ca60325abbccc9c1764c884715f0ba24b4e2776cb3814df4af1f4c854b87207cd5d4c7a254da9b55751.css integrity="sha512-tI1roGHcdxhqJST7iqxaw4I7JnmpKZymAyWrvMycF2TIhHFfC6JLTid2yzgU30rx9MhUuHIHzV1MeiVNqbVXUQ==">
+<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.24cd30b01ad70514ec8354fd0d945650b6a5a5b10a6b2afe479b445c074a2b4f1011f24bd4cd9e345e995016a487911508caa96e572306cf4e9ad79a47def4cb.css integrity="sha512-JM0wsBrXBRTsg1T9DZRWULalpbEKayr+R5tEXAdKK08QEfJL1M2eNF6ZUBakh5EVCMqpblcjBs9OmteaR970yw==">
+<script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
+<link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/congo/favicon-16x16.png>
+<link rel=manifest href=/congo/site.webmanifest>
+<meta property="og:title" content="Hosting & Deployment">
+<meta property="og:description" content="Learn how to deploy a Congo site.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jpanther.github.io/congo/docs/hosting-deployment/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2020-08-08T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-08-08T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Hosting & Deployment">
+<meta name=twitter:description content="Learn how to deploy a Congo site.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Documentation","name":"Hosting \u0026 Deployment","headline":"Hosting \u0026 Deployment","description":"Learn how to deploy a Congo site.","inLanguage":"en-AU","author":{"@type":"Person","name":"Congo"},"creator":{"@type":"Person","name":"Congo"},"copyrightHolder":"Congo","copyrightYear":"2020","dateCreated":"2020-08-08T00:00:00\u002b00:00","datePublished":"2020-08-08T00:00:00\u002b00:00","dateModified":"2020-08-08T00:00:00\u002b00:00","url":"https:\/\/jpanther.github.io\/congo\/docs\/hosting-deployment\/","wordCount":"619","keywords":["hosting","deployment","docs","github","netlify","render"]}</script>
+<meta name=generator content="Hugo 0.89.0">
+<meta name=author content="Congo">
+<link href=https://twitter.com/ rel=me>
+<link href=https://facebook.com/ rel=me>
+<link href=https://linkedin.com/ rel=me>
+<link href=https://youtube.com/ rel=me>
+</head>
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"><header class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-800 dark:text-neutral">
+<div>
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" rel=me href=/congo/>Congo</a>
+</div>
+<nav>
+<ul class="flex flex-col list-none sm:flex-row">
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/congo/docs/ title=Documentation>Docs</a>
+</li>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/congo/samples/ title="Content Samples">Samples</a>
+</li>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=/congo/users/ title=Users>Users</a>
+</li>
+<li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+<a class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small" href=https://github.com/jpanther/congo title>GitHub</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=flex-grow>
+<article class=max-w-prose>
+<header>
+<ol class="text-sm text-neutral-400 dark:text-neutral-500">
+<li class="inline hidden">
+<a class="hover:underline hover:underline-neutral-300 dark:underline-neutral-600" href=/congo/>Welcome to Congo! :tada:</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class=inline>
+<a class="hover:underline hover:underline-neutral-300 dark:underline-neutral-600" href=/congo/docs/>Documentation</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class="inline hidden">
+<a class="hover:underline hover:underline-neutral-300 dark:underline-neutral-600" href=/congo/docs/hosting-deployment/>Hosting & Deployment</a><span class="px-1 text-primary-500">/</span>
+</li>
+</ol>
+<h1 class="mt-0 text-4xl font-extrabold text-neutral-800 dark:text-neutral">
+Hosting & Deployment
+      </h1>
+<div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
+<div class="flex flex-row items-center">
+<span title="Reading time">3 mins</span><span class="px-2 text-primary-500">&#183;</span>
+<span class=mb-[2px]>
+<a href=https://github.com/jpanther/congo/tree/dev/exampleSite/content/docs/hosting-deployment/index.md class="text-lg hover:text-primary-500" rel="noopener noreferrer" target=_blank title="Edit content"><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>
+</span>
+</a>
+</span>
+</div>
+</div>
+</header>
+<section class="prose dark:prose-light">
+<p>There are many ways to deploy your Hugo website built with Congo. The theme is designed to be flexible in almost any deployment scenario.</p>
+<p>Congo is built using relative URLs throughout the theme. This enables sites to easily be deployed to sub-folders and hosts like GitHub Pages. There&rsquo;s usually no special configuration required for this to work as long as the <code>baseURL</code> parameter has been configured in the <code>config.toml</code> file.</p>
+<p>The official Hugo <a href=https://gohugo.io/hosting-and-deployment/>Hosting and Deployment</a> docs are the best place to learn how to deploy your site. The sections below contain some specific theme configuration details that can help you deploy smoothly with certain providers.</p>
+<p><strong>Choose your provider:</strong></p>
+<ul>
+<li><a href=#github-pages>GitHub Pages</a></li>
+<li><a href=#netlify>Netlify</a></li>
+<li><a href=#render>Render</a></li>
+<li><a href=#shared-hosting-vps-or-private-web-server>Shared hosting, VPS or private web server</a></li>
+</ul>
+<hr>
+<h2 id=github-pages>GitHub Pages <a class=heading-anchor href=#github-pages aria-label=Anchor>#</a></h2>
+<p>GitHub allows hosting on <a href=https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages>GitHub Pages</a> using Actions. To enable this functionality, enable Pages on your repo and create a new Actions workflow to build and deploy your site.</p>
+<p>The file needs to be in YAML format, placed within the <code>.github/workflows/</code> directory of your GitHub repository and named with a <code>.yml</code> extension.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=c># .github/workflows/gh-pages.yml</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>GitHub Pages</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>on</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>push</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>branches</span><span class=p>:</span><span class=w>
+</span><span class=w>      </span>- <span class=l>main</span><span class=w> </span><span class=c># change to the branch name for your project</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>jobs</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>build-deploy</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-20.04</span><span class=w>
+</span><span class=w>    </span><span class=nt>concurrency</span><span class=p>:</span><span class=w>
+</span><span class=w>      </span><span class=nt>group</span><span class=p>:</span><span class=w> </span><span class=l>${{ github.workflow }}-${{ github.ref }}</span><span class=w>
+</span><span class=w>    </span><span class=nt>steps</span><span class=p>:</span><span class=w>
+</span><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Checkout</span><span class=w>
+</span><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@v2</span><span class=w>
+</span><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span><span class=w>          </span><span class=nt>submodules</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span><span class=w>          </span><span class=nt>fetch-depth</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=w>
+</span><span class=w>
+</span><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Setup Hugo</span><span class=w>
+</span><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>peaceiris/actions-hugo@v2</span><span class=w>
+</span><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span><span class=w>          </span><span class=nt>hugo-version</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;latest&#34;</span><span class=w>
+</span><span class=w>
+</span><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Build</span><span class=w>
+</span><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=l>hugo --minify</span><span class=w>
+</span><span class=w>
+</span><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Deploy</span><span class=w>
+</span><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>peaceiris/actions-gh-pages@v3</span><span class=w>
+</span><span class=w>        </span><span class=nt>if</span><span class=p>:</span><span class=w> </span><span class=l>${{ github.ref == &#39;refs/heads/main&#39; }}</span><span class=w>
+</span><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span><span class=w>          </span><span class=nt>github_token</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.GITHUB_TOKEN }}</span><span class=w>
+</span><span class=w>          </span><span class=nt>publish_branch</span><span class=p>:</span><span class=w> </span><span class=l>gh-pages</span><span class=w>
+</span><span class=w>          </span><span class=nt>publish_dir</span><span class=p>:</span><span class=w> </span><span class=l>./public</span><span class=w>
+</span></code></pre></div><p>Push the config file to GitHub and the action should automatically run. It may fail the first time and you&rsquo;ll need to visit the <strong>Settings > Pages</strong> section of your GitHub repo to check the source is correct. It should be set to use the <code>gh-pages</code> branch.</p>
+<figure><img src=/congo/docs/hosting-deployment/github-pages-source.jpg alt="Screen capture of GitHub Pages source" width=100% height=auto style=max-width:565px;max-height:95px>
+</figure>
+<p>Once the settings are configured, re-run the action and the site should build and deploy correctly. You can consult the actions log to check everything deployed successfully.</p>
+<h2 id=netlify>Netlify <a class=heading-anchor href=#netlify aria-label=Anchor>#</a></h2>
+<p>To deploy to <a href=https://www.netlify.com>Netlify</a>, create a new continuous deployment site and link it to your source code. The build settings can be left blank in the Netlify UI. You will only need to configure the domain you&rsquo;ll be using.</p>
+<figure><img src=/congo/docs/hosting-deployment/netlify-build-settings.jpg alt="Screen capture of Netlify build settings" width=100% height=auto style=max-width:479px;max-height:331px>
+</figure>
+<p>Then in the root of your site repository, create a <code>netlify.toml</code> file:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=c># netlify.toml</span>
+
+<span class=p>[</span><span class=nx>build</span><span class=p>]</span>
+  <span class=nx>command</span> <span class=p>=</span> <span class=s2>&#34;hugo mod get -u &amp;&amp; hugo --gc --minify -b $URL&#34;</span>
+  <span class=nx>publish</span> <span class=p>=</span> <span class=s2>&#34;public&#34;</span>
+
+<span class=p>[</span><span class=nx>build</span><span class=p>.</span><span class=nx>environment</span><span class=p>]</span>
+  <span class=nx>NODE_ENV</span> <span class=p>=</span> <span class=s2>&#34;production&#34;</span>
+  <span class=nx>GO_VERSION</span> <span class=p>=</span> <span class=s2>&#34;1.16&#34;</span>
+  <span class=nx>TZ</span> <span class=p>=</span> <span class=s2>&#34;UTC&#34;</span>  <span class=c># Set to preferred timezone</span>
+
+<span class=p>[</span><span class=nx>context</span><span class=p>.</span><span class=nx>production</span><span class=p>.</span><span class=nx>environment</span><span class=p>]</span>
+  <span class=nx>HUGO_VERSION</span> <span class=p>=</span> <span class=s2>&#34;0.87.0&#34;</span>
+  <span class=nx>HUGO_ENV</span> <span class=p>=</span> <span class=s2>&#34;production&#34;</span>
+</code></pre></div><p>This configuration assumes you are deploying Congo as a Hugo module. If you have installed the theme using another method, change the build command to simply <code>hugo --gc --minify -b $URL</code>.</p>
+<p>When you push the config file to your repo, Netlify should automatically deploy your site. You can check the deploy logs in the Netlify UI to check for any errors.</p>
+<h2 id=render>Render <a class=heading-anchor href=#render aria-label=Anchor>#</a></h2>
+<p>Deploying to <a href=https://render.com>Render</a> is very straightforward and all configuration is via the Render UI.</p>
+<p>Create a new <strong>Static Site</strong> and link it to your project&rsquo;s code repository. Then simply configure the build command to be <code>hugo --gc --minify</code> and publish directory to be <code>public</code>.</p>
+<figure><img src=/congo/docs/hosting-deployment/render-settings.jpg alt="Screen capture of Render settings" width=100% height=auto style=max-width:628px;max-height:227px>
+</figure>
+<p>The site will automatically build and deploy whenever you push a change to your repo.</p>
+<h2 id=shared-hosting-vps-or-private-web-server>Shared hosting, VPS or private web server <a class=heading-anchor href=#shared-hosting-vps-or-private-web-server aria-label=Anchor>#</a></h2>
+<p>Using traditional web hosting, or deploying to your own web server, is as simple as building your Hugo site and transferring the files to your host.</p>
+<p>Make sure that the <code>baseURL</code> parameter in <code>config.toml</code> is set to the full URL to the root of your website (including any sub domains or sub-folders).</p>
+<p>Then build your site using <code>hugo</code> and copy the contents of the output directory to the root of your web server and you will be ready to go. By default, the output directory is named <code>public</code>.</p>
+<p><em>If you need a hosting provider, check out <a href="https://www.vultr.com/?ref=8957394-8H">Vultr</a> or <a href=https://m.do.co/c/36841235e565>DigitalOcean</a>. Signing up using these affiliate links will give you up to $100 in free credit so you can try the service.</em></p>
+</section>
+<footer class=pt-8>
+<div class="pt-8 article-pagination">
+<hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+<div class="flex justify-between pt-3">
+<span>
+<a class=flex href=/congo/docs/advanced-customisation/>
+<span class="mr-3 article-pagination-direction">&larr;</span>
+<span class="flex flex-col">
+<span class=article-pagination-title>Advanced Customisation</span>
+<span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+</span>
+</span>
+</a>
+</span>
+<span>
+</span>
+</div>
+</div>
+</footer>
+</article>
+</main><footer class=py-10>
+<div class="flex justify-between">
+<div>
+<p class="text-sm text-neutral-400 dark:text-neutral-500">
+&copy;
+2021
+Congo
+</p>
+<p class="text-xs text-neutral-300 dark:text-neutral-600">
+Powered by <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:underline-primary-300 hover:text-primary-400" href=https://git.io/hugo-congo target=_blank rel="noopener noreferrer">Congo</a>
+</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
