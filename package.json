@@ -43,27 +43,27 @@
   "devVendorCopy": [
     {
       "from": "node_modules/mermaid/dist/mermaid.min.js",
-      "to": "assets/vendor/mermaid/mermaid.min.js"
+      "to": "assets/lib/mermaid/mermaid.min.js"
     },
     {
       "from": "node_modules/chart.js/dist/chart.min.js",
-      "to": "assets/vendor/chart/chart.min.js"
+      "to": "assets/lib/chart/chart.min.js"
     },
     {
       "from": "node_modules/katex/dist/katex.min.js",
-      "to": "assets/vendor/katex/katex.min.js"
+      "to": "assets/lib/katex/katex.min.js"
     },
     {
       "from": "node_modules/katex/dist/katex.min.css",
-      "to": "assets/vendor/katex/katex.min.css"
+      "to": "assets/lib/katex/katex.min.css"
     },
     {
       "from": "node_modules/katex/dist/contrib/auto-render.min.js",
-      "to": "assets/vendor/katex/auto-render.min.js"
+      "to": "assets/lib/katex/auto-render.min.js"
     },
     {
       "from": "node_modules/katex/dist/fonts/",
-      "to": "assets/vendor/katex/fonts/"
+      "to": "assets/lib/katex/fonts/"
     }
   ]
 }
