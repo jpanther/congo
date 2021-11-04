@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Site name, author and menus will now render Markdown and Emoji
 - Bundled Mermaid for better vendor dependency management
 - Mermaid diagrams are now themed to match the configured colour scheme
+- Upgrade to Tailwind v2.2.19
 
 ### Fixed
 
