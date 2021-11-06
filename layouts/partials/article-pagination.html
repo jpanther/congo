@@ -8,8 +8,10 @@
             <a class="flex" href="{{ .NextInSection.RelPermalink }}">
               <span class="mr-3 article-pagination-direction">&larr;</span>
               <span class="flex flex-col">
-                <span class="article-pagination-title">{{ .NextInSection.Title | emojify }}</span>
-                <span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+                <span class="article-pagination-title mt-[0.1rem] leading-6"
+                  >{{ .NextInSection.Title | emojify }}</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
                   {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
                     {{ partial "meta/date.html" . }}
                   {{ end }}
@@ -22,8 +24,10 @@
           {{ if .PrevInSection }}
             <a class="flex text-right" href="{{ .PrevInSection.RelPermalink }}">
               <span class="flex flex-col">
-                <span class="article-pagination-title">{{ .PrevInSection.Title | emojify }}</span>
-                <span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+                <span class="article-pagination-title mt-[0.1rem] leading-6"
+                  >{{ .PrevInSection.Title | emojify }}</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
                   {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
                     {{ partial "meta/date.html" . }}
                   {{ end }}

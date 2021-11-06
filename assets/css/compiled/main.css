@@ -1928,8 +1928,8 @@ body a, body button {
   margin-right: 0.75rem;
 }
 
-.-mt-1 {
-  margin-top: -0.25rem;
+.mt-\[0\.1rem\] {
+  margin-top: 0.1rem;
 }
 
 .ml-3 {
@@ -2336,12 +2336,12 @@ body a, body button {
   line-height: 1.75rem;
 }
 
-.leading-3 {
-  line-height: .75rem;
-}
-
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.leading-3 {
+  line-height: .75rem;
 }
 
 .text-neutral-400 {
