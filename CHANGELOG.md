@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- Minor style issues
+- Article pagination link spacing ([#26](https://github.com/jpanther/congo/pull/26))
+- Minor icon style issues
 
 ## [1.5.1] - 2021-11-04
 
