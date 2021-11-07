@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- German translation ([#27](https://github.com/jpanther/congo/pull/27))
+
 ### Fixed
 
 - Article pagination link spacing ([#26](https://github.com/jpanther/congo/pull/26))
