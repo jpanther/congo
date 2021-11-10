@@ -8,7 +8,7 @@
 <meta name=description content="Learn how to build Congo manually.">
 <link rel=canonical href=https://jpanther.github.io/congo/docs/advanced-customisation/>
 <link type=text/css rel=stylesheet href=/congo/css/schemes/congo.min.b48d6ba061dc77186a2524fb8aac5ac3823b2679a9299ca60325abbccc9c1764c884715f0ba24b4e2776cb3814df4af1f4c854b87207cd5d4c7a254da9b55751.css integrity="sha512-tI1roGHcdxhqJST7iqxaw4I7JnmpKZymAyWrvMycF2TIhHFfC6JLTid2yzgU30rx9MhUuHIHzV1MeiVNqbVXUQ==">
-<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.aca2297023c90faf162c0dcb8c066ab0b686298ed41f1e1349a00a96a70076d08c5f2b1efe10c6132c4e35e7857d2ff71f3e08da2b9121fa9cf6c2a2f0941d93.css integrity="sha512-rKIpcCPJD68WLA3LjAZqsLaGKY7UHx4TSaAKlqcAdtCMXyse/hDGEyxONeeFfS/3Hz4I2iuRIfqc9sKi8JQdkw==">
+<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.402d3b4f742c02489d0fd69ca742521356f014e6cf7cebaa4e5ae7828b6c4847676ae80103ecb4fc1ccf8c7feea273005876aaa930ac102a50d707ea771b4ec2.css integrity="sha512-QC07T3QsAkidD9acp0JSE1bwFObPfOuqTlrngotsSEdnaugBA+y0/BzPjH/uonMAWHaqqTCsECpQ1wfqdxtOwg==">
 <script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
 <link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
@@ -24,7 +24,7 @@
 <meta name=twitter:title content="Advanced Customisation">
 <meta name=twitter:description content="Learn how to build Congo manually.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","articleSection":"Documentation","name":"Advanced Customisation","headline":"Advanced Customisation","description":"Learn how to build Congo manually.","inLanguage":"en-AU","author":{"@type":"Person","name":"Congo"},"creator":{"@type":"Person","name":"Congo"},"copyrightHolder":"Congo","copyrightYear":"2020","dateCreated":"2020-08-09T00:00:00\u002b00:00","datePublished":"2020-08-09T00:00:00\u002b00:00","dateModified":"2020-08-09T00:00:00\u002b00:00","url":"https:\/\/jpanther.github.io\/congo\/docs\/advanced-customisation\/","wordCount":"470","keywords":["advanced","css","docs"]}</script>
-<meta name=generator content="Hugo 0.89.0">
+<meta name=generator content="Hugo 0.89.2">
 <meta name=author content="Congo">
 <link href=https://twitter.com/ rel=me>
 <link href=https://facebook.com/ rel=me>
@@ -73,7 +73,8 @@ Advanced Customisation
 <div class="flex flex-row items-center">
 <span title="Reading time">3 mins</span><span class="px-2 text-primary-500">&#183;</span>
 <span class=mb-[2px]>
-<a href=https://github.com/jpanther/congo/tree/dev/exampleSite/content/docs/advanced-customisation.md class="text-lg hover:text-primary-500" rel="noopener noreferrer" target=_blank title="Edit content"><span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>
+<a href=https://github.com/jpanther/congo/tree/dev/exampleSite/content/docs/advanced-customisation.md class="text-lg hover:text-primary-500" rel="noopener noreferrer" target=_blank title="Edit content">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>
 </span>
 </a>
 </span>
@@ -124,8 +125,8 @@ Advanced Customisation
 <a class=flex href=/congo/docs/partials/>
 <span class="mr-3 article-pagination-direction">&larr;</span>
 <span class="flex flex-col">
-<span class=article-pagination-title>Partials</span>
-<span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+<span class="article-pagination-title mt-[0.1rem] leading-6">Partials</span>
+<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
 </span>
 </span>
 </a>
@@ -133,8 +134,8 @@ Advanced Customisation
 <span>
 <a class="flex text-right" href=/congo/docs/hosting-deployment/>
 <span class="flex flex-col">
-<span class=article-pagination-title>Hosting & Deployment</span>
-<span class="-mt-1 text-xs text-neutral-400 dark:text-neutral-500">
+<span class="article-pagination-title mt-[0.1rem] leading-6">Hosting & Deployment</span>
+<span class="mt-[0.1rem] text-xs text-neutral-400 dark:text-neutral-500">
 </span>
 </span>
 <span class="ml-3 article-pagination-direction">&rarr;</span>
