@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.5.2] - 2021-11-10
+
+### Added
+
+- German translation ([#27](https://github.com/jpanther/congo/pull/27))
+- Brazilian Portuguese translation ([#28](https://github.com/jpanther/congo/pull/28))
+- Spanish translation ([#30](https://github.com/jpanther/congo/pull/30))
+
+### Fixed
+
+- Article pagination link spacing ([#26](https://github.com/jpanther/congo/pull/26))
+- Minor icon style issues
+
 ## [1.5.1] - 2021-11-04
 
 ### Fixed
@@ -157,7 +170,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.5.1...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.5.2...HEAD
+[1.5.2]: https://github.com/jpanther/Congo/compare/v1.5.1...v1.5.2
 [1.5.1]: https://github.com/jpanther/Congo/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/jpanther/Congo/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/jpanther/Congo/compare/v1.3.0...v1.4.0
