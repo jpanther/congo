@@ -7,6 +7,7 @@ on:
 
 jobs:
   build-deploy:
+    name: Build and Deploy
     runs-on: ubuntu-20.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}

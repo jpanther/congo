@@ -1,4 +1,4 @@
-name: Check Commit Messages
+name: Commit Messages
 on:
   pull_request:
     types:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   check-commit-message:
-    name: Check Commit Messages
+    name: Check
     runs-on: ubuntu-latest
     steps:
       - name: Check Gitmoji

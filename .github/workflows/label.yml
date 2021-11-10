@@ -4,6 +4,7 @@ on: [pull_request_target]
 
 jobs:
   label:
+    name: Label
     runs-on: ubuntu-latest
     permissions:
       contents: read
