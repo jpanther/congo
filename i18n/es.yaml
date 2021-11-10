@@ -1,0 +1,37 @@
+article:
+  anchor_label: "Ancla"
+  draft: "Borrador"
+  edit_title: "Editar contenido"
+  reading_time:
+    one: "{{ .Count }} min"
+    other: "{{ .Count }} mins"
+  reading_time_title: "Tiempo de lectura"
+
+author:
+  byline_title: "Autor"
+
+error:
+  404_title: "Página no encontrada :confused:"
+  404_error: "Error 404"
+  404_description: "Parece que la página que solicitaste no existe."
+
+footer:
+  dark_appearance: "Cambiar a modo oscuro"
+  light_appearance: "Cambiar a modo claro"
+  powered_by: "Desarrollada con {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Link a página externa"
+  no_articles: "Aún no hay artículos para listar aquí."
+
+sharing:
+  email: "Enviar vía email"
+  facebook: "Compartir en Facebook"
+  linkedin: "Compartir en LinkedIn"
+  pinterest: "Pinear en Pinterest"
+  reddit: "Publicar en Reddit"
+  twitter: "Tuitear en Twitter"
+
+shortcode:
+  recent_articles: "Reciente"
+  icon_none: "Icono no encontrado."
