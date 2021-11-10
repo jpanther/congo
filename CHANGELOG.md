@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.5.2] - 2021-11-10
+
 ### Added
 
 - German translation ([#27](https://github.com/jpanther/congo/pull/27))
@@ -168,7 +170,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/Congo/compare/v1.5.1...HEAD
+[unreleased]: https://github.com/jpanther/Congo/compare/v1.5.2...HEAD
+[1.5.2]: https://github.com/jpanther/Congo/compare/v1.5.1...v1.5.2
 [1.5.1]: https://github.com/jpanther/Congo/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/jpanther/Congo/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/jpanther/Congo/compare/v1.3.0...v1.4.0
