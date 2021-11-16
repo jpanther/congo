@@ -15,8 +15,8 @@ error:
   404_description: "您请求的页面似乎不存在。"
 
 footer:
-  # dark_appearance: "Switch to dark appearance"
-  # light_appearance: "Switch to light appearance"
+  dark_appearance: "切换为深色模式"
+  light_appearance: "切换为浅色模式"
   powered_by: "由 {{ .Hugo }} &amp; {{ .Congo }} 强力驱动"
 
 list:
@@ -27,7 +27,7 @@ sharing:
   email: "通过电子邮件发送"
   facebook: "分享到 Facebook"
   linkedin: "分享到 LinkedIn"
-  # pinterest: "Pin on Pinterest"
+  pinterest: "钉到 Pinterest"
   reddit: "提交到 Reddit"
   twitter: "分享到 Twitter"
 
