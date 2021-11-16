@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Updated Chinese translation ([#32](https://github.com/jpanther/congo/pull/32))
+
+### Fixed
+
+- Article pagination uses date of current article ([#32](https://github.com/jpanther/congo/pull/32))
+
 ## [1.5.2] - 2021-11-10
 
 ### Added
