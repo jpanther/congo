@@ -66,6 +66,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout]({{< ref "homepage-layout" >}}) section for more details.|
 |`homepage.showRecent`|boolean|`false`|Whether or not to display the recent articles list on the homepage.|
 |`article.showDate`|boolean|`true`|Whether or not article dates are displayed.|
+|`article.showDateUpdated`|boolean|`false`|Whether or not the dates articles were updated are displayed.|
 |`article.dateFormat`|string|`"2 January 2006"`|How article dates are formatted. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
 |`article.showAuthor`|boolean|`true`|Whether or not the author box is displayed in the article footer.|
 |`article.showBreadcrumbs`|boolean|`false`|Whether or not breadcrumbs are displayed in the article header.|
