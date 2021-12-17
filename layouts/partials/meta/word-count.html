@@ -1,5 +1,5 @@
 <span>
-    {{ .WordCount }} {{- i18n "article.word_count_unit" -}}
+    {{- i18n "article.word_count" .WordCount | emojify -}}
 </span>
 {{- /* Trim EOF */ -}}
   
