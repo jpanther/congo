@@ -76,6 +76,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.showHeadingAnchors`|boolean|`true`|Whether or not heading anchor links are displayed alongside headings within articles.|
 |`article.showPagination`|boolean|`true`|Whether or not the next/previous article links are displayed in the article footer.|
 |`article.showReadingTime`|boolean|`true`|Whether or not article reading times are displayed.|
+|`article.showWordCount`|boolean|`false`|Whether or not article word counts are displayed.|
 |`article.sharingLinks`|array of strings|_Not set_|Which sharing links to display at the end of each article. When not provided, or set to `false` no links will be displayed.|
 |`list.showBreadcrumbs`|boolean|`false`|Whether or not breadcrumbs are displayed in the header on list pages.|
 |`list.showSummary`|boolean|`false`|Whether or not article summaries are displayed on list pages. If a summary is not provided in the [front matter]({{< ref "front-matter" >}}), one will be auto generated using the `summaryLength` parameter in the [site configuration](#site-configuration).|

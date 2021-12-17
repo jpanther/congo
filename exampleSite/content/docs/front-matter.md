@@ -27,7 +27,8 @@ Front matter parameter default values are inherited from the theme's [base confi
 |`showEdit`|boolean|`article.showEdit`|Whether or not the link to edit the article content should be displayed.|
 |`showHeadingAnchors`|boolean|`article.showHeadingAnchors`|Whether or not heading anchor links are displayed alongside headings within this article.|
 |`showPagination`|boolean|`article.showPagination`|Whether or not the next/previous article links are displayed in the article footer.|
-|`showReadingTime`|boolean|`article.showReadingTime`|Whether or not article reading times are displayed.|
+|`showReadingTime`|boolean|`article.showReadingTime`|Whether or not the article reading time is displayed.|
+|`showWordCount`|boolean|`article.showWordCount`|Whether or not the article word count is displayed.|
 |`showSummary`|boolean|`list.showSummary`|Whether or not the article summary should be displayed on list pages.|
 |`summary`|string|_Auto generated using `summaryLength` (see [site configuration]({{< ref "configuration#site-configuration" >}}))_|When `showSummary` is enabled, this is the Markdown string to be used as the summary for this article.|
 |`xml`|boolean|`true` unless excluded by `sitemap.excludedKinds`|Whether or not this article is included in the generated `/sitemap.xml` file.|
