@@ -10,6 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Option to display article word counts ([#57](https://github.com/jpanther/congo/pull/57))
 
+### Changed
+
+- Upgrade to Chart.js v3.6.2
+- Upgrade to Mermaid v8.13.6
+
 ## [1.5.3] - 2021-11-18
 
 ### Changed
