@@ -25,6 +25,21 @@ Sometimes you need to add a custom style to style your own HTML elements. Congo 
 
 The `custom.css` file will be minified by Hugo and loaded automatically after all the other theme styles which means anything in your custom file will take precedence over the defaults.
 
+### Adjusting the font size
+
+Changing the font size of your website is one example of overriding the default stylesheet. Congo makes this simple as it uses scaled font sizes throughout the theme which are derived from the base HTML font size. By default, Tailwind sets the default size to `12pt`, but it can be changed to whatever value you prefer.
+
+Create a `custom.css` file using the [instructions above]({{< ref "#overriding-the-stylesheet" >}}) and add the following CSS declaration:
+
+```css
+/* Increase the default font size */
+html {
+  font-size: 13pt;
+}
+```
+
+Simply by changing this one value, all the font sizes on your website will be adjusted to match this new size. Therefore, to increase the overall font sizes used, make the value greater than `12pt`. Similarly, to decrease the font sizes, make the value less than `12pt`.
+
 ## Building from source
 
 If you'd like to make a major change, you can take advantage of Tailwind CSS's JIT compiler and rebuild the entire theme CSS from scratch.
