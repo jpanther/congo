@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Article word counts ([#57](https://github.com/jpanther/congo/pull/57))
 - Last updated dates on articles
+- Icons for Amazon, Apple, Flickr, Google, Kickstarter, Microsoft, Patreon, Telegram, Tumblr and WhatsApp
 
 ### Changed
 
