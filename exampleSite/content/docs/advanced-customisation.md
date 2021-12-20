@@ -7,7 +7,27 @@ slug: "advanced-customisation"
 tags: ["advanced", "css", "docs"]
 ---
 
-There are a few ways you can make style changes to Congo.
+There are many ways you can make advanced changes to Congo. Read below to learn more about what can be customised and the best way of achieving your desired result.
+
+If you need further advice, post your questions on [GitHub Discussions](https://github.com/jpanther/congo/discussions).
+
+## Hugo project structure
+
+Before leaping into it, first a quick note about [Hugo project structure](https://gohugo.io/getting-started/directory-structure/) and best practices for managing your content and theme customisations.
+
+{{< alert >}}
+**In summary:** Never directly edit the theme files. Only make customisations in your Hugo project's sub-directories, not in the themes directory itself.
+{{< /alert >}}
+
+Congo is built to take advantage of all the standard Hugo practices. It is designed to allow all aspects of the theme to be customised and overriden without changing any of the core theme files. This allows for a seamless upgrade experience while giving you total control over the look and feel of your website.
+
+In order to achieve this, you should never manually adjust any of the theme files directly. Whether you install using Hugo modules, as a git submodule or manually include the theme in your `themes/` directory, you should always leave these files intact.
+
+The correct way to adjust any theme behaviour is by overriding files using Hugo's powerful [file lookup order](https://gohugo.io/templates/lookup-order/). In summary, the lookup order ensures any files you include in your project directory will automatically take precedence over any theme files.
+
+For example, if you wanted to override the main article template in Congo, you can simply create your own `layouts/_default/single.html` file and place it in the root of your project. This file will then override the `single.html` from the theme without ever changing the theme itself. This works for any theme files - HTML templates, partials, shortcodes, config files, data, assets, etc.
+
+As long as you follow this simple practice, you will always be able to update the theme (or test different theme versions) without worrying that you will lose any of your custom changes.
 
 ## Colour schemes
 
