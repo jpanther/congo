@@ -7,6 +7,7 @@
           class="bg-neutral-300 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800 m-1 hover:bg-primary-500 hover:text-neutral rounded min-w-[2.4rem] inline-block text-center p-1"
           href="{{ printf .url $.Permalink $.Title }}"
           title="{{ i18n .title }}"
+          aria-label="{{ i18n .title }}"
           >{{ partial "icon.html" .icon }}</a
         >
       {{ end }}

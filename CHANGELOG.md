@@ -14,8 +14,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Adjusted contrast of some items to improve accessibility
 - Upgrade to Chart.js v3.6.2
 - Upgrade to Mermaid v8.13.6
+
+### Fixed
+
+- Missing ARIA descriptions and alt tags on some images and links
 
 ## [1.5.3] - 2021-11-18
 
