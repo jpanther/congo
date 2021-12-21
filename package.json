@@ -1,6 +1,6 @@
 {
   "name": "hugo-congo-theme",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "Congo theme for Hugo",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "assets": "rimraf assets/vendor && vendor-copy",
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
-    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ -p 8008"
+    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ -p 8008",
+    "lighthouse": "lhci autorun"
   },
   "repository": {
     "type": "git",

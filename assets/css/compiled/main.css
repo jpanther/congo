@@ -1,4 +1,4 @@
-/*! Congo v1.5.3 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v1.6.0 | MIT License | https://github.com/jpanther/congo */
 
 /*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
 
@@ -727,7 +727,7 @@ video {
 }
 
 .prose h1 {
-  color: var(--color-neutral-800);
+  color: var(--color-neutral-900);
   font-weight: 800;
   font-size: 2.25em;
   margin-top: 0;
@@ -1700,11 +1700,11 @@ body a, body button {
 
 .chroma .c {
   font-style: italic;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
 }
 
 .dark .chroma .c {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 /* CommentHashbang */
@@ -1712,66 +1712,66 @@ body a, body button {
 .chroma .ch {
   font-weight: 600;
   font-style: italic;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
 }
 
 .dark .chroma .ch {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 /* CommentMultiline */
 
 .chroma .cm {
   font-style: italic;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
 }
 
 .dark .chroma .cm {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 /* CommentSingle */
 
 .chroma .c1 {
   font-style: italic;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
 }
 
 .dark .chroma .c1 {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 /* CommentSpecial */
 
 .chroma .cs {
   font-style: italic;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
 }
 
 .dark .chroma .cs {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 /* CommentPreproc */
 
 .chroma .cp {
   font-style: italic;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
 }
 
 .dark .chroma .cp {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 /* CommentPreprocFile */
 
 .chroma .cpf {
   font-style: italic;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-500);
 }
 
 .dark .chroma .cpf {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-400);
 }
 
 /* Generic */
@@ -2356,20 +2356,20 @@ body a, body button {
   color: var(--color-neutral-700);
 }
 
-.text-neutral-800 {
-  color: var(--color-neutral-800);
+.text-neutral-500 {
+  color: var(--color-neutral-500);
 }
 
 .text-primary-500 {
   color: var(--color-primary-500);
 }
 
-.text-primary-700 {
-  color: var(--color-primary-700);
+.text-neutral-800 {
+  color: var(--color-neutral-800);
 }
 
-.text-neutral-300 {
-  color: var(--color-neutral-300);
+.text-primary-700 {
+  color: var(--color-primary-700);
 }
 
 .text-primary-400 {
@@ -2412,12 +2412,12 @@ body a, body button {
   color: var(--color-primary-700);
 }
 
-.hover\:text-primary-400:hover {
-  color: var(--color-primary-400);
-}
-
 .hover\:text-primary-500:hover {
   color: var(--color-primary-500);
+}
+
+.hover\:text-primary-400:hover {
+  color: var(--color-primary-400);
 }
 
 .hover\:text-neutral:hover {
@@ -2433,9 +2433,9 @@ body a, body button {
           text-decoration-color: var(--color-neutral-300);
 }
 
-.hover\:underline-primary-300:hover {
-  -webkit-text-decoration-color: var(--color-primary-300);
-          text-decoration-color: var(--color-primary-300);
+.hover\:underline-primary-400:hover {
+  -webkit-text-decoration-color: var(--color-primary-400);
+          text-decoration-color: var(--color-primary-400);
 }
 
 .hover\:underline-primary-500:hover {
@@ -2452,7 +2452,7 @@ body a, body button {
 }
 
 .dark .dark\:prose-light {
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-300);
 }
 
 .dark .dark\:prose-light a {
@@ -2492,15 +2492,15 @@ body a, body button {
 }
 
 .dark .dark\:prose-light h2 {
-  color: var(--color-neutral);
+  color: var(--color-neutral-50);
 }
 
 .dark .dark\:prose-light h3 {
-  color: var(--color-neutral);
+  color: var(--color-neutral-50);
 }
 
 .dark .dark\:prose-light h4 {
-  color: var(--color-neutral);
+  color: var(--color-neutral-50);
 }
 
 .dark .dark\:prose-light figure figcaption {
@@ -2656,6 +2656,11 @@ body a, body button {
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .sm\:last\:mr-0:last-child {

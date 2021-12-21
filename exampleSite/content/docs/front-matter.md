@@ -23,12 +23,14 @@ Front matter parameter default values are inherited from the theme's [base confi
 |`robots`|string|_Not set_|String that indicates how robots should handle this article. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`sharingLinks`|array of strings|`article.sharingLinks`|Which sharing links to display at the end of this article. When not provided, or set to `false` no links will be displayed.|
 |`showAuthor`|boolean|`article.showAuthor`|Whether or not the author box is displayed in the article footer.|
-|`showDate`|boolean|`article.showDate`|Whether or not article dates are displayed.|
+|`showDate`|boolean|`article.showDate`|Whether or not the article date is displayed. The date is set using the `date` parameter.|
+|`showDateUpdated`|boolean|`article.showDateUpdated`|Whether or not the date the article was updated is displayed. The date is set using the `lastmod` parameter.|
 |`showEdit`|boolean|`article.showEdit`|Whether or not the link to edit the article content should be displayed.|
 |`showHeadingAnchors`|boolean|`article.showHeadingAnchors`|Whether or not heading anchor links are displayed alongside headings within this article.|
 |`showPagination`|boolean|`article.showPagination`|Whether or not the next/previous article links are displayed in the article footer.|
-|`showReadingTime`|boolean|`article.showReadingTime`|Whether or not article reading times are displayed.|
+|`showReadingTime`|boolean|`article.showReadingTime`|Whether or not the article reading time is displayed.|
+|`showWordCount`|boolean|`article.showWordCount`|Whether or not the article word count is displayed.|
 |`showSummary`|boolean|`list.showSummary`|Whether or not the article summary should be displayed on list pages.|
-|`summary`|string|_Auto generated using `summaryLength` (see [site configuration]({{< ref "configuration#site-configuration" >}}))_|When `showSummary` is enabled, this is the Markdown string to be used as the summary for this article.|
+|`summary`|string|Auto generated using `summaryLength` (see [site configuration]({{< ref "configuration#site-configuration" >}}))|When `showSummary` is enabled, this is the Markdown string to be used as the summary for this article.|
 |`xml`|boolean|`true` unless excluded by `sitemap.excludedKinds`|Whether or not this article is included in the generated `/sitemap.xml` file.|
 <!-- prettier-ignore-end -->

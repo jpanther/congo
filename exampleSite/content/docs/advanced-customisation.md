@@ -7,7 +7,27 @@ slug: "advanced-customisation"
 tags: ["advanced", "css", "docs"]
 ---
 
-There are a few ways you can make style changes to Congo.
+There are many ways you can make advanced changes to Congo. Read below to learn more about what can be customised and the best way of achieving your desired result.
+
+If you need further advice, post your questions on [GitHub Discussions](https://github.com/jpanther/congo/discussions).
+
+## Hugo project structure
+
+Before leaping into it, first a quick note about [Hugo project structure](https://gohugo.io/getting-started/directory-structure/) and best practices for managing your content and theme customisations.
+
+{{< alert >}}
+**In summary:** Never directly edit the theme files. Only make customisations in your Hugo project's sub-directories, not in the themes directory itself.
+{{< /alert >}}
+
+Congo is built to take advantage of all the standard Hugo practices. It is designed to allow all aspects of the theme to be customised and overriden without changing any of the core theme files. This allows for a seamless upgrade experience while giving you total control over the look and feel of your website.
+
+In order to achieve this, you should never manually adjust any of the theme files directly. Whether you install using Hugo modules, as a git submodule or manually include the theme in your `themes/` directory, you should always leave these files intact.
+
+The correct way to adjust any theme behaviour is by overriding files using Hugo's powerful [file lookup order](https://gohugo.io/templates/lookup-order/). In summary, the lookup order ensures any files you include in your project directory will automatically take precedence over any theme files.
+
+For example, if you wanted to override the main article template in Congo, you can simply create your own `layouts/_default/single.html` file and place it in the root of your project. This file will then override the `single.html` from the theme without ever changing the theme itself. This works for any theme files - HTML templates, partials, shortcodes, config files, data, assets, etc.
+
+As long as you follow this simple practice, you will always be able to update the theme (or test different theme versions) without worrying that you will lose any of your custom changes.
 
 ## Colour schemes
 
@@ -24,6 +44,21 @@ Use one of the existing theme stylesheets as a template. You are free to define 
 Sometimes you need to add a custom style to style your own HTML elements. Congo provides for this scenario by allowing you to override the default styles in your own CSS stylesheet. Simply create a `custom.css` file in your project's `assets/css/` folder.
 
 The `custom.css` file will be minified by Hugo and loaded automatically after all the other theme styles which means anything in your custom file will take precedence over the defaults.
+
+### Adjusting the font size
+
+Changing the font size of your website is one example of overriding the default stylesheet. Congo makes this simple as it uses scaled font sizes throughout the theme which are derived from the base HTML font size. By default, Tailwind sets the default size to `12pt`, but it can be changed to whatever value you prefer.
+
+Create a `custom.css` file using the [instructions above]({{< ref "#overriding-the-stylesheet" >}}) and add the following CSS declaration:
+
+```css
+/* Increase the default font size */
+html {
+  font-size: 13pt;
+}
+```
+
+Simply by changing this one value, all the font sizes on your website will be adjusted to match this new size. Therefore, to increase the overall font sizes used, make the value greater than `12pt`. Similarly, to decrease the font sizes, make the value less than `12pt`.
 
 ## Building from source
 

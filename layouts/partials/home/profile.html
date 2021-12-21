@@ -5,7 +5,7 @@
 >
   <header class="flex flex-col items-center mb-3">
     {{ with .Site.Author.image }}
-      <img class="mb-2 rounded-full w-36 h-36" src="{{ . | relURL }}" />
+      <img class="mb-2 rounded-full w-36 h-36" alt="Author" src="{{ . | relURL }}" />
     {{ end }}
     <h1 class="text-4xl font-extrabold">
       {{ .Site.Author.name | default .Site.Title }}

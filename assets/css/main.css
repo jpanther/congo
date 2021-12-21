@@ -1,4 +1,4 @@
-/*! Congo v1.5.3 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v1.6.0 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
@@ -302,31 +302,31 @@ body button {
 }
 /* Comment */
 .chroma .c {
-  @apply italic text-neutral-400 dark:text-neutral-500;
+  @apply italic text-neutral-500 dark:text-neutral-400;
 }
 /* CommentHashbang */
 .chroma .ch {
-  @apply italic font-semibold text-neutral-400 dark:text-neutral-500;
+  @apply italic font-semibold text-neutral-500 dark:text-neutral-400;
 }
 /* CommentMultiline */
 .chroma .cm {
-  @apply italic text-neutral-400 dark:text-neutral-500;
+  @apply italic text-neutral-500 dark:text-neutral-400;
 }
 /* CommentSingle */
 .chroma .c1 {
-  @apply italic text-neutral-400 dark:text-neutral-500;
+  @apply italic text-neutral-500 dark:text-neutral-400;
 }
 /* CommentSpecial */
 .chroma .cs {
-  @apply italic text-neutral-400 dark:text-neutral-500;
+  @apply italic text-neutral-500 dark:text-neutral-400;
 }
 /* CommentPreproc */
 .chroma .cp {
-  @apply italic text-neutral-400 dark:text-neutral-500;
+  @apply italic text-neutral-500 dark:text-neutral-400;
 }
 /* CommentPreprocFile */
 .chroma .cpf {
-  @apply italic text-neutral-400 dark:text-neutral-500;
+  @apply italic text-neutral-500 dark:text-neutral-400;
 }
 /* Generic */
 .chroma .g {

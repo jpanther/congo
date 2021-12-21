@@ -107,7 +107,9 @@ You can see some additional Chart.js examples on the [charts samples]({{< ref "c
 
 **Output:** {{< icon "github" >}}
 
-Icons are populated using Hugo pipelines which makes them very flexible. Congo ships with a default set of icons for social, email, and generic links. If you want to add your own icons, you can simply place them in `/assets/icons/` and reference them using the `icon` shortcode passing in the icon's filename (without the `.svg.` extension).
+Icons are populated using Hugo pipelines which makes them very flexible. Congo includes a number of built-in icons for social, links and other purposes. Check the [icon samples]({{< ref "samples/icons" >}}) page for a full list of supported icons.
+
+Custom icons can be added by providing your own icon assets in the `assets/icons/` directory of your project. The icon can then be referenced in the shortcode by using the SVG filename without the `.svg` extension.
 
 Icons can also be used in partials by calling the [icon partial]({{< ref "partials#icon" >}}).
 

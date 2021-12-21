@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.6.0] - 2021-12-21
+
+### Added
+
+- Article word counts ([#57](https://github.com/jpanther/congo/pull/57))
+- Last updated dates on articles
+- Icons for Amazon, Apple, Flickr, Google, Kickstarter, Microsoft, Patreon, Telegram, Tumblr and WhatsApp
+
+### Changed
+
+- Adjusted contrast of some items to improve accessibility
+- Upgrade to Chart.js v3.6.2
+- Upgrade to Mermaid v8.13.6
+
+### Fixed
+
+- Missing ARIA descriptions and alt tags on some images and links
+
 ## [1.5.3] - 2021-11-18
 
 ### Changed
@@ -180,7 +198,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v1.5.3...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/jpanther/congo/compare/v1.5.3...v1.6.0
 [1.5.3]: https://github.com/jpanther/congo/compare/v1.5.2...v1.5.3
 [1.5.2]: https://github.com/jpanther/Congo/compare/v1.5.1...v1.5.2
 [1.5.1]: https://github.com/jpanther/Congo/compare/v1.5.0...v1.5.1

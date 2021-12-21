@@ -1,4 +1,11 @@
 <time datetime="{{ .Date }}">
   {{- .Date.Format .Site.Params.article.dateFormat | default "2 January 2006" -}}
 </time>
+{{ if .Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false) }}
+  &nbsp;(Updated:&nbsp;
+  <time datetime="{{ .Lastmod }}">
+    {{- .Lastmod.Format .Site.Params.article.dateFormat | default "2 January 2006" -}}
+  </time>
+  )
+{{ end }}
 {{- /* Trim EOF */ -}}

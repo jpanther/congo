@@ -16,6 +16,10 @@
     {{ $meta.Add "partials" (slice (partial "meta/date.html" .)) }}
   {{ end }}
 
+  {{ if and (.Params.showWordCount | default (.Site.Params.article.showWordCount | default false)) (ne .WordCount 0) }}
+    {{ $meta.Add "partials" (slice (partial "meta/word-count.html" .)) }}
+  {{ end }}
+
   {{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
     {{ $meta.Add "partials" (slice (partial "meta/reading-time.html" .)) }}
   {{ end }}

@@ -1,11 +1,17 @@
 {{ if .Params.showAuthor | default (.Site.Params.article.showAuthor | default true) }}
   <div class="flex">
     {{ with .Site.Author.image }}
-      <img class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full" src="{{ . | relURL }}" />
+      <img
+        class="w-24 h-24 !mt-0 !mb-0 mr-4 rounded-full"
+        width="96"
+        height="96"
+        alt="Author"
+        src="{{ . | relURL }}"
+      />
     {{ end }}
     <div class="place-self-center">
       {{ with .Site.Author.name | markdownify | emojify }}
-        <div class="text-[0.6rem] leading-3 text-neutral-400 dark:text-neutral-500 uppercase">
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
           {{ i18n "author.byline_title" | markdownify | emojify }}
         </div>
         <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
@@ -15,7 +21,7 @@
       {{ with .Site.Author.bio | markdownify | emojify }}
         <div class="text-sm text-neutral-700 dark:text-neutral-400">{{ . }}</div>
       {{ end }}
-      {{ partialCached "author-links.html" . }}
+      <div class="text-2xl sm:text-lg">{{ partialCached "author-links.html" . }}</div>
     </div>
   </div>
 {{ end }}

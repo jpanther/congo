@@ -6,6 +6,9 @@ article:
     one: "{{ .Count }} minuto"
     other: "{{ .Count }} minutos"
   reading_time_title: "Tempo de leitura"
+  # word_count:
+  # one: "{{ .Count }} word"
+  # other: "{{ .Count }} words"
 
 author:
   byline_title: "Autor"

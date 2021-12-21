@@ -15,11 +15,13 @@ showEdit: false
 Real websites that are built with Congo.
 {{< /lead >}}
 
-| Website                                        | Details                      |
-| ---------------------------------------------- | ---------------------------- |
-| [jamespanther.com](https://jamespanther.com)   | Personal site - Theme author |
-| [zekeriyaay.com](https://zekeriyaay.com)       | Personal cheat sheets site   |
-| [srisco.dev](https://srisco.dev)               | Personal site                |
-| [theophile-roos.fr](https://theophile-roos.fr) | Personal site                |
+| Website                                             | Details                      |
+| --------------------------------------------------- | ---------------------------- |
+| [jamespanther.com](https://jamespanther.com)        | Personal site - Theme author |
+| [zekeriyaay.com](https://zekeriyaay.com)            | Personal cheat sheets site   |
+| [srisco.dev](https://srisco.dev)                    | Personal site                |
+| [theophile-roos.fr](https://theophile-roos.fr)      | Personal site                |
+| [antoinesoetewey.com](https://antoinesoetewey.com/) | Personal site                |
+| [leif.io](https://leif.io/)                         | Personal site and Tech blog  |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).

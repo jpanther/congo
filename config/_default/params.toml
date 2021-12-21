@@ -29,6 +29,7 @@ colorScheme = "congo"
   showHeadingAnchors = true
   showPagination = true
   showReadingTime = true
+  showWordCount = false
   # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
 
 [list]

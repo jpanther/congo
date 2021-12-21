@@ -5,6 +5,9 @@ article:
   reading_time:
     other: "{{ .Count }} 分钟"
   reading_time_title: "预计阅读"
+  word_count:
+    one: "{{ .Count }} 字"
+    other: "{{ .Count }} 字"
 
 author:
   byline_title: "作者"

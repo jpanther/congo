@@ -93,7 +93,7 @@ module.exports = {
                 borderLeftColor: theme("colors.primary.200"),
               },
               h1: {
-                color: theme("colors.neutral.800"),
+                color: theme("colors.neutral.900"),
                 position: "relative",
               },
               h2: {
@@ -149,7 +149,7 @@ module.exports = {
         light: {
           css: [
             {
-              color: theme("colors.neutral.400"),
+              color: theme("colors.neutral.300"),
               a: {
                 color: theme("colors.primary.400"),
                 textDecorationColor: theme("colors.neutral.500"),
@@ -178,13 +178,13 @@ module.exports = {
                 color: theme("colors.neutral.DEFAULT"),
               },
               h2: {
-                color: theme("colors.neutral.DEFAULT"),
+                color: theme("colors.neutral.50"),
               },
               h3: {
-                color: theme("colors.neutral.DEFAULT"),
+                color: theme("colors.neutral.50"),
               },
               h4: {
-                color: theme("colors.neutral.DEFAULT"),
+                color: theme("colors.neutral.50"),
               },
               "figure figcaption": {
                 color: theme("colors.neutral.400"),

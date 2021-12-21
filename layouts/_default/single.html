@@ -4,10 +4,10 @@
       {{ if .Site.Params.article.showBreadcrumbs | default false }}
         {{ partial "breadcrumbs.html" . }}
       {{ end }}
-      <h1 class="mt-0 text-4xl font-extrabold text-neutral-800 dark:text-neutral">
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div class="mt-8 mb-12 text-base text-neutral-400 dark:text-neutral-500">
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
         {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
       </div>
     </header>
