@@ -1,15 +1,12 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: {
-    content: [
-      "./layouts/**/*.html",
-      "./content/**/*.{html,md}",
-      "./themes/congo/layouts/**/*.html",
-      "./themes/congo/content/**/*.{html,md}",
-    ],
-  },
+  content: [
+    "./layouts/**/*.html",
+    "./content/**/*.{html,md}",
+    "./themes/congo/layouts/**/*.html",
+    "./themes/congo/content/**/*.{html,md}",
+  ],
   darkMode: "class",
   theme: {
     colors: {
@@ -52,12 +49,6 @@ module.exports = {
         900: "var(--color-secondary-900)",
       },
     },
-    underlineOffset: {
-      small: "2px",
-    },
-    underlineThickness: {
-      bold: "2px",
-    },
     extend: {
       typography: (theme) => ({
         DEFAULT: {
@@ -70,10 +61,10 @@ module.exports = {
                 textDecorationColor: theme("colors.primary.300"),
                 fontWeight: "500",
                 "&:hover": {
-                  backgroundColor: theme("colors.primary.600"),
-                  borderRadius: "0.09rem",
                   color: theme("colors.neutral.DEFAULT"),
                   textDecoration: "none",
+                  backgroundColor: theme("colors.primary.600"),
+                  borderRadius: "0.09rem",
                 },
               },
               strong: {
@@ -222,10 +213,5 @@ module.exports = {
       }),
     },
   },
-  variants: {
-    extend: {
-      typography: ["dark"],
-    },
-  },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-underline-utils")],
+  plugins: [require("@tailwindcss/typography")],
 };
