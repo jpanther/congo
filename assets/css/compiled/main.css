@@ -1,84 +1,67 @@
 /*! Congo v1.6.0 | MIT License | https://github.com/jpanther/congo */
 
-/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
-
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! tailwindcss v3.0.7 | MIT License | https://tailwindcss.com */
 
 /*
-Document
-========
-*/
-
-/**
-Use a better box model (opinionated).
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
 *,
 ::before,
 ::after {
   box-sizing: border-box;
-}
-
-/**
-Use a more readable tab size (opinionated).
-*/
-
-html {
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-     tab-size: 4;
-}
-
-/**
-1. Correct the line height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-*/
-
-html {
-  line-height: 1.15;
   /* 1 */
-  -webkit-text-size-adjust: 100%;
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
   /* 2 */
 }
 
+::before,
+::after {
+  --tw-content: '';
+}
+
 /*
-Sections
-========
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
 */
 
-/**
-Remove the margin in all browsers.
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
 body {
   margin: 0;
-}
-
-/**
-Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-*/
-
-body {
-  font-family:
-		system-ui,
-		-apple-system, /* Firefox supports this but not yet `system-ui` */
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji';
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
 }
 
 /*
-Grouping content
-================
-*/
-
-/**
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
 */
 
 hr {
@@ -86,14 +69,11 @@ hr {
   /* 1 */
   color: inherit;
   /* 2 */
+  border-top-width: 1px;
+  /* 3 */
 }
 
 /*
-Text-level semantics
-====================
-*/
-
-/**
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
@@ -102,7 +82,30 @@ abbr[title] {
           text-decoration: underline dotted;
 }
 
-/**
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
 Add the correct font weight in Edge and Safari.
 */
 
@@ -111,28 +114,22 @@ strong {
   font-weight: bolder;
 }
 
-/**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the odd 'em' font sizing in all browsers.
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
 kbd,
 samp,
 pre {
-  font-family:
-		ui-monospace,
-		SFMono-Regular,
-		Consolas,
-		'Liberation Mono',
-		Menlo,
-		monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
 }
 
-/**
+/*
 Add the correct font size in all browsers.
 */
 
@@ -140,8 +137,8 @@ small {
   font-size: 80%;
 }
 
-/**
-Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
 sub,
@@ -161,13 +158,9 @@ sup {
 }
 
 /*
-Tabular data
-============
-*/
-
-/**
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
 */
 
 table {
@@ -175,16 +168,14 @@ table {
   /* 1 */
   border-color: inherit;
   /* 2 */
+  border-collapse: collapse;
+  /* 3 */
 }
 
 /*
-Forms
-=====
-*/
-
-/**
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
 */
 
 button,
@@ -196,25 +187,28 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 1 */
-  line-height: 1.15;
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
   /* 1 */
   margin: 0;
   /* 2 */
+  padding: 0;
+  /* 3 */
 }
 
-/**
+/*
 Remove the inheritance of text transform in Edge and Firefox.
-1. Remove the inheritance of text transform in Firefox.
 */
 
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
-/**
-Correct the inability to style clickable types in iOS and Safari.
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
 */
 
 button,
@@ -222,43 +216,30 @@ button,
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
 }
 
-/**
-Remove the inner border and padding in Firefox.
-*/
-
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
-Restore the focus styles unset by the previous rule.
+/*
+Use the modern Firefox focus style for all focusable elements.
 */
 
 :-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: auto;
 }
 
-/**
-Remove the additional ':invalid' styles in Firefox.
-See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
 */
 
 :-moz-ui-invalid {
   box-shadow: none;
 }
 
-/**
-Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
-*/
-
-legend {
-  padding: 0;
-}
-
-/**
+/*
 Add the correct vertical alignment in Chrome and Firefox.
 */
 
@@ -266,7 +247,7 @@ progress {
   vertical-align: baseline;
 }
 
-/**
+/*
 Correct the cursor style of increment and decrement buttons in Safari.
 */
 
@@ -275,7 +256,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
   height: auto;
 }
 
-/**
+/*
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
@@ -287,7 +268,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
   /* 2 */
 }
 
-/**
+/*
 Remove the inner padding in Chrome and Safari on macOS.
 */
 
@@ -295,9 +276,9 @@ Remove the inner padding in Chrome and Safari on macOS.
   -webkit-appearance: none;
 }
 
-/**
+/*
 1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to 'inherit' in Safari.
+2. Change font properties to `inherit` in Safari.
 */
 
 ::-webkit-file-upload-button {
@@ -308,11 +289,6 @@ Remove the inner padding in Chrome and Safari on macOS.
 }
 
 /*
-Interactive
-===========
-*/
-
-/*
 Add the correct display in Chrome and Safari.
 */
 
@@ -320,15 +296,9 @@ summary {
   display: list-item;
 }
 
-/**
- * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
- * A thin layer on top of normalize.css that provides a starting point more
- * suitable for web applications.
- */
-
-/**
- * Removes the default spacing and border for appropriate elements.
- */
+/*
+Removes the default spacing and border for appropriate elements.
+*/
 
 blockquote,
 dl,
@@ -346,221 +316,80 @@ pre {
   margin: 0;
 }
 
-button {
-  background-color: transparent;
-  background-image: none;
-}
-
 fieldset {
   margin: 0;
   padding: 0;
 }
 
+legend {
+  padding: 0;
+}
+
 ol,
-ul {
+ul,
+menu {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/**
- * Tailwind custom reset styles
- */
-
-/**
- * 1. Use the user's configured `sans` font-family (with Tailwind's default
- *    sans-serif font stack as a fallback) as a sane default.
- * 2. Use Tailwind's default "normal" line-height so the user isn't forced
- *    to override it to ensure consistency even when using the default theme.
- */
-
-html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 1 */
-  line-height: 1.5;
-  /* 2 */
-}
-
-/**
- * Inherit font-family and line-height from `html` so users can set them as
- * a class directly on the `html` element.
- */
-
-body {
-  font-family: inherit;
-  line-height: inherit;
-}
-
-/**
- * 1. Prevent padding and border from affecting element width.
- *
- *    We used to set this in the html element and inherit from
- *    the parent element for everything else. This caused issues
- *    in shadow-dom-enhanced elements like <details> where the content
- *    is wrapped by a div with box-sizing set to `content-box`.
- *
- *    https://github.com/mozdevs/cssremedy/issues/4
- *
- *
- * 2. Allow adding a border to an element by just adding a border-width.
- *
- *    By default, the way the browser specifies that an element should have no
- *    border is by setting it's border-style to `none` in the user-agent
- *    stylesheet.
- *
- *    In order to easily add borders to elements by just setting the `border-width`
- *    property, we change the default border-style for all elements to `solid`, and
- *    use border-width to hide them instead. This way our `border` utilities only
- *    need to set the `border-width` property instead of the entire `border`
- *    shorthand, making our border utilities much more straightforward to compose.
- *
- *    https://github.com/tailwindcss/tailwindcss/pull/116
- */
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: currentColor;
-  /* 2 */
-}
-
 /*
- * Ensure horizontal rules are visible by default
- */
-
-hr {
-  border-top-width: 1px;
-}
-
-/**
- * Undo the `border-style: none` reset that Normalize applies to images so that
- * our `border-{width}` utilities have the expected effect.
- *
- * The Normalize reset is unnecessary for us since we default the border-width
- * to 0 on all elements.
- *
- * https://github.com/tailwindcss/tailwindcss/issues/362
- */
-
-img {
-  border-style: solid;
-}
+Prevent resizing textareas horizontally by default.
+*/
 
 textarea {
   resize: vertical;
 }
 
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
-  color: #a1a1aa;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
-  color: #a1a1aa;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
 }
 
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
-  color: #a1a1aa;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
 }
+
+/*
+Set the default cursor for buttons.
+*/
 
 button,
 [role="button"] {
   cursor: pointer;
 }
 
-/**
- * Override legacy focus reset from Normalize with modern Firefox focus styles.
- *
- * This is actually an improvement over the new defaults in Firefox in our testing,
- * as it triggers the better focus styles even for links, which still use a dotted
- * outline in Firefox by default.
- */
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
 
-:-moz-focusring {
-  outline: auto;
+:disabled {
+  cursor: default;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/**
- * Reset links to optimize for opt-in styling instead of
- * opt-out.
- */
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-/**
- * Reset form element properties that are easy to forget to
- * style explicitly so you don't inadvertently introduce
- * styles that deviate from your design system. These styles
- * supplement a partial reset that is already applied by
- * normalize.css.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  padding: 0;
-  line-height: inherit;
-  color: inherit;
-}
-
-/**
- * Use the configured 'mono' font family for elements that
- * are expected to be rendered with a monospace font, falling
- * back to the system monospace stack if there is no configured
- * 'mono' font family.
- */
-
-pre,
-code,
-kbd,
-samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-/**
- * 1. Make replaced elements `display: block` by default as that's
- *    the behavior you want almost all of the time. Inspired by
- *    CSS Remedy, with `svg` added as well.
- *
- *    https://github.com/mozdevs/cssremedy/issues/14
- * 
- * 2. Add `vertical-align: middle` to align replaced elements more
- *    sensibly by default when overriding `display` by adding a
- *    utility like `inline`.
- *
- *    This can trigger a poorly considered linting error in some
- *    tools but is included by design.
- * 
- *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
- */
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
 
 img,
 svg,
@@ -576,12 +405,9 @@ object {
   /* 2 */
 }
 
-/**
- * Constrain images and videos to the parent width and preserve
- * their intrinsic aspect ratio.
- *
- * https://github.com/mozdevs/cssremedy/issues/14
- */
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
 
 img,
 video {
@@ -589,9 +415,9 @@ video {
   height: auto;
 }
 
-/**
- * Ensure the default browser behavior of the `hidden` attribute.
- */
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
 
 [hidden] {
   display: none;
@@ -606,8 +432,8 @@ video {
   max-width: 65ch;
 }
 
-.prose [class~="lead"] {
-  color: #4b5563;
+.prose :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-lead);
   font-size: 1.25em;
   line-height: 1.6;
   margin-top: 1.2em;
@@ -622,91 +448,81 @@ video {
           text-decoration-color: var(--color-primary-300);
 }
 
-.prose a:hover {
-  background-color: var(--color-primary-600);
-  border-radius: 0.09rem;
+:where(.prose a:hover):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral);
   text-decoration: none;
+  background-color: var(--color-primary-600);
+  border-radius: 0.09rem;
 }
 
-.prose strong {
+.prose :where(strong):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-900);
   font-weight: 600;
 }
 
-.prose ol[type="A"] {
-  --list-counter-style: upper-alpha;
+.prose :where(ol):not(:where([class~="not-prose"] *)) {
+  list-style-type: decimal;
+  padding-left: 1.625em;
 }
 
-.prose ol[type="a"] {
-  --list-counter-style: lower-alpha;
+.prose :where(ol[type="A"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-alpha;
 }
 
-.prose ol[type="A" s] {
-  --list-counter-style: upper-alpha;
+.prose :where(ol[type="a"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-alpha;
 }
 
-.prose ol[type="a" s] {
-  --list-counter-style: lower-alpha;
+.prose :where(ol[type="A" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-alpha;
 }
 
-.prose ol[type="I"] {
-  --list-counter-style: upper-roman;
+.prose :where(ol[type="a" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-alpha;
 }
 
-.prose ol[type="i"] {
-  --list-counter-style: lower-roman;
+.prose :where(ol[type="I"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-roman;
 }
 
-.prose ol[type="I" s] {
-  --list-counter-style: upper-roman;
+.prose :where(ol[type="i"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-roman;
 }
 
-.prose ol[type="i" s] {
-  --list-counter-style: lower-roman;
+.prose :where(ol[type="I" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: upper-roman;
 }
 
-.prose ol[type="1"] {
-  --list-counter-style: decimal;
+.prose :where(ol[type="i" s]):not(:where([class~="not-prose"] *)) {
+  list-style-type: lower-roman;
 }
 
-.prose ol > li {
-  position: relative;
-  padding-left: 1.75em;
+.prose :where(ol[type="1"]):not(:where([class~="not-prose"] *)) {
+  list-style-type: decimal;
 }
 
-.prose ol > li::before {
-  content: counter(list-item, var(--list-counter-style, decimal)) ".";
-  position: absolute;
+.prose :where(ul):not(:where([class~="not-prose"] *)) {
+  list-style-type: disc;
+  padding-left: 1.625em;
+}
+
+.prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
   font-weight: 400;
-  color: var(--color-neutral-800);
-  left: 0;
+  color: var(--tw-prose-counters);
 }
 
-.prose ul > li {
-  position: relative;
-  padding-left: 1.75em;
+.prose :where(ul > li):not(:where([class~="not-prose"] *))::marker {
+  color: var(--tw-prose-bullets);
 }
 
-.prose ul > li::before {
-  content: "";
-  position: absolute;
-  background-color: var(--color-neutral-500);
-  border-radius: 50%;
-  width: 0.375em;
-  height: 0.375em;
-  top: calc(0.875em - 0.1875em);
-  left: 0.25em;
-}
-
-.prose hr {
+.prose :where(hr):not(:where([class~="not-prose"] *)) {
   border-color: var(--color-neutral-200);
   border-top-width: 1px;
   margin-top: 3em;
   margin-bottom: 3em;
 }
 
-.prose blockquote {
+.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
   font-weight: 500;
   font-style: italic;
   color: var(--color-neutral-800);
@@ -718,15 +534,15 @@ video {
   padding-left: 1em;
 }
 
-.prose blockquote p:first-of-type::before {
+.prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
   content: open-quote;
 }
 
-.prose blockquote p:last-of-type::after {
+.prose :where(blockquote p:last-of-type):not(:where([class~="not-prose"] *))::after {
   content: close-quote;
 }
 
-.prose h1 {
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-900);
   font-weight: 800;
   font-size: 2.25em;
@@ -736,7 +552,11 @@ video {
   position: relative;
 }
 
-.prose h2 {
+.prose :where(h1 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 900;
+}
+
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-800);
   font-weight: 700;
   font-size: 1.5em;
@@ -746,7 +566,11 @@ video {
   position: relative;
 }
 
-.prose h3 {
+.prose :where(h2 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 800;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-800);
   font-weight: 600;
   font-size: 1.25em;
@@ -756,7 +580,11 @@ video {
   position: relative;
 }
 
-.prose h4 {
+.prose :where(h3 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 700;
+}
+
+.prose :where(h4):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-800);
   font-weight: 600;
   margin-top: 1.5em;
@@ -765,35 +593,45 @@ video {
   position: relative;
 }
 
-.prose figure figcaption {
-  color: #6b7280;
+.prose :where(h4 strong):not(:where([class~="not-prose"] *)) {
+  font-weight: 700;
+}
+
+.prose :where(figure > *):not(:where([class~="not-prose"] *)) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.prose :where(figcaption):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-captions);
   font-size: 0.875em;
   line-height: 1.4285714;
   margin-top: 0.8571429em;
 }
 
-.prose code {
+.prose :where(code):not(:where([class~="not-prose"] *)) {
   color: var(--color-secondary-700);
   font-weight: 600;
   font-size: 0.875em;
 }
 
-.prose code::before {
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
   content: "`";
 }
 
-.prose code::after {
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
   content: "`";
 }
 
-.prose a code {
+.prose :where(a code):not(:where([class~="not-prose"] *)) {
   color: var(--color-secondary-700);
 }
 
-.prose pre {
+.prose :where(pre):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-700);
   background-color: var(--color-neutral-50);
   overflow-x: auto;
+  font-weight: 400;
   font-size: 0.875em;
   line-height: 1.7142857;
   margin-top: 1.7142857em;
@@ -805,27 +643,27 @@ video {
   padding-left: 1.1428571em;
 }
 
-.prose pre code {
+.prose :where(pre code):not(:where([class~="not-prose"] *)) {
   background-color: transparent;
   border-width: 0;
   border-radius: 0;
   padding: 0;
-  font-weight: 400;
+  font-weight: inherit;
   color: var(--color-neutral-700);
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
 }
 
-.prose pre code::before {
+.prose :where(pre code):not(:where([class~="not-prose"] *))::before {
   content: none;
 }
 
-.prose pre code::after {
+.prose :where(pre code):not(:where([class~="not-prose"] *))::after {
   content: none;
 }
 
-.prose table {
+.prose :where(table):not(:where([class~="not-prose"] *)) {
   width: 100%;
   table-layout: auto;
   text-align: left;
@@ -835,31 +673,32 @@ video {
   line-height: 1.7142857;
 }
 
-.prose thead {
-  color: var(--color-neutral-800);
-  font-weight: 600;
+.prose :where(thead):not(:where([class~="not-prose"] *)) {
   border-bottom-width: 1px;
   border-bottom-color: var(--color-neutral-500);
+  color: var(--color-neutral-800);
 }
 
-.prose thead th {
+.prose :where(thead th):not(:where([class~="not-prose"] *)) {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
   vertical-align: bottom;
   padding-right: 0.5714286em;
   padding-bottom: 0.5714286em;
   padding-left: 0.5714286em;
 }
 
-.prose tbody tr {
+.prose :where(tbody tr):not(:where([class~="not-prose"] *)) {
   border-bottom-width: 1px;
   border-bottom-color: var(--color-neutral-300);
 }
 
-.prose tbody tr:last-child {
+.prose :where(tbody tr:last-child):not(:where([class~="not-prose"] *)) {
   border-bottom-width: 0;
 }
 
-.prose tbody td {
-  vertical-align: top;
+.prose :where(tbody td):not(:where([class~="not-prose"] *)) {
+  vertical-align: baseline;
   padding-top: 0.5714286em;
   padding-right: 0.5714286em;
   padding-bottom: 0.5714286em;
@@ -867,125 +706,158 @@ video {
 }
 
 .prose {
+  --tw-prose-body: #374151;
+  --tw-prose-headings: #111827;
+  --tw-prose-lead: #4b5563;
+  --tw-prose-links: #111827;
+  --tw-prose-bold: #111827;
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: #d1d5db;
+  --tw-prose-hr: #e5e7eb;
+  --tw-prose-quotes: #111827;
+  --tw-prose-quote-borders: #e5e7eb;
+  --tw-prose-captions: #6b7280;
+  --tw-prose-code: #111827;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #d1d5db;
+  --tw-prose-td-borders: #e5e7eb;
+  --tw-prose-invert-body: #d1d5db;
+  --tw-prose-invert-headings: #fff;
+  --tw-prose-invert-lead: #9ca3af;
+  --tw-prose-invert-links: #fff;
+  --tw-prose-invert-bold: #fff;
+  --tw-prose-invert-counters: #9ca3af;
+  --tw-prose-invert-bullets: #4b5563;
+  --tw-prose-invert-hr: #374151;
+  --tw-prose-invert-quotes: #f3f4f6;
+  --tw-prose-invert-quote-borders: #374151;
+  --tw-prose-invert-captions: #9ca3af;
+  --tw-prose-invert-code: #fff;
+  --tw-prose-invert-pre-code: #d1d5db;
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: #4b5563;
+  --tw-prose-invert-td-borders: #374151;
   font-size: 1rem;
   line-height: 1.75;
 }
 
-.prose p {
+.prose :where(p):not(:where([class~="not-prose"] *)) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;
 }
 
-.prose img {
+.prose :where(img):not(:where([class~="not-prose"] *)) {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-.prose video {
+.prose :where(video):not(:where([class~="not-prose"] *)) {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-.prose figure {
+.prose :where(figure):not(:where([class~="not-prose"] *)) {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-.prose figure > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.prose h2 code {
+.prose :where(h2 code):not(:where([class~="not-prose"] *)) {
   font-size: 0.875em;
 }
 
-.prose h3 code {
+.prose :where(h3 code):not(:where([class~="not-prose"] *)) {
   font-size: 0.9em;
 }
 
-.prose ol {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
-}
-
-.prose ul {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
-}
-
-.prose li {
+.prose :where(li):not(:where([class~="not-prose"] *)) {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-.prose > ul > li p {
+.prose :where(ol > li):not(:where([class~="not-prose"] *)) {
+  padding-left: 0.375em;
+}
+
+.prose :where(ul > li):not(:where([class~="not-prose"] *)) {
+  padding-left: 0.375em;
+}
+
+.prose > :where(ul > li p):not(:where([class~="not-prose"] *)) {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
 
-.prose > ul > li > *:first-child {
+.prose > :where(ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
   margin-top: 1.25em;
 }
 
-.prose > ul > li > *:last-child {
+.prose > :where(ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 1.25em;
 }
 
-.prose > ol > li > *:first-child {
+.prose > :where(ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
   margin-top: 1.25em;
 }
 
-.prose > ol > li > *:last-child {
+.prose > :where(ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 1.25em;
 }
 
-.prose ul ul, .prose ul ol, .prose ol ul, .prose ol ol {
+.prose :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
 
-.prose hr + * {
+.prose :where(hr + *):not(:where([class~="not-prose"] *)) {
   margin-top: 0;
 }
 
-.prose h2 + * {
+.prose :where(h2 + *):not(:where([class~="not-prose"] *)) {
   margin-top: 0;
 }
 
-.prose h3 + * {
+.prose :where(h3 + *):not(:where([class~="not-prose"] *)) {
   margin-top: 0;
 }
 
-.prose h4 + * {
+.prose :where(h4 + *):not(:where([class~="not-prose"] *)) {
   margin-top: 0;
 }
 
-.prose thead th:first-child {
+.prose :where(thead th:first-child):not(:where([class~="not-prose"] *)) {
   padding-left: 0;
 }
 
-.prose thead th:last-child {
+.prose :where(thead th:last-child):not(:where([class~="not-prose"] *)) {
   padding-right: 0;
 }
 
-.prose tbody td:first-child {
+.prose :where(tbody td:first-child):not(:where([class~="not-prose"] *)) {
   padding-left: 0;
 }
 
-.prose tbody td:last-child {
+.prose :where(tbody td:last-child):not(:where([class~="not-prose"] *)) {
   padding-right: 0;
 }
 
-.prose > :first-child {
+.prose > :where(:first-child):not(:where([class~="not-prose"] *)) {
   margin-top: 0;
 }
 
-.prose > :last-child {
+.prose > :where(:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
 }
 
-.prose kbd {
+.prose :where(ol > li):not(:where([class~="not-prose"] *))::before {
+  color: var(--color-neutral-800);
+}
+
+.prose :where(ul > li):not(:where([class~="not-prose"] *))::before {
+  background-color: var(--color-neutral-500);
+}
+
+.prose :where(kbd):not(:where([class~="not-prose"] *)) {
   background-color: var(--color-neutral-200);
   padding: 0.1rem 0.4rem;
   border-radius: 0.25rem;
@@ -993,16 +865,16 @@ video {
   font-weight: 600;
 }
 
-.prose mark {
+.prose :where(mark):not(:where([class~="not-prose"] *)) {
   background-color: var(--color-secondary-200);
   padding: 0.1rem 0.2rem;
   border-radius: 0.12rem;
 }
 
 body a, body button {
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1019,7 +891,8 @@ body a, body button {
 .prose .heading-anchor {
   position: absolute;
   top: 0px;
-  text-decoration: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   opacity: 0;
   width: 1.1em;
   left: -1.1em;
@@ -1028,27 +901,19 @@ body a, body button {
 .prose .heading-anchor:hover {
   background-color: transparent;
   color: var(--color-primary-600);
-  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .prose .heading-anchor:hover, .prose .heading-anchor:focus, .prose h2:hover > .heading-anchor, .prose h3:hover > .heading-anchor, .prose h4:hover > .heading-anchor {
   opacity: 1;
 }
 
-/* Prose escape hatch */
-
-.no-prose > p {
-  margin-top: 0px;
-}
-
-.no-prose > p:last-child {
-  margin-bottom: 0px;
-}
-
 /* Article pagination */
 
 .article-pagination a:hover .article-pagination-title {
-  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   -webkit-text-decoration-color: var(--color-primary-500);
           text-decoration-color: var(--color-primary-500);
 }
@@ -1853,7 +1718,8 @@ body a, body button {
 /* GenericUnderline */
 
 .chroma .gl {
-  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 /* TextWhitespace */
@@ -2048,7 +1914,7 @@ body a, body button {
   max-width: 100%;
 }
 
-.flex-grow {
+.grow {
   flex-grow: 1;
 }
 
@@ -2381,7 +2247,8 @@ body a, body button {
 }
 
 .\!no-underline {
-  text-decoration: none !important;
+  -webkit-text-decoration-line: none !important;
+          text-decoration-line: none !important;
 }
 
 .first\:mt-8:first-child {
@@ -2425,30 +2292,31 @@ body a, body button {
 }
 
 .hover\:underline:hover {
-  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
-.hover\:underline-neutral-300:hover {
-  -webkit-text-decoration-color: var(--color-neutral-300);
-          text-decoration-color: var(--color-neutral-300);
-}
-
-.hover\:underline-primary-400:hover {
-  -webkit-text-decoration-color: var(--color-primary-400);
-          text-decoration-color: var(--color-primary-400);
-}
-
-.hover\:underline-primary-500:hover {
+.hover\:decoration-primary-500:hover {
   -webkit-text-decoration-color: var(--color-primary-500);
           text-decoration-color: var(--color-primary-500);
 }
 
-.hover\:underline-offset-small:hover {
-  text-underline-offset: 2px;
+.hover\:decoration-neutral-300:hover {
+  -webkit-text-decoration-color: var(--color-neutral-300);
+          text-decoration-color: var(--color-neutral-300);
 }
 
-.hover\:underline-thickness-bold:hover {
+.hover\:decoration-primary-400:hover {
+  -webkit-text-decoration-color: var(--color-primary-400);
+          text-decoration-color: var(--color-primary-400);
+}
+
+.hover\:decoration-2:hover {
   text-decoration-thickness: 2px;
+}
+
+.hover\:underline-offset-2:hover {
+  text-underline-offset: 2px;
 }
 
 .dark .dark\:prose-light {
@@ -2461,84 +2329,84 @@ body a, body button {
           text-decoration-color: var(--color-neutral-500);
 }
 
-.dark .dark\:prose-light a:hover {
+:where(.dark .dark\:prose-light a:hover):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral);
   text-decoration: none;
 }
 
-.dark .dark\:prose-light strong {
+.dark .dark\:prose-light :where(strong):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral);
 }
 
-.dark .dark\:prose-light ol > li::before {
+.dark .dark\:prose-light :where(ol > li):not(:where([class~="not-prose"] *))::before {
   color: var(--color-neutral-400);
 }
 
-.dark .dark\:prose-light ul > li::before {
+.dark .dark\:prose-light :where(ul > li):not(:where([class~="not-prose"] *))::before {
   background-color: var(--color-neutral-600);
 }
 
-.dark .dark\:prose-light hr {
+.dark .dark\:prose-light :where(hr):not(:where([class~="not-prose"] *)) {
   border-color: var(--color-neutral-500);
 }
 
-.dark .dark\:prose-light blockquote {
+.dark .dark\:prose-light :where(blockquote):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-200);
   border-left-color: var(--color-primary-900);
 }
 
-.dark .dark\:prose-light h1 {
+.dark .dark\:prose-light :where(h1):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral);
 }
 
-.dark .dark\:prose-light h2 {
+.dark .dark\:prose-light :where(h2):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-50);
 }
 
-.dark .dark\:prose-light h3 {
+.dark .dark\:prose-light :where(h3):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-50);
 }
 
-.dark .dark\:prose-light h4 {
+.dark .dark\:prose-light :where(h4):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-50);
 }
 
-.dark .dark\:prose-light figure figcaption {
+.dark .dark\:prose-light :where(figure figcaption):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-400);
 }
 
-.dark .dark\:prose-light code {
+.dark .dark\:prose-light :where(code):not(:where([class~="not-prose"] *)) {
   color: var(--color-secondary-400);
 }
 
-.dark .dark\:prose-light a code {
+.dark .dark\:prose-light :where(a code):not(:where([class~="not-prose"] *)) {
   color: var(--color-secondary-400);
 }
 
-.dark .dark\:prose-light pre {
+.dark .dark\:prose-light :where(pre):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-200);
   background-color: var(--color-neutral-700);
 }
 
-.dark .dark\:prose-light pre code {
+.dark .dark\:prose-light :where(pre code):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-200);
 }
 
-.dark .dark\:prose-light thead {
+.dark .dark\:prose-light :where(thead):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral);
   border-bottom-color: var(--color-neutral-500);
 }
 
-.dark .dark\:prose-light tbody tr {
+.dark .dark\:prose-light :where(tbody tr):not(:where([class~="not-prose"] *)) {
   border-bottom-color: var(--color-neutral-700);
 }
 
-.dark .dark\:prose-light kbd {
+.dark .dark\:prose-light :where(kbd):not(:where([class~="not-prose"] *)) {
   background-color: var(--color-neutral-700);
   color: var(--color-neutral-300);
 }
 
-.dark .dark\:prose-light mark {
+.dark .dark\:prose-light :where(mark):not(:where([class~="not-prose"] *)) {
   background-color: var(--color-secondary-400);
 }
 
@@ -2604,11 +2472,6 @@ body a, body button {
 
 .dark .dark\:text-neutral-800 {
   color: var(--color-neutral-800);
-}
-
-.dark .dark\:underline-neutral-600 {
-  -webkit-text-decoration-color: var(--color-neutral-600);
-          text-decoration-color: var(--color-neutral-600);
 }
 
 .dark .dark\:hover\:bg-primary-400:hover {

@@ -31,14 +31,9 @@ body button {
   @apply opacity-100;
 }
 
-/* Prose escape hatch */
-.no-prose > p {
-  @apply mt-0 last:mb-0;
-}
-
 /* Article pagination */
 .article-pagination a:hover .article-pagination-title {
-  @apply underline underline-primary-500;
+  @apply underline decoration-primary-500;
 }
 
 .article-pagination a:hover .article-pagination-direction {

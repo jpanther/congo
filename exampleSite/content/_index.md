@@ -11,7 +11,7 @@ A simple, lightweight theme for Hugo built with Tailwind CSS.
   <span class="flex items-center pr-3 text-primary-400">
     {{< icon "exclamation-triangle" >}}
   </span>
-  <span class="flex items-center justify-between flex-grow dark:text-neutral-300">
+  <span class="flex items-center justify-between grow dark:text-neutral-300">
     <span class="prose dark:text-neutral">This is a demo of the <code id="layout">page</code> layout.</span>
     <button
       class="px-4 !text-neutral !no-underline rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"

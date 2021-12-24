@@ -6,7 +6,7 @@
         {{ range .Site.Menus.footer }}
           <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
               href="{{ .URL }}"
               title="{{ .Title }}"
               >{{ .Name | markdownify | emojify }}</a
@@ -31,10 +31,10 @@
       {{/* Theme attribution */}}
       {{ if .Site.Params.attribution | default true }}
         <p class="text-xs text-neutral-400 dark:text-neutral-600">
-          {{ $hugo := printf `<a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
+          {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
             href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
           }}
-          {{ $congo := printf `<a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>` }}
+          {{ $congo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>` }}
           {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Congo" $congo) | safeHTML }}
         </p>
       {{ end }}

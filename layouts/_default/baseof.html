@@ -8,7 +8,7 @@
     class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
   >
     {{- partial "header.html" . -}}
-    <main class="flex-grow">{{- block "main" . }}{{- end }}</main>
+    <main class="grow">{{- block "main" . }}{{- end }}</main>
     {{- partial "footer.html" . -}}
   </body>
 </html>
