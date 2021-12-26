@@ -32,8 +32,7 @@
       {{ if .Site.Params.attribution | default true }}
         <p class="text-xs text-neutral-400 dark:text-neutral-600">
           {{ $hugo := printf `<a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
-          }}
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>` }}
           {{ $congo := printf `<a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>` }}
           {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Congo" $congo) | safeHTML }}
         </p>
