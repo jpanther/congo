@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Error when building using older Hugo versions ([#65](https://github.com/jpanther/congo/pull/65))
+
 ## [1.6.0] - 2021-12-21
 
 ### Added
