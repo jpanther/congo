@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Error when building using older Hugo versions ([#65](https://github.com/jpanther/congo/pull/65))
+- Error when serving sites using blogdown ([#66](https://github.com/jpanther/congo/pull/66))
 
 ## [1.6.0] - 2021-12-21
 
