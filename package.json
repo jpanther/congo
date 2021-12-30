@@ -1,6 +1,6 @@
 {
   "name": "hugo-congo-theme",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Congo theme for Hugo",
   "main": "index.js",
   "scripts": {
