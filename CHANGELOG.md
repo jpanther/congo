@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.6.1] - 2021-12-31
+
+### Added
+
+- Icon for Blogger ([#71](https://github.com/jpanther/congo/pull/71))
+
+### Fixed
+
+- Error when building using older Hugo versions ([#65](https://github.com/jpanther/congo/pull/65))
+- Error when serving sites using blogdown ([#66](https://github.com/jpanther/congo/pull/66))
+
 ## [1.6.0] - 2021-12-21
 
 ### Added
@@ -198,7 +209,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v1.6.0...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v1.6.1...HEAD
+[1.6.1]: https://github.com/jpanther/congo/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/jpanther/congo/compare/v1.5.3...v1.6.0
 [1.5.3]: https://github.com/jpanther/congo/compare/v1.5.2...v1.5.3
 [1.5.2]: https://github.com/jpanther/Congo/compare/v1.5.1...v1.5.2
