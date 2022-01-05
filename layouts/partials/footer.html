@@ -24,7 +24,7 @@
           {{ . | emojify | markdownify }}
         {{- else }}
           &copy;
-          {{ now.Format "2006" }}
+          <script>document.write(new Date().getFullYear())</script>
           {{ .Site.Author.name | markdownify | emojify }}
         {{- end }}
       </p>
