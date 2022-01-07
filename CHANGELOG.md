@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.6.2] - 2022-01-07
+
 ### Changed
 
 - Upgrade to Chart.js v3.7.0
@@ -219,7 +221,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v1.6.1...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v1.6.2...HEAD
+[1.6.2]: https://github.com/jpanther/congo/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/jpanther/congo/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/jpanther/congo/compare/v1.5.3...v1.6.0
 [1.5.3]: https://github.com/jpanther/congo/compare/v1.5.2...v1.5.3
