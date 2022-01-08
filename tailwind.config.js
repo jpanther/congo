@@ -61,9 +61,9 @@ module.exports = {
                 textDecorationColor: theme("colors.primary.300"),
                 fontWeight: "500",
                 "&:hover": {
-                  color: theme("colors.neutral.DEFAULT"),
-                  textDecoration: "none",
-                  backgroundColor: theme("colors.primary.600"),
+                  color: `${theme("colors.neutral.DEFAULT")} !important`,
+                  textDecoration: "none !important",
+                  backgroundColor: `${theme("colors.primary.600")} !important`,
                   borderRadius: "0.09rem",
                 },
               },
@@ -115,8 +115,10 @@ module.exports = {
               "pre code": {
                 color: theme("colors.neutral.700"),
               },
-              thead: {
+              "thead th": {
                 color: theme("colors.neutral.800"),
+              },
+              "thead tr": {
                 borderBottomColor: theme("colors.neutral.500"),
               },
               "tbody tr": {
@@ -145,8 +147,8 @@ module.exports = {
                 color: theme("colors.primary.400"),
                 textDecorationColor: theme("colors.neutral.500"),
                 "&:hover": {
-                  color: theme("colors.neutral.DEFAULT"),
-                  textDecoration: "none",
+                  color: `${theme("colors.neutral.DEFAULT")} !important`,
+                  textDecoration: "none !important",
                 },
               },
               strong: {
@@ -193,8 +195,10 @@ module.exports = {
               "pre code": {
                 color: theme("colors.neutral.200"),
               },
-              thead: {
+              "thead th": {
                 color: theme("colors.neutral.DEFAULT"),
+              },
+              "thead tr": {
                 borderBottomColor: theme("colors.neutral.500"),
               },
               "tbody tr": {
