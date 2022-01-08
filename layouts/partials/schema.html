@@ -17,7 +17,7 @@
     "articleSection": "{{ (site.GetPage .Section).Title }}",
     "name": "{{ .Title | safeJS }}",
     "headline": "{{ .Title | safeJS }}",
-    "description": "{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}",
+    "description": "{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}",
     {{ with .Site.LanguageCode }}"inLanguage": {{ . }},{{ end }}
     "author" : {
       "@type": "Person",
@@ -33,8 +33,8 @@
     {{ with .PublishDate }}"datePublished": "{{ .Format $iso8601 }}",{{ end }}
     {{ with .Lastmod }}"dateModified": "{{ .Format $iso8601 }}",{{ end }}
     "url" : "{{ .Permalink }}",
-    "wordCount": "{{ .WordCount }}",
-    "keywords": [{{ if .IsPage}}{{ range $index, $tag := .Params.tags }}{{ $tag }},{{ end }}{{ else }}{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}{{ printf "%s," $term }}{{ end }}{{ end }}{{ end }}]
+    {{ with .Params.tags }}"keywords": {{ . }},{{ end }}
+    "wordCount": "{{ .WordCount }}"
   }
   </script>
 {{ end }}
