@@ -1,0 +1,54 @@
+# -- Theme Options --
+# These options control how the theme functions and allow you to
+# customise the display of your website.
+#
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/configuration/#theme-parameters
+
+colorScheme = "congo"
+# darkMode = "auto"
+# darkToggle = false
+# logo = "img/logo.jpg"
+# description = "My awesome website"
+mainSections = ["samples"]
+# robots = ""
+
+[homepage]
+  layout = "custom" # valid options: page, profile, custom
+  showRecent = true
+
+[article]
+  showDate = true
+  dateFormat = "2 January 2006"
+  showAuthor = true
+  showBreadcrumbs = false
+  showDraftLabel = true
+  showEdit = true
+  editURL = "https://github.com/jpanther/congo/tree/dev/exampleSite/content/"
+  editAppendPath = true
+  showHeadingAnchors = true
+  showPagination = true
+  showReadingTime = true
+  showWordCount = false
+  # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
+
+[list]
+  showBreadcrumbs = true
+  showSummary = false
+  groupByYear = false
+
+[taxonomy]
+  showTermCount = true
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[fathomAnalytics]
+  # site = "ABC12345"
+  # domain = "llama.yoursite.com"
+
+[verification]
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""
