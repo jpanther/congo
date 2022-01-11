@@ -1,9 +1,13 @@
 languageCode = "en"
 languageName = "English"
+displayName = "EN"
+htmlCode = "en"
 weight = 1
 
-title = "Congo EN"
+title = "Congo"
 # copyright = "Copy, _right?_ :thinking_face:"
+
+dateFormat = "2 January 2006"
 
 [author]
   # name = "Your name here"

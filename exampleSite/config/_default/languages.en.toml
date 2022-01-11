@@ -7,6 +7,8 @@ weight = 1
 title = "Congo"
 # copyright = "Copy, _right?_ :thinking_face:"
 
+dateFormat = "2 January 2006"
+
 [author]
   name = "Congo"
   image = "img/author.jpg"
