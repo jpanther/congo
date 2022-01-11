@@ -6,7 +6,7 @@
     {{ if .Site.Params.Logo -}}
       {{ $logo := resources.Get .Site.Params.Logo }}
       {{ if $logo }}
-        <a href="{{ "/" | relURL }}">
+        <a href="{{ "/" | relLangURL }}">
           <img
             src="{{ $logo.RelPermalink }}"
             width="{{ div $logo.Width 2 }}"
@@ -20,10 +20,11 @@
       <a
         class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
         rel="me"
-        href="{{ "/" | relURL }}"
+        href="{{ "/" | relLangURL }}"
         >{{ .Site.Title | markdownify | emojify }}</a
       >
     {{- end }}
+    {{ partial "translations.html" . }}
   </div>
   {{/* Main menu */}}
   {{ if .Site.Menus.main }}

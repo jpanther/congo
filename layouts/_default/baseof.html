@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html
-  lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}"
+  lang="{{ with .Site.Language.Params.htmlCode | default (.Site.LanguageCode | default "en") }}
+    {{- . -}}
+  {{ end }}"
   {{ if .Site.Params.darkMode | default false }}class="dark"{{ end }}
 >
   {{- partial "head.html" . -}}

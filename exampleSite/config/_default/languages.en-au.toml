@@ -1,8 +1,10 @@
-languageCode = "en-AU"
+languageCode = "en-au"
 languageName = "English (Australia)"
+displayName = ":flag-au:"
+htmlCode = "en-AU"
 weight = 1
 
-title = "Congo :flag-au:"
+title = "Congo"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [author]
