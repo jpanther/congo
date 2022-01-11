@@ -43,8 +43,6 @@
       <div class="text-sm cursor-pointer text-neutral-400 dark:text-neutral-500">
         <button
           id="dark-toggle"
-          onclick="setPreferredAppearance('dark');"
-          oncontextmenu="setPreferredAppearance('default'); return false;"
           class="inline px-2 py-1 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400"
           title="{{ i18n "footer.dark_appearance" }}"
         >
@@ -52,8 +50,6 @@
         </button>
         <button
           id="light-toggle"
-          onclick="setPreferredAppearance('light');"
-          oncontextmenu="setPreferredAppearance('default'); return false;"
           class="hidden px-2 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
           title="{{ i18n "footer.light_appearance" }}"
         >
