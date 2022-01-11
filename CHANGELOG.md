@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Upgrade to Tailwind v3.0.12
+- Author images are now Hugo assets
 
 ## [1.6.2] - 2022-01-07
 
