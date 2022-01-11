@@ -8,7 +8,7 @@
   {{- else -}}
     ltr
   {{- end }}"
-  {{ if .Site.Params.darkMode | default false }}class="dark"{{ end }}
+  class="scroll-smooth {{ if .Site.Params.darkMode | default false }}dark{{ end }}"
 >
   {{- partial "head.html" . -}}
   <body
