@@ -82,6 +82,7 @@ module.exports = {
               blockquote: {
                 color: theme("colors.neutral.800"),
                 borderLeftColor: theme("colors.primary.200"),
+                borderRightColor: theme("colors.primary.200"),
               },
               h1: {
                 color: theme("colors.neutral.900"),
@@ -166,6 +167,7 @@ module.exports = {
               blockquote: {
                 color: theme("colors.neutral.200"),
                 borderLeftColor: theme("colors.primary.900"),
+                borderRightColor: theme("colors.primary.900"),
               },
               h1: {
                 color: theme("colors.neutral.DEFAULT"),

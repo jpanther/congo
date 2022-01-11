@@ -40,6 +40,31 @@ body button {
   @apply text-primary-700 dark:text-primary-400;
 }
 
+/* RTL support */
+[dir="rtl"] .prose blockquote {
+  @apply pr-4 border-l-0 border-r-4;
+}
+
+[dir="rtl"] .prose ul > li,
+[dir="rtl"] .prose ol > li {
+  @apply pl-0 pr-2 mr-7;
+}
+
+[dir="rtl"] .prose ol > li:before,
+[dir="rtl"] .prose ul > li:before {
+  @apply left-auto right-1;
+}
+
+[dir="rtl"] .prose thead td:first-child,
+[dir="rtl"] .prose thead th:first-child {
+  @apply pr-0;
+}
+
+[dir="rtl"] .prose thead td:last-child,
+[dir="rtl"] .prose thead th:last-child {
+  @apply pl-0;
+}
+
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {

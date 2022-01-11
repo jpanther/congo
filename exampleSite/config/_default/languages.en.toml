@@ -3,6 +3,7 @@ languageName = "English (Australia)"
 displayName = ":flag-au:"
 htmlCode = "en-AU"
 weight = 1
+rtl = false
 
 title = "Congo"
 # copyright = "Copy, _right?_ :thinking_face:"

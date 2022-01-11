@@ -573,6 +573,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.6em;
   margin-bottom: 1.6em;
   padding-left: 1em;
+  border-right-color: var(--color-primary-200);
 }
 
 .prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
@@ -968,6 +969,33 @@ body a, body button {
 
 .dark .article-pagination a:hover .article-pagination-direction {
   color: var(--color-primary-400);
+}
+
+/* RTL support */
+
+[dir="rtl"] .prose blockquote {
+  border-left-width: 0px;
+  border-right-width: 4px;
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .prose ul > li, [dir="rtl"] .prose ol > li {
+  margin-right: 1.75rem;
+  padding-left: 0px;
+  padding-right: 0.5rem;
+}
+
+[dir="rtl"] .prose ol > li:before, [dir="rtl"] .prose ul > li:before {
+  left: auto;
+  right: 0.25rem;
+}
+
+[dir="rtl"] .prose thead td:first-child, [dir="rtl"] .prose thead th:first-child {
+  padding-right: 0px;
+}
+
+[dir="rtl"] .prose thead td:last-child, [dir="rtl"] .prose thead th:last-child {
+  padding-left: 0px;
 }
 
 /* -- Chroma Highlight -- */
@@ -1830,20 +1858,16 @@ body a, body button {
   margin-top: -0.5rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
 }
 
-.mt-\[0\.1rem\] {
-  margin-top: 0.1rem;
-}
-
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.mt-\[0\.1rem\] {
+  margin-top: 0.1rem;
 }
 
 .\!mt-0 {
@@ -1852,14 +1876,6 @@ body a, body button {
 
 .\!mb-0 {
   margin-bottom: 0px !important;
-}
-
-.mr-4 {
-  margin-right: 1rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
 }
 
 .mb-1 {
@@ -2103,14 +2119,14 @@ body a, body button {
   padding-right: 0.5rem;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .py-\[1px\] {
@@ -2161,10 +2177,6 @@ body a, body button {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pr-3 {
-  padding-right: 0.75rem;
 }
 
 .text-center {
@@ -2363,6 +2375,62 @@ body a, body button {
   text-underline-offset: 2px;
 }
 
+[dir="ltr"] .ltr\:ml-2 {
+  margin-left: 0.5rem;
+}
+
+[dir="ltr"] .ltr\:mr-4 {
+  margin-right: 1rem;
+}
+
+[dir="ltr"] .ltr\:ml-1 {
+  margin-left: 0.25rem;
+}
+
+[dir="ltr"] .ltr\:inline {
+  display: inline;
+}
+
+[dir="ltr"] .ltr\:hidden {
+  display: none;
+}
+
+[dir="ltr"] .ltr\:pr-3 {
+  padding-right: 0.75rem;
+}
+
+[dir="ltr"] .ltr\:text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:mr-2 {
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .rtl\:ml-4 {
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .rtl\:mr-1 {
+  margin-right: 0.25rem;
+}
+
+[dir="rtl"] .rtl\:inline {
+  display: inline;
+}
+
+[dir="rtl"] .rtl\:hidden {
+  display: none;
+}
+
+[dir="rtl"] .rtl\:pl-3 {
+  padding-left: 0.75rem;
+}
+
+[dir="rtl"] .rtl\:text-left {
+  text-align: left;
+}
+
 .dark .dark\:prose-light {
   color: var(--color-neutral-300);
 }
@@ -2397,6 +2465,7 @@ body a, body button {
 .dark .dark\:prose-light :where(blockquote):not(:where([class~="not-prose"] *)) {
   color: var(--color-neutral-200);
   border-left-color: var(--color-primary-900);
+  border-right-color: var(--color-primary-900);
 }
 
 .dark .dark\:prose-light :where(h1):not(:where([class~="not-prose"] *)) {
@@ -2575,6 +2644,22 @@ body a, body button {
 
   .sm\:last\:mr-0:last-child {
     margin-right: 0px;
+  }
+
+  [dir="ltr"] .ltr\:sm\:mr-7 {
+    margin-right: 1.75rem;
+  }
+
+  [dir="ltr"] .ltr\:sm\:last\:mr-0:last-child {
+    margin-right: 0px;
+  }
+
+  [dir="rtl"] .rtl\:sm\:ml-7 {
+    margin-left: 1.75rem;
+  }
+
+  [dir="rtl"] .rtl\:sm\:last\:ml-0:last-child {
+    margin-left: 0px;
   }
 }
 

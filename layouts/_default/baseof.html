@@ -3,6 +3,11 @@
   lang="{{ with .Site.Language.Params.htmlCode | default (.Site.LanguageCode | default "en") }}
     {{- . -}}
   {{ end }}"
+  dir="{{ if .Site.Language.Params.rtl | default false -}}
+    rtl
+  {{- else -}}
+    ltr
+  {{- end }}"
   {{ if .Site.Params.darkMode | default false }}class="dark"{{ end }}
 >
   {{- partial "head.html" . -}}

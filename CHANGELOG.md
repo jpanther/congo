@@ -9,11 +9,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Multilingual support
+- Right-to-left (RTL) language support
 
 ### Changed
 
 - Upgrade to Tailwind v3.0.12
 - Author images are now Hugo assets
+- Required Hugo version is now 0.87.0 or later
 
 ## [1.6.2] - 2022-01-07
 
