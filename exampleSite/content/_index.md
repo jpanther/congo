@@ -26,4 +26,4 @@ This is a demo site built entirely using Congo. It also contains a complete set 
 
 Explore the [sample pages]({{< ref "samples" >}}) to get a feel for what Congo can do. If you like what you see, check out the project on [Github](https://github.com/jpanther/congo) or read the [Installation guide]({{< ref "docs/installation" >}}) to get started.
 
-{{< figure src="mountains.jpg" width="1200" height="800" caption="Photo by [Anna Scarfiello](https://unsplash.com/@little_anne?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)." >}}
+![A stylised photograph of a purple squid on a pink backdrop.](squid.jpg "Photo by [Jippe Joosten](https://unsplash.com/@jippe_joosten?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/vibrant-purple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).")

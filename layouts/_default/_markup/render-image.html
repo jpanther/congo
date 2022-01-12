@@ -1,0 +1,19 @@
+{{ $altText := .Text }}
+{{ $caption := .Title }}
+{{ with $.Page.Resources.GetMatch (.Destination) }}
+  <figure>
+    <img
+      class="my-0"
+      srcset="
+        {{ (.Resize "320x").RelPermalink }} 320w,
+        {{ (.Resize "635x").RelPermalink }} 635w,
+        {{ (.Resize "1024x").RelPermalink }} 1024w,
+        {{ (.Resize "1270x").RelPermalink }} 2x"
+      src="{{ (.Resize "635x").RelPermalink }}"
+      alt="{{ $altText }}"
+    />
+    <figcaption>{{ $caption | markdownify }}</figcaption>
+  </figure>
+{{ else }}
+  {{ errorf `[CONGO] Markdown image error in "%s": Resource "%s" not found. Check the path is correct or remove the image from the content.` .Page.Path .Destination }}
+{{ end }}

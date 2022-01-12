@@ -15,7 +15,7 @@ The layout of the homepage is controlled by the `homepage.layout` setting in the
 
 The default layout is the page layout. It's simply a normal content page that displays your Markdown content. It's great for static websites and provides a lot of flexibility.
 
-![Profile layout](home-page.jpg)
+![Screenshot of homepage layout](home-page.jpg)
 
 To enable the page layout, set `homepage.layout = "page"` in the `params.toml` configuration file.
 
@@ -23,7 +23,7 @@ To enable the page layout, set `homepage.layout = "page"` in the `params.toml` c
 
 The profile layout is great for personal websites and blogs. It puts the author's details front and centre by providing an image and links to social profiles.
 
-![Profile layout](home-profile.jpg)
+![Screenshot of profile layout](home-profile.jpg)
 
 The author information is provided in the `config.toml` configuration file. Refer to the [Getting Started]({{< ref "getting-started" >}}) and [Site Configuration]({{< ref "configuration#site-configuration" >}}) sections for parameter details.
 

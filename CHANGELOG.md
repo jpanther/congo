@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Multilingual support
 - Right-to-left (RTL) language support
+- Automatic Markdown image resizing and srcset generation
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
 - Author `headline` parameter
 
@@ -19,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Inline Javascript moved to external files
 - Author images are now Hugo assets
 - Required Hugo version is now 0.87.0 or later
+- Overhauled `figure` shortcode which now resizes images
 - Minor style and layout improvements
 
 ## [1.6.2] - 2022-01-07
