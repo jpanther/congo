@@ -2586,10 +2586,6 @@ body a, body button {
   color: var(--color-primary-400);
 }
 
-.dark .dark\:text-neutral-600 {
-  color: var(--color-neutral-600);
-}
-
 .dark .dark\:text-neutral-800 {
   color: var(--color-neutral-800);
 }

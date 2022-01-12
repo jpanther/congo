@@ -65,7 +65,7 @@
   {{ if eq (.Site.Params.darkMode | default "auto") "auto" }}
     {{ $darkJS := resources.Get "js/dark.js" }}
     {{ $darkJS := $darkJS | resources.Minify | resources.Fingerprint "sha512" }}    
-    <script type="text/javascript" src="{{ $darkJS.RelPermalink }}" integrity="{{ $darkJS.Data.Integrity }}"></script>
+    <script defer type="text/javascript" src="{{ $darkJS.RelPermalink }}" integrity="{{ $darkJS.Data.Integrity }}"></script>
   {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
