@@ -22,6 +22,9 @@ footer:
   light_appearance: "切换为浅色模式"
   powered_by: "由 {{ .Hugo }} &amp; {{ .Congo }} 强力驱动"
 
+# header:
+#   skip_to_main: "Skip to main content"
+
 list:
   externalurl_title: "链接到外部网站"
   no_articles: "这里还没有任何文章可以列出。"
