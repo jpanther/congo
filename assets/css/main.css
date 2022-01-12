@@ -21,7 +21,7 @@ body button {
   left: -1.1em;
 }
 .prose .heading-anchor:hover {
-  @apply underline bg-transparent text-primary-600;
+  @apply underline bg-transparent text-primary-500 !important;
 }
 .prose .heading-anchor:hover,
 .prose .heading-anchor:focus,

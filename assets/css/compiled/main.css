@@ -944,10 +944,10 @@ body a, body button {
 }
 
 .prose .heading-anchor:hover {
-  background-color: transparent;
-  color: var(--color-primary-600);
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  background-color: transparent !important;
+  color: var(--color-primary-500) !important;
+  -webkit-text-decoration-line: underline !important;
+          text-decoration-line: underline !important;
 }
 
 .prose .heading-anchor:hover, .prose .heading-anchor:focus, .prose h2:hover > .heading-anchor, .prose h3:hover > .heading-anchor, .prose h4:hover > .heading-anchor {
