@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Multilingual support
 - Right-to-left (RTL) language support
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
+- Author `headline` parameter
 
 ### Changed
 

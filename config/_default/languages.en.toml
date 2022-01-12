@@ -13,6 +13,7 @@ dateFormat = "2 January 2006"
 [author]
   # name = "Your name here"
   # image = "img/author.jpg"
+  # headline = "I'm only human"
   # bio = "A little bit about you"
   # links = [
   #   { email = "mailto:hello@your_domain.com" },

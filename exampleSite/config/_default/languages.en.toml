@@ -13,6 +13,7 @@ dateFormat = "2 January 2006"
 [author]
   name = "Congo"
   image = "author.jpg"
+  # headline = ""
   bio = "This is an example author bio, and although there's a stock photo of a dog here, this article was actually created by a human. :dog:"
   links = [
     { twitter = "https://twitter.com/" },

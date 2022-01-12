@@ -20,6 +20,11 @@
     <h1 class="text-4xl font-extrabold">
       {{ .Site.Author.name | default .Site.Title }}
     </h1>
+    {{ with .Site.Author.headline }}
+      <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
+        {{ . }}
+      </h2>
+    {{ end }}
     <div class="mt-1 text-2xl">
       {{ partialCached "author-links.html" . }}
     </div>
