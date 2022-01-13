@@ -17,14 +17,17 @@
     <div class="absolute flex self-center">
       <a
         class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
-        href="#maincontent"
+        href="#main-content"
         ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
           >&darr;</span
         >{{ i18n "header.skip_to_main" }}</a
       >
     </div>
     {{- partial "header.html" . -}}
-    <main id="maincontent" class="grow">{{- block "main" . }}{{- end }}</main>
+    <main id="main-content" class="grow">{{- block "main" . }}{{- end }}</main>
+    {{ if .Site.Params.enableSearch | default false }}
+      {{- partial "search.html" . -}}
+    {{ end }}
     {{- partial "footer.html" . -}}
   </body>
 </html>

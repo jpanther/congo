@@ -14,6 +14,14 @@ body button {
   width: 1em;
 }
 
+/* Search */
+#search-query::-webkit-search-cancel-button,
+#search-query::-webkit-search-decoration,
+#search-query::-webkit-search-results-button,
+#search-query::-webkit-search-results-decoration {
+  @apply hidden;
+}
+
 /* Heading anchors */
 .prose .heading-anchor {
   @apply absolute top-0 no-underline opacity-0;

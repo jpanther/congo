@@ -6,6 +6,7 @@
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
 colorScheme = "congo"
+enableSearch = true
 # darkMode = "auto"
 # darkToggle = false
 # logo = "img/logo.jpg"

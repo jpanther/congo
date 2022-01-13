@@ -31,6 +31,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.0",
     "chart.js": "^3.7.0",
+    "fuse.js": "^6.5.3",
     "katex": "^0.15.1",
     "mermaid": "^8.13.8",
     "prettier": "^2.3.2",
@@ -64,6 +65,10 @@
     {
       "from": "node_modules/katex/dist/fonts/",
       "to": "assets/lib/katex/fonts/"
+    },
+    {
+      "from": "node_modules/fuse.js/dist/fuse.min.js",
+      "to": "assets/lib/fuse/fuse.min.js"
     }
   ]
 }

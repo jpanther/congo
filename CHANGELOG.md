@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Multilingual support
 - Right-to-left (RTL) language support
+- Site search powered by Fuse.js
 - Automatic Markdown image resizing and srcset generation
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
 - Author `headline` parameter

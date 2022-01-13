@@ -42,6 +42,19 @@
             >
           </li>
         {{ end }}
+        {{ if .Site.Params.enableSearch | default false }}
+          <li
+            class="ltr:text-right rtl:text-left ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
+            <button
+              id="search-button"
+              class="text-base hover:text-neutral-600 dark:hover:text-neutral-300"
+              title="{{ i18n "search.open_button_title" }}"
+            >
+              {{ partial "icon.html" "search" }}
+            </button>
+          </li>
+        {{ end }}
       </ul>
     </nav>
   {{ end }}

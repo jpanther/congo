@@ -30,6 +30,11 @@ list:
   externalurl_title: "Lien d'article externe."
   no_articles: "Il n'y a pas encore d'articles ici."
 
+# search:
+#   open_button_title: "Search (/)"
+#   close_button_title: "Close (Esc)"
+#   input_placeholder: "Search"
+
 sharing:
   email: "Envoyer par email"
   facebook: "Poster sur Facebook"
