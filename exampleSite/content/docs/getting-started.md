@@ -65,7 +65,7 @@ Congo defines a three-colour palette that is used throughout the theme. Each mai
 
 #### Slate
 
-{{< swatches "#6B7280" "#6B7280" "#6B7280" >}}
+{{< swatches "#6B7280" "#64748b" "#6B7280" >}}
 
 Although these are the default schemes, you can also create your own. Refer to the [Advanced Customisation]({{< ref "advanced-customisation#colour-schemes" >}}) section for details.
 
