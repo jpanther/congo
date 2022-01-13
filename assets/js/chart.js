@@ -1,5 +1,5 @@
 function css(name) {
-  return getComputedStyle(document.documentElement).getPropertyValue(name);
+  return "rgb(" + getComputedStyle(document.documentElement).getPropertyValue(name) + ")";
 }
 
 Chart.defaults.font.size = 14;
