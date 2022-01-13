@@ -32,7 +32,7 @@
     "@tailwindcss/typography": "^0.5.0",
     "chart.js": "^3.7.0",
     "fuse.js": "^6.5.3",
-    "katex": "^0.15.1",
+    "katex": "^0.15.2",
     "mermaid": "^8.13.8",
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "^0.0.11",
