@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Icon for Stack Overflow ([#82](https://github.com/jpanther/congo/pull/82))
+
 ## [1.6.2] - 2022-01-07
 
 ### Changed
