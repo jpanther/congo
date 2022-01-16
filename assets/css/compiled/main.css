@@ -1997,6 +1997,11 @@ body a, body button {
   margin-bottom: 0.75rem;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -2279,12 +2284,12 @@ body a, body button {
   scroll-behavior: smooth;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded {
@@ -2317,6 +2322,11 @@ body a, body button {
   border-color: rgba(var(--color-neutral-400), var(--tw-border-opacity));
 }
 
+.border-neutral-200 {
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--color-neutral-200), var(--tw-border-opacity));
+}
+
 .border-neutral-300 {
   --tw-border-opacity: 1;
   border-color: rgba(var(--color-neutral-300), var(--tw-border-opacity));
@@ -2325,11 +2335,6 @@ body a, body button {
 .border-primary-400 {
   --tw-border-opacity: 1;
   border-color: rgba(var(--color-primary-400), var(--tw-border-opacity));
-}
-
-.border-neutral-200 {
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--color-neutral-200), var(--tw-border-opacity));
 }
 
 .border-neutral-700 {
@@ -2638,6 +2643,11 @@ body a, body button {
 
 .first\:mt-8:first-child {
   margin-top: 2rem;
+}
+
+.hover\:border-primary-300:hover {
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--color-primary-300), var(--tw-border-opacity));
 }
 
 .hover\:border-primary-400:hover {
@@ -2997,6 +3007,11 @@ body a, body button {
 .dark .dark\:text-neutral-800 {
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-800), var(--tw-text-opacity));
+}
+
+.dark .dark\:hover\:border-primary-600:hover {
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--color-primary-600), var(--tw-border-opacity));
 }
 
 .dark .dark\:hover\:bg-primary-900:hover {
