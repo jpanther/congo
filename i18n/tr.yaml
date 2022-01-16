@@ -1,0 +1,40 @@
+article:
+  anchor_label: "Anchor"
+  draft: "Taslak"
+  edit_title: "İçeriği Değiştir"
+  reading_time:
+    one: "{{ .Count }} dakika"
+    other: "{{ .Count }} dakika"
+  reading_time_title: "Okuma Süresi"
+  word_count:
+    one: "{{ .Count }} kelime"
+    other: "{{ .Count }} kelime"
+
+author:
+  byline_title: "Yazar"
+
+error:
+  404_title: "Sayfa bulunamadı :confused:"
+  404_error: "Error 404"
+  404_description: "Ulaşmaya çalıştığınız sayfa yayından kaldırılmış veya hiç varolmamış."
+
+footer:
+  dark_appearance: "Karanlık görünüme geç."
+  light_appearance: "Aydınlık görünüme geç."
+  powered_by: "{{ .Hugo }} &amp; {{ .Congo }} katkılarıyla."
+
+list:
+  externalurl_title: "Harici siteye bağlantı."
+  no_articles: "Burada henüz makale yok."
+
+sharing:
+  email: "e-Posta ile Gönder"
+  facebook: "Facebook'ta Paylaş."
+  linkedin: "LinkedIn'de Paylaş."
+  pinterest: "Pinterest'e Pinle."
+  reddit: "Reddit'e Gönder."
+  twitter: "Twitter'da Tweetle."
+
+shortcode:
+  recent_articles: "Son Blog Yazıları"
+  icon_none: "İkon bulunamadı."
