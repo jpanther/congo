@@ -3,38 +3,73 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "{{ (site.GetPage "/").Permalink | safeURL }}",
     "name": "{{ .Site.Title | safeJS }}",
+    {{ with .Site.Params.description }}"description": "{{ . | safeJS }}",{{ end }}
+    {{ with .Site.LanguageCode }}"inLanguage": "{{ . }}",{{ end }}
     "url": "{{ (site.GetPage "/").Permalink | safeURL }}",
-    "description": "{{ .Site.Params.description | safeJS }}"
+    "publisher" : {
+      "@type": "Person",
+      "name": "{{ .Site.Author.name | safeJS }}",
+    },
+    {{ with .Site.Params.keywords }}"keywords": {{ . }},{{ end }}
   }
   </script>
 {{ else if .IsPage }}
   {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+  {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+  {{ $.Scratch.Delete "path" }}
+  {{ $.Scratch.Add "path" .Site.BaseURL }}
+  {{ $count := len (split $url "/") }}
   <script type="application/ld+json">
-  {
+  [{
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "articleSection": "{{ (site.GetPage .Section).Title }}",
+    "@type": "Article",
+    "articleSection": "{{ (site.GetPage .Section).Title | safeJS }}",
     "name": "{{ .Title | safeJS }}",
     "headline": "{{ .Title | safeJS }}",
-    "description": "{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}",
-    {{ with .Site.LanguageCode }}"inLanguage": {{ . }},{{ end }}
+    {{ with .Description }}"description": "{{ . | safeJS }}",{{ end }}
+    {{ with .Summary }}"abstract": "{{ . | safeJS }}",{{ end }}
+    {{ with .Site.LanguageCode }}"inLanguage": "{{ . }}",{{ end }}
+    "url" : "{{ .Permalink }}",
     "author" : {
       "@type": "Person",
       "name": "{{ .Site.Author.name | safeJS }}"
     },
-    "creator" : {
-      "@type": "Person",
-      "name": "{{ .Site.Author.name | safeJS }}"
-    },
-    "copyrightHolder": "{{ .Site.Author.name | safeJS }}",
     {{ with .PublishDate }}"copyrightYear": "{{ .Format "2006" }}",{{ end }}
-    {{ with .PublishDate }}"dateCreated": "{{ .Format $iso8601 }}",{{ end }}
+    {{ with .Date }}"dateCreated": "{{ .Format $iso8601 }}",{{ end }}
     {{ with .PublishDate }}"datePublished": "{{ .Format $iso8601 }}",{{ end }}
+    {{ with .ExpiryDate }}"expires": "{{ .Format $iso8601 }}",{{ end }}
     {{ with .Lastmod }}"dateModified": "{{ .Format $iso8601 }}",{{ end }}
-    "url" : "{{ .Permalink }}",
+    {{ if .Keywords }}
+    {{ with .Keywords }}"keywords": {{ . }},{{ end }}
+    {{ else }}
     {{ with .Params.tags }}"keywords": {{ . }},{{ end }}
+    {{ end }}
+    "mainEntityOfPage": "true",
     "wordCount": "{{ .WordCount }}"
-  }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement":
+      [{
+        "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "{{ .Site.BaseURL }}",
+            "name": "Home"
+          }
+      },{{ range $index, $element := split $url "/" }}{{ $.Scratch.Add "path" $element }}{{ if ne $element "" }}
+      {
+      "@type": "ListItem",
+        "position": {{ add $index 2 }},
+        "item": {
+          "@id": "{{ $.Scratch.Get "path" }}",
+          "name": "{{ humanize . }}"
+        }
+      }{{ if not (eq $index (sub $count 2)) }}, {{ end }}{{ $.Scratch.Add "path" "/" }}{{ end }}{{ end }}
+    ]
+  }]
   </script>
 {{ end }}
