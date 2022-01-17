@@ -917,9 +917,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 body a, body button {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -939,16 +939,6 @@ body a, body button {
 
 /* Heading anchors */
 
-.prose .heading-anchor {
-  position: absolute;
-  top: 0px;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-  opacity: 0;
-  width: 1.1em;
-  left: -1.1em;
-}
-
 .prose .heading-anchor:hover {
   background-color: transparent !important;
   --tw-text-opacity: 1 !important;
@@ -958,6 +948,10 @@ body a, body button {
 }
 
 .prose .heading-anchor:hover, .prose .heading-anchor:focus, .prose h2:hover > .heading-anchor, .prose h3:hover > .heading-anchor, .prose h4:hover > .heading-anchor {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-primary-200), var(--tw-text-opacity));
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   opacity: 1;
 }
 
@@ -1026,16 +1020,6 @@ body a, body button {
   color: rgba(var(--color-neutral-200), var(--tw-text-opacity));
 }
 
-/* Other */
-
-.chroma .x {
-}
-
-/* Error */
-
-.chroma .err {
-}
-
 /* LineTableTD */
 
 .chroma .lntd, .chroma .lntd pre {
@@ -1085,46 +1069,49 @@ body a, body button {
 
 /* LineNumbersTable */
 
-.chroma .lnt {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .lnt {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-300), var(--tw-text-opacity));
-}
-
-.chroma .lnt {
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-}
-
 /* LineNumbers */
 
-.chroma .ln {
+.chroma .lnt, .chroma .ln {
+  margin-right: 0.4em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top: 0px;
+  padding-bottom: 0px;
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-600), var(--tw-text-opacity));
 }
 
-.dark .chroma .ln {
+.dark .chroma .lnt, .dark .chroma .ln {
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-300), var(--tw-text-opacity));
-}
-
-.chroma .ln {
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
 }
 
 /* Keyword */
 
-.chroma .k {
+/* KeywordDeclaration */
+
+/* KeywordNamespace */
+
+/* KeywordPseudo */
+
+/* KeywordReserved */
+
+/* NameClass */
+
+/* NameFunctionMagic */
+
+/* NameNamespace */
+
+/* NameVariableClass */
+
+/* Operator */
+
+.chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .nc, .chroma .fm, .chroma .nn, .chroma .vc, .chroma .o {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-600), var(--tw-text-opacity));
 }
 
-.dark .chroma .k {
+.dark .chroma .k, .dark .chroma .kd, .dark .chroma .kn, .dark .chroma .kp, .dark .chroma .kr, .dark .chroma .nc, .dark .chroma .fm, .dark .chroma .nn, .dark .chroma .vc, .dark .chroma .o {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-300), var(--tw-text-opacity));
 }
@@ -1142,172 +1129,91 @@ body a, body button {
   color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
 }
 
-/* KeywordDeclaration */
-
-.chroma .kd {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .kd {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
-}
-
-/* KeywordNamespace */
-
-.chroma .kn {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .kn {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
-}
-
-/* KeywordPseudo */
-
-.chroma .kp {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .kp {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
-}
-
-/* KeywordReserved */
-
-.chroma .kr {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .kr {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
-}
-
 /* KeywordType */
 
-.chroma .kt {
+/* NameVariable */
+
+/* NameVariableInstance */
+
+/* NameVariableMagic */
+
+/* LiteralNumber */
+
+/* LiteralNumberBin */
+
+/* LiteralNumberFloat */
+
+/* LiteralNumberHex */
+
+/* LiteralNumberInteger */
+
+/* LiteralNumberIntegerLong */
+
+/* LiteralNumberOct */
+
+.chroma .kt, .chroma .nv, .chroma .vi, .chroma .vm, .chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .il, .chroma .mo {
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
 }
 
-.dark .chroma .kt {
+.dark .chroma .kt, .dark .chroma .nv, .dark .chroma .vi, .dark .chroma .vm, .dark .chroma .m, .dark .chroma .mb, .dark .chroma .mf, .dark .chroma .mh, .dark .chroma .mi, .dark .chroma .il, .dark .chroma .mo {
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
 }
 
 /* Name */
 
-.chroma .n {
+/* NameDecorator */
+
+/* NameEntity */
+
+/* NameLabel */
+
+.chroma .n, .chroma .nd, .chroma .ni, .chroma .nl {
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-900), var(--tw-text-opacity));
 }
 
-.dark .chroma .n {
+.dark .chroma .n, .dark .chroma .nd, .dark .chroma .ni, .dark .chroma .nl {
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-200), var(--tw-text-opacity));
 }
 
 /* NameAttribute */
 
-.chroma .na {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .na {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-300), var(--tw-text-opacity));
-}
-
 /* NameBuiltin */
-
-.chroma .nb {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .nb {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-300), var(--tw-text-opacity));
-}
 
 /* NameBuiltinPseudo */
 
-.chroma .bp {
+/* NameOther */
+
+/* NameProperty */
+
+/* NameTag */
+
+.chroma .na, .chroma .nb, .chroma .bp, .chroma .nx, .chroma .py, .chroma .nt {
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-800), var(--tw-text-opacity));
 }
 
-.dark .chroma .bp {
+.dark .chroma .na, .dark .chroma .nb, .dark .chroma .bp, .dark .chroma .nx, .dark .chroma .py, .dark .chroma .nt {
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-300), var(--tw-text-opacity));
-}
-
-/* NameClass */
-
-.chroma .nc {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .nc {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
 }
 
 /* NameConstant */
 
-.chroma .no {
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .no {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
-}
-
-/* NameDecorator */
-
-.chroma .nd {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-900), var(--tw-text-opacity));
-}
-
-.dark .chroma .nd {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-200), var(--tw-text-opacity));
-}
-
-/* NameEntity */
-
-.chroma .ni {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-900), var(--tw-text-opacity));
-}
-
-.dark .chroma .ni {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-200), var(--tw-text-opacity));
-}
-
 /* NameException */
 
-.chroma .ne {
+/* NameVariableGlobal */
+
+.chroma .no, .chroma .ne, .chroma .vg {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
 }
 
-.dark .chroma .ne {
+.dark .chroma .no, .dark .chroma .ne, .dark .chroma .vg {
   --tw-text-opacity: 1;
   color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
 }
@@ -1324,237 +1230,44 @@ body a, body button {
   color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
 }
 
-/* NameFunctionMagic */
-
-.chroma .fm {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .fm {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
-}
-
-/* NameLabel */
-
-.chroma .nl {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-900), var(--tw-text-opacity));
-}
-
-.dark .chroma .nl {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-200), var(--tw-text-opacity));
-}
-
-/* NameNamespace */
-
-.chroma .nn {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .nn {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
-}
-
-/* NameOther */
-
-.chroma .nx {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .nx {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-300), var(--tw-text-opacity));
-}
-
-/* NameProperty */
-
-.chroma .py {
-  color: #cebc3a;
-}
-
-/* NameTag */
-
-.chroma .nt {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .nt {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-300), var(--tw-text-opacity));
-}
-
-/* NameVariable */
-
-.chroma .nv {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .nv {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* NameVariableClass */
-
-.chroma .vc {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
-}
-
-.dark .chroma .vc {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-300), var(--tw-text-opacity));
-}
-
-/* NameVariableGlobal */
-
-.chroma .vg {
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .vg {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
-}
-
-/* NameVariableInstance */
-
-.chroma .vi {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .vi {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* NameVariableMagic */
-
-.chroma .vm {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .vm {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
 /* Literal */
-
-.chroma .l {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .l {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
 
 /* LiteralDate */
 
-.chroma .ld {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .ld {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
 /* LiteralString */
-
-.chroma .s {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .s {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
 
 /* LiteralStringAffix */
 
-.chroma .sa {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .sa {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
 /* LiteralStringBacktick */
-
-.chroma .sb {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .sb {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
 
 /* LiteralStringChar */
 
-.chroma .sc {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .sc {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
 /* LiteralStringDelimiter */
-
-.chroma .dl {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .dl {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
 
 /* LiteralStringDoc */
 
-.chroma .sd {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .sd {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
 /* LiteralStringDouble */
 
-.chroma .s2 {
+/* LiteralStringHeredoc */
+
+/* LiteralStringInterpol */
+
+/* LiteralStringOther */
+
+/* LiteralStringSingle */
+
+/* GenericInserted */
+
+/* GenericOutput */
+
+/* GenericPrompt */
+
+.chroma .l, .chroma .ld, .chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd, .chroma .s2, .chroma .sh, .chroma .si, .chroma .sx, .chroma .s1, .chroma .gi, .chroma .go, .chroma .gp {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-800), var(--tw-text-opacity));
 }
 
-.dark .chroma .s2 {
+.dark .chroma .l, .dark .chroma .ld, .dark .chroma .s, .dark .chroma .sa, .dark .chroma .sb, .dark .chroma .sc, .dark .chroma .dl, .dark .chroma .sd, .dark .chroma .s2, .dark .chroma .sh, .dark .chroma .si, .dark .chroma .sx, .dark .chroma .s1, .dark .chroma .gi, .dark .chroma .go, .dark .chroma .gp {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-400), var(--tw-text-opacity));
 }
@@ -1572,169 +1285,19 @@ body a, body button {
   color: rgba(var(--color-secondary-500), var(--tw-text-opacity));
 }
 
-/* LiteralStringHeredoc */
-
-.chroma .sh {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .sh {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-/* LiteralStringInterpol */
-
-.chroma .si {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .si {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-/* LiteralStringOther */
-
-.chroma .sx {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .sx {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
 /* LiteralStringRegex */
-
-.chroma .sr {
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .sr {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-/* LiteralStringSingle */
-
-.chroma .s1 {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .s1 {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
 
 /* LiteralStringSymbol */
 
-.chroma .ss {
+.chroma .sr, .chroma .ss {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-800), var(--tw-text-opacity));
 }
 
-.dark .chroma .ss {
+.dark .chroma .sr, .dark .chroma .ss {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-/* LiteralNumber */
-
-.chroma .m {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .m {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* LiteralNumberBin */
-
-.chroma .mb {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .mb {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* LiteralNumberFloat */
-
-.chroma .mf {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .mf {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* LiteralNumberHex */
-
-.chroma .mh {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .mh {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* LiteralNumberInteger */
-
-.chroma .mi {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .mi {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* LiteralNumberIntegerLong */
-
-.chroma .il {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .il {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* LiteralNumberOct */
-
-.chroma .mo {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-400), var(--tw-text-opacity));
-}
-
-.dark .chroma .mo {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-secondary-600), var(--tw-text-opacity));
-}
-
-/* Operator */
-
-.chroma .o {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
 }
 
 /* OperatorWord */
@@ -1750,20 +1313,25 @@ body a, body button {
   color: rgba(var(--color-primary-600), var(--tw-text-opacity));
 }
 
-/* Punctuation */
-
-.chroma .p {
-}
-
 /* Comment */
 
-.chroma .c {
+/* CommentMultiline */
+
+/* CommentSingle */
+
+/* CommentSpecial */
+
+/* CommentPreproc */
+
+/* CommentPreprocFile */
+
+.chroma .c, .chroma .cm, .chroma .c1, .chroma .cs, .chroma .cp, .chroma .cpf {
   font-style: italic;
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
 }
 
-.dark .chroma .c {
+.dark .chroma .c, .dark .chroma .cm, .dark .chroma .c1, .dark .chroma .cs, .dark .chroma .cp, .dark .chroma .cpf {
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
 }
@@ -1782,90 +1350,10 @@ body a, body button {
   color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
 }
 
-/* CommentMultiline */
-
-.chroma .cm {
-  font-style: italic;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
-}
-
-.dark .chroma .cm {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
-}
-
-/* CommentSingle */
-
-.chroma .c1 {
-  font-style: italic;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
-}
-
-.dark .chroma .c1 {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
-}
-
-/* CommentSpecial */
-
-.chroma .cs {
-  font-style: italic;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
-}
-
-.dark .chroma .cs {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
-}
-
-/* CommentPreproc */
-
-.chroma .cp {
-  font-style: italic;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
-}
-
-.dark .chroma .cp {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
-}
-
-/* CommentPreprocFile */
-
-.chroma .cpf {
-  font-style: italic;
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
-}
-
-.dark .chroma .cpf {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
-}
-
-/* Generic */
-
-.chroma .g {
-}
-
-/* GenericDeleted */
-
-.chroma .gd {
-}
-
 /* GenericEmph */
 
 .chroma .ge {
   font-style: italic;
-}
-
-/* GenericError */
-
-.chroma .gr {
 }
 
 /* GenericHeading */
@@ -1876,42 +1364,6 @@ body a, body button {
   color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
 }
 
-/* GenericInserted */
-
-.chroma .gi {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .gi {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-/* GenericOutput */
-
-.chroma .go {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .go {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-/* GenericPrompt */
-
-.chroma .gp {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-800), var(--tw-text-opacity));
-}
-
-.dark .chroma .gp {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
 /* GenericStrong */
 
 .chroma .gs {
@@ -1920,14 +1372,9 @@ body a, body button {
 
 /* GenericSubheading */
 
-.chroma .gu {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
-}
-
 /* GenericTraceback */
 
-.chroma .gt {
+.chroma .gu, .chroma .gt {
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
 }
@@ -1937,11 +1384,6 @@ body a, body button {
 .chroma .gl {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-
-/* TextWhitespace */
-
-.chroma .w {
 }
 
 .invisible {
@@ -1969,6 +1411,10 @@ body a, body button {
 
 .top-20 {
   top: 5rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-50 {
@@ -2171,6 +1617,10 @@ body a, body button {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .min-w-\[1\.8rem\] {
@@ -2629,6 +2079,15 @@ body a, body button {
           text-decoration-line: none !important;
 }
 
+.no-underline {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2639,6 +2098,12 @@ body a, body button {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .first\:mt-8:first-child {
@@ -2755,6 +2220,10 @@ body a, body button {
   outline-color: transparent;
 }
 
+[dir="ltr"] .ltr\:-left-6 {
+  left: -1.5rem;
+}
+
 [dir="ltr"] .ltr\:ml-2 {
   margin-left: 0.5rem;
 }
@@ -2789,6 +2258,10 @@ body a, body button {
 
 [dir="ltr"] .ltr\:text-right {
   text-align: right;
+}
+
+[dir="rtl"] .rtl\:-right-6 {
+  right: -1.5rem;
 }
 
 [dir="rtl"] .rtl\:mr-2 {

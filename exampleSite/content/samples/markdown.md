@@ -81,7 +81,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 ### Code block indented with four spaces
 
-    <!doctype html>
+    <!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="utf-8">
@@ -94,9 +94,9 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 ### Code block with Hugo's internal highlight shortcode
 
-{{< highlight html >}}
+{{< highlight html "linenos=table,hl_lines=4 7-9" >}}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
