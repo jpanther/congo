@@ -11,7 +11,7 @@
         {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
       </div>
     </header>
-    <section class="prose dark:prose-light">
+    <section class="markdown dark:markdown-invert">
       {{ .Content | emojify }}
     </section>
     <footer class="pt-8">
