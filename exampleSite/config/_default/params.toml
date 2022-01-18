@@ -7,12 +7,12 @@
 
 colorScheme = "congo"
 enableSearch = true
-# darkMode = "auto"
-# darkToggle = false
+darkMode = "auto"
 # logo = "img/logo.jpg"
 # description = "My awesome website"
 mainSections = ["samples"]
 # robots = ""
+showDarkToggle = false
 showScrollToTop = true
 
 [homepage]

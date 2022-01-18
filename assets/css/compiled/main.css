@@ -959,7 +959,7 @@ body a, body button {
 
 .article-pagination a:hover .article-pagination-direction {
   --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-700), var(--tw-text-opacity));
+  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
 }
 
 .dark .article-pagination a:hover .article-pagination-direction {
@@ -1449,20 +1449,12 @@ body a, body button {
   left: 0px;
 }
 
-.top-\[100vh\] {
-  top: 100vh;
+.top-\[110vh\] {
+  top: 110vh;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.bottom-16 {
-  bottom: 4rem;
-}
-
-.-bottom-4 {
-  bottom: -1rem;
+.bottom-\[-5\.5rem\] {
+  bottom: -5.5rem;
 }
 
 .top-\[calc\(100vh-5rem\)\] {
@@ -1859,11 +1851,6 @@ body a, body button {
   border-color: rgba(var(--color-primary-400), var(--tw-border-opacity));
 }
 
-.border-neutral-700 {
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--color-neutral-700), var(--tw-border-opacity));
-}
-
 .bg-neutral {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--color-neutral), var(--tw-bg-opacity));
@@ -1969,14 +1956,14 @@ body a, body button {
   padding-bottom: 2.5rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .px-4 {
@@ -2115,14 +2102,14 @@ body a, body button {
   color: rgba(var(--color-primary-600), var(--tw-text-opacity));
 }
 
-.text-neutral-500 {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
-}
-
 .text-neutral-700 {
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-700), var(--tw-text-opacity));
+}
+
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
 }
 
 .text-primary-500 {
@@ -2138,11 +2125,6 @@ body a, body button {
 .text-primary-700 {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-700), var(--tw-text-opacity));
-}
-
-.text-neutral-600 {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-600), var(--tw-text-opacity));
 }
 
 .text-primary-400 {
@@ -2202,16 +2184,6 @@ body a, body button {
   border-color: rgba(var(--color-primary-300), var(--tw-border-opacity));
 }
 
-.hover\:border-primary-400:hover {
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--color-primary-400), var(--tw-border-opacity));
-}
-
-.hover\:border-primary-500:hover {
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--color-primary-500), var(--tw-border-opacity));
-}
-
 .hover\:bg-primary-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--color-primary-600), var(--tw-bg-opacity));
@@ -2232,9 +2204,9 @@ body a, body button {
   background-color: rgba(var(--color-primary-500), var(--tw-bg-opacity)) !important;
 }
 
-.hover\:text-primary-500:hover {
+.hover\:text-primary-600:hover {
   --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-500), var(--tw-text-opacity));
+  color: rgba(var(--color-primary-600), var(--tw-text-opacity));
 }
 
 .hover\:text-primary-700:hover {
@@ -2242,14 +2214,9 @@ body a, body button {
   color: rgba(var(--color-primary-700), var(--tw-text-opacity));
 }
 
-.hover\:text-primary-400:hover {
+.hover\:text-primary-500:hover {
   --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-.hover\:text-neutral-600:hover {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-600), var(--tw-text-opacity));
+  color: rgba(var(--color-primary-500), var(--tw-text-opacity));
 }
 
 .hover\:text-neutral:hover {
@@ -2307,6 +2274,10 @@ body a, body button {
   outline-color: transparent;
 }
 
+[dir="ltr"] .ltr\:right-0 {
+  right: 0px;
+}
+
 [dir="ltr"] .ltr\:-left-6 {
   left: -1.5rem;
 }
@@ -2321,6 +2292,10 @@ body a, body button {
 
 [dir="ltr"] .ltr\:ml-1 {
   margin-left: 0.25rem;
+}
+
+[dir="ltr"] .ltr\:mr-14 {
+  margin-right: 3.5rem;
 }
 
 [dir="ltr"] .ltr\:-ml-5 {
@@ -2359,6 +2334,10 @@ body a, body button {
   text-align: right;
 }
 
+[dir="rtl"] .rtl\:left-0 {
+  left: 0px;
+}
+
 [dir="rtl"] .rtl\:-right-6 {
   right: -1.5rem;
 }
@@ -2373,6 +2352,10 @@ body a, body button {
 
 [dir="rtl"] .rtl\:mr-1 {
   margin-right: 0.25rem;
+}
+
+[dir="rtl"] .rtl\:ml-14 {
+  margin-left: 3.5rem;
 }
 
 [dir="rtl"] .rtl\:-mr-5 {
@@ -2477,6 +2460,10 @@ body a, body button {
   background-color: rgba(var(--color-neutral-600), var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-neutral-800\/50 {
+  background-color: rgba(var(--color-neutral-800), 0.5);
+}
+
 .dark .dark\:bg-primary-400 {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--color-primary-400), var(--tw-bg-opacity));
@@ -2559,11 +2546,6 @@ body a, body button {
 .dark .dark\:hover\:text-primary-400:hover {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-400), var(--tw-text-opacity));
-}
-
-.dark .dark\:hover\:text-neutral-300:hover {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-300), var(--tw-text-opacity));
 }
 
 .dark .dark\:hover\:text-neutral-800:hover {

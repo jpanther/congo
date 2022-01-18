@@ -40,18 +40,22 @@
       {{ end }}
     </div>
     {{/* Dark mode toggle */}}
-    {{ if and (.Site.Params.darkToggle | default false) (eq (.Site.Params.darkMode | default "auto") "auto") }}
-      <div class="text-sm cursor-pointer text-neutral-400 dark:text-neutral-500">
+    {{ if and (.Site.Params.showDarkToggle | default false) (eq (.Site.Params.darkMode | default "auto") "auto") }}
+      <div
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 {{ if .Site.Params.showScrollToTop | default true -}}
+          ltr:mr-14 rtl:ml-14
+        {{- end }}"
+      >
         <button
           id="dark-toggle"
-          class="inline px-3 py-2 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400"
+          class="inline w-12 h-12 dark:hidden"
           title="{{ i18n "footer.dark_appearance" }}"
         >
           {{ partial "icon.html" "moon" }}
         </button>
         <button
           id="light-toggle"
-          class="hidden px-3 py-2 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
+          class="hidden w-12 h-12 cursor-pointer dark:inline"
           title="{{ i18n "footer.light_appearance" }}"
         >
           {{ partial "icon.html" "sun" }}

@@ -24,23 +24,20 @@
       >
     </div>
     {{- partial "header.html" . -}}
-    <main id="main-content" class="relative grow">
+    <main id="main-content" class="relative">
       {{- block "main" . }}{{- end }}
-      {{ if .Site.Params.showScrollToTop | default true }}
+      {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
         <div
-          class="absolute top-[100vh] right-0 w-12 pointer-events-none {{ if .Params.showPagination | default (.Site.Params.article.showPagination | default true) }}
-            bottom-16
-          {{ else }}
-            -bottom-4
-          {{ end }}"
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
         >
           <a
             href="#the-top"
-            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] text-neutral-500 bg-neutral/50 backdrop-blur rounded-full text-xl flex items-center justify-center hover:text-primary-500"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
             aria-label="{{ i18n "nav.scroll_to_top_title" }}"
             title="{{ i18n "nav.scroll_to_top_title" }}"
-            >&uarr;</a
           >
+            &uarr;
+          </a>
         </div>
       {{ end }}
     </main>

@@ -6,8 +6,14 @@
         <span>
           {{ if .NextInSection }}
             <a class="flex" href="{{ .NextInSection.RelPermalink }}">
-              <span class="mr-3 ltr:inline rtl:hidden article-pagination-direction">&larr;</span>
-              <span class="ml-3 ltr:hidden rtl:inline article-pagination-direction">&rarr;</span>
+              <span
+                class="mr-3 ltr:inline rtl:hidden article-pagination-direction text-neutral-700 dark:text-neutral"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline article-pagination-direction text-neutral-700 dark:text-neutral"
+                >&rarr;</span
+              >
               <span class="flex flex-col">
                 <span class="article-pagination-title mt-[0.1rem] leading-6"
                   >{{ .NextInSection.Title | emojify }}</span
@@ -34,8 +40,14 @@
                   {{ end }}
                 </span>
               </span>
-              <span class="ml-3 ltr:inline rtl:hidden article-pagination-direction">&rarr;</span>
-              <span class="mr-3 ltr:hidden rtl:inline article-pagination-direction">&larr;</span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden article-pagination-direction text-neutral-700 dark:text-neutral"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline article-pagination-direction text-neutral-700 dark:text-neutral"
+                >&larr;</span
+              >
             </a>
           {{ end }}
         </span>

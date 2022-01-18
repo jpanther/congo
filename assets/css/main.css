@@ -38,7 +38,7 @@ body button {
   @apply underline decoration-primary-500;
 }
 .article-pagination a:hover .article-pagination-direction {
-  @apply text-primary-700 dark:text-primary-400;
+  @apply text-primary-600 dark:text-primary-400;
 }
 
 /* RTL support */
