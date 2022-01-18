@@ -13,6 +13,7 @@ enableSearch = true
 # description = "My awesome website"
 mainSections = ["samples"]
 # robots = ""
+showScrollToTop = true
 
 [homepage]
   layout = "custom" # valid options: page, profile, custom

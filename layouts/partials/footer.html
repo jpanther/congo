@@ -32,7 +32,8 @@
       {{ if .Site.Params.attribution | default true }}
         <p class="text-xs text-neutral-500 dark:text-neutral-400">
           {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>` }}
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
+          }}
           {{ $congo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>` }}
           {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Congo" $congo) | safeHTML }}
         </p>
@@ -43,14 +44,14 @@
       <div class="text-sm cursor-pointer text-neutral-400 dark:text-neutral-500">
         <button
           id="dark-toggle"
-          class="inline px-2 py-1 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400"
+          class="inline px-3 py-2 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400"
           title="{{ i18n "footer.dark_appearance" }}"
         >
           {{ partial "icon.html" "moon" }}
         </button>
         <button
           id="light-toggle"
-          class="hidden px-2 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
+          class="hidden px-3 py-2 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
           title="{{ i18n "footer.light_appearance" }}"
         >
           {{ partial "icon.html" "sun" }}

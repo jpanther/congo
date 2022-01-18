@@ -1413,6 +1413,14 @@ body a, body button {
           text-decoration-line: underline;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -1429,11 +1437,36 @@ body a, body button {
   position: relative;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .inset-0 {
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
+}
+
+.top-\[100vh\] {
+  top: 100vh;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.bottom-16 {
+  bottom: 4rem;
+}
+
+.-bottom-4 {
+  bottom: -1rem;
+}
+
+.top-\[calc\(100vh-5rem\)\] {
+  top: calc(100vh - 5rem);
 }
 
 .top-20 {
@@ -1602,16 +1635,16 @@ body a, body button {
   height: 100vh;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-24 {
   height: 6rem;
 }
 
 .h-8 {
   height: 2rem;
-}
-
-.h-12 {
-  height: 3rem;
 }
 
 .h-full {
@@ -1628,6 +1661,10 @@ body a, body button {
 
 .min-h-0 {
   min-height: 0px;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-36 {
@@ -1765,12 +1802,12 @@ body a, body button {
   scroll-behavior: smooth;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded {
@@ -1835,6 +1872,10 @@ body a, body button {
 .bg-primary-200 {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--color-primary-200), var(--tw-bg-opacity));
+}
+
+.bg-neutral\/50 {
+  background-color: rgba(var(--color-neutral), 0.5);
 }
 
 .bg-neutral-500\/50 {
@@ -1928,14 +1969,14 @@ body a, body button {
   padding-bottom: 2.5rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .px-4 {
@@ -1995,6 +2036,11 @@ body a, body button {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2003,11 +2049,6 @@ body a, body button {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-xs {
@@ -2074,14 +2115,14 @@ body a, body button {
   color: rgba(var(--color-primary-600), var(--tw-text-opacity));
 }
 
-.text-neutral-700 {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-neutral-700), var(--tw-text-opacity));
-}
-
 .text-neutral-500 {
   --tw-text-opacity: 1;
   color: rgba(var(--color-neutral-500), var(--tw-text-opacity));
+}
+
+.text-neutral-700 {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-neutral-700), var(--tw-text-opacity));
 }
 
 .text-primary-500 {
@@ -2132,6 +2173,12 @@ body a, body button {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.backdrop-blur {
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .backdrop-blur-sm {
@@ -2185,14 +2232,14 @@ body a, body button {
   background-color: rgba(var(--color-primary-500), var(--tw-bg-opacity)) !important;
 }
 
-.hover\:text-primary-700:hover {
-  --tw-text-opacity: 1;
-  color: rgba(var(--color-primary-700), var(--tw-text-opacity));
-}
-
 .hover\:text-primary-500:hover {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-500), var(--tw-text-opacity));
+}
+
+.hover\:text-primary-700:hover {
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-primary-700), var(--tw-text-opacity));
 }
 
 .hover\:text-primary-400:hover {

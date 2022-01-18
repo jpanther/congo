@@ -24,12 +24,13 @@ footer:
   # light_appearance: "Switch to light appearance"
   powered_by: "Propulsé par {{ .Hugo }} &amp; {{ .Congo }}"
 
-# header:
-#   skip_to_main: "Skip to main content"
-
 list:
   externalurl_title: "Lien d'article externe."
   no_articles: "Il n'y a pas encore d'articles ici."
+
+# nav:
+#   scroll_to_top_title: "Scroll to top"
+#   skip_to_main: "Skip to main content"
 
 # search:
 #   open_button_title: "Search (/)"
