@@ -30,6 +30,7 @@ mainSections = ["samples"]
   showPagination = true
   showReadingTime = true
   showTaxonomies = false
+  showTableOfContents = true
   showWordCount = false
   # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
 

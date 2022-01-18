@@ -30,6 +30,7 @@ enableSearch = false
   showPagination = true
   showReadingTime = true
   showTaxonomies = false
+  showTableOfContents = false
   showWordCount = false
   # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
 
