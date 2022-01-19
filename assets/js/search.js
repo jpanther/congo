@@ -104,9 +104,7 @@ function fetchJSON(path, callback) {
 }
 
 function buildIndex() {
-  var baseURL = document
-    .querySelector('script[data-id="fusejs"][data-url]')
-    .getAttribute("data-url");
+  var baseURL = wrapper.getAttribute("data-url");
   fetchJSON(baseURL + "index.json", function (data) {
     var options = {
       shouldSort: true,

@@ -1,12 +1,7 @@
-{{ $fuseLib := resources.Get "lib/fuse/fuse.min.js" }}
-{{ $fuseConfig := resources.Get "js/search.js" }}
-{{ $fuseConfig := $fuseConfig | resources.Minify }}
-{{ $fuseJS := slice $fuseLib $fuseConfig | resources.Concat "js/fuse.bundle.js" | resources.Fingerprint "sha512" -}}
-
-<script defer type="text/javascript" src="{{ $fuseJS.RelPermalink }}" integrity="{{ $fuseJS.Data.Integrity }}" data-id="fusejs" data-url="{{ .Site.BaseURL }}"></script>
 <div
   id="search-wrapper"
   class="fixed inset-0 z-50 flex flex-col p-4 sm:p-6 md:p-[10vh] lg:p-[12vh] w-screen h-screen cursor-default bg-neutral-500/50 backdrop-blur-sm dark:bg-neutral-900/50 invisible"
+  data-url="{{ .Site.BaseURL }}"
 >
   <div
     id="search-modal"
