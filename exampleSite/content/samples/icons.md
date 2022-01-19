@@ -48,6 +48,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | slack                | {{< icon slack >}}                |
 | snapchat             | {{< icon snapchat >}}             |
 | soundcloud           | {{< icon soundcloud >}}           |
+| stackoverflow        | {{< icon stackoverflow >}}        |
 | steam                | {{< icon steam >}}                |
 | sun                  | {{< icon sun >}}                  |
 | telegram             | {{< icon telegram >}}             |

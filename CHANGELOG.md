@@ -25,10 +25,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - ⚠️ Overhauled `figure` shortcode which now resizes images
 - ⚠️ Renamed parameter: `darkToggle` -> `showDarkToggle`
 - Upgrade to Tailwind v3.0.15
-- Upgrade to KaTeX v0.15.2
 - Inline Javascript moved to external files
 - Improved JSON-LD structured data
 - Minor style and layout improvements
+
+## [1.6.3] - 2022-01-19
+
+### Added
+
+- Icon for Stack Overflow ([#82](https://github.com/jpanther/congo/pull/82))
+
+### Changed
+
+- Upgrade to Mermaid v8.13.9
+- Upgrade to KaTeX v0.15.2
+
+### Fixed
+
+- Emoji characters in article titles not appearing on list pages and in HTML metadata ([#84](https://github.com/jpanther/congo/pull/84))
 
 ## [1.6.2] - 2022-01-07
 
@@ -245,7 +259,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v1.6.2...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v1.6.3...HEAD
+[1.6.3]: https://github.com/jpanther/congo/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/jpanther/congo/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/jpanther/congo/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/jpanther/congo/compare/v1.5.3...v1.6.0
