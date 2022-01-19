@@ -20,12 +20,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- ⚠️ Required Hugo version is now 0.87.0 or later
+- ⚠️ Author images are now Hugo assets
+- ⚠️ Overhauled `figure` shortcode which now resizes images
+- ⚠️ Renamed parameter: `darkToggle` -> `showDarkToggle`
 - Upgrade to Tailwind v3.0.15
 - Upgrade to KaTeX v0.15.2
 - Inline Javascript moved to external files
-- Author images are now Hugo assets
-- Required Hugo version is now 0.87.0 or later
-- Overhauled `figure` shortcode which now resizes images
 - Improved JSON-LD structured data
 - Minor style and layout improvements
 

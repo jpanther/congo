@@ -32,41 +32,32 @@
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
   {{ end -}}
-  {{/* Styles */}}
-  {{ $schemeCSS := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}
-  {{ if not $schemeCSS }}
-    {{ $schemeCSS = resources.Get "css/schemes/congo.css" }}
+  {{/* Asset bundles */}}
+  {{ $assets := newScratch }}
+  {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}
+  {{ if not $cssScheme }}
+    {{ $cssScheme = resources.Get "css/schemes/congo.css" }}
   {{ end }}
-  {{ $schemeStyles := $schemeCSS | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $assets.Add "css" (slice $cssScheme) }}
+  {{ $cssMain := resources.Get "css/compiled/main.css" }}
+  {{ $assets.Add "css" (slice $cssMain) }}
+  {{ $cssCustom := resources.Get "css/custom.css" }}
+  {{ if $cssCustom }}
+    {{ $assets.Add "css" (slice $cssCustom) }}
+  {{ end }}
+  {{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
   <link
     type="text/css"
     rel="stylesheet"
-    href="{{ $schemeStyles.RelPermalink }}"
-    integrity="{{ $schemeStyles.Data.Integrity }}"
+    href="{{ $bundleCSS.RelPermalink }}"
+    integrity="{{ $bundleCSS.Data.Integrity }}"
   />
-  {{ $mainCSS := resources.Get "css/compiled/main.css" }}
-  {{ $mainStyles := $mainCSS | resources.Minify | resources.Fingerprint "sha512" }}
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="{{ $mainStyles.RelPermalink }}"
-    integrity="{{ $mainStyles.Data.Integrity }}"
-  />
-  {{ $customCSS := resources.Get "css/custom.css" }}
-  {{ if $customCSS }}
-    {{ $customStyles := $customCSS | resources.Minify | resources.Fingerprint "sha512" }}
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="{{ $customStyles.RelPermalink }}"
-      integrity="{{ $customStyles.Data.Integrity }}"
-    />
-  {{ end }}
   {{ if eq (.Site.Params.darkMode | default "auto") "auto" }}
-    {{ $darkJS := resources.Get "js/dark.js" }}
-    {{ $darkJS := $darkJS | resources.Minify | resources.Fingerprint "sha512" }}    
-    <script defer type="text/javascript" src="{{ $darkJS.RelPermalink }}" integrity="{{ $darkJS.Data.Integrity }}"></script>
+    {{ $jsDark := resources.Get "js/dark.js" }}
+    {{ $assets.Add "js" (slice $jsDark) }}
   {{ end }}
+  {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}"></script>
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}
