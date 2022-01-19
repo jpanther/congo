@@ -7,11 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   {{/* Title */}}
   {{ if .IsHome -}}
-    <title>{{ .Site.Title }}</title>
-    <meta name="title" content="{{ .Site.Title }}" />
+    <title>{{ .Site.Title | emojify }}</title>
+    <meta name="title" content="{{ .Site.Title | emojify }}" />
   {{- else -}}
-    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
-    <meta name="title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+    <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}</title>
+    <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
   {{- end }}
   {{/* Metadata */}}
   {{ with .Params.Description -}}
@@ -30,7 +30,7 @@
   {{ end }}
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink ($.Site.Title | emojify) | safeHTML }}
   {{ end -}}
   {{/* Styles */}}
   {{ $schemeCSS := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}

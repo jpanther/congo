@@ -25,7 +25,7 @@ jobs:
 
       - name: Build
         working-directory: ./exampleSite
-        run: hugo --minify --themesDir ../.. --baseURL https://jpanther.github.io/congo/
+        run: hugo --minify --themesDir ../.. --buildDrafts --baseURL https://jpanther.github.io/congo/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

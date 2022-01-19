@@ -48,6 +48,7 @@ summaryLength = 0
   #   { slack = "https://workspace.url/team/userid" },
   #   { snapchat = "https://snapchat.com/add/username" },
   #   { soundcloud = "https://soundcloud.com/username" },
+  #   { stackoverflow = "https://stackoverflow.com/users/6digit/username" },
   #   { steam = "https://steamcommunity.com/profiles/userid" },
   #   { telegram = "https://t.me/username" },
   #   { tiktok = "https://tiktok.com/@username" },

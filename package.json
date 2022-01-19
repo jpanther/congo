@@ -1,6 +1,6 @@
 {
   "name": "hugo-congo-theme",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Congo theme for Hugo",
   "main": "index.js",
   "scripts": {
@@ -31,8 +31,8 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "chart.js": "^3.6.0",
-    "katex": "^0.15.1",
-    "mermaid": "^8.13.8",
+    "katex": "^0.15.2",
+    "mermaid": "^8.13.9",
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "^0.0.11",
     "rimraf": "^3.0.2",
