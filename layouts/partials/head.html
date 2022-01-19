@@ -30,7 +30,7 @@
   {{ end }}
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML | emojify }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink ($.Site.Title | emojify) | safeHTML }}
   {{ end -}}
   {{/* Styles */}}
   {{ $schemeCSS := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}
