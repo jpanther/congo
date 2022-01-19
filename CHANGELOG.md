@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Icon for Stack Overflow ([#82](https://github.com/jpanther/congo/pull/82))
 
+### Changed
+
+- Upgrade to Mermaid v8.13.9
+
 ### Fixed
 
 - Emoji characters in article titles not appearing on list pages and in HTML metadata ([#84](https://github.com/jpanther/congo/pull/82))
