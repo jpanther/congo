@@ -6,7 +6,7 @@
         href="{{ . }}"
         target="_blank"
         rel="external"
-        >{{ $.Title }}</a
+        >{{ $.Title | emojify }}</a
       >
       <span
         class="-mt-2 text-xs cursor-default text-neutral-400 dark:text-neutral-500"
@@ -18,7 +18,7 @@
       <a
         class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
         href="{{ .RelPermalink }}"
-        >{{ .Title }}</a
+        >{{ .Title | emojify }}</a
       >
     {{ end }}
     {{ if and .Draft .Site.Params.article.showDraftLabel }}
