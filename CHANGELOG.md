@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Upgrade to Mermaid v8.13.9
+- Upgrade to KaTeX v0.15.2
 
 ### Fixed
 

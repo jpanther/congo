@@ -31,7 +31,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "chart.js": "^3.6.0",
-    "katex": "^0.15.1",
+    "katex": "^0.15.2",
     "mermaid": "^8.13.9",
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "^0.0.11",
