@@ -1,4 +1,5 @@
 {
+  "goTemplateBracketSpacing": true,
   "htmlWhitespaceSensitivity": "css",
   "printWidth": 100,
   "singleQuote": false,
