@@ -9,7 +9,6 @@ colorScheme = "congo"
 enableSearch = true
 darkMode = "auto"
 # logo = "img/logo.jpg"
-# description = "My awesome website"
 mainSections = ["samples"]
 # robots = ""
 showDarkToggle = false
@@ -38,6 +37,7 @@ showScrollToTop = true
 [list]
   showBreadcrumbs = true
   showSummary = false
+  showTableOfContents = true
   groupByYear = false
 
 [taxonomy]
