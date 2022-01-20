@@ -29,7 +29,7 @@
       {{ partialCached "author-links.html" . }}
     </div>
   </header>
-  <section class="markdown dark:markdown-invert">{{ .Content | emojify }}</section>
+  <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
 </article>
 <section>
   {{ partial "recent-articles.html" . }}

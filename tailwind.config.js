@@ -107,18 +107,6 @@ module.exports = {
             "a code": {
               color: "var(--tw-prose-code)",
             },
-            h1: {
-              position: "relative",
-            },
-            h2: {
-              position: "relative",
-            },
-            h3: {
-              position: "relative",
-            },
-            h4: {
-              position: "relative",
-            },
             kbd: {
               backgroundColor: theme("colors.neutral.200"),
               padding: "0.1rem 0.4rem",
@@ -151,9 +139,5 @@ module.exports = {
       }),
     },
   },
-  plugins: [
-    require("@tailwindcss/typography")({
-      className: "markdown",
-    }),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

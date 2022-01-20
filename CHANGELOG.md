@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Automatic Markdown image resizing and srcset generation
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
 - Tables of Contents on article pages
+- Taxonomy and term listings now support Markdown content
 - Taxonomies on article and list pages
 - Author `headline` parameter
 - Skip to content and Scroll to top links

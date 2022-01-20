@@ -11,7 +11,7 @@
         {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
       </div>
     </header>
-    <section class="flex flex-col max-w-full mt-0 lg:flex-row markdown dark:markdown-invert">
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       {{ if and (.Params.showTableOfContents | default (.Site.Params.article.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
         <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
           <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
@@ -19,7 +19,7 @@
           </div>
         </div>
       {{ end }}
-      <div class="overflow-auto max-w-prose">
+      <div class="min-w-0 min-h-0 max-w-prose">
         {{ .Content | emojify }}
       </div>
     </section>

@@ -22,14 +22,14 @@ body button {
 }
 
 /* Heading anchors */
-.markdown .heading-anchor:hover {
+.prose .heading-anchor:hover {
   @apply underline bg-transparent text-primary-500 !important;
 }
-.markdown .heading-anchor:hover,
-.markdown .heading-anchor:focus,
-.markdown h2:hover > .heading-anchor,
-.markdown h3:hover > .heading-anchor,
-.markdown h4:hover > .heading-anchor {
+.prose .heading-anchor:hover,
+.prose .heading-anchor:focus,
+.prose h2:hover > .heading-anchor,
+.prose h3:hover > .heading-anchor,
+.prose h4:hover > .heading-anchor {
   @apply no-underline opacity-100 text-primary-200 dark:text-neutral-700;
 }
 
@@ -42,30 +42,30 @@ body button {
 }
 
 /* RTL support */
-.markdown blockquote {
+.prose blockquote {
   @apply rtl:pr-4 rtl:border-l-0 rtl:border-r-4;
 }
-.markdown ul > li,
-.markdown ol > li {
+.prose ul > li,
+.prose ol > li {
   @apply rtl:pl-0 rtl:pr-2 rtl:mr-7;
 }
-.markdown ol > li:before,
-.markdown ul > li:before {
+.prose ol > li:before,
+.prose ul > li:before {
   @apply rtl:left-auto rtl:right-1;
 }
-.markdown thead td:first-child,
-.markdown thead th:first-child {
+.prose thead td:first-child,
+.prose thead th:first-child {
   @apply rtl:pr-0;
 }
-.markdown thead td:last-child,
-.markdown thead th:last-child {
+.prose thead td:last-child,
+.prose thead th:last-child {
   @apply rtl:pl-0;
 }
 
 /* Table of Contents */
 .toc ul,
 .toc li {
-  @apply px-0 my-1 leading-snug list-none;
+  @apply px-0 leading-snug list-none;
 }
 .toc ul ul {
   @apply ltr:pl-4 rtl:pr-4;
@@ -79,7 +79,7 @@ body button {
 
 /* -- Chroma Highlight -- */
 /* Background */
-.markdown .chroma {
+.prose .chroma {
   @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
 }
 /* LineTableTD */
