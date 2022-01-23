@@ -1,4 +1,4 @@
 <time datetime="{{ . }}">
-  {{- . | time.Format (site.Params.article.dateFormat | default "2 January 2006") -}}
+  {{- .Format (site.Params.article.dateFormat | default "2 January 2006") -}}
 </time>
 {{- /* Trim EOF */ -}}
