@@ -1,6 +1,6 @@
 # Congo
 
-Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises to your content.
+Congo is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises to your content.
 
 🌏 [Demo site](https://jpanther.github.io/congo/)  
 📑 [Theme documentation](https://jpanther.github.io/congo/docs/)  
@@ -11,7 +11,7 @@ Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io
 
 ## Features
 
-- Fully responsive layout built with Tailwind CSS v3
+- Fully responsive layout built with Tailwind CSS 3.0
 - Multiple colour schemes (or fully customise your own)
 - Dark mode (forced on/off or auto-switching with user toggle)
 - Highly customisable configuration
@@ -19,20 +19,20 @@ Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io
 - Flexible with any content types, taxonomies and menus
 - Multilingual content support inlcuding support for RTL languages
 - Ability to link to posts on third-party websites
+- Client-side site search powered by Fuse.js
 - Diagrams and visualisations using Mermaid
 - Charts using Chart.js
 - Mathematical notation using KaTeX
 - SVG icons from FontAwesome 5
-- Heading anchors, Buttons, Badges and more
+- Automatic image resizing using Hugo Pipes
+- Heading anchors, Tables of Contents, Buttons, Badges and more
 - HTML and Emoji support in articles 🎉
 - SEO friendly with links for sharing to social media
-- RSS feeds
 - Fathom Analytics and Google Analytics support
-- Favicons support
-- Comments support
+- RSS feeds, Favicons and comments support
 - Advanced customisation using simple Tailwind colour definitions and styles
-- Fully documented
-- Regular updates with fixes and new features
+- Optimised for performance and accessibility with perfect Lighthouse scores
+- Fully documented with regular updates
 
 ---
 
