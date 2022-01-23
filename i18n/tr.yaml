@@ -6,6 +6,7 @@ article:
     one: "{{ .Count }} dk"
     other: "{{ .Count }} dk"
   reading_time_title: "Okuma süresi"
+  # updated: "Updated"
   word_count:
     one: "{{ .Count }} kelime"
     other: "{{ .Count }} kelime"
