@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Turkish translation ([#90](https://github.com/jpanther/congo/pull/90))
+
 ## [1.6.3] - 2022-01-19
 
 ### Added
