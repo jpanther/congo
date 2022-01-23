@@ -36,7 +36,6 @@ Note that the variable names provided in this table use dot notation to simplify
 |`defaultContentLanguage`|string|`"en"`|This value determines the language of theme components."|
 |`title`|string|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
 |`copyright`|string|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.
-|`enableEmoji`|boolean|`true`|Whether emoji strings in content should be converted to emoji symbols.|
 |`enableRobotsTXT`|boolean|`true`|When enabled a `robots.txt` file will be created in the site root that allows search engines to crawl the entire site. Set to `false` if you wish to provide your own file.|
 |`summaryLength`|integer|`0`|The number of words that are used to generate the article summary when one is not provided in the [front matter]({{< ref "front-matter" >}}). A value of `0` will use the first sentence. This value has no effect when summaries are hidden.|
 |`author.name`|string|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
