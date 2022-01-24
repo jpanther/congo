@@ -5,9 +5,7 @@
 # baseURL = "https://your_domain.com/"
 defaultContentLanguage = "en"
 
-enableEmoji = true
 enableRobotsTXT = true
-
 summaryLength = 0
 
 [outputs]

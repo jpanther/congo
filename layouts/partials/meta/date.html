@@ -1,11 +1,4 @@
-<time datetime="{{ .Date }}">
-  {{- .Date | time.Format (.Site.Language.Params.dateFormat | default ":date_long") -}}
+<time datetime="{{ . }}">
+  {{- . | time.Format (site.Language.Params.dateFormat | default ":date_long") -}}
 </time>
-{{ if .Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false) }}
-  &nbsp;(Updated:&nbsp;
-  <time datetime="{{ .Lastmod }}">
-    {{- .Date | time.Format (.Site.Language.Params.dateFormat | default ":date_long") -}}
-  </time>
-  )
-{{ end }}
 {{- /* Trim EOF */ -}}

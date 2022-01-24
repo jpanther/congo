@@ -7,9 +7,10 @@ article:
     other: "{{ .Count }} mins"
   reading_time_title: "Tiempo de lectura"
   # table_of_contents: "Table of Contents"
-  # word_count:
-  # one: "{{ .Count }} word"
-  # other: "{{ .Count }} words"
+  updated: "Actualizado"
+  word_count:
+    one: "{{ .Count }} palabra"
+    other: "{{ .Count }} palabras"
 
 author:
   byline_title: "Autor"

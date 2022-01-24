@@ -7,6 +7,7 @@ article:
     other: "{{ .Count }} mins"
   reading_time_title: "Temps de lecture"
   # table_of_contents: "Table of Contents"
+  # updated: "Updated"
   # word_count:
   # one: "{{ .Count }} word"
   # other: "{{ .Count }} words"
