@@ -1,12 +1,13 @@
 article:
   anchor_label: "锚点"
+  date: "{{ .Date }}"
+  # date_updated: "Updated: {{ .Date }}"
   draft: "草稿"
   edit_title: "编辑内容"
   reading_time:
     other: "{{ .Count }} 分钟"
   reading_time_title: "预计阅读"
   # table_of_contents: "Table of Contents"
-  # updated: "Updated"
   word_count:
     one: "{{ .Count }} 字"
     other: "{{ .Count }} 字"

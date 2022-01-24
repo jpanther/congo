@@ -1,5 +1,7 @@
 article:
   anchor_label: "Anker"
+  date: "{{ .Date }}"
+  # date_updated: "Updated: {{ .Date }}"
   draft: "Entwurf"
   edit_title: "Inhalt bearbeiten"
   reading_time:
@@ -7,7 +9,6 @@ article:
     other: "{{ .Count }} min"
   reading_time_title: "Lesezeit"
   # table_of_contents: "Table of Contents"
-  # updated: "Updated"
   # word_count:
   # one: "{{ .Count }} word"
   # other: "{{ .Count }} words"

@@ -1,12 +1,13 @@
 article:
   anchor_label: "Anchor"
+  date: "{{ .Date }}"
+  # date_updated: "Updated: {{ .Date }}"
   draft: "Taslak"
   edit_title: "İçeriği düzenle"
   reading_time:
     one: "{{ .Count }} dk"
     other: "{{ .Count }} dk"
   reading_time_title: "Okuma süresi"
-  # updated: "Updated"
   word_count:
     one: "{{ .Count }} kelime"
     other: "{{ .Count }} kelime"
