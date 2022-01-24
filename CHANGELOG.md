@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Article updated date formatting and i18n ([#91](https://github.com/jpanther/congo/pull/91))
+- Upgrade to Mermaid v8.13.10
 
 ### Fixed
 
