@@ -29,6 +29,7 @@ showScrollToTop = true
   editAppendPath = true
   showHeadingAnchors = true
   showPagination = true
+  invertPagination = false
   showReadingTime = true
   showTableOfContents = true
   showTaxonomies = false

@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Tables of Contents on article pages
 - Taxonomy and term listings now support Markdown content
 - Taxonomies on article and list pages
+- Article pagination direction can be inverted
 - Author `headline` parameter
 - Skip to content and Scroll to top links
 

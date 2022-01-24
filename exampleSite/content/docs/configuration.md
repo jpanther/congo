@@ -117,6 +117,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.editAppendPath`|`true`|When `article.showEdit` is active, whether or not the path to the current article should be appended to the URL set at `article.editURL`.|
 |`article.showHeadingAnchors`|`true`|Whether or not heading anchor links are displayed alongside headings within articles.|
 |`article.showPagination`|`true`|Whether or not the next/previous article links are displayed in the article footer.|
+|`article.invertPagination`|`false`|Whether or not to flip the direction of the next/previous article links.|
 |`article.showReadingTime`|`true`|Whether or not article reading times are displayed.|
 |`article.showTableOfContents`|`false`|Whether or not the table of contents is displayed on articles.|
 |`article.showTaxonomies`|`false`|Whether or not the taxonomies related to this article are displayed.|

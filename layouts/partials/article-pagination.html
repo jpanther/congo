@@ -1,11 +1,17 @@
 {{ if .Params.showPagination | default (.Site.Params.article.showPagination | default true) }}
   {{ if or .NextInSection .PrevInSection }}
+    {{ $next := .NextInSection }}
+    {{ $prev := .PrevInSection }}
+    {{ if .Params.invertPagination | default (.Site.Params.article.invertPagination | default false) }}
+      {{ $next = .PrevInSection }}
+      {{ $prev = .NextInSection }}
+    {{ end }}
     <div class="pt-8 article-pagination">
       <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
       <div class="flex justify-between pt-3">
         <span>
-          {{ if .NextInSection }}
-            <a class="flex" href="{{ .NextInSection.RelPermalink }}">
+          {{ if $prev }}
+            <a class="flex" href="{{ $prev.RelPermalink }}">
               <span
                 class="mr-3 ltr:inline rtl:hidden article-pagination-direction text-neutral-700 dark:text-neutral"
                 >&larr;</span
@@ -16,11 +22,11 @@
               >
               <span class="flex flex-col">
                 <span class="article-pagination-title mt-[0.1rem] leading-6"
-                  >{{ .NextInSection.Title | emojify }}</span
+                  >{{ $prev.Title | emojify }}</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-                    {{ partial "meta/date.html" .NextInSection.Date }}
+                    {{ partial "meta/date.html" $prev.Date }}
                   {{ end }}
                 </span>
               </span>
@@ -28,15 +34,15 @@
           {{ end }}
         </span>
         <span>
-          {{ if .PrevInSection }}
-            <a class="flex text-right" href="{{ .PrevInSection.RelPermalink }}">
+          {{ if $next }}
+            <a class="flex text-right" href="{{ $next.RelPermalink }}">
               <span class="flex flex-col">
                 <span class="article-pagination-title mt-[0.1rem] leading-6"
-                  >{{ .PrevInSection.Title | emojify }}</span
+                  >{{ $next.Title | emojify }}</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-                    {{ partial "meta/date.html" .PrevInSection.Date }}
+                    {{ partial "meta/date.html" $next.Date }}
                   {{ end }}
                 </span>
               </span>
