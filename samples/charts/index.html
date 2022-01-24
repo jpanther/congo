@@ -8,7 +8,7 @@
 <meta name=description content="Guide to Chart.js usage in Congo">
 <link rel=canonical href=https://jpanther.github.io/congo/samples/charts/>
 <link type=text/css rel=stylesheet href=/congo/css/schemes/congo.min.b48d6ba061dc77186a2524fb8aac5ac3823b2679a9299ca60325abbccc9c1764c884715f0ba24b4e2776cb3814df4af1f4c854b87207cd5d4c7a254da9b55751.css integrity="sha512-tI1roGHcdxhqJST7iqxaw4I7JnmpKZymAyWrvMycF2TIhHFfC6JLTid2yzgU30rx9MhUuHIHzV1MeiVNqbVXUQ==">
-<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.01d58e0d9475b75b8cd6cd9a8c051cbe2d0d8f63bffccf6fde0698ccb9ac5ff029ad5982b7c4f1dd96e5185153195d722ef2afb7854972d8e20419535d6fd9d3.css integrity="sha512-AdWODZR1t1uM1s2ajAUcvi0Nj2O//M9v3gaYzLmsX/AprVmCt8Tx3ZblGFFTGV1yLvKvt4VJctjiBBlTXW/Z0w==">
+<link type=text/css rel=stylesheet href=/congo/css/compiled/main.min.51037225bb3c65887773b052da1e38f105db8f3d9aa6a34ba3c5c40c88fb309724f8cc5ed2871adc7e55dacab9b36c60ce7aa7a61dff2cc638f8b435c898d5a8.css integrity="sha512-UQNyJbs8ZYh3c7BS2h448QXbjz2apqNLo8XEDIj7MJck+Mxe0oca3H5V2sq5s2xgznqnph3/LMY4+LQ1yJjVqA==">
 <script>function loadPreferredAppearance(){localStorage.preferredAppearance==="dark"||!("preferredAppearance"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}function setPreferredAppearance(a){a=="default"?localStorage.removeItem("preferredAppearance"):localStorage.preferredAppearance=a,loadPreferredAppearance()}loadPreferredAppearance(),window.matchMedia("(prefers-color-scheme: dark)").addListener(loadPreferredAppearance)</script>
 <link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
@@ -72,9 +72,8 @@
 Charts
 </h1>
 <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
-<div class="flex flex-row items-center">
-<time datetime="2019-03-06 00:00:00 +0000 UTC">6 March 2019</time>
-<span class="px-2 text-primary-500">&#183;</span><span title="Reading time">2 mins</span>
+<div class="flex flex-row flex-wrap items-center">
+<time datetime="2019-03-06 00:00:00 +0000 UTC">6 March 2019</time><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">2 mins</span>
 </div>
 </div>
 </header>
@@ -84,18 +83,18 @@ Charts
 <p>The examples below are a small selection taken from the <a href=https://www.chartjs.org/docs/latest/samples>official Chart.js docs</a>. You can also <a href=https://raw.githubusercontent.com/jpanther/congo/dev/exampleSite/content/samples/charts.md>view the page source</a> on GitHub to see the markup.</p>
 <h2 id=bar-chart>Bar chart <a class=heading-anchor href=#bar-chart aria-label=Anchor>#</a></h2>
 <div class=chart>
-<canvas id=583942167></canvas>
-<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("583942167"),c=new Chart(a,{type:'bar',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],backgroundColor:['rgba(255, 99, 132, 0.2)','rgba(255, 159, 64, 0.2)','rgba(255, 205, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(54, 162, 235, 0.2)','rgba(153, 102, 255, 0.2)','rgba(201, 203, 207, 0.2)'],borderColor:['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)','rgb(75, 192, 192)','rgb(54, 162, 235)','rgb(153, 102, 255)','rgb(201, 203, 207)'],borderWidth:1}]}})})</script>
+<canvas id=384126795></canvas>
+<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("384126795"),c=new Chart(a,{type:'bar',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],backgroundColor:['rgba(255, 99, 132, 0.2)','rgba(255, 159, 64, 0.2)','rgba(255, 205, 86, 0.2)','rgba(75, 192, 192, 0.2)','rgba(54, 162, 235, 0.2)','rgba(153, 102, 255, 0.2)','rgba(201, 203, 207, 0.2)'],borderColor:['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)','rgb(75, 192, 192)','rgb(54, 162, 235)','rgb(153, 102, 255)','rgb(201, 203, 207)'],borderWidth:1}]}})})</script>
 </div>
 <h2 id=line-chart>Line chart <a class=heading-anchor href=#line-chart aria-label=Anchor>#</a></h2>
 <div class=chart>
-<canvas id=527863419></canvas>
-<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("527863419"),c=new Chart(a,{type:'line',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],tension:.2}]}})})</script>
+<canvas id=937625184></canvas>
+<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("937625184"),c=new Chart(a,{type:'line',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First Dataset',data:[65,59,80,81,56,55,40],tension:.2}]}})})</script>
 </div>
 <h2 id=doughnut-chart>Doughnut chart <a class=heading-anchor href=#doughnut-chart aria-label=Anchor>#</a></h2>
 <div class=chart>
-<canvas id=157924386></canvas>
-<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("157924386"),c=new Chart(a,{type:'doughnut',data:{labels:['Red','Blue','Yellow'],datasets:[{label:'My First Dataset',data:[300,50,100],backgroundColor:['rgba(255, 99, 132, 0.7)','rgba(54, 162, 235, 0.7)','rgba(255, 205, 86, 0.7)'],borderWidth:0,hoverOffset:4}]}})})</script>
+<canvas id=573862914></canvas>
+<script>document.addEventListener("DOMContentLoaded",b=>{const a=document.getElementById("573862914"),c=new Chart(a,{type:'doughnut',data:{labels:['Red','Blue','Yellow'],datasets:[{label:'My First Dataset',data:[300,50,100],backgroundColor:['rgba(255, 99, 132, 0.7)','rgba(54, 162, 235, 0.7)','rgba(255, 205, 86, 0.7)'],borderWidth:0,hoverOffset:4}]}})})</script>
 </div>
 </section>
 <footer class=pt-8>
