@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.6.4] - 2022-01-24
+
+### Added
+
+- Turkish translation ([#90](https://github.com/jpanther/congo/pull/90))
+
+### Changed
+
+- Article updated date formatting and i18n ([#91](https://github.com/jpanther/congo/pull/91))
+- Upgrade to Mermaid v8.13.10
+
+### Fixed
+
+- Article metadata not wrapping at small viewports ([#91](https://github.com/jpanther/congo/pull/91))
+
 ## [1.6.3] - 2022-01-19
 
 ### Added
@@ -19,7 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- Emoji characters in article titles not appearing on list pages and in HTML metadata ([#84](https://github.com/jpanther/congo/pull/82))
+- Emoji characters in article titles not appearing on list pages and in HTML metadata ([#84](https://github.com/jpanther/congo/pull/84))
 
 ## [1.6.2] - 2022-01-07
 
@@ -236,7 +251,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v1.6.3...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v1.6.4...HEAD
+[1.6.4]: https://github.com/jpanther/congo/compare/v1.6.3...v1.6.4
 [1.6.3]: https://github.com/jpanther/congo/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/jpanther/congo/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/jpanther/congo/compare/v1.6.0...v1.6.1

@@ -6,6 +6,7 @@ article:
     one: "{{ .Count }} min"
     other: "{{ .Count }} min"
   reading_time_title: "Lesezeit"
+  # updated: "Updated"
   # word_count:
   # one: "{{ .Count }} word"
   # other: "{{ .Count }} words"
