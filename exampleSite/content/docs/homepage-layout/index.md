@@ -25,7 +25,7 @@ The profile layout is great for personal websites and blogs. It puts the author'
 
 ![Screenshot of profile layout](home-profile.jpg)
 
-The author information is provided in the `config.toml` configuration file. Refer to the [Getting Started]({{< ref "getting-started" >}}) and [Site Configuration]({{< ref "configuration#site-configuration" >}}) sections for parameter details.
+The author information is provided in the languages configuration file. Refer to the [Getting Started]({{< ref "getting-started" >}}) and [Language Configuration]({{< ref "configuration##language-and-i18n" >}}) sections for parameter details.
 
 Additionally, any Markdown content that is provided in the homepage content will be placed below the author profile. This allows extra flexibility for displaying a bio or other custom content using shortcodes.
 

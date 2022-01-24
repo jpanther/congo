@@ -20,6 +20,7 @@ showScrollToTop = true
 
 [article]
   showDate = true
+  showDateUpdated = false
   showAuthor = true
   showBreadcrumbs = false
   showDraftLabel = true
@@ -29,8 +30,8 @@ showScrollToTop = true
   showHeadingAnchors = true
   showPagination = true
   showReadingTime = true
-  showTaxonomies = false
   showTableOfContents = false
+  showTaxonomies = false
   showWordCount = false
   # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
 
@@ -40,11 +41,11 @@ showScrollToTop = true
   showTableOfContents = false
   groupByYear = true
 
-[taxonomy]
-  showTermCount = true
-
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
 
 [fathomAnalytics]
   # site = "ABC12345"

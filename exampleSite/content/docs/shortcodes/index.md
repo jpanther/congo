@@ -95,6 +95,36 @@ data: {
 
 You can see some additional Chart.js examples on the [charts samples]({{< ref "charts" >}}) page.
 
+## Figure
+
+Congo includes a `figure` shortcode for adding images to content. The shortcode replaces the base Hugo functionality in order to provide additional performance benefits.
+
+Images included using `figure` will be optimised using Hugo Pipes and scaled in order to provide images appropriate to different device resolutions.
+
+The `figure` shortcode accepts five parameters:
+
+<!-- prettier-ignore-start -->
+|Parameter|Description|
+|---|---|
+|`src`|**Required.** The filename of the image. This image must be a [page resource](https://gohugo.io/content-management/page-resources/) bundled with the page.|
+|`alt`|The alternate text for the image.|
+|`caption`|The image caption to be displayed below the image.|
+|`class`|Additional CSS classes to add to the image.|
+ `href`|The URL that the image should be linked to.|
+<!-- prettier-ignore-end -->
+
+**Example:**
+
+```md
+{{</* figure
+    src="abstract.jpg"
+    alt="Abstract purple artwork"
+    caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)"
+    */>}}
+```
+
+{{< figure src="abstract.jpg" alt="Abstract purple artwork" caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)" >}}
+
 ## Icon
 
 `icon` outputs an SVG icon and takes the icon name as its only parameter. The icon is scaled to match the current text size.
