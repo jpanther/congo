@@ -13,7 +13,11 @@
 
   {{/* Gather partials for this context */}}
   {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-    {{ $meta.Add "partials" (slice (partial "meta/date.html" .)) }}
+    {{ $meta.Add "partials" (slice (partial "meta/date.html" .Date)) }}
+  {{ end }}
+
+  {{ if .Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false) }}
+    {{ $meta.Add "partials" (slice (partial "meta/date-updated.html" .Lastmod)) }}
   {{ end }}
 
   {{ if and (.Params.showWordCount | default (.Site.Params.article.showWordCount | default false)) (ne .WordCount 0) }}
@@ -29,7 +33,7 @@
   {{ end }}
 
 
-  <div class="flex flex-row items-center">
+  <div class="flex flex-row flex-wrap items-center">
     {{/* Output partials */}}
     {{ with ($meta.Get "partials") }}
       {{ delimit . "<span class=\"px-2 text-primary-500\">&middot;</span>" }}

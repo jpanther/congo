@@ -13,7 +13,7 @@
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-                    {{ partial "meta/date.html" .NextInSection }}
+                    {{ partial "meta/date.html" .NextInSection.Date }}
                   {{ end }}
                 </span>
               </span>
@@ -29,7 +29,7 @@
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-                    {{ partial "meta/date.html" .PrevInSection }}
+                    {{ partial "meta/date.html" .PrevInSection.Date }}
                   {{ end }}
                 </span>
               </span>
