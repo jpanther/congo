@@ -10,6 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Turkish translation ([#90](https://github.com/jpanther/congo/pull/90))
 
+### Changed
+
+- Article updated date formatting and i18n ([#91](https://github.com/jpanther/congo/pull/91))
+
+### Fixed
+
+- Article metadata not wrapping at small viewports ([#91](https://github.com/jpanther/congo/pull/91))
+
 ## [1.6.3] - 2022-01-19
 
 ### Added
