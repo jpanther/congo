@@ -6,6 +6,7 @@
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
+paginate = 10
 summaryLength = 0
 
 [outputs]
