@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Article pagination direction can be inverted
 - Author `headline` parameter
 - Skip to content and Scroll to top links
+- Archetype for generating links to external articles
 
 ### Changed
 
