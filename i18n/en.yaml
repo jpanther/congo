@@ -16,6 +16,10 @@ article:
 author:
   byline_title: "Author"
 
+code:
+  copy: "Copy"
+  copied: "Copied"
+
 error:
   404_title: "Page Not Found :confused:"
   404_error: "Error 404"

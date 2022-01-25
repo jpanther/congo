@@ -100,6 +100,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |---|---|---|
 |`colorScheme`|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `ocean`, `fire` and `slate`. Refer to the [Colour Schemes]({{< ref "getting-started#colour-schemes" >}}) section for more details.|
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
+|`enableCodeCopy`|`false`|Whether copy buttons are enabled for `<code>` blocks.|
 |`darkMode`|`"auto"`|The preferred theme appearance for dark mode. Set to `true` to force dark appearance or `false` to force light appearance. Using `"auto"` will defer to the user's operating system preference.|
 |`logo`|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
 |`mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|

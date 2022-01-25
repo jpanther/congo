@@ -77,10 +77,33 @@ body button {
   @apply rtl:mr-0;
 }
 
+/* Code Copy */
+.highlight-wrapper {
+  @apply block;
+}
+.highlight {
+  @apply relative z-0;
+}
+.highlight:hover > .copy-button {
+  @apply visible;
+}
+.copy-button {
+  @apply absolute top-0 right-0 z-10 invisible w-20 py-1 font-mono text-sm cursor-pointer opacity-90 bg-neutral-200 whitespace-nowrap rounded-bl-md rounded-tr-md text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200;
+}
+.copy-button:hover,
+.copy-button:focus,
+.copy-button:active,
+.copy-button:active:hover {
+  @apply bg-primary-100 dark:bg-primary-600;
+}
+.copy-textarea {
+  @apply absolute opacity-5 -z-10;
+}
+
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {
-  @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply static rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
 }
 /* LineTableTD */
 .chroma .lntd,

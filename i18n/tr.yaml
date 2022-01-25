@@ -15,6 +15,10 @@ article:
 author:
   byline_title: "Yazar"
 
+# code:
+#   copy: "Copy"
+#   copied: "Copied"
+
 error:
   404_title: "Sayfa Bulunamadı :confused:"
   404_error: "Hata 404"

@@ -16,6 +16,10 @@ article:
 author:
   byline_title: "Auteur"
 
+# code:
+#   copy: "Copy"
+#   copied: "Copied"
+
 error:
   404_title: "Cette page n'existe pas :confused:"
   404_error: "Erreur 404"

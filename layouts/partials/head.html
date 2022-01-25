@@ -59,8 +59,14 @@
     {{ $jsSearch := resources.Get "js/search.js" }}
     {{ $assets.Add "js" (slice $jsFuse $jsSearch) }}
   {{ end }}
+  {{ if .Site.Params.enableCodeCopy | default false }}
+    {{ $jsCode := resources.Get "js/code.js" }}
+    {{ $assets.Add "js" (slice $jsCode) }}
+    <script type="application/json" id="code-lang" data-copy="{{ i18n "code.copy" }}" data-copied="{{ i18n "code.copied" }}"></script>
+  {{ end }}
   {{ if $assets.Get "js" }}
-    {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}    <script defer type="text/javascript" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}"></script>
+    {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+    <script defer type="text/javascript" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}"></script>
   {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}

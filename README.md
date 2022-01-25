@@ -25,7 +25,7 @@ Congo is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.
 - Mathematical notation using KaTeX
 - SVG icons from FontAwesome 5
 - Automatic image resizing using Hugo Pipes
-- Heading anchors, Tables of Contents, Buttons, Badges and more
+- Heading anchors, Tables of Contents, Code copy, Buttons, Badges and more
 - HTML and Emoji support in articles 🎉
 - SEO friendly with links for sharing to social media
 - Fathom Analytics and Google Analytics support
