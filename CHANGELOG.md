@@ -31,6 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgrade to Tailwind v3.0.15
 - Inline Javascript moved to external files
 - Improved JSON-LD structured data
+- Breadcrumbs now fallback to section name when `title` is not provided
 - Minor style and layout improvements
 
 ## [1.6.4] - 2022-01-24
