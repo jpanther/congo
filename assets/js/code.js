@@ -6,6 +6,7 @@ function createCopyButton(highlightDiv) {
   const button = document.createElement("button");
   button.className = "copy-button";
   button.type = "button";
+  button.ariaLabel = copyText;
   button.innerText = copyText;
   button.addEventListener("click", () => copyCodeToClipboard(button, highlightDiv));
   addCopyButtonToDom(button, highlightDiv);
