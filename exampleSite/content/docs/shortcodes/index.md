@@ -107,11 +107,17 @@ The `figure` shortcode accepts five parameters:
 |Parameter|Description|
 |---|---|
 |`src`|**Required.** The filename of the image. This image must be a [page resource](https://gohugo.io/content-management/page-resources/) bundled with the page.|
-|`alt`|The alternate text for the image.|
-|`caption`|The image caption to be displayed below the image.|
+|`alt`|[Alternative text description](https://moz.com/learn/seo/alt-text) for the image.|
+|`caption`|Markdown for the image caption which will be displayed below the image.|
 |`class`|Additional CSS classes to add to the image.|
- `href`|The URL that the image should be linked to.|
+ `href`|URL that the image should be linked to.|
 <!-- prettier-ignore-end -->
+
+Congo also supports automatic conversion of images included using standard Markdown syntax. Simply use the following format and the theme will handle the rest:
+
+```md
+![Alt text](image.jpg "Image caption")
+```
 
 **Example:**
 
@@ -121,6 +127,10 @@ The `figure` shortcode accepts five parameters:
     alt="Abstract purple artwork"
     caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)"
     */>}}
+
+<!-- OR -->
+
+![Abstract purple artwork](abstract.jpg "Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)")
 ```
 
 {{< figure src="abstract.jpg" alt="Abstract purple artwork" caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)" >}}

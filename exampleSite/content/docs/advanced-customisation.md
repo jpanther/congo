@@ -37,6 +37,16 @@ In addition to the default schemes, you can also create your own and re-style th
 
 Congo defines a three-colour palette that is used throughout the theme. The three colours are defined as `neutral`, `primary` and `secondary` variants, each containing ten shades of colour.
 
+Due to the way Tailwind CSS 3.0 calculates colour values with opacity, the colours specified in the scheme need to [conform to a particular format](https://github.com/adamwathan/tailwind-css-variable-text-opacity-demo) by providing the red, green and blue colour values.
+
+```css
+:root {
+  --color-primary-500: 139, 92, 246;
+}
+```
+
+This example defines a CSS variable for the `primary-500` colour with a red value of `139`, green value of `92` and blue value of `246`.
+
 Use one of the existing theme stylesheets as a template. You are free to define your own colours, but for some inspiration, check out the official [Tailwind colour palette reference](https://tailwindcss.com/docs/customizing-colors#color-palette-reference).
 
 ## Overriding the stylesheet
@@ -60,7 +70,7 @@ html {
 
 Simply by changing this one value, all the font sizes on your website will be adjusted to match this new size. Therefore, to increase the overall font sizes used, make the value greater than `12pt`. Similarly, to decrease the font sizes, make the value less than `12pt`.
 
-## Building the Tailwind CSS from source
+## Building the theme CSS from source
 
 If you'd like to make a major change, you can take advantage of Tailwind CSS's JIT compiler and rebuild the entire theme CSS from scratch. This is useful if you want to adjust the Tailwind configuration or add extra Tailwind classes to the main stylesheet.
 
