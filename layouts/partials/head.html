@@ -50,9 +50,9 @@
     href="{{ $bundleCSS.RelPermalink }}"
     integrity="{{ $bundleCSS.Data.Integrity }}"
   />
-  {{ if eq (.Site.Params.darkMode | default "auto") "auto" }}
-    {{ $jsDark := resources.Get "js/dark.js" }}
-    {{ $assets.Add "js" (slice $jsDark) }}
+  {{ if .Site.Params.enableAppearanceSwitching | default true }}
+    {{ $jsAppearance := resources.Get "js/appearance.js" }}
+    {{ $assets.Add "js" (slice $jsAppearance) }}
   {{ end }}
   {{ if .Site.Params.enableSearch | default false }}
     {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
@@ -62,11 +62,10 @@
   {{ if .Site.Params.enableCodeCopy | default false }}
     {{ $jsCode := resources.Get "js/code.js" }}
     {{ $assets.Add "js" (slice $jsCode) }}
-    <script type="application/json" id="code-lang" data-copy="{{ i18n "code.copy" }}" data-copied="{{ i18n "code.copied" }}"></script>
   {{ end }}
   {{ if $assets.Get "js" }}
     {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
-    <script defer type="text/javascript" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}"></script>
+    <script defer type="text/javascript" id="script-bundle" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}" data-copy="{{ i18n "code.copy" }}" data-copied="{{ i18n "code.copied" }}"></script>
   {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}

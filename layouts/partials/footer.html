@@ -39,26 +39,21 @@
         </p>
       {{ end }}
     </div>
-    {{/* Dark mode toggle */}}
-    {{ if and (.Site.Params.showDarkToggle | default false) (eq (.Site.Params.darkMode | default "auto") "auto") }}
+    {{/* Appearance switch */}}
+    {{ if .Site.Params.showAppearanceSwitcher | default false }}
       <div
         class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 {{ if .Site.Params.showScrollToTop | default true -}}
           ltr:mr-14 rtl:ml-14
         {{- end }}"
       >
         <button
-          id="dark-toggle"
-          class="inline w-12 h-12 dark:hidden"
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
           title="{{ i18n "footer.dark_appearance" }}"
         >
-          {{ partial "icon.html" "moon" }}
-        </button>
-        <button
-          id="light-toggle"
-          class="hidden w-12 h-12 cursor-pointer dark:inline"
-          title="{{ i18n "footer.light_appearance" }}"
-        >
-          {{ partial "icon.html" "sun" }}
+          <span class="inline dark:hidden">{{ partial "icon.html" "moon" }}</span>
+          <span class="hidden dark:inline">{{ partial "icon.html" "sun" }}</span>
         </button>
       </div>
     {{ end }}

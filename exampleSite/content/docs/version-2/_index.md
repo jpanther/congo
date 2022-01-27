@@ -28,7 +28,7 @@ A highly requested feature, Congo is now multilingual! If you publish your conte
 
 <div class="text-2xl text-center" style="font-size: 2.8rem">:flag-au: :de: :fr: :es: :cn: :brazil: :tr:</div>
 
-Thanks to submissions from the community, Congo has already been translated into [seven languages](https://github.com/jpanther/congo/tree/dev/i18n) with more to be added over time. By the way, pull requests for new languages are always welcome!
+Thanks to submissions from the community, Congo has already been translated into [seven languages](https://github.com/jpanther/congo/tree/dev/i18n) with more to be added over time. By the way, [pull requests](https://github.com/jpanther/congo/pulls) for new languages are always welcome!
 
 ## RTL language support
 
@@ -86,6 +86,10 @@ The new image resizing features also provide full control over `alt` and `title`
 ## A whole lot more
 
 There's countless other minor changes to explore. From being able to display taxonomies on articles and list pages, to using the new `headline` author parameter to customise your homepage. There's also improved JSON-LD strucured data which further optimises SEO performance. Plus the entire theme has had extra polish to ensure a consistent design language.
+
+:rocket: Check out the [full changelog](https://github.com/jpanther/congo/blob/dev/CHANGELOG.md) to learn more.
+
+## Next steps
 
 If you're ready to upgrade, read the [upgrading from version 1 guide]({{< ref "upgrade" >}}) to get started. If you're new to Congo, check out the [Installation guide]({{< ref "docs/installation" >}}) to begin a new project.
 

@@ -25,9 +25,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - ⚠️ Required Hugo version is now 0.87.0 or later
-- ⚠️ Author and logo images are now Hugo assets
+- ⚠️ Complete rewrite of dark mode to allow more flexibile configuration
+- ⚠️ All theme images are now Hugo assets
 - ⚠️ Overhauled `figure` shortcode which now resizes images
-- ⚠️ Renamed parameter: `darkToggle` -> `showDarkToggle`
 - Upgrade to Tailwind v3.0.15
 - Inline Javascript moved to external files
 - Improved JSON-LD structured data

@@ -117,6 +117,11 @@ If you're using a language other than English, provide a `defaultContentLanguage
 # config/_default/config.toml
 
 defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 ```
@@ -139,11 +144,17 @@ The recommended settings are as follows, which includes any headings in the Mark
 
 A number of new theme parameters have been introduced in Congo 2.0. Some minor changes are requried to existing configurations. Remember, the theme will always revert to a sensible default if a parameter is not provided.
 
-The follow parameters have been **renamed**:
+The way that dark mode works in Congo has been changed to allow greater flexibility around configuration. The old `darkMode` and `darkToggle` parameters have been **removed and replaced** by three new parameters. These new options operate independently of each other, making it possible to force the appearance while still allowing the user to override.
 
-`darkToggle` **&rarr;** `showDarkToggle`
+<!-- prettier-ignore-start -->
+| New parameter | Type | Default | Description |
+| --- | --- | --- | --- |
+| `defaultAppearance` | String | `"light"` | Default theme appearance; either `light` or `dark`.<br>:warning: _Setting this to `light` replicates the old `darkMode = false` setting, while `dark` replicates `darkMode = true`._ |
+| `autoSwitchAppearance` | Boolean | `true` | Whether the theme appearance automatically switches based upon the operating system preference. Set to `false` to force the site to always use the `defaultAppearance`. <br>:warning: _Setting this to `true` replicates the old `darkMode = "auto"` setting._ |
+| `showAppearanceSwitcher` | Boolean | `false` | Whether the theme appearance switcher is dispalyed in the site footer. <br>:warning: _This parameter replaces `darkToggle`._ |
+<!-- prettier-ignore-end -->
 
-The following table outlines some key **new parameters** that control new features in version 2:
+The following table outlines some other key **new parameters** that control new features in version 2:
 
 | New parameter                 | Type    | Default |
 | ----------------------------- | ------- | ------- |

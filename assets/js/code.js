@@ -1,6 +1,6 @@
-var codeLang = document.getElementById("code-lang");
-var copyText = codeLang ? codeLang.getAttribute("data-copy") : "Copy";
-var copiedText = codeLang ? codeLang.getAttribute("data-copied") : "Copied";
+var scriptBundle = document.getElementById("script-bundle");
+var copyText = scriptBundle ? scriptBundle.getAttribute("data-copy") : "Copy";
+var copiedText = scriptBundle ? scriptBundle.getAttribute("data-copied") : "Copied";
 
 function createCopyButton(highlightDiv) {
   const button = document.createElement("button");
