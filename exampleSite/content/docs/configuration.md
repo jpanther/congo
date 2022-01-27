@@ -72,10 +72,10 @@ The default file can be used as a template to create additional languages, or re
 <!-- prettier-ignore-start -->
 |Name|Default|Description|
 |---|---|---|
-|`languageCode`|`"en"`|The language code for this file. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-au`) and should match the language code in the filename. Hugo expects this value to always be in lowercase. For proper HTML compliance, set the `htmlCode` parameter which is case-sensitive.|
+|`languageCode`|`"en"`|The Hugo language code for this file. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-au`) and should match the language code in the filename. Hugo expects this value to always be in lowercase. For proper HTML compliance, set the `isoCode` parameter which is case-sensitive.|
 |`languageName`|`"English"`|The name of the language.|
 |`displayName`|`"EN"`|The name used when the language appears on the website.|
-|`htmlCode`|`"en"`|The language code for HTML metadata purposes. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-AU`).|
+|`isoCode`|`"en"`|The ISO language code for HTML metadata purposes. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-AU`).|
 |`weight`|`1`|The weight determines the order of languages when building multilingual sites.|
 |`rtl`|`false`|Whether or not this is a RTL language. Set to `true` to reflow content from right-to-left. Congo fully supports using RTL and LTR languages at the same time and will dynamically adjust to both.|
 |`dateFormat`|`"2 January 2006"`|How dates are formatted in this language. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|

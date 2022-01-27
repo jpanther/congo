@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html
-  lang="{{ with .Site.Language.Params.htmlCode | default (.Site.LanguageCode | default "en") }}
+  lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default "en") }}
     {{- . -}}
   {{ end }}"
-  dir="{{ if .Site.Language.Params.rtl | default false -}}
+  dir="{{ if .Site.Params.rtl | default false -}}
     rtl
   {{- else -}}
     ltr

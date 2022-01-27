@@ -1,7 +1,7 @@
 languageCode = "en"
 languageName = "English"
 displayName = "EN"
-htmlCode = "en"
+isoCode = "en"
 weight = 1
 rtl = false
 
