@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - ⚠️ Complete rewrite of dark mode to allow more flexibile configuration
 - ⚠️ All theme images are now Hugo assets
 - ⚠️ Overhauled `figure` shortcode which now resizes images
-- Upgrade to Tailwind v3.0.15
+- Upgrade to Tailwind v3.0.17
 - Inline Javascript moved to external files
 - Improved JSON-LD structured data
 - Breadcrumbs now fallback to section name when `title` is not provided
