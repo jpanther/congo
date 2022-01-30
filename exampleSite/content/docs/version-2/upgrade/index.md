@@ -177,7 +177,9 @@ If you have provided an author image or site logo, simply move these assets from
 
 ## Step 5: Check content
 
-The behavior of the `figure` shortcode is different in version 2. If you are using `figure` in your content, you may need to adjust the parameters you are providing. Consult the shortcode docs to learn more about supported parameters.
+The behavior of the `figure` shortcode is different in version 2. If you are using `figure` in your content and have advanced use cases, you may need to adjust the parameters you are providing.
+
+Consult the [shortcode docs]({{< ref "docs/shortcodes#figure" >}}) to learn more about supported parameters.
 
 ## Step 6: Rebuild
 

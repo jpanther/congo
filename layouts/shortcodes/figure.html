@@ -6,13 +6,13 @@
   <figure {{ with $class }}class="{{ . }}"{{ end }}>
     {{ with $href }}<a href="{{ . }}">{{ end }}
       <img
-        class="my-0"
+        class="my-0 rounded-md"
         srcset="
-        {{ (.Resize "320x").RelPermalink }} 320w,
-        {{ (.Resize "635x").RelPermalink }} 635w,
+        {{ (.Resize "330x").RelPermalink }} 330w,
+        {{ (.Resize "660x").RelPermalink }} 660w,
         {{ (.Resize "1024x").RelPermalink }} 1024w,
-        {{ (.Resize "1270x").RelPermalink }} 2x"
-        src="{{ (.Resize "635x").RelPermalink }}"
+        {{ (.Resize "1320x").RelPermalink }} 2x"
+        src="{{ (.Resize "660x").RelPermalink }}"
         alt="{{ $altText }}"
       />
     {{ if $href }}</a>{{ end }}
