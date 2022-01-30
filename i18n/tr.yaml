@@ -33,6 +33,15 @@ list:
   externalurl_title: "Harici siteye bağlantı"
   no_articles: "Henüz burada listelenecek bir makale yok."
 
+# nav:
+#   scroll_to_top_title: "Scroll to top"
+#   skip_to_main: "Skip to main content"
+
+# search:
+#   open_button_title: "Search (/)"
+#   close_button_title: "Close (Esc)"
+#   input_placeholder: "Search"
+
 sharing:
   email: "Email ile gönder"
   facebook: "Facebook'ta paylaş"
