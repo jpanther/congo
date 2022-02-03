@@ -30,13 +30,13 @@ The process for upgrading Congo will depend on how you include the theme in your
 
 ### Upgrade using Hugo
 
-Hugo makes updating modules super easy. Simply change into your project directory and execute the following command:
+To upgrade a go module to a new major release, the `modules.toml` and `go.mod` files need to be updated. In each file, update the path to the theme from `github.com/jpanther/congo` to `github.com/jpanther/congo/v2`.
+
+Then change into your project directory and execute the following command:
 
 ```shell
 hugo mod get -u
 ```
-
-Hugo will automatically upgrade any modules that are required for your project. It does this by inspecting your `module.toml` and `go.mod` files. If you have any issues with the upgrade, check to ensure these files are still configured correctly.
 
 Once the theme has been upgraded, continue to the [next section](#step-3-theme-configuration).
 

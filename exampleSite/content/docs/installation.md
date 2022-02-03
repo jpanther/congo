@@ -65,7 +65,7 @@ This method is the quickest and easiest for keeping the theme up-to-date. Hugo u
 
    ```toml
    [[imports]]
-   path = "github.com/jpanther/congo"
+   path = "github.com/jpanther/congo/v2"
    ```
 
 4. Start your server using `hugo server` and the theme will be downloaded automatically.
