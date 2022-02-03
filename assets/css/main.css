@@ -1,60 +1,89 @@
-/*! Congo v1.6.4 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.0.0 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
 
 body a,
 body button {
-  @apply transition;
+  @apply transition-colors;
 }
 
 /* Scale SVG icons to text size */
 .icon svg {
-  height: 1em;
-  width: 1em;
+  @apply h-[1em] w-[1em];
 }
 
-/* Heading anchors */
-.prose .heading-anchor {
-  @apply absolute top-0 no-underline opacity-0;
-  width: 1.1em;
-  left: -1.1em;
-}
-.prose .heading-anchor:hover {
-  @apply underline bg-transparent text-primary-600;
-}
-.prose .heading-anchor:hover,
-.prose .heading-anchor:focus,
-.prose h2:hover > .heading-anchor,
-.prose h3:hover > .heading-anchor,
-.prose h4:hover > .heading-anchor {
-  @apply opacity-100;
+/* Search */
+#search-query::-webkit-search-cancel-button,
+#search-query::-webkit-search-decoration,
+#search-query::-webkit-search-results-button,
+#search-query::-webkit-search-results-decoration {
+  @apply hidden;
 }
 
-/* Prose escape hatch */
-.no-prose > p {
-  @apply mt-0 last:mb-0;
+/* RTL support */
+.prose blockquote {
+  @apply rtl:pr-4 rtl:border-l-0 rtl:border-r-4;
+}
+.prose ul > li,
+.prose ol > li {
+  @apply rtl:pl-0 rtl:pr-2 rtl:mr-7;
+}
+.prose ol > li:before,
+.prose ul > li:before {
+  @apply rtl:left-auto rtl:right-1;
+}
+.prose thead td:first-child,
+.prose thead th:first-child {
+  @apply rtl:pr-0;
+}
+.prose thead td:last-child,
+.prose thead th:last-child {
+  @apply rtl:pl-0;
 }
 
-/* Article pagination */
-.article-pagination a:hover .article-pagination-title {
-  @apply underline underline-primary-500;
+/* Table of Contents */
+.toc ul,
+.toc li {
+  @apply px-0 leading-snug list-none;
+}
+.toc ul ul {
+  @apply ltr:pl-4 rtl:pr-4;
+}
+.toc a {
+  @apply font-normal text-neutral-700 dark:text-neutral-400;
+}
+.toc ul > li {
+  @apply rtl:mr-0;
 }
 
-.article-pagination a:hover .article-pagination-direction {
-  @apply text-primary-700 dark:text-primary-400;
+/* Code Copy */
+.highlight-wrapper {
+  @apply block;
+}
+.highlight {
+  @apply relative z-0;
+}
+.highlight:hover > .copy-button {
+  @apply visible;
+}
+.copy-button {
+  @apply absolute top-0 right-0 z-10 invisible w-20 py-1 font-mono text-sm cursor-pointer opacity-90 bg-neutral-200 whitespace-nowrap rounded-bl-md rounded-tr-md text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200;
+}
+.copy-button:hover,
+.copy-button:focus,
+.copy-button:active,
+.copy-button:active:hover {
+  @apply bg-primary-100 dark:bg-primary-600;
+}
+.copy-textarea {
+  @apply absolute opacity-5 -z-10;
 }
 
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {
-  @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
-}
-/* Other */
-.chroma .x {
-}
-/* Error */
-.chroma .err {
+  @apply static rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
 }
 /* LineTableTD */
 .chroma .lntd,
@@ -74,307 +103,184 @@ body button {
   @apply p-0 m-0;
 }
 /* LineNumbersTable */
-.chroma .lnt {
-  @apply text-neutral-600 dark:text-neutral-300;
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-}
 /* LineNumbers */
+.chroma .lnt,
 .chroma .ln {
-  @apply text-neutral-600 dark:text-neutral-300;
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
+  @apply text-neutral-600 dark:text-neutral-300  mr-[0.4em] px-[0.4em] py-0;
 }
 /* Keyword */
-.chroma .k {
+/* KeywordDeclaration */
+/* KeywordNamespace */
+/* KeywordPseudo */
+/* KeywordReserved */
+/* NameClass */
+/* NameFunctionMagic */
+/* NameNamespace */
+/* NameVariableClass */
+/* Operator */
+.chroma .k,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .nc,
+.chroma .fm,
+.chroma .nn,
+.chroma .vc,
+.chroma .o {
   @apply text-primary-600 dark:text-primary-300;
 }
 /* KeywordConstant */
 .chroma .kc {
   @apply font-semibold text-secondary-400 dark:text-secondary-500;
 }
-/* KeywordDeclaration */
-.chroma .kd {
-  @apply text-primary-600 dark:text-primary-300;
-}
-/* KeywordNamespace */
-.chroma .kn {
-  @apply text-primary-600 dark:text-primary-300;
-}
-/* KeywordPseudo */
-.chroma .kp {
-  @apply text-primary-600 dark:text-primary-300;
-}
-/* KeywordReserved */
-.chroma .kr {
-  @apply text-primary-600 dark:text-primary-300;
-}
 /* KeywordType */
-.chroma .kt {
+/* NameVariable */
+/* NameVariableInstance */
+/* NameVariableMagic */
+/* LiteralNumber */
+/* LiteralNumberBin */
+/* LiteralNumberFloat */
+/* LiteralNumberHex */
+/* LiteralNumberInteger */
+/* LiteralNumberIntegerLong */
+/* LiteralNumberOct */
+.chroma .kt,
+.chroma .nv,
+.chroma .vi,
+.chroma .vm,
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
   @apply text-secondary-400 dark:text-secondary-600;
 }
 /* Name */
-.chroma .n {
+/* NameDecorator */
+/* NameEntity */
+/* NameLabel */
+.chroma .n,
+.chroma .nd,
+.chroma .ni,
+.chroma .nl {
   @apply text-secondary-900 dark:text-secondary-200;
 }
 /* NameAttribute */
-.chroma .na {
-  @apply text-secondary-800 dark:text-secondary-300;
-}
 /* NameBuiltin */
-.chroma .nb {
-  @apply text-secondary-800 dark:text-secondary-300;
-}
 /* NameBuiltinPseudo */
-.chroma .bp {
+/* NameOther */
+/* NameProperty */
+/* NameTag */
+.chroma .na,
+.chroma .nb,
+.chroma .bp,
+.chroma .nx,
+.chroma .py,
+.chroma .nt {
   @apply text-secondary-800 dark:text-secondary-300;
-}
-/* NameClass */
-.chroma .nc {
-  @apply text-primary-600 dark:text-primary-300;
 }
 /* NameConstant */
-.chroma .no {
-  @apply font-semibold text-secondary-400 dark:text-secondary-500;
-}
-/* NameDecorator */
-.chroma .nd {
-  @apply text-secondary-900 dark:text-secondary-200;
-}
-/* NameEntity */
-.chroma .ni {
-  @apply text-secondary-900 dark:text-secondary-200;
-}
 /* NameException */
-.chroma .ne {
+/* NameVariableGlobal */
+.chroma .no,
+.chroma .ne,
+.chroma .vg {
   @apply font-semibold text-secondary-400 dark:text-secondary-500;
 }
 /* NameFunction */
 .chroma .nf {
   @apply text-secondary-600 dark:text-secondary-500;
 }
-/* NameFunctionMagic */
-.chroma .fm {
-  @apply text-primary-600 dark:text-primary-300;
-}
-/* NameLabel */
-.chroma .nl {
-  @apply text-secondary-900 dark:text-secondary-200;
-}
-/* NameNamespace */
-.chroma .nn {
-  @apply text-primary-600 dark:text-primary-300;
-}
-/* NameOther */
-.chroma .nx {
-  @apply text-secondary-800 dark:text-secondary-300;
-}
-/* NameProperty */
-.chroma .py {
-  color: #cebc3a;
-}
-/* NameTag */
-.chroma .nt {
-  @apply text-secondary-800 dark:text-secondary-300;
-}
-/* NameVariable */
-.chroma .nv {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* NameVariableClass */
-.chroma .vc {
-  @apply text-primary-600 dark:text-primary-300;
-}
-/* NameVariableGlobal */
-.chroma .vg {
-  @apply font-semibold text-secondary-400 dark:text-secondary-500;
-}
-/* NameVariableInstance */
-.chroma .vi {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* NameVariableMagic */
-.chroma .vm {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
 /* Literal */
-.chroma .l {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralDate */
-.chroma .ld {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralString */
-.chroma .s {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringAffix */
-.chroma .sa {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringBacktick */
-.chroma .sb {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringChar */
-.chroma .sc {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringDelimiter */
-.chroma .dl {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringDoc */
-.chroma .sd {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringDouble */
-.chroma .s2 {
+/* LiteralStringHeredoc */
+/* LiteralStringInterpol */
+/* LiteralStringOther */
+/* LiteralStringSingle */
+/* GenericInserted */
+/* GenericOutput */
+/* GenericPrompt */
+.chroma .l,
+.chroma .ld,
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .sd,
+.chroma .s2,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .s1,
+.chroma .gi,
+.chroma .go,
+.chroma .gp {
   @apply text-primary-800 dark:text-primary-400;
 }
 /* LiteralStringEscape */
 .chroma .se {
   @apply font-semibold text-secondary-400 dark:text-secondary-500;
 }
-/* LiteralStringHeredoc */
-.chroma .sh {
-  @apply text-primary-800 dark:text-primary-400;
-}
-/* LiteralStringInterpol */
-.chroma .si {
-  @apply text-primary-800 dark:text-primary-400;
-}
-/* LiteralStringOther */
-.chroma .sx {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringRegex */
-.chroma .sr {
-  @apply font-semibold text-primary-800 dark:text-primary-400;
-}
-/* LiteralStringSingle */
-.chroma .s1 {
-  @apply text-primary-800 dark:text-primary-400;
-}
 /* LiteralStringSymbol */
+.chroma .sr,
 .chroma .ss {
   @apply font-semibold text-primary-800 dark:text-primary-400;
-}
-/* LiteralNumber */
-.chroma .m {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* LiteralNumberBin */
-.chroma .mb {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* LiteralNumberFloat */
-.chroma .mf {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* LiteralNumberHex */
-.chroma .mh {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* LiteralNumberInteger */
-.chroma .mi {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* LiteralNumberIntegerLong */
-.chroma .il {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* LiteralNumberOct */
-.chroma .mo {
-  @apply text-secondary-400 dark:text-secondary-600;
-}
-/* Operator */
-.chroma .o {
-  @apply text-primary-600;
 }
 /* OperatorWord */
 .chroma .ow {
   @apply font-semibold text-primary-400 dark:text-primary-600;
 }
-/* Punctuation */
-.chroma .p {
-}
 /* Comment */
-.chroma .c {
+/* CommentMultiline */
+/* CommentSingle */
+/* CommentSpecial */
+/* CommentPreproc */
+/* CommentPreprocFile */
+.chroma .c,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs,
+.chroma .cp,
+.chroma .cpf {
   @apply italic text-neutral-500 dark:text-neutral-400;
 }
 /* CommentHashbang */
 .chroma .ch {
   @apply italic font-semibold text-neutral-500 dark:text-neutral-400;
 }
-/* CommentMultiline */
-.chroma .cm {
-  @apply italic text-neutral-500 dark:text-neutral-400;
-}
-/* CommentSingle */
-.chroma .c1 {
-  @apply italic text-neutral-500 dark:text-neutral-400;
-}
-/* CommentSpecial */
-.chroma .cs {
-  @apply italic text-neutral-500 dark:text-neutral-400;
-}
-/* CommentPreproc */
-.chroma .cp {
-  @apply italic text-neutral-500 dark:text-neutral-400;
-}
-/* CommentPreprocFile */
-.chroma .cpf {
-  @apply italic text-neutral-500 dark:text-neutral-400;
-}
-/* Generic */
-.chroma .g {
-}
-/* GenericDeleted */
-.chroma .gd {
-}
 /* GenericEmph */
 .chroma .ge {
   @apply italic;
 }
-/* GenericError */
-.chroma .gr {
-}
 /* GenericHeading */
 .chroma .gh {
   @apply font-semibold text-neutral-500;
-}
-/* GenericInserted */
-.chroma .gi {
-  @apply text-primary-800 dark:text-primary-400;
-}
-/* GenericOutput */
-.chroma .go {
-  @apply text-primary-800 dark:text-primary-400;
-}
-/* GenericPrompt */
-.chroma .gp {
-  @apply text-primary-800 dark:text-primary-400;
 }
 /* GenericStrong */
 .chroma .gs {
   @apply font-semibold;
 }
 /* GenericSubheading */
-.chroma .gu {
-  @apply text-neutral-500;
-}
 /* GenericTraceback */
+.chroma .gu,
 .chroma .gt {
   @apply text-neutral-500;
 }
 /* GenericUnderline */
 .chroma .gl {
   @apply underline;
-}
-/* TextWhitespace */
-.chroma .w {
 }
 
 @tailwind utilities;

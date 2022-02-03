@@ -1,9 +1,0 @@
-<header>
-  {{ if .Site.Params.list.showBreadcrumbs | default false }}
-    {{ partial "breadcrumbs.html" . }}
-  {{ end }}
-  <section class="prose dark:prose-light">
-    <h1 class="mb-3 text-4xl font-extrabold text-neutral-800">{{ .Title }}</h1>
-    <section>{{ .Content }}</section>
-  </section>
-</header>

@@ -1,231 +1,143 @@
 const colors = require("tailwindcss/colors");
 
+function varWithOpacity(variable) {
+  return ({ opacityValue }) => {
+    if (opacityValue === undefined) {
+      return `rgb(var(${variable}))`;
+    }
+    return `rgba(var(${variable}), ${opacityValue})`;
+  };
+}
+
 module.exports = {
-  mode: "jit",
-  purge: {
-    content: [
-      "./layouts/**/*.html",
-      "./content/**/*.{html,md}",
-      "./themes/congo/layouts/**/*.html",
-      "./themes/congo/content/**/*.{html,md}",
-    ],
-  },
+  content: [
+    "./layouts/**/*.html",
+    "./content/**/*.{html,md}",
+    "./themes/congo/layouts/**/*.html",
+    "./themes/congo/content/**/*.{html,md}",
+  ],
   darkMode: "class",
   theme: {
-    colors: {
-      transparent: "transparent",
-      neutral: {
-        DEFAULT: "var(--color-neutral)",
-        50: "var(--color-neutral-50)",
-        100: "var(--color-neutral-100)",
-        200: "var(--color-neutral-200)",
-        300: "var(--color-neutral-300)",
-        400: "var(--color-neutral-400)",
-        500: "var(--color-neutral-500)",
-        600: "var(--color-neutral-600)",
-        700: "var(--color-neutral-700)",
-        800: "var(--color-neutral-800)",
-        900: "var(--color-neutral-900)",
-      },
-      primary: {
-        50: "var(--color-primary-50)",
-        100: "var(--color-primary-100)",
-        200: "var(--color-primary-200)",
-        300: "var(--color-primary-300)",
-        400: "var(--color-primary-400)",
-        500: "var(--color-primary-500)",
-        600: "var(--color-primary-600)",
-        700: "var(--color-primary-700)",
-        800: "var(--color-primary-800)",
-        900: "var(--color-primary-900)",
-      },
-      secondary: {
-        50: "var(--color-secondary-50)",
-        100: "var(--color-secondary-100)",
-        200: "var(--color-secondary-200)",
-        300: "var(--color-secondary-300)",
-        400: "var(--color-secondary-400)",
-        500: "var(--color-secondary-500)",
-        600: "var(--color-secondary-600)",
-        700: "var(--color-secondary-700)",
-        800: "var(--color-secondary-800)",
-        900: "var(--color-secondary-900)",
-      },
-    },
-    underlineOffset: {
-      small: "2px",
-    },
-    underlineThickness: {
-      bold: "2px",
-    },
     extend: {
+      colors: {
+        neutral: {
+          DEFAULT: varWithOpacity("--color-neutral"),
+          50: varWithOpacity("--color-neutral-50"),
+          100: varWithOpacity("--color-neutral-100"),
+          200: varWithOpacity("--color-neutral-200"),
+          300: varWithOpacity("--color-neutral-300"),
+          400: varWithOpacity("--color-neutral-400"),
+          500: varWithOpacity("--color-neutral-500"),
+          600: varWithOpacity("--color-neutral-600"),
+          700: varWithOpacity("--color-neutral-700"),
+          800: varWithOpacity("--color-neutral-800"),
+          900: varWithOpacity("--color-neutral-900"),
+        },
+        primary: {
+          50: varWithOpacity("--color-primary-50"),
+          100: varWithOpacity("--color-primary-100"),
+          200: varWithOpacity("--color-primary-200"),
+          300: varWithOpacity("--color-primary-300"),
+          400: varWithOpacity("--color-primary-400"),
+          500: varWithOpacity("--color-primary-500"),
+          600: varWithOpacity("--color-primary-600"),
+          700: varWithOpacity("--color-primary-700"),
+          800: varWithOpacity("--color-primary-800"),
+          900: varWithOpacity("--color-primary-900"),
+        },
+        secondary: {
+          50: varWithOpacity("--color-secondary-50"),
+          100: varWithOpacity("--color-secondary-100"),
+          200: varWithOpacity("--color-secondary-200"),
+          300: varWithOpacity("--color-secondary-300"),
+          400: varWithOpacity("--color-secondary-400"),
+          500: varWithOpacity("--color-secondary-500"),
+          600: varWithOpacity("--color-secondary-600"),
+          700: varWithOpacity("--color-secondary-700"),
+          800: varWithOpacity("--color-secondary-800"),
+          900: varWithOpacity("--color-secondary-900"),
+        },
+      },
       typography: (theme) => ({
         DEFAULT: {
-          css: [
-            {
-              color: theme("colors.neutral.700"),
-              a: {
-                color: theme("colors.primary.700"),
-                textDecoration: "underline",
-                textDecorationColor: theme("colors.primary.300"),
-                fontWeight: "500",
-                "&:hover": {
-                  backgroundColor: theme("colors.primary.600"),
-                  borderRadius: "0.09rem",
-                  color: theme("colors.neutral.DEFAULT"),
-                  textDecoration: "none",
-                },
-              },
-              strong: {
-                color: theme("colors.neutral.900"),
-              },
-              "ol > li::before": {
-                color: theme("colors.neutral.800"),
-              },
-              "ul > li::before": {
-                backgroundColor: theme("colors.neutral.500"),
-              },
-              hr: {
-                borderColor: theme("colors.neutral.200"),
-              },
-              blockquote: {
-                color: theme("colors.neutral.800"),
-                borderLeftColor: theme("colors.primary.200"),
-              },
-              h1: {
-                color: theme("colors.neutral.900"),
-                position: "relative",
-              },
-              h2: {
-                color: theme("colors.neutral.800"),
-                position: "relative",
-              },
-              h3: {
-                color: theme("colors.neutral.800"),
-                position: "relative",
-              },
-              h4: {
-                color: theme("colors.neutral.800"),
-                position: "relative",
-              },
-              code: {
-                color: theme("colors.secondary.700"),
-              },
-              "a code": {
-                color: theme("colors.secondary.700"),
-              },
-              "pre code": {
-                color: theme("colors.neutral.700"),
-              },
-              pre: {
-                color: theme("colors.neutral.700"),
-                backgroundColor: theme("colors.neutral.50"),
-              },
-              "pre code": {
-                color: theme("colors.neutral.700"),
-              },
-              thead: {
-                color: theme("colors.neutral.800"),
-                borderBottomColor: theme("colors.neutral.500"),
-              },
-              "tbody tr": {
-                borderBottomColor: theme("colors.neutral.300"),
-              },
-              kbd: {
-                backgroundColor: theme("colors.neutral.200"),
-                padding: "0.1rem 0.4rem",
-                borderRadius: "0.25rem",
-                fontSize: "0.9rem",
-                fontWeight: "600",
-              },
-              mark: {
-                backgroundColor: theme("colors.secondary.200"),
-                padding: "0.1rem 0.2rem",
-                borderRadius: "0.12rem",
+          css: {
+            "--tw-prose-body": theme("colors.neutral.700"),
+            "--tw-prose-headings": theme("colors.neutral.800"),
+            "--tw-prose-lead": theme("colors.neutral.500"),
+            "--tw-prose-links": theme("colors.primary.700"),
+            "--tw-prose-bold": theme("colors.neutral.900"),
+            "--tw-prose-counters": theme("colors.neutral.800"),
+            "--tw-prose-bullets": theme("colors.neutral.500"),
+            "--tw-prose-hr": theme("colors.neutral.200"),
+            "--tw-prose-quotes": theme("colors.neutral.700"),
+            "--tw-prose-quote-borders": theme("colors.primary.200"),
+            "--tw-prose-captions": theme("colors.neutral.500"),
+            "--tw-prose-code": theme("colors.secondary.700"),
+            "--tw-prose-pre-code": theme("colors.neutral.700"),
+            "--tw-prose-pre-bg": theme("colors.neutral.50"),
+            "--tw-prose-th-borders": theme("colors.neutral.500"),
+            "--tw-prose-td-borders": theme("colors.neutral.300"),
+            "--tw-prose-invert-body": theme("colors.neutral.300"),
+            "--tw-prose-invert-headings": theme("colors.neutral.50"),
+            "--tw-prose-invert-lead": theme("colors.neutral.500"),
+            "--tw-prose-invert-links": theme("colors.primary.400"),
+            "--tw-prose-invert-bold": theme("colors.neutral.DEFAULT"),
+            "--tw-prose-invert-counters": theme("colors.neutral.400"),
+            "--tw-prose-invert-bullets": theme("colors.neutral.600"),
+            "--tw-prose-invert-hr": theme("colors.neutral.500"),
+            "--tw-prose-invert-quotes": theme("colors.neutral.200"),
+            "--tw-prose-invert-quote-borders": theme("colors.primary.900"),
+            "--tw-prose-invert-captions": theme("colors.neutral.400"),
+            "--tw-prose-invert-code": theme("colors.secondary.400"),
+            "--tw-prose-invert-pre-code": theme("colors.neutral.200"),
+            "--tw-prose-invert-pre-bg": theme("colors.neutral.700"),
+            "--tw-prose-invert-th-borders": theme("colors.neutral.500"),
+            "--tw-prose-invert-td-borders": theme("colors.neutral.700"),
+            a: {
+              textDecoration: "underline",
+              textDecorationColor: theme("colors.primary.300"),
+              fontWeight: "500",
+              "&:hover": {
+                color: `${theme("colors.neutral.DEFAULT")} !important`,
+                textDecoration: "none !important",
+                backgroundColor: `${theme("colors.primary.600")} !important`,
+                borderRadius: "0.09rem",
               },
             },
-          ],
+            "a code": {
+              color: "var(--tw-prose-code)",
+            },
+            kbd: {
+              backgroundColor: theme("colors.neutral.200"),
+              padding: "0.1rem 0.4rem",
+              borderRadius: "0.25rem",
+              fontSize: "0.9rem",
+              fontWeight: "600",
+            },
+            mark: {
+              color: theme("colors.neutral.800"),
+              backgroundColor: theme("colors.secondary.200"),
+              padding: "0.1rem 0.2rem",
+              borderRadius: "0.12rem",
+            },
+          },
         },
-        light: {
-          css: [
-            {
-              color: theme("colors.neutral.300"),
-              a: {
-                color: theme("colors.primary.400"),
-                textDecorationColor: theme("colors.neutral.500"),
-                "&:hover": {
-                  color: theme("colors.neutral.DEFAULT"),
-                  textDecoration: "none",
-                },
-              },
-              strong: {
-                color: theme("colors.neutral.DEFAULT"),
-              },
-              "ol > li::before": {
-                color: theme("colors.neutral.400"),
-              },
-              "ul > li::before": {
-                backgroundColor: theme("colors.neutral.600"),
-              },
-              hr: {
-                borderColor: theme("colors.neutral.500"),
-              },
-              blockquote: {
-                color: theme("colors.neutral.200"),
-                borderLeftColor: theme("colors.primary.900"),
-              },
-              h1: {
-                color: theme("colors.neutral.DEFAULT"),
-              },
-              h2: {
-                color: theme("colors.neutral.50"),
-              },
-              h3: {
-                color: theme("colors.neutral.50"),
-              },
-              h4: {
-                color: theme("colors.neutral.50"),
-              },
-              "figure figcaption": {
-                color: theme("colors.neutral.400"),
-              },
-              code: {
-                color: theme("colors.secondary.400"),
-              },
-              "a code": {
-                color: theme("colors.secondary.400"),
-              },
-              pre: {
-                color: theme("colors.neutral.200"),
-                backgroundColor: theme("colors.neutral.700"),
-              },
-              "pre code": {
-                color: theme("colors.neutral.200"),
-              },
-              thead: {
-                color: theme("colors.neutral.DEFAULT"),
-                borderBottomColor: theme("colors.neutral.500"),
-              },
-              "tbody tr": {
-                borderBottomColor: theme("colors.neutral.700"),
-              },
-              kbd: {
-                backgroundColor: theme("colors.neutral.700"),
-                color: theme("colors.neutral.300"),
-              },
-              mark: {
-                backgroundColor: theme("colors.secondary.400"),
-              },
+        invert: {
+          css: {
+            a: {
+              textDecorationColor: theme("colors.neutral.600"),
             },
-          ],
+            kbd: {
+              color: theme("colors.neutral.200"),
+              backgroundColor: theme("colors.neutral.700"),
+            },
+            mark: {
+              backgroundColor: theme("colors.secondary.400"),
+            },
+          },
         },
       }),
     },
   },
-  variants: {
-    extend: {
-      typography: ["dark"],
-    },
-  },
-  plugins: [require("@tailwindcss/typography"), require("tailwind-underline-utils")],
+  plugins: [require("@tailwindcss/typography")],
 };

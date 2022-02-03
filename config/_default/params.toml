@@ -6,12 +6,16 @@
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
 colorScheme = "congo"
-# darkMode = "auto"
-# darkToggle = false
-# logo = "img/logo.jpg"
-# description = "My awesome website"
+defaultAppearance = "light" # valid options: light or dark
+autoSwitchAppearance = true
+showAppearanceSwitcher = false
+
+enableSearch = false
+enableCodeCopy = false
+
 # mainSections = ["section1", "section2"]
 # robots = ""
+showScrollToTop = true
 
 [homepage]
   layout = "page" # valid options: page, profile, custom
@@ -19,7 +23,7 @@ colorScheme = "congo"
 
 [article]
   showDate = true
-  dateFormat = "2 January 2006"
+  showDateUpdated = false
   showAuthor = true
   showBreadcrumbs = false
   showDraftLabel = true
@@ -28,20 +32,24 @@ colorScheme = "congo"
   editAppendPath = true
   showHeadingAnchors = true
   showPagination = true
+  invertPagination = false
   showReadingTime = true
+  showTableOfContents = false
+  showTaxonomies = false
   showWordCount = false
   # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
 
 [list]
   showBreadcrumbs = false
   showSummary = false
+  showTableOfContents = false
   groupByYear = true
-
-[taxonomy]
-  showTermCount = true
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
 
 [fathomAnalytics]
   # site = "ABC12345"

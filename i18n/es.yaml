@@ -1,18 +1,24 @@
 article:
   anchor_label: "Ancla"
+  date: "{{ .Date }}"
+  date_updated: "Actualizado: {{ .Date }}"
   draft: "Borrador"
   edit_title: "Editar contenido"
   reading_time:
     one: "{{ .Count }} min"
     other: "{{ .Count }} mins"
   reading_time_title: "Tiempo de lectura"
-  updated: "Actualizado"
+  # table_of_contents: "Table of Contents"
   word_count:
     one: "{{ .Count }} palabra"
     other: "{{ .Count }} palabras"
 
 author:
   byline_title: "Autor"
+
+# code:
+#   copy: "Copy"
+#   copied: "Copied"
 
 error:
   404_title: "Página no encontrada :confused:"
@@ -28,6 +34,15 @@ list:
   externalurl_title: "Link a página externa"
   no_articles: "Aún no hay artículos para listar aquí."
 
+# nav:
+#   scroll_to_top_title: "Scroll to top"
+#   skip_to_main: "Skip to main content"
+
+# search:
+#   open_button_title: "Search (/)"
+#   close_button_title: "Close (Esc)"
+#   input_placeholder: "Search"
+
 sharing:
   email: "Enviar vía email"
   facebook: "Compartir en Facebook"
@@ -38,4 +53,3 @@ sharing:
 
 shortcode:
   recent_articles: "Reciente"
-  icon_none: "Icono no encontrado."

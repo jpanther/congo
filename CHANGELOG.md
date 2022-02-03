@@ -6,6 +6,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.0.0] - 2022-02-03
+
+### Added
+
+- Multilingual support
+- Right-to-left (RTL) language support
+- Site search powered by Fuse.js
+- Automatic Markdown image resizing and srcset generation
+- Performance and Accessibility improvements to achieve perfect Lighthouse scores
+- Tables of Contents on article pages
+- Code copy buttons in article content
+- Taxonomy and term listings now support Markdown content
+- Taxonomies on article and list pages
+- Article pagination direction can be inverted
+- Author `headline` parameter
+- Skip to content and Scroll to top links
+- Archetype for generating links to external articles
+
+### Changed
+
+- ⚠️ Required Hugo version is now 0.87.0 or later
+- ⚠️ Complete rewrite of dark mode to allow more flexibile configuration
+- ⚠️ All theme images are now Hugo assets
+- ⚠️ Overhauled `figure` shortcode which now resizes images
+- Upgrade to Tailwind v3.0.18
+- Inline Javascript moved to external files
+- Improved JSON-LD structured data
+- Breadcrumbs now fallback to section name when `title` is not provided
+- Minor style and layout improvements
+
 ## [1.6.4] - 2022-01-24
 
 ### Added
@@ -251,7 +281,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v1.6.4...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/jpanther/congo/compare/v1.6.4...v2.0.0
 [1.6.4]: https://github.com/jpanther/congo/compare/v1.6.3...v1.6.4
 [1.6.3]: https://github.com/jpanther/congo/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/jpanther/congo/compare/v1.6.1...v1.6.2

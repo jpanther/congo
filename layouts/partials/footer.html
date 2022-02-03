@@ -6,7 +6,7 @@
         {{ range .Site.Menus.footer }}
           <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
               href="{{ .URL }}"
               title="{{ .Title }}"
               >{{ .Name | markdownify | emojify }}</a
@@ -20,7 +20,7 @@
     <div>
       {{/* Copyright */}}
       <p class="text-sm text-neutral-500 dark:text-neutral-400">
-        {{- with .Site.Copyright }}
+        {{- with .Site.Params.copyright }}
           {{ . | emojify | markdownify }}
         {{- else }}
           &copy;
@@ -30,34 +30,30 @@
       </p>
       {{/* Theme attribution */}}
       {{ if .Site.Params.attribution | default true }}
-        <p class="text-xs text-neutral-400 dark:text-neutral-600">
-          {{ $hugo := printf `<a class="hover:underline hover:underline-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>` }}
-          {{ $congo := printf `<a class="hover:underline hover:underline-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>` }}
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
+          }}
+          {{ $congo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>` }}
           {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Congo" $congo) | safeHTML }}
         </p>
       {{ end }}
     </div>
-    {{/* Dark mode toggle */}}
-    {{ if and (.Site.Params.darkToggle | default false) (eq (.Site.Params.darkMode | default "auto") "auto") }}
-      <div class="text-sm cursor-pointer text-neutral-400 dark:text-neutral-500">
+    {{/* Appearance switch */}}
+    {{ if .Site.Params.showAppearanceSwitcher | default false }}
+      <div
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 {{ if .Site.Params.showScrollToTop | default true -}}
+          ltr:mr-14 rtl:ml-14
+        {{- end }}"
+      >
         <button
-          id="dark-toggle"
-          onclick="setPreferredAppearance('dark');"
-          oncontextmenu="setPreferredAppearance('default'); return false;"
-          class="inline px-2 py-1 border rounded-md border-neutral-200 dark:hidden hover:text-primary-500 hover:border-primary-400"
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
           title="{{ i18n "footer.dark_appearance" }}"
         >
-          {{ partial "icon.html" "moon" }}
-        </button>
-        <button
-          id="light-toggle"
-          onclick="setPreferredAppearance('light');"
-          oncontextmenu="setPreferredAppearance('default'); return false;"
-          class="hidden px-2 py-1 border rounded-md cursor-pointer dark:inline border-neutral-700 hover:text-primary-400 hover:border-primary-500"
-          title="{{ i18n "footer.light_appearance" }}"
-        >
-          {{ partial "icon.html" "sun" }}
+          <span class="inline dark:hidden">{{ partial "icon.html" "moon" }}</span>
+          <span class="hidden dark:inline">{{ partial "icon.html" "sun" }}</span>
         </button>
       </div>
     {{ end }}

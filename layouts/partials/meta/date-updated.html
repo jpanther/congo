@@ -1,3 +1,4 @@
-{{- i18n "article.updated" -}}:&nbsp;
-{{ partial "meta/date.html" . }}
+<time datetime="{{ . }}">
+  {{- i18n "article.date_updated" (dict "Date" (partial "functions/date.html" .)) | markdownify | emojify -}}
+</time>
 {{- /* Trim EOF */ -}}

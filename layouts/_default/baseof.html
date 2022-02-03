@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html
-  lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}"
-  {{ if .Site.Params.darkMode | default false }}class="dark"{{ end }}
+  lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default "en") }}
+    {{- . -}}
+  {{ end }}"
+  dir="{{ if .Site.Params.rtl | default false -}}
+    rtl
+  {{- else -}}
+    ltr
+  {{- end }}"
+  class="scroll-smooth {{ if eq (.Site.Params.defaultAppearance | default "light") "dark" -}}
+    dark
+  {{- end }}"
+  data-auto-appearance="{{ .Site.Params.autoSwitchAppearance | default "true" }}"
 >
   {{- partial "head.html" . -}}
   <body
     class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
   >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >{{ i18n "nav.skip_to_main" }}</a
+      >
+    </div>
     {{- partial "header.html" . -}}
-    <main class="flex-grow">{{- block "main" . }}{{- end }}</main>
+    <main id="main-content" class="relative">
+      {{- block "main" . }}{{- end }}
+      {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
+        <div
+          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
+        >
+          <a
+            href="#the-top"
+            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+            aria-label="{{ i18n "nav.scroll_to_top_title" }}"
+            title="{{ i18n "nav.scroll_to_top_title" }}"
+          >
+            &uarr;
+          </a>
+        </div>
+      {{ end }}
+    </main>
+    {{ if .Site.Params.enableSearch | default false }}
+      {{- partial "search.html" . -}}
+    {{ end }}
     {{- partial "footer.html" . -}}
   </body>
 </html>

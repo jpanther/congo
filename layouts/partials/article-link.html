@@ -2,7 +2,7 @@
   <h3 class="flex items-center mt-6 text-xl font-semibold">
     {{ with .Params.externalUrl }}
       <a
-        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        class="hover:underline hover:decoration-primary-500 hover:underline-offset-2 text-neutral-800 dark:text-neutral"
         href="{{ . }}"
         target="_blank"
         rel="external"
@@ -16,13 +16,13 @@
       </span>
     {{ else }}
       <a
-        class="hover:underline hover:underline-primary-500 hover:underline-offset-small text-neutral-800 dark:text-neutral"
+        class="hover:underline hover:decoration-primary-500 hover:underline-offset-2 text-neutral-800 dark:text-neutral"
         href="{{ .RelPermalink }}"
         >{{ .Title | emojify }}</a
       >
     {{ end }}
     {{ if and .Draft .Site.Params.article.showDraftLabel }}
-      <div class="ml-2">
+      <div class="ltr:ml-2 rtl:mr-2">
         {{ partial "badge.html" (i18n "article.draft" | emojify) }}
       </div>
     {{ end }}
@@ -34,7 +34,7 @@
     {{ partial "article-meta.html" . }}
   </div>
   {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
-    <div class="py-1 prose dark:prose-light">
+    <div class="py-1 prose dark:prose-invert">
       {{ .Summary | emojify }}
     </div>
   {{ end }}

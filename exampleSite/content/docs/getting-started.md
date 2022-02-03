@@ -13,27 +13,43 @@ This section assumes you have already [installed the Congo theme]({{< ref "docs/
 
 The config files that ship with Congo contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.
 
-There are a few things you should set in `config.toml` for a new installation:
+## Basic configuration
+
+Before creating any content, there are a few things you should set for a new installation. Starting in the `config.toml` file, set the `baseURL` and `languageCode` parameters. The `languageCode` should be set to the main language that you will be using to author your content.
 
 ```toml
 # config/_default/config.toml
 
 baseURL = "https://your_domain.com"
-languageCode = "en-AU"
+languageCode = "en"
+```
+
+The next step is to configure the language settings. Although Congo supports multilingual setups, for now, just configure the main language.
+
+Locate the `languages.en.toml` file in the config folder. If your main language is English you can use this file as is. Otherwise, rename it so that it includes the correct language code in the filename. For example, for French, rename the file to `languages.fr.toml`.
+
+{{< alert >}}
+Note that the language code in the language config filename should match the `languageCode` setting in `config.toml`.
+{{< /alert >}}
+
+```toml
+# config/_default/languages.en.toml
+
 title = "My awesome website"
 
 [author]
 name = "My name"
 image = "img/author.jpg"
+headline = "A generally awesome human"
 bio = "A little bit about me"
 links = [
   { twitter = "https://twitter.com/username" }
 ]
 ```
 
-The `[author]` configuration determines how the author information is displayed on the website. The image should be placed in the site's `static/` folder. Links will be displayed in the order they are listed.
+The `[author]` configuration determines how the author information is displayed on the website. The image should be placed in the site's `assets/` folder. Links will be displayed in the order they are listed.
 
-Further detail about these configuration options is covered in the [Configuration]({{< ref "configuration" >}}) section.
+If you need extra detail, further information about each of these configuration options, is covered in the [Configuration]({{< ref "configuration" >}}) section.
 
 ## Colour schemes
 
@@ -65,7 +81,7 @@ Congo defines a three-colour palette that is used throughout the theme. Each mai
 
 #### Slate
 
-{{< swatches "#6B7280" "#6B7280" "#6B7280" >}}
+{{< swatches "#6B7280" "#64748b" "#6B7280" >}}
 
 Although these are the default schemes, you can also create your own. Refer to the [Advanced Customisation]({{< ref "advanced-customisation#colour-schemes" >}}) section for details.
 
@@ -73,9 +89,33 @@ Although these are the default schemes, you can also create your own. Refer to t
 
 By default, Congo doesn't force you to use a particular content type. In doing so you are free to define your content as you wish. You might prefer _pages_ for a static site, _posts_ for a blog, or _projects_ for a portfolio.
 
-The same logic applies to taxonomies. Some people prefer to use _tags_ and _categories_, others prefer to use _topics_.
+Here's a quick overview of a basic Congo project. All content is placed within the `content` folder:
 
-Hugo defaults to using posts, tags and categories out of the box and this will work fine if that's what you want. If you wish to customise this, however, you can do so by creating the following files:
+```shell
+.
+├── assets
+│   └── img
+│       └── author.jpg
+├── config
+│   └── _default
+├── content
+│   ├── _index.md
+│   ├── about.md
+│   └── posts
+│       ├── _index.md
+│       ├── first-post.md
+│       └── another-post
+│           ├── aardvark.jpg
+│           └── index.md
+└── themes
+    └── congo
+```
+
+It's important to have a firm grasp of how Hugo expects content to be organised as the theme is designed to take full advantage of Hugo page bundles. Be sure to read the [official Hugo docs](https://gohugo.io/content-management/organization/) for more information.
+
+Congo is also flexible when it comes to taxonomies. Some people prefer to use _tags_ and _categories_ to group their content, others prefer to use _topics_.
+
+Hugo defaults to using posts, tags and categories out of the box and this will work fine if that's what you want. If you wish to customise this, however, you can do so by creating a `taxonomies.toml` configuation file:
 
 ```toml
 # config/_default/taxonomies.toml
@@ -85,7 +125,7 @@ topic = "topics"
 
 This will replace the default _tags_ and _categories_ with _topics_. Refer to the [Hugo Taxonomy docs](https://gohugo.io/content-management/taxonomies/) for more information on naming taxonomies.
 
-When you create a new taxonomy, you will need to adjust the navigation links on the website to point to the correct sections.
+When you create a new taxonomy, you will need to adjust the navigation links on the website to point to the correct sections, which is covered below.
 
 ## Menus
 
