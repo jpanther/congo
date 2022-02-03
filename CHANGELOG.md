@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.0.1] - 2022-02-03
+
 ### Fixed
 
 - Hugo module error when downloading version 2
@@ -286,7 +288,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/jpanther/congo/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/jpanther/congo/compare/v1.6.4...v2.0.0
 [1.6.4]: https://github.com/jpanther/congo/compare/v1.6.3...v1.6.4
 [1.6.3]: https://github.com/jpanther/congo/compare/v1.6.2...v1.6.3
