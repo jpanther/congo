@@ -101,16 +101,17 @@ Congo includes a `figure` shortcode for adding images to content. The shortcode 
 
 Images included using `figure` will be optimised using Hugo Pipes and scaled in order to provide images appropriate to different device resolutions.
 
-The `figure` shortcode accepts five parameters:
+The `figure` shortcode accepts six parameters:
 
 <!-- prettier-ignore-start -->
 |Parameter|Description|
 |---|---|
 |`src`|**Required.** The filename of the image. This image must be a [page resource](https://gohugo.io/content-management/page-resources/) bundled with the page.|
 |`alt`|[Alternative text description](https://moz.com/learn/seo/alt-text) for the image.|
-|`caption`|Markdown for the image caption which will be displayed below the image.|
-|`class`|Additional CSS classes to add to the image.|
- `href`|URL that the image should be linked to.|
+|`caption`|Markdown for the image caption, which will be displayed below the image.|
+|`class`|Additional CSS classes to apply to the image.|
+|`href`|URL that the image should be linked to.|
+|`default`|Special parameter to revert to default Hugo `figure` behaviour. Simply provide `default=true` and then use normal [Hugo shortcode syntax](https://gohugo.io/content-management/shortcodes/#figure).|
 <!-- prettier-ignore-end -->
 
 Congo also supports automatic conversion of images included using standard Markdown syntax. Simply use the following format and the theme will handle the rest:

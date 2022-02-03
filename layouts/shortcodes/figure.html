@@ -1,23 +1,27 @@
-{{ $altText := .Get "alt" }}
-{{ $caption := .Get "caption" }}
-{{ $href := .Get "href" }}
-{{ $class := .Get "class" }}
-{{ with $.Page.Resources.GetMatch (.Get "src") }}
-  <figure {{ with $class }}class="{{ . }}"{{ end }}>
-    {{ with $href }}<a href="{{ . }}">{{ end }}
-      <img
-        class="my-0 rounded-md"
-        srcset="
-        {{ (.Resize "330x").RelPermalink }} 330w,
-        {{ (.Resize "660x").RelPermalink }} 660w,
-        {{ (.Resize "1024x").RelPermalink }} 1024w,
-        {{ (.Resize "1320x").RelPermalink }} 2x"
-        src="{{ (.Resize "660x").RelPermalink }}"
-        alt="{{ $altText }}"
-      />
-    {{ if $href }}</a>{{ end }}
-    {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
-  </figure>
+{{ if .Get "default" }}
+  {{ template "_internal/shortcodes/figure.html" . }}
 {{ else }}
-  {{ errorf `[CONGO] Shortcode "figure" error in "%s": Resource "%s" not found. Check the path is correct or remove the shortcode.` .Page.Path (.Get "src") }}
+  {{ $altText := .Get "alt" }}
+  {{ $caption := .Get "caption" }}
+  {{ $href := .Get "href" }}
+  {{ $class := .Get "class" }}
+  {{ with $.Page.Resources.GetMatch (.Get "src") }}
+    <figure {{ with $class }}class="{{ . }}"{{ end }}>
+      {{ with $href }}<a href="{{ . }}">{{ end }}
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          {{ (.Resize "330x").RelPermalink }} 330w,
+          {{ (.Resize "660x").RelPermalink }} 660w,
+          {{ (.Resize "1024x").RelPermalink }} 1024w,
+          {{ (.Resize "1320x").RelPermalink }} 2x"
+          src="{{ (.Resize "660x").RelPermalink }}"
+          alt="{{ $altText }}"
+        />
+      {{ if $href }}</a>{{ end }}
+      {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+    </figure>
+  {{ else }}
+    {{ errorf `[CONGO] Shortcode "figure" error in "%s": Resource "%s" not found. Check the path is correct or remove the shortcode.` .Page.Path (.Get "src") }}
+  {{ end }}
 {{ end }}
