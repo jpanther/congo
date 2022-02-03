@@ -62,7 +62,7 @@ Detailed instructions for each method can be found in the [Installation](https:/
 
    ```toml
    [[imports]]
-   path = "github.com/jpanther/congo"
+   path = "github.com/jpanther/congo/v2"
    ```
 
 3. Start your server using `hugo server` and the theme will be downloaded automatically.
