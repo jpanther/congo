@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Hugo module error when downloading version 2
+- Emoji strings not displaying in table of contents
+
 ## [2.0.0] - 2022-02-03
 
 ### Added
@@ -15,7 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Site search powered by Fuse.js
 - Automatic Markdown image resizing and srcset generation
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
-- Tables of Contents on article pages
+- Tables of contents on article pages
 - Code copy buttons in article content
 - Taxonomy and term listings now support Markdown content
 - Taxonomies on article and list pages
