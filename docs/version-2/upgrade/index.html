@@ -1,0 +1,398 @@
+<!doctype html><html lang=en-au dir=ltr class=scroll-smooth data-auto-appearance=true><head>
+<meta charset=utf-8>
+<meta http-equiv=content-language content="en-au">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Upgrading from Congo 1.x &#183; Congo</title>
+<meta name=title content="Upgrading from Congo 1.x &#183; Congo">
+<meta name=description content="A powerful, lightweight theme for Hugo built with Tailwind CSS.">
+<link rel=canonical href=https://jpanther.github.io/congo/docs/version-2/upgrade/>
+<link type=text/css rel=stylesheet href=/congo/css/main.bundle.min.9b253ddfacfebf2bc0e3f42afb0c2d8b458f751b3e08c100f4eceb03f1d561676be97c329374cd7904bb700647b0197f85fc20298a8ee3ffdc467d4c43bb20a9.css integrity="sha512-myU936z+vyvA4/Qq+wwti0WPdRs+CMEA9OzrA/HVYWdr6Xwyk3TNeQS7cAZHsBl/hfwgKYqO4//cRn1MQ7sgqQ==">
+<script defer type=text/javascript id=script-bundle src=/congo/js/main.bundle.min.fde17ba078f800524d6eab2ac173ba8fe5a928afc7c814f55e68e50f59909e51eaeded8e3464e460f50765057ecc8f0ad5393495b36a17be9dad3cb9c7c646e2.js integrity="sha512-/eF7oHj4AFJNbqsqwXO6j+WpKK/HyBT1XmjlD1mQnlHq7e2ONGTkYPUHZQV+zI8K1Tk0lbNqF76drTy5x8ZG4g==" data-copy=Copy data-copied=Copied></script>
+<link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/congo/favicon-16x16.png>
+<link rel=manifest href=/congo/site.webmanifest>
+<meta property="og:title" content="Upgrading from Congo 1.x">
+<meta property="og:description" content="Discover what's new in Congo version 2.0.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jpanther.github.io/congo/docs/version-2/upgrade/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2022-01-20T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-01-20T00:00:00+00:00"><meta property="og:site_name" content="Congo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Upgrading from Congo 1.x">
+<meta name=twitter:description content="Discover what's new in Congo version 2.0.">
+<script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Documentation","name":"Upgrading from Congo 1.x","headline":"Upgrading from Congo 1.x","description":"Discover what\u0027s new in Congo version 2.0.","abstract":"Although Congo 2.","inLanguage":"en-au","url":"https:\/\/jpanther.github.io\/congo\/docs\/version-2\/upgrade\/","author":{"@type":"Person","name":"Congo"},"copyrightYear":"2022","dateCreated":"2022-01-20T00:00:00\u002b00:00","datePublished":"2022-01-20T00:00:00\u002b00:00","dateModified":"2022-01-20T00:00:00\u002b00:00","keywords":["new","docs"],"mainEntityOfPage":"true","wordCount":"1245"}]</script>
+<meta name=generator content="Hugo 0.92.1">
+<meta name=author content="Congo">
+<link href=https://twitter.com/ rel=me>
+<link href=https://facebook.com/ rel=me>
+<link href=https://linkedin.com/ rel=me>
+<link href=https://youtube.com/ rel=me>
+</head>
+<body class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl">
+<div id=the-top class="absolute flex self-center">
+<a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0" href=#main-content><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400">&darr;</span>Skip to main content</a>
+</div><header class="flex justify-between py-6 font-semibold sm:items-center sm:py-10 text-neutral-900 dark:text-neutral">
+<div>
+<a class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2" rel=me href=/congo/>Congo</a>
+</div>
+<nav>
+<ul class="flex flex-col list-none sm:flex-row">
+<li class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+<a class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2" href=/congo/docs/ title=Documentation>Docs</a>
+</li>
+<li class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+<a class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2" href=/congo/samples/ title="Content Samples">Samples</a>
+</li>
+<li class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+<a class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2" href=/congo/users/ title=Users>Users</a>
+</li>
+<li class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+<a class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2" href=https://github.com/jpanther/congo title>GitHub</a>
+</li>
+<li class="ltr:text-right rtl:text-left ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+<button id=search-button class="text-base hover:text-primary-600 dark:hover:text-primary-400" title="Search (/)">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+</button>
+</li>
+</ul>
+</nav>
+</header>
+<main id=main-content class=relative>
+<article>
+<header class=max-w-prose>
+<ol class="text-sm text-neutral-500 dark:text-neutral-400">
+<li class="inline hidden">
+<a class="hover:underline hover:decoration-neutral-300 dark:underline-neutral-600" href=/congo/>Welcome to Congo! :tada:</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class=inline>
+<a class="hover:underline hover:decoration-neutral-300 dark:underline-neutral-600" href=/congo/docs/>Documentation</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class=inline>
+<a class="hover:underline hover:decoration-neutral-300 dark:underline-neutral-600" href=/congo/docs/version-2/>What's New in 2.0 ✨</a><span class="px-1 text-primary-500">/</span>
+</li>
+<li class="inline hidden">
+<a class="hover:underline hover:decoration-neutral-300 dark:underline-neutral-600" href=/congo/docs/version-2/upgrade/>Upgrading from Congo 1.x</a><span class="px-1 text-primary-500">/</span>
+</li>
+</ol>
+<h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+Upgrading from Congo 1.x
+</h1>
+<div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
+<div class="flex flex-row flex-wrap items-center">
+<span title="Reading time">6 mins</span><span class="px-2 text-primary-500">&#183;</span>
+<span class=mb-[2px]>
+<a href=https://github.com/jpanther/congo/tree/dev/exampleSite/content/docs/version-2/upgrade/index.md class="text-lg hover:text-primary-500" rel="noopener noreferrer" target=_blank title="Edit content">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1.0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7.0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174 402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7-43.2-43.2c-4.1-4.1-10.8-4.1-14.8.0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>
+</span>
+</a>
+</span>
+</div>
+</div>
+</header>
+<section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+<div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+<div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+<details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+<summary class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700">
+Table of Contents
+</summary>
+<div class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#step-1-upgrade-hugo>Step 1: Upgrade Hugo</a></li>
+<li><a href=#step-2-upgrade-congo>Step 2: Upgrade Congo</a>
+<ul>
+<li><a href=#upgrade-using-hugo>Upgrade using Hugo</a></li>
+<li><a href=#upgrade-using-git>Upgrade using git</a></li>
+<li><a href=#upgrade-manually>Upgrade manually</a></li>
+</ul>
+</li>
+<li><a href=#step-3-theme-configuration>Step 3: Theme configuration</a>
+<ul>
+<li><a href=#languagestoml>Languages.toml</a></li>
+<li><a href=#configtoml>Config.toml</a></li>
+<li><a href=#markuptoml>Markup.toml</a></li>
+<li><a href=#paramstoml>Params.toml</a></li>
+</ul>
+</li>
+<li><a href=#step-4-move-assets>Step 4: Move assets</a></li>
+<li><a href=#step-5-check-content>Step 5: Check content</a></li>
+<li><a href=#step-6-rebuild>Step 6: Rebuild</a></li>
+</ul>
+</nav>
+</div>
+</details>
+</div>
+</div>
+<div class="min-w-0 min-h-0 max-w-prose">
+<p>Although Congo 2.0 contains a large number of changes, the theme has been designed to minimise the effort required to upgrade to the latest release.</p>
+<p>That said, there are some changes that require adjustments to existing sites that are built with Congo version 1.x. This guide will step you through the process and highlight things you need to consider.</p>
+<h2 id=step-1-upgrade-hugo class="relative group">Step 1: Upgrade Hugo <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#step-1-upgrade-hugo aria-label=Anchor>#</a></span></h2>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="ltr:pr-3 rtl:pl-3 text-primary-400">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg>
+</span>
+</span>
+<span class=dark:text-neutral-300>Congo 2.0 requires a minimum of <strong>Hugo v0.87.0 or later</strong></span>
+</div>
+<p>Congo is built to take advantage of some of the latest Hugo features. You should regularly keep your Hugo installation up to date to avoid any issues.</p>
+<p>You can check your current version using the command <code>hugo version</code>. Visit the <a href=https://gohugo.io/getting-started/installing/>Hugo docs</a> for information on obtaining a newer release for your platform.</p>
+<h2 id=step-2-upgrade-congo class="relative group">Step 2: Upgrade Congo <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#step-2-upgrade-congo aria-label=Anchor>#</a></span></h2>
+<p>The process for upgrading Congo will depend on how you include the theme in your project. Instructions for each method can be found below.</p>
+<ul>
+<li><a href=#upgrade-using-hugo>Upgrade using Hugo</a></li>
+<li><a href=#upgrade-using-git>Upgrade using git</a></li>
+<li><a href=#upgrade-manually>Upgrade manually</a></li>
+</ul>
+<h3 id=upgrade-using-hugo class="relative group">Upgrade using Hugo <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#upgrade-using-hugo aria-label=Anchor>#</a></span></h3>
+<p>Hugo makes updating modules super easy. Simply change into your project directory and execute the following command:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>hugo mod get -u
+</code></pre></div><p>Hugo will automatically upgrade any modules that are required for your project. It does this by inspecting your <code>module.toml</code> and <code>go.mod</code> files. If you have any issues with the upgrade, check to ensure these files are still configured correctly.</p>
+<p>Once the theme has been upgraded, continue to the <a href=#step-3-theme-configuration>next section</a>.</p>
+<h3 id=upgrade-using-git class="relative group">Upgrade using git <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#upgrade-using-git aria-label=Anchor>#</a></span></h3>
+<p>Git submodules can be upgraded using the <code>git</code> command. Simply execute the following command and the latest version of the theme will be downloaded into your local repository:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>git submodule upgrade --remote --merge
+</code></pre></div><p>Once the submodule has been upgraded, continue to the <a href=#step-3-theme-configuration>next section</a>.</p>
+<h3 id=upgrade-manually class="relative group">Upgrade manually <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#upgrade-manually aria-label=Anchor>#</a></span></h3>
+<p>Updating Congo manually requires you to download the latest copy of the theme and replace the old version in your project.</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="ltr:pr-3 rtl:pl-3 text-primary-400">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg>
+</span>
+</span>
+<span class=dark:text-neutral-300>Note that any local customisations you have made to the theme files will be lost during this process.</span>
+</div>
+<ol>
+<li>
+<p>Download the latest release of the theme source code.</p>
+<a class="px-4 py-2 !text-neutral !no-underline !rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href=https://github.com/jpanther/congo/releases/latest target=_blank role=button>
+Download from Github
+</a>
+</li>
+<li>
+<p>Extract the archive, rename the folder to <code>congo</code> and move it to the <code>themes/</code> directory inside your Hugo project&rsquo;s root folder. You will need to overwrite the existing directory to replace all the theme files.</p>
+</li>
+<li>
+<p>Continue to the <a href=#step-3-theme-configuration>next section</a>.</p>
+</li>
+</ol>
+<h2 id=step-3-theme-configuration class="relative group">Step 3: Theme configuration <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#step-3-theme-configuration aria-label=Anchor>#</a></span></h2>
+<p>Congo 2.0 introduces a number of new theme configuration parameters. Although the theme will adapt to existing version 1 configurations, in order to take advantage of some of the newer theme features, you will need to adjust your existing configuration.</p>
+<p>The simplest way to do this is to take a copy of the theme&rsquo;s default configuration and compare it to your existing files. The process is outlined in greater detail below.</p>
+<h3 id=languagestoml class="relative group">Languages.toml <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#languagestoml aria-label=Anchor>#</a></span></h3>
+<p>In order to provide multilingual support, language-specific theme parameters have been moved to a new config file <code>languages.[lang-code].toml</code>. The theme comes with a template <code>languages.en.toml</code> file which can be used as a guide.</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="ltr:pr-3 rtl:pl-3 text-primary-400">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937.0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154.0l239.94 416.028zM288 354c-25.405.0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373.0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884.0-12.356 5.78-11.981 12.654z"/></svg>
+</span>
+</span>
+<span class=dark:text-neutral-300>This step is optional if you do not need multilingual support, although completing it now will make future theme upgrades easier.</span>
+</div>
+<p>The languages config file follows this structure:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=c># config/_default/languagues.en.toml</span>
+
+<span class=nx>languageCode</span> <span class=p>=</span> <span class=s2>&#34;en&#34;</span>
+<span class=nx>languageName</span> <span class=p>=</span> <span class=s2>&#34;English&#34;</span>
+<span class=nx>displayName</span> <span class=p>=</span> <span class=s2>&#34;EN&#34;</span>
+<span class=nx>htmlCode</span> <span class=p>=</span> <span class=s2>&#34;en&#34;</span>
+<span class=nx>weight</span> <span class=p>=</span> <span class=mi>1</span>
+<span class=nx>rtl</span> <span class=p>=</span> <span class=kc>false</span>
+
+<span class=c># Language-specific parameters go here</span>
+</code></pre></div><p>Using your preferred language, simply create this new file in <code>config/_default/</code> and then move the language-specific parameters from any existing config files over to this new file. The table below outlines the parameters that need to be moved.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Old location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td><code>config.toml</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td><code>params.toml</code></td>
+</tr>
+<tr>
+<td><code>copyright</code></td>
+<td><code>config.toml</code></td>
+</tr>
+<tr>
+<td><code>dateFormat</code></td>
+<td><code>params.toml</code></td>
+</tr>
+<tr>
+<td><code>[author]</code></td>
+<td><code>config.toml</code></td>
+</tr>
+</tbody>
+</table>
+<p>Once the values have been moved to the new location, these parameters should be deleted from their original locations.</p>
+<h3 id=configtoml class="relative group">Config.toml <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#configtoml aria-label=Anchor>#</a></span></h3>
+<p>The <code>config.toml</code> file now only contains base Hugo configuration values. Other than removing the language-specific strings above, there are only two changes to consider.</p>
+<p>If you&rsquo;re using a language other than English, provide a <code>defaultContentLanguage</code> value that matches the language code in the config file you created for your language. Secondly, to take advange of the new site search in Congo 2.0, an <code>[outputs]</code> block needs to be provided.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=c># config/_default/config.toml</span>
+
+<span class=nx>defaultContentLanguage</span> <span class=p>=</span> <span class=s2>&#34;en&#34;</span>
+
+<span class=nx>enableRobotsTXT</span> <span class=p>=</span> <span class=kc>true</span>
+<span class=nx>paginate</span> <span class=p>=</span> <span class=mi>10</span>
+<span class=nx>summaryLength</span> <span class=p>=</span> <span class=mi>0</span>
+
+<span class=p>[</span><span class=nx>outputs</span><span class=p>]</span>
+  <span class=nx>home</span> <span class=p>=</span> <span class=p>[</span><span class=s2>&#34;HTML&#34;</span><span class=p>,</span> <span class=s2>&#34;RSS&#34;</span><span class=p>,</span> <span class=s2>&#34;JSON&#34;</span><span class=p>]</span>
+</code></pre></div><h3 id=markuptoml class="relative group">Markup.toml <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#markuptoml aria-label=Anchor>#</a></span></h3>
+<p>Congo 2.0 adds support for tables of contents on article pages. Although Hugo ships with default settings for generating contents listings, you can adjust this behaviour by adding a new <code>[tableOfContents]</code> block to your <code>markup.toml</code> file.</p>
+<p>The recommended settings are as follows, which includes any headings in the Markdown content at levels 2, 3 and 4:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=c># config/_default/markup.toml</span>
+
+<span class=p>[</span><span class=nx>tableOfContents</span><span class=p>]</span>
+  <span class=nx>startLevel</span> <span class=p>=</span> <span class=mi>2</span>
+  <span class=nx>endLevel</span> <span class=p>=</span> <span class=mi>4</span>
+</code></pre></div><h3 id=paramstoml class="relative group">Params.toml <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#paramstoml aria-label=Anchor>#</a></span></h3>
+<p>A number of new theme parameters have been introduced in Congo 2.0. Some minor changes are requried to existing configurations. Remember, the theme will always revert to a sensible default if a parameter is not provided.</p>
+<p>The way that dark mode works in Congo has been changed to allow greater flexibility around configuration. The old <code>darkMode</code> and <code>darkToggle</code> parameters have been <strong>removed and replaced</strong> by three new parameters. These new options operate independently of each other, making it possible to force the appearance while still allowing the user to override.</p>
+<table>
+<thead>
+<tr>
+<th>New parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>defaultAppearance</code></td>
+<td>String</td>
+<td><code>"light"</code></td>
+<td>Default theme appearance; either <code>light</code> or <code>dark</code>.<br>⚠️ <em>Setting this to <code>light</code> replicates the old <code>darkMode = false</code> setting, while <code>dark</code> replicates <code>darkMode = true</code>.</em></td>
+</tr>
+<tr>
+<td><code>autoSwitchAppearance</code></td>
+<td>Boolean</td>
+<td><code>true</code></td>
+<td>Whether the theme appearance automatically switches based upon the operating system preference. Set to <code>false</code> to force the site to always use the <code>defaultAppearance</code>. <br>⚠️ <em>Setting this to <code>true</code> replicates the old <code>darkMode = "auto"</code> setting.</em></td>
+</tr>
+<tr>
+<td><code>showAppearanceSwitcher</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td>Whether the theme appearance switcher is dispalyed in the site footer. <br>⚠️ <em>This parameter replaces <code>darkToggle</code>.</em></td>
+</tr>
+</tbody>
+</table>
+<p>The following table outlines some other key <strong>new parameters</strong> that control new features in version 2:</p>
+<table>
+<thead>
+<tr>
+<th>New parameter</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enableSearch</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>showScrollToTop</code></td>
+<td>Boolean</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>article.showTaxonomies</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>article.showTableOfContents</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>list.showTableOfContents</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>For the full list of supported parameters, refer to the <a href=https://jpanther.github.io/congo/docs/configuration/>Configuration</a> docs.</p>
+<h2 id=step-4-move-assets class="relative group">Step 4: Move assets <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#step-4-move-assets aria-label=Anchor>#</a></span></h2>
+<p>All site assets now use Hugo Pipes to build an optimised version of your project. In order for the theme to locate your files, any previously static assets used in the theme need to be moved to the Hugo assets folder.</p>
+<p><code>static/me.jpg</code> <strong>→</strong> <code>assets/me.jpg</code><br>
+<code>static/logo.jpg</code> <strong>→</strong> <code>assets/logo.jpg</code></p>
+<p>If you have provided an author image or site logo, simply move these assets from the <code>static/</code> folder to the <code>assets/</code> folder. If you use the same directory structure the theme will know where to find these files automatically. If you would like to provide a new path, update the <code>logo</code> and <code>author.image</code> config values accordingly.</p>
+<h2 id=step-5-check-content class="relative group">Step 5: Check content <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#step-5-check-content aria-label=Anchor>#</a></span></h2>
+<p>The behavior of the <code>figure</code> shortcode is different in version 2. If you are using <code>figure</code> in your content and have advanced use cases, you may need to adjust the parameters you are providing.</p>
+<p>Consult the <a href=https://jpanther.github.io/congo/docs/shortcodes/#figure>shortcode docs</a> to learn more about supported parameters.</p>
+<h2 id=step-6-rebuild class="relative group">Step 6: Rebuild <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#step-6-rebuild aria-label=Anchor>#</a></span></h2>
+<p>Now that all the configuration changes are complete, it&rsquo;s time to rebuild the site. Run <code>hugo</code>, or your build command, and check that everything works as expected.</p>
+<p>If you come across any errors, check the configuration is correct and refer to the <a href=https://jpanther.github.io/congo/docs/>full documentation</a> for further guidance. Remember, the example config files bundled with the theme contain all the default parameters and are a great starting point.</p>
+<p>🙋‍♀️ If you still need help, feel free to ask your question on <a href=https://github.com/jpanther/congo/discussions>GitHub Discussions</a>.</p>
+</div>
+</section>
+<footer class="pt-8 max-w-prose">
+</footer>
+</article>
+<div class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]">
+<a href=#the-top class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400" aria-label="Scroll to top" title="Scroll to top">
+&uarr;
+</a>
+</div>
+</main>
+<div id=search-wrapper class="fixed inset-0 z-50 flex flex-col p-4 sm:p-6 md:p-[10vh] lg:p-[12vh] w-screen h-screen cursor-default bg-neutral-500/50 backdrop-blur-sm dark:bg-neutral-900/50 invisible" data-url=https://jpanther.github.io/congo/>
+<div id=search-modal class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg border-neutral-200 top-20 bg-neutral dark:bg-neutral-800 dark:border-neutral-700">
+<header class="relative z-10 flex items-center justify-between flex-none px-2">
+<form class="flex items-center flex-auto min-w-0">
+<div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+</div>
+<input type=search id=search-query class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-transparent focus:outline-2" placeholder=Search tabindex=0>
+</form>
+<button id=close-search-button class="flex items-center justify-center w-8 h-8 text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400" title="Close (Esc)">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentcolor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19.0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48.0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48.0L9.21 111.45c-12.28 12.28-12.28 32.19.0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19.0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48.0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48.0l22.24-22.24c12.28-12.28 12.28-32.19.0-44.48L242.72 256z"/></svg>
+</span>
+</button>
+</header>
+<section class="flex-auto px-2 overflow-auto">
+<ul id=search-results>
+</ul>
+</section>
+</div>
+</div>
+<footer class=py-10>
+<div class="flex justify-between">
+<div>
+<p class="text-sm text-neutral-500 dark:text-neutral-400">
+© 2022 Congo contributors
+</p>
+<p class="text-xs text-neutral-500 dark:text-neutral-400">
+Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href=https://git.io/hugo-congo target=_blank rel="noopener noreferrer">Congo</a>
+</p>
+</div>
+<div class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14">
+<button id=appearance-switcher class="w-12 h-12" type=button title="Switch to dark appearance">
+<span class="inline dark:hidden">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M283.211 512c78.962.0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954.0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156.0 00283.211.0c-141.309.0-256 114.511-256 256 0 141.309 114.511 256 256 256z"/></svg>
+</span>
+</span>
+<span class="hidden dark:inline">
+<span class="relative inline-block align-text-bottom icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M256 160c-52.9.0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6.0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0s-49.9-131.1.0-181 131.1-49.9 181 0 49.9 131.1.0 181z"/></svg>
+</span>
+</span>
+</button>
+</div>
+</div>
+</footer>
+</body>
+</html>
