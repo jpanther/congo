@@ -1,6 +1,6 @@
 ---
 title: "Hosting & Deployment"
-date: 2020-08-08
+date: 2020-08-07
 draft: false
 description: "Learn how to deploy a Congo site."
 slug: "hosting-deployment"

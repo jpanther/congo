@@ -1,17 +1,23 @@
 article:
   anchor_label: "锚点"
+  date: "{{ .Date }}"
+  # date_updated: "Updated: {{ .Date }}"
   draft: "草稿"
   edit_title: "编辑内容"
   reading_time:
     other: "{{ .Count }} 分钟"
   reading_time_title: "预计阅读"
-  # updated: "Updated"
+  # table_of_contents: "Table of Contents"
   word_count:
     one: "{{ .Count }} 字"
     other: "{{ .Count }} 字"
 
 author:
   byline_title: "作者"
+
+# code:
+#   copy: "Copy"
+#   copied: "Copied"
 
 error:
   404_title: "找不到网页 :confused:"
@@ -27,6 +33,15 @@ list:
   externalurl_title: "链接到外部网站"
   no_articles: "这里还没有任何文章可以列出。"
 
+# nav:
+#   scroll_to_top_title: "Scroll to top"
+#   skip_to_main: "Skip to main content"
+
+# search:
+#   open_button_title: "Search (/)"
+#   close_button_title: "Close (Esc)"
+#   input_placeholder: "Search"
+
 sharing:
   email: "通过电子邮件发送"
   facebook: "分享到 Facebook"
@@ -37,4 +52,3 @@ sharing:
 
 shortcode:
   recent_articles: "最近的文章"
-  icon_none: "未找到图标。"

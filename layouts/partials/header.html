@@ -6,7 +6,7 @@
     {{ if .Site.Params.Logo -}}
       {{ $logo := resources.Get .Site.Params.Logo }}
       {{ if $logo }}
-        <a href="{{ "/" | relURL }}">
+        <a href="{{ "/" | relLangURL }}">
           <img
             src="{{ $logo.RelPermalink }}"
             width="{{ div $logo.Width 2 }}"
@@ -18,25 +18,41 @@
       {{ end }}
     {{ else }}
       <a
-        class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+        class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
         rel="me"
-        href="{{ "/" | relURL }}"
+        href="{{ "/" | relLangURL }}"
         >{{ .Site.Title | markdownify | emojify }}</a
       >
     {{- end }}
+    {{ partial "translations.html" . }}
   </div>
   {{/* Main menu */}}
   {{ if .Site.Menus.main }}
     <nav>
       <ul class="flex flex-col list-none sm:flex-row">
         {{ range .Site.Menus.main }}
-          <li class="mb-1 text-right sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
-              class="hover:underline hover:underline-primary-500 hover:underline-thickness-bold hover:underline-offset-small"
+              class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
               href="{{ .URL }}"
               title="{{ .Title }}"
               >{{ .Name | markdownify | emojify }}</a
             >
+          </li>
+        {{ end }}
+        {{ if .Site.Params.enableSearch | default false }}
+          <li
+            class="ltr:text-right rtl:text-left ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
+            <button
+              id="search-button"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+              title="{{ i18n "search.open_button_title" }}"
+            >
+              {{ partial "icon.html" "search" }}
+            </button>
           </li>
         {{ end }}
       </ul>

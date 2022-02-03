@@ -1,18 +1,24 @@
 article:
   anchor_label: "Ancre"
+  date: "{{ .Date }}"
+  # date_updated: "Updated: {{ .Date }}"
   draft: "Brouillon"
   edit_title: "Editer"
   reading_time:
     one: "{{ .Count }} min"
     other: "{{ .Count }} mins"
   reading_time_title: "Temps de lecture"
-  # updated: "Updated"
+  # table_of_contents: "Table of Contents"
   # word_count:
   # one: "{{ .Count }} word"
   # other: "{{ .Count }} words"
 
 author:
   byline_title: "Auteur"
+
+# code:
+#   copy: "Copy"
+#   copied: "Copied"
 
 error:
   404_title: "Cette page n'existe pas :confused:"
@@ -28,6 +34,15 @@ list:
   externalurl_title: "Lien d'article externe."
   no_articles: "Il n'y a pas encore d'articles ici."
 
+# nav:
+#   scroll_to_top_title: "Scroll to top"
+#   skip_to_main: "Skip to main content"
+
+# search:
+#   open_button_title: "Search (/)"
+#   close_button_title: "Close (Esc)"
+#   input_placeholder: "Search"
+
 sharing:
   email: "Envoyer par email"
   facebook: "Poster sur Facebook"
@@ -38,4 +53,3 @@ sharing:
 
 shortcode:
   recent_articles: "Recent"
-  icon_none: "Icone non trouvée."

@@ -1,4 +1,4 @@
 <time datetime="{{ . }}">
-  {{- .Format (site.Params.article.dateFormat | default "2 January 2006") -}}
+  {{- i18n "article.date" (dict "Date" (partial "functions/date.html" .)) | markdownify | emojify -}}
 </time>
 {{- /* Trim EOF */ -}}

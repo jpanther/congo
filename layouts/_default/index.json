@@ -1,0 +1,6 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Site.RegularPages -}}
+  {{ $section := .Site.GetPage "section" .Section }}
+  {{- $.Scratch.Add "index" (dict "date" (.Date | time.Format (.Site.Language.Params.dateFormat | default ":date_long")) "title" .Title "section" $section.Title "summary" .Summary "content" (.Plain | safeJS) "permalink" .Permalink) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
