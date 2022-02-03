@@ -7,7 +7,7 @@
 <meta name=title content="Upgrading from Congo 1.x &#183; Congo">
 <meta name=description content="A powerful, lightweight theme for Hugo built with Tailwind CSS.">
 <link rel=canonical href=https://jpanther.github.io/congo/docs/version-2/upgrade/>
-<link type=text/css rel=stylesheet href=/congo/css/main.bundle.min.9b253ddfacfebf2bc0e3f42afb0c2d8b458f751b3e08c100f4eceb03f1d561676be97c329374cd7904bb700647b0197f85fc20298a8ee3ffdc467d4c43bb20a9.css integrity="sha512-myU936z+vyvA4/Qq+wwti0WPdRs+CMEA9OzrA/HVYWdr6Xwyk3TNeQS7cAZHsBl/hfwgKYqO4//cRn1MQ7sgqQ==">
+<link type=text/css rel=stylesheet href=/congo/css/main.bundle.min.6054f483632be81a44c916d87de7b7e79ca9daed006df153ef132dcb6259142c1dfe59de56b79f91132e2079aa4b87bd4982cba5f1631e353082cf29417d443a.css integrity="sha512-YFT0g2Mr6BpEyRbYfee355yp2u0AbfFT7xMty2JZFCwd/lneVrefkRMuIHmqS4e9SYLLpfFjHjUwgs8pQX1EOg==">
 <script defer type=text/javascript id=script-bundle src=/congo/js/main.bundle.min.fde17ba078f800524d6eab2ac173ba8fe5a928afc7c814f55e68e50f59909e51eaeded8e3464e460f50765057ecc8f0ad5393495b36a17be9dad3cb9c7c646e2.js integrity="sha512-/eF7oHj4AFJNbqsqwXO6j+WpKK/HyBT1XmjlD1mQnlHq7e2ONGTkYPUHZQV+zI8K1Tk0lbNqF76drTy5x8ZG4g==" data-copy=Copy data-copied=Copied></script>
 <link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
@@ -22,7 +22,7 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Upgrading from Congo 1.x">
 <meta name=twitter:description content="Discover what's new in Congo version 2.0.">
-<script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Documentation","name":"Upgrading from Congo 1.x","headline":"Upgrading from Congo 1.x","description":"Discover what\u0027s new in Congo version 2.0.","abstract":"Although Congo 2.","inLanguage":"en-au","url":"https:\/\/jpanther.github.io\/congo\/docs\/version-2\/upgrade\/","author":{"@type":"Person","name":"Congo"},"copyrightYear":"2022","dateCreated":"2022-01-20T00:00:00\u002b00:00","datePublished":"2022-01-20T00:00:00\u002b00:00","dateModified":"2022-01-20T00:00:00\u002b00:00","keywords":["new","docs"],"mainEntityOfPage":"true","wordCount":"1245"}]</script>
+<script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Documentation","name":"Upgrading from Congo 1.x","headline":"Upgrading from Congo 1.x","description":"Discover what\u0027s new in Congo version 2.0.","abstract":"Although Congo 2.","inLanguage":"en-au","url":"https:\/\/jpanther.github.io\/congo\/docs\/version-2\/upgrade\/","author":{"@type":"Person","name":"Congo"},"copyrightYear":"2022","dateCreated":"2022-01-20T00:00:00\u002b00:00","datePublished":"2022-01-20T00:00:00\u002b00:00","dateModified":"2022-01-20T00:00:00\u002b00:00","keywords":["new","docs"],"mainEntityOfPage":"true","wordCount":"1232"}]</script>
 <meta name=generator content="Hugo 0.92.1">
 <meta name=author content="Congo">
 <link href=https://twitter.com/ rel=me>
@@ -148,10 +148,10 @@ Table of Contents
 <li><a href=#upgrade-manually>Upgrade manually</a></li>
 </ul>
 <h3 id=upgrade-using-hugo class="relative group">Upgrade using Hugo <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#upgrade-using-hugo aria-label=Anchor>#</a></span></h3>
-<p>Hugo makes updating modules super easy. Simply change into your project directory and execute the following command:</p>
+<p>To upgrade a go module to a new major release, the <code>modules.toml</code> and <code>go.mod</code> files need to be updated. In each file, update the path to the theme from <code>github.com/jpanther/congo</code> to <code>github.com/jpanther/congo/v2</code>.</p>
+<p>Then change into your project directory and execute the following command:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>hugo mod get -u
-</code></pre></div><p>Hugo will automatically upgrade any modules that are required for your project. It does this by inspecting your <code>module.toml</code> and <code>go.mod</code> files. If you have any issues with the upgrade, check to ensure these files are still configured correctly.</p>
-<p>Once the theme has been upgraded, continue to the <a href=#step-3-theme-configuration>next section</a>.</p>
+</code></pre></div><p>Once the theme has been upgraded, continue to the <a href=#step-3-theme-configuration>next section</a>.</p>
 <h3 id=upgrade-using-git class="relative group">Upgrade using git <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#upgrade-using-git aria-label=Anchor>#</a></span></h3>
 <p>Git submodules can be upgraded using the <code>git</code> command. Simply execute the following command and the latest version of the theme will be downloaded into your local repository:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>git submodule upgrade --remote --merge
