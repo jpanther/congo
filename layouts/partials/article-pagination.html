@@ -6,22 +6,23 @@
       {{ $next = .PrevInSection }}
       {{ $prev = .NextInSection }}
     {{ end }}
-    <div class="pt-8 article-pagination">
+    <div class="pt-8">
       <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
       <div class="flex justify-between pt-3">
         <span>
           {{ if $prev }}
-            <a class="flex" href="{{ $prev.RelPermalink }}">
+            <a class="flex group" href="{{ $prev.RelPermalink }}">
               <span
-                class="mr-3 ltr:inline rtl:hidden article-pagination-direction text-neutral-700 dark:text-neutral"
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
               >
               <span
-                class="ml-3 ltr:hidden rtl:inline article-pagination-direction text-neutral-700 dark:text-neutral"
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&rarr;</span
               >
               <span class="flex flex-col">
-                <span class="article-pagination-title mt-[0.1rem] leading-6"
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
                   >{{ $prev.Title | emojify }}</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
@@ -35,9 +36,10 @@
         </span>
         <span>
           {{ if $next }}
-            <a class="flex text-right" href="{{ $next.RelPermalink }}">
+            <a class="flex text-right group" href="{{ $next.RelPermalink }}">
               <span class="flex flex-col">
-                <span class="article-pagination-title mt-[0.1rem] leading-6"
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
                   >{{ $next.Title | emojify }}</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
@@ -47,11 +49,11 @@
                 </span>
               </span>
               <span
-                class="ml-3 ltr:inline rtl:hidden article-pagination-direction text-neutral-700 dark:text-neutral"
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&rarr;</span
               >
               <span
-                class="mr-3 ltr:hidden rtl:inline article-pagination-direction text-neutral-700 dark:text-neutral"
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
               >
             </a>

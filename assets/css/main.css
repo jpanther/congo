@@ -21,26 +21,6 @@ body button {
   @apply hidden;
 }
 
-/* Heading anchors */
-.prose .heading-anchor:hover {
-  @apply underline bg-transparent text-primary-500 !important;
-}
-.prose .heading-anchor:hover,
-.prose .heading-anchor:focus,
-.prose h2:hover > .heading-anchor,
-.prose h3:hover > .heading-anchor,
-.prose h4:hover > .heading-anchor {
-  @apply no-underline opacity-100 text-primary-200 dark:text-neutral-700;
-}
-
-/* Article pagination */
-.article-pagination a:hover .article-pagination-title {
-  @apply underline decoration-primary-500;
-}
-.article-pagination a:hover .article-pagination-direction {
-  @apply text-primary-600 dark:text-primary-400;
-}
-
 /* RTL support */
 .prose blockquote {
   @apply rtl:pr-4 rtl:border-l-0 rtl:border-r-4;
