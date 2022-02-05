@@ -8,9 +8,8 @@
   {{- else -}}
     ltr
   {{- end }}"
-  class="scroll-smooth {{ if eq (.Site.Params.defaultAppearance | default "light") "dark" -}}
-    dark
-  {{- end }}"
+  class="scroll-smooth"
+  data-default-appearance="{{ .Site.Params.defaultAppearance | default "light" }}"
   data-auto-appearance="{{ .Site.Params.autoSwitchAppearance | default "true" }}"
 >
   {{- partial "head.html" . -}}

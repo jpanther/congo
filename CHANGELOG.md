@@ -10,6 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Updated French translation ([#100](https://github.com/jpanther/congo/pull/100))
 
+### Fixed
+
+- User's appearance preference is lost on page load when default appearance is dark ([#102](https://github.com/jpanther/congo/issues/102))
+- JavaScript warning when appearance switcher is disabled
+
 ## [2.0.1] - 2022-02-03
 
 ### Fixed
@@ -42,7 +47,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - ⚠️ All theme images are now Hugo assets
 - ⚠️ Overhauled `figure` shortcode which now resizes images
 - Upgrade to Tailwind v3.0.18
-- Inline Javascript moved to external files
+- Inline JavaScript moved to external files
 - Improved JSON-LD structured data
 - Breadcrumbs now fallback to section name when `title` is not provided
 - Minor style and layout improvements
