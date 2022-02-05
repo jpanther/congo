@@ -8,7 +8,7 @@ article:
     one: "{{ .Count }} min"
     other: "{{ .Count }} mins"
   reading_time_title: "Tiempo de lectura"
-  # table_of_contents: "Table of Contents"
+  table_of_contents: "Tabla de contenido"
   word_count:
     one: "{{ .Count }} palabra"
     other: "{{ .Count }} palabras"
@@ -16,9 +16,9 @@ article:
 author:
   byline_title: "Autor"
 
-# code:
-#   copy: "Copy"
-#   copied: "Copied"
+code:
+  copy: "Copiar"
+  copied: "Copiado"
 
 error:
   404_title: "Página no encontrada :confused:"
@@ -34,14 +34,14 @@ list:
   externalurl_title: "Link a página externa"
   no_articles: "Aún no hay artículos para listar aquí."
 
-# nav:
-#   scroll_to_top_title: "Scroll to top"
-#   skip_to_main: "Skip to main content"
+nav:
+  scroll_to_top_title: "Ir arriba"
+  skip_to_main: "Ir al contenido"
 
-# search:
-#   open_button_title: "Search (/)"
-#   close_button_title: "Close (Esc)"
-#   input_placeholder: "Search"
+search:
+  open_button_title: "Buscar (/)"
+  close_button_title: "Cerrar (Esc)"
+  input_placeholder: "Buscar"
 
 sharing:
   email: "Enviar vía email"
