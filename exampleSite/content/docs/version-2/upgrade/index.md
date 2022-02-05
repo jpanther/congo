@@ -38,6 +38,8 @@ Then change into your project directory and execute the following command:
 hugo mod get -u
 ```
 
+Note that in some circumstances there may be issues with this step due to the way that Hugo locally caches modules. If the command above doesn't work, try using `hugo mod clean` to clear out the local cache and re-download any modules.
+
 Once the theme has been upgraded, continue to the [next section](#step-3-theme-configuration).
 
 ### Upgrade using git
@@ -45,7 +47,7 @@ Once the theme has been upgraded, continue to the [next section](#step-3-theme-c
 Git submodules can be upgraded using the `git` command. Simply execute the following command and the latest version of the theme will be downloaded into your local repository:
 
 ```shell
-git submodule upgrade --remote --merge
+git submodule update --remote --merge
 ```
 
 Once the submodule has been upgraded, continue to the [next section](#step-3-theme-configuration).
@@ -106,6 +108,10 @@ Using your preferred language, simply create this new file in `config/_default/`
 | `[author]`    | `config.toml` |
 
 Once the values have been moved to the new location, these parameters should be deleted from their original locations.
+
+### Menus.toml
+
+As the theme is now aware of languages, the `menus.toml` file should also be renamed to include a language code. Rename the existing `menus.toml` to `menus.[lang-code].toml`, where the language code matches the code used in the `languages.toml` file in the previous section.
 
 ### Config.toml
 
@@ -168,12 +174,14 @@ For the full list of supported parameters, refer to the [Configuration]({{< ref 
 
 ## Step 4: Move assets
 
-All site assets now use Hugo Pipes to build an optimised version of your project. In order for the theme to locate your files, any previously static assets used in the theme need to be moved to the Hugo assets folder.
+All site assets, with the exception of favicons, now use Hugo Pipes to build an optimised version of your project. In order for the theme to locate your files, any previously static theme assets need to be moved to the Hugo assets folder. Primarily this is the author image and site logo:
 
 `static/me.jpg` **&rarr;** `assets/me.jpg`  
 `static/logo.jpg` **&rarr;** `assets/logo.jpg`
 
-If you have provided an author image or site logo, simply move these assets from the `static/` folder to the `assets/` folder. If you use the same directory structure the theme will know where to find these files automatically. If you would like to provide a new path, update the `logo` and `author.image` config values accordingly.
+If you have provided an author image or site logo, simply move these assets from `static/` to `assets/`. If you use the same directory structure the theme will know where to find these files automatically. If you would like to provide a new path, update the `logo` and `author.image` config values accordingly.
+
+Note that this step does not apply to any assets in your project that are actually static. For example, a PDF file that you link directly to from within an article is a static asset. These files should remain in the `static/` directory to ensure they are copied to the output folder when Hugo builds the site.
 
 ## Step 5: Check content
 

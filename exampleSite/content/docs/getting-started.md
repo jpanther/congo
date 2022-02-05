@@ -131,7 +131,7 @@ When you create a new taxonomy, you will need to adjust the navigation links on 
 
 Congo has two menus that can be customised to suit the content and layout of your site. The `main` menu appears in the site header and the `footer` menu appears at the bottom of the page just above the copyright notice.
 
-Both menus are configured in the `menus.toml` file.
+Both menus are configured in the `menus.en.toml` file. Similarly to the languages config file, if you wish to use another language, rename this file and replace `en` with the language code you wish to use.
 
 ```toml
 # config/_default/menus.toml
