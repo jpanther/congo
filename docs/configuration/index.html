@@ -1,4 +1,4 @@
-<!doctype html><html lang=en-au dir=ltr class=scroll-smooth data-auto-appearance=true><head>
+<!doctype html><html lang=en-au dir=ltr class=scroll-smooth data-default-appearance=light data-auto-appearance=true><head>
 <meta charset=utf-8>
 <meta http-equiv=content-language content="en-au">
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -7,8 +7,8 @@
 <meta name=title content="Configuration &#183; Congo">
 <meta name=description content="A powerful, lightweight theme for Hugo built with Tailwind CSS.">
 <link rel=canonical href=https://jpanther.github.io/congo/docs/configuration/>
-<link type=text/css rel=stylesheet href=/congo/css/main.bundle.min.6054f483632be81a44c916d87de7b7e79ca9daed006df153ef132dcb6259142c1dfe59de56b79f91132e2079aa4b87bd4982cba5f1631e353082cf29417d443a.css integrity="sha512-YFT0g2Mr6BpEyRbYfee355yp2u0AbfFT7xMty2JZFCwd/lneVrefkRMuIHmqS4e9SYLLpfFjHjUwgs8pQX1EOg==">
-<script defer type=text/javascript id=script-bundle src=/congo/js/main.bundle.min.fde17ba078f800524d6eab2ac173ba8fe5a928afc7c814f55e68e50f59909e51eaeded8e3464e460f50765057ecc8f0ad5393495b36a17be9dad3cb9c7c646e2.js integrity="sha512-/eF7oHj4AFJNbqsqwXO6j+WpKK/HyBT1XmjlD1mQnlHq7e2ONGTkYPUHZQV+zI8K1Tk0lbNqF76drTy5x8ZG4g==" data-copy=Copy data-copied=Copied></script>
+<link type=text/css rel=stylesheet href=/congo/css/main.bundle.min.8668fddbcbb932886633e4aa81083d40daba23f947de11d220d65a81de2f1d305d46f22ba639bfadba00f888260183fce15757d95b0f94ea337f3361f3ccf098.css integrity="sha512-hmj928u5MohmM+SqgQg9QNq6I/lH3hHSINZagd4vHTBdRvIrpjm/rboA+IgmAYP84VdX2VsPlOozfzNh88zwmA==">
+<script defer type=text/javascript id=script-bundle src=/congo/js/main.bundle.min.ac8bae0637d2c85a05cf0fb654b22607333000c82c6c5222850c59bef9243e6ea1233806da173e50066dc88f4da82b08a9a64e27104c31d56d4d02a05a7efbae.js integrity="sha512-rIuuBjfSyFoFzw+2VLImBzMwAMgsbFIihQxZvvkkPm6hIzgG2hc+UAZtyI9NqCsIqaZOJxBMMdVtTQKgWn77rg==" data-copy=Copy data-copied=Copied></script>
 <link rel=apple-touch-icon sizes=180x180 href=/congo/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/congo/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/congo/favicon-16x16.png>
@@ -22,7 +22,7 @@
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Configuration">
 <meta name=twitter:description content="All the configuration variables available in Congo.">
-<script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Documentation","name":"Configuration","headline":"Configuration","description":"All the configuration variables available in Congo.","abstract":"Congo is a highly customisable theme and uses some of the latest Hugo features to simplify how it is configured.","inLanguage":"en-au","url":"https:\/\/jpanther.github.io\/congo\/docs\/configuration\/","author":{"@type":"Person","name":"Congo"},"copyrightYear":"2020","dateCreated":"2020-08-14T00:00:00\u002b00:00","datePublished":"2020-08-14T00:00:00\u002b00:00","dateModified":"2020-08-14T00:00:00\u002b00:00","keywords":["config","docs"],"mainEntityOfPage":"true","wordCount":"1785"}]</script>
+<script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Documentation","name":"Configuration","headline":"Configuration","description":"All the configuration variables available in Congo.","abstract":"Congo is a highly customisable theme and uses some of the latest Hugo features to simplify how it is configured.","inLanguage":"en-au","url":"https:\/\/jpanther.github.io\/congo\/docs\/configuration\/","author":{"@type":"Person","name":"Congo"},"copyrightYear":"2020","dateCreated":"2020-08-14T00:00:00\u002b00:00","datePublished":"2020-08-14T00:00:00\u002b00:00","dateModified":"2020-08-14T00:00:00\u002b00:00","keywords":["config","docs"],"mainEntityOfPage":"true","wordCount":"1872"}]</script>
 <meta name=generator content="Hugo 0.92.1">
 <meta name=author content="Congo">
 <link href=https://twitter.com/ rel=me>
@@ -103,6 +103,7 @@ Table of Contents
 <li><a href=#language-and-i18n>Language and i18n</a>
 <ul>
 <li><a href=#configuration>Configuration</a></li>
+<li><a href=#menus>Menus</a></li>
 </ul>
 </li>
 <li><a href=#theme-parameters>Theme parameters</a></li>
@@ -324,6 +325,10 @@ Table of Contents
 </tr>
 </tbody>
 </table>
+<h3 id=menus class="relative group">Menus <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#menus aria-label=Anchor>#</a></span></h3>
+<p>Congo also supports language-specific menu configurations. Menu config files follow the same naming format as the languages file. Simply provide the language code in the file name to tell Hugo which language the file relates to.</p>
+<p>Menu config files are named with the format <code>menus.[language-code].toml</code>. Always ensure that the language code used in the menus configuration matches the languages configuration.</p>
+<p>The <a href=https://jpanther.github.io/congo/docs/getting-started/#menus>Getting Started</a> section explains more about the structure of this file. You can also refer to the <a href=https://gohugo.io/content-management/menus/>Hugo menu docs</a> for more configuration examples.</p>
 <h2 id=theme-parameters class="relative group">Theme parameters <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#theme-parameters aria-label=Anchor>#</a></span></h2>
 <p>Congo provides a large number of configuration parameters that control how the theme functions. The table below outlines every available parameter in the <code>config/_default/params.toml</code> file.</p>
 <p>Many of the article defaults here can be overridden on a per article basis by specifying it in the front matter. Refer to the <a href=https://jpanther.github.io/congo/docs/front-matter/>Front Matter</a> section for further details.</p>
