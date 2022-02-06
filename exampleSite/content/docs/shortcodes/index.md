@@ -99,14 +99,14 @@ You can see some additional Chart.js examples on the [charts samples]({{< ref "c
 
 Congo includes a `figure` shortcode for adding images to content. The shortcode replaces the base Hugo functionality in order to provide additional performance benefits.
 
-Images included using `figure` will be optimised using Hugo Pipes and scaled in order to provide images appropriate to different device resolutions.
+When a provided image is a page resource, it will be optimised using Hugo Pipes and scaled in order to provide images appropriate to different device resolutions. If a URL to an external image is provided, it will be included as-is without any image processing by Hugo.
 
 The `figure` shortcode accepts six parameters:
 
 <!-- prettier-ignore-start -->
 |Parameter|Description|
 |---|---|
-|`src`|**Required.** The filename of the image. This image must be a [page resource](https://gohugo.io/content-management/page-resources/) bundled with the page.|
+|`src`|**Required.** The filename or URL of the image. When providing a filename, this image must be a [page resource](https://gohugo.io/content-management/page-resources/) bundled with the page.|
 |`alt`|[Alternative text description](https://moz.com/learn/seo/alt-text) for the image.|
 |`caption`|Markdown for the image caption, which will be displayed below the image.|
 |`class`|Additional CSS classes to apply to the image.|
