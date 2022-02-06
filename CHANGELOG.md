@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Markdown images and `figure` shortcode fail to load resource when providing an external URL source
 - HTML `figcaption` tags are output for Markdown images even when a caption is not provided
+- Light appearance would briefly appear on page load before switching to dark appearance ([#102](https://github.com/jpanther/congo/issues/102))
 
 ## [2.0.2] - 2022-02-05
 

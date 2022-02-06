@@ -2,7 +2,6 @@ const browserIsDark =
   window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 const sitePreference = document.documentElement.getAttribute("data-default-appearance");
 const userPreference = localStorage.getItem("appearance");
-const switcher = document.getElementById("appearance-switcher");
 
 if (
   (browserIsDark && userPreference === null) ||
@@ -25,6 +24,7 @@ if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
+  const switcher = document.getElementById("appearance-switcher");
   if (switcher) {
     switcher.addEventListener("click", () => {
       document.documentElement.classList.toggle("dark");
