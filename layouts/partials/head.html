@@ -50,10 +50,8 @@
     href="{{ $bundleCSS.RelPermalink }}"
     integrity="{{ $bundleCSS.Data.Integrity }}"
   />
-  {{ if .Site.Params.enableAppearanceSwitching | default true }}
-    {{ $jsAppearance := resources.Get "js/appearance.js" }}
-    {{ $assets.Add "js" (slice $jsAppearance) }}
-  {{ end }}
+  {{ $jsAppearance := resources.Get "js/appearance.js" }}
+  {{ $assets.Add "js" (slice $jsAppearance) }}
   {{ if .Site.Params.enableSearch | default false }}
     {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
     {{ $jsSearch := resources.Get "js/search.js" }}
