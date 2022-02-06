@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Updated Turkish translation ([#105](https://github.com/jpanther/congo/pull/105))
+- Updated Spanish translation ([#106](https://github.com/jpanther/congo/pull/106))
+
 ### Fixed
 
 - Markdown images and `figure` shortcode fail to load resource when providing an external URL source
