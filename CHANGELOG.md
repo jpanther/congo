@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Main content area not growing to fill screen vertically
 - Search results not cleared when search is dismissed ([#109](https://github.com/jpanther/congo/pull/109))
+- Emoji strings not displaying in search results
 
 ## [2.0.3] - 2022-02-07
 
