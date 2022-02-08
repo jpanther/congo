@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Updated German translation ([#110](https://github.com/jpanther/congo/pull/110))
 - Upgrade to Tailwind v3.0.19
 
 ### Fixed
