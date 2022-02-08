@@ -26,7 +26,7 @@
       >
     </div>
     {{- partial "header.html" . -}}
-    <main id="main-content" class="relative">
+    <main id="main-content" class="relative grow">
       {{- block "main" . }}{{- end }}
       {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
         <div

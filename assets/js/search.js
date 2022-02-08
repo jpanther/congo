@@ -84,6 +84,8 @@ function hideSearch() {
   if (searchVisible) {
     document.body.style.overflow = "visible";
     wrapper.style.visibility = "hidden";
+    input.value = "";
+    output.innerHTML = "";
     document.activeElement.blur();
     searchVisible = false;
   }
