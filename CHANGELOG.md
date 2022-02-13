@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Bengali translation ([#115](https://github.com/jpanther/congo/pull/115))
+
 ### Fixed
 
 - Updated date is displayed even when it is the same as published date
