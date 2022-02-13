@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Updated date is displayed even when it is the same as published date
+- Structured data on homepage unparsable by Google ([#113](https://github.com/jpanther/congo/issues/113))
 
 ## [2.0.4] - 2022-02-09
 
