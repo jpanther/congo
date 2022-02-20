@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Bengali translation ([#115](https://github.com/jpanther/congo/pull/115))
 
+### Changed
+
+- Upgrade to Tailwind v3.0.23 and Typography v0.5.2
+- Upgrade to Mermaid v8.14.0
+- Upgrade to Chart.js v3.7.1
+
 ### Fixed
 
 - Updated date is displayed even when it is the same as published date
