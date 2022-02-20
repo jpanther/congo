@@ -2,7 +2,7 @@
   <h3 class="flex items-center mt-6 text-xl font-semibold">
     {{ with .Params.externalUrl }}
       <a
-        class="hover:underline hover:decoration-primary-500 hover:underline-offset-2 text-neutral-800 dark:text-neutral"
+        class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
         href="{{ . }}"
         target="_blank"
         rel="external"
@@ -16,7 +16,7 @@
       </span>
     {{ else }}
       <a
-        class="hover:underline hover:decoration-primary-500 hover:underline-offset-2 text-neutral-800 dark:text-neutral"
+        class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
         href="{{ .RelPermalink }}"
         >{{ .Title | emojify }}</a
       >

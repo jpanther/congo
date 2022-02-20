@@ -9,7 +9,7 @@
   {{ end }}
   <li class="inline {{ if or (eq .p1 .p2) (.p1.IsHome) }}hidden{{ end }}">
     <a
-      class="hover:underline hover:decoration-neutral-300 dark:underline-neutral-600"
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
       href="{{ .p1.RelPermalink }}"
       >{{ if .p1.Title }}
         {{- .p1.Title -}}
