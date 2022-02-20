@@ -1,0 +1,27 @@
+{{ $url := urls.Parse .Destination }}
+{{ $altText := .Text }}
+{{ $caption := .Title }}
+{{ if findRE "^https?" $url.Scheme }}
+  <figure>
+    <img class="my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
+    {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+{{ else }}
+  {{ with $.Page.Resources.GetMatch ($url.String) }}
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        srcset="
+          {{ (.Resize "330x").RelPermalink }} 330w,
+          {{ (.Resize "660x").RelPermalink }} 660w,
+          {{ (.Resize "1024x").RelPermalink }} 1024w,
+          {{ (.Resize "1320x").RelPermalink }} 2x"
+        src="{{ (.Resize "660x").RelPermalink }}"
+        alt="{{ $altText }}"
+      />
+      {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+    </figure>
+  {{ else }}
+    {{ errorf `[CONGO] Markdown image error in "%s": Resource "%s" not found. Check the path is correct or remove the image from the content.` .Page.Path $url.String }}
+  {{ end }}
+{{ end }}

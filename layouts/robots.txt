@@ -1,6 +1,6 @@
 User-agent: *
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
-Disallow:
+Allow: /
 {{- else }}
 Disallow: /
 {{- end }}

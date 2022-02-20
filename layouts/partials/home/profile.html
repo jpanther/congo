@@ -5,16 +5,31 @@
 >
   <header class="flex flex-col items-center mb-3">
     {{ with .Site.Author.image }}
-      <img class="mb-2 rounded-full w-36 h-36" alt="Author" src="{{ . | relURL }}" />
+      {{ $authorImage := resources.Get . }}
+      {{ if $authorImage }}
+        {{ $authorImage := $authorImage.Fill "288x288" }}
+        <img
+          class="mb-2 rounded-full w-36 h-36"
+          width="144"
+          height="144"
+          alt="Author"
+          src="{{ $authorImage.RelPermalink }}"
+        />
+      {{ end }}
     {{ end }}
     <h1 class="text-4xl font-extrabold">
       {{ .Site.Author.name | default .Site.Title }}
     </h1>
+    {{ with .Site.Author.headline }}
+      <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
+        {{ . }}
+      </h2>
+    {{ end }}
     <div class="mt-1 text-2xl">
       {{ partialCached "author-links.html" . }}
     </div>
   </header>
-  <section class="prose dark:prose-light">{{ .Content | emojify }}</section>
+  <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
 </article>
 <section>
   {{ partial "recent-articles.html" . }}

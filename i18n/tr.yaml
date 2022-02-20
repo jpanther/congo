@@ -1,11 +1,13 @@
 article:
-  anchor_label: "Anchor"
+  # anchor_label: "Anchor"
+  date: "{{ .Date }}"
+  date_updated: "Güncellendi: {{ .Date }}"
   draft: "Taslak"
-  edit_title: "İçeriği Değiştir"
+  edit_title: "İçeriği düzenle"
   reading_time:
-    one: "{{ .Count }} dakika"
-    other: "{{ .Count }} dakika"
-  reading_time_title: "Okuma Süresi"
+    one: "{{ .Count }} dk"
+    other: "{{ .Count }} dk"
+  reading_time_title: "Okuma süresi"
   word_count:
     one: "{{ .Count }} kelime"
     other: "{{ .Count }} kelime"
@@ -13,28 +15,41 @@ article:
 author:
   byline_title: "Yazar"
 
+code:
+  copy: "Kopyala"
+  copied: "Kopyalandı"
+
 error:
-  404_title: "Sayfa bulunamadı :confused:"
-  404_error: "Error 404"
-  404_description: "Ulaşmaya çalıştığınız sayfa yayından kaldırılmış veya hiç varolmamış."
+  404_title: "Sayfa Bulunamadı :confused:"
+  404_error: "Hata 404"
+  404_description: "Görünüşe göre istediğiniz sayfa mevcut değil."
 
 footer:
-  dark_appearance: "Karanlık görünüme geç."
-  light_appearance: "Aydınlık görünüme geç."
-  powered_by: "{{ .Hugo }} &amp; {{ .Congo }} katkılarıyla."
+  dark_appearance: "Koyu görünüme geç"
+  light_appearance: "Açık görünüme geç"
+  powered_by: "{{ .Hugo }} &amp; {{ .Congo }} tarafından desteklenmektedir."
 
 list:
-  externalurl_title: "Harici siteye bağlantı."
-  no_articles: "Burada henüz makale yok."
+  externalurl_title: "Harici siteye bağlantı"
+  no_articles: "Henüz burada listelenecek bir makale yok."
+
+nav:
+  scroll_to_top_title: "Yukarı çık"
+  skip_to_main: "Ana içeriğe geç"
+
+search:
+  open_button_title: "Ara (/)"
+  close_button_title: "Kapat (Esc)"
+  input_placeholder: "Ara"
 
 sharing:
-  email: "e-Posta ile Gönder"
-  facebook: "Facebook'ta Paylaş."
-  linkedin: "LinkedIn'de Paylaş."
-  pinterest: "Pinterest'e Pinle."
-  reddit: "Reddit'e Gönder."
-  twitter: "Twitter'da Tweetle."
+  email: "Email ile gönder"
+  facebook: "Facebook'ta paylaş"
+  linkedin: "LinkedIn'te paylaş"
+  pinterest: "Pinterest'te pinle"
+  reddit: "Reddit'te gönder"
+  twitter: "Twitter'da Tweetle"
 
 shortcode:
-  recent_articles: "Son Blog Yazıları"
-  icon_none: "İkon bulunamadı."
+  recent_articles: "Güncel"
+  icon_none: "Icon bulunamadı."

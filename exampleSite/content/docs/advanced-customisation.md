@@ -1,6 +1,6 @@
 ---
 title: "Advanced Customisation"
-date: 2020-08-09
+date: 2020-08-08
 draft: false
 description: "Learn how to build Congo manually."
 slug: "advanced-customisation"
@@ -37,6 +37,16 @@ In addition to the default schemes, you can also create your own and re-style th
 
 Congo defines a three-colour palette that is used throughout the theme. The three colours are defined as `neutral`, `primary` and `secondary` variants, each containing ten shades of colour.
 
+Due to the way Tailwind CSS 3.0 calculates colour values with opacity, the colours specified in the scheme need to [conform to a particular format](https://github.com/adamwathan/tailwind-css-variable-text-opacity-demo) by providing the red, green and blue colour values.
+
+```css
+:root {
+  --color-primary-500: 139, 92, 246;
+}
+```
+
+This example defines a CSS variable for the `primary-500` colour with a red value of `139`, green value of `92` and blue value of `246`.
+
 Use one of the existing theme stylesheets as a template. You are free to define your own colours, but for some inspiration, check out the official [Tailwind colour palette reference](https://tailwindcss.com/docs/customizing-colors#color-palette-reference).
 
 ## Overriding the stylesheet
@@ -60,36 +70,112 @@ html {
 
 Simply by changing this one value, all the font sizes on your website will be adjusted to match this new size. Therefore, to increase the overall font sizes used, make the value greater than `12pt`. Similarly, to decrease the font sizes, make the value less than `12pt`.
 
-## Building from source
+## Building the theme CSS from source
 
-If you'd like to make a major change, you can take advantage of Tailwind CSS's JIT compiler and rebuild the entire theme CSS from scratch.
+If you'd like to make a major change, you can take advantage of Tailwind CSS's JIT compiler and rebuild the entire theme CSS from scratch. This is useful if you want to adjust the Tailwind configuration or add extra Tailwind classes to the main stylesheet.
 
 {{< alert >}}
 **Note:** Building the theme manually is intended for advanced users.
 {{< /alert >}}
 
-Change into the `themes/congo/` folder and install the project dependencies.
+Let's step through how building the Tailwind CSS works.
 
-```bash
+### Tailwind configuration
+
+In order to generate a CSS file that only contains the Tailwind classes that are actually being used the JIT compiler needs to scan through all the HTML templates and Markdown content files to check which styles are present in the markup. The compiler does this by looking at the `tailwind.config.js` file which is included in the root of the theme directory:
+
+```js
+// themes/congo/tailwind.config.js
+
+module.exports = {
+  content: [
+    "./layouts/**/*.html",
+    "./content/**/*.{html,md}",
+    "./themes/congo/layouts/**/*.html",
+    "./themes/congo/content/**/*.{html,md}",
+  ],
+
+  // and more...
+};
+```
+
+This default configuration has been included with these content paths so that you can easily generate your own CSS file without needing to modify it, provided you follow a particular project structure. Namely, **you have to include Congo in your project as a subdirectory at `themes/congo/`**. This means you cannot easily use Hugo Modules to install the theme and you must go down either the git submodule (recommended) or manual install routes. The [Installation docs]({{< ref "installation" >}}) explain how to install the theme using either of these methods.
+
+### Project structure
+
+In order to take advantage of the default configuration, your project should look something like this...
+
+```shell
+.
+├── assets
+│   └── css
+│       └── compiled
+│           └── main.css  # this is the file we will generate
+├── config  # site config
+│   └── _default
+├── content  # site content
+│   ├── _index.md
+│   ├── projects
+│   │   └── _index.md
+│   └── blog
+│       └── _index.md
+├── layouts  # custom layouts for your site
+│   ├── partials
+│   │   └── extend-article-link.html
+│   ├── projects
+│   │   └── list.html
+│   └── shortcodes
+│       └── disclaimer.html
+└── themes
+    └── congo  # git submodule or manual theme install
+```
+
+This example structure adds a new `projects` content type with its own custom layout along with a custom shortcode and extended partial. Provided the project follows this structure, all that's required is to recompile the `main.css` file.
+
+### Install dependencies
+
+In order for this to work you'll need to change into the `themes/congo/` directory and install the project dependencies. You'll need [npm](https://docs.npmjs.com/cli/v7/configuring-npm/install) on your local machine for this step.
+
+```shell
+cd themes/congo
 npm install
 ```
 
-Once installed, you can edit the `themes/congo/tailwind.config.js` to change the styles that are applied throughout the theme. You can also adjust specific styles in `themes/congo/assets/css/main.css`.
+### Run the Tailwind compiler
 
-To allow for easy theme colour changes, Congo defines a three-colour palette that is used throughout the theme. The three colours are defined as `neutral`, `primary` and `secondary` variants, each containing ten shades of colour. In order to change the colour across the entire theme, simply edit the `tailwind.config.js` file accordingly.
+With the dependencies installed all that's left is to use [Tailwind CLI](https://v2.tailwindcss.com/docs/installation#using-tailwind-cli) to invoke the JIT compiler. Navigate back to the root of your Hugo project and issue the following command:
 
-For a full list of colours available, and their corresponding configuration values, see the official [Tailwind docs](https://tailwindcss.com/docs/customizing-colors#color-palette-reference).
-
-After editing the configuration, you need to rebuild the theme's stylesheets. This will run the Tailwind JIT compiler in watch mode which aids with testing style changes.
-
-```bash
-npm run dev
+```shell
+cd ../..
+./themes/congo/node_modules/tailwindcss/lib/cli.js -c ./themes/congo/tailwind.config.js -i ./themes/congo/assets/css/main.css -o ./assets/css/compiled/main.css --jit
 ```
 
-This will automatically output a CSS file to `/themes/congo/assets/css/compiled/main.css`.
+It's a bit of an ugly command due to the paths involved but essentially you're calling Tailwind CLI and passing it the location of the Tailwind config file (the one we looked at above), where to find the theme's `main.css` file and then where you want the compiled CSS file to be placed (it's going into the `assets/css/compiled/` folder of your Hugo project).
 
-{{< alert >}}
-**Note:** You should not make manual edits to the compiled CSS file.
-{{< /alert >}}
+The config file will automatically inspect all the content and layouts in your project as well as all those in the theme and build a new CSS file that contains all the CSS required for your website. Due to the way Hugo handles file hierarchy, this file in your project will now automatically override the one that comes with the theme.
 
-Now whenever you make a change, the CSS files will be rebuilt automatically. This mode is useful to run when using `hugo server` to preview your site during development. Asset files will be minified by Hugo at site build time.
+Each time you make a change to your layouts and need new Tailwind CSS styles, you can simply re-run the command and generate the new CSS file. You can also add `-w` to the end of the command to run the JIT compiler in watch mode.
+
+### Make a build script
+
+To fully complete this solution, you can simplify this whole process by adding aliases for these commands, or do what I do and add a `package.json` to the root of your project which contains the necessary scripts...
+
+```js
+// package.json
+
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "server": "hugo server -b http://localhost -p 8000",
+    "dev": "NODE_ENV=development ./themes/congo/node_modules/tailwindcss/lib/cli.js -c ./themes/congo/tailwind.config.js -i ./themes/congo/assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
+    "build": "NODE_ENV=production ./themes/congo/node_modules/tailwindcss/lib/cli.js -c ./themes/congo/tailwind.config.js -i ./themes/congo/assets/css/main.css -o ./assets/css/compiled/main.css --jit"
+  },
+  // and more...
+}
+```
+
+Now when you want to work on designing your site, you can invoke `npm run dev` and the compiler will run in watch mode. When you're ready to deploy, run `npm run build` and you'll get a clean Tailwind CSS build.
+
+🙋‍♀️ If you need help, feel free to ask a question on [GitHub Discussions](https://github.com/jpanther/congo/discussions).
