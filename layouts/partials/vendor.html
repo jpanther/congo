@@ -1,38 +1,18 @@
 {{/* Mermaid */}}
 {{ if .Page.HasShortcode "mermaid" }}
-  {{ $mermaidJS := resources.Get "lib/mermaid/mermaid.min.js" }}
-  {{ $mermaidJS := $mermaidJS | resources.Fingerprint "sha512" }}
-  <script defer src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      function css(name) {
-        return getComputedStyle(document.documentElement).getPropertyValue(name);
-      }
-      mermaid.initialize({ theme: "base", themeVariables: { background: css("--color-neutral"), primaryColor: css("--color-primary-200"), secondaryColor: css("--color-secondary-200"), tertiaryColor: css("--color-neutral-100"), primaryBorderColor: css("--color-primary-400"), secondaryBorderColor: css("--color-secondary-400"), tertiaryBorderColor: css("--color-neutral-400"), lineColor: css("--color-neutral-600"), fontFamily: "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif", fontSize: "16px" }});
-    });
-  </script>
+  {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
+  {{ $mermaidConfig := resources.Get "js/mermaid.js" }}
+  {{ $mermaidConfig := $mermaidConfig | resources.Minify }}
+  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}"></script>
 {{ end }}
 {{/* Chart */}}
 {{ if .Page.HasShortcode "chart" }}
-  {{ $chartJS := resources.Get "lib/chart/chart.min.js" }}
-  {{ $chartJS := $chartJS | resources.Fingerprint "sha512" }}
-  <script defer src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      function css(name) {
-        return getComputedStyle(document.documentElement).getPropertyValue(name);
-      }
-      Chart.defaults.font.size = 14;
-      Chart.defaults.backgroundColor = css("--color-primary-300");
-      Chart.defaults.elements.point.borderColor = css("--color-primary-400");
-      Chart.defaults.elements.bar.borderColor = css("--color-primary-500");
-      Chart.defaults.elements.bar.borderWidth = 1;
-      Chart.defaults.elements.line.borderColor = css("--color-primary-400");
-      Chart.defaults.elements.arc.backgroundColor = css("--color-primary-200");
-      Chart.defaults.elements.arc.borderColor = css("--color-primary-500");
-      Chart.defaults.elements.arc.borderWidth = 1;
-    });
-  </script>
+  {{ $chartLib := resources.Get "lib/chart/chart.min.js" }}
+  {{ $chartConfig := resources.Get "js/chart.js" }}
+  {{ $chartConfig := $chartConfig | resources.Minify }}
+  {{ $chartJS := slice $chartLib $chartConfig | resources.Concat "js/chart.bundle.js" | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
 {{ end }}
 {{/* Katex */}}
 {{ if .Page.HasShortcode "katex" }}

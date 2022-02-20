@@ -1,8 +1,8 @@
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-  <span class="pr-3 text-primary-400">
+  <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
     {{ partial "icon.html" "exclamation-triangle" }}
   </span>
-  <span class="no-prose dark:text-neutral-300">
+  <span class="dark:text-neutral-300">
     {{- .Inner | markdownify -}}
   </span>
 </div>

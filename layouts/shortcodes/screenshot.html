@@ -1,35 +1,22 @@
 {{ if .Get "src" }}
   {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
   <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-      {{- if .Get "link" -}}
-          <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- if .Get "href" -}}
+      <a href="{{ .Get "href" }}">
+    {{- end -}}
+    <img src="{{ $image.RelPermalink }}"
+      {{- if or (.Get "alt") (.Get "caption") }}
+        alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
       {{- end -}}
-      <img src="{{ $image.RelPermalink }}"
-          {{- if or (.Get "alt") (.Get "caption") }}
-          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
-          {{- end -}}
-          width="100%"
-        height="auto"
-        style="max-width:{{ div $image.Width 2 }}px; max-height:{{ div $image.Height 2 }}px;"
-      /><!-- Closing img tag -->
-      {{- if .Get "link" }}</a>{{ end -}}
-      {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-          <figcaption>
-              {{ with (.Get "title") -}}
-                  <h4>{{ . }}</h4>
-              {{- end -}}
-              {{- if or (.Get "caption") (.Get "attr") -}}<p>
-                  {{- .Get "caption" | markdownify -}}
-                  {{- with .Get "attrlink" }}
-                      <a href="{{ . }}">
-                  {{- end -}}
-                  {{- .Get "attr" | markdownify -}}
-                  {{- if .Get "attrlink" }}</a>{{ end }}</p>
-              {{- end }}
-          </figcaption>
-      {{- end }}
+      width="100%"
+      height="auto"
+      style="max-width:{{ div $image.Width 2 }}px; max-height:{{ div $image.Height 2 }}px;"
+    />
+    {{- if .Get "href" }}</a>{{ end -}}
+    {{- if .Get "caption" -}}
+      <figcaption>
+        {{- .Get "caption" | markdownify -}}
+      </figcaption>
+    {{- end }}
   </figure>
 {{ end }}
-
-
-

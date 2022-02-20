@@ -20,7 +20,7 @@ These instructions will get you up and running using Hugo and Congo from a compl
 If you haven't used Hugo before, you will need to [install it onto your local machine](https://gohugo.io/getting-started/installing). You can check if it's already installed by running the command `hugo version`.
 
 {{< alert >}}
-Make sure you are using **Hugo version 0.86.1** or later as the theme takes advantage of some of the latest Hugo features.
+Make sure you are using **Hugo version 0.87.0** or later as the theme takes advantage of some of the latest Hugo features.
 {{< /alert >}}
 
 You can find detailed installation instructions for your platform in the [Hugo docs](https://gohugo.io/getting-started/installing).
@@ -65,7 +65,7 @@ This method is the quickest and easiest for keeping the theme up-to-date. Hugo u
 
    ```toml
    [[imports]]
-   path = "github.com/jpanther/congo"
+   path = "github.com/jpanther/congo/v2"
    ```
 
 4. Start your server using `hugo server` and the theme will be downloaded automatically.

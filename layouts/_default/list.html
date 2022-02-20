@@ -1,5 +1,29 @@
 {{ define "main" }}
-  {{ partial "section-header.html" . }}
+  {{ $toc := and (.Params.showTableOfContents | default (.Site.Params.list.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
+  <header>
+    {{ if .Site.Params.list.showBreadcrumbs | default false }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+  <section
+    class="flex flex-col max-w-full prose lg:flex-row dark:prose-invert {{ if $toc -}}
+      mt-12
+    {{- else -}}
+      mt-0
+    {{- end }}"
+  >
+    {{ if $toc }}
+      <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+        <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+          {{ partial "toc.html" . }}
+        </div>
+      </div>
+    {{ end }}
+    <div class="min-w-0 min-h-0 max-w-prose">
+      {{ .Content | emojify }}
+    </div>
+  </section>
   {{ if gt .Pages 0 }}
     <section>
       {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
@@ -16,7 +40,7 @@
     </section>
     {{ partial "pagination.html" . }}
   {{ else }}
-    <section class="mt-10 prose dark:prose-light">
+    <section class="mt-10 prose dark:prose-invert">
       <p class="py-8 border-t">
         <em>{{ i18n "list.no_articles" | emojify }}</em>
       </p>

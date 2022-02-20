@@ -6,6 +6,113 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.0.5] - 2022-02-20
+
+### Added
+
+- Bengali translation ([#115](https://github.com/jpanther/congo/pull/115))
+
+### Changed
+
+- Upgrade to Tailwind v3.0.23 and Typography v0.5.2
+- Upgrade to Mermaid v8.14.0
+- Upgrade to Chart.js v3.7.1
+
+### Fixed
+
+- Updated date is displayed even when it is the same as published date
+- Structured data on homepage unparsable by Google ([#113](https://github.com/jpanther/congo/issues/113))
+- Underline styles not displaying correctly in some browsers ([#125](https://github.com/jpanther/congo/issues/125))
+
+## [2.0.4] - 2022-02-09
+
+### Changed
+
+- Updated German translation ([#110](https://github.com/jpanther/congo/pull/110))
+- Upgrade to Tailwind v3.0.19
+
+### Fixed
+
+- Main content area not growing to fill screen vertically
+- Search results not cleared when search is dismissed ([#109](https://github.com/jpanther/congo/pull/109))
+- Emoji strings not displaying in search results
+
+## [2.0.3] - 2022-02-07
+
+### Changed
+
+- Updated Turkish translation ([#105](https://github.com/jpanther/congo/pull/105))
+- Updated Spanish translation ([#106](https://github.com/jpanther/congo/pull/106))
+
+### Fixed
+
+- Markdown images and `figure` shortcode fail to load resource when providing an external URL source
+- HTML `figcaption` tags are output for Markdown images even when a caption is not provided
+- Light appearance briefly appears on page load before switching to dark appearance ([#102](https://github.com/jpanther/congo/issues/102))
+
+## [2.0.2] - 2022-02-05
+
+### Changed
+
+- Updated French translation ([#100](https://github.com/jpanther/congo/pull/100))
+
+### Fixed
+
+- User's appearance preference is lost on page load when default appearance is dark ([#102](https://github.com/jpanther/congo/issues/102))
+- JavaScript warning when appearance switcher is disabled
+
+## [2.0.1] - 2022-02-03
+
+### Fixed
+
+- Hugo module error when downloading version 2
+- Emoji strings not displaying in table of contents
+
+## [2.0.0] - 2022-02-03
+
+### Added
+
+- Multilingual support
+- Right-to-left (RTL) language support
+- Site search powered by Fuse.js
+- Automatic Markdown image resizing and srcset generation
+- Performance and Accessibility improvements to achieve perfect Lighthouse scores
+- Tables of contents on article pages
+- Code copy buttons in article content
+- Taxonomy and term listings now support Markdown content
+- Taxonomies on article and list pages
+- Article pagination direction can be inverted
+- Author `headline` parameter
+- Skip to content and Scroll to top links
+- Archetype for generating links to external articles
+
+### Changed
+
+- ⚠️ Required Hugo version is now 0.87.0 or later
+- ⚠️ Complete rewrite of dark mode to allow more flexibile configuration
+- ⚠️ All theme images are now Hugo assets
+- ⚠️ Overhauled `figure` shortcode which now resizes images
+- Upgrade to Tailwind v3.0.18
+- Inline JavaScript moved to external files
+- Improved JSON-LD structured data
+- Breadcrumbs now fallback to section name when `title` is not provided
+- Minor style and layout improvements
+
+## [1.6.4] - 2022-01-24
+
+### Added
+
+- Turkish translation ([#90](https://github.com/jpanther/congo/pull/90))
+
+### Changed
+
+- Article updated date formatting and i18n ([#91](https://github.com/jpanther/congo/pull/91))
+- Upgrade to Mermaid v8.13.10
+
+### Fixed
+
+- Article metadata not wrapping at small viewports ([#91](https://github.com/jpanther/congo/pull/91))
+
 ## [1.6.3] - 2022-01-19
 
 ### Added
@@ -19,7 +126,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- Emoji characters in article titles not appearing on list pages and in HTML metadata ([#84](https://github.com/jpanther/congo/pull/82))
+- Emoji characters in article titles not appearing on list pages and in HTML metadata ([#84](https://github.com/jpanther/congo/pull/84))
 
 ## [1.6.2] - 2022-01-07
 
@@ -236,7 +343,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v1.6.3...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.0.5...HEAD
+[2.0.5]: https://github.com/jpanther/congo/compare/v2.0.4...v2.0.5
+[2.0.4]: https://github.com/jpanther/congo/compare/v2.0.3...v2.0.4
+[2.0.3]: https://github.com/jpanther/congo/compare/v2.0.2...v2.0.3
+[2.0.2]: https://github.com/jpanther/congo/compare/v2.0.1...v2.0.2
+[2.0.1]: https://github.com/jpanther/congo/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/jpanther/congo/compare/v1.6.4...v2.0.0
+[1.6.4]: https://github.com/jpanther/congo/compare/v1.6.3...v1.6.4
 [1.6.3]: https://github.com/jpanther/congo/compare/v1.6.2...v1.6.3
 [1.6.2]: https://github.com/jpanther/congo/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/jpanther/congo/compare/v1.6.0...v1.6.1

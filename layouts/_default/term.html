@@ -1,5 +1,17 @@
 {{ define "main" }}
-  {{ partial "section-header.html" . }}
+  <header>
+    {{ if .Site.Params.list.showBreadcrumbs | default false }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+  {{ if .Content }}
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      <div class="min-w-0 min-h-0 max-w-prose">
+        {{ .Content | emojify }}
+      </div>
+    </section>
+  {{ end }}
   <section>
     {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
       <h2 class="mt-12 text-2xl font-bold first:mt-8">{{ .Key }}</h2>

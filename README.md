@@ -1,6 +1,6 @@
 # Congo
 
-Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises to your content.
+Congo is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises to your content.
 
 🌏 [Demo site](https://jpanther.github.io/congo/)  
 📑 [Theme documentation](https://jpanther.github.io/congo/docs/)  
@@ -11,28 +11,28 @@ Congo is designed to be a simple, lightweight theme for [Hugo](https://gohugo.io
 
 ## Features
 
-- Built with Tailwind CSS JIT for minified stylesheets without any excess code
-- Fully responsive layout
+- Fully responsive layout built with Tailwind CSS 3.0
 - Multiple colour schemes (or fully customise your own)
 - Dark mode (forced on/off or auto-switching with user toggle)
 - Highly customisable configuration
 - Multiple homepage layouts
 - Flexible with any content types, taxonomies and menus
+- Multilingual content support inlcuding support for RTL languages
 - Ability to link to posts on third-party websites
+- Client-side site search powered by Fuse.js
 - Diagrams and visualisations using Mermaid
 - Charts using Chart.js
 - Mathematical notation using KaTeX
 - SVG icons from FontAwesome 5
-- Heading anchors, Buttons, Badges and more
+- Automatic image resizing using Hugo Pipes
+- Heading anchors, Tables of Contents, Code copy, Buttons, Badges and more
 - HTML and Emoji support in articles 🎉
 - SEO friendly with links for sharing to social media
-- RSS feeds
 - Fathom Analytics and Google Analytics support
-- Favicons support
-- Comments support
+- RSS feeds, Favicons and comments support
 - Advanced customisation using simple Tailwind colour definitions and styles
-- Fully documented
-- Regular updates with fixes and new features
+- Optimised for performance and accessibility with perfect Lighthouse scores
+- Fully documented with regular updates
 
 ---
 
@@ -62,7 +62,7 @@ Detailed instructions for each method can be found in the [Installation](https:/
 
    ```toml
    [[imports]]
-   path = "github.com/jpanther/congo"
+   path = "github.com/jpanther/congo/v2"
    ```
 
 3. Start your server using `hugo server` and the theme will be downloaded automatically.
