@@ -1,6 +1,6 @@
-/*! Congo v2.0.4 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.0.5 | MIT License | https://github.com/jpanther/congo */
 
-/*! tailwindcss v3.0.19 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -481,7 +481,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.2em;
 }
 
-.prose a {
+.prose :where(a):not(:where([class~="not-prose"] *)) {
   color: var(--tw-prose-links);
   text-decoration: underline;
   font-weight: 500;
@@ -489,10 +489,10 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-color: rgb(var(--color-primary-300));
 }
 
-:where(.prose a:hover):not(:where([class~="not-prose"] *)) {
-  color: rgb(var(--color-neutral)) !important;
-  text-decoration: none !important;
-  background-color: rgb(var(--color-primary-600)) !important;
+.prose :where(a):not(:where([class~="not-prose"] *)):hover {
+  color: rgb(var(--color-neutral));
+  text-decoration: none;
+  background-color: rgb(var(--color-primary-600));
   border-radius: 0.09rem;
 }
 
@@ -2156,6 +2156,16 @@ body a, body button {
           text-decoration-line: none !important;
 }
 
+.decoration-primary-500 {
+  -webkit-text-decoration-color: rgb(var(--color-primary-500));
+          text-decoration-color: rgb(var(--color-primary-500));
+}
+
+.decoration-neutral-300 {
+  -webkit-text-decoration-color: rgb(var(--color-neutral-300));
+          text-decoration-color: rgb(var(--color-neutral-300));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -2236,16 +2246,6 @@ body a, body button {
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-
-.hover\:decoration-primary-500:hover {
-  -webkit-text-decoration-color: rgb(var(--color-primary-500));
-          text-decoration-color: rgb(var(--color-primary-500));
-}
-
-.hover\:decoration-neutral-300:hover {
-  -webkit-text-decoration-color: rgb(var(--color-neutral-300));
-          text-decoration-color: rgb(var(--color-neutral-300));
 }
 
 .hover\:decoration-primary-400:hover {

@@ -26,9 +26,9 @@ Implementing this new version has also removed some Tailwind plugin dependencies
 
 A highly requested feature, Congo is now multilingual! If you publish your content in multiple languages, the site will be built with all the translations available.
 
-<div class="text-2xl text-center" style="font-size: 2.8rem">:flag-au: :de: :fr: :es: :cn: :brazil: :tr:</div>
+<div class="text-2xl text-center" style="font-size: 2.8rem">:gb: :de: :fr: :es: :cn: :brazil: :tr: :bangladesh:</div>
 
-Thanks to submissions from the community, Congo has already been translated into [seven languages](https://github.com/jpanther/congo/tree/dev/i18n) with more to be added over time. By the way, [pull requests](https://github.com/jpanther/congo/pulls) for new languages are always welcome!
+Thanks to submissions from the community, Congo has already been translated into [eight languages](https://github.com/jpanther/congo/tree/dev/i18n) with more to be added over time. By the way, [pull requests](https://github.com/jpanther/congo/pulls) for new languages are always welcome!
 
 ## RTL language support
 

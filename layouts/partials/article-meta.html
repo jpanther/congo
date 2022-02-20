@@ -16,7 +16,7 @@
     {{ $meta.Add "partials" (slice (partial "meta/date.html" .Date)) }}
   {{ end }}
 
-  {{ if .Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false) }}
+  {{ if and (.Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false)) (ne .Date .Lastmod) }}
     {{ $meta.Add "partials" (slice (partial "meta/date-updated.html" .Lastmod)) }}
   {{ end }}
 

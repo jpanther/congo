@@ -50,6 +50,7 @@ The theme currently supports the following languages by default:
 | Language                     | Code    |
 | ---------------------------- | ------- |
 | :gb: English                 | `en`    |
+| :bangladesh: Bengali         | `bn`    |
 | :cn: Chinese                 | `zh`    |
 | :fr: French                  | `fr`    |
 | :de: German                  | `de`    |

@@ -18,7 +18,7 @@
       {{ end }}
     {{ else }}
       <a
-        class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
+        class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
         rel="me"
         href="{{ "/" | relLangURL }}"
         >{{ .Site.Title | markdownify | emojify }}</a
@@ -35,7 +35,7 @@
             class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
           >
             <a
-              class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="{{ .URL }}"
               title="{{ .Title }}"
               >{{ .Name | markdownify | emojify }}</a

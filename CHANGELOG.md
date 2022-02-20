@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.0.5] - 2022-02-20
+
+### Added
+
+- Bengali translation ([#115](https://github.com/jpanther/congo/pull/115))
+
+### Changed
+
+- Upgrade to Tailwind v3.0.23 and Typography v0.5.2
+- Upgrade to Mermaid v8.14.0
+- Upgrade to Chart.js v3.7.1
+
+### Fixed
+
+- Updated date is displayed even when it is the same as published date
+- Structured data on homepage unparsable by Google ([#113](https://github.com/jpanther/congo/issues/113))
+- Underline styles not displaying correctly in some browsers ([#125](https://github.com/jpanther/congo/issues/125))
+
 ## [2.0.4] - 2022-02-09
 
 ### Changed
@@ -325,7 +343,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.0.4...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.0.5...HEAD
+[2.0.5]: https://github.com/jpanther/congo/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/jpanther/congo/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/jpanther/congo/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/jpanther/congo/compare/v2.0.1...v2.0.2

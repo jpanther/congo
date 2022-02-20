@@ -6,7 +6,7 @@
         {{ range .Site.Menus.footer }}
           <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
             <a
-              class="hover:underline hover:decoration-primary-500 hover:decoration-2 hover:underline-offset-2"
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="{{ .URL }}"
               title="{{ .Title }}"
               >{{ .Name | markdownify | emojify }}</a

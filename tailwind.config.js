@@ -98,9 +98,9 @@ module.exports = {
               textDecorationColor: theme("colors.primary.300"),
               fontWeight: "500",
               "&:hover": {
-                color: `${theme("colors.neutral.DEFAULT")} !important`,
-                textDecoration: "none !important",
-                backgroundColor: `${theme("colors.primary.600")} !important`,
+                color: theme("colors.neutral.DEFAULT"),
+                textDecoration: "none",
+                backgroundColor: theme("colors.primary.600"),
                 borderRadius: "0.09rem",
               },
             },

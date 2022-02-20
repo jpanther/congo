@@ -8,11 +8,11 @@
     {{ with .Site.Params.description }}"description": "{{ . | safeJS }}",{{ end }}
     {{ with .Site.LanguageCode }}"inLanguage": "{{ . }}",{{ end }}
     "url": "{{ (site.GetPage "/").Permalink | safeURL }}",
+    {{ with .Site.Params.keywords }}"keywords": {{ . }},{{ end }}
     "publisher" : {
       "@type": "Person",
-      "name": "{{ .Site.Author.name | safeJS }}",
-    },
-    {{ with .Site.Params.keywords }}"keywords": {{ . }},{{ end }}
+      "name": "{{ .Site.Author.name | safeJS }}"
+    }
   }
   </script>
 {{ else if .IsPage }}
