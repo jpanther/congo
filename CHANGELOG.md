@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.0.5] - 2022-02-20
+
 ### Added
 
 - Bengali translation ([#115](https://github.com/jpanther/congo/pull/115))
@@ -341,7 +343,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.0.4...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.0.5...HEAD
+[2.0.5]: https://github.com/jpanther/congo/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/jpanther/congo/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/jpanther/congo/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/jpanther/congo/compare/v2.0.1...v2.0.2
