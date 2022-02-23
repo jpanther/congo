@@ -27,6 +27,23 @@ The input is written in Markdown so you can format it however you please.
 **Warning!** This action is destructive!
 {{< /alert >}}
 
+
+## Note
+
+`note` outputs its content like an alert box but with less severity. It's useful if you want to add addtional notes to your content.
+
+** Example: **
+
+```md
+{{</* note */>}}
+This could help you a lot :sparkles: :mage:
+{{</* /note */>}}
+```
+
+{{< note >}}
+This could help you. :sparkles: :mage:
+{{< /note >}}
+
 ## Badge
 
 `badge` outputs a styled badge component which is useful for displaying metadata.
