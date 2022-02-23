@@ -19,6 +19,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | apple                | {{< icon apple >}}                |
 | blogger              | {{< icon blogger >}}              |
 | codepen              | {{< icon codepen >}}              |
+| comment              | {{< icon comment >}}
 | dev                  | {{< icon dev >}}                  |
 | dribbble             | {{< icon dribbble >}}             |
 | edit                 | {{< icon edit >}}                 |
