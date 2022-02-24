@@ -27,7 +27,6 @@ The input is written in Markdown so you can format it however you please.
 **Warning!** This action is destructive!
 {{< /alert >}}
 
-
 ## Note
 
 `note` outputs its content like an alert box but with less severity. It's useful if you want to add addtional notes to your content.
@@ -36,12 +35,12 @@ The input is written in Markdown so you can format it however you please.
 
 ```md
 {{</* note */>}}
-This could help you a lot :sparkles: :mage:
+**Note:** This could help you a lot :sparkles:
 {{</* /note */>}}
 ```
 
 {{< note >}}
-This could help you. :sparkles: :mage:
+**Note:** This could help you. :sparkles:
 {{< /note >}}
 
 ## Badge
