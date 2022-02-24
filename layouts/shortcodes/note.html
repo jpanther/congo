@@ -3,6 +3,6 @@
     {{ partial "icon.html" "comment" }}
   </span>
   <span class="no-prose dark:text-neutral-300">
-    <strong>Note: </strong> {{- .Inner | markdownify -}}
+    {{- .Inner | markdownify -}}
   </span>
 </div>
