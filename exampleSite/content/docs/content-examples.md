@@ -212,6 +212,28 @@ The theme includes an archetype to make generating these external link articles 
 hugo new -k external posts/my-post.md
 ```
 
+### Simple pages
+
+|                   |                                |
+| ----------------- | ------------------------------ |
+| **Layout:**       | `layouts/_default/simple.html` |
+| **Front Matter:** | `layout: "simple"`             |
+
+Congo also includes a special layout for simple pages. The simple layout is a full-width template that just places Markdown content into the page without any special theme features.
+
+The only features available in the simple layout are breadcrumbs and sharing links. However, the behaviour of these can still be controlled using the normal page [front matter]({{< ref "front-matter" >}}) variables.
+
+To enable the simple layout on a particular page, add the `layout` front matter variable with a value of `"simple"`:
+
+```yaml
+---
+title: "My landing page"
+date: 2022-03-08
+layout: "simple"
+---
+This page content is now full-width.
+```
+
 ## Custom layouts
 
 One of the benefits of Hugo is that it makes it easy to create custom layouts for the whole site, individual sections or pages.

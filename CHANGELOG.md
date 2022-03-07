@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Simple page layout for creating full-width content ([#139](https://github.com/jpanther/congo/issues/139))
 - Portuguese (Portugal) translation ([#144](https://github.com/jpanther/congo/pull/144))
 
 ### Changed
