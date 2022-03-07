@@ -12,7 +12,13 @@
       {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
     </figure>
   {{ else }}
-    {{ with $.Page.Resources.GetMatch ($url.String) }}
+    {{ $resource := "" }}
+    {{ if $.Page.Resources.GetMatch ($url.String) }}
+      {{ $resource = $.Page.Resources.GetMatch ($url.String) }}
+    {{ else if resources.GetMatch ($url.String) }}
+      {{ $resource = resources.Get ($url.String) }}
+    {{ end }}
+    {{ with $resource }}
       <figure {{ with $class }}class="{{ . }}"{{ end }}>
         {{ with $href }}<a href="{{ . }}">{{ end }}
           <img
@@ -29,7 +35,10 @@
         {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
       </figure>
     {{ else }}
-      {{ errorf `[CONGO] Shortcode "figure" error in "%s": Resource "%s" not found. Check the path is correct or remove the shortcode.` .Page.Path ($url.String) }}
+      <figure>
+        <img class="my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
+        {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+      </figure>
     {{ end }}
   {{ end }}
 {{ end }}

@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Markdown images and `figure` shortcode now search the `assets/` directory if an image cannot be found in page bundle ([#126](https://github.com/jpanther/congo/issues/126))
+- Markdown images and `figure` shortcode now fallback to static assets if an image is not provided as a Hugo resource ([#126](https://github.com/jpanther/congo/issues/126))
+
 ## [2.0.5] - 2022-02-20
 
 ### Added
