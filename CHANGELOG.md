@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Portuguese (Portugal) translation ([#144](https://github.com/jpanther/congo/pull/144))
+
 ### Changed
 
 - Markdown images and `figure` shortcode now search the `assets/` directory if an image cannot be found in page bundle ([#126](https://github.com/jpanther/congo/issues/126))
@@ -189,7 +193,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - German translation ([#27](https://github.com/jpanther/congo/pull/27))
-- Brazilian Portuguese translation ([#28](https://github.com/jpanther/congo/pull/28))
+- Portuguese (Brazil) translation ([#28](https://github.com/jpanther/congo/pull/28))
 - Spanish translation ([#30](https://github.com/jpanther/congo/pull/30))
 
 ### Fixed
