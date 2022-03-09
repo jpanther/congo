@@ -13,6 +13,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Upgraded SVG icons to FontAwesome 6:
+  - New icons for Hashnode, bug, check, comment, light bulb, list, pencil, skull, tag, and information.
+  - ⚠️ The `exclamation-triangle` icon has been renamed `triangle-exclamation`
+  - ⚠️ The `times` icon has been renamed `xmark`
+  - ⚠️ The `stackoverflow` icon has been renamed `stack-overflow`
 - Markdown images and `figure` shortcode now search the `assets/` directory if an image cannot be found in page bundle ([#126](https://github.com/jpanther/congo/issues/126))
 - Markdown images and `figure` shortcode now fallback to static assets if an image is not provided as a Hugo resource ([#126](https://github.com/jpanther/congo/issues/126))
 - Taxonomy term listings now honour the `groupByYear` parameter ([#145](https://github.com/jpanther/congo/pull/145))

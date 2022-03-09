@@ -23,7 +23,7 @@ Congo is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.
 - Diagrams and visualisations using Mermaid
 - Charts using Chart.js
 - Mathematical notation using KaTeX
-- SVG icons from FontAwesome 5
+- SVG icons from FontAwesome 6
 - Automatic image resizing using Hugo Pipes
 - Heading anchors, Tables of Contents, Code copy, Buttons, Badges and more
 - HTML and Emoji support in articles 🎉
