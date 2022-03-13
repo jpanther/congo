@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.1.0] - 2022-03-14
+
 ### Added
 
 - Simple page layout for creating full-width content ([#139](https://github.com/jpanther/congo/issues/139))
@@ -365,7 +367,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.0.5...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/jpanther/congo/compare/v2.0.5...v2.1.0
 [2.0.5]: https://github.com/jpanther/congo/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/jpanther/congo/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/jpanther/congo/compare/v2.0.2...v2.0.3
