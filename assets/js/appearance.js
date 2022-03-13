@@ -1,19 +1,18 @@
-const browserIsDark =
-  window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 const sitePreference = document.documentElement.getAttribute("data-default-appearance");
 const userPreference = localStorage.getItem("appearance");
 
-if (
-  (browserIsDark && userPreference === null) ||
-  (browserIsDark && userPreference === "dark") ||
-  (sitePreference === "dark" && userPreference === null) ||
-  (sitePreference === "dark" && userPreference === "dark") ||
-  userPreference === "dark"
-) {
+if ((sitePreference === "dark" && userPreference === null) || userPreference === "dark") {
   document.documentElement.classList.add("dark");
 }
 
 if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches &&
+    userPreference !== "light"
+  ) {
+    document.documentElement.classList.add("dark");
+  }
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
     if (event.matches) {
       document.documentElement.classList.add("dark");

@@ -23,6 +23,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Taxonomy term listings now honour the `groupByYear` parameter ([#145](https://github.com/jpanther/congo/pull/145))
 - The `alert` shortcode now allows its icon to be specified as a parameter
 
+### Fixed
+
+- Dark appearance shown even when default appearance set to light and auto switching is disabled ([#149](https://github.com/jpanther/congo/issues/149))
+
 ## [2.0.5] - 2022-02-20
 
 ### Added
