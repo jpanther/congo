@@ -14,8 +14,12 @@
   {{ end }}
   <section>
     {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
-      <h2 class="mt-12 text-2xl font-bold first:mt-8">{{ .Key }}</h2>
-      <hr class="border-dotted border-neutral-400 w-36" />
+      {{ if $.Params.groupByYear | default ($.Site.Params.list.groupByYear | default true) }}
+        <h2 class="mt-12 text-2xl font-bold first:mt-8 text-neutral-700 dark:text-neutral-300">
+          {{ .Key }}
+        </h2>
+        <hr class="border-dotted border-neutral-400 w-36" />
+      {{ end }}
       {{ range .Pages }}
         {{ partial "article-link.html" . }}
       {{ end }}

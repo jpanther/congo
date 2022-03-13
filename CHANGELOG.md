@@ -6,6 +6,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.1.0] - 2022-03-14
+
+### Added
+
+- Simple page layout for creating full-width content ([#139](https://github.com/jpanther/congo/issues/139))
+- Portuguese (Portugal) translation ([#144](https://github.com/jpanther/congo/pull/144))
+
+### Changed
+
+- Upgrade SVG icons to FontAwesome 6:
+  - New icons for Hashnode, bug, check, comment, light bulb, list, pencil, skull, tag, and information.
+  - ⚠️ The `exclamation-triangle` icon has been renamed `triangle-exclamation`
+  - ⚠️ The `times` icon has been renamed `xmark`
+  - ⚠️ The `stackoverflow` icon has been renamed `stack-overflow`
+- Upgrade KaTeX to v0.15.3
+- Markdown images and `figure` shortcode now search the `assets/` directory if an image cannot be found in page bundle ([#126](https://github.com/jpanther/congo/issues/126))
+- Markdown images and `figure` shortcode now fallback to static assets if an image is not provided as a Hugo resource ([#126](https://github.com/jpanther/congo/issues/126))
+- Taxonomy term listings now honour the `groupByYear` parameter ([#145](https://github.com/jpanther/congo/pull/145))
+- The `alert` shortcode now allows its icon to be specified as a parameter
+
+### Fixed
+
+- Dark appearance shown even when default appearance set to light and auto switching is disabled ([#149](https://github.com/jpanther/congo/issues/149))
+
 ## [2.0.5] - 2022-02-20
 
 ### Added
@@ -184,7 +208,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - German translation ([#27](https://github.com/jpanther/congo/pull/27))
-- Brazilian Portuguese translation ([#28](https://github.com/jpanther/congo/pull/28))
+- Portuguese (Brazil) translation ([#28](https://github.com/jpanther/congo/pull/28))
 - Spanish translation ([#30](https://github.com/jpanther/congo/pull/30))
 
 ### Fixed
@@ -343,7 +367,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.0.5...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/jpanther/congo/compare/v2.0.5...v2.1.0
 [2.0.5]: https://github.com/jpanther/congo/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/jpanther/congo/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/jpanther/congo/compare/v2.0.2...v2.0.3
