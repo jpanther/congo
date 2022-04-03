@@ -2601,6 +2601,12 @@ body a, body button {
   color: rgba(var(--color-neutral-700), var(--tw-text-opacity));
 }
 
+@media print {
+  .print\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:mb-0 {
     margin-bottom: 0px;
