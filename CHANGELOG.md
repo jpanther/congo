@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.1.1] - 2022-04-03
+
+### Added
+
+- Print styles to hide unnecessary elements when printing ([#155](https://github.com/jpanther/congo/pull/155))
+- Hebrew translation ([#163](https://github.com/jpanther/congo/pull/163))
+
+### Fixed
+
+- Footer menu displays incorrectly in RTL languages ([#165](https://github.com/jpanther/congo/pull/165))
+
 ## [2.1.0] - 2022-03-14
 
 ### Added
@@ -367,7 +378,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.1.0...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.1.1...HEAD
+[2.1.1]: https://github.com/jpanther/congo/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/jpanther/congo/compare/v2.0.5...v2.1.0
 [2.0.5]: https://github.com/jpanther/congo/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/jpanther/congo/compare/v2.0.3...v2.0.4

@@ -1,4 +1,4 @@
-/*! Congo v2.1.0 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.1.1 | MIT License | https://github.com/jpanther/congo */
 
 /*! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com */
 
@@ -2601,13 +2601,15 @@ body a, body button {
   color: rgba(var(--color-neutral-700), var(--tw-text-opacity));
 }
 
+@media print {
+  .print\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:mb-0 {
     margin-bottom: 0px;
-  }
-
-  .sm\:mr-7 {
-    margin-right: 1.75rem;
   }
 
   .sm\:w-1\/2 {
@@ -2639,10 +2641,6 @@ body a, body button {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:last\:mr-0:last-child {
-    margin-right: 0px;
   }
 
   [dir="ltr"] .ltr\:sm\:mr-7 {

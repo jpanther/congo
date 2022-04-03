@@ -54,6 +54,7 @@ The theme currently supports the following languages by default:
 | :cn: Chinese                     | `zh`    |
 | :fr: French                      | `fr`    |
 | :de: German                      | `de`    |
+| :israel: Hebrew                  | `he`    |
 | :brazil: Portuguese (Brazil)     | `pt-br` |
 | :portugal: Portuguese (Portugal) | `pt-pt` |
 | :es: Spanish (Spain)             | `es`    |
