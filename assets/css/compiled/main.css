@@ -2612,10 +2612,6 @@ body a, body button {
     margin-bottom: 0px;
   }
 
-  .sm\:mr-7 {
-    margin-right: 1.75rem;
-  }
-
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -2645,10 +2641,6 @@ body a, body button {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:last\:mr-0:last-child {
-    margin-right: 0px;
   }
 
   [dir="ltr"] .ltr\:sm\:mr-7 {
