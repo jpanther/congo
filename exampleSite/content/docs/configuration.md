@@ -57,6 +57,7 @@ The theme currently supports the following languages by default:
 | :israel: Hebrew                  | `he`    |
 | :brazil: Portuguese (Brazil)     | `pt-br` |
 | :portugal: Portuguese (Portugal) | `pt-pt` |
+| :romania: Romanian               | `ro`    |
 | :es: Spanish (Spain)             | `es`    |
 | :tr: Turkish                     | `tr`    |
 
