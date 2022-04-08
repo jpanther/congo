@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Romanian translation ([#168](https://github.com/jpanther/congo/pull/168)
+- Romanian translation ([#168](https://github.com/jpanther/congo/pull/168))
 
 ### Changed
 
