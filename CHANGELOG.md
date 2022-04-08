@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Romanian translation ([#168](https://github.com/jpanther/congo/pull/168)
 
+### Changed
+
+- Upgrade to Mermaid v9.0.0
+
 ## [2.1.1] - 2022-04-03
 
 ### Added
