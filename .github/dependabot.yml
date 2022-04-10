@@ -11,6 +11,9 @@ updates:
       timezone: "Australia/Melbourne"
     commit-message:
       prefix: "📌"
+    labels:
+      - "dependencies"
+      - "npm"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -20,3 +23,6 @@ updates:
       timezone: "Australia/Melbourne"
     commit-message:
       prefix: "👷"
+    labels:
+      - "dependencies"
+      - "actions"
