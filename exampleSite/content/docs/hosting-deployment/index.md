@@ -28,6 +28,10 @@ GitHub allows hosting on [GitHub Pages](https://docs.github.com/en/pages/getting
 
 The file needs to be in YAML format, placed within the `.github/workflows/` directory of your GitHub repository and named with a `.yml` extension.
 
+{{< alert >}}
+**Important:** Ensure you set the correct branch name under `branches` and in the deploy step `if` parameter to the source branch used in your project.
+{{< /alert >}}
+
 ```yaml
 # .github/workflows/gh-pages.yml
 
@@ -36,7 +40,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main # change to the branch name for your project
+      - main
 
 jobs:
   build-deploy:
@@ -45,7 +49,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: true
           fetch-depth: 0
@@ -94,7 +98,7 @@ Then in the root of your site repository, create a `netlify.toml` file:
   TZ = "UTC"  # Set to preferred timezone
 
 [context.production.environment]
-  HUGO_VERSION = "0.87.0"
+  HUGO_VERSION = "0.96.0"
   HUGO_ENV = "production"
 ```
 
