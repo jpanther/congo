@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Hungarian translation ([#170](https://github.com/jpanther/congo/pull/170))
 
+### Fixed
+
+- Scroll to top link overlaps footer menu on mobile devices ([#172](https://github.com/jpanther/congo/issues/172))
+
 ## [2.1.2] - 2022-04-08
 
 ### Added
