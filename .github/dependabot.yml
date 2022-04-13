@@ -13,7 +13,6 @@ updates:
       prefix: "📌"
     labels:
       - "dependencies"
-      - "npm"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -25,4 +24,3 @@ updates:
       prefix: "👷"
     labels:
       - "dependencies"
-      - "actions"
