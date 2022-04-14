@@ -1,0 +1,30 @@
+name: "Close stale issues and PRs"
+on:
+  schedule:
+    - cron: "30 1 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@v5
+        with:
+          days-before-stale: 30
+          days-before-close: 14
+          stale-issue-label: "stale"
+          stale-pr-label: "stale"
+          stale-issue-message: >
+            This issue has been automatically marked as stale because it has not had any recent activity.
+
+            If you are still experiencing this issue, please review the issue history and add a reply with any requested and/or additional information in order to keep the issue open.
+
+            This issue will automactically close in 14 days if no further activity occurs.
+          stale-pr-message: >
+            This pull request has been automatically marked as stale because it has not had any recent activity.
+
+            Please review the PR history and add a reply with any requested information. If no information has been requested, it may be that this contribution does not fit with the project objectives, or does not adhere to the [contributing guidelines](https://github.com/jpanther/congo/blob/dev/CONTRIBUTING.md). If this is in error, please add a reply with further details.
+
+            This PR will automactically close in 14 days if no further activity occurs.
