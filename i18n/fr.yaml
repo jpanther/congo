@@ -3,7 +3,7 @@ article:
   date: "{{ .Date }}"
   date_updated: "Mis à jour : {{ .Date }}"
   draft: "Brouillon"
-  edit_title: "Éditer"
+  edit_title: "Modifier"
   reading_time:
     one: "{{ .Count }} min"
     other: "{{ .Count }} mins"
@@ -52,4 +52,4 @@ sharing:
   twitter: "Tweeter"
 
 shortcode:
-  recent_articles: "Articles r"
+  recent_articles: "Articles récents"
