@@ -1,4 +1,4 @@
-{{ if not .Site.IsServer }}
+{{ if hugo.IsProduction }}
   {{ with .Site.Params.fathomAnalytics.site }}
     {{ if isset $.Site.Params.fathomanalytics "domain" }}
       <script defer src="https://{{ $.Site.Params.fathomanalytics.domain }}/script.js" data-site="{{ . }}"></script>
