@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Finnish translation ([#185](https://github.com/jpanther/congo/pull/185))
+
 ### Changed
 
 - Updated French translation ([#178](https://github.com/jpanther/congo/pull/178))
