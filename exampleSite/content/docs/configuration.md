@@ -52,6 +52,7 @@ The theme currently supports the following languages by default:
 | :gb: English                     | `en`    |
 | :bangladesh: Bengali             | `bn`    |
 | :cn: Chinese                     | `zh`    |
+| :finland: Finnish                | `fi`    |
 | :fr: French                      | `fr`    |
 | :de: German                      | `de`    |
 | :israel: Hebrew                  | `he`    |
