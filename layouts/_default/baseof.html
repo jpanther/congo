@@ -26,30 +26,28 @@
       >
     </div>
     {{- partial "header.html" . -}}
-    <main id="main-content" class="relative grow">
-      {{- block "main" . }}{{- end }}
-      {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
-        <div
-          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none {{ if .Site.Menus.footer -}}
-            bottom-[-8.25rem] sm:bottom-[-8rem]
-          {{- else -}}
-            bottom-[-5.5rem]
-          {{- end }}"
-        >
-          <a
-            href="#the-top"
-            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="{{ i18n "nav.scroll_to_top_title" }}"
-            title="{{ i18n "nav.scroll_to_top_title" }}"
+    <div class="relative">
+      <main id="main-content" class="grow">
+        {{- block "main" . }}{{- end }}
+        {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
+          <div
+            class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
           >
-            &uarr;
-          </a>
-        </div>
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="{{ i18n "nav.scroll_to_top_title" }}"
+              title="{{ i18n "nav.scroll_to_top_title" }}"
+            >
+              &uarr;
+            </a>
+          </div>
+        {{ end }}
+      </main>
+      {{ if .Site.Params.enableSearch | default false }}
+        {{- partial "search.html" . -}}
       {{ end }}
-    </main>
-    {{ if .Site.Params.enableSearch | default false }}
-      {{- partial "search.html" . -}}
-    {{ end }}
-    {{- partial "footer.html" . -}}
+      {{- partial "footer.html" . -}}
+    </div>
   </body>
 </html>

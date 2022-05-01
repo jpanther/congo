@@ -17,6 +17,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgrade to Tailwind v3.0.24 ([#176](https://github.com/jpanther/congo/pull/176))
 - Upgrade to Mermaid v9.0.1 ([#183](https://github.com/jpanther/congo/pull/183))
 
+### Fixed
+
+- Scroll to top link overlaps footer menu on mobile devices when there are several links ([#172](https://github.com/jpanther/congo/issues/172))
+
 ## [2.1.3] - 2022-04-12
 
 ### Added
