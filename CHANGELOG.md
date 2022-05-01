@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
+- Code blocks are rendered incorrectly in RTL languages ([#164](https://github.com/jpanther/congo/issues/164))
 - Scroll to top link overlaps footer menu on mobile devices when there are several links ([#172](https://github.com/jpanther/congo/issues/172))
 
 ### Removed
