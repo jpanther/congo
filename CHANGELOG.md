@@ -21,6 +21,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Scroll to top link overlaps footer menu on mobile devices when there are several links ([#172](https://github.com/jpanther/congo/issues/172))
 
+### Removed
+
+- `hugo.Generator` from HTML `<head>` so that the [default Hugo generator behaviour](https://gohugo.io/getting-started/configuration/#disablehugogeneratorinject) works as expected ([#179](https://github.com/jpanther/congo/issues/179))
+
 ## [2.1.3] - 2022-04-12
 
 ### Added
