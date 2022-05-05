@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Analytics partial now checks `hugo.IsProduction` instead of `.Site.IsServer` before including scripts ([#179](https://github.com/jpanther/congo/issues/179))
 - Upgrade to Tailwind v3.0.24 ([#176](https://github.com/jpanther/congo/pull/176))
 - Upgrade to Mermaid v9.0.1 ([#183](https://github.com/jpanther/congo/pull/183))
+- Upgrade to Fuse.js v6.6.0 ([#189](https://github.com/jpanther/congo/pull/189))
 
 ### Fixed
 
