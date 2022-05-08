@@ -1,9 +1,9 @@
 article:
   anchor_label: "Ancre"
   date: "{{ .Date }}"
-  date_updated: "Mis à jour: {{ .Date }}"
+  date_updated: "Mis à jour : {{ .Date }}"
   draft: "Brouillon"
-  edit_title: "Editer"
+  edit_title: "Modifier"
   reading_time:
     one: "{{ .Count }} min"
     other: "{{ .Count }} mins"
@@ -32,16 +32,16 @@ footer:
 
 list:
   externalurl_title: "Lien d'article externe."
-  no_articles: "Il n'y a pas encore d'articles ici."
+  no_articles: "Il n'y a pas encore d'article ici."
 
 nav:
   scroll_to_top_title: "Faire défiler jusqu'au bas de la page"
   skip_to_main: "Aller au contenu"
 
 search:
-  open_button_title: "Chercher (/)"
+  open_button_title: "Rechercher (/)"
   close_button_title: "Fermer (Esc)"
-  input_placeholder: "Chercher"
+  input_placeholder: "Rechercher"
 
 sharing:
   email: "Envoyer par email"
@@ -52,4 +52,4 @@ sharing:
   twitter: "Tweeter"
 
 shortcode:
-  recent_articles: "Recent"
+  recent_articles: "Articles récents"

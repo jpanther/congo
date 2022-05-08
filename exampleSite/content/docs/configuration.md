@@ -33,7 +33,7 @@ Note that the variable names provided in this table use dot notation to simplify
 |`theme`|`"congo"`|When using Hugo Modules this config value should be removed. For all other installation types, this must be set to `congo` for the theme to function.|
 |`baseURL`|_Not set_|The URL to the root of the website.|
 |`defaultContentLanguage`|`"en"`|This value determines the default language of theme components and content. Refer to the [language and i18n](#language-and-i18n) section below for supported language codes.|
-|`enableRobotsTXT`|`true`|When enabled a `robots.txt` file will be created in the site root that allows search engines to crawl the entire site. Set to `false` if you wish to provide your own file.|
+|`enableRobotsTXT`|`true`|When enabled, a `robots.txt` file will be created in the site root that allows search engines to crawl the entire site. If you prefer to provide your own pre-made `robots.txt`, set to `false` and place your file in the `static` directory. For complete control, you may provide a [custom layout]({{< ref "content-examples#custom-layouts" >}}) to generate this file.|
 |`paginate`|`10`|The number of articles listed on each page of the article listing.|
 |`summaryLength`|`0`|The number of words that are used to generate the article summary when one is not provided in the [front matter]({{< ref "front-matter" >}}). A value of `0` will use the first sentence. This value has no effect when summaries are hidden.|
 |`outputs.home`|`["HTML", "RSS", "JSON"]`|The output formats that are generated for the site. Congo requires HTML, RSS and JSON for all theme components to work correctly.|
@@ -52,6 +52,7 @@ The theme currently supports the following languages by default:
 | :gb: English                     | `en`    |
 | :bangladesh: Bengali             | `bn`    |
 | :cn: Chinese                     | `zh`    |
+| :finland: Finnish                | `fi`    |
 | :fr: French                      | `fr`    |
 | :de: German                      | `de`    |
 | :israel: Hebrew                  | `he`    |
@@ -116,7 +117,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`autoSwitchAppearance`|`true`|Whether the theme appearance automatically switches based upon the visitor's operating system preference. Set to `false` to force the site to always use the `defaultAppearance`.|
 |`showAppearanceSwitcher`|`false`|Whether or not to show the appearance switcher in the site footer. The browser's local storage is used to persist the visitor's preference.|
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
-|`enableCodeCopy`|`false`|Whether copy-to-clipboard buttons are enabled for `<code>` blocks.|
+|`enableCodeCopy`|`false`|Whether copy-to-clipboard buttons are enabled for `<code>` blocks. The `highlight.noClasses` parameter must be set to `false` for code copy to function correctly. Read more about [other configuration files](#other-configuration-files) below.|
 |`logo`|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
 |`mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`robots`|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
@@ -152,3 +153,9 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`verification.pinterest`|_Not set_|The site verification string provided by Pinterest to be included in the site metadata.|
 |`verification.yandex`|_Not set_|The site verification string provided by Yandex to be included in the site metadata.|
 <!-- prettier-ignore-end -->
+
+## Other configuration files
+
+The theme also includes a `markup.toml` configuration file. This file contains some important parameters that ensure that Hugo is correctly configured to generate sites built with Congo.
+
+Always ensure this file is present in the config directory and that the required values are set. Failure to do so may cause certain features to fucntion incorrectly and could result in unintended behaviour.
