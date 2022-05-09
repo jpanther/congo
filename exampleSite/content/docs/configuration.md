@@ -88,6 +88,7 @@ The default file can be used as a template to create additional languages, or re
 |`title`|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
 |`description`|_Not set_|The website description. This will be used in the site metadata.|
 |`copyright`|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.|
+|`attribution`|`true`|Hugo theme information message to be displayed in the site footer under copyright message. If none is provided, Congo will automatically generate a theme attribution message. See related file `layouts/partials/footer.html` for more information.|
 |`author.name`|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
 |`author.image`|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `assets/` folder.|
 |`author.headline`|_Not set_|A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.|
