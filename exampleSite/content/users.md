@@ -29,5 +29,6 @@ Real websites that are built with Congo.
 | [jeremic.ca](https://jeremic.ca)                                       | Personal site and Blog       |
 | [rohn.tech](https://rohn.tech)                                         | Personal site                |
 | [klimafreundlicher-kochen.de](https://www.klimafreundlicher-kochen.de) | Food blog (in German)        |
+| [seyslee.github.io](https://seyslee.github.io)                         | Tech blog (in Korean)        |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
