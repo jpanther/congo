@@ -26,7 +26,7 @@
       >
     </div>
     {{- partial "header.html" . -}}
-    <div class="relative">
+    <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
         {{- block "main" . }}{{- end }}
         {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
@@ -44,10 +44,10 @@
           </div>
         {{ end }}
       </main>
+      {{- partial "footer.html" . -}}
       {{ if .Site.Params.enableSearch | default false }}
         {{- partial "search.html" . -}}
       {{ end }}
-      {{- partial "footer.html" . -}}
     </div>
   </body>
 </html>
