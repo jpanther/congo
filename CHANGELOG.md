@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.2.1] - 2022-05-25
+
+### Changed
+
+- Upgrade to Mermaid v9.1.1 ([#194](https://github.com/jpanther/congo/pull/194))
+- Upgrade to Fuse.js v6.6.2 ([#195](https://github.com/jpanther/congo/pull/195))
+- Upgrade KaTeX to v0.15.6 ([#202](https://github.com/jpanther/congo/pull/202))
+
+### Fixed
+
+- Main content area doesn't grow to window height ([#201](https://github.com/jpanther/congo/issues/201))
+
 ## [2.2.0] - 2022-05-09
 
 ### Added
@@ -421,7 +433,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.2.0...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.2.1...HEAD
+[2.2.1]: https://github.com/jpanther/congo/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/jpanther/congo/compare/v2.1.3...v2.2.0
 [2.1.3]: https://github.com/jpanther/congo/compare/v2.1.2...v2.1.3
 [2.1.2]: https://github.com/jpanther/congo/compare/v2.1.1...v2.1.2

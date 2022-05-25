@@ -19,7 +19,6 @@ Real websites that are built with Congo.
 | ---------------------------------------------------------------------- | ---------------------------- |
 | [jamespanther.com](https://jamespanther.com)                           | Personal site - Theme author |
 | [srisco.dev](https://srisco.dev)                                       | Personal site                |
-| [theophile-roos.fr](https://theophile-roos.fr)                         | Personal site                |
 | [antoinesoetewey.com](https://antoinesoetewey.com/)                    | Personal site                |
 | [leif.io](https://leif.io/)                                            | Personal site and Tech blog  |
 | [dr460nf1r3.org](https://dr460nf1r3.org/)                              | Personal site and Blog       |
@@ -29,5 +28,7 @@ Real websites that are built with Congo.
 | [jeremic.ca](https://jeremic.ca)                                       | Personal site and Blog       |
 | [rohn.tech](https://rohn.tech)                                         | Personal site                |
 | [klimafreundlicher-kochen.de](https://www.klimafreundlicher-kochen.de) | Food blog (in German)        |
+| [seyslee.github.io](https://seyslee.github.io)                         | Tech blog (in Korean)        |
+| [datanalyze.be/](https://datanalyze.be/)                               | Professional site            |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
