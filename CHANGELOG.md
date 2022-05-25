@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Upgrade to Mermaid v9.1.1 ([#194](https://github.com/jpanther/congo/pull/194))
 - Upgrade to Fuse.js v6.6.2 ([#195](https://github.com/jpanther/congo/pull/195))
+- Upgrade KaTeX to v0.15.6 ([#202](https://github.com/jpanther/congo/pull/202))
 
 ### Fixed
 
