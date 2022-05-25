@@ -6,13 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-### Fixed
-
-- Main content area doesn't grow to window height ([#201](https://github.com/jpanther/congo/issues/201))
-
 ### Changed
 
 - Upgrade to Mermaid v9.1.1 ([#194](https://github.com/jpanther/congo/pull/194))
+- Upgrade to Fuse.js v6.6.2 ([#195](https://github.com/jpanther/congo/pull/195))
+
+### Fixed
+
+- Main content area doesn't grow to window height ([#201](https://github.com/jpanther/congo/issues/201))
 
 ## [2.2.0] - 2022-05-09
 
