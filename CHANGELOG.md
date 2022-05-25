@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Main content area doesn't grow to window height ([#201](https://github.com/jpanther/congo/issues/201))
 
+### Changed
+
+- Upgrade to Mermaid v9.1.1 ([#194](https://github.com/jpanther/congo/pull/194))
+
 ## [2.2.0] - 2022-05-09
 
 ### Added
