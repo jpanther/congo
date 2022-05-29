@@ -20,7 +20,7 @@ Before creating any content, there are a few things you should set for a new ins
 ```toml
 # config/_default/config.toml
 
-baseURL = "https://your_domain.com"
+baseURL = "https://your_domain.com/"
 languageCode = "en"
 ```
 
