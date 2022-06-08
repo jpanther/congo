@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Breadcrumb display can now be can now be specificed in front matter for articles and list pages
+- Italian translation ([#209](https://github.com/jpanther/congo/pull/209))
 
 ## [2.2.1] - 2022-05-25
 
