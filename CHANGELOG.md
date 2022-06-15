@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Upgrade to Chart.js v3.8.0 ([#204](https://github.com/jpanther/congo/pull/204))
+- Upgrade to KaTeX v0.16.0 ([#208](https://github.com/jpanther/congo/pull/208))
 
 ## [2.2.1] - 2022-05-25
 
