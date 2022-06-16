@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.2.2] - 2022-06-16
+
 ### Added
 
 - Breadcrumb display can now be can now be specificed in front matter for articles and list pages
@@ -444,7 +446,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.2.1...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.2.2...HEAD
+[2.2.2]: https://github.com/jpanther/congo/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/jpanther/congo/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/jpanther/congo/compare/v2.1.3...v2.2.0
 [2.1.3]: https://github.com/jpanther/congo/compare/v2.1.2...v2.1.3
