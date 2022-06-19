@@ -100,6 +100,9 @@ Then in the root of your site repository, create a `netlify.toml` file:
 [context.production.environment]
   HUGO_VERSION = "0.100.2"
   HUGO_ENV = "production"
+  
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.100.2"
 ```
 
 This configuration assumes you are deploying Congo as a Hugo module. If you have installed the theme using another method, change the build command to simply `hugo --gc --minify -b $URL`.
