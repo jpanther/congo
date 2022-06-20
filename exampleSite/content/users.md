@@ -31,5 +31,6 @@ Real websites that are built with Congo.
 | [seyslee.github.io](https://seyslee.github.io)                         | Tech blog (in Korean)        |
 | [datanalyze.be](https://datanalyze.be/)                                | Professional site            |
 | [sneaky-potato.github.io](https://sneaky-potato.github.io/)            | Professional site and Blog   |
+| [kelset.dev](https://kelset.dev)                                       | Personal site                |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
