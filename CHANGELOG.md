@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Search not working when `baseURL` does not end with a forward slash ([#224](https://github.com/jpanther/congo/pull/224))
+- Author `headline` parameter not correctly displaying Markdown or Emoji content
 
 ## [2.2.2] - 2022-06-16
 
