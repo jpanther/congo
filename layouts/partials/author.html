@@ -8,7 +8,7 @@
           class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
           width="96"
           height="96"
-          alt="Author"
+          alt="{{ $.Site.Author.name | default "Author" }}"
           src="{{ $authorImage.RelPermalink }}"
         />
       {{ end }}

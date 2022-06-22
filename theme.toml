@@ -3,7 +3,7 @@
 name = "congo"
 license = "MIT"
 licenselink = "https://github.com/jpanther/congo/blob/master/LICENSE"
-description = "A simple, lightweight theme for Hugo built with Tailwind CSS."
+description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
 
 homepage = "https://github.com/jpanther/congo/"
 demosite = "https://jpanther.github.io/congo/"

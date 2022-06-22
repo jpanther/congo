@@ -1,8 +1,7 @@
 {
   "name": "hugo-congo-theme",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Congo theme for Hugo",
-  "main": "index.js",
   "scripts": {
     "preinstall": "rimraf assets/vendor",
     "postinstall": "vendor-copy",
@@ -14,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpanther/congo.git"
+    "url": "https://github.com/jpanther/congo.git"
   },
   "keywords": [
     "hugo",
@@ -23,6 +22,7 @@
     "dark-mode"
   ],
   "author": "James Panther",
+  "funding": "https://github.com/sponsors/jpanther",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jpanther/congo/issues"
@@ -34,7 +34,7 @@
     "fuse.js": "^6.6.2",
     "katex": "^0.16.0",
     "mermaid": "^9.1.2",
-    "prettier": "^2.7.0",
+    "prettier": "^2.7.1",
     "prettier-plugin-go-template": "^0.0.13",
     "rimraf": "^3.0.2",
     "tailwindcss": "^3.0.24",
