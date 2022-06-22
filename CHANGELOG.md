@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Profile image alt text now uses author name when available
+
 ### Fixed
 
 - Search not working when `baseURL` does not end with a forward slash ([#224](https://github.com/jpanther/congo/pull/224))
