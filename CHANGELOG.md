@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
+
 ## [2.2.3] - 2022-06-22
 
 ### Changed
