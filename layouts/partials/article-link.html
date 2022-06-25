@@ -1,5 +1,5 @@
 <article>
-  <h3 class="flex items-center mt-6 text-xl font-semibold">
+  <h3 class="mt-6 text-xl font-semibold">
     {{ with .Params.externalUrl }}
       <a
         class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
@@ -9,10 +9,11 @@
         >{{ $.Title | emojify }}</a
       >
       <span
-        class="-mt-2 text-xs cursor-default text-neutral-400 dark:text-neutral-500"
+        class="absolute mt-0 ltr:ml-[0.1rem] rtl:mr-[0.1rem] text-xs cursor-default text-neutral-400 dark:text-neutral-500"
         title="{{ i18n "list.externalurl_title" }}"
       >
-        &#8599;
+        <span class="rtl:hidden">&#8599;</span>
+        <span class="ltr:hidden">&#8598;</span>
       </span>
     {{ else }}
       <a

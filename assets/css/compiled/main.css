@@ -1776,10 +1776,6 @@ body button {
   margin-top: 1.5rem;
 }
 
-.-mt-2 {
-  margin-top: -0.5rem;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -2530,6 +2526,10 @@ body button {
   left: -1.5rem;
 }
 
+[dir="ltr"] .ltr\:ml-\[0\.1rem\] {
+  margin-left: 0.1rem;
+}
+
 [dir="ltr"] .ltr\:ml-2 {
   margin-left: 0.5rem;
 }
@@ -2588,6 +2588,10 @@ body button {
 
 [dir="rtl"] .rtl\:-right-6 {
   right: -1.5rem;
+}
+
+[dir="rtl"] .rtl\:mr-\[0\.1rem\] {
+  margin-right: 0.1rem;
 }
 
 [dir="rtl"] .rtl\:mr-2 {
