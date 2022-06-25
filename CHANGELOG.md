@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Search link does not appear in header if main menu has no items to display
 - Search only returns results in the primary language when multiple languages are available ([#229](https://github.com/jpanther/congo/issues/229))
+- Scroll to top misaligned with the footer at small viewport heights
 - Link to homepage would be incorrect in some deployments if `baseURL` contained sub-directories in the path
 
 ## [2.2.3] - 2022-06-22
