@@ -2059,14 +2059,14 @@ body button {
   border-color: rgba(var(--color-neutral-400), var(--tw-border-opacity));
 }
 
-.border-neutral-200 {
-  --tw-border-opacity: 1;
-  border-color: rgba(var(--color-neutral-200), var(--tw-border-opacity));
-}
-
 .border-neutral-300 {
   --tw-border-opacity: 1;
   border-color: rgba(var(--color-neutral-300), var(--tw-border-opacity));
+}
+
+.border-neutral-200 {
+  --tw-border-opacity: 1;
+  border-color: rgba(var(--color-neutral-200), var(--tw-border-opacity));
 }
 
 .border-primary-400 {
@@ -2203,12 +2203,12 @@ body button {
   padding-top: 2rem;
 }
 
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .pb-4 {

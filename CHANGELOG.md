@@ -8,11 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Front matter support for showing or hiding comments on a per article basis
 - `showCopyright` and `showThemeAttribution` parameters that allow more control over how the site footer is displayed
 
 ### Changed
 
 - Search will now return results for all page types, including lists and taxonomies
+- Comments partials are now better considered within the page layout
 - Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
 
 ### Fixed
