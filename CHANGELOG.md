@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Search will now return results for all page types, including lists and taxonomies
 - Comments partials are now better considered within the page layout
+- Reduced whitespace at the top of the main content block
 - Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
 
 ### Fixed

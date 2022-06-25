@@ -1046,6 +1046,12 @@ body button {
   padding-left: 0px;
 }
 
+/* Adjust first child within prose */
+
+.prose div.min-w-0.max-w-prose > *:first-child {
+  margin-top: 0.75rem;
+}
+
 /* Table of Contents */
 
 .toc ul, 
@@ -2896,10 +2902,6 @@ body button {
 
   .lg\:order-last {
     order: 9999;
-  }
-
-  .lg\:mt-3 {
-    margin-top: 0.75rem;
   }
 
   .lg\:hidden {
