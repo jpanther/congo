@@ -18,20 +18,22 @@
       </ul>
     </nav>
   {{ end }}
-  <div class="flex justify-between">
+  <div class="flex items-center justify-between">
     <div>
       {{/* Copyright */}}
-      <p class="text-sm text-neutral-500 dark:text-neutral-400">
-        {{- with .Site.Params.copyright }}
-          {{ . | emojify | markdownify }}
-        {{- else }}
-          &copy;
-          {{ now.Format "2006" }}
-          {{ .Site.Author.name | markdownify | emojify }}
-        {{- end }}
-      </p>
+      {{ if .Site.Params.showCopyright | default true }}
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          {{- with .Site.Params.copyright }}
+            {{ . | emojify | markdownify }}
+          {{- else }}
+            &copy;
+            {{ now.Format "2006" }}
+            {{ .Site.Author.name | markdownify | emojify }}
+          {{- end }}
+        </p>
+      {{ end }}
       {{/* Theme attribution */}}
-      {{ if .Site.Params.attribution | default true }}
+      {{ if .Site.Params.showThemeAttribution | default true }}
         <p class="text-xs text-neutral-500 dark:text-neutral-400">
           {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
             href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`

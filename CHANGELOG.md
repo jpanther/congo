@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- `showCopyright` and `showThemeAttribution` parameters that allow more control over how the site footer is displayed
+
 ### Changed
 
 - Search will now return results for all page types, including lists and taxonomies
