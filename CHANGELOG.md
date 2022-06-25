@@ -8,12 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- Site search will now return results for all page types, including lists and taxonomies
+- Search will now return results for all page types, including lists and taxonomies
 - Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
 
 ### Fixed
 
-- Search would not appear in header if main menu had no links to display
+- Search link does not appear in header if main menu has no items to display
+- Search only returns results in the primary language when multiple languages are available ([#229](https://github.com/jpanther/congo/issues/229))
 
 ## [2.2.3] - 2022-06-22
 
