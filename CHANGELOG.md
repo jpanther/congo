@@ -8,14 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Front matter support for showing or hiding comments on a per article basis
-- `showCopyright` and `showThemeAttribution` parameters that allow more control over how the site footer is displayed
+- Front matter support for showing or hiding comments on a per article basis ([#207](https://github.com/jpanther/congo/discussions/207))
+- `showCopyright` and `showThemeAttribution` parameters that allow more control over how the site footer is displayed ([#192](https://github.com/jpanther/congo/discussions/192))
 
 ### Changed
 
 - Search will now return results for all page types, including lists and taxonomies
 - Comments partials are now better considered within the page layout
-- Reduced whitespace at the top of the main content block
+- Reduced whitespace at the top of the main content block ([#226](https://github.com/jpanther/congo/discussions/226))
 - Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
 
 ### Fixed
@@ -125,7 +125,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Upgrade SVG icons to FontAwesome 6:
-  - New icons for Hashnode, bug, check, comment, light bulb, list, pencil, skull, tag, and information.
+  - New icons for Hashnode, bug, check, comment, light bulb, list, pencil, skull, tag, and information. ([#136](https://github.com/jpanther/congo/discussions/136))
   - ⚠️ The `exclamation-triangle` icon has been renamed `triangle-exclamation`
   - ⚠️ The `times` icon has been renamed `xmark`
   - ⚠️ The `stackoverflow` icon has been renamed `stack-overflow`
@@ -210,7 +210,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Site search powered by Fuse.js
 - Automatic Markdown image resizing and srcset generation
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
-- Tables of contents on article pages
+- Tables of contents on article pages ([#47](https://github.com/jpanther/congo/discussions/47))
 - Code copy buttons in article content
 - Taxonomy and term listings now support Markdown content
 - Taxonomies on article and list pages
