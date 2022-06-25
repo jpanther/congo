@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Site search will now return results for all page types, including lists and taxonomies
 - Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
 
 ### Fixed
