@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
 
+### Fixed
+
+- Search would not appear in header if main menu had no links to display
+
 ## [2.2.3] - 2022-06-22
 
 ### Changed
