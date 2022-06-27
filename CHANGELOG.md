@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
+- Hugo v0.101.0 breaks the link to the homepage ([#230](https://github.com/jpanther/congo/issues/230))
 - Search link does not appear in header if main menu has no items to display
 - Search only returns results in the primary language when multiple languages are available ([#229](https://github.com/jpanther/congo/issues/229))
 - Arrow on external article links not aligned correctly when title wraps onto multiple lines
