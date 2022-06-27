@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.3.0] - 2022-06-27
+
 ### Added
 
 - Header layouts for selecting a preferred header style
@@ -483,7 +485,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.2.3...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.3.0...HEAD
+[2.3.0]: https://github.com/jpanther/congo/compare/v2.2.3...v2.3.0
 [2.2.3]: https://github.com/jpanther/congo/compare/v2.2.2...v2.2.3
 [2.2.2]: https://github.com/jpanther/congo/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/jpanther/congo/compare/v2.2.0...v2.2.1
