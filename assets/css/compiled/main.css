@@ -1018,8 +1018,7 @@ body button {
 /* Hamburger menu */
 
 body:has(#menu-controller:checked) {
-  position: fixed;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 #menu-button:has(#menu-controller:checked) {
@@ -1770,11 +1769,6 @@ body:has(#menu-controller:checked) {
 .my-0 {
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .mb-3 {
