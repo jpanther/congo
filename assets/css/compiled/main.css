@@ -1015,6 +1015,22 @@ body button {
   display: none;
 }
 
+/* Hamburger menu */
+
+body:has(#menu-controller:checked) {
+  position: fixed;
+  overflow-y: scroll;
+}
+
+#menu-button:has(#menu-controller:checked) {
+  visibility: hidden;
+}
+
+#menu-controller:checked ~ #menu-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* RTL support */
 
 [dir="rtl"] .prose blockquote {
@@ -1706,6 +1722,14 @@ body button {
   z-index: 10;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
 .order-first {
   order: -9999;
 }
@@ -1746,6 +1770,11 @@ body button {
 .my-0 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mb-3 {
@@ -2015,6 +2044,10 @@ body button {
   overflow: hidden;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -2116,6 +2149,10 @@ body button {
 .bg-primary-600 {
   --tw-bg-opacity: 1;
   background-color: rgba(var(--color-primary-600), var(--tw-bg-opacity));
+}
+
+.bg-neutral-100\/50 {
+  background-color: rgba(var(--color-neutral-100), 0.5);
 }
 
 .object-scale-down {
@@ -2847,6 +2884,10 @@ body button {
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .sm\:text-lg {

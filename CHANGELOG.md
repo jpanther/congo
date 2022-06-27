@@ -8,8 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Header layouts for selecting a preferred header style
+- Hamburger menu header layout with popover main menu ([#167](https://github.com/jpanther/congo/discussions/167), [#88](https://github.com/jpanther/congo/discussions/88), [#43](https://github.com/jpanther/congo/discussions/43), [#29](https://github.com/jpanther/congo/discussions/29))
 - Front matter support for showing or hiding comments on a per article basis ([#207](https://github.com/jpanther/congo/discussions/207))
 - `showCopyright` and `showThemeAttribution` parameters that allow more control over how the site footer is displayed ([#192](https://github.com/jpanther/congo/discussions/192))
+- `bars` SVG icon
 
 ### Changed
 
