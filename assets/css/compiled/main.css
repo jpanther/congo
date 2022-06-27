@@ -1932,12 +1932,12 @@ body button {
   max-width: 65ch;
 }
 
-.max-w-\[10rem\] {
-  max-width: 10rem;
-}
-
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-\[10rem\] {
+  max-width: 10rem;
 }
 
 .flex-none {
@@ -2181,11 +2181,6 @@ body button {
   padding-bottom: 2.5rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2199,6 +2194,11 @@ body button {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pt-8 {
@@ -2227,6 +2227,10 @@ body button {
 
 .text-right {
   text-align: right;
+}
+
+.align-top {
+  vertical-align: top;
 }
 
 .align-text-bottom {
@@ -2526,10 +2530,6 @@ body button {
   left: -1.5rem;
 }
 
-[dir="ltr"] .ltr\:ml-\[0\.1rem\] {
-  margin-left: 0.1rem;
-}
-
 [dir="ltr"] .ltr\:ml-2 {
   margin-left: 0.5rem;
 }
@@ -2588,10 +2588,6 @@ body button {
 
 [dir="rtl"] .rtl\:-right-6 {
   right: -1.5rem;
-}
-
-[dir="rtl"] .rtl\:mr-\[0\.1rem\] {
-  margin-right: 0.1rem;
 }
 
 [dir="rtl"] .rtl\:mr-2 {
@@ -2837,10 +2833,6 @@ body button {
 
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:items-center {
-    align-items: center;
   }
 
   .sm\:p-6 {
