@@ -1,3 +1,4 @@
+{{- partial "partials/functions/warnings.html" .Site -}}
 <!DOCTYPE html>
 <html
   lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default "en") }}
@@ -25,13 +26,18 @@
         >{{ i18n "nav.skip_to_main" }}</a
       >
     </div>
-    {{- partial "header.html" . -}}
+    {{ $header := print "partials/header/" .Site.Params.header.layout ".html" }}
+    {{ if templates.Exists $header }}
+      {{ partial $header . }}
+    {{ else }}
+      {{ partial "partials/header/basic.html" . }}
+    {{ end }}
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
-        {{- block "main" . }}{{- end }}
-        {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
+        {{ block "main" . }}{{ end }}
+        {{ if and (.Site.Params.footer.showScrollToTop | default true) (gt .WordCount 200) }}
           <div
-            class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
           >
             <a
               href="#the-top"

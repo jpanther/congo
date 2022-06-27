@@ -19,6 +19,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | -------------------- | --------------------------------- |
 | amazon               | {{< icon amazon >}}               |
 | apple                | {{< icon apple >}}                |
+| bars                 | {{< icon bars >}}                 |
 | blogger              | {{< icon blogger >}}              |
 | bug                  | {{< icon bug >}}                  |
 | check                | {{< icon check >}}                |

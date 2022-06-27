@@ -8,14 +8,21 @@
 colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
-showAppearanceSwitcher = false
 
 enableSearch = false
 enableCodeCopy = false
 
 # mainSections = ["section1", "section2"]
 # robots = ""
-showScrollToTop = true
+
+[header]
+  layout = "basic" # valid options: basic, hamburger, custom
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = false
+  showScrollToTop = true
 
 [homepage]
   layout = "page" # valid options: page, profile, custom
@@ -37,6 +44,7 @@ showScrollToTop = true
   showTableOfContents = false
   showTaxonomies = false
   showWordCount = false
+  showComments = false
   # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
 
 [list]

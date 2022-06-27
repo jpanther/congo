@@ -35,6 +35,7 @@ Front matter parameter default values are inherited from the theme's [base confi
 |`showTaxonomies`|`article.showTaxonomies`|Whether or not the taxonomies that relate to this article are displayed.|
 |`showTableOfContents`|`article.showTableOfContents`|Whether or not the table of contents is displayed on this article.|
 |`showWordCount`|`article.showWordCount`|Whether or not the article word count is displayed.|
+|`showComments`|`article.showComments`|Whether or not the [comments partial]({{< ref "partials#comments" >}}) is included after the article footer.|
 |`showSummary`|`list.showSummary`|Whether or not the article summary should be displayed on list pages.|
 |`summary`|Auto generated using `summaryLength` (see [site configuration]({{< ref "configuration#site-configuration" >}}))|When `showSummary` is enabled, this is the Markdown string to be used as the summary for this article.|
 |`xml`|`true` unless excluded by `sitemap.excludedKinds`|Whether or not this article is included in the generated `/sitemap.xml` file.|

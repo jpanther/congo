@@ -6,6 +6,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.3.0] - 2022-06-27
+
+### Added
+
+- Header layouts for selecting a preferred header style
+- Hamburger menu header layout with popover main menu ([#167](https://github.com/jpanther/congo/discussions/167), [#88](https://github.com/jpanther/congo/discussions/88), [#43](https://github.com/jpanther/congo/discussions/43), [#29](https://github.com/jpanther/congo/discussions/29))
+- Front matter support for showing or hiding comments on a per article basis ([#207](https://github.com/jpanther/congo/discussions/207))
+- `showCopyright` and `showThemeAttribution` parameters that allow more control over how the site footer is displayed ([#192](https://github.com/jpanther/congo/discussions/192))
+- `bars` SVG icon
+
+### Changed
+
+- ⚠️ Footer configuration parameters are now in their own `footer` sub-group
+- Search will now return results for all page types, including lists and taxonomies
+- Comments partials are now better considered within the page layout
+- Reduced whitespace at the top of the main content block ([#226](https://github.com/jpanther/congo/discussions/226))
+- Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
+
+### Fixed
+
+- Hugo v0.101.0 breaks the link to the homepage ([#230](https://github.com/jpanther/congo/issues/230))
+- Search link does not appear in header if main menu has no items to display
+- Search only returns results in the primary language when multiple languages are available ([#229](https://github.com/jpanther/congo/issues/229))
+- Arrow on external article links not aligned correctly when title wraps onto multiple lines
+- Arrow on external article links points the wrong direction for RTL languages
+- Scroll to top misaligned with the footer at small viewport heights
+- Link to homepage would be incorrect in some deployments if `baseURL` contained sub-directories in the path
+
 ## [2.2.3] - 2022-06-22
 
 ### Changed
@@ -106,7 +134,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Upgrade SVG icons to FontAwesome 6:
-  - New icons for Hashnode, bug, check, comment, light bulb, list, pencil, skull, tag, and information.
+  - New icons for Hashnode, bug, check, comment, light bulb, list, pencil, skull, tag, and information. ([#136](https://github.com/jpanther/congo/discussions/136))
   - ⚠️ The `exclamation-triangle` icon has been renamed `triangle-exclamation`
   - ⚠️ The `times` icon has been renamed `xmark`
   - ⚠️ The `stackoverflow` icon has been renamed `stack-overflow`
@@ -191,7 +219,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Site search powered by Fuse.js
 - Automatic Markdown image resizing and srcset generation
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
-- Tables of contents on article pages
+- Tables of contents on article pages ([#47](https://github.com/jpanther/congo/discussions/47))
 - Code copy buttons in article content
 - Taxonomy and term listings now support Markdown content
 - Taxonomies on article and list pages
@@ -457,7 +485,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.2.3...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.3.0...HEAD
+[2.3.0]: https://github.com/jpanther/congo/compare/v2.2.3...v2.3.0
 [2.2.3]: https://github.com/jpanther/congo/compare/v2.2.2...v2.2.3
 [2.2.2]: https://github.com/jpanther/congo/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/jpanther/congo/compare/v2.2.0...v2.2.1

@@ -1,4 +1,4 @@
-/*! Congo v2.2.3 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.3.0 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
@@ -21,6 +21,17 @@ body button {
   @apply hidden;
 }
 
+/* Hamburger menu */
+body:has(#menu-controller:checked) {
+  @apply fixed overflow-y-scroll;
+}
+#menu-button:has(#menu-controller:checked) {
+  @apply invisible;
+}
+#menu-controller:checked ~ #menu-wrapper {
+  @apply visible opacity-100;
+}
+
 /* RTL support */
 .prose blockquote {
   @apply rtl:pr-4 rtl:border-l-0 rtl:border-r-4;
@@ -40,6 +51,11 @@ body button {
 .prose thead td:last-child,
 .prose thead th:last-child {
   @apply rtl:pl-0;
+}
+
+/* Adjust first child within prose */
+.prose div.min-w-0.max-w-prose > *:first-child {
+  @apply mt-3;
 }
 
 /* Table of Contents */
