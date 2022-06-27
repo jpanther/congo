@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- ⚠️ Footer configuration parameters are now in their own `footer` sub-group
 - Search will now return results for all page types, including lists and taxonomies
 - Comments partials are now better considered within the page layout
 - Reduced whitespace at the top of the main content block ([#226](https://github.com/jpanther/congo/discussions/226))

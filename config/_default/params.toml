@@ -8,16 +8,18 @@
 colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
-showAppearanceSwitcher = false
-showCopyright = true
-showThemeAttribution = true
-showScrollToTop = true
 
 enableSearch = false
 enableCodeCopy = false
 
 # mainSections = ["section1", "section2"]
 # robots = ""
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = false
+  showScrollToTop = true
 
 [homepage]
   layout = "page" # valid options: page, profile, custom
