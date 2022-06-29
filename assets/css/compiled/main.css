@@ -2935,6 +2935,10 @@ body:has(#menu-controller:checked) {
     order: 9999;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
   }
