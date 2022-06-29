@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Japanese translation ([#234](https://github.com/jpanther/congo/pull/234))
 
+### Changed
+
+- Upgrade to Mermaid v9.1.3
+
 ### Fixed
 
 - Main content misaligned when hamburger menu is opened at large viewport sizes
