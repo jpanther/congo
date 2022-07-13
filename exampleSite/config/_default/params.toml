@@ -16,7 +16,7 @@ mainSections = ["samples"]
 # robots = ""
 
 [header]
-  layout = "basic" # valid options: basic, hamburger, custom
+  layout = "custom" # valid options: basic, hamburger, custom
 
 [footer]
   showCopyright = true
