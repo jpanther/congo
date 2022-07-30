@@ -32,5 +32,9 @@ Real websites that are built with Congo.
 | [datanalyze.be](https://datanalyze.be/)                                | Professional site            |
 | [sneaky-potato.github.io](https://sneaky-potato.github.io/)            | Professional site and Blog   |
 | [kelset.dev](https://kelset.dev)                                       | Personal site                |
+| [docteurelsavancaster.com](https://docteurelsavancaster.com/)          | Professional site            |
+| [ruihao-li.github.io](https://ruihao-li.github.io/)                    | Personal site and Blog       |
+| [phalanxhead.dev](https://phalanxhead.dev)                             | Personal site and Blog       |
+| [Bible Multi Apps](https://hotlittlewhitedog.gitlab.io/biblemulti)     | Personal site and Blog       |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).

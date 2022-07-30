@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.3.1] - 2022-07-30
+
+### Added
+
+- Japanese translation ([#234](https://github.com/jpanther/congo/pull/234))
+
+### Changed
+
+- Upgrade to Mermaid v9.1.3 ([#233](https://github.com/jpanther/congo/pull/233))
+- Upgrade to Tailwind v3.1.6 ([#245](https://github.com/jpanther/congo/pull/245))
+- Upgrade to Typography v0.5.4 ([#246](https://github.com/jpanther/congo/pull/246))
+- Upgrade to Chart.js v3.8.2 ([#247](https://github.com/jpanther/congo/pull/247))
+
+### Fixed
+
+- Main content misaligned when hamburger menu is opened at large viewport sizes
+
 ## [2.3.0] - 2022-06-27
 
 ### Added
@@ -485,7 +502,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.3.0...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.3.1...HEAD
+[2.3.1]: https://github.com/jpanther/congo/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/jpanther/congo/compare/v2.2.3...v2.3.0
 [2.2.3]: https://github.com/jpanther/congo/compare/v2.2.2...v2.2.3
 [2.2.2]: https://github.com/jpanther/congo/compare/v2.2.1...v2.2.2

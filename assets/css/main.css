@@ -1,4 +1,4 @@
-/*! Congo v2.3.0 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.3.1 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
@@ -23,7 +23,7 @@ body button {
 
 /* Hamburger menu */
 body:has(#menu-controller:checked) {
-  @apply fixed overflow-y-scroll;
+  @apply overflow-y-hidden;
 }
 #menu-button:has(#menu-controller:checked) {
   @apply invisible;
