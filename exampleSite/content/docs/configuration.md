@@ -47,23 +47,24 @@ Congo is optimised for full multilingual websites and theme assets are translate
 
 The theme currently supports the following languages by default:
 
-| Language                         | Code    |
-| -------------------------------- | ------- |
-| :gb: English                     | `en`    |
-| :bangladesh: Bengali             | `bn`    |
-| :cn: Chinese                     | `zh`    |
-| :finland: Finnish                | `fi`    |
-| :fr: French                      | `fr`    |
-| :de: German                      | `de`    |
-| :israel: Hebrew                  | `he`    |
-| :hungary: Hungarian              | `hu`    |
-| :it: Italian                     | `it`    |
-| :jp: Japanese                    | `ja`    |
-| :brazil: Portuguese (Brazil)     | `pt-br` |
-| :portugal: Portuguese (Portugal) | `pt-pt` |
-| :romania: Romanian               | `ro`    |
-| :es: Spanish (Spain)             | `es`    |
-| :tr: Turkish                     | `tr`    |
+| Language                               | Code    |
+| -------------------------------------- | ------- |
+| :gb: English                           | `en`    |
+| :bangladesh: Bengali                   | `bn`    |
+| :cn: Simplified Chinese (China)        | `zh-cn` |
+| :taiwan: Traditional Chinese (Taiwan)  | `zh-tw` |
+| :finland: Finnish                      | `fi`    |
+| :fr: French                            | `fr`    |
+| :de: German                            | `de`    |
+| :israel: Hebrew                        | `he`    |
+| :hungary: Hungarian                    | `hu`    |
+| :it: Italian                           | `it`    |
+| :jp: Japanese                          | `ja`    |
+| :brazil: Portuguese (Brazil)           | `pt-br` |
+| :portugal: Portuguese (Portugal)       | `pt-pt` |
+| :romania: Romanian                     | `ro`    |
+| :es: Spanish (Spain)                   | `es`    |
+| :tr: Turkish                           | `tr`    |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
