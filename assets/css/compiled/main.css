@@ -2894,8 +2894,8 @@ body:has(#menu-controller:checked) {
   background-color: rgba(var(--color-secondary-400), 1);
 }
 
-.dark .dark\:inline {
-  display: inline;
+.dark .dark\:flex {
+  display: flex;
 }
 
 .dark .dark\:hidden {
