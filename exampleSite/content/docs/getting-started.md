@@ -115,7 +115,7 @@ It's important to have a firm grasp of how Hugo expects content to be organised 
 
 Congo is also flexible when it comes to taxonomies. Some people prefer to use _tags_ and _categories_ to group their content, others prefer to use _topics_.
 
-Hugo defaults to using posts, tags and categories out of the box and this will work fine if that's what you want. If you wish to customise this, however, you can do so by creating a `taxonomies.toml` configuation file:
+Hugo defaults to using posts, tags and categories out of the box and this will work fine if that's what you want. If you wish to customise this, however, you can do so by creating a `taxonomies.toml` configuration file:
 
 ```toml
 # config/_default/taxonomies.toml
