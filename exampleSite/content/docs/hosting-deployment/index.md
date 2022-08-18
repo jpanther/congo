@@ -18,6 +18,7 @@ The official Hugo [Hosting and Deployment](https://gohugo.io/hosting-and-deploym
 - [GitHub Pages](#github-pages)
 - [Netlify](#netlify)
 - [Render](#render)
+- [Cloudflare Pages](#cloudflare-pages)
 - [Shared hosting, VPS or private web server](#shared-hosting-vps-or-private-web-server)
 
 ---
@@ -118,6 +119,23 @@ Create a new **Static Site** and link it to your project's code repository. Then
 {{< screenshot src="render-settings.jpg" alt="Screen capture of Render settings" >}}
 
 The site will automatically build and deploy whenever you push a change to your repo.
+
+# Cloudflare Pages
+
+Cloudflare offers the [Pages](https://pages.cloudflare.com/) service that can host Hugo blogs.
+It builds the site from a git repository and then hosts the site on Cloudflare's CDN.
+Follow their [Hugo deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site) to get started.
+
+The Rocker Loader™ feature offered by Cloudflare tries to speed up rendering of web pages with javascript, but it breaks the appearance switcher.
+It can also cause an annoying light/dark screen flash when browsing your site due to javascript loading in the wrong order.
+Fix this problem by disabling it:
+
+* Go to the [Cloudflare dashboard](https://dash.cloudflare.com)
+* Click on your domain name in the list
+* Click _Optimization_ in the _Speed_ section
+* Scroll down to _Rocket Loader™_ and disable it
+
+Hugo sites with the Congo theme still load very quickly even with this feature disabled.
 
 ## Shared hosting, VPS or private web server
 
