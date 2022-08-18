@@ -18,6 +18,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgrade to Tailwind v3.1.8 ([#265](https://github.com/jpanther/congo/pull/265))
 - Upgrade to Mermaid v9.1.5 ([#272](https://github.com/jpanther/congo/pull/272))
 
+### Fixed
+
+- Article updated date logic doesn't consider formatted date values ([#259](https://github.com/jpanther/congo/issues/259))
+
 ## [2.3.1] - 2022-07-30
 
 ### Added
