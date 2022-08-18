@@ -11,10 +11,10 @@
         {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
       </div>
     </header>
-    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       {{ if and (.Params.showTableOfContents | default (.Site.Params.article.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
-        <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
-          <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10 print:hidden">
+        <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+          <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
             {{ partial "toc.html" . }}
           </div>
         </div>
