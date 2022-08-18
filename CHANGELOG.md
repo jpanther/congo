@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Traditional Chinese (Taiwan) translation ([#262](https://github.com/jpanther/congo/pull/262))
+
 ### Changed
 
 - Upgrade to Chart.js v3.9.1 ([#261](https://github.com/jpanther/congo/pull/261))
