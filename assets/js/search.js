@@ -1,5 +1,7 @@
 var fuse;
 var showButton = document.getElementById("search-button");
+var showButtonBasic = document.getElementById("search-button-basic");
+var showButtonHamburger = document.getElementById("search-button-hamburger");
 var hideButton = document.getElementById("close-search-button");
 var wrapper = document.getElementById("search-wrapper");
 var modal = document.getElementById("search-modal");
@@ -12,7 +14,9 @@ var indexed = false;
 var hasResults = false;
 
 // Listen for events
-showButton.addEventListener("click", displaySearch);
+showButton? showButton.addEventListener("click", displaySearch) : null;
+showButtonBasic? showButtonBasic.addEventListener("click", displaySearch) : null;
+showButtonHamburger? showButtonHamburger.addEventListener("click", displaySearch) : null;
 hideButton.addEventListener("click", hideSearch);
 wrapper.addEventListener("click", hideSearch);
 modal.addEventListener("click", function (event) {
