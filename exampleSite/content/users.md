@@ -39,5 +39,6 @@ Real websites that are built with Congo.
 | [Jh123x](https://jh123x.com/)                                          | Personal site and Blog       |
 | [sforzando LLC. and Inc.](https://sfz.dev/)                            | Corporate site and Blog      |
 | [aidansmith.me](https://aidansmith.me/)                                | Personal Site                |
+| [szegedkungfu.hu](https://balance-se.github.io/)                       | Sports association site      |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
