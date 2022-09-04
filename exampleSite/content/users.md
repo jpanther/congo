@@ -38,6 +38,7 @@ Real websites that are built with Congo.
 | [Bible Multi Apps](https://hotlittlewhitedog.gitlab.io/biblemulti)     | Personal site and Blog       |
 | [Jh123x](https://jh123x.com/)                                          | Personal site and Blog       |
 | [sforzando LLC. and Inc.](https://sfz.dev/)                            | Corporate site and Blog      |
+| [aidansmith.me](https://aidansmith.me/)                                | Personal Site                |
 | [nunocoracao.com](https://nunocoracao.com)                             | Personal site and Blog       |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
