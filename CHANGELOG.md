@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgrade to Chart.js v3.9.1 ([#261](https://github.com/jpanther/congo/pull/261))
 - Upgrade to Tailwind v3.1.8 ([#265](https://github.com/jpanther/congo/pull/265))
 - Upgrade to Mermaid v9.1.6 ([#272](https://github.com/jpanther/congo/pull/272), [#279](https://github.com/jpanther/congo/pull/279))
+- Upgrade to KaTeX v0.16.2 ([#284](https://github.com/jpanther/congo/pull/284))
 
 ### Fixed
 
