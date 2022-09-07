@@ -41,5 +41,6 @@ Real websites that are built with Congo.
 | [aidansmith.me](https://aidansmith.me/)                                | Personal Site                |
 | [nunocoracao.com](https://nunocoracao.com)                             | Personal site and Blog       |
 | [szegedkungfu.hu](https://balance-se.github.io/)                       | Sports association site      |
+| [jcransom.com](https://www.jcransom.com/)                              | Personal Site and Blog       |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
