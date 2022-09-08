@@ -1845,6 +1845,28 @@ body:has(#menu-controller:checked) {
           text-decoration-line: underline;
 }
 
+/* Responsive hides for hybrid header */
+
+@media screen and (min-width: 0px) {
+  .hidebasic {
+    display: none !important;
+  }
+
+  .hidehamburger {
+    display: flex !important;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .hidebasic {
+    display: flex !important;
+  }
+
+  .hidehamburger {
+    display: none !important;
+  }
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -3041,7 +3063,7 @@ body:has(#menu-controller:checked) {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .sm\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3109,7 +3131,7 @@ body:has(#menu-controller:checked) {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
   .lg\:sticky {
     position: -webkit-sticky;
     position: sticky;
@@ -3157,7 +3179,7 @@ body:has(#menu-controller:checked) {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .xl\:w-1\/5 {
     width: 20%;
   }
