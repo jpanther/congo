@@ -1,10 +1,169 @@
 # Changelog
 
-All notable changes to Congo will be documented in this file. Things that need attention when upgrading from a prior version are marked ⚠️.
+All notable changes to Congo will be documented in this file. Things that need particular attention when upgrading from a prior version are marked ⚠️.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.3.1] - 2022-07-30
+
+### Added
+
+- Japanese translation ([#234](https://github.com/jpanther/congo/pull/234))
+
+### Changed
+
+- Upgrade to Mermaid v9.1.3 ([#233](https://github.com/jpanther/congo/pull/233))
+- Upgrade to Tailwind v3.1.6 ([#245](https://github.com/jpanther/congo/pull/245))
+- Upgrade to Typography v0.5.4 ([#246](https://github.com/jpanther/congo/pull/246))
+- Upgrade to Chart.js v3.8.2 ([#247](https://github.com/jpanther/congo/pull/247))
+
+### Fixed
+
+- Main content misaligned when hamburger menu is opened at large viewport sizes
+
+## [2.3.0] - 2022-06-27
+
+### Added
+
+- Header layouts for selecting a preferred header style
+- Hamburger menu header layout with popover main menu ([#167](https://github.com/jpanther/congo/discussions/167), [#88](https://github.com/jpanther/congo/discussions/88), [#43](https://github.com/jpanther/congo/discussions/43), [#29](https://github.com/jpanther/congo/discussions/29))
+- Front matter support for showing or hiding comments on a per article basis ([#207](https://github.com/jpanther/congo/discussions/207))
+- `showCopyright` and `showThemeAttribution` parameters that allow more control over how the site footer is displayed ([#192](https://github.com/jpanther/congo/discussions/192))
+- `bars` SVG icon
+
+### Changed
+
+- ⚠️ Footer configuration parameters are now in their own `footer` sub-group
+- Search will now return results for all page types, including lists and taxonomies
+- Comments partials are now better considered within the page layout
+- Reduced whitespace at the top of the main content block ([#226](https://github.com/jpanther/congo/discussions/226))
+- Upgrade to Tailwind v3.1.4 ([#225](https://github.com/jpanther/congo/pull/225))
+
+### Fixed
+
+- Hugo v0.101.0 breaks the link to the homepage ([#230](https://github.com/jpanther/congo/issues/230))
+- Search link does not appear in header if main menu has no items to display
+- Search only returns results in the primary language when multiple languages are available ([#229](https://github.com/jpanther/congo/issues/229))
+- Arrow on external article links not aligned correctly when title wraps onto multiple lines
+- Arrow on external article links points the wrong direction for RTL languages
+- Scroll to top misaligned with the footer at small viewport heights
+- Link to homepage would be incorrect in some deployments if `baseURL` contained sub-directories in the path
+
+## [2.2.3] - 2022-06-22
+
+### Changed
+
+- Profile image alt text now uses author name when available
+
+### Fixed
+
+- Search not working when `baseURL` does not end with a forward slash ([#224](https://github.com/jpanther/congo/pull/224))
+- Author `headline` parameter not correctly displaying Markdown or Emoji content
+
+## [2.2.2] - 2022-06-16
+
+### Added
+
+- Breadcrumb display can now be can now be specificed in front matter for articles and list pages
+- Italian translation ([#209](https://github.com/jpanther/congo/pull/209))
+
+### Changed
+
+- Upgrade to Chart.js v3.8.0 ([#204](https://github.com/jpanther/congo/pull/204))
+- Upgrade to KaTeX v0.16.0 ([#208](https://github.com/jpanther/congo/pull/208))
+- Upgrade to Mermaid v9.1.2 ([#214](https://github.com/jpanther/congo/pull/214))
+
+## [2.2.1] - 2022-05-25
+
+### Changed
+
+- Upgrade to Mermaid v9.1.1 ([#194](https://github.com/jpanther/congo/pull/194))
+- Upgrade to Fuse.js v6.6.2 ([#195](https://github.com/jpanther/congo/pull/195))
+- Upgrade KaTeX to v0.15.6 ([#202](https://github.com/jpanther/congo/pull/202))
+
+### Fixed
+
+- Main content area doesn't grow to window height ([#201](https://github.com/jpanther/congo/issues/201))
+
+## [2.2.0] - 2022-05-09
+
+### Added
+
+- Finnish translation ([#185](https://github.com/jpanther/congo/pull/185))
+
+### Changed
+
+- Updated French translation ([#178](https://github.com/jpanther/congo/pull/178))
+- Analytics partial now checks `hugo.IsProduction` instead of `.Site.IsServer` before including scripts ([#179](https://github.com/jpanther/congo/issues/179))
+- Upgrade to Tailwind v3.0.24 ([#176](https://github.com/jpanther/congo/pull/176))
+- Upgrade to Mermaid v9.0.1 ([#183](https://github.com/jpanther/congo/pull/183))
+- Upgrade to Fuse.js v6.6.1 ([#189](https://github.com/jpanther/congo/pull/189))
+
+### Fixed
+
+- Code blocks are rendered incorrectly in RTL languages ([#164](https://github.com/jpanther/congo/issues/164))
+- Scroll to top link overlaps footer menu on mobile devices when there are several links ([#172](https://github.com/jpanther/congo/issues/172))
+
+### Removed
+
+- `hugo.Generator` from HTML `<head>` so that the [default Hugo generator behaviour](https://gohugo.io/getting-started/configuration/#disablehugogeneratorinject) works as expected ([#179](https://github.com/jpanther/congo/issues/179))
+
+## [2.1.3] - 2022-04-12
+
+### Added
+
+- Hungarian translation ([#170](https://github.com/jpanther/congo/pull/170))
+
+### Fixed
+
+- Scroll to top link overlaps footer menu on mobile devices ([#172](https://github.com/jpanther/congo/issues/172))
+
+## [2.1.2] - 2022-04-08
+
+### Added
+
+- Romanian translation ([#168](https://github.com/jpanther/congo/pull/168))
+
+### Changed
+
+- Upgrade to Mermaid v9.0.0
+
+## [2.1.1] - 2022-04-03
+
+### Added
+
+- Print styles to hide unnecessary elements when printing ([#155](https://github.com/jpanther/congo/pull/155))
+- Hebrew translation ([#163](https://github.com/jpanther/congo/pull/163))
+
+### Fixed
+
+- Footer menu displays incorrectly in RTL languages ([#165](https://github.com/jpanther/congo/pull/165))
+
+## [2.1.0] - 2022-03-14
+
+### Added
+
+- Simple page layout for creating full-width content ([#139](https://github.com/jpanther/congo/issues/139))
+- Portuguese (Portugal) translation ([#144](https://github.com/jpanther/congo/pull/144))
+
+### Changed
+
+- Upgrade SVG icons to FontAwesome 6:
+  - New icons for Hashnode, bug, check, comment, light bulb, list, pencil, skull, tag, and information. ([#136](https://github.com/jpanther/congo/discussions/136))
+  - ⚠️ The `exclamation-triangle` icon has been renamed `triangle-exclamation`
+  - ⚠️ The `times` icon has been renamed `xmark`
+  - ⚠️ The `stackoverflow` icon has been renamed `stack-overflow`
+- Upgrade KaTeX to v0.15.3
+- Markdown images and `figure` shortcode now search the `assets/` directory if an image cannot be found in page bundle ([#126](https://github.com/jpanther/congo/issues/126))
+- Markdown images and `figure` shortcode now fallback to static assets if an image is not provided as a Hugo resource ([#126](https://github.com/jpanther/congo/issues/126))
+- Taxonomy term listings now honour the `groupByYear` parameter ([#145](https://github.com/jpanther/congo/pull/145))
+- The `alert` shortcode now allows its icon to be specified as a parameter
+
+### Fixed
+
+- Dark appearance shown even when default appearance set to light and auto switching is disabled ([#149](https://github.com/jpanther/congo/issues/149))
 
 ## [2.0.5] - 2022-02-20
 
@@ -77,7 +236,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Site search powered by Fuse.js
 - Automatic Markdown image resizing and srcset generation
 - Performance and Accessibility improvements to achieve perfect Lighthouse scores
-- Tables of contents on article pages
+- Tables of contents on article pages ([#47](https://github.com/jpanther/congo/discussions/47))
 - Code copy buttons in article content
 - Taxonomy and term listings now support Markdown content
 - Taxonomies on article and list pages
@@ -184,7 +343,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - German translation ([#27](https://github.com/jpanther/congo/pull/27))
-- Brazilian Portuguese translation ([#28](https://github.com/jpanther/congo/pull/28))
+- Portuguese (Brazil) translation ([#28](https://github.com/jpanther/congo/pull/28))
 - Spanish translation ([#30](https://github.com/jpanther/congo/pull/30))
 
 ### Fixed
@@ -343,7 +502,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.0.5...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.3.1...HEAD
+[2.3.1]: https://github.com/jpanther/congo/compare/v2.3.0...v2.3.1
+[2.3.0]: https://github.com/jpanther/congo/compare/v2.2.3...v2.3.0
+[2.2.3]: https://github.com/jpanther/congo/compare/v2.2.2...v2.2.3
+[2.2.2]: https://github.com/jpanther/congo/compare/v2.2.1...v2.2.2
+[2.2.1]: https://github.com/jpanther/congo/compare/v2.2.0...v2.2.1
+[2.2.0]: https://github.com/jpanther/congo/compare/v2.1.3...v2.2.0
+[2.1.3]: https://github.com/jpanther/congo/compare/v2.1.2...v2.1.3
+[2.1.2]: https://github.com/jpanther/congo/compare/v2.1.1...v2.1.2
+[2.1.1]: https://github.com/jpanther/congo/compare/v2.1.0...v2.1.1
+[2.1.0]: https://github.com/jpanther/congo/compare/v2.0.5...v2.1.0
 [2.0.5]: https://github.com/jpanther/congo/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/jpanther/congo/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/jpanther/congo/compare/v2.0.2...v2.0.3

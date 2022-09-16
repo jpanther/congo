@@ -1,3 +1,4 @@
+{{- partial "partials/functions/warnings.html" .Site -}}
 <!DOCTYPE html>
 <html
   lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default "en") }}
@@ -25,27 +26,34 @@
         >{{ i18n "nav.skip_to_main" }}</a
       >
     </div>
-    {{- partial "header.html" . -}}
-    <main id="main-content" class="relative grow">
-      {{- block "main" . }}{{- end }}
-      {{ if and (.Site.Params.showScrollToTop | default true) (gt .WordCount 200) }}
-        <div
-          class="absolute top-[110vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-[-5.5rem]"
-        >
-          <a
-            href="#the-top"
-            class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="{{ i18n "nav.scroll_to_top_title" }}"
-            title="{{ i18n "nav.scroll_to_top_title" }}"
-          >
-            &uarr;
-          </a>
-        </div>
-      {{ end }}
-    </main>
-    {{ if .Site.Params.enableSearch | default false }}
-      {{- partial "search.html" . -}}
+    {{ $header := print "partials/header/" .Site.Params.header.layout ".html" }}
+    {{ if templates.Exists $header }}
+      {{ partial $header . }}
+    {{ else }}
+      {{ partial "partials/header/basic.html" . }}
     {{ end }}
-    {{- partial "footer.html" . -}}
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        {{ block "main" . }}{{ end }}
+        {{ if and (.Site.Params.footer.showScrollToTop | default true) (gt .WordCount 200) }}
+          <div
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="{{ i18n "nav.scroll_to_top_title" }}"
+              title="{{ i18n "nav.scroll_to_top_title" }}"
+            >
+              &uarr;
+            </a>
+          </div>
+        {{ end }}
+      </main>
+      {{- partial "footer.html" . -}}
+      {{ if .Site.Params.enableSearch | default false }}
+        {{- partial "search.html" . -}}
+      {{ end }}
+    </div>
   </body>
 </html>

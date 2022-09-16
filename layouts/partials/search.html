@@ -1,7 +1,7 @@
 <div
   id="search-wrapper"
   class="fixed inset-0 z-50 flex flex-col p-4 sm:p-6 md:p-[10vh] lg:p-[12vh] w-screen h-screen cursor-default bg-neutral-500/50 backdrop-blur-sm dark:bg-neutral-900/50 invisible"
-  data-url="{{ .Site.BaseURL }}"
+  data-url="{{ "" | absLangURL }}"
 >
   <div
     id="search-modal"
@@ -25,7 +25,7 @@
         class="flex items-center justify-center w-8 h-8 text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
         title="{{ i18n "search.close_button_title" }}"
       >
-        {{ partial "icon.html" "times" }}
+        {{ partial "icon.html" "xmark" }}
       </button>
     </header>
     <section class="flex-auto px-2 overflow-auto">

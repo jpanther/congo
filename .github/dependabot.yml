@@ -1,0 +1,26 @@
+# GitHub Dependabot
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "09:00"
+      timezone: "Australia/Melbourne"
+    commit-message:
+      prefix: "📌"
+    labels:
+      - "dependencies"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Australia/Melbourne"
+    commit-message:
+      prefix: "👷"
+    labels:
+      - "dependencies"

@@ -12,7 +12,7 @@
           class="mb-2 rounded-full w-36 h-36"
           width="144"
           height="144"
-          alt="Author"
+          alt="{{ $.Site.Author.name | default "Author" }}"
           src="{{ $authorImage.RelPermalink }}"
         />
       {{ end }}
@@ -22,7 +22,7 @@
     </h1>
     {{ with .Site.Author.headline }}
       <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
-        {{ . }}
+        {{ . | markdownify | emojify }}
       </h2>
     {{ end }}
     <div class="mt-1 text-2xl">

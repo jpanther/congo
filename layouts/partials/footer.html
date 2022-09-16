@@ -1,10 +1,12 @@
-<footer class="py-10">
+<footer class="py-10 print:hidden">
   {{/* Footer menu */}}
   {{ if .Site.Menus.footer }}
     <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
       <ul class="flex flex-col list-none sm:flex-row">
         {{ range .Site.Menus.footer }}
-          <li class="mb-1 sm:mb-0 sm:mr-7 sm:last:mr-0">
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
             <a
               class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
               href="{{ .URL }}"
@@ -16,20 +18,22 @@
       </ul>
     </nav>
   {{ end }}
-  <div class="flex justify-between">
+  <div class="flex items-center justify-between">
     <div>
       {{/* Copyright */}}
-      <p class="text-sm text-neutral-500 dark:text-neutral-400">
-        {{- with .Site.Params.copyright }}
-          {{ . | emojify | markdownify }}
-        {{- else }}
-          &copy;
-          {{ now.Format "2006" }}
-          {{ .Site.Author.name | markdownify | emojify }}
-        {{- end }}
-      </p>
+      {{ if .Site.Params.footer.showCopyright | default true }}
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          {{- with .Site.Params.copyright }}
+            {{ . | emojify | markdownify }}
+          {{- else }}
+            &copy;
+            {{ now.Format "2006" }}
+            {{ .Site.Author.name | markdownify | emojify }}
+          {{- end }}
+        </p>
+      {{ end }}
       {{/* Theme attribution */}}
-      {{ if .Site.Params.attribution | default true }}
+      {{ if .Site.Params.footer.showThemeAttribution | default true }}
         <p class="text-xs text-neutral-500 dark:text-neutral-400">
           {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
             href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
@@ -40,9 +44,9 @@
       {{ end }}
     </div>
     {{/* Appearance switch */}}
-    {{ if .Site.Params.showAppearanceSwitcher | default false }}
+    {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
       <div
-        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 {{ if .Site.Params.showScrollToTop | default true -}}
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 {{ if .Site.Params.footer.showScrollToTop | default true -}}
           ltr:mr-14 rtl:ml-14
         {{- end }}"
       >

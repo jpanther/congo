@@ -62,6 +62,10 @@
     {{ $jsCode := resources.Get "js/code.js" }}
     {{ $assets.Add "js" (slice $jsCode) }}
   {{ end }}
+  {{ if .Site.Params.rtl | default false }}
+    {{ $jsRTL := resources.Get "js/rtl.js" }}
+    {{ $assets.Add "js" (slice $jsRTL) }}
+  {{ end }}
   {{ if $assets.Get "js" }}
     {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
     <script defer type="text/javascript" id="script-bundle" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}" data-copy="{{ i18n "code.copy" }}" data-copied="{{ i18n "code.copied" }}"></script>
@@ -93,10 +97,6 @@
   {{ template "_internal/twitter_cards.html" . }}
   {{/* Schema */}}
   {{ partial "schema.html" . }}
-  {{/* Generator */}}
-  {{ if .Site.Params.attribution | default true }}
-    {{ hugo.Generator }}
-  {{ end }}
   {{/* Me */}}
   {{ with .Site.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
   {{ with .Site.Author.links }}
