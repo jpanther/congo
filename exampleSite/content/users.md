@@ -43,5 +43,6 @@ Real websites that are built with Congo.
 | [szegedkungfu.hu](https://balance-se.github.io/)                       | Sports association site      |
 | [jcransom.com](https://www.jcransom.com/)                              | Personal Site and Blog       |
 | [cbrincoveanu.com](https://www.cbrincoveanu.com/)                      | Personal site and Blog       |
+| [medical-humanities](https://medical-humanities.netlify.app)             | Academic site                |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
