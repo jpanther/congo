@@ -15,7 +15,9 @@ jobs:
           days-before-stale: 30
           days-before-close: 14
           stale-issue-label: "stale"
+          exempt-issue-labels: "keep"
           stale-pr-label: "stale"
+          exempt-pr-labels: "keep"
           stale-issue-message: >
             This issue has been automatically marked as stale because it has not had any recent activity.
 
