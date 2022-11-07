@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Traditional Chinese (Taiwan) translation ([#262](https://github.com/jpanther/congo/pull/262))
 - Tailwind plugin for Prettier to standardise the order of CSS classes ([#268](https://github.com/jpanther/congo/pull/268))
 - External links in article content will now open in a new browser tab ([#312](https://github.com/jpanther/congo/pull/312))
+- Site logo is now in its own `logo.html` partial to allow it to be easily overridden ([#322](https://github.com/jpanther/congo/pull/322))
 
 ### Changed
 
