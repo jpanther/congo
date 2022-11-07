@@ -55,7 +55,15 @@ New article!
 
 ## Button
 
-`button` outputs a styled button component which can be used to highlight a primary action. It has two optional variables `href` and `target` which can be used to specify the URL and target of the link.
+`button` outputs a styled button component which can be used to highlight a primary action. It has three optional parameters:
+
+<!-- prettier-ignore-start -->
+|Parameter|Description|
+|---|---|
+|`href`|The URL that the button should link to.|
+|`target`|The target of the link.|
+|`download`|Whether browser should download the resource rather than navigate to the URL. The value of this parameter will be the name of the downloaded file.|
+<!-- prettier-ignore-end -->
 
 **Example:**
 
