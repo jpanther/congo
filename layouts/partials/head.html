@@ -32,7 +32,7 @@
   {{ end -}}
   {{/* Asset bundles */}}
   {{ $assets := newScratch }}
-  {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "congo")) }}
+  {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (lower .Site.Params.colorScheme | default "congo")) }}
   {{ if not $cssScheme }}
     {{ $cssScheme = resources.Get "css/schemes/congo.css" }}
   {{ end }}

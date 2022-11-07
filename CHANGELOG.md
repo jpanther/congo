@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Appearance switcher title doesn't update when switching appearance ([#235](https://github.com/jpanther/congo/issues/235))
 - Article updated date logic doesn't consider formatted date values ([#259](https://github.com/jpanther/congo/issues/259))
 - Order of articles on list pages would not follow Hugo conventions when grouped by year ([#313](https://github.com/jpanther/congo/issues/313))
+- Providing a `colorScheme` value containing uppercase characters would break some deployments ([#347](https://github.com/jpanther/congo/issues/347))
 
 ## [2.3.1] - 2022-07-30
 
