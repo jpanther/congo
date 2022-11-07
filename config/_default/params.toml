@@ -51,6 +51,7 @@ enableCodeCopy = false
   showBreadcrumbs = false
   showSummary = false
   showTableOfContents = false
+  showTaxonomies = false
   groupByYear = true
 
 [sitemap]

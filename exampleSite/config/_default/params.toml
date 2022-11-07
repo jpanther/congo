@@ -51,6 +51,7 @@ mainSections = ["samples"]
   showBreadcrumbs = true
   showSummary = false
   showTableOfContents = true
+  showTaxonomies = false
   groupByYear = false
 
 [sitemap]

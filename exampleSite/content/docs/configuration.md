@@ -47,24 +47,24 @@ Congo is optimised for full multilingual websites and theme assets are translate
 
 The theme currently supports the following languages by default:
 
-| Language                               | Code    |
-| -------------------------------------- | ------- |
-| :gb: English                           | `en`    |
-| :bangladesh: Bengali                   | `bn`    |
-| :cn: Simplified Chinese (China)        | `zh-cn` |
-| :taiwan: Traditional Chinese (Taiwan)  | `zh-tw` |
-| :finland: Finnish                      | `fi`    |
-| :fr: French                            | `fr`    |
-| :de: German                            | `de`    |
-| :israel: Hebrew                        | `he`    |
-| :hungary: Hungarian                    | `hu`    |
-| :it: Italian                           | `it`    |
-| :jp: Japanese                          | `ja`    |
-| :brazil: Portuguese (Brazil)           | `pt-br` |
-| :portugal: Portuguese (Portugal)       | `pt-pt` |
-| :romania: Romanian                     | `ro`    |
-| :es: Spanish (Spain)                   | `es`    |
-| :tr: Turkish                           | `tr`    |
+| Language                              | Code    |
+| ------------------------------------- | ------- |
+| :gb: English                          | `en`    |
+| :bangladesh: Bengali                  | `bn`    |
+| :cn: Simplified Chinese (China)       | `zh-cn` |
+| :taiwan: Traditional Chinese (Taiwan) | `zh-tw` |
+| :finland: Finnish                     | `fi`    |
+| :fr: French                           | `fr`    |
+| :de: German                           | `de`    |
+| :israel: Hebrew                       | `he`    |
+| :hungary: Hungarian                   | `hu`    |
+| :it: Italian                          | `it`    |
+| :jp: Japanese                         | `ja`    |
+| :brazil: Portuguese (Brazil)          | `pt-br` |
+| :portugal: Portuguese (Portugal)      | `pt-pt` |
+| :romania: Romanian                    | `ro`    |
+| :es: Spanish (Spain)                  | `es`    |
+| :tr: Turkish                          | `tr`    |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
@@ -75,7 +75,7 @@ In order to be as flexible as possible, a language configuration file needs to b
 The default file can be used as a template to create additional languages, or renamed if you wish to author your website in a language other than English. Simply name the file using the format `languages.[language-code].toml`.
 
 {{< alert >}}
-**Note:** Ensure the `defaultContentLanguage` parameter in the [site configuration](#site-configuration) matches the language code in your language config filename.  
+**Note:** Ensure the `defaultContentLanguage` parameter in the [site configuration](#site-configuration) matches the language code in your language config filename.
 {{< /alert >}}
 
 <!-- prettier-ignore-start -->
@@ -149,6 +149,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.sharingLinks`|_Not set_|Which sharing links to display at the end of each article. When not provided, or set to `false` no links will be displayed.|
 |`list.showBreadcrumbs`|`false`|Whether or not breadcrumbs are displayed in the header on list pages.|
 |`list.showTableOfContents`|`false`|Whether or not the table of contents is displayed on list pages.|
+|`list.showTaxonomies`|`false`|Whether or not the taxonomies related to this article are displayed on list pages.|
 |`list.showSummary`|`false`|Whether or not article summaries are displayed on list pages. If a summary is not provided in the [front matter]({{< ref "front-matter" >}}), one will be auto generated using the `summaryLength` parameter in the [site configuration](#site-configuration).|
 |`list.groupByYear`|`true`|Whether or not articles are grouped by year on list pages.|
 |`sitemap.excludedKinds`|`["taxonomy", "term"]`|Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values.|
