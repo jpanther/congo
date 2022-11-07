@@ -2144,12 +2144,12 @@ body:has(#menu-controller:checked) {
   max-width: 65ch;
 }
 
-.max-w-3xl {
-  max-width: 48rem;
-}
-
 .max-w-\[10rem\] {
   max-width: 10rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .flex-none {
