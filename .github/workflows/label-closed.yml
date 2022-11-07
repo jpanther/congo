@@ -1,0 +1,19 @@
+name: Labeller on close
+
+on:
+  issues:
+    types:
+      - closed
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  run:
+    name: "Label"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Labels
+        uses: RebeccaStevens/issue-closed-labeler-action@latest
+        with:
+          rules: '[{"condition": "wip", "remove": "wip"}]'
