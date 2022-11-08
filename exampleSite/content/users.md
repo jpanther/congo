@@ -18,7 +18,6 @@ Real websites that are built with Congo.
 | Website                                                                | Details                      |
 | ---------------------------------------------------------------------- | ---------------------------- |
 | [jamespanther.com](https://jamespanther.com)                           | Personal site - Theme author |
-| [srisco.dev](https://srisco.dev)                                       | Personal site                |
 | [antoinesoetewey.com](https://antoinesoetewey.com/)                    | Personal site                |
 | [leif.io](https://leif.io/)                                            | Personal site and Tech blog  |
 | [dr460nf1r3.org](https://dr460nf1r3.org/)                              | Personal site and Blog       |
