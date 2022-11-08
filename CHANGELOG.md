@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Appearance switcher title doesn't update when switching appearance ([#235](https://github.com/jpanther/congo/issues/235))
 - Article updated date logic doesn't consider formatted date values ([#259](https://github.com/jpanther/congo/issues/259))
+- Error calling Paginate when attempting to generate a site with no taxonomies ([#289](https://github.com/jpanther/congo/issues/289))
 - Pagination links overflow the page area on large datasets ([#299](https://github.com/jpanther/congo/issues/299))
 - Order of articles on list pages would not follow Hugo conventions when grouped by year ([#313](https://github.com/jpanther/congo/issues/313))
 - Button shortcode overlaps table of contents when at the top of the article content ([#337](https://github.com/jpanther/congo/issues/337))
