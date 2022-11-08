@@ -1,7 +1,13 @@
 {{ if .IsTranslated }}
-  <div class="inline">
+  <ul class="flex flex-row list-none">
     {{ range .AllTranslations }}
-      <a href="{{ .RelPermalink }}">{{ .Language.Params.displayName | emojify }}</a>
+      <li class="ml-2">
+        <a
+          href="{{ .RelPermalink }}"
+          class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+          >{{ .Language.Params.displayName | emojify }}</a
+        >
+      </li>
     {{ end }}
-  </div>
+  </ul>
 {{ end }}
