@@ -1799,6 +1799,14 @@ body:has(#menu-controller:checked) {
   margin-top: 1.5rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -2238,6 +2246,10 @@ body:has(#menu-controller:checked) {
 
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pl-2 {
@@ -2854,6 +2866,10 @@ body:has(#menu-controller:checked) {
     width: 50%;
   }
 
+  .sm\:w-40 {
+    width: 10rem;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -2870,6 +2886,10 @@ body:has(#menu-controller:checked) {
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .sm\:pr-6 {
+    padding-right: 1.5rem;
   }
 
   .sm\:pt-10 {
