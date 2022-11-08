@@ -32,7 +32,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Error calling Paginate when attempting to generate a site with no taxonomies ([#289](https://github.com/jpanther/congo/issues/289))
 - Multilingual links are spaced incorrectly when using Hugo minify ([#298](https://github.com/jpanther/congo/issues/298))
 - Pagination links overflow the page area on large datasets ([#299](https://github.com/jpanther/congo/issues/299))
-- Embedded content disappears when displayed at certain viewport sizes ([#302](https://github.com/jpanther/congo/issues/302))
+- Embedded content disappears when displayed at certain viewport sizes ([#302](https://github.com/jpanther/congo/issues/302), [#335](https://github.com/jpanther/congo/issues/335))
 - Order of articles on list pages would not follow Hugo conventions when grouped by year ([#313](https://github.com/jpanther/congo/issues/313))
 - Button shortcode overlaps table of contents when at the top of the article content ([#337](https://github.com/jpanther/congo/issues/337))
 - Providing a `colorScheme` value containing uppercase characters breaks some deployments ([#347](https://github.com/jpanther/congo/issues/347))
