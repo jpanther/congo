@@ -53,6 +53,7 @@ mainSections = ["samples"]
   showTableOfContents = true
   showTaxonomies = false
   groupByYear = false
+  paginationWidth = 1
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
