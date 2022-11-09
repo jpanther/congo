@@ -1,5 +1,5 @@
 var fuse;
-var showButton = document.getElementById("search-button");
+var showButtons = document.querySelectorAll("[id^='search-button']");
 var hideButton = document.getElementById("close-search-button");
 var wrapper = document.getElementById("search-wrapper");
 var modal = document.getElementById("search-modal");
@@ -12,7 +12,9 @@ var indexed = false;
 var hasResults = false;
 
 // Listen for events
-showButton.addEventListener("click", displaySearch);
+showButtons.forEach((button) => {
+  button.addEventListener("click", displaySearch);
+});
 hideButton.addEventListener("click", hideSearch);
 wrapper.addEventListener("click", hideSearch);
 modal.addEventListener("click", function (event) {
@@ -107,7 +109,7 @@ function fetchJSON(path, callback) {
 
 function buildIndex() {
   var baseURL = wrapper.getAttribute("data-url");
-  baseURL = baseURL.replace(/\/?$/, '/');
+  baseURL = baseURL.replace(/\/?$/, "/");
   fetchJSON(baseURL + "index.json", function (data) {
     var options = {
       shouldSort: true,

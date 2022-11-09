@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Support for article thumbnails, covers and featured images
+- Hybrid header layout that switches between the hamburger and basic menus at appropriate viewport sizes
 - Traditional Chinese (Taiwan) translation ([#262](https://github.com/jpanther/congo/pull/262))
 - New `list.paginationWidth` parameter to specify how many pagination links are generated before they are truncated
 - Tailwind plugin for Prettier to standardise the order of CSS classes ([#268](https://github.com/jpanther/congo/pull/268))

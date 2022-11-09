@@ -2862,6 +2862,14 @@ body:has(#menu-controller:checked) {
     margin-bottom: 0px;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
