@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Hybrid header layout that switches between the hamburger and basic menus at appropriate viewport sizes
 - Traditional Chinese (Taiwan) translation ([#262](https://github.com/jpanther/congo/pull/262))
 - New `list.paginationWidth` parameter to specify how many pagination links are generated before they are truncated
+- Site title display can be toggled on or off independently, allowing for it to be displayed alongside the site logo or removed entirely
 - Tailwind plugin for Prettier to standardise the order of CSS classes ([#268](https://github.com/jpanther/congo/pull/268))
 - External links in article content will now open in a new browser tab ([#312](https://github.com/jpanther/congo/pull/312))
 - Independent control over the display of taxonomy listings on article and list pages ([#326](https://github.com/jpanther/congo/pull/326))
@@ -19,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- ⚠️ The `logo` parameter has moved under the `header` group and is now set using `header.logo`
 - ⚠️ Simplified Chinese (China) language code has changed from `zh` to `zh-cn`
 - Site logo is now in its own `logo.html` partial to allow it to be easily overridden ([#322](https://github.com/jpanther/congo/pull/322))
 - Upgrade to Chart.js v3.9.1 ([#261](https://github.com/jpanther/congo/pull/261))

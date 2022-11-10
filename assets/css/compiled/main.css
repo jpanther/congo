@@ -1831,6 +1831,10 @@ body:has(#menu-controller:checked) {
   margin-bottom: 0.25rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1841,10 +1845,6 @@ body:has(#menu-controller:checked) {
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .\!mb-9 {
@@ -2016,6 +2016,10 @@ body:has(#menu-controller:checked) {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -2880,6 +2884,10 @@ body:has(#menu-controller:checked) {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-center {
+    align-items: center;
   }
 
   .sm\:p-6 {
