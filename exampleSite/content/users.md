@@ -46,6 +46,7 @@ Real websites that are built with Congo.
 | [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog       |
 | [major.io](https://major.io)                                           | Personal site and Blog       |
 | [bayas.dev](https://bayas.dev)                                         | Personal site and Blog       |
+| [cgutierr-zgz.github.io](https://cgutierr-zgz.github.io/)       | Personal site and Tech blog  |
 | [顾宇的博客](https://www.guyu.me/)                                     | Personal Blog (in Chinese)   |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
