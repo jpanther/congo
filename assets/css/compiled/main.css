@@ -1807,12 +1807,12 @@ body:has(#menu-controller:checked) {
   margin-top: -1rem;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .mt-\[0\.1rem\] {
@@ -1831,20 +1831,12 @@ body:has(#menu-controller:checked) {
   margin-bottom: 0.25rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .-mb-1 {
   margin-bottom: -0.25rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .\!mb-9 {
@@ -2447,6 +2439,12 @@ body:has(#menu-controller:checked) {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2455,6 +2453,12 @@ body:has(#menu-controller:checked) {
 
 .first\:mt-8:first-child {
   margin-top: 2rem;
+}
+
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:border-primary-300:hover {
@@ -2538,6 +2542,16 @@ body:has(#menu-controller:checked) {
 
 .focus\:outline-transparent:focus {
   outline-color: transparent;
+}
+
+.group:hover .group-hover\:-translate-x-\[2px\] {
+  --tw-translate-x: -2px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:translate-x-\[2px\] {
+  --tw-translate-x: 2px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:text-primary-600 {

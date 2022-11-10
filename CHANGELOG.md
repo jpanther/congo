@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - External links in article content will now open in a new browser tab ([#312](https://github.com/jpanther/congo/pull/312))
 - Independent control over the display of taxonomy listings on article and list pages ([#326](https://github.com/jpanther/congo/pull/326))
 - Button shortcode now supports an optional `download` parameter to instruct browsers to directly download resources rather than navigate to a URL ([#349](https://github.com/jpanther/congo/pull/349))
+- Minor style and layout improvements
 
 ### Changed
 
