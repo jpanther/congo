@@ -45,7 +45,7 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -99,11 +99,11 @@ Then in the root of your site repository, create a `netlify.toml` file:
   TZ = "UTC"  # Set to preferred timezone
 
 [context.production.environment]
-  HUGO_VERSION = "0.100.2"
+  HUGO_VERSION = "0.105.0"
   HUGO_ENV = "production"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.100.2"
+  HUGO_VERSION = "0.105.0"
 ```
 
 This configuration assumes you are deploying Congo as a Hugo module. If you have installed the theme using another method, change the build command to simply `hugo --gc --minify -b $URL`.
