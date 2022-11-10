@@ -4,3 +4,6 @@
 {{ if ne .Site.Params.showScrollToTop nil }}
   {{ warnf "[CONGO] Theme parameter `showScrollToTop` has been renamed to `footer.showScrollToTop`. Please update your site configuration." }}
 {{ end }}
+{{ if ne .Site.Params.logo nil }}
+  {{ warnf "[CONGO] Theme parameter `logo` has been renamed to `header.logo`. Please update your site configuration." }}
+{{ end }}

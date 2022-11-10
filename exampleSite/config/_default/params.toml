@@ -16,7 +16,9 @@ mainSections = ["samples"]
 # robots = ""
 
 [header]
-  layout = "basic" # valid options: basic, hamburger, custom
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  # logo = "img/logo.jpg"
+  showTitle = true
 
 [footer]
   showCopyright = true

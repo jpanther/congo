@@ -5,9 +5,9 @@
       {{ partial "logo.html" . }}
       {{ partial "translations.html" . }}
     </div>
-    {{/* Hamburger menu */}}
     {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
-      <label id="menu-button" for="menu-controller" class="block">
+      {{/* Hamburger menu */}}
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
         <input type="checkbox" id="menu-controller" class="hidden" />
         <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
           {{ partial "icon.html" "bars" }}
@@ -39,7 +39,7 @@
             {{ if .Site.Params.enableSearch | default false }}
               <li>
                 <button
-                  id="search-button"
+                  id="search-button-2"
                   class="text-base hover:text-primary-600 dark:hover:text-primary-400"
                   title="{{ i18n "search.open_button_title" }}"
                 >
@@ -50,6 +50,32 @@
           </ul>
         </div>
       </label>
+      {{/* Basic menu */}}
+      <ul class="hidden list-none flex-row ltr:text-right rtl:text-left sm:flex">
+        {{ if .Site.Menus.main }}
+          {{ range .Site.Menus.main }}
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="{{ .URL }}"
+                title="{{ .Title }}"
+                >{{ .Name | markdownify | emojify }}</a
+              >
+            </li>
+          {{ end }}
+        {{ end }}
+        {{ if .Site.Params.enableSearch | default false }}
+          <li class="ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+            <button
+              id="search-button-1"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+              title="{{ i18n "search.open_button_title" }}"
+            >
+              {{ partial "icon.html" "search" }}
+            </button>
+          </li>
+        {{ end }}
+      </ul>
     {{ end }}
   </nav>
 </header>
