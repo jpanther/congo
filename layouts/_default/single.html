@@ -4,6 +4,7 @@
   {{- $feature := $images.GetMatch "*feature*" | default $cover }}
   <article>
     <header class="max-w-prose">
+	    <meta property="og:image" content="{{ $feature.RelPermalink | absURL }}" />
       {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
         {{ partial "breadcrumbs.html" . }}
       {{ end }}
