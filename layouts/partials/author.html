@@ -5,7 +5,7 @@
       {{ if $authorImage }}
         {{ $authorImage := $authorImage.Fill "192x192" }}
         <img
-          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
+          class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4"
           width="96"
           height="96"
           alt="{{ $.Site.Author.name | default "Author" }}"
@@ -15,7 +15,7 @@
     {{ end }}
     <div class="place-self-center">
       {{ with .Site.Author.name | markdownify | emojify }}
-        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
           {{ i18n "author.byline_title" | markdownify | emojify }}
         </div>
         <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">

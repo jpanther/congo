@@ -10,12 +10,14 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/stale@v5
+      - uses: actions/stale@v6
         with:
           days-before-stale: 30
           days-before-close: 14
           stale-issue-label: "stale"
+          exempt-issue-labels: "wip"
           stale-pr-label: "stale"
+          exempt-pr-labels: "wip"
           stale-issue-message: >
             This issue has been automatically marked as stale because it has not had any recent activity.
 

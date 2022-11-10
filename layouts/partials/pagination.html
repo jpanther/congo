@@ -1,39 +1,92 @@
-{{ $paginator := .Paginator }}
-{{ if gt $paginator.TotalPages 1 }}
-  <ul class="flex flex-row mt-8">
-    {{ if $paginator.HasPrev }}
-      <li>
-        <a
-          href="{{ $paginator.Prev.URL }}"
-          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded"
-          rel="prev"
-        >
-          &larr;
-        </a>
-      </li>
-    {{ end }}
-    {{ range $paginator.Pagers }}
-      <li>
-        <a
-          href="{{ .URL }}"
-          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded {{ if eq . $paginator }}
-            bg-primary-200 dark:bg-primary-400 dark:text-neutral-800
-          {{ end }}"
-        >
-          {{ .PageNumber }}
-        </a>
-      </li>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-      <li>
-        <a
-          href="{{ $paginator.Next.URL }}"
-          class="mx-1 block min-w-[1.8rem] text-center hover:bg-primary-600 hover:text-neutral rounded"
-          rel="next"
-        >
-          &rarr;
-        </a>
-      </li>
-    {{ end }}
-  </ul>
-{{ end }}
+{{- with .Paginator }}
+  {{- $width := $.Site.Params.list.paginationWidth | default 1 }}
+  {{- $currentPageNumber := .PageNumber }}
+  {{- if gt .TotalPages 1 }}
+    {{- $start := math.Max 1 (sub .PageNumber $width) }}
+    {{- $end := math.Min .TotalPages (add $start (mul $width 2)) }}
+
+    <ul class="flex flex-row mt-8">
+      {{- with .Prev }}
+        <li>
+          <a
+            href="{{ .URL }}"
+            class="mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
+            aria-label="Previous page"
+            rel="prev"
+          >
+            &larr;
+          </a>
+        </li>
+      {{- end }}
+
+      {{- with .First }}
+        {{- if gt $currentPageNumber (add 1 $width) }}
+          <li class="mx-1 min-w-[1.8rem] text-center">
+            <a
+              href="{{ .URL }}"
+              class="block rounded hover:bg-primary-600 hover:text-neutral"
+              aria-label="First page"
+            >
+              {{ .PageNumber }}
+            </a>
+          </li>
+          {{- if gt $currentPageNumber (add 2 $width) }}
+            <li>&ctdot;</li>
+          {{- end }}
+        {{- end }}
+      {{- end }}
+
+      {{- range $i := seq $start $end }}
+        <li class="mx-1 min-w-[1.8rem] text-center">
+          {{- if eq $.Paginator.PageNumber $i }}
+            <span
+              aria-current="page"
+              aria-label="Page {{ $i }}"
+              class="block font-semibold rounded bg-primary-200 text-primary-700 dark:bg-primary-400 dark:text-neutral-800"
+            >
+              {{ $i }}
+            </span>
+          {{- else }}
+            <a
+              href="{{ (index $.Paginator.Pagers (sub $i 1)).URL }}"
+              class="block rounded hover:bg-primary-600 hover:text-neutral"
+              aria-label="Page {{ $i }}"
+            >
+              {{ $i }}
+            </a>
+          {{- end }}
+        </li>
+      {{- end }}
+
+      {{- with .Last }}
+        {{- if lt $currentPageNumber (sub .TotalPages $width) }}
+          {{- if lt $currentPageNumber (sub .TotalPages (add $width 1)) }}
+            <li>&ctdot;</li>
+          {{- end }}
+          <li class="mx-1 min-w-[1.8rem] text-center">
+            <a
+              href="{{ .URL }}"
+              class="block rounded hover:bg-primary-600 hover:text-neutral"
+              aria-label="Last page"
+            >
+              {{ .PageNumber }}
+            </a>
+          </li>
+        {{- end }}
+      {{- end }}
+
+      {{- with .Next }}
+        <li>
+          <a
+            href="{{ .URL }}"
+            class="mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
+            aria-label="Next page"
+            rel="next"
+          >
+            &rarr;
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  {{- end }}
+{{- end }}

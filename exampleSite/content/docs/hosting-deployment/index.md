@@ -18,6 +18,7 @@ The official Hugo [Hosting and Deployment](https://gohugo.io/hosting-and-deploym
 - [GitHub Pages](#github-pages)
 - [Netlify](#netlify)
 - [Render](#render)
+- [Cloudflare Pages](#cloudflare-pages)
 - [Shared hosting, VPS or private web server](#shared-hosting-vps-or-private-web-server)
 
 ---
@@ -44,7 +45,7 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -98,11 +99,11 @@ Then in the root of your site repository, create a `netlify.toml` file:
   TZ = "UTC"  # Set to preferred timezone
 
 [context.production.environment]
-  HUGO_VERSION = "0.100.2"
+  HUGO_VERSION = "0.105.0"
   HUGO_ENV = "production"
-  
+
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.100.2"
+  HUGO_VERSION = "0.105.0"
 ```
 
 This configuration assumes you are deploying Congo as a Hugo module. If you have installed the theme using another method, change the build command to simply `hugo --gc --minify -b $URL`.
@@ -118,6 +119,21 @@ Create a new **Static Site** and link it to your project's code repository. Then
 {{< screenshot src="render-settings.jpg" alt="Screen capture of Render settings" >}}
 
 The site will automatically build and deploy whenever you push a change to your repo.
+
+## Cloudflare Pages
+
+Cloudflare offers the [Pages](https://pages.cloudflare.com/) service that can host Hugo blogs. It builds the site from a git repository and then hosts it on Cloudflare's CDN. Follow their [Hugo deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site) to get started.
+
+The Rocket Loader™ feature offered by Cloudflare tries to speed up rendering of web pages with JavaScript, but it breaks the appearance switcher in the theme. It can also cause an annoying light/dark screen flash when browsing your site due to scripts loading in the wrong order.
+
+This problem can be fixed by disabling it:
+
+- Go to the [Cloudflare dashboard](https://dash.cloudflare.com)
+- Click on your domain name in the list
+- Click _Optimization_ in the _Speed_ section
+- Scroll down to _Rocket Loader™_ and disable it
+
+Hugo sites built with Congo still load very quickly, even with this feature disabled.
 
 ## Shared hosting, VPS or private web server
 

@@ -7,33 +7,37 @@
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
   </header>
   <section
-    class="flex flex-col max-w-full prose lg:flex-row dark:prose-invert {{ if $toc -}}
+    class="{{ if $toc -}}
       mt-12
     {{- else -}}
       mt-0
-    {{- end }}"
+    {{- end }} prose flex max-w-full flex-col dark:prose-invert lg:flex-row"
   >
     {{ if $toc }}
-      <div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
-        <div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+      <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+        <div class="toc ltr:pl-5 rtl:pr-5 lg:sticky lg:top-10">
           {{ partial "toc.html" . }}
         </div>
       </div>
     {{ end }}
-    <div class="min-w-0 min-h-0 max-w-prose">
+    <div class="min-w-0 min-h-0 max-w-prose grow">
       {{ .Content | emojify }}
     </div>
   </section>
-  {{ if gt .Pages 0 }}
+  {{ if .Data.Pages }}
     <section>
-      {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
-        {{ if $.Params.groupByYear | default ($.Site.Params.list.groupByYear | default true) }}
-          <h2 class="mt-12 text-2xl font-bold first:mt-8 text-neutral-700 dark:text-neutral-300">
+      {{ if $.Params.groupByYear | default ($.Site.Params.list.groupByYear | default true) }}
+        {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+          <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
             {{ .Key }}
           </h2>
-          <hr class="border-dotted border-neutral-400 w-36" />
+          <hr class="border-dotted w-36 border-neutral-400" />
+          {{ range .Pages }}
+            {{ partial "article-link.html" . }}
+          {{ end }}
         {{ end }}
-        {{ range .Pages }}
+      {{ else }}
+        {{ range .Paginator.Pages }}
           {{ partial "article-link.html" . }}
         {{ end }}
       {{ end }}

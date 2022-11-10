@@ -47,23 +47,24 @@ Congo is optimised for full multilingual websites and theme assets are translate
 
 The theme currently supports the following languages by default:
 
-| Language                         | Code    |
-| -------------------------------- | ------- |
-| :gb: English                     | `en`    |
-| :bangladesh: Bengali             | `bn`    |
-| :cn: Chinese                     | `zh`    |
-| :finland: Finnish                | `fi`    |
-| :fr: French                      | `fr`    |
-| :de: German                      | `de`    |
-| :israel: Hebrew                  | `he`    |
-| :hungary: Hungarian              | `hu`    |
-| :it: Italian                     | `it`    |
-| :jp: Japanese                    | `ja`    |
-| :brazil: Portuguese (Brazil)     | `pt-br` |
-| :portugal: Portuguese (Portugal) | `pt-pt` |
-| :romania: Romanian               | `ro`    |
-| :es: Spanish (Spain)             | `es`    |
-| :tr: Turkish                     | `tr`    |
+| Language                              | Code    |
+| ------------------------------------- | ------- |
+| :gb: English                          | `en`    |
+| :bangladesh: Bengali                  | `bn`    |
+| :cn: Simplified Chinese (China)       | `zh-cn` |
+| :taiwan: Traditional Chinese (Taiwan) | `zh-tw` |
+| :finland: Finnish                     | `fi`    |
+| :fr: French                           | `fr`    |
+| :de: German                           | `de`    |
+| :israel: Hebrew                       | `he`    |
+| :hungary: Hungarian                   | `hu`    |
+| :it: Italian                          | `it`    |
+| :jp: Japanese                         | `ja`    |
+| :brazil: Portuguese (Brazil)          | `pt-br` |
+| :portugal: Portuguese (Portugal)      | `pt-pt` |
+| :romania: Romanian                    | `ro`    |
+| :es: Spanish (Spain)                  | `es`    |
+| :tr: Turkish                          | `tr`    |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
@@ -74,7 +75,7 @@ In order to be as flexible as possible, a language configuration file needs to b
 The default file can be used as a template to create additional languages, or renamed if you wish to author your website in a language other than English. Simply name the file using the format `languages.[language-code].toml`.
 
 {{< alert >}}
-**Note:** Ensure the `defaultContentLanguage` parameter in the [site configuration](#site-configuration) matches the language code in your language config filename.  
+**Note:** Ensure the `defaultContentLanguage` parameter in the [site configuration](#site-configuration) matches the language code in your language config filename.
 {{< /alert >}}
 
 <!-- prettier-ignore-start -->
@@ -119,10 +120,11 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`autoSwitchAppearance`|`true`|Whether the theme appearance automatically switches based upon the visitor's operating system preference. Set to `false` to force the site to always use the `defaultAppearance`.|
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
 |`enableCodeCopy`|`false`|Whether copy-to-clipboard buttons are enabled for `<code>` blocks. The `highlight.noClasses` parameter must be set to `false` for code copy to function correctly. Read more about [other configuration files](#other-configuration-files) below.|
-|`logo`|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
 |`mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`robots`|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
-|`header.layout`|`"basic"`|The layout of the page header and menu. Valid values are `basic`, `hamburger` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/header/custom.html` file.|
+|`header.layout`|`"basic"`|The layout of the page header and menu. Valid values are `basic`, `hamburger`, `hybrid` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/header/custom.html` file.|
+|`header.logo`|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
+|`header.showTitle`|`true`|Whether the site title is displayed in the header.|
 |`footer.showCopyright`|`true`|Whether or not to show the copyright string in the site footer. Note that the string itself can be customised using the `copyright` parameter in the [languages configuration](#language-and-i18n).|
 |`footer.showThemeAttribution`|`true`|Whether or not to show the "powered by" theme attribution in the site footer. If you choose to disable this message, please consider attributing the theme somewhere else on your site (for example, on your about page).|
 |`footer.showAppearanceSwitcher`|`false`|Whether or not to show the appearance switcher in the site footer. The browser's local storage is used to persist the visitor's preference.|
@@ -148,8 +150,10 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.sharingLinks`|_Not set_|Which sharing links to display at the end of each article. When not provided, or set to `false` no links will be displayed.|
 |`list.showBreadcrumbs`|`false`|Whether or not breadcrumbs are displayed in the header on list pages.|
 |`list.showTableOfContents`|`false`|Whether or not the table of contents is displayed on list pages.|
+|`list.showTaxonomies`|`false`|Whether or not the taxonomies related to this article are displayed on list pages.|
 |`list.showSummary`|`false`|Whether or not article summaries are displayed on list pages. If a summary is not provided in the [front matter]({{< ref "front-matter" >}}), one will be auto generated using the `summaryLength` parameter in the [site configuration](#site-configuration).|
 |`list.groupByYear`|`true`|Whether or not articles are grouped by year on list pages.|
+|`list.paginationWidth`|`1`|How many pagination links to output either side of the current page when the page list needs to be truncated. A width of `1` will output one link either side of the current page when the list needs to be truncated. Links to the current, first and last pages are always displayed and are in addition to this value.|
 |`sitemap.excludedKinds`|`["taxonomy", "term"]`|Kinds of content that should be excluded from the generated `/sitemap.xml` file. Refer to the [Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds) for acceptable values.|
 |`taxonomy.showTermCount`|`true`|Whether or not the number of articles within a taxonomy term is displayed on the taxonomy listing.|
 |`fathomAnalytics.site`|_Not set_|The site code generated by Fathom Analytics for the website. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|

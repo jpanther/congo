@@ -1,7 +1,8 @@
 <a
-  class="px-4 py-2 !text-neutral !no-underline !rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  class="inline-block !rounded-md bg-primary-600 px-4 py-1 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
   {{ with .Get "href" }}href="{{ . }}"{{ end }}
   {{ with .Get "target" }}target="{{ . }}"{{ end }}
+  {{ with .Get "download" }}download="{{ . }}"{{ end }}
   role="button"
 >
   {{ .Inner }}

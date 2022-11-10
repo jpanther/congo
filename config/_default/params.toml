@@ -16,7 +16,9 @@ enableCodeCopy = false
 # robots = ""
 
 [header]
-  layout = "basic" # valid options: basic, hamburger, custom
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  # logo = "img/logo.jpg"
+  showTitle = true
 
 [footer]
   showCopyright = true
@@ -51,7 +53,9 @@ enableCodeCopy = false
   showBreadcrumbs = false
   showSummary = false
   showTableOfContents = false
+  showTaxonomies = false
   groupByYear = true
+  paginationWidth = 1
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]

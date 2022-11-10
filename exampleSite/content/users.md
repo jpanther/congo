@@ -18,7 +18,6 @@ Real websites that are built with Congo.
 | Website                                                                | Details                      |
 | ---------------------------------------------------------------------- | ---------------------------- |
 | [jamespanther.com](https://jamespanther.com)                           | Personal site - Theme author |
-| [srisco.dev](https://srisco.dev)                                       | Personal site                |
 | [antoinesoetewey.com](https://antoinesoetewey.com/)                    | Personal site                |
 | [leif.io](https://leif.io/)                                            | Personal site and Tech blog  |
 | [dr460nf1r3.org](https://dr460nf1r3.org/)                              | Personal site and Blog       |
@@ -36,5 +35,17 @@ Real websites that are built with Congo.
 | [ruihao-li.github.io](https://ruihao-li.github.io/)                    | Personal site and Blog       |
 | [phalanxhead.dev](https://phalanxhead.dev)                             | Personal site and Blog       |
 | [Bible Multi Apps](https://hotlittlewhitedog.gitlab.io/biblemulti)     | Personal site and Blog       |
+| [Jh123x](https://jh123x.com/)                                          | Personal site and Blog       |
+| [sforzando LLC. and Inc.](https://sfz.dev/)                            | Corporate site and Blog      |
+| [aidansmith.me](https://aidansmith.me/)                                | Personal Site                |
+| [nunocoracao.com](https://nunocoracao.com)                             | Personal site and Blog       |
+| [szegedkungfu.hu](https://balance-se.github.io/)                       | Sports association site      |
+| [jcransom.com](https://www.jcransom.com/)                              | Personal Site and Blog       |
+| [cbrincoveanu.com](https://www.cbrincoveanu.com/)                      | Personal site and Blog       |
+| [medical-humanities](https://medical-humanities.org)                   | Academic site                |
+| [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog       |
+| [major.io](https://major.io)                                           | Personal site and Blog       |
+| [bayas.dev](https://bayas.dev)                                         | Personal site and Blog       |
+| [顾宇的博客](https://www.guyu.me/)                                     | Personal Blog (in Chinese)   |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).

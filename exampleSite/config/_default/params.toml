@@ -16,7 +16,9 @@ mainSections = ["samples"]
 # robots = ""
 
 [header]
-  layout = "basic" # valid options: basic, hamburger, custom
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  # logo = "img/logo.jpg"
+  showTitle = true
 
 [footer]
   showCopyright = true
@@ -51,7 +53,9 @@ mainSections = ["samples"]
   showBreadcrumbs = true
   showSummary = false
   showTableOfContents = true
+  showTaxonomies = false
   groupByYear = false
+  paginationWidth = 1
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]

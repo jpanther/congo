@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     name: Build Example Site
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:

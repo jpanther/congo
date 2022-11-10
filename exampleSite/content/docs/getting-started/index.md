@@ -89,6 +89,8 @@ Although these are the default schemes, you can also create your own. Refer to t
 
 By default, Congo doesn't force you to use a particular content type. In doing so you are free to define your content as you wish. You might prefer _pages_ for a static site, _posts_ for a blog, or _projects_ for a portfolio.
 
+### Directory structure
+
 Here's a quick overview of a basic Congo project. All content is placed within the `content` folder:
 
 ```shell
@@ -111,11 +113,48 @@ Here's a quick overview of a basic Congo project. All content is placed within t
     └── congo
 ```
 
+{{< alert >}}
+The key thing to note here is that within the content directory, normal article pages are named `index.md` while list pages are named `_index.md`. Any assets that go along with the article should be placed in a sub-directory alongside the index file.
+{{< /alert >}}
+
 It's important to have a firm grasp of how Hugo expects content to be organised as the theme is designed to take full advantage of Hugo page bundles. Be sure to read the [official Hugo docs](https://gohugo.io/content-management/organization/) for more information.
+
+### Feature, cover and thumbnail images
+
+The Congo theme supports displaying images on article listings and at the top of individual article pages. There are three types of images supported, each with their own use case: `feature`, `cover` and `thumb`.
+
+In the example below, a cover and thumb image have been provided for the `first-post` article:
+
+```shell
+.
+└── content
+    └── posts
+        ├── _index.md
+        └── first-post
+            ├── cover.jpg
+            ├── index.md
+            └── thumb.jpg
+```
+
+The `thumb` image is used as the article thumbnail and will be displayed in article lists, and the `cover` image will be displayed at the top of the article content on individual article pages.
+
+![A screenshot of an article with a thumbnail image](article-screenshot.jpg "This example shows an article with a thumbnail image.")
+
+{{< alert >}}
+In order to provide maximum performance, thumbnail images are automatically cropped and resized to a 4:3 ratio. Cover images will be automatically resized to fit their content, but any ratio is permitted.
+{{< /alert >}}
+
+The `feature` image is a special type, and when present, it will be used in place of _both_ the `thumb` and `cover` images. Feature images are also present in the article metadata, which is included when content is shared to third-party networks like Facebook and Twitter.
+
+The theme will intelligently detect article images and automatically add them to your site. You don't have to refer to them in the front matter and simply need to place an appropriately named file within the page resources. If the term `feature`, `cover` or `thumb` is found anywhere in the image filename, then it will be used for that purpose.
+
+The [Samples section]({{< ref "samples" >}}) provides a number of examples of these images (and you can view the [source code](https://github.com/jpanther/congo/tree/dev/exampleSite/content/samples) to see the file structure).
+
+### Taxonomies
 
 Congo is also flexible when it comes to taxonomies. Some people prefer to use _tags_ and _categories_ to group their content, others prefer to use _topics_.
 
-Hugo defaults to using posts, tags and categories out of the box and this will work fine if that's what you want. If you wish to customise this, however, you can do so by creating a `taxonomies.toml` configuation file:
+Hugo defaults to using posts, tags and categories out of the box and this will work fine if that's what you want. If you wish to customise this, however, you can do so by creating a `taxonomies.toml` configuration file:
 
 ```toml
 # config/_default/taxonomies.toml

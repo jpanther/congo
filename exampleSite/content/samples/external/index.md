@@ -1,11 +1,11 @@
 ---
-title: "An External Article"
+title: "External Article - Why I switched to Fathom Analytics"
 date: 2019-01-24
 externalUrl: "https://jamespanther.com/writings/i-switched-from-google-analytics-to-fathom-analytics/"
-summary: "The `externalUrl` front matter parameter can link to any URL."
+summary: "The `externalUrl` front matter parameter can link to any URL. This article looks just like any other, but will link to a post that is outside the Hugo project."
 showReadingTime: false
 _build:
-  render: "false"
+  render: "never"
   list: "local"
 ---
 

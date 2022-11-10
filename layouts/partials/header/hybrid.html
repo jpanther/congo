@@ -1,0 +1,81 @@
+<header class="py-6 font-semibold text-neutral-900 dark:text-neutral print:hidden sm:py-10">
+  <nav class="flex items-start justify-between sm:items-center">
+    {{/* Site logo/title */}}
+    <div class="z-40 flex flex-row items-center">
+      {{ partial "logo.html" . }}
+      {{ partial "translations.html" . }}
+    </div>
+    {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
+      {{/* Hamburger menu */}}
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          {{ partial "icon.html" "bars" }}
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-screen w-screen cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 ltr:text-right rtl:text-left sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                >{{ partial "icon.html" "xmark" }}</span
+              >
+            </li>
+            {{ if .Site.Menus.main }}
+              {{ range .Site.Menus.main }}
+                <li class="mb-1">
+                  <a
+                    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                    href="{{ .URL }}"
+                    title="{{ .Title }}"
+                    >{{ .Name | markdownify | emojify }}</a
+                  >
+                </li>
+              {{ end }}
+            {{ end }}
+            {{ if .Site.Params.enableSearch | default false }}
+              <li>
+                <button
+                  id="search-button-2"
+                  class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                  title="{{ i18n "search.open_button_title" }}"
+                >
+                  {{ partial "icon.html" "search" }}
+                </button>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </label>
+      {{/* Basic menu */}}
+      <ul class="hidden list-none flex-row ltr:text-right rtl:text-left sm:flex">
+        {{ if .Site.Menus.main }}
+          {{ range .Site.Menus.main }}
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="{{ .URL }}"
+                title="{{ .Title }}"
+                >{{ .Name | markdownify | emojify }}</a
+              >
+            </li>
+          {{ end }}
+        {{ end }}
+        {{ if .Site.Params.enableSearch | default false }}
+          <li class="ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+            <button
+              id="search-button-1"
+              class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+              title="{{ i18n "search.open_button_title" }}"
+            >
+              {{ partial "icon.html" "search" }}
+            </button>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </nav>
+</header>

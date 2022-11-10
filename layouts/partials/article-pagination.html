@@ -11,13 +11,13 @@
       <div class="flex justify-between pt-3">
         <span>
           {{ if $prev }}
-            <a class="flex group" href="{{ $prev.RelPermalink }}">
+            <a class="group flex" href="{{ $prev.RelPermalink }}">
               <span
-                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                class="mr-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
               >
               <span
-                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                class="ml-2 text-neutral-700 transition-transform group-hover:translate-x-[2px] group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
                 >&rarr;</span
               >
               <span class="flex flex-col">
@@ -36,7 +36,7 @@
         </span>
         <span>
           {{ if $next }}
-            <a class="flex text-right group" href="{{ $next.RelPermalink }}">
+            <a class="group flex text-right" href="{{ $next.RelPermalink }}">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -49,11 +49,11 @@
                 </span>
               </span>
               <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                class="ml-2 text-neutral-700 transition-transform group-hover:translate-x-[2px] group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&rarr;</span
               >
               <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                class="mr-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
               >
             </a>
