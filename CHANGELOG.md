@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Pagination is duplicated on term pages ([#366](https://github.com/jpanther/congo/issues/366))
+
 ## [2.4.0] - 2022-11-10
 
 ### Added
