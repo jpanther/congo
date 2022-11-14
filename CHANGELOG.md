@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - List page doesn't render nested list pages ([#365](https://github.com/jpanther/congo/issues/365))
 - Pagination is duplicated on term pages ([#366](https://github.com/jpanther/congo/issues/366))
+- Link to last pagination page sometimes displays twice
 
 ## [2.4.0] - 2022-11-10
 

@@ -59,7 +59,7 @@
       {{- end }}
 
       {{- with .Last }}
-        {{- if lt $currentPageNumber (sub .TotalPages $width) }}
+        {{- if and (lt $currentPageNumber (sub .TotalPages $width)) (lt $end .TotalPages) }}
           {{- if lt $currentPageNumber (sub .TotalPages (add $width 1)) }}
             <li>&ctdot;</li>
           {{- end }}
