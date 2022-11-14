@@ -37,7 +37,7 @@
           {{ end }}
         {{ end }}
       {{ else }}
-        {{ range .Paginator.Pages }}
+        {{ range (.Paginate .Pages).Pages }}
           {{ partial "article-link.html" . }}
         {{ end }}
       {{ end }}

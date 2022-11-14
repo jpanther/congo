@@ -1,0 +1,16 @@
+name: Unlabeller
+
+on:
+  issues:
+    types: [closed]
+  pull_request:
+    types: [closed]
+
+jobs:
+  unlabel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove labels
+        uses: andymckay/labeler@master
+        with:
+          remove-labels: "wip"

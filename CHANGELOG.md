@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.4.1] - 2022-11-14
+
+### Changed
+
+- Upgrade to Tailwind v3.2.4 ([#368](https://github.com/jpanther/congo/pull/368))
+
+### Fixed
+
+- List page doesn't render nested list pages ([#365](https://github.com/jpanther/congo/issues/365))
+- Pagination is duplicated on term pages ([#366](https://github.com/jpanther/congo/issues/366))
+- Link to last pagination page sometimes displays twice
+- Recent articles would sometimes display less than five articles
+
 ## [2.4.0] - 2022-11-10
 
 ### Added
@@ -540,7 +553,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.4.0...HEAD
+[unreleased]: https://github.com/jpanther/congo/compare/v2.4.1...HEAD
+[2.4.1]: https://github.com/jpanther/congo/compare/v2.4.0...v2.4.1
 [2.4.0]: https://github.com/jpanther/congo/compare/v2.3.1...v2.4.0
 [2.3.1]: https://github.com/jpanther/congo/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/jpanther/congo/compare/v2.2.3...v2.3.0
