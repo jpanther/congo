@@ -45,26 +45,27 @@ Note that the variable names provided in this table use dot notation to simplify
 
 Congo is optimised for full multilingual websites and theme assets are translated into several languages out of the box. The language configuration allows you to generate multiple versions of your content to provide a customised experience to your visitors in their native language.
 
-The theme currently supports the following languages by default:
+The theme currently supports the following languages out of the box:
 
-| Language                              | Code    |
-| ------------------------------------- | ------- |
-| :gb: English                          | `en`    |
-| :bangladesh: Bengali                  | `bn`    |
-| :cn: Simplified Chinese (China)       | `zh-cn` |
-| :taiwan: Traditional Chinese (Taiwan) | `zh-tw` |
-| :finland: Finnish                     | `fi`    |
-| :fr: French                           | `fr`    |
-| :de: German                           | `de`    |
-| :israel: Hebrew                       | `he`    |
-| :hungary: Hungarian                   | `hu`    |
-| :it: Italian                          | `it`    |
-| :jp: Japanese                         | `ja`    |
-| :brazil: Portuguese (Brazil)          | `pt-br` |
-| :portugal: Portuguese (Portugal)      | `pt-pt` |
-| :romania: Romanian                    | `ro`    |
-| :es: Spanish (Spain)                  | `es`    |
-| :tr: Turkish                          | `tr`    |
+| Language                                | Code    |
+| --------------------------------------- | ------- |
+| :gb: **English (default)**              | `en`    |
+| :bangladesh: Bengali                    | `bn`    |
+| :cn: Chinese - Simplified (China)       | `zh-cn` |
+| :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
+| :netherlands: Dutch                     | `nl`    |
+| :finland: Finnish                       | `fi`    |
+| :fr: French                             | `fr`    |
+| :de: German                             | `de`    |
+| :israel: Hebrew                         | `he`    |
+| :hungary: Hungarian                     | `hu`    |
+| :it: Italian                            | `it`    |
+| :jp: Japanese                           | `ja`    |
+| :brazil: Portuguese (Brazil)            | `pt-br` |
+| :portugal: Portuguese (Portugal)        | `pt-pt` |
+| :romania: Romanian                      | `ro`    |
+| :es: Spanish (Spain)                    | `es`    |
+| :tr: Turkish                            | `tr`    |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
