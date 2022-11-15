@@ -1,0 +1,55 @@
+article:
+  anchor_label: "Anker"
+  date: "{{ .Date }}"
+  date_updated: "Bijgwerkt: {{ .Date }}"
+  draft: "Concept"
+  edit_title: "Bewerk inhoud"
+  reading_time:
+    one: "{{ .Count }} minuut"
+    other: "{{ .Count }} minuten"
+  reading_time_title: "Leestijd"
+  table_of_contents: "Inhoudsopgave"
+  word_count:
+    one: "{{ .Count }} woord"
+    other: "{{ .Count }} woorden"
+
+author:
+  byline_title: "Auteur"
+
+code:
+  copy: "Kopieer"
+  copied: "Gekopieerd"
+
+error:
+  404_title: "Pagina niet gevonden :confused:"
+  404_error: "Fout 404"
+  404_description: "Het lijkt er op dat de opgevraagde pagina niet bestaat."
+
+footer:
+  dark_appearance: "Omschakelen naar donker uiterlijk"
+  light_appearance: "Omschakelen naar licht uiterlijk"
+  powered_by: "Aangedreven door {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Link naar externe site"
+  no_articles: "Er zijn nog geen artikelen om hier weer te geven."
+
+nav:
+  scroll_to_top_title: "Scroll naar toven"
+  skip_to_main: "Spring naar inhoud"
+
+search:
+  open_button_title: "Zoeken (/)"
+  close_button_title: "Sluiten (Esc)"
+  input_placeholder: "Zoeken"
+
+sharing:
+  email: "Verstuur via email"
+  facebook: "Deel op Facebook"
+  linkedin: "Deel op LinkedIn"
+  pinterest: "Pin op Pinterest"
+  reddit: "Verzend naar Reddit"
+  twitter: "Tweet op Twitter"
+
+shortcode:
+  recent_articles: "Recent"
