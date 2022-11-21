@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
+- Code highlight background cut off when overflowing content area ([#374](https://github.com/jpanther/congo/issues/374))
 - 'Description' HTML meta tag not set from article description ([#378](https://github.com/jpanther/congo/issues/378))
 
 ## [2.4.1] - 2022-11-14
