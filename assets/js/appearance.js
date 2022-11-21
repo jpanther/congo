@@ -1,8 +1,16 @@
 const sitePreference = document.documentElement.getAttribute("data-default-appearance");
 const userPreference = localStorage.getItem("appearance");
 
+function setThemeColor() {
+  const metaThemeColor = document.querySelector("meta[name=theme-color]");
+  document.documentElement.classList.contains("dark")
+    ? metaThemeColor.setAttribute("content", "#27272a")
+    : metaThemeColor.setAttribute("content", "#ffffff");
+}
+
 if ((sitePreference === "dark" && userPreference === null) || userPreference === "dark") {
   document.documentElement.classList.add("dark");
+  setThemeColor();
 }
 
 if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
@@ -12,6 +20,7 @@ if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
     userPreference !== "light"
   ) {
     document.documentElement.classList.add("dark");
+    setThemeColor();
   }
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
     if (event.matches) {
@@ -19,6 +28,7 @@ if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    setThemeColor();
   });
 }
 
@@ -27,6 +37,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   if (switcher) {
     switcher.addEventListener("click", () => {
       document.documentElement.classList.toggle("dark");
+      setThemeColor();
       localStorage.setItem(
         "appearance",
         document.documentElement.classList.contains("dark") ? "dark" : "light"
