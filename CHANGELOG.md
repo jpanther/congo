@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Dutch translation ([#371](https://github.com/jpanther/congo/pull/371))
+- HTML `theme-color` meta tag to adjust browser colours according to the active Congo colour scheme ([#379](https://github.com/jpanther/congo/pull/379))
 
 ### Changed
 
