@@ -1,11 +1,17 @@
 const sitePreference = document.documentElement.getAttribute("data-default-appearance");
 const userPreference = localStorage.getItem("appearance");
 
+function getCSSValue(varName) {
+  var cssValue = window.getComputedStyle(document.documentElement).getPropertyValue(varName);
+  return "rgb(" + cssValue.replace(/\s+/g, "") + ")";
+}
+
 function setThemeColor() {
-  const metaThemeColor = document.querySelector("meta[name=theme-color]");
+  var metaThemeColor = document.querySelector("meta[name=theme-color]");
   document.documentElement.classList.contains("dark")
-    ? metaThemeColor.setAttribute("content", "#27272a")
-    : metaThemeColor.setAttribute("content", "#ffffff");
+    ? metaThemeColor.setAttribute("content", getCSSValue("--color-neutral-800"))
+    : metaThemeColor.setAttribute("content", getCSSValue("--color-neutral"));
+  return true;
 }
 
 if ((sitePreference === "dark" && userPreference === null) || userPreference === "dark") {
