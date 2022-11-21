@@ -8,7 +8,7 @@
 {{ end }}
 {{/* Chart */}}
 {{ if .Page.HasShortcode "chart" }}
-  {{ $chartLib := resources.Get "lib/chart/chart.min.js" }}
+  {{ $chartLib := resources.Get "lib/chart/chart.umd.js" }}
   {{ $chartConfig := resources.Get "js/chart.js" }}
   {{ $chartConfig := $chartConfig | resources.Minify }}
   {{ $chartJS := slice $chartLib $chartConfig | resources.Concat "js/chart.bundle.js" | resources.Fingerprint "sha512" }}
@@ -31,6 +31,6 @@
   <script defer src="{{ $katexRenderJS.RelPermalink }}" integrity="{{ $katexRenderJS.Data.Integrity }}" onload="renderMathInElement(document.body);"></script>
   {{ $katexFonts := resources.Match "lib/katex/fonts/*" }}
   {{ range $katexFonts }}
-    <!-- {{ .RelPermalink }} -->
+    {{ .Publish }}
   {{ end }}
 {{ end }}
