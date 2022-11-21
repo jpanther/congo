@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Dutch translation ([#371](https://github.com/jpanther/congo/pull/371))
 
+### Changed
+
+- Upgrade to Chart.js v4.0.1 ([#373](https://github.com/jpanther/congo/pull/373))
+
 ## [2.4.1] - 2022-11-14
 
 ### Changed
