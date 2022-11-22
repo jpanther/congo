@@ -1,4 +1,4 @@
-/*! Congo v2.4.1 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.4.2 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
@@ -34,11 +34,11 @@ body:has(#menu-controller:checked) {
 
 /* RTL support */
 .prose blockquote {
-  @apply rtl:pr-4 rtl:border-l-0 rtl:border-r-4;
+  @apply rtl:border-l-0 rtl:border-r-4 rtl:pr-4;
 }
 .prose ul > li,
 .prose ol > li {
-  @apply rtl:pl-0 rtl:pr-2 rtl:mr-7;
+  @apply rtl:mr-7 rtl:pl-0 rtl:pr-2;
 }
 .prose ol > li:before,
 .prose ul > li:before {
@@ -84,7 +84,7 @@ body:has(#menu-controller:checked) {
   @apply visible;
 }
 .copy-button {
-  @apply absolute top-0 right-0 z-10 invisible w-20 py-1 font-mono text-sm cursor-pointer opacity-90 bg-neutral-200 whitespace-nowrap rounded-bl-md rounded-tr-md text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200;
+  @apply absolute top-0 right-0 z-10 invisible w-20 py-1 font-mono text-sm cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-neutral-200 text-neutral-700 opacity-90 dark:bg-neutral-600 dark:text-neutral-200;
 }
 .copy-button:hover,
 .copy-button:focus,
@@ -93,36 +93,37 @@ body:has(#menu-controller:checked) {
   @apply bg-primary-100 dark:bg-primary-600;
 }
 .copy-textarea {
-  @apply absolute opacity-5 -z-10;
+  @apply absolute -z-10 opacity-5;
 }
 
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {
-  @apply static rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply static rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
 }
 /* LineTableTD */
 .chroma .lntd,
 .chroma .lntd pre {
-  @apply p-0 m-0 align-top border-none;
+  @apply p-0 m-0 overflow-hidden align-top border-none;
 }
 /* LineTable */
 .chroma .lntable {
-  @apply block w-auto px-4 py-3 overflow-hidden text-base;
+  @apply block w-auto py-3 overflow-x-auto text-base;
   border-spacing: 0;
+}
+/* LineTable Line */
+.chroma .lntable .line {
+  @apply pr-4;
 }
 /* LineHighlight */
 .chroma .hl {
-  @apply block w-auto px-4 -mx-4 bg-primary-100 dark:bg-primary-900;
-}
-.chroma .lntd .hl {
-  @apply p-0 m-0;
+  @apply block w-auto bg-primary-100 dark:bg-primary-900;
 }
 /* LineNumbersTable */
 /* LineNumbers */
 .chroma .lnt,
 .chroma .ln {
-  @apply text-neutral-600 dark:text-neutral-300  mr-[0.4em] px-[0.4em] py-0;
+  @apply mr-[0.4em] px-[0.4em] py-0 text-neutral-600 dark:text-neutral-300;
 }
 /* Keyword */
 /* KeywordDeclaration */

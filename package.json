@@ -1,11 +1,11 @@
 {
   "name": "hugo-congo-theme",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Congo theme for Hugo",
   "scripts": {
-    "preinstall": "rimraf assets/vendor",
+    "preinstall": "rimraf assets/lib",
     "postinstall": "vendor-copy",
-    "assets": "rimraf assets/vendor && vendor-copy",
+    "assets": "rimraf assets/lib && vendor-copy",
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
     "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ -p 8008",
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.8",
-    "chart.js": "^3.9.1",
+    "chart.js": "^4.0.1",
     "fuse.js": "^6.6.2",
     "katex": "^0.16.3",
     "mermaid": "^9.2.2",
@@ -48,8 +48,8 @@
       "to": "assets/lib/mermaid/mermaid.min.js"
     },
     {
-      "from": "node_modules/chart.js/dist/chart.min.js",
-      "to": "assets/lib/chart/chart.min.js"
+      "from": "node_modules/chart.js/dist/chart.umd.js",
+      "to": "assets/lib/chart/chart.umd.js"
     },
     {
       "from": "node_modules/katex/dist/katex.min.js",

@@ -4,6 +4,7 @@
     <meta http-equiv="content-language" content="{{ . }}" />
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="rgb(255,255,255)" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   {{/* Title */}}
   {{ if .IsHome -}}
@@ -14,9 +15,7 @@
     <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
   {{- end }}
   {{/* Metadata */}}
-  {{ with .Site.Params.description -}}
-    <meta name="description" content="{{ . }}" />
-  {{- end }}
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
   {{ with .Site.Params.keywords -}}
     <meta name="keywords" content="{{ . }}" />
   {{- end }}
@@ -110,6 +109,6 @@
   {{ partialCached "analytics.html" .Site }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}
   {{ if templates.Exists "partials/extend-head.html" }}
-    {{ partialCached "extend-head.html" .Site }}
+    {{ partial "extend-head.html" .Site }}
   {{ end }}
 </head>
