@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Extended head and footer partials are no longer cached during builds
 - Upgrade to Chart.js v4.0.1 ([#373](https://github.com/jpanther/congo/pull/373))
 
 ### Fixed
