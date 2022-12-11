@@ -50,5 +50,6 @@ Real websites that are built with Congo.
 | [cgutierr-zgz.github.io](https://cgutierr-zgz.github.io/)              | Personal site and Tech blog  |
 | [adam.sr](https://adam.sr)                                             | Personal site and Blog       |
 | [datadi.murgi.org](https://datadi.murgi.org)                           | Personal site and Blog       |
+| [shim.web.id](https://shim.web.id)                                     | Personal Blog (in Indonesian)       |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
