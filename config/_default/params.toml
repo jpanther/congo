@@ -29,6 +29,7 @@ enableCodeCopy = false
 [homepage]
   layout = "page" # valid options: page, profile, custom
   showRecent = false
+  showRecentItems = 10
 
 [article]
   showDate = true
