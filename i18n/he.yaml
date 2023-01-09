@@ -47,6 +47,7 @@ sharing:
   email: "שליחת אימייל"
   facebook: "שיתוף בפייסבוק"
   linkedin: "שיתוף בלינקדאין"
+  # mastodon: "Toot on Mastodon"
   pinterest: "שיתוף בפינטרסט"
   reddit: "שליחה לרדיט"
   twitter: "ציוץ בטוויטר"

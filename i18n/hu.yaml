@@ -47,6 +47,7 @@ sharing:
   email: "Küldés emailben"
   facebook: "Megosztás a Facebookon"
   linkedin: "Megosztás a LinkedInen"
+  # mastodon: "Toot on Mastodon"
   pinterest: "Megosztás a Pinteresten"
   reddit: "Megosztás a Redditen"
   twitter: "Megosztás a Twitteren"
