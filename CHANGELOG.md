@@ -11,6 +11,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Indonesian translation ([#398](https://github.com/jpanther/congo/pull/398))
 - Mastodon sharing links ([#405](https://github.com/jpanther/congo/pull/405))
 
+### Changed
+
+- Upgrade to KaTeX v0.16.4 ([#414](https://github.com/jpanther/congo/pull/414))
+- Upgrade to Mermaid v9.3.0 ([#419](https://github.com/jpanther/congo/pull/419))
+- Upgrade to Chart.js v4.1.2 ([#420](https://github.com/jpanther/congo/pull/420), [#434](https://github.com/jpanther/congo/pull/434))
+
 ### Fixed
 
 - Code highlight background cut off in Google Chrome when overflowing content area ([#383](https://github.com/jpanther/congo/pull/383))
