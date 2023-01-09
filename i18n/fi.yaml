@@ -47,6 +47,7 @@ sharing:
   email: "Lähetä sähköpostilla"
   facebook: "Jaa Facebookissa"
   linkedin: "Jaa LinkedInissä"
+  # mastodon: "Toot on Mastodon"
   pinterest: "Kiinnitä Pinterestiin"
   reddit: "Lähetä Reddittiin"
   twitter: "Twiittaa Twitterissä"

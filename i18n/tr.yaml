@@ -46,6 +46,7 @@ sharing:
   email: "Email ile gönder"
   facebook: "Facebook'ta paylaş"
   linkedin: "LinkedIn'te paylaş"
+  # mastodon: "Toot on Mastodon"
   pinterest: "Pinterest'te pinle"
   reddit: "Reddit'te gönder"
   twitter: "Twitter'da Tweetle"

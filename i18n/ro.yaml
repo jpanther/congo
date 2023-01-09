@@ -47,6 +47,7 @@ sharing:
   email: "Trimite pe email"
   facebook: "Postează pe Facebook"
   linkedin: "Postează LinkedIn"
+  # mastodon: "Toot on Mastodon"
   pinterest: "Pune pe Pinterest"
   reddit: "Postează pe Reddit"
   twitter: "Scrie pe Twitter"
