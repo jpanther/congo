@@ -59,6 +59,7 @@ The theme currently supports the following languages out of the box:
 | :de: German                             | `de`    |
 | :israel: Hebrew                         | `he`    |
 | :hungary: Hungarian                     | `hu`    |
+| :indonesia: Indonesian                  | `id`    |
 | :it: Italian                            | `it`    |
 | :jp: Japanese                           | `ja`    |
 | :brazil: Portuguese (Brazil)            | `pt-br` |
