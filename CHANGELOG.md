@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Code highlight background cut off in Google Chrome when overflowing content area ([#383](https://github.com/jpanther/congo/pull/383))
+- Social icons shift position during CSS transition when hovered in Safari ([#396](https://github.com/jpanther/congo/pull/396))
 - Error when attempting to resize SVG assets in page bundles ([#427](https://github.com/jpanther/congo/pull/427))
 
 ## [2.4.2] - 2022-11-22
