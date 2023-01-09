@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Indonesian translation ([#398](https://github.com/jpanther/congo/pull/398))
+- Mastodon sharing links ([#405](https://github.com/jpanther/congo/pull/405))
 
 ### Fixed
 
