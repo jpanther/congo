@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Front matter keywords support on a per article basis
 - Indonesian translation ([#398](https://github.com/jpanther/congo/pull/398))
 - Mastodon sharing links ([#405](https://github.com/jpanther/congo/pull/405))
 - `homepage.recentLimit` parameter to adjust the maximum number of recent items listed on the homepage ([#411](https://github.com/jpanther/congo/pull/411))
