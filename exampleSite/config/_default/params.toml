@@ -29,6 +29,7 @@ mainSections = ["samples"]
 [homepage]
   layout = "custom" # valid options: page, profile, custom
   showRecent = true
+  recentLimit = 5
 
 [article]
   showDate = true

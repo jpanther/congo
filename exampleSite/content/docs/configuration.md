@@ -133,7 +133,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`footer.showScrollToTop`|`true`|When set to `true` the scroll to top arrow is displayed.|
 |`homepage.layout`|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout]({{< ref "homepage-layout" >}}) section for more details.|
 |`homepage.showRecent`|`false`|Whether or not to display the recent articles list on the homepage.|
-|`homepage.showRecentItems`|`5`|The number of recent articles to display.|
+|`homepage.recentLimit`|`5`|The maximum number of recent articles to display when `homepage.showRecent` is `true`.|
 |`article.showDate`|`true`|Whether or not article dates are displayed.|
 |`article.showDateUpdated`|`false`|Whether or not the dates articles were updated are displayed.|
 |`article.showAuthor`|`true`|Whether or not the author box is displayed in the article footer.|
