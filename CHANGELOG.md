@@ -18,12 +18,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgrade to KaTeX v0.16.4 ([#414](https://github.com/jpanther/congo/pull/414))
 - Upgrade to Mermaid v9.3.0 ([#419](https://github.com/jpanther/congo/pull/419))
 - Upgrade to Chart.js v4.1.2 ([#420](https://github.com/jpanther/congo/pull/420), [#434](https://github.com/jpanther/congo/pull/434))
+- Upgrade to Typography v0.5.9 ([#437](https://github.com/jpanther/congo/pull/437))
 
 ### Fixed
 
 - Code highlight background cut off in Google Chrome when overflowing content area ([#383](https://github.com/jpanther/congo/pull/383))
 - Social icons shift position during CSS transition when hovered in Safari ([#396](https://github.com/jpanther/congo/pull/396))
 - Error when attempting to resize SVG assets in page bundles ([#427](https://github.com/jpanther/congo/pull/427))
+- Appearance switcher missing `aria-label` ([#438](https://github.com/jpanther/congo/pull/438))
+- Article links missing `alt` text and `aria-label` ([#439](https://github.com/jpanther/congo/pull/439))
 
 ## [2.4.2] - 2022-11-22
 
