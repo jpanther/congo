@@ -10,6 +10,7 @@
         {{ else }}
           {{ $.RelPermalink }}
         {{ end }}"
+        aria-label="{{ $.Title | emojify }}"
       >
         <img
           class="w-24 rounded-md sm:w-40"
@@ -17,6 +18,7 @@
           {{- (.Fill "160x120 smart").RelPermalink }} 160w,
           {{- (.Fill "320x240 smart").RelPermalink }} 2x"
           src="{{ (.Fill "160x120 smart").RelPermalink }}"
+          alt=""
         />
       </a>
     </div>
