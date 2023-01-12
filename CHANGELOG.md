@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Code highlight background cut off in Google Chrome when overflowing content area ([#383](https://github.com/jpanther/congo/pull/383))
 - Social icons shift position during CSS transition when hovered in Safari ([#396](https://github.com/jpanther/congo/pull/396))
+- Hamburger navigation menu is misaligned in mobile browsers ([#399](https://github.com/jpanther/congo/pull/399))
 - Error when attempting to resize SVG assets in page bundles ([#427](https://github.com/jpanther/congo/pull/427))
 - Appearance switcher missing `aria-label` ([#438](https://github.com/jpanther/congo/pull/438))
 - Article links missing `alt` text and `aria-label` ([#439](https://github.com/jpanther/congo/pull/439))

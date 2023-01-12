@@ -23,7 +23,7 @@ body button {
 
 /* Hamburger menu */
 body:has(#menu-controller:checked) {
-  @apply overflow-y-hidden;
+  @apply fixed overflow-y-hidden;
 }
 #menu-button:has(#menu-controller:checked) {
   @apply invisible;
