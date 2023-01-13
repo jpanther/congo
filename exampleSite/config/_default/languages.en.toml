@@ -7,7 +7,7 @@ rtl = false
 
 title = "Congo"
 description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
-copyright = "&copy; 2022 Congo contributors"
+copyright = "&copy; 2023 Congo contributors"
 
 dateFormat = "2 January 2006"
 
