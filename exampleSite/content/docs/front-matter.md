@@ -16,6 +16,13 @@ Front matter parameter default values are inherited from the theme's [base confi
 |---|---|---|
 |`title`|_Not set_|The name of the article.|
 |`description`|_Not set_|The text description for the article. It is used in the HTML metadata.|
+|`feature`|`"*feature*"`|The text pattern to match the feature image filename for this article.|
+|`featureAlt`|`""`|The alternative text description for the feature image.|
+|`cover`|`"*cover*"`|The text pattern to match the cover image filename for this article.|
+|`coverAlt`|`featureAlt`|The alternative text description for the cover image.|
+|`coverCaption`|_Not set_|The figure caption text to be displayed beneath the cover image.|
+|`thumbnail`|`"*thumb*"`_|The text pattern to match the thumbnail image filename for this article.|
+|`thumbnailAlt`|`featureAlt`|The alternative text description for the thumbnail image.|
 |`externalUrl`|_Not set_|If this article is published on a third-party website, the URL to this article. Providing a URL will prevent a content page being generated and any references to this article will link directly to the third-party website.|
 |`editURL`|`article.editURL`|When `showEdit` is active, the URL for the edit link.|
 |`editAppendPath`|`article.editAppendPath`|When `showEdit` is active, whether or not the path to the current article should be appended to the URL set at `editURL`.|

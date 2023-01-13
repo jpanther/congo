@@ -1,7 +1,7 @@
 <article class="flex flex-row mt-6 max-w-prose">
   {{- $images := $.Resources.ByType "image" }}
-  {{- $thumbnail := $images.GetMatch "*thumb*" }}
-  {{- $feature := $images.GetMatch "*feature*" | default $thumbnail }}
+  {{- $thumbnail := $images.GetMatch (.Params.thumbnail | default "*thumb*") }}
+  {{- $feature := $images.GetMatch (.Params.feature | default "*feature*") | default $thumbnail }}
   {{- with $feature }}
     <div class="flex-none pr-4 sm:pr-6 ">
       <a
@@ -18,7 +18,7 @@
           {{- (.Fill "160x120 smart").RelPermalink }} 160w,
           {{- (.Fill "320x240 smart").RelPermalink }} 2x"
           src="{{ (.Fill "160x120 smart").RelPermalink }}"
-          alt=""
+          alt="{{ $.Params.featureAlt | default $.Params.thumbnailAlt | default "" }}"
         />
       </a>
     </div>

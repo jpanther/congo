@@ -1798,6 +1798,10 @@ body:has(#menu-controller:checked) {
   margin-top: -1rem;
 }
 
+.-mt-3 {
+  margin-top: -0.75rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
