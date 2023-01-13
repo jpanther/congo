@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Images smaller than the article width are no longer resized to fill the content area and will now simply align centre ([#394](https://github.com/jpanther/congo/pull/394))
 - Upgrade to KaTeX v0.16.4 ([#414](https://github.com/jpanther/congo/pull/414))
 - Upgrade to Mermaid v9.3.0 ([#419](https://github.com/jpanther/congo/pull/419))
 - Upgrade to Chart.js v4.1.2 ([#420](https://github.com/jpanther/congo/pull/420), [#434](https://github.com/jpanther/congo/pull/434))
