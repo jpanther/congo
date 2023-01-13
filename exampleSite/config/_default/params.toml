@@ -12,7 +12,6 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["samples"]
 # robots = ""
 
 [header]

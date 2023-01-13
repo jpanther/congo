@@ -89,10 +89,11 @@ The default file can be used as a template to create additional languages, or re
 |`isoCode`|`"en"`|The ISO language code for HTML metadata purposes. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-AU`).|
 |`weight`|`1`|The weight determines the order of languages when building multilingual sites.|
 |`rtl`|`false`|Whether or not this is a RTL language. Set to `true` to reflow content from right-to-left. Congo fully supports using RTL and LTR languages at the same time and will dynamically adjust to both.|
-|`dateFormat`|`"2 January 2006"`|How dates are formatted in this language. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
 |`title`|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
 |`description`|_Not set_|The website description. This will be used in the site metadata.|
 |`copyright`|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.|
+|`dateFormat`|`"2 January 2006"`|How dates are formatted in this language. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
+|`params.mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`author.name`|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
 |`author.image`|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `assets/` folder.|
 |`author.headline`|_Not set_|A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.|
@@ -122,7 +123,6 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`autoSwitchAppearance`|`true`|Whether the theme appearance automatically switches based upon the visitor's operating system preference. Set to `false` to force the site to always use the `defaultAppearance`.|
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
 |`enableCodeCopy`|`false`|Whether copy-to-clipboard buttons are enabled for `<code>` blocks. The `highlight.noClasses` parameter must be set to `false` for code copy to function correctly. Read more about [other configuration files](#other-configuration-files) below.|
-|`mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`robots`|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`header.layout`|`"basic"`|The layout of the page header and menu. Valid values are `basic`, `hamburger`, `hybrid` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/header/custom.html` file.|
 |`header.logo`|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
