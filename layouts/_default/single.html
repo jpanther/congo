@@ -17,12 +17,18 @@
         <div class="prose">
           <img
             class="mb-6 -mt-4 rounded-md"
-            srcset="
-          {{- (.Resize "330x").RelPermalink }} 330w,
-          {{- (.Resize "660x").RelPermalink }} 660w,
-          {{- (.Resize "1024x").RelPermalink }} 1024w,
-          {{- (.Resize "1320x").RelPermalink }} 2x"
-            src="{{ (.Resize "660x").RelPermalink }}"
+            {{ if eq .MediaType.SubType "svg" }}
+              src="{{ .RelPermalink }}"
+            {{ else }}
+              {{ if lt .Width 660 }}
+                src="{{ .RelPermalink }}"
+              {{ else }}
+                srcset=" {{ (.Resize "330x").RelPermalink }} 330w,
+                {{ (.Resize "660x").RelPermalink }} 660w, {{ (.Resize "1024x").RelPermalink }}
+                1024w, {{ (.Resize "1320x").RelPermalink }} 2x"
+                src="{{ (.Resize "660x").RelPermalink }}"
+              {{ end }}
+            {{ end }}
             alt="{{ $.Params.featureAlt | default $.Params.coverAlt | default "" }}"
           />
           {{ with $.Params.coverCaption }}

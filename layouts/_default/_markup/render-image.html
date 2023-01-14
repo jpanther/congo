@@ -17,15 +17,19 @@
     <figure>
       <img
         class="mx-auto my-0 rounded-md"
-        {{ if or (lt .Width 660) (eq .MediaType.SubType "svg") }}
+        {{ if eq .MediaType.SubType "svg" }}
           src="{{ .RelPermalink }}"
         {{ else }}
-          srcset="
-          {{ (.Resize "330x").RelPermalink }} 330w,
-          {{ (.Resize "660x").RelPermalink }} 660w,
-          {{ (.Resize "1024x").RelPermalink }} 1024w,
-          {{ (.Resize "1320x").RelPermalink }} 2x"
-          src="{{ (.Resize "660x").RelPermalink }}"
+          {{ if lt .Width 660 }}
+            src="{{ .RelPermalink }}"
+          {{ else }}
+            srcset="
+            {{ (.Resize "330x").RelPermalink }} 330w,
+            {{ (.Resize "660x").RelPermalink }} 660w,
+            {{ (.Resize "1024x").RelPermalink }} 1024w,
+            {{ (.Resize "1320x").RelPermalink }} 2x"
+            src="{{ (.Resize "660x").RelPermalink }}"
+          {{ end }}
         {{ end }}
         alt="{{ $altText }}"
       />

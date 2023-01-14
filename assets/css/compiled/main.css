@@ -1890,6 +1890,10 @@ body:has(#menu-controller:checked) {
   height: 9rem;
 }
 
+.max-h-\[4\.5rem\] {
+  max-height: 4.5rem;
+}
+
 .max-h-\[10rem\] {
   max-height: 10rem;
 }
@@ -1948,6 +1952,10 @@ body:has(#menu-controller:checked) {
 
 .max-w-prose {
   max-width: 65ch;
+}
+
+.max-w-\[6rem\] {
+  max-width: 6rem;
 }
 
 .max-w-\[10rem\] {
@@ -2883,12 +2891,20 @@ body:has(#menu-controller:checked) {
     display: none;
   }
 
+  .sm\:max-h-\[7\.5rem\] {
+    max-height: 7.5rem;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
 
   .sm\:w-40 {
     width: 10rem;
+  }
+
+  .sm\:max-w-\[10rem\] {
+    max-width: 10rem;
   }
 
   .sm\:flex-row {

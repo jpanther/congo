@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Front matter support for specifying article thumbnails, covers and featured image details (including filename pattern, alt text and caption)
+- Support for SVG assets as article thumbnails, covers and featured images
 - Front matter keywords support on a per article basis
 - Indonesian translation ([#398](https://github.com/jpanther/congo/pull/398))
 - Mastodon sharing links ([#405](https://github.com/jpanther/congo/pull/405))
