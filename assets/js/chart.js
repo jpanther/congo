@@ -3,6 +3,7 @@ function css(name) {
 }
 
 Chart.defaults.font.size = 14;
+Chart.defaults.plugins.colors.enabled = false;
 Chart.defaults.backgroundColor = css("--color-primary-300");
 Chart.defaults.elements.point.borderColor = css("--color-primary-400");
 Chart.defaults.elements.bar.borderColor = css("--color-primary-500");
