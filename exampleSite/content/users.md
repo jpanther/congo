@@ -54,5 +54,6 @@ Real websites that are built with Congo.
 | [kpavlov.me](https://kpavlov.me)                                       | Personal site and Blog        |
 | [pfisterer.dev](https://pfisterer.dev)                                 | Personal site and Blog        |
 | [davidrothera.me](https://davidrothera.me)                             | Personal site and Blog        |
+| [ethantroy.com](https://ethantroy.com)                                 | Personal Site and Blog        |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).
