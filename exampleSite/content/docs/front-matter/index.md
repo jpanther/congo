@@ -3,6 +3,7 @@ title: "Front Matter"
 date: 2020-08-12
 draft: false
 description: "All the front matter variables available in Congo."
+summary: "While supporting most Hugo defaults, Congo adds a number of front matter parameters to customise the presentation of individual articles."
 slug: "front-matter"
 tags: ["front matter", "config", "docs"]
 ---

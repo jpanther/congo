@@ -12,8 +12,10 @@ showEdit: false
 ---
 
 {{< lead >}}
-Real websites that are built with Congo.
+Real websites that have been built using Congo.
 {{< /lead >}}
+
+The list below is just a handful of the websites that are built using the Congo theme. Check them out to discover some great exampels of what the theme can do.
 
 | Website                                                                | Details                       |
 | ---------------------------------------------------------------------- | ----------------------------- |

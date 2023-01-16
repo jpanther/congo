@@ -3,6 +3,7 @@ title: "Configuration"
 date: 2020-08-14
 draft: false
 description: "All the configuration variables available in Congo."
+summary: "Discover all the site, language and theme configurations that are available in Congo and how they can be used to customise your project."
 slug: "configuration"
 tags: ["config", "docs"]
 ---

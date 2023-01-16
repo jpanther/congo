@@ -3,6 +3,7 @@ title: "Installation"
 date: 2020-08-16
 draft: false
 description: "How to install the Congo theme."
+summary: "Learn how to get up and running using Hugo and Congo from a completely blank state. It's the best place to start if you're a new user."
 slug: "installation"
 tags: ["installation", "docs"]
 ---

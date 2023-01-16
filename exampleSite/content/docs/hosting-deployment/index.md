@@ -3,6 +3,7 @@ title: "Hosting & Deployment"
 date: 2020-08-07
 draft: false
 description: "Learn how to deploy a Congo site."
+summary: "Congo is designed to be flexible in almost any deployment scenario. Learn more about how to deploy your project to some common hosting platforms."
 slug: "hosting-deployment"
 tags: ["hosting", "deployment", "docs", "github", "netlify", "render"]
 ---
@@ -95,15 +96,15 @@ Then in the root of your site repository, create a `netlify.toml` file:
 
 [build.environment]
   NODE_ENV = "production"
-  GO_VERSION = "1.16"
+  GO_VERSION = "1.19"
   TZ = "UTC"  # Set to preferred timezone
 
 [context.production.environment]
-  HUGO_VERSION = "0.105.0"
+  HUGO_VERSION = "0.109.0"
   HUGO_ENV = "production"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.105.0"
+  HUGO_VERSION = "0.109.0"
 ```
 
 This configuration assumes you are deploying Congo as a Hugo module. If you have installed the theme using another method, change the build command to simply `hugo --gc --minify -b $URL`.

@@ -2,7 +2,8 @@
 title: "Getting Started"
 date: 2020-08-15
 draft: false
-description: "All the front matter variables available in Congo."
+description: "Learn how to get started using the Congo theme."
+summary: "This section assumes you have already installed the Congo theme and are ready to start with basic configuration tasks."
 slug: "getting-started"
 tags: ["installation", "docs"]
 ---
