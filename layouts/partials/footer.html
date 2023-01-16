@@ -1,3 +1,4 @@
+{{ $searchCount := 0 }}
 <footer class="py-10 print:hidden">
   {{/* Footer menu */}}
   {{ if .Site.Menus.footer }}
@@ -5,14 +6,48 @@
       <ul class="flex flex-col list-none sm:flex-row">
         {{ range .Site.Menus.footer }}
           <li
-            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+            class="mb-1 group ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
           >
-            <a
-              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-              href="{{ .URL }}"
-              title="{{ .Title }}"
-              >{{ .Name | markdownify | emojify }}</a
-            >
+            {{ if eq .Params.action "search" }}
+              {{ $searchCount = add $searchCount 1 }}
+              {{ if $.Site.Params.enableSearch | default false }}
+                <button
+                  id="search-button-f{{ $searchCount }}"
+                  title="{{ .Title | default (i18n "search.open_button_title") }}"
+                >
+                  {{ with .Params.icon }}
+                    <span
+                      class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                    >
+                      {{ partial "icon.html" . }}
+                    </span>
+                  {{ end }}{{ if .Params.showName | default true }}
+                    <span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >{{ .Name | markdownify | emojify }}</span
+                    >
+                  {{ end }}
+                </button>
+              {{ end }}
+            {{ else }}
+              <a
+                href="{{ .URL }}"
+                title="{{ .Title }}"
+                {{ with .Params.target }}target="{{ . }}"{{ end }}
+                >{{ with .Params.icon }}
+                  <span
+                    class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                  >
+                    {{ partial "icon.html" . }}
+                  </span>
+                {{ end }}{{ if .Params.showName | default true }}
+                  <span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >{{ .Name | markdownify | emojify }}</span
+                  >
+                {{ end }}</a
+              >
+            {{ end }}
           </li>
         {{ end }}
       </ul>

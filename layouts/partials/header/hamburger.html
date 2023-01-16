@@ -1,3 +1,4 @@
+{{ $searchCount := 0 }}
 <header class="py-6 font-semibold text-neutral-900 dark:text-neutral print:hidden sm:py-10">
   <nav class="flex items-start justify-between sm:items-center">
     {{/* Site logo/title */}}
@@ -26,26 +27,60 @@
             </li>
             {{ if .Site.Menus.main }}
               {{ range .Site.Menus.main }}
-                <li class="mb-1">
-                  <a
-                    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                    href="{{ .URL }}"
-                    title="{{ .Title }}"
-                    >{{ .Name | markdownify | emojify }}</a
-                  >
+                <li class="mb-1 group">
+                  {{ if eq .Params.action "search" }}
+                    {{ $searchCount = add $searchCount 1 }}
+                    {{ if $.Site.Params.enableSearch | default false }}
+                      <button
+                        id="search-button-m{{ $searchCount }}"
+                        title="{{ .Title | default (i18n "search.open_button_title") }}"
+                      >
+                        {{ with .Params.icon }}
+                          <span
+                            class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                          >
+                            {{ partial "icon.html" . }}
+                          </span>
+                        {{ end }}{{ if .Params.showName | default true }}
+                          <span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            >{{ .Name | markdownify | emojify }}</span
+                          >
+                        {{ end }}
+                      </button>
+                    {{ end }}
+                  {{ else }}
+                    <a
+                      href="{{ .URL }}"
+                      title="{{ .Title }}"
+                      {{ with .Params.target }}target="{{ . }}"{{ end }}
+                      >{{ with .Params.icon }}
+                        <span
+                          class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                        >
+                          {{ partial "icon.html" . }}
+                        </span>
+                      {{ end }}{{ if .Params.showName | default true }}
+                        <span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >{{ .Name | markdownify | emojify }}</span
+                        >
+                      {{ end }}</a
+                    >
+                  {{ end }}
                 </li>
               {{ end }}
-            {{ end }}
-            {{ if .Site.Params.enableSearch | default false }}
-              <li>
-                <button
-                  id="search-button"
-                  class="text-base hover:text-primary-600 dark:hover:text-primary-400"
-                  title="{{ i18n "search.open_button_title" }}"
-                >
-                  {{ partial "icon.html" "search" }}
-                </button>
-              </li>
+              {{ if and ($.Site.Params.enableSearch | default false) (eq $searchCount 0) }}
+                <li class="mb-1 group">
+                  <button id="search-button-m0" title="{{ i18n "search.open_button_title" }}">
+                    <span
+                      class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                    >
+                      {{ partial "icon.html" "search" }}
+                    </span>
+                  </button>
+                </li>
+              {{ end }}
             {{ end }}
           </ul>
         </div>

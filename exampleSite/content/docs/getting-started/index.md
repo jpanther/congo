@@ -3,7 +3,7 @@ title: "Getting Started"
 date: 2020-08-15
 draft: false
 description: "Learn how to get started using the Congo theme."
-summary: "This section assumes you have already installed the Congo theme and are ready to start with basic configuration tasks."
+summary: "This section assumes you have already installed the Congo theme and are ready to start with basic configuration tasks like selecting a colour scheme, menu and content structure."
 slug: "getting-started"
 tags: ["installation", "docs"]
 ---
@@ -174,7 +174,7 @@ Congo has two menus that can be customised to suit the content and layout of you
 Both menus are configured in the `menus.en.toml` file. Similarly to the languages config file, if you wish to use another language, rename this file and replace `en` with the language code you wish to use.
 
 ```toml
-# config/_default/menus.toml
+# config/_default/menus.en.toml
 
 [[main]]
   name = "Blog"
@@ -186,18 +186,38 @@ Both menus are configured in the `menus.en.toml` file. Similarly to the language
   pageRef = "topics"
   weight = 20
 
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/jpanther/congo"
+  weight = 30
+  [main.params]
+    icon = "github"
+    showName = false
+    target = "_blank"
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
+    icon = "search"
+
 [[footer]]
   name = "Privacy"
-  url = "https://external-link"
+  pageRef = "privacy"
 ```
 
 The `name` parameter specifies the text that is used in the menu link. You can also optionally provide a `title` which fills the HTML title attribute for the link.
 
 The `pageRef` parameter allows you to easily reference Hugo content pages and taxonomies. It is the quickest way to configure the menu as you can simply refer to any Hugo content item and it will automatically build the correct link. To link to external URLs, the `url` parameter can be used.
 
+Further customisation can be achieved through the use of special theme parameters. Providing `params` within a link allows the addition of an `icon`, the ability to toggle the link text with `showName` and to optionally set a `target` for the URL. In the example above, the GitHub link will only display as an icon and will open the link in a new window.
+
+Finally, there is a special case for theme links, which are denoted using the `action` parameter. When this parameter has the value of `search` it will be replaced with a link to the site search. It allows all the same custom parameters as other links and can be styled with an icon or text name.
+
 Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
 
-Both menus are completely optional and can be commented out if not required. Use the template provided in the file as a guide.
+Both menus are completely optional and can be commented out if not required. Use the template provided in the default file as a guide.
 
 ## Detailed configuration
 

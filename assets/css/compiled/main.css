@@ -2448,6 +2448,12 @@ body:has(#menu-controller:checked) {
   transition-duration: 150ms;
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2573,6 +2579,14 @@ body:has(#menu-controller:checked) {
 
 .group:hover .group-hover\:decoration-primary-500 {
   text-decoration-color: rgba(var(--color-primary-500), 1);
+}
+
+.group:hover .group-hover\:decoration-2 {
+  text-decoration-thickness: 2px;
+}
+
+.group:hover .group-hover\:underline-offset-2 {
+  text-underline-offset: 2px;
 }
 
 .group:hover .group-hover\:opacity-100 {
