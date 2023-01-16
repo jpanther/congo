@@ -2350,6 +2350,10 @@ body:has(#menu-controller:checked) {
   line-height: 1.75rem;
 }
 
+.leading-relaxed {
+  line-height: 1.625;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
