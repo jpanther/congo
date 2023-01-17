@@ -35,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Error when attempting to resize SVG assets in page bundles ([#427](https://github.com/jpanther/congo/pull/427))
 - Appearance switcher missing `aria-label` ([#438](https://github.com/jpanther/congo/pull/438))
 - Article links missing `alt` text and `aria-label` ([#439](https://github.com/jpanther/congo/pull/439))
+- Line height in article tag list would cause overlap when wrapping to a new line ([#444](https://github.com/jpanther/congo/pull/444))
 - Figure shortcode would not apply `class` or `href` attribtues in some cases
 - Charts displaying with incorrect theme colours
 
