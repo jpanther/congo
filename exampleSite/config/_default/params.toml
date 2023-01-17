@@ -12,7 +12,6 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["samples"]
 # robots = ""
 
 [header]
@@ -29,6 +28,7 @@ mainSections = ["samples"]
 [homepage]
   layout = "custom" # valid options: page, profile, custom
   showRecent = true
+  recentLimit = 5
 
 [article]
   showDate = true
@@ -47,7 +47,7 @@ mainSections = ["samples"]
   showTaxonomies = false
   showWordCount = false
   showComments = false
-  # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
+  # sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "reddit", "linkedin", "email"]
 
 [list]
   showBreadcrumbs = true

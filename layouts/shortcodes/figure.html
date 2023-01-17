@@ -6,39 +6,41 @@
   {{ $caption := .Get "caption" }}
   {{ $href := .Get "href" }}
   {{ $class := .Get "class" }}
-  {{ if findRE "^https?" $url.Scheme }}
-    <figure>
-      <img class="my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
-      {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
-    </figure>
-  {{ else }}
-    {{ $resource := "" }}
-    {{ if $.Page.Resources.GetMatch ($url.String) }}
-      {{ $resource = $.Page.Resources.GetMatch ($url.String) }}
-    {{ else if resources.GetMatch ($url.String) }}
-      {{ $resource = resources.Get ($url.String) }}
-    {{ end }}
-    {{ with $resource }}
-      <figure {{ with $class }}class="{{ . }}"{{ end }}>
-        {{ with $href }}<a href="{{ . }}">{{ end }}
-          <img
-            class="my-0 rounded-md"
-            srcset="
-            {{ (.Resize "330x").RelPermalink }} 330w,
-            {{ (.Resize "660x").RelPermalink }} 660w,
-            {{ (.Resize "1024x").RelPermalink }} 1024w,
-            {{ (.Resize "1320x").RelPermalink }} 2x"
-            src="{{ (.Resize "660x").RelPermalink }}"
-            alt="{{ $altText }}"
-          />
-        {{ if $href }}</a>{{ end }}
-        {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
-      </figure>
-    {{ else }}
-      <figure>
-        <img class="my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
-        {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
-      </figure>
-    {{ end }}
-  {{ end }}
+  <figure{{ with $class }} class="{{ . }}"{{ end }}>
+    {{ with $href }}<a href="{{ . }}">{{ end }}
+    <img
+      class="mx-auto my-0 rounded-md"
+      alt="{{ $altText }}"
+      {{ if findRE "^https?" $url.Scheme }}
+        src="{{ $url.String }}"
+      {{ else }}
+        {{ $resource := "" }}
+        {{ if $.Page.Resources.GetMatch ($url.String) }}
+          {{ $resource = $.Page.Resources.GetMatch ($url.String) }}
+        {{ else if resources.GetMatch ($url.String) }}
+          {{ $resource = resources.Get ($url.String) }}
+        {{ end }}
+        {{ with $resource }}
+          {{ if eq .MediaType.SubType "svg" }}
+            src="{{ .RelPermalink }}"
+          {{ else }}
+            {{ if lt .Width 660 }}
+              src="{{ .RelPermalink }}"
+            {{ else }}
+              srcset="
+              {{ (.Resize "330x").RelPermalink }} 330w,
+              {{ (.Resize "660x").RelPermalink }} 660w,
+              {{ (.Resize "1024x").RelPermalink }} 1024w,
+              {{ (.Resize "1320x").RelPermalink }} 2x"
+              src="{{ (.Resize "660x").RelPermalink }}"
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          src="{{ $url.String }}"
+        {{ end }}
+      {{ end }}
+    />
+    {{ with $href }}</a>{{ end }}
+    {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
 {{ end }}

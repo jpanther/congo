@@ -4,6 +4,7 @@
       {{ range $name, $url := $links }}
         <a
           class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
           href="{{ $url }}"
           target="_blank"
           aria-label="{{ $name | title }}"

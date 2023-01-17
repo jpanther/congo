@@ -3,6 +3,7 @@ title: "Partials"
 date: 2020-08-10
 draft: false
 description: "All the partials available in Congo."
+summary: "Partials are used to add special functionality to the theme including analytics, comments, favicons, custom scripts and more."
 slug: "partials"
 tags: ["partials", "analytics", "privacy", "comments", "favicons", "icon", "docs"]
 ---

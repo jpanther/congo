@@ -3,6 +3,7 @@ title: "What's New in 2.0 ✨"
 date: 2022-01-19
 draft: false
 description: "Discover what's new in Congo version 2.0."
+summary: "Version 2 takes Congo to new heights, making the theme even more powerful while still maintaining its lightweight footprint."
 tags: ["new", "docs"]
 ---
 

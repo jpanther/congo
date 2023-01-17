@@ -2,7 +2,8 @@
 title: "Getting Started"
 date: 2020-08-15
 draft: false
-description: "All the front matter variables available in Congo."
+description: "Learn how to get started using the Congo theme."
+summary: "This section assumes you have already installed the Congo theme and are ready to start with basic configuration tasks like selecting a colour scheme, menu and content structure."
 slug: "getting-started"
 tags: ["installation", "docs"]
 ---
@@ -29,7 +30,7 @@ The next step is to configure the language settings. Although Congo supports mul
 Locate the `languages.en.toml` file in the config folder. If your main language is English you can use this file as is. Otherwise, rename it so that it includes the correct language code in the filename. For example, for French, rename the file to `languages.fr.toml`.
 
 {{< alert >}}
-Note that the language code in the language config filename should match the `languageCode` setting in `config.toml`.
+The language code in the language config filename should match the `languageCode` setting in `config.toml`.
 {{< /alert >}}
 
 ```toml
@@ -53,7 +54,11 @@ If you need extra detail, further information about each of these configuration 
 
 ## Colour schemes
 
-Congo ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `congo` (default), `avocado`, `fire`, `ocean` and `slate`.
+Congo ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `congo` (default), `avocado`, `cherry`, `fire`, `ocean`, `sapphire` and `slate`.
+
+{{< alert >}}
+The `colourScheme` value should be provided in lowercase.
+{{< /alert >}}
 
 ```toml
 # config/_default/params.toml
@@ -71,6 +76,10 @@ Congo defines a three-colour palette that is used throughout the theme. Each mai
 
 {{< swatches "#78716c" "#84cc16" "#10b981" >}}
 
+#### Cherry
+
+{{< swatches "#737373" "#f43f5e" "#22c55e" >}}
+
 #### Fire
 
 {{< swatches "#78716c" "#f97316" "#f43f5e" >}}
@@ -78,6 +87,10 @@ Congo defines a three-colour palette that is used throughout the theme. Each mai
 #### Ocean
 
 {{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
+
+#### Sapphire
+
+{{< swatches "#64748b" "#6366f1" "#ec4899" >}}
 
 #### Slate
 
@@ -170,10 +183,10 @@ When you create a new taxonomy, you will need to adjust the navigation links on 
 
 Congo has two menus that can be customised to suit the content and layout of your site. The `main` menu appears in the site header and the `footer` menu appears at the bottom of the page just above the copyright notice.
 
-Both menus are configured in the `menus.en.toml` file. Similarly to the languages config file, if you wish to use another language, rename this file and replace `en` with the language code you wish to use.
+Both menus are configured in the `menus.en.toml` file. Similarly to the languages config file, if you wish to use another language, rename this file and replace `en` with the language code you wish to use. Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
 
 ```toml
-# config/_default/menus.toml
+# config/_default/menus.en.toml
 
 [[main]]
   name = "Blog"
@@ -185,18 +198,45 @@ Both menus are configured in the `menus.en.toml` file. Similarly to the language
   pageRef = "topics"
   weight = 20
 
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/jpanther/congo"
+  weight = 30
+  [main.params]
+    icon = "github"
+    showName = false
+    target = "_blank"
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
+    icon = "search"
+
 [[footer]]
   name = "Privacy"
-  url = "https://external-link"
+  pageRef = "privacy"
 ```
+
+### Basic links
 
 The `name` parameter specifies the text that is used in the menu link. You can also optionally provide a `title` which fills the HTML title attribute for the link.
 
 The `pageRef` parameter allows you to easily reference Hugo content pages and taxonomies. It is the quickest way to configure the menu as you can simply refer to any Hugo content item and it will automatically build the correct link. To link to external URLs, the `url` parameter can be used.
 
-Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
+Further customisation can be achieved through the use of special theme parameters. Providing `params` within a link allows the addition of an `icon`, the ability to toggle the link text with `showName` and to optionally set a `target` for the URL. In the example above, the GitHub link will only display as an icon and will open the link in a new window.
 
-Both menus are completely optional and can be commented out if not required. Use the template provided in the file as a guide.
+### Action links
+
+There is a special case for creating menu items for links that take theme actions. These are denoted using the `action` parameter, and a value of the action the link should perform. Action links allow for all the same custom parameters as other links and can be styled with an icon or text name.
+
+There are two valid theme actions:
+
+- `appearance` will create a link to the appearance switcher
+- `search` will create a link to the site search
+
+Both menus are completely optional and can be commented out if not required. Use the template provided in the default file as a guide.
 
 ## Detailed configuration
 

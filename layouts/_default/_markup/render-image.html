@@ -3,8 +3,8 @@
 {{ $caption := .Title }}
 {{ if findRE "^https?" $url.Scheme }}
   <figure>
-    <img class="my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
-    {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+    <img class="mx-auto my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
+    {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
   </figure>
 {{ else }}
   {{ $resource := "" }}
@@ -16,21 +16,29 @@
   {{ with $resource }}
     <figure>
       <img
-        class="my-0 rounded-md"
-        srcset="
-          {{ (.Resize "330x").RelPermalink }} 330w,
-          {{ (.Resize "660x").RelPermalink }} 660w,
-          {{ (.Resize "1024x").RelPermalink }} 1024w,
-          {{ (.Resize "1320x").RelPermalink }} 2x"
-        src="{{ (.Resize "660x").RelPermalink }}"
+        class="mx-auto my-0 rounded-md"
+        {{ if eq .MediaType.SubType "svg" }}
+          src="{{ .RelPermalink }}"
+        {{ else }}
+          {{ if lt .Width 660 }}
+            src="{{ .RelPermalink }}"
+          {{ else }}
+            srcset="
+            {{ (.Resize "330x").RelPermalink }} 330w,
+            {{ (.Resize "660x").RelPermalink }} 660w,
+            {{ (.Resize "1024x").RelPermalink }} 1024w,
+            {{ (.Resize "1320x").RelPermalink }} 2x"
+            src="{{ (.Resize "660x").RelPermalink }}"
+          {{ end }}
+        {{ end }}
         alt="{{ $altText }}"
       />
-      {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+      {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
     </figure>
   {{ else }}
     <figure>
-      <img class="my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
-      {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+      <img class="mx-auto my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
+      {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
     </figure>
   {{ end }}
 {{ end }}

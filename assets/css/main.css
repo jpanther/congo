@@ -1,4 +1,4 @@
-/*! Congo v2.4.2 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.5.0 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
@@ -23,7 +23,7 @@ body button {
 
 /* Hamburger menu */
 body:has(#menu-controller:checked) {
-  @apply overflow-y-hidden;
+  @apply fixed overflow-y-hidden;
 }
 #menu-button:has(#menu-controller:checked) {
   @apply invisible;
@@ -98,32 +98,31 @@ body:has(#menu-controller:checked) {
 
 /* -- Chroma Highlight -- */
 /* Background */
-.prose .chroma {
-  @apply static rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
+.chroma {
+  @apply py-3 rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
 }
-/* LineTableTD */
-.chroma .lntd,
-.chroma .lntd pre {
-  @apply p-0 m-0 overflow-hidden align-top border-none;
+.chroma pre {
+  @apply p-0 m-0;
 }
 /* LineTable */
 .chroma .lntable {
-  @apply block w-auto py-3 overflow-x-auto text-base;
-  border-spacing: 0;
-}
-/* LineTable Line */
-.chroma .lntable .line {
-  @apply pr-4;
-}
-/* LineHighlight */
-.chroma .hl {
-  @apply block w-auto bg-primary-100 dark:bg-primary-900;
+  @apply block w-auto m-0 overflow-auto text-base;
 }
 /* LineNumbersTable */
 /* LineNumbers */
 .chroma .lnt,
 .chroma .ln {
-  @apply mr-[0.4em] px-[0.4em] py-0 text-neutral-600 dark:text-neutral-300;
+  @apply px-2 mr-2 text-neutral-600 dark:text-neutral-300;
+}
+.chroma .lntd {
+  @apply p-0 align-top;
+}
+.chroma .lntd:last-of-type {
+  @apply w-full;
+}
+/* LineHighlight */
+.chroma .hl {
+  @apply block w-full bg-primary-100 dark:bg-primary-900;
 }
 /* Keyword */
 /* KeywordDeclaration */

@@ -14,6 +14,11 @@
     "title": "sharing.linkedin",
     "url": "https://www.linkedin.com/shareArticle?mini=true&url=%s&title=%s"
   },
+  "mastodon": {
+    "icon": "mastodon",
+    "title": "sharing.mastodon",
+    "url": "https://tootpick.org/#text=%s %s"
+  },
   "pinterest": {
     "icon": "pinterest",
     "title": "sharing.pinterest",

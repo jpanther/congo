@@ -2,7 +2,8 @@
 title: "Content Examples"
 date: 2020-08-09
 draft: false
-description: "All the partials available in Congo."
+description: "Some examples that demonstrate how content should be created and structured."
+summary: "It's time to bring everything together with some examples that demonstrate how content should be created and structured."
 slug: "content-examples"
 tags: ["content", "example"]
 ---

@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{- $images := .Resources.ByType "image" }}
-  {{- $cover := $images.GetMatch "*cover*" }}
-  {{- $feature := $images.GetMatch "*feature*" | default $cover }}
+  {{- $cover := $images.GetMatch (.Params.cover | default "*cover*") }}
+  {{- $feature := $images.GetMatch (.Params.feature | default "*feature*") | default $cover }}
   <article>
     <header class="max-w-prose">
       {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
@@ -14,15 +14,27 @@
         {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
       </div>
       {{ with $feature }}
-        <img
-          class="mb-6 -mt-4 rounded-md"
-          srcset="
-                {{- (.Resize "330x").RelPermalink }} 330w,
-                {{- (.Resize "660x").RelPermalink }} 660w,
-                {{- (.Resize "1024x").RelPermalink }} 1024w,
-                {{- (.Resize "1320x").RelPermalink }} 2x"
-          src="{{ (.Resize "660x").RelPermalink }}"
-        />
+        <div class="prose">
+          <img
+            class="mb-6 -mt-4 rounded-md"
+            {{ if eq .MediaType.SubType "svg" }}
+              src="{{ .RelPermalink }}"
+            {{ else }}
+              {{ if lt .Width 660 }}
+                src="{{ .RelPermalink }}"
+              {{ else }}
+                srcset=" {{ (.Resize "330x").RelPermalink }} 330w,
+                {{ (.Resize "660x").RelPermalink }} 660w, {{ (.Resize "1024x").RelPermalink }}
+                1024w, {{ (.Resize "1320x").RelPermalink }} 2x"
+                src="{{ (.Resize "660x").RelPermalink }}"
+              {{ end }}
+            {{ end }}
+            alt="{{ $.Params.featureAlt | default $.Params.coverAlt | default "" }}"
+          />
+          {{ with $.Params.coverCaption }}
+            <figcaption class="mb-6 -mt-3 text-center">{{ . | markdownify }}</figcaption>
+          {{ end }}
+        </div>
       {{ end }}
     </header>
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">

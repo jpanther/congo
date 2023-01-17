@@ -12,7 +12,6 @@ autoSwitchAppearance = true
 enableSearch = false
 enableCodeCopy = false
 
-# mainSections = ["section1", "section2"]
 # robots = ""
 
 [header]
@@ -29,6 +28,7 @@ enableCodeCopy = false
 [homepage]
   layout = "page" # valid options: page, profile, custom
   showRecent = false
+  recentLimit = 5
 
 [article]
   showDate = true
@@ -47,7 +47,7 @@ enableCodeCopy = false
   showTaxonomies = false
   showWordCount = false
   showComments = false
-  # sharingLinks = ["facebook", "twitter", "pinterest", "reddit", "linkedin", "email"]
+  # sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "reddit", "linkedin", "email"]
 
 [list]
   showBreadcrumbs = false

@@ -6,6 +6,41 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.5.0] - 2023-01-17
+
+### Added
+
+- Support for icons in menus including support for links styled as an icon by itself or an icon with text
+- Search and appearance switcher links can now be fully customised and positioned anywhere in the menu
+- Front matter support for specifying article thumbnails, covers and featured image details (including filename pattern, alt text and caption)
+- Two new colour schemes - `cherry` and `sapphire`
+- Support for SVG assets as article thumbnails, covers and featured images
+- Front matter keywords support on a per article basis
+- Indonesian translation ([#398](https://github.com/jpanther/congo/pull/398))
+- Mastodon sharing links ([#405](https://github.com/jpanther/congo/pull/405))
+- `homepage.recentLimit` parameter to adjust the maximum number of recent items listed on the homepage ([#411](https://github.com/jpanther/congo/pull/411))
+
+### Changed
+
+- Images smaller than the article width are no longer resized to fill the content area and will now simply align centre ([#394](https://github.com/jpanther/congo/pull/394))
+- Upgrade to KaTeX v0.16.4 ([#414](https://github.com/jpanther/congo/pull/414))
+- Upgrade to Mermaid v9.3.0 ([#419](https://github.com/jpanther/congo/pull/419))
+- Upgrade to Chart.js v4.1.2 ([#420](https://github.com/jpanther/congo/pull/420), [#434](https://github.com/jpanther/congo/pull/434))
+- Upgrade to Typography v0.5.9 ([#437](https://github.com/jpanther/congo/pull/437))
+
+### Fixed
+
+- `mainSections` parameter is language dependent and is not referenced from `params.toml` ([#376](https://github.com/jpanther/congo/pull/376))
+- Code highlight background cut off in Google Chrome when overflowing content area ([#383](https://github.com/jpanther/congo/pull/383))
+- Social icons shift position during CSS transition when hovered in Safari ([#396](https://github.com/jpanther/congo/pull/396))
+- Hamburger navigation menu is misaligned in mobile browsers ([#399](https://github.com/jpanther/congo/pull/399))
+- Error when attempting to resize SVG assets in page bundles ([#427](https://github.com/jpanther/congo/pull/427))
+- Appearance switcher missing `aria-label` ([#438](https://github.com/jpanther/congo/pull/438))
+- Article links missing `alt` text and `aria-label` ([#439](https://github.com/jpanther/congo/pull/439))
+- Line height in article tag list would cause overlap when wrapping to a new line ([#444](https://github.com/jpanther/congo/pull/444))
+- Figure shortcode would not apply `class` or `href` attribtues in some cases
+- Charts displaying with incorrect theme colours
+
 ## [2.4.2] - 2022-11-22
 
 ### Added
@@ -570,7 +605,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.4.2...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.5.0...HEAD
+[2.5.0]: https://github.com/jpanther/congo/compare/v2.4.2...v2.5.0
 [2.4.2]: https://github.com/jpanther/congo/compare/v2.4.1...v2.4.2
 [2.4.1]: https://github.com/jpanther/congo/compare/v2.4.0...v2.4.1
 [2.4.0]: https://github.com/jpanther/congo/compare/v2.3.1...v2.4.0

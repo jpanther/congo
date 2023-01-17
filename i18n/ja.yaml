@@ -12,7 +12,7 @@ article:
   word_count:
     one: "{{ .Count }} 文字"
     other: "{{ .Count }} 文字"
-  
+
 author:
   byline_title: "著者"
 
@@ -47,6 +47,7 @@ sharing:
   email: " Eメールを送る"
   facebook: "Facebookでシェアする"
   linkedin: "LinkedInでシェアする"
+  # mastodon: "Toot on Mastodon"
   pinterest: "Pinterestでピンする"
   reddit: "Redditに投稿する"
   twitter: "Twitterに投稿する"

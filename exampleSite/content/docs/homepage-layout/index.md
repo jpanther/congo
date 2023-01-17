@@ -3,6 +3,7 @@ title: "Homepage Layout"
 date: 2020-08-13
 draft: false
 description: "Configuring the homepage layout in the Congo theme."
+summary: "Congo provides a fully flexible homepage layout with built-in templates and the ability to provide your own."
 slug: "homepage-layout"
 tags: ["homepage", "layouts", "docs"]
 ---

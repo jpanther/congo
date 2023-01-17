@@ -5,14 +5,68 @@
       <ul class="flex flex-col list-none sm:flex-row">
         {{ range .Site.Menus.footer }}
           <li
-            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+            class="mb-1 group ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
           >
-            <a
-              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-              href="{{ .URL }}"
-              title="{{ .Title }}"
-              >{{ .Name | markdownify | emojify }}</a
-            >
+            {{ if eq .Params.action "search" }}
+              {{ $.Scratch.Add "searchCount" 1 }}
+              {{ if $.Site.Params.enableSearch | default false }}
+                <button
+                  id="search-button-{{ $.Scratch.Get "searchCount" }}"
+                  title="{{ .Title | default (i18n "search.open_button_title") }}"
+                >
+                  {{ with .Params.icon }}
+                    <span
+                      class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                    >
+                      {{ partial "icon.html" . }}
+                    </span>
+                  {{ end }}{{ if .Params.showName | default true }}
+                    <span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >{{ .Name | markdownify | emojify }}</span
+                    >
+                  {{ end }}
+                </button>
+              {{ end }}
+            {{ else if eq .Params.action "appearance" }}
+              {{ $.Scratch.Add "switchCount" 1 }}
+              <button
+                id="appearance-switcher-{{ $.Scratch.Get "switchCount" }}"
+                type="button"
+                aria-label="appearance switcher"
+              >
+                <span
+                  class="inline transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:hidden"
+                  title="{{ i18n "footer.dark_appearance" }}"
+                >
+                  {{ partial "icon.html" "moon" }}
+                </span>
+                <span
+                  class="hidden transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:inline"
+                  title="{{ i18n "footer.light_appearance" }}"
+                >
+                  {{ partial "icon.html" "sun" }}
+                </span>
+              </button>
+            {{ else }}
+              <a
+                href="{{ .URL }}"
+                title="{{ .Title }}"
+                {{ with .Params.target }}target="{{ . }}"{{ end }}
+                >{{ with .Params.icon }}
+                  <span
+                    class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                  >
+                    {{ partial "icon.html" . }}
+                  </span>
+                {{ end }}{{ if .Params.showName | default true }}
+                  <span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >{{ .Name | markdownify | emojify }}</span
+                  >
+                {{ end }}</a
+              >
+            {{ end }}
           </li>
         {{ end }}
       </ul>
@@ -43,14 +97,14 @@
         </p>
       {{ end }}
     </div>
-    {{/* Appearance switch */}}
+    {{/* Appearance switcher */}}
     {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
       <div
         class="{{ if .Site.Params.footer.showScrollToTop | default true -}}
           ltr:mr-14 rtl:ml-14
         {{- end }} cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
       >
-        <button id="appearance-switcher" type="button">
+        <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
           <div
             class="flex items-center justify-center w-12 h-12 dark:hidden"
             title="{{ i18n "footer.dark_appearance" }}"

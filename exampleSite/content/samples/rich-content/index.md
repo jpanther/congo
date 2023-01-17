@@ -3,6 +3,8 @@ title: "Rich Content"
 date: 2019-03-10
 description: "A brief description of Hugo Shortcodes"
 summary: "This is an _example_ of a **rich** content summary."
+coverAlt: "An example cover image depicting icons of some popular media organisations."
+coverCaption: "This is an example cover image with a caption."
 tags: ["shortcodes", "privacy", "sample", "gist", "twitter", "youtube", "vimeo"]
 ---
 

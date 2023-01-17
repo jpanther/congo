@@ -39,8 +39,8 @@ if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  const switcher = document.getElementById("appearance-switcher");
-  if (switcher) {
+  var switchers = document.querySelectorAll("[id^='appearance-switcher']");
+  switchers.forEach((switcher) => {
     switcher.addEventListener("click", () => {
       document.documentElement.classList.toggle("dark");
       setThemeColor();
@@ -53,5 +53,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
       event.preventDefault();
       localStorage.removeItem("appearance");
     });
-  }
+  });
 });

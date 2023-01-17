@@ -3,6 +3,7 @@ title: "Front Matter"
 date: 2020-08-12
 draft: false
 description: "All the front matter variables available in Congo."
+summary: "While supporting most Hugo defaults, Congo adds a number of front matter parameters to customise the presentation of individual articles."
 slug: "front-matter"
 tags: ["front matter", "config", "docs"]
 ---
@@ -16,10 +17,18 @@ Front matter parameter default values are inherited from the theme's [base confi
 |---|---|---|
 |`title`|_Not set_|The name of the article.|
 |`description`|_Not set_|The text description for the article. It is used in the HTML metadata.|
+|`feature`|`"*feature*"`|The text pattern to match the feature image filename for this article.|
+|`featureAlt`|`""`|The alternative text description for the feature image.|
+|`cover`|`"*cover*"`|The text pattern to match the cover image filename for this article.|
+|`coverAlt`|`featureAlt`|The alternative text description for the cover image.|
+|`coverCaption`|_Not set_|The figure caption text to be displayed beneath the cover image.|
+|`thumbnail`|`"*thumb*"`_|The text pattern to match the thumbnail image filename for this article.|
+|`thumbnailAlt`|`featureAlt`|The alternative text description for the thumbnail image.|
 |`externalUrl`|_Not set_|If this article is published on a third-party website, the URL to this article. Providing a URL will prevent a content page being generated and any references to this article will link directly to the third-party website.|
 |`editURL`|`article.editURL`|When `showEdit` is active, the URL for the edit link.|
 |`editAppendPath`|`article.editAppendPath`|When `showEdit` is active, whether or not the path to the current article should be appended to the URL set at `editURL`.|
 |`groupByYear`|`list.groupByYear`|Whether or not articles are grouped by year on list pages.|
+|`keywords`|_Not set_|Any keywords that should be included in the article metadata.|
 |`menu`|_Not set_|When a value is provided, a link to this article will appear in the named menus. Valid values are `main` or `footer`.|
 |`robots`|_Not set_|String that indicates how robots should handle this article. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`sharingLinks`|`article.sharingLinks`|Which sharing links to display at the end of this article. When not provided, or set to `false` no links will be displayed.|

@@ -47,6 +47,7 @@ sharing:
   email: "Enviar por email"
   facebook: "Compartilhar pelo Facebook"
   linkedin: "Compartilhar pelo LinkedIn"
+  # mastodon: "Toot on Mastodon"
   pinterest: "Pin no Pinterest"
   reddit: "Postar no Reddit"
   twitter: "Tweet no Twitter"

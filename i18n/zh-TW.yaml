@@ -46,6 +46,7 @@ sharing:
   email: "以電子郵件發送"
   facebook: "分享到 Facebook"
   linkedin: "分享到 LinkedIn"
+  # mastodon: "Toot on Mastodon"
   pinterest: "釘到 Pinterest"
   reddit: "發送到 Reddit"
   twitter: "推到 Twitter"
