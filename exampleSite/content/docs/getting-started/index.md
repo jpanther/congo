@@ -183,7 +183,7 @@ When you create a new taxonomy, you will need to adjust the navigation links on 
 
 Congo has two menus that can be customised to suit the content and layout of your site. The `main` menu appears in the site header and the `footer` menu appears at the bottom of the page just above the copyright notice.
 
-Both menus are configured in the `menus.en.toml` file. Similarly to the languages config file, if you wish to use another language, rename this file and replace `en` with the language code you wish to use.
+Both menus are configured in the `menus.en.toml` file. Similarly to the languages config file, if you wish to use another language, rename this file and replace `en` with the language code you wish to use. Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
 
 ```toml
 # config/_default/menus.en.toml
@@ -219,15 +219,22 @@ Both menus are configured in the `menus.en.toml` file. Similarly to the language
   pageRef = "privacy"
 ```
 
+### Basic links
+
 The `name` parameter specifies the text that is used in the menu link. You can also optionally provide a `title` which fills the HTML title attribute for the link.
 
 The `pageRef` parameter allows you to easily reference Hugo content pages and taxonomies. It is the quickest way to configure the menu as you can simply refer to any Hugo content item and it will automatically build the correct link. To link to external URLs, the `url` parameter can be used.
 
 Further customisation can be achieved through the use of special theme parameters. Providing `params` within a link allows the addition of an `icon`, the ability to toggle the link text with `showName` and to optionally set a `target` for the URL. In the example above, the GitHub link will only display as an icon and will open the link in a new window.
 
-Finally, there is a special case for theme links, which are denoted using the `action` parameter. When this parameter has the value of `search` it will be replaced with a link to the site search. It allows all the same custom parameters as other links and can be styled with an icon or text name.
+### Action links
 
-Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
+There is a special case for creating menu items for links that take theme actions. These are denoted using the `action` parameter, and a value of the action the link should perform. Action links allow for all the same custom parameters as other links and can be styled with an icon or text name.
+
+There are two valid theme actions:
+
+- `appearance` will create a link to the appearance switcher
+- `search` will create a link to the site search
 
 Both menus are completely optional and can be commented out if not required. Use the template provided in the default file as a guide.
 

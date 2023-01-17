@@ -39,7 +39,6 @@
   weight = 99
   [main.params]
     action = "search"
-    icon = "search"
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before

@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Support for icons in menus including support for links styled as an icon by itself or an icon with text
-- Search link can now be fully customised and positioned anywhere in the menu
+- Search and appearance switcher links can now be fully customised and positioned anywhere in the menu
 - Front matter support for specifying article thumbnails, covers and featured image details (including filename pattern, alt text and caption)
 - Two new colour schemes - `cherry` and `sapphire`
 - Support for SVG assets as article thumbnails, covers and featured images

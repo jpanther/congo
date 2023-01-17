@@ -2717,6 +2717,10 @@ body:has(#menu-controller:checked) {
   text-align: left;
 }
 
+.dark .dark\:inline {
+  display: inline;
+}
+
 .dark .dark\:flex {
   display: flex;
 }

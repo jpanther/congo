@@ -1,4 +1,3 @@
-{{ $searchCount := 0 }}
 <header class="py-6 font-semibold text-neutral-900 dark:text-neutral print:hidden sm:py-10">
   <nav class="flex items-start justify-between sm:items-center">
     {{/* Site logo/title */}}
@@ -29,13 +28,13 @@
               {{ range .Site.Menus.main }}
                 <li class="mb-1 group">
                   {{ if eq .Params.action "search" }}
-                    {{ $searchCount = add $searchCount 1 }}
+                    {{ $.Scratch.Add "searchCount" 1 }}
                     {{ if $.Site.Params.enableSearch | default false }}
                       <button
-                        id="search-button-m{{ $searchCount }}"
+                        id="search-button-{{ $.Scratch.Get "searchCount" }}"
                         title="{{ .Title | default (i18n "search.open_button_title") }}"
                       >
-                        {{ with .Params.icon }}
+                        {{ with .Params.icon | default "search" }}
                           <span
                             class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
                           >
@@ -49,6 +48,42 @@
                         {{ end }}
                       </button>
                     {{ end }}
+                  {{ else if eq .Params.action "appearance" }}
+                    {{ $.Scratch.Add "switchCount" 1 }}
+                    <button
+                      id="appearance-switcher-{{ $.Scratch.Get "switchCount" }}"
+                      type="button"
+                      aria-label="appearance switcher"
+                    >
+                      <span
+                        class="inline transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:hidden"
+                        title="{{ i18n "footer.dark_appearance" }}"
+                      >
+                        {{ with .Params.icon | default "moon" }}
+                          {{ partial "icon.html" . }}
+                        {{ end }}
+                        {{ if .Params.showName | default true }}
+                          <span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            >{{ .Name | markdownify | emojify }}</span
+                          >
+                        {{ end }}
+                      </span>
+                      <span
+                        class="hidden transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:inline"
+                        title="{{ i18n "footer.light_appearance" }}"
+                      >
+                        {{ with .Params.icon | default "sun" }}
+                          {{ partial "icon.html" . }}
+                        {{ end }}
+                        {{ if .Params.showName | default true }}
+                          <span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            >{{ .Name | markdownify | emojify }}</span
+                          >
+                        {{ end }}
+                      </span>
+                    </button>
                   {{ else }}
                     <a
                       href="{{ .URL }}"
@@ -70,7 +105,7 @@
                   {{ end }}
                 </li>
               {{ end }}
-              {{ if and ($.Site.Params.enableSearch | default false) (eq $searchCount 0) }}
+              {{ if and ($.Site.Params.enableSearch | default false) (eq ($.Scratch.Get "searchCount") 0) }}
                 <li class="mb-1 group">
                   <button id="search-button-m0" title="{{ i18n "search.open_button_title" }}">
                     <span
