@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.5.0] - 2023-01-17
+
 ### Added
 
 - Support for icons in menus including support for links styled as an icon by itself or an icon with text
@@ -603,7 +605,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[unreleased]: https://github.com/jpanther/congo/compare/v2.4.2...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.5.0...HEAD
+[2.5.0]: https://github.com/jpanther/congo/compare/v2.4.2...v2.5.0
 [2.4.2]: https://github.com/jpanther/congo/compare/v2.4.1...v2.4.2
 [2.4.1]: https://github.com/jpanther/congo/compare/v2.4.0...v2.4.1
 [2.4.0]: https://github.com/jpanther/congo/compare/v2.3.1...v2.4.0
