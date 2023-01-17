@@ -30,7 +30,7 @@ The next step is to configure the language settings. Although Congo supports mul
 Locate the `languages.en.toml` file in the config folder. If your main language is English you can use this file as is. Otherwise, rename it so that it includes the correct language code in the filename. For example, for French, rename the file to `languages.fr.toml`.
 
 {{< alert >}}
-Note that the language code in the language config filename should match the `languageCode` setting in `config.toml`.
+The language code in the language config filename should match the `languageCode` setting in `config.toml`.
 {{< /alert >}}
 
 ```toml
@@ -54,7 +54,11 @@ If you need extra detail, further information about each of these configuration 
 
 ## Colour schemes
 
-Congo ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `congo` (default), `avocado`, `fire`, `ocean` and `slate`.
+Congo ships with a number of colour schemes out of the box. To change the scheme, simply set the `colorScheme` theme parameter. Valid options are `congo` (default), `avocado`, `cherry`, `fire`, `ocean`, `sapphire` and `slate`.
+
+{{< alert >}}
+The `colourScheme` value should be provided in lowercase.
+{{< /alert >}}
 
 ```toml
 # config/_default/params.toml
@@ -72,6 +76,10 @@ Congo defines a three-colour palette that is used throughout the theme. Each mai
 
 {{< swatches "#78716c" "#84cc16" "#10b981" >}}
 
+#### Cherry
+
+{{< swatches "#737373" "#f43f5e" "#22c55e" >}}
+
 #### Fire
 
 {{< swatches "#78716c" "#f97316" "#f43f5e" >}}
@@ -79,6 +87,10 @@ Congo defines a three-colour palette that is used throughout the theme. Each mai
 #### Ocean
 
 {{< swatches "#64748b" "#3b82f6" "#06b6d4" >}}
+
+#### Sapphire
+
+{{< swatches "#64748b" "#6366f1" "#ec4899" >}}
 
 #### Slate
 
