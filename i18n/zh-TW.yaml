@@ -5,6 +5,7 @@ article:
   draft: "草稿"
   edit_title: "編輯內容"
   reading_time:
+    one: "{{ .Count }} 分鐘"
     other: "{{ .Count }} 分鐘"
   reading_time_title: "預計閱讀時間"
   table_of_contents: "目錄"
@@ -46,7 +47,7 @@ sharing:
   email: "以電子郵件發送"
   facebook: "分享到 Facebook"
   linkedin: "分享到 LinkedIn"
-  # mastodon: "Toot on Mastodon"
+  mastodon: "嘟到 Mastodon"
   pinterest: "釘到 Pinterest"
   reddit: "發送到 Reddit"
   twitter: "推到 Twitter"
