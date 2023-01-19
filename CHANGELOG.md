@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- External links are now automatically appended with `rel="noreferrer noopener"` ([#446](https://github.com/jpanther/congo/pull/446))
+- Updated Traditional Chinese (Taiwan) translation ([#448](https://github.com/jpanther/congo/pull/448))
+- Upgrade to Chart.js v4.2.0 ([#449](https://github.com/jpanther/congo/pull/449))
+
 ## [2.5.0] - 2023-01-17
 
 ### Added
