@@ -1,6 +1,6 @@
 {
   "name": "hugo-congo-theme",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Congo theme for Hugo",
   "scripts": {
     "preinstall": "rimraf assets/lib",
@@ -30,14 +30,14 @@
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "chart.js": "^4.1.2",
+    "chart.js": "^4.2.0",
     "fuse.js": "^6.6.2",
     "katex": "^0.16.4",
     "mermaid": "^9.3.0",
     "prettier": "^2.8.3",
     "prettier-plugin-go-template": "^0.0.13",
     "prettier-plugin-tailwindcss": "^0.2.1",
-    "rimraf": "^4.0.7",
+    "rimraf": "^4.1.1",
     "tailwindcss": "^3.2.4",
     "vendor-copy": "^3.0.1"
   },

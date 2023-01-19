@@ -48,7 +48,7 @@ The list below is just a handful of the websites that are built using the Congo 
 | [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog        |
 | [major.io](https://major.io)                                           | Personal site and Blog        |
 | [bayas.dev](https://bayas.dev)                                         | Personal site and Blog        |
-| [顾宇的博客](https://www.guyu.me/)                                     | Personal Blog (in Chinese)    |
+| [顾宇的博客](https://www.guyu.me/)                                      | Personal Blog (in Chinese)    |
 | [cgutierr-zgz.github.io](https://cgutierr-zgz.github.io/)              | Personal site and Tech blog   |
 | [adam.sr](https://adam.sr)                                             | Personal site and Blog        |
 | [datadi.murgi.org](https://datadi.murgi.org)                           | Personal site and Blog        |
@@ -57,5 +57,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [pfisterer.dev](https://pfisterer.dev)                                 | Personal site and Blog        |
 | [davidrothera.me](https://davidrothera.me)                             | Personal site and Blog        |
 | [ethantroy.com](https://ethantroy.com)                                 | Personal Site and Blog        |
+| [sug.bitprism.net](https://sug.bitprism.net)                           | Personal Site and Blog        |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users.md).

@@ -1,4 +1,4 @@
-/*! Congo v2.5.0 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.5.1 | MIT License | https://github.com/jpanther/congo */
 
 /*! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
 
@@ -1020,8 +1020,8 @@ body button {
 /* Hamburger menu */
 
 body:has(#menu-controller:checked) {
-  position: fixed;
-  overflow-y: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #menu-button:has(#menu-controller:checked) {

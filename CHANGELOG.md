@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.5.1] - 2023-01-20
+
+### Changed
+
+- External links are now automatically appended with `rel="noreferrer noopener"` ([#446](https://github.com/jpanther/congo/pull/446))
+- Updated Traditional Chinese (Taiwan) translation ([#448](https://github.com/jpanther/congo/pull/448))
+- Upgrade to Chart.js v4.2.0 ([#449](https://github.com/jpanther/congo/pull/449))
+
+### Fixed
+
+- Page alignment off-centre when opening hamburger menu at wide viewports ([#445](https://github.com/jpanther/congo/issues/445))
+
 ## [2.5.0] - 2023-01-17
 
 ### Added
@@ -605,7 +617,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.5.0...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.5.1...HEAD
+[2.5.1]: https://github.com/jpanther/congo/compare/v2.5.0...v2.5.1
 [2.5.0]: https://github.com/jpanther/congo/compare/v2.4.2...v2.5.0
 [2.4.2]: https://github.com/jpanther/congo/compare/v2.4.1...v2.4.2
 [2.4.1]: https://github.com/jpanther/congo/compare/v2.4.0...v2.4.1
