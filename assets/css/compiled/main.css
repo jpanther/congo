@@ -1020,8 +1020,8 @@ body button {
 /* Hamburger menu */
 
 body:has(#menu-controller:checked) {
-  position: fixed;
-  overflow-y: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #menu-button:has(#menu-controller:checked) {
