@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- New icons for `mobile` and `phone`
+
+### Fixed
+
+- Author links containing URLs in non-hypertext schemes (ie. `tel:`) would not be created as links ([#452](https://github.com/jpanther/congo/pull/452))
+
 ## [2.5.1] - 2023-01-20
 
 ### Changed
