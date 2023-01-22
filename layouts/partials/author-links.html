@@ -5,7 +5,7 @@
         <a
           class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
           style="will-change:transform;"
-          href="{{ $url }}"
+          href="{{ $url | safeURL }}"
           target="_blank"
           aria-label="{{ $name | title }}"
           rel="me noopener noreferrer"
