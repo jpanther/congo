@@ -1,7 +1,7 @@
 ---
 title: "Icons"
 date: 2020-08-14
-lastmod: 2022-03-09
+lastmod: 2023-01-23
 draft: false
 description: "Icon support in Congo."
 slug: "icons"
@@ -48,10 +48,12 @@ The full list of built-in icons and their corresponding names can referenced bel
 | mastodon             | {{< icon mastodon >}}             |
 | medium               | {{< icon medium >}}               |
 | microsoft            | {{< icon microsoft >}}            |
+| mobile               | {{< icon mobile >}}               |
 | moon                 | {{< icon moon >}}                 |
 | orcid                | {{< icon orcid >}}                |
 | patreon              | {{< icon patreon >}}              |
 | pencil               | {{< icon pencil >}}               |
+| phone                | {{< icon phone >}}                |
 | pinterest            | {{< icon pinterest >}}            |
 | reddit               | {{< icon reddit >}}               |
 | researchgate         | {{< icon researchgate >}}         |
