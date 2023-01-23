@@ -3,7 +3,6 @@
     {{/* Site logo/title */}}
     <div class="z-40 flex flex-row items-center">
       {{ partial "logo.html" . }}
-      {{ partial "translations.html" . }}
     </div>
     {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
       {{/* Hamburger menu */}}
@@ -218,7 +217,7 @@
               </button>
             </li>
           {{ end }}
-
+          {{ partial "translations.html" . }}
         {{ end }}
       </ul>
     {{ end }}
