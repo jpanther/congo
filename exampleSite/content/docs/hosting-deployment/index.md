@@ -47,6 +47,8 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write    
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
