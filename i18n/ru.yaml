@@ -1,5 +1,5 @@
 article:
-  anchor_label: "Anchor"
+  anchor_label: "Якорь"
   date: "{{ .Date }}"
   date_updated: "Обновлено: {{ .Date }}"
   draft: "Черновик"
