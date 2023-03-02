@@ -47,7 +47,7 @@ sharing:
   email: "Per E-Mail teilen"
   facebook: "Auf Facebook teilen"
   linkedin: "Auf LinkedIn teilen"
-  # mastodon: "Toot on Mastodon"
+  mastodon: "Auf Mastodon posten"
   pinterest: "Auf Pinterest pinnen"
   reddit: "An Reddit senden"
   twitter: "Auf Twitter teilen"
