@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Updated German translation ([#475](https://github.com/jpanther/congo/pull/475))
+
 ## [2.5.2] - 2023-01-24
 
 ### Added
