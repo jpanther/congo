@@ -16,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgrade to Chart.js v4.2.1 ([#472](https://github.com/jpanther/congo/pull/472))
 - Upgrade to Tailwind v3.2.7 ([#491](https://github.com/jpanther/congo/pull/491))
 
+### Fixed
+
+- Caching the analytics partial prevents some advanced analytics use cases ([#480](https://github.com/jpanther/congo/issues/480))
+
 ## [2.5.2] - 2023-01-24
 
 ### Added
