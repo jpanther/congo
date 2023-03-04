@@ -66,6 +66,7 @@ The theme currently supports the following languages out of the box:
 | :brazil: Portuguese (Brazil)            | `pt-br` |
 | :portugal: Portuguese (Portugal)        | `pt-pt` |
 | :romania: Romanian                      | `ro`    |
+| :ru: Russian                            | `ru`    |
 | :es: Spanish (Spain)                    | `es`    |
 | :tr: Turkish                            | `tr`    |
 
