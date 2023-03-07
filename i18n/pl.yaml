@@ -8,7 +8,7 @@ article:
     one: "{{ .Count }} minuta"
     other: "{{ .Count }} minut"
   reading_time_title: "Przeczytasz w"
-  table_of_contents: "Spis treśći"
+  table_of_contents: "Spis treści"
   word_count:
     one: "{{ .Count }} słowo"
     other: "{{ .Count }} słów"
