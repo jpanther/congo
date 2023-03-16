@@ -5,13 +5,17 @@ article:
   draft: "Черновик"
   edit_title: "Редактировать"
   reading_time:
-    one: "{ .Count }} минута"
+    one: "{{ .Count }} минута"
+    few: "{{ .Count }} минуты"
+    many: "{{ .Count }} минут"
     other: "{{ .Count }} минут"
   reading_time_title: "Время чтения"
   table_of_contents: "Содержание"
   word_count:
-    one: "{ .Count }} слово"
-    other: "{ .Count }} слов"
+    one: "{{ .Count }} слово"
+    few: "{{ .Count }} слова"
+    many: "{{ .Count }} слов"
+    other: "{{ .Count }} слов"
 
 author:
   byline_title: "Автор"
@@ -21,17 +25,17 @@ code:
   copied: "Скопировано"
 
 error:
-  404_title: "Страница не найдена: бывает:"
+  404_title: "Страница не найдена :confused:"
   404_error: "Ошибка 404"
   404_description: "Похоже, что запрошенная вами страница не существует."
 
 footer:
   dark_appearance: "Переключиться на темную тему"
-  light_appearance: "Переключитесь на светлый тему"
-  powered_by: "Создано {{ .Hugo }} &amp; {{ .Congo }}"
+  light_appearance: "Переключиться на светлую тему"
+  powered_by: "Работает на {{ .Hugo }} &amp; {{ .Congo }}"
 
 list:
-  externalurl_title: "Ссылка на вшений сайт"
+  externalurl_title: "Ссылка на внешний сайт"
   no_articles: "Здесь пока нет статей"
 
 nav:
