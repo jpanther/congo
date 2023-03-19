@@ -1,0 +1,56 @@
+article:
+  anchor_label: "Kotwica"
+  date: "{{ .Date }}"
+  date_updated: "Zaktualizowano: {{ .Date }}"
+  draft: "Szkic"
+  edit_title: "Edytuj treść"
+  reading_time:
+    one: "{{ .Count }} minuta"
+    other: "{{ .Count }} minut"
+  reading_time_title: "Przeczytasz w"
+  table_of_contents: "Spis treści"
+  word_count:
+    one: "{{ .Count }} słowo"
+    other: "{{ .Count }} słów"
+
+author:
+  byline_title: "Autor"
+
+code:
+  copy: "Kopiuj"
+  copied: "Skopiowano"
+
+error:
+  404_title: "Strona nie została znaleziona :confused:"
+  404_error: "Błąd 404"
+  404_description: "Wygląda na to, że strona, której zażądałeś nie istnieje."
+
+footer:
+  dark_appearance: "Przełącz się na ciemny motyw"
+  light_appearance: "Przełączenie na jasny motyw"
+  powered_by: "Napędzany przez {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Link do strony zewnętrznej"
+  no_articles: "Nie ma jeszcze artykułów, które można by tu wyświetlić."
+
+nav:
+  scroll_to_top_title: "Przewiń do góry"
+  skip_to_main: "Przejdź do głównej treści"
+
+search:
+  open_button_title: "Szukaj (/)"
+  close_button_title: "Zamknij (Esc)"
+  input_placeholder: "Szukaj"
+
+sharing:
+  email: "Wyślij przez e-mail"
+  facebook: "Udostępnij na Facebook"
+  linkedin: "Udostępnij na LinkedIn"
+  mastodon: "Udostępnij na Mastodon"
+  pinterest: "Udostępnij na Pinterest"
+  reddit: "Udostępnij na Reddit"
+  twitter: "Udostępnij na Twitter"
+
+shortcode:
+  recent_articles: "Ostatnie"
