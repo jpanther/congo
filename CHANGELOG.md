@@ -14,6 +14,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Updated Russian translation ([#502](https://github.com/jpanther/congo/pull/502))
 
+### Fixed
+
+- Bengali translation prevents site building in cetain configurations ([#503](https://github.com/jpanther/congo/issues/503))
+
 ## [2.5.3] - 2023-03-05
 
 ### Added
