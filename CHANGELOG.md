@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Polish translation ([#497](https://github.com/jpanther/congo/pull/497))
+
+### Changed
+
+- Updated Russian translation ([#502](https://github.com/jpanther/congo/pull/502))
+
 ## [2.5.3] - 2023-03-05
 
 ### Added
