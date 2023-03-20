@@ -63,6 +63,7 @@ The theme currently supports the following languages out of the box:
 | :indonesia: Indonesian                  | `id`    |
 | :it: Italian                            | `it`    |
 | :jp: Japanese                           | `ja`    |
+| :poland: Polish                         | `pl`    |
 | :brazil: Portuguese (Brazil)            | `pt-br` |
 | :portugal: Portuguese (Portugal)        | `pt-pt` |
 | :romania: Romanian                      | `ro`    |
