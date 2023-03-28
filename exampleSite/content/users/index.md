@@ -60,5 +60,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [sug.bitprism.net](https://sug.bitprism.net)                           | Personal Site and Blog        |
 | [arjuns.me](https://arjuns.me)                                         | Personal Site and Blog        |
 | [statistix.be](https://statistix.be/)                                  | Professional site             |
+| [leonidasv.com](https://leonidasv.com/)                                | Personal site and Blog        |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
