@@ -19,8 +19,8 @@
             sm:max-w-[10rem]" src="{{ .RelPermalink }}"
           {{ else }}
             class="w-24 rounded-md sm:w-40" srcset="
-            {{- (.Fill "160x120 smart").RelPermalink }}
-            160w, {{- (.Fill "320x240 smart").RelPermalink }} 2x"
+            {{- (.Fill "160x120 smart").RelPermalink }} 160w,
+            {{- (.Fill "320x240 smart").RelPermalink }} 2x"
             src="{{ (.Fill "160x120 smart").RelPermalink }}"
           {{ end }}
         />
