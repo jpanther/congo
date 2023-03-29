@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Some `srcset` values are broken when using Hugo `--minify` option ([#508](https://github.com/jpanther/congo/pull/508))
+
 ## [2.5.4] - 2023-03-20
 
 ### Added
