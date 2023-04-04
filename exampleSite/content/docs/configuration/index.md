@@ -51,6 +51,7 @@ The theme currently supports the following languages out of the box:
 | Language                                | Code    |
 | --------------------------------------- | ------- |
 | :gb: **English (default)**              | `en`    |
+| :egypt: Arabic                          | `ar`    |
 | :bangladesh: Bengali                    | `bn`    |
 | :cn: Chinese - Simplified (China)       | `zh-cn` |
 | :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |

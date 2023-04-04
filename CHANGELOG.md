@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Arabic translation ([#521](https://github.com/jpanther/congo/pull/521))
+
 ### Changed
 
 - Search results now respect `showDate` value when displaying article metadata ([#511](https://github.com/jpanther/congo/pull/511))
