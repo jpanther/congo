@@ -1,0 +1,56 @@
+article:
+  anchor_label: "رابط الصفحة"
+  date: "{{ .Date }}"
+  date_updated: "تاريخ التحديث: {{ .Date }}"
+  draft: "مسودة"
+  edit_title: "تعديل المحتوى"
+  reading_time:
+    one: "دقيقة واحدة"
+    other: "{{ .Count }} من الدقائق"
+  reading_time_title: "وقت القراءة"
+  table_of_contents: "قائمة المحتويات"
+  word_count:
+    one: "كلمة واحدة"
+    other: "{{ .Count }} من الكلمات"
+
+author:
+  byline_title: "الكاتب"
+
+code:
+  copy: "نسخ"
+  copied: "تم النسخ"
+
+error:
+  404_title: "لم يتم العثور على الصفحة :confused:"
+  404_error: "خطأ 404"
+  404_description: "يبدو بأن الصفحة التي تحاول الوصول إليها غير موجودة."
+
+footer:
+  dark_appearance: "حوّل إلى النمط الداكن"
+  light_appearance: "حوّل إلى النمط الفاتح"
+  powered_by: "مُمكن باستعمال {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "رابط إلى صفحة خارجية"
+  no_articles: "لا يوجد أي مقالات هنا حتى الآن."
+
+nav:
+  scroll_to_top_title: "اذهب إلى أعلى"
+  skip_to_main: "التخطي إلى المحتوى الرئيسي"
+
+search:
+  open_button_title: "بحث (/)"
+  close_button_title: "إغلاق (Esc)"
+  input_placeholder: "بحث"
+
+sharing:
+  email: "إرسال بواسطة البريد الإلكتروني"
+  facebook: "مشاركة على فيسبوك"
+  linkedin: "مشاركة على لينكد إن"
+  mastodon: "نشر تووت على ماستادون"
+  pinterest: "تثبيت على بينتريست"
+  reddit: "نشر على ريديت"
+  twitter: "تغريد على تويتر"
+
+shortcode:
+  recent_articles: "حديثًا"
