@@ -7,12 +7,10 @@
     </div>
     {{/* Main menu */}}
     {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
-      <ul class="flex flex-col list-none ltr:text-right rtl:text-left sm:flex-row">
+      <ul class="flex list-none flex-col ltr:text-right rtl:text-left sm:flex-row">
         {{ if .Site.Menus.main }}
           {{ range .Site.Menus.main }}
-            <li
-              class="mb-1 group sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
-            >
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
               {{ if eq .Params.action "search" }}
                 {{ $.Scratch.Add "searchCount" 1 }}
                 {{ if $.Site.Params.enableSearch | default false }}
@@ -22,7 +20,7 @@
                   >
                     {{ with .Params.icon | default "search" }}
                       <span
-                        class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
                       >
                         {{ partial "icon.html" . }}
                       </span>
@@ -42,7 +40,7 @@
                   aria-label="appearance switcher"
                 >
                   <span
-                    class="inline transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:hidden"
+                    class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
                     title="{{ i18n "footer.dark_appearance" }}"
                   >
                     {{ with .Params.icon | default "moon" }}
@@ -56,7 +54,7 @@
                     {{ end }}
                   </span>
                   <span
-                    class="hidden transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:inline"
+                    class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
                     title="{{ i18n "footer.light_appearance" }}"
                   >
                     {{ with .Params.icon | default "sun" }}
@@ -77,7 +75,7 @@
                   {{ with .Params.target }}target="{{ . }}"{{ end }}
                   >{{ with .Params.icon }}
                     <span
-                      class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                      class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
                     >
                       {{ partial "icon.html" . }}
                     </span>
@@ -92,12 +90,10 @@
             </li>
           {{ end }}
           {{ if and ($.Site.Params.enableSearch | default false) (eq ($.Scratch.Get "searchCount") 0) }}
-            <li
-              class="mb-1 group sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
-            >
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
               <button id="search-button-m0" title="{{ i18n "search.open_button_title" }}">
                 <span
-                  class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
                 >
                   {{ partial "icon.html" "search" }}
                 </span>

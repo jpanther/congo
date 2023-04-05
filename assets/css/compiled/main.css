@@ -1083,12 +1083,9 @@ body:has(#menu-controller:checked) {
   line-height: 1.375;
 }
 
-:is([dir="ltr"] .toc ul ul) {
-  padding-left: 1rem;
-}
-
-:is([dir="rtl"] .toc ul ul) {
-  padding-right: 1rem;
+.toc ul ul {
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem;
 }
 
 .toc a {
@@ -1124,8 +1121,8 @@ body:has(#menu-controller:checked) {
 .copy-button {
   visibility: hidden;
   position: absolute;
-  top: 0px;
   right: 0px;
+  top: 0px;
   z-index: 10;
   width: 5rem;
   cursor: pointer;
@@ -1684,8 +1681,16 @@ body:has(#menu-controller:checked) {
   inset: 0px;
 }
 
+.-start-6 {
+  inset-inline-start: -1.5rem;
+}
+
 .bottom-0 {
   bottom: 0px;
+}
+
+.end-0 {
+  inset-inline-end: 0px;
 }
 
 .top-0 {
@@ -1778,6 +1783,11 @@ body:has(#menu-controller:checked) {
   margin-bottom: -0.25rem;
 }
 
+.-ms-5 {
+  -webkit-margin-start: -1.25rem;
+          margin-inline-start: -1.25rem;
+}
+
 .-mt-3 {
   margin-top: -0.75rem;
 }
@@ -1810,12 +1820,37 @@ body:has(#menu-controller:checked) {
   margin-bottom: 2px;
 }
 
+.me-14 {
+  -webkit-margin-end: 3.5rem;
+          margin-inline-end: 3.5rem;
+}
+
+.me-2 {
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+}
+
+.me-4 {
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.ms-1 {
+  -webkit-margin-start: 0.25rem;
+          margin-inline-start: 0.25rem;
+}
+
+.ms-2 {
+  -webkit-margin-start: 0.5rem;
+          margin-inline-start: 0.5rem;
 }
 
 .mt-0 {
@@ -2082,6 +2117,10 @@ body:has(#menu-controller:checked) {
   border-width: 1px;
 }
 
+.border-s {
+  border-inline-start-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -2243,12 +2282,34 @@ body:has(#menu-controller:checked) {
   padding-bottom: 1rem;
 }
 
-.pl-2 {
-  padding-left: 0.5rem;
+.pe-2 {
+  -webkit-padding-end: 0.5rem;
+          padding-inline-end: 0.5rem;
 }
 
-.pr-4 {
-  padding-right: 1rem;
+.pe-3 {
+  -webkit-padding-end: 0.75rem;
+          padding-inline-end: 0.75rem;
+}
+
+.pe-4 {
+  -webkit-padding-end: 1rem;
+          padding-inline-end: 1rem;
+}
+
+.pe-5 {
+  -webkit-padding-end: 1.25rem;
+          padding-inline-end: 1.25rem;
+}
+
+.ps-2 {
+  -webkit-padding-start: 0.5rem;
+          padding-inline-start: 0.5rem;
+}
+
+.ps-5 {
+  -webkit-padding-start: 1.25rem;
+          padding-inline-start: 1.25rem;
 }
 
 .pt-3 {
@@ -2594,11 +2655,6 @@ body:has(#menu-controller:checked) {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:translate-x-\[2px\] {
-  --tw-translate-x: 2px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:hover .group-hover\:text-primary-300 {
   --tw-text-opacity: 1;
   color: rgba(var(--color-primary-300), var(--tw-text-opacity));
@@ -2629,34 +2685,6 @@ body:has(#menu-controller:checked) {
   opacity: 1;
 }
 
-:is([dir="ltr"] .ltr\:-left-6) {
-  left: -1.5rem;
-}
-
-:is([dir="ltr"] .ltr\:right-0) {
-  right: 0px;
-}
-
-:is([dir="ltr"] .ltr\:-ml-5) {
-  margin-left: -1.25rem;
-}
-
-:is([dir="ltr"] .ltr\:ml-1) {
-  margin-left: 0.25rem;
-}
-
-:is([dir="ltr"] .ltr\:ml-2) {
-  margin-left: 0.5rem;
-}
-
-:is([dir="ltr"] .ltr\:mr-14) {
-  margin-right: 3.5rem;
-}
-
-:is([dir="ltr"] .ltr\:mr-4) {
-  margin-right: 1rem;
-}
-
 :is([dir="ltr"] .ltr\:block) {
   display: block;
 }
@@ -2669,52 +2697,8 @@ body:has(#menu-controller:checked) {
   display: none;
 }
 
-:is([dir="ltr"] .ltr\:border-l) {
-  border-left-width: 1px;
-}
-
-:is([dir="ltr"] .ltr\:pl-5) {
-  padding-left: 1.25rem;
-}
-
-:is([dir="ltr"] .ltr\:pr-2) {
-  padding-right: 0.5rem;
-}
-
-:is([dir="ltr"] .ltr\:pr-3) {
-  padding-right: 0.75rem;
-}
-
 :is([dir="ltr"] .ltr\:text-right) {
   text-align: right;
-}
-
-:is([dir="rtl"] .rtl\:-right-6) {
-  right: -1.5rem;
-}
-
-:is([dir="rtl"] .rtl\:left-0) {
-  left: 0px;
-}
-
-:is([dir="rtl"] .rtl\:-mr-5) {
-  margin-right: -1.25rem;
-}
-
-:is([dir="rtl"] .rtl\:ml-14) {
-  margin-left: 3.5rem;
-}
-
-:is([dir="rtl"] .rtl\:ml-4) {
-  margin-left: 1rem;
-}
-
-:is([dir="rtl"] .rtl\:mr-1) {
-  margin-right: 0.25rem;
-}
-
-:is([dir="rtl"] .rtl\:mr-2) {
-  margin-right: 0.5rem;
 }
 
 :is([dir="rtl"] .rtl\:block) {
@@ -2727,22 +2711,6 @@ body:has(#menu-controller:checked) {
 
 :is([dir="rtl"] .rtl\:hidden) {
   display: none;
-}
-
-:is([dir="rtl"] .rtl\:border-r) {
-  border-right-width: 1px;
-}
-
-:is([dir="rtl"] .rtl\:pl-2) {
-  padding-left: 0.5rem;
-}
-
-:is([dir="rtl"] .rtl\:pl-3) {
-  padding-left: 0.75rem;
-}
-
-:is([dir="rtl"] .rtl\:pr-5) {
-  padding-right: 1.25rem;
 }
 
 :is([dir="rtl"] .rtl\:text-left) {
@@ -2905,6 +2873,11 @@ body:has(#menu-controller:checked) {
     margin-bottom: 0px;
   }
 
+  .sm\:me-7 {
+    -webkit-margin-end: 1.75rem;
+            margin-inline-end: 1.75rem;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -2951,8 +2924,9 @@ body:has(#menu-controller:checked) {
     padding-bottom: 2.5rem;
   }
 
-  .sm\:pr-6 {
-    padding-right: 1.5rem;
+  .sm\:pe-6 {
+    -webkit-padding-end: 1.5rem;
+            padding-inline-end: 1.5rem;
   }
 
   .sm\:pt-10 {
@@ -2964,20 +2938,14 @@ body:has(#menu-controller:checked) {
     line-height: 1.75rem;
   }
 
-  :is([dir="ltr"] .ltr\:sm\:mr-7) {
-    margin-right: 1.75rem;
+  .sm\:last\:me-0:last-child {
+    -webkit-margin-end: 0px;
+            margin-inline-end: 0px;
   }
 
-  :is([dir="ltr"] .ltr\:sm\:last\:mr-0:last-child) {
-    margin-right: 0px;
-  }
-
-  :is([dir="rtl"] .rtl\:sm\:ml-7) {
-    margin-left: 1.75rem;
-  }
-
-  :is([dir="rtl"] .rtl\:sm\:last\:ml-0:last-child) {
-    margin-left: 0px;
+  .sm\:last\:me-0\.5:last-child {
+    -webkit-margin-end: 0.125rem;
+            margin-inline-end: 0.125rem;
   }
 }
 
@@ -3034,12 +3002,9 @@ body:has(#menu-controller:checked) {
     padding-right: 8rem;
   }
 
-  :is([dir="ltr"] .ltr\:lg\:pl-8) {
-    padding-left: 2rem;
-  }
-
-  :is([dir="rtl"] .rtl\:lg\:pr-8) {
-    padding-right: 2rem;
+  .lg\:ps-8 {
+    -webkit-padding-start: 2rem;
+            padding-inline-start: 2rem;
   }
 }
 
