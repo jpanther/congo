@@ -130,6 +130,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`robots`|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`header.layout`|`"basic"`|The layout of the page header and menu. Valid values are `basic`, `hamburger`, `hybrid` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/header/custom.html` file.|
 |`header.logo`|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
+|`header.logoDark`|_Not set_|The relative path to the dark variant of the site logo file within the `assets/` folder. This variant is only used if the logo is set. The same recommendations as for the logo file apply. |
 |`header.showTitle`|`true`|Whether the site title is displayed in the header.|
 |`footer.showCopyright`|`true`|Whether or not to show the copyright string in the site footer. Note that the string itself can be customised using the `copyright` parameter in the [languages configuration](#language-and-i18n).|
 |`footer.showThemeAttribution`|`true`|Whether or not to show the "powered by" theme attribution in the site footer. If you choose to disable this message, please consider attributing the theme somewhere else on your site (for example, on your about page).|
