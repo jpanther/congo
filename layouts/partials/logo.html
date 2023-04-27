@@ -1,37 +1,24 @@
 {{- if .Site.Params.header.logo }}
   {{- $logo := resources.Get .Site.Params.header.logo }}
-  {{- $darkLogo := resources.Get .Site.Params.header.darkLogo }}
-
-  <!-- If both logos are present, show different logo accordingly -->
-  {{- if and $logo $darkLogo }}
-    <a href="{{ "" | relLangURL }}" class="inline mr-2 dark:hidden">
-      <img
-        src="{{ $logo.RelPermalink }}"
-        width="{{ div $logo.Width 2 }}"
-        height="{{ div $logo.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left"
-        alt="{{ .Site.Title }}"
-      />
-    </a>
-    <a href="{{ "" | relLangURL }}" class="hidden mr-2 dark:inline">
-      <img
-        src="{{ $darkLogo.RelPermalink }}"
-        width="{{ div $darkLogo.Width 2 }}"
-        height="{{ div $darkLogo.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left"
-        alt="{{ .Site.Title }}"
-      />
-    </a>
-  <!-- Else if the standard logo is present, show the logo -->
-  {{- else if $logo }}
+  {{- $logo_dark := resources.Get .Site.Params.header.logoDark }}
+  {{- if $logo }}
     <a href="{{ "" | relLangURL }}" class="mr-2">
       <img
         src="{{ $logo.RelPermalink }}"
         width="{{ div $logo.Width 2 }}"
         height="{{ div $logo.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left"
+        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{if $logo_dark }} hidden dark:flex{{end}}"
         alt="{{ .Site.Title }}"
       />
+      {{- if $logo_dark }}
+      <img
+        src="{{ $logo_dark.RelPermalink }}"
+        width="{{ div $logo_dark.Width 2 }}"
+        height="{{ div $logo_dark.Height 2 }}"
+        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left dark:hidden"
+        alt="{{ .Site.Title }}"
+      />
+      {{- end}}
     </a>
   {{- end }}
 {{- end }}
