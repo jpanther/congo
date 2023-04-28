@@ -47,7 +47,7 @@ sharing:
   email: "Verstuur via email"
   facebook: "Deel op Facebook"
   linkedin: "Deel op LinkedIn"
-  # mastodon: "Toot on Mastodon"
+  mastodon: "Toot met Mastodon"
   pinterest: "Pin op Pinterest"
   reddit: "Verzend naar Reddit"
   twitter: "Tweet op Twitter"
