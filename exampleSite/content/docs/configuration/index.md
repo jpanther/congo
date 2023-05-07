@@ -55,6 +55,7 @@ The theme currently supports the following languages out of the box:
 | :bangladesh: Bengali                    | `bn`    |
 | :cn: Chinese - Simplified (China)       | `zh-cn` |
 | :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
+| :flag-cz: Czech                         | `cs`    |
 | :netherlands: Dutch                     | `nl`    |
 | :finland: Finnish                       | `fi`    |
 | :fr: French                             | `fr`    |
@@ -69,6 +70,7 @@ The theme currently supports the following languages out of the box:
 | :portugal: Portuguese (Portugal)        | `pt-pt` |
 | :romania: Romanian                      | `ro`    |
 | :ru: Russian                            | `ru`    |
+| :slovakia: Slovak                       | `sk`    |
 | :es: Spanish (Spain)                    | `es`    |
 | :tr: Turkish                            | `tr`    |
 
