@@ -32,6 +32,7 @@
           {{ end }}
         {{ end }}
         alt="{{ $altText }}"
+        loading="lazy"
       />
       {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
     </figure>
