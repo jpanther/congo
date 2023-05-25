@@ -3,7 +3,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           <a class="flex items-center px-3 py-2 rounded-md appearance-none bg-neutral-100 dark:bg-neutral-700 focus:bg-primary-100 hover:bg-primary-100 dark:hover:bg-primary-900 dark:focus:bg-primary-900 focus:outline-dotted focus:outline-transparent focus:outline-2" href="${e.item.permalink}" tabindex="0">
             <div class="grow">
               <div class="-mb-1 text-lg font-bold">${e.item.title}</div>
-              <div class="text-sm text-neutral-500 dark:text-neutral-400">${e.item.section}<span class="px-2 text-primary-500">&middot;</span>${e.item.date}</span></div>
+              <div class="text-sm text-neutral-500 dark:text-neutral-400">${e.item.section}${e.item.date==null?"":`<span class="px-2 text-primary-500">&middot;</span>${e.item.date}</span>`}</div>
               <div class="text-sm italic">${e.item.summary}</div>
             </div>
             <div class="ml-2 ltr:block rtl:hidden text-neutral-500">&rarr;</div>
