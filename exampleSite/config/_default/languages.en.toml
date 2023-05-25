@@ -1,18 +1,19 @@
 languageCode = "en-au"
 languageName = "English (Australia)"
-displayName = ":flag-au:"
-isoCode = "en-AU"
 weight = 1
-rtl = false
 
 title = "Congo"
-description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
 copyright = "&copy; 2023 Congo contributors"
 
-dateFormat = "2 January 2006"
-
 [params]
+  isoCode = "en-AU"
+  displayName = ":flag-au:"
+  rtl = false
+
+  dateFormat = "2 January 2006"
+
   mainSections = ["samples"]
+  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
 
 [author]
   name = "Congo"

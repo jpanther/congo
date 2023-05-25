@@ -1,0 +1,56 @@
+article:
+  anchor_label: "Kotva"
+  date: "{{ .Date }}"
+  date_updated: "Aktualizované: {{ .Date }}"
+  draft: "Koncept"
+  edit_title: "Upraviť obsah"
+  reading_time:
+    one: "{{ .Count }} min"
+    other: "{{ .Count }} min"
+  reading_time_title: "Čas čítania"
+  table_of_contents: "Obsah"
+  word_count:
+    one: "{{ .Count }} slovo"
+    other: "{{ .Count }} slov"
+
+author:
+  byline_title: "Autor"
+
+code:
+  copy: "Kopírovať"
+  copied: "Skopírované"
+
+error:
+  404_title: "Stránka nenájdená :confused:"
+  404_error: "Chyba 404"
+  404_description: "Zdá sa, že požadovaná stránka neexistuje."
+
+footer:
+  dark_appearance: "Prepnúť na tmavý vzhľad."
+  light_appearance: "Prepnúť na svetlý vzhľad."
+  powered_by: "Používa {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Odkaz na externú stránku"
+  no_articles: "Zatiaľ tu nie sú žiadne články."
+
+nav:
+  scroll_to_top_title: "Prejdite na začiatok"
+  skip_to_main: "Preskočiť na hlavný obsah"
+
+search:
+  open_button_title: "Vyhľadávanie (/)"
+  close_button_title: "Zavrieť (Esc)"
+  input_placeholder: "Hľadaj"
+
+sharing:
+  email: "Odoslať e-mailom"
+  facebook: "Zdieľaj na Facebooku"
+  linkedin: "Zdieľaj na LinkedIn"
+  mastodon: "Toot na Mastodon"
+  pinterest: "Pin na Pinterest"
+  reddit: "Odoslať na Reddit"
+  twitter: "Tweet na Twitteri"
+
+shortcode:
+  recent_articles: "Nedávne"

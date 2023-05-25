@@ -13,12 +13,9 @@
           {{ if $prev }}
             <a class="group flex" href="{{ $prev.RelPermalink }}">
               <span
-                class="mr-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-2 text-neutral-700 transition-transform group-hover:translate-x-[2px] group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
               >
               <span class="flex flex-col">
                 <span
@@ -49,12 +46,9 @@
                 </span>
               </span>
               <span
-                class="ml-2 text-neutral-700 transition-transform group-hover:translate-x-[2px] group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
               >
             </a>
           {{ end }}

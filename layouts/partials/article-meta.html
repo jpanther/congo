@@ -32,6 +32,7 @@
     {{ $meta.Add "partials" (slice (partial "meta/edit.html" .)) }}
   {{ end }}
 
+
   <div class="flex flex-row flex-wrap items-center">
     {{/* Output partials */}}
     {{ with ($meta.Get "partials") }}
@@ -40,7 +41,7 @@
 
     {{/* Output draft label */}}
     {{ if and (eq $scope "single") (and .Draft .Site.Params.article.showDraftLabel) }}
-      <span class="pl-2">{{ partial "badge.html" (i18n "article.draft" | emojify) }}</span>
+      <span class="ps-2">{{ partial "badge.html" (i18n "article.draft" | emojify) }}</span>
     {{ end }}
   </div>
 
