@@ -1,9 +1,9 @@
-<article class="flex flex-row mt-6 max-w-prose">
+<article class="mt-6 flex max-w-prose flex-row">
   {{- $images := $.Resources.ByType "image" }}
   {{- $thumbnail := $images.GetMatch (.Params.thumbnail | default "*thumb*") }}
   {{- $feature := $images.GetMatch (.Params.feature | default "*feature*") | default $thumbnail }}
   {{- with $feature }}
-    <div class="flex-none pr-4 sm:pr-6 ">
+    <div class="flex-none pe-4 sm:pe-6 ">
       <a
         href="{{ with $.Params.externalUrl }}
           {{ . }}
@@ -39,7 +39,7 @@
             >{{ $.Title | emojify }}</a
           >
           <span
-            class="text-xs align-top cursor-default text-neutral-400 dark:text-neutral-500"
+            class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500"
             title="{{ i18n "list.externalurl_title" }}"
           >
             <span class="rtl:hidden">&#8599;</span>
@@ -54,7 +54,7 @@
         >
       {{ end }}
       {{ if and .Draft .Site.Params.article.showDraftLabel }}
-        <div class=" ltr:ml-2 rtl:mr-2">
+        <div class="ms-2">
           {{ partial "badge.html" (i18n "article.draft" | emojify) }}
         </div>
       {{ end }}
@@ -66,7 +66,7 @@
       {{ partial "article-meta.html" . }}
     </div>
     {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
-      <div class="py-1 prose dark:prose-invert">
+      <div class="prose py-1 dark:prose-invert">
         {{ .Summary | emojify }}
       </div>
     {{ end }}

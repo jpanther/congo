@@ -7,7 +7,7 @@
     {{ with .Site.Author.image }}
       {{ $authorImage := resources.Get . }}
       {{ if $authorImage }}
-        {{ $authorImage := $authorImage.Fill "288x288" }}
+        {{ $authorImage := $authorImage.Fill "288x288 Center" }}
         <img
           class="mb-2 rounded-full h-36 w-36"
           width="144"

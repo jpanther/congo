@@ -1,4 +1,4 @@
-/*! Congo v2.5.4 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.6.0 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
@@ -61,10 +61,10 @@ body:has(#menu-controller:checked) {
 /* Table of Contents */
 .toc ul,
 .toc li {
-  @apply px-0 leading-snug list-none;
+  @apply list-none px-0 leading-snug;
 }
 .toc ul ul {
-  @apply ltr:pl-4 rtl:pr-4;
+  @apply ps-4;
 }
 .toc a {
   @apply font-normal text-neutral-700 dark:text-neutral-400;
@@ -84,7 +84,7 @@ body:has(#menu-controller:checked) {
   @apply visible;
 }
 .copy-button {
-  @apply absolute top-0 right-0 z-10 invisible w-20 py-1 font-mono text-sm cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-neutral-200 text-neutral-700 opacity-90 dark:bg-neutral-600 dark:text-neutral-200;
+  @apply invisible absolute right-0 top-0 z-10 w-20 cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-neutral-200 py-1 font-mono text-sm text-neutral-700 opacity-90 dark:bg-neutral-600 dark:text-neutral-200;
 }
 .copy-button:hover,
 .copy-button:focus,
@@ -99,20 +99,20 @@ body:has(#menu-controller:checked) {
 /* -- Chroma Highlight -- */
 /* Background */
 .chroma {
-  @apply py-3 rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply rounded-md bg-neutral-50 py-3 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
 }
 .chroma pre {
-  @apply p-0 m-0;
+  @apply m-0 p-0;
 }
 /* LineTable */
 .chroma .lntable {
-  @apply block w-auto m-0 overflow-auto text-base;
+  @apply m-0 block w-auto overflow-auto text-base;
 }
 /* LineNumbersTable */
 /* LineNumbers */
 .chroma .lnt,
 .chroma .ln {
-  @apply px-2 mr-2 text-neutral-600 dark:text-neutral-300;
+  @apply mr-2 px-2 text-neutral-600 dark:text-neutral-300;
 }
 .chroma .lntd {
   @apply p-0 align-top;
@@ -274,7 +274,7 @@ body:has(#menu-controller:checked) {
 }
 /* CommentHashbang */
 .chroma .ch {
-  @apply italic font-semibold text-neutral-500 dark:text-neutral-400;
+  @apply font-semibold italic text-neutral-500 dark:text-neutral-400;
 }
 /* GenericEmph */
 .chroma .ge {

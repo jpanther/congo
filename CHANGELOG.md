@@ -6,6 +6,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.6.0] - 2023-05-25
+
+### Added
+
+- Support for Hugo v0.112.0
+- Ability to specify an alternate logo image when dark appearance is active (\[#533], ([#521](https://github.com/jpanther/congo/pull/521))(https://github.com/jpanther/congo/pull/533), [#543](https://github.com/jpanther/congo/pull/543))
+- Ability to specify the hashing algorithm that is used when fingerprinting assets ([#478](https://github.com/jpanther/congo/issues/478))
+- Arabic translation ([#521](https://github.com/jpanther/congo/pull/521))
+- Slovak translation ([#541](https://github.com/jpanther/congo/pull/541))
+- Czech translation ([#541](https://github.com/jpanther/congo/pull/541))
+
+### Changed
+
+- ⚠️ Some parameters in the root of the Languages config file have been nested under the `params` block
+- Search results now respect `showDate` value when displaying article metadata ([#511](https://github.com/jpanther/congo/pull/511))
+- Adopted new Tailwind logical properties for RTL styling
+- Article sharing links now open in a new tab/window
+- Updated Dutch translation ([#544](https://github.com/jpanther/congo/pull/544))
+- Upgrade to Tailwind v3.3.1 ([#523](https://github.com/jpanther/congo/pull/523))
+- Upgrade to KaTeX v0.16.7 ([#538](https://github.com/jpanther/congo/pull/538), [#549](https://github.com/jpanther/congo/pull/549))
+- Upgrade to Chart.js v4.3.0 ([#551](https://github.com/jpanther/congo/pull/551))
+- Upgrade to Mermaid v10.2.0 ([#563](https://github.com/jpanther/congo/pull/563))
+
+### Fixed
+
+- Some `srcset` values are broken when using Hugo `--minify` option ([#508](https://github.com/jpanther/congo/pull/508))
+- Author images are cropped off-centre during image processing ([#527](https://github.com/jpanther/congo/pull/527))
+- Site doesn't build when using Hugo v0.112.0 ([#561](https://github.com/jpanther/congo/pull/561))
+
 ## [2.5.4] - 2023-03-20
 
 ### Added
@@ -659,7 +688,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.5.4...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.6.0...HEAD
+[2.6.0]: https://github.com/jpanther/congo/compare/v2.5.4...v2.6.0
 [2.5.4]: https://github.com/jpanther/congo/compare/v2.5.3...v2.5.4
 [2.5.3]: https://github.com/jpanther/congo/compare/v2.5.2...v2.5.3
 [2.5.2]: https://github.com/jpanther/congo/compare/v2.5.1...v2.5.2
