@@ -7,7 +7,7 @@
         src="{{ $logo.RelPermalink }}"
         width="{{ div $logo.Width 2 }}"
         height="{{ div $logo.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{if $logo_dark }} hidden dark:flex{{end}}"
+        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{ if $logo_dark }} hidden dark:flex{{ end }}"
         alt="{{ .Site.Title }}"
       />
       {{- if $logo_dark }}

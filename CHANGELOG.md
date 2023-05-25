@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Ability to specify an alternate logo image when dark appearance is active ([#533], ([#521](https://github.com/jpanther/congo/pull/521))(https://github.com/jpanther/congo/pull/533), [#543](https://github.com/jpanther/congo/pull/543))
 - Arabic translation ([#521](https://github.com/jpanther/congo/pull/521))
 - Slovak translation ([#541](https://github.com/jpanther/congo/pull/541))
 - Czech translation ([#541](https://github.com/jpanther/congo/pull/541))
