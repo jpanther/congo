@@ -89,17 +89,17 @@ The default file can be used as a template to create additional languages, or re
 <!-- prettier-ignore-start -->
 |Name|Default|Description|
 |---|---|---|
-|`languageCode`|`"en"`|The Hugo language code for this file. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-au`) and should match the language code in the filename. Hugo expects this value to always be in lowercase. For proper HTML compliance, set the `isoCode` parameter which is case-sensitive.|
+|`languageCode`|`"en"`|The Hugo language code for this file. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-au`) and should match the language code in the filename. Hugo expects this value to always be in lowercase. For proper HTML compliance, set the `params.isoCode` parameter which is case-sensitive.|
 |`languageName`|`"English"`|The name of the language.|
-|`displayName`|`"EN"`|The name used when the language appears on the website.|
-|`isoCode`|`"en"`|The ISO language code for HTML metadata purposes. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-AU`).|
 |`weight`|`1`|The weight determines the order of languages when building multilingual sites.|
-|`rtl`|`false`|Whether or not this is a RTL language. Set to `true` to reflow content from right-to-left. Congo fully supports using RTL and LTR languages at the same time and will dynamically adjust to both.|
 |`title`|`"Congo"`|The title of the website. This will be displayed in the site header and footer.|
-|`description`|_Not set_|The website description. This will be used in the site metadata.|
 |`copyright`|_Not set_|A Markdown string containing the copyright message to be displayed in the site footer. If none is provided, Congo will automatically generate a copyright string using the site `title`.|
-|`dateFormat`|`"2 January 2006"`|How dates are formatted in this language. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
+|`params.isoCode`|`"en"`|The ISO language code for HTML metadata purposes. It can be a top-level language (ie. `en`) or a sub-variant (ie. `en-AU`).|
+|`params.displayName`|`"EN"`|The name used when the language appears on the website.|
+|`params.rtl`|`false`|Whether or not this is a RTL language. Set to `true` to reflow content from right-to-left. Congo fully supports using RTL and LTR languages at the same time and will dynamically adjust to both.|
+|`params.dateFormat`|`"2 January 2006"`|How dates are formatted in this language. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
 |`params.mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
+|`params.description`|_Not set_|The website description. This will be used in the site metadata.|
 |`author.name`|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
 |`author.image`|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `assets/` folder.|
 |`author.headline`|_Not set_|A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.|

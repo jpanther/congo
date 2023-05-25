@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Support for Hugo v0.112.0
 - Ability to specify an alternate logo image when dark appearance is active ([#533], ([#521](https://github.com/jpanther/congo/pull/521))(https://github.com/jpanther/congo/pull/533), [#543](https://github.com/jpanther/congo/pull/543))
 - Ability to specify the hashing algorithm that is used when fingerprinting assets ([#478](https://github.com/jpanther/congo/issues/478))
 - Arabic translation ([#521](https://github.com/jpanther/congo/pull/521))
@@ -16,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- ⚠️ Some parameters in the root of the Languages config file have been nested under the `params` block
 - Search results now respect `showDate` value when displaying article metadata ([#511](https://github.com/jpanther/congo/pull/511))
 - Adopted new Tailwind logical properties for RTL styling
 - Updated Dutch translation ([#544](https://github.com/jpanther/congo/pull/544))
