@@ -17,6 +17,7 @@ enableCodeCopy = false
 [header]
   layout = "basic" # valid options: basic, hamburger, hybrid, custom
   # logo = "img/logo.jpg"
+  # darkLogo = "img/dark-logo.jpg" # specify a different logo for dark mode if needed
   showTitle = true
 
 [footer]
