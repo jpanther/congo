@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Some `srcset` values are broken when using Hugo `--minify` option ([#508](https://github.com/jpanther/congo/pull/508))
+- Author images are cropped off-centre during image processing ([#527](https://github.com/jpanther/congo/pull/527))
 - Site doesn't build when using Hugo v0.112.0 ([#561](https://github.com/jpanther/congo/pull/561))
 
 ## [2.5.4] - 2023-03-20
