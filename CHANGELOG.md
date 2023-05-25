@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - ⚠️ Some parameters in the root of the Languages config file have been nested under the `params` block
 - Search results now respect `showDate` value when displaying article metadata ([#511](https://github.com/jpanther/congo/pull/511))
 - Adopted new Tailwind logical properties for RTL styling
+- Article sharing links now open in a new tab/window
 - Updated Dutch translation ([#544](https://github.com/jpanther/congo/pull/544))
 - Upgrade to Tailwind v3.3.1 ([#523](https://github.com/jpanther/congo/pull/523))
 - Upgrade to KaTeX v0.16.7 ([#538](https://github.com/jpanther/congo/pull/538), [#549](https://github.com/jpanther/congo/pull/549))
