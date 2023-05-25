@@ -130,6 +130,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
 |`enableCodeCopy`|`false`|Whether copy-to-clipboard buttons are enabled for `<code>` blocks. The `highlight.noClasses` parameter must be set to `false` for code copy to function correctly. Read more about [other configuration files](#other-configuration-files) below.|
 |`robots`|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
+|`fingerprintAlgorithm`|`"sha256"`|String that indicates which hashing algorithm is used when fingerprinting assets. Valid options include `md5`, `sha256`, `sha384` and `sha512`.|
 |`header.layout`|`"basic"`|The layout of the page header and menu. Valid values are `basic`, `hamburger`, `hybrid` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/header/custom.html` file.|
 |`header.logo`|_Not set_|The relative path to the site logo file within the `assets/` folder. The logo file should be provided at 2x resolution and supports any image dimensions.|
 |`header.logoDark`|_Not set_|As per the `header.logo` parameter, however this image is used whenever dark mode is active.|
