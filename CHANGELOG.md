@@ -18,8 +18,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Adopted new Tailwind logical properties for RTL styling
 - Updated Dutch translation ([#544](https://github.com/jpanther/congo/pull/544))
 - Upgrade to Tailwind v3.3.1 ([#523](https://github.com/jpanther/congo/pull/523))
-- Upgrade to KaTeX v0.16.6 ([#538](https://github.com/jpanther/congo/pull/538))
-- Upgrade to Mermaid v9.4.3
+- Upgrade to KaTeX v0.16.7 ([#538](https://github.com/jpanther/congo/pull/538), [#549](https://github.com/jpanther/congo/pull/549))
+- Upgrade to Chart.js v4.3.0 ([#551](https://github.com/jpanther/congo/pull/551))
+- Upgrade to Mermaid v10.2.0 ([#563](https://github.com/jpanther/congo/pull/563))
 
 ### Fixed
 
