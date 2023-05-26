@@ -14,7 +14,9 @@
           height="144"
           alt="{{ $.Site.Author.name | default "Author" }}"
           src="{{ $authorImage.RelPermalink }}"
-          loading="lazy"
+          {{ if .Site.Params.enableImageLazyLoading | default true }}
+            loading="lazy"
+          {{ end }}
         />
       {{ end }}
     {{ end }}

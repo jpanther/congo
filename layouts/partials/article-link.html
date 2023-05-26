@@ -23,7 +23,9 @@
             160w, {{- (.Fill "320x240 smart").RelPermalink }} 2x"
             src="{{ (.Fill "160x120 smart").RelPermalink }}"
           {{ end }}
-          loading="lazy"
+          {{ if .Site.Params.enableImageLazyLoading | default true }}
+            loading="lazy"
+          {{ end }}
         />
       </a>
     </div>
