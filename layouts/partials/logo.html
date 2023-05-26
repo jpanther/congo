@@ -9,6 +9,7 @@
         height="{{ div $logo.Height 2 }}"
         class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{ if $logo_dark }} hidden dark:flex{{ end }}"
         alt="{{ .Site.Title }}"
+        loading="lazy"
       />
       {{- if $logo_dark }}
       <img

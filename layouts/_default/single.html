@@ -31,6 +31,7 @@
               {{ end }}
             {{ end }}
             alt="{{ $.Params.featureAlt | default $.Params.coverAlt | default "" }}"
+            loading="lazy"
           />
           {{ with $.Params.coverCaption }}
             <figcaption class="mb-6 -mt-3 text-center">{{ . | markdownify }}</figcaption>

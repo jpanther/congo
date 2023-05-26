@@ -3,7 +3,7 @@
 {{ $caption := .Title }}
 {{ if findRE "^https?" $url.Scheme }}
   <figure>
-    <img class="mx-auto my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
+    <img class="mx-auto my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" loading="lazy" />
     {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
   </figure>
 {{ else }}
@@ -38,7 +38,7 @@
     </figure>
   {{ else }}
     <figure>
-      <img class="mx-auto my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
+      <img class="mx-auto my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" loading="lazy" />
       {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
     </figure>
   {{ end }}

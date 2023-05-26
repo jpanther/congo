@@ -8,6 +8,7 @@
       {{- if or (.Get "alt") (.Get "caption") }}
         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
       {{- end -}}
+      loading="lazy"
       width="100%"
       height="auto"
       style="max-width:{{ div $image.Width 2 }}px; max-height:{{ div $image.Height 2 }}px;"
