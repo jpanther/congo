@@ -31,7 +31,7 @@
               {{ end }}
             {{ end }}
             alt="{{ $.Params.featureAlt | default $.Params.coverAlt | default "" }}"
-            {{ if .Site.Params.enableImageLazyLoading | default true }}
+            {{ if $.Site.Params.enableImageLazyLoading | default true }}
               loading="lazy"
             {{ end }}
           />
