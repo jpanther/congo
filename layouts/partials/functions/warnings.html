@@ -1,9 +1,9 @@
-{{ if ne .Site.Params.showAppearanceSwitcher nil }}
+{{ if ne .Params.showAppearanceSwitcher nil }}
   {{ warnf "[CONGO] Theme parameter `showAppearanceSwitcher` has been renamed to `footer.showAppearanceSwitcher`. Please update your site configuration." }}
 {{ end }}
-{{ if ne .Site.Params.showScrollToTop nil }}
+{{ if ne .Params.showScrollToTop nil }}
   {{ warnf "[CONGO] Theme parameter `showScrollToTop` has been renamed to `footer.showScrollToTop`. Please update your site configuration." }}
 {{ end }}
-{{ if ne .Site.Params.logo nil }}
+{{ if ne .Params.logo nil }}
   {{ warnf "[CONGO] Theme parameter `logo` has been renamed to `header.logo`. Please update your site configuration." }}
 {{ end }}

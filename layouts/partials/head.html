@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8" />
-  {{ with .Site.Language.Params.htmlCode | default .Site.LanguageCode }}
+  {{ with site.Params.htmlCode | default .Site.LanguageCode }}
     <meta http-equiv="content-language" content="{{ . }}" />
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,7 @@
   {{ end -}}
   {{/* Asset bundles */}}
   {{ $assets := newScratch }}
+  {{ $algorithm := .Site.Params.fingerprintAlgorithm | default "sha256" }}
   {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (lower .Site.Params.colorScheme | default "congo")) }}
   {{ if not $cssScheme }}
     {{ $cssScheme = resources.Get "css/schemes/congo.css" }}
@@ -42,7 +43,7 @@
   {{ if $cssCustom }}
     {{ $assets.Add "css" (slice $cssCustom) }}
   {{ end }}
-  {{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint $algorithm }}
   <link
     type="text/css"
     rel="stylesheet"
@@ -50,7 +51,7 @@
     integrity="{{ $bundleCSS.Data.Integrity }}"
   />
   {{ $jsAppearance := resources.Get "js/appearance.js" }}
-  {{ $jsAppearance = $jsAppearance | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $jsAppearance = $jsAppearance | resources.Minify | resources.Fingerprint $algorithm }}
   <script type="text/javascript" src="{{ $jsAppearance.RelPermalink }}" integrity="{{ $jsAppearance.Data.Integrity }}"></script>
   {{ if .Site.Params.enableSearch | default false }}
     {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
@@ -66,7 +67,7 @@
     {{ $assets.Add "js" (slice $jsRTL) }}
   {{ end }}
   {{ if $assets.Get "js" }}
-    {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+    {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint $algorithm }}
     <script defer type="text/javascript" id="script-bundle" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}" data-copy="{{ i18n "code.copy" }}" data-copied="{{ i18n "code.copied" }}"></script>
   {{ end }}
   {{/* Icons */}}
