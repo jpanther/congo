@@ -38,9 +38,9 @@
                           <span
                             class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
                           >
-                            {{ partial "icon.html" . }}
+                            {{- partial "icon.html" . -}}
                           </span>
-                        {{ end }}{{ if .Params.showName | default true }}
+                        {{- end -}}{{- if .Params.showName | default true -}}
                           <span
                             class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                             >{{ .Name | markdownify | emojify }}</span
@@ -60,9 +60,9 @@
                         title="{{ i18n "footer.dark_appearance" }}"
                       >
                         {{ with .Params.icon | default "moon" }}
-                          {{ partial "icon.html" . }}
-                        {{ end }}
-                        {{ if .Params.showName | default true }}
+                          {{- partial "icon.html" . -}}
+                        {{- end -}}
+                        {{- if .Params.showName | default true -}}
                           <span
                             class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                             >{{ .Name | markdownify | emojify }}</span
@@ -74,9 +74,9 @@
                         title="{{ i18n "footer.light_appearance" }}"
                       >
                         {{ with .Params.icon | default "sun" }}
-                          {{ partial "icon.html" . }}
-                        {{ end }}
-                        {{ if .Params.showName | default true }}
+                          {{- partial "icon.html" . -}}
+                        {{- end -}}
+                        {{- if .Params.showName | default true -}}
                           <span
                             class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                             >{{ .Name | markdownify | emojify }}</span
@@ -93,9 +93,9 @@
                         <span
                           class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
                         >
-                          {{ partial "icon.html" . }}
+                          {{- partial "icon.html" . -}}
                         </span>
-                      {{ end }}{{ if .Params.showName | default true }}
+                      {{- end -}}{{- if .Params.showName | default true -}}
                         <span
                           class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                           >{{ .Name | markdownify | emojify }}</span

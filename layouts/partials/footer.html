@@ -16,9 +16,9 @@
                     <span
                       class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
                     >
-                      {{ partial "icon.html" . }}
+                      {{- partial "icon.html" . -}}
                     </span>
-                  {{ end }}{{ if .Params.showName | default true }}
+                  {{- end -}}{{- if .Params.showName | default true -}}
                     <span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                       >{{ .Name | markdownify | emojify }}</span
@@ -55,9 +55,9 @@
                   <span
                     class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
                   >
-                    {{ partial "icon.html" . }}
+                    {{- partial "icon.html" . -}}
                   </span>
-                {{ end }}{{ if .Params.showName | default true }}
+                {{- end -}}{{- if .Params.showName | default true -}}
                   <span
                     class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                     >{{ .Name | markdownify | emojify }}</span
