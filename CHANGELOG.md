@@ -6,9 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Updated Simplified Chinese (China) translateion ([#573](https://github.com/jpanther/congo/pull/573))
+
 ### Fixed
 
 - Icon padding inconsistent when using `--minify` option to build site ([#568](https://github.com/jpanther/congo/pull/568))
+- Upgrade to Mermaid v10.2.1 ([#569](https://github.com/jpanther/congo/pull/569))
 
 ## [2.6.0] - 2023-05-25
 
