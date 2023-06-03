@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Icon padding inconsistent when using `--minify` option to build site ([#568](https://github.com/jpanther/congo/pull/568))
+
 ## [2.6.0] - 2023-05-25
 
 ### Added
