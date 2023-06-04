@@ -8,10 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- Updated Simplified Chinese (China) translateion ([#573](https://github.com/jpanther/congo/pull/573))
+- Current language is no longer displayed in language selection ([#565](https://github.com/jpanther/congo/issues/565))
+- Updated Simplified Chinese (China) translation ([#573](https://github.com/jpanther/congo/pull/573))
 
 ### Fixed
 
+- Language selection repeats current language on multilingual sites instead of linking to translated content ([#565](https://github.com/jpanther/congo/issues/565))
 - Icon padding inconsistent when using `--minify` option to build site ([#568](https://github.com/jpanther/congo/pull/568))
 - Upgrade to Mermaid v10.2.1 ([#569](https://github.com/jpanther/congo/pull/569))
 
