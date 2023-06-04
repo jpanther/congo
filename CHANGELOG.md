@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Images are now marked for lazy loading by default ([#552](https://github.com/jpanther/congo/pull/552))
 - Current language is no longer displayed in language selection ([#565](https://github.com/jpanther/congo/issues/565))
 - Updated Simplified Chinese (China) translation ([#573](https://github.com/jpanther/congo/pull/573))
 
