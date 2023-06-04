@@ -75,7 +75,7 @@
       {{/* Copyright */}}
       {{ if .Site.Params.footer.showCopyright | default true }}
         <p class="text-sm text-neutral-500 dark:text-neutral-400">
-          {{- with .Site.Params.copyright }}
+          {{- with site.Copyright }}
             {{ . | emojify | markdownify }}
           {{- else }}
             &copy;

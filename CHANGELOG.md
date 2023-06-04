@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Language selection repeats current language on multilingual sites instead of linking to translated content ([#565](https://github.com/jpanther/congo/issues/565))
 - Icon padding inconsistent when using `--minify` option to build site ([#568](https://github.com/jpanther/congo/pull/568))
+- Copyright string in the language configuration does not apply ([#572](https://github.com/jpanther/congo/issues/572))
 - Upgrade to Mermaid v10.2.1 ([#569](https://github.com/jpanther/congo/pull/569))
 
 ## [2.6.0] - 2023-05-25
