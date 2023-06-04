@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.6.1] - 2023-06-04
+
 ### Changed
 
 - Images are now marked for lazy loading by default ([#552](https://github.com/jpanther/congo/pull/552))
@@ -701,7 +703,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.6.0...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.6.1...HEAD
+[2.6.1]: https://github.com/jpanther/congo/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/jpanther/congo/compare/v2.5.4...v2.6.0
 [2.5.4]: https://github.com/jpanther/congo/compare/v2.5.3...v2.5.4
 [2.5.3]: https://github.com/jpanther/congo/compare/v2.5.2...v2.5.3
