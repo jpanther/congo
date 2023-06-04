@@ -6,12 +6,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.6.1] - 2023-06-04
+
+### Changed
+
+- Images are now marked for lazy loading by default ([#552](https://github.com/jpanther/congo/pull/552))
+- Current language is no longer displayed in language selection ([#565](https://github.com/jpanther/congo/issues/565))
+- Updated Simplified Chinese (China) translation ([#573](https://github.com/jpanther/congo/pull/573))
+
+### Fixed
+
+- Language selection repeats current language on multilingual sites instead of linking to translated content ([#565](https://github.com/jpanther/congo/issues/565))
+- Icon padding inconsistent when using `--minify` option to build site ([#568](https://github.com/jpanther/congo/pull/568))
+- Copyright string in the language configuration does not apply ([#572](https://github.com/jpanther/congo/issues/572))
+- Upgrade to Mermaid v10.2.1 ([#569](https://github.com/jpanther/congo/pull/569))
+
 ## [2.6.0] - 2023-05-25
 
 ### Added
 
 - Support for Hugo v0.112.0
-- Ability to specify an alternate logo image when dark appearance is active (\[#533], ([#521](https://github.com/jpanther/congo/pull/521))(https://github.com/jpanther/congo/pull/533), [#543](https://github.com/jpanther/congo/pull/543))
+- Ability to specify an alternate logo image when dark appearance is active ([#533](https://github.com/jpanther/congo/pull/533), [#543](https://github.com/jpanther/congo/pull/543))
 - Ability to specify the hashing algorithm that is used when fingerprinting assets ([#478](https://github.com/jpanther/congo/issues/478))
 - Arabic translation ([#521](https://github.com/jpanther/congo/pull/521))
 - Slovak translation ([#541](https://github.com/jpanther/congo/pull/541))
@@ -688,7 +703,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.6.0...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.6.1...HEAD
+[2.6.1]: https://github.com/jpanther/congo/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/jpanther/congo/compare/v2.5.4...v2.6.0
 [2.5.4]: https://github.com/jpanther/congo/compare/v2.5.3...v2.5.4
 [2.5.3]: https://github.com/jpanther/congo/compare/v2.5.2...v2.5.3

@@ -11,6 +11,9 @@
     <img
       class="mx-auto my-0 rounded-md"
       alt="{{ $altText }}"
+      {{ if .Site.Params.enableImageLazyLoading | default true }}
+        loading="lazy"
+      {{ end }}
       {{ if findRE "^https?" $url.Scheme }}
         src="{{ $url.String }}"
       {{ else }}
