@@ -70,6 +70,12 @@ fingerprintAlgorithm = "sha256"
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
 
+[plausible]
+  enable = false
+  domain = "llama.yoursite.com"
+  event = ""
+  script = ""
+
 [verification]
   # google = ""
   # bing = ""
