@@ -34,8 +34,9 @@ To enable Plausible analytics support, simply set `plausible.enable` to `true` i
 [plausible]
   enable = true
   domain = "blog.yoursite.com"
-  event = "https://stats.dejavu.moe/blog"
-  script = "https://stats.dejavu.moe/react.min.js"
+  # event = ""
+  # script = ""
+```
 
 ### Google Analytics
 
