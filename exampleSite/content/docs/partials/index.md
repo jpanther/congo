@@ -24,6 +24,19 @@ To enable Fathom Analytics support, simply provide your Fathom site code in the 
   domain = "llama.yoursite.com"
 ```
 
+### Plausible Analytics
+
+To enable Plausible analytics support, simply set `plausible.enable` to `true` in the `config/_default/params.toml` file, and then provide your Plausible site `domain`. If you are using a self-hosted Plausible, or wish to use [proxied analytics](https://plausible.io/docs/proxy/introduction) scripts and event API router, you can also provide additional `event` and `script` configuration values. If you do not provide these two values, the script will load directly with Plausible's default.
+
+```toml
+# config/_default/params.toml
+
+[plausible]
+  enable = true
+  domain = "blog.yoursite.com"
+  event = "https://stats.dejavu.moe/blog"
+  script = "https://stats.dejavu.moe/react.min.js"
+
 ### Google Analytics
 
 Google Analytics support is provided through the internal Hugo partial. Simply provide the `googleAnalytics` key in the `config/_default/config.toml` file and the script will be added automatically.
