@@ -3,6 +3,10 @@
 @tailwind base;
 @tailwind components;
 
+p {
+  @apply text-justify;
+}
+
 body a,
 body button {
   @apply transition-colors;
