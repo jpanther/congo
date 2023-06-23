@@ -66,5 +66,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [nikita.computer](https://nikita.computer/)                            | Personal site and tech blog     |
 | [blog.dejavu.moe](https://blog.dejavu.moe/)                            | Personal blog and weekly issues |
 | [spiffyeight77.com](https://spiffyeight77.com/)                        | Personal blog                   |
+| [Tomy's Blog](https://blog.tomy.me)                                    | Personal site and Blog          |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
