@@ -71,10 +71,9 @@ fingerprintAlgorithm = "sha256"
   # domain = "llama.yoursite.com"
 
 [plausible]
-  enable = false
-  domain = "blog.yoursite.com"
-  event = ""
-  script = ""
+  # domain = "blog.yoursite.com"
+  # event = ""
+  # script = ""
 
 [verification]
   # google = ""

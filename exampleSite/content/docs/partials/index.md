@@ -26,16 +26,15 @@ To enable Fathom Analytics support, simply provide your Fathom site code in the 
 
 ### Plausible Analytics
 
-To enable Plausible analytics support, simply set `plausible.enable` to `true` in the `config/_default/params.toml` file, and then provide your Plausible site `domain`. If you are using a self-hosted Plausible, or wish to use [proxied analytics](https://plausible.io/docs/proxy/introduction) scripts and event API router, you can also provide additional `event` and `script` configuration values. If you do not provide these two values, the script will load directly with Plausible's default.
+To enable Plausible analytics support, simply provide the domain of the website you want to track in the `config/_default/params.toml` file. If you are using a self-hosted Plausible, or wish to use a [proxied analytics](https://plausible.io/docs/proxy/introduction) script and event API router, you can also provide additional `event` and `script` configuration values. If you do not provide these two values, the script will load directly with Plausible's default managed service. Refer to [Using a proxy for analytics](https://plausible.io/docs/proxy/introduction) for more details.
 
 ```toml
 # config/_default/params.toml
 
 [plausible]
-  enable = true
   domain = "blog.yoursite.com"
-  # event = ""
-  # script = ""
+  event = "https://plausible.yoursite.com/api/event"
+  script = "https://plausible.yoursite.com/js/script.js"
 ```
 
 ### Google Analytics
