@@ -5,43 +5,56 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report! Before proceeding, please check that a similar issue has not already been reported. [View open issues](https://github.com/jpanther/congo/issues)
+        Thanks for taking the time to fill out this bug report!
+
+        Before proceeding, please ensure the issue you're reporting is:
+          - not caused by local customisations in your project
+          - reproducible using the latest stable release of the theme
+          - not already covered by an open issue ([check open issues](https://github.com/jpanther/congo/issues))
+          - not a general question or feature request (use [GitHub Discussions](https://github.com/jpanther/congo/discussions) instead)
+
   - type: textarea
-    id: what-happened
+    id: issue-description
     attributes:
-      label: What happened?
-      description: Describe the issue and how to reproduce it, including what you expected to happen.
+      label: Issue description
+      description: Describe the issue and how to reproduce it, including what you expected to happen. Be as detailed as possible, particularly if the issue only appears under a specific configuration.
     validations:
       required: true
   - type: input
     id: theme-version
     attributes:
       label: Theme version
-      description: What version of the theme are you using?
-      placeholder: eg. v1.1.0
+      description: What version of the theme are you using? If you have not tested this issue with the latest theme release, please do so before submitting a bug report.
+      placeholder: eg. v2.6.0
     validations:
       required: true
   - type: input
     id: hugo-version
     attributes:
       label: Hugo version
-      description: What version of Hugo are you using?
-      placeholder: eg. v0.86.1
+      description: What version of Hugo are you using? Please provide the output of the `hugo version` command.
+      placeholder: eg. hugo v0.114.0+extended darwin/arm64
     validations:
       required: true
-  - type: dropdown
+  - type: checkboxes
     id: browsers
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: Which browser rendering engines are you seeing the problem on?
+      description: Select any that you have tested. This is particularly important for CSS issue reports.
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - label: Chromium (Google Chrome, Microsoft Edge, Brave, Vivaldi, etc.)
+        - label: Firefox (Mozilla Firefox)
+        - label: WebKit (Safari)
+        - label: Other
+  - type: input
+    id: sample-url
+    attributes:
+      label: URL to sample repository or website
+      description: If you have a repository or deployed Hugo website that demonstrates this issue, please provide the URL.
+      placeholder: https://github.com/jpanther/congo
   - type: textarea
     id: logs
     attributes:
-      label: Relevant Hugo log output
-      description: Please copy and paste any relevant Hugo log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: Hugo output or build error messages
+      description: Please copy and paste any relevant log output from Hugo or your build system. This will be automatically formatted into code, so no need for backticks.
+      render: bash
