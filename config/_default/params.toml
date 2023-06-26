@@ -70,7 +70,7 @@ fingerprintAlgorithm = "sha256"
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
 
-[plausible]
+[plausibleAnalytics]
   # domain = "blog.yoursite.com"
   # event = ""
   # script = ""

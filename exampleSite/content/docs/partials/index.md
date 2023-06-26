@@ -31,7 +31,7 @@ To enable Plausible analytics support, simply provide the domain of the website 
 ```toml
 # config/_default/params.toml
 
-[plausible]
+[plausibleAnalytics]
   domain = "blog.yoursite.com"
   event = "https://plausible.yoursite.com/api/event"
   script = "https://plausible.yoursite.com/js/script.js"
