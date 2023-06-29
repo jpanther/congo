@@ -36,16 +36,17 @@ body:
       placeholder: eg. hugo v0.114.0+extended darwin/arm64
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: browsers
     attributes:
       label: Which browser rendering engines are you seeing the problem on?
       description: Select any that you have tested. This is particularly important for CSS issue reports.
+      multiple: true
       options:
-        - label: Chromium (Google Chrome, Microsoft Edge, Brave, Vivaldi, etc.)
-        - label: Firefox (Mozilla Firefox)
-        - label: WebKit (Safari)
-        - label: Other
+        - Chromium (Google Chrome, Microsoft Edge, Brave, Vivaldi, Opera, etc.)
+        - Firefox (Mozilla Firefox)
+        - WebKit (Safari)
+        - Other (Please include details in the issue description)
   - type: input
     id: sample-url
     attributes:
