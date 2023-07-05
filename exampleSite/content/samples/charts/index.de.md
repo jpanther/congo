@@ -6,11 +6,11 @@ summary: "Congo enthält Chart.js für leistungsstarke Charts und Datenvisualisi
 tags: ["Chart", "Beispiele", "Graph", "Shortcodes"]
 ---
 
-Congo bietet Unterstützung für Chart.js unter Verwendung des Shortcodes `chart`. Fügen Sie einfach das Chart-Markup in den Shortcode ein. Congo gestaltet die Charts automatisch so, dass sie der Konfiguration des Parameters `colorScheme` entsprechen. Die Farben können jedoch mit der normalen Chart.js-Syntax angepasst werden.
+Congo bietet Unterstützung für Chart.js unter Verwendung des Shortcodes `chart`. Füge einfach das Chart-Markup in den Shortcode ein. Congo gestaltet die Charts automatisch so, dass sie der Konfiguration des Parameters `colorScheme` entsprechen. Die Farben können jedoch mit der normalen Chart.js-Syntax angepasst werden.
 
-Weitere Einzelheiten finden Sie in der [Chart-Shortcode]-Dokumentation ({{< ref "docs/shortcodes#chart" >}}).
+Weitere Details findest du in der Chart-Shortcode-Dokumentation ({{< ref "docs/shortcodes#chart" >}}).
 
-Die folgenden Beispiele sind eine kleine Auswahl aus der [offiziellen Chart.js-Dokumentation](https://www.chartjs.org/docs/latest/samples). Sie können auch [die Quelle der Seite](https://raw.githubusercontent.com/jpanther/congo/dev/exampleSite/content/samples/charts/index.de.md) auf GitHub anzeigen, um das Markup zu sehen.
+Die folgenden Beispiele sind eine kleine Auswahl aus der [offiziellen Chart.js-Dokumentation](https://www.chartjs.org/docs/latest/samples). Du kannst auch [die Quelle der Seite](https://raw.githubusercontent.com/jpanther/congo/dev/exampleSite/content/samples/charts/index.de.md) auf GitHub aufrufen, um das Markup zu sehen.
 
 ## Säulendiagramm
 
