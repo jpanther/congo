@@ -71,5 +71,8 @@
       "from": "node_modules/fuse.js/dist/fuse.min.js",
       "to": "assets/lib/fuse/fuse.min.js"
     }
-  ]
+  ],
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4"
+  }
 }
