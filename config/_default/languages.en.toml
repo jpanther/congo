@@ -1,18 +1,19 @@
 languageCode = "en"
 languageName = "English"
-displayName = "EN"
-isoCode = "en"
 weight = 1
-rtl = false
 
 title = "Congo"
-# description = "My awesome website"
 # copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2 January 2006"
-
 [params]
+  isoCode = "en"
+  displayName = "EN"
+  rtl = false
+
+  dateFormat = "2 January 2006"
+
   # mainSections = ["section1", "section2"]
+  # description = "My awesome website"
 
 [author]
   # name = "Your name here"

@@ -11,12 +11,15 @@ autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
+enableImageLazyLoading = true
 
 # robots = ""
+fingerprintAlgorithm = "sha256"
 
 [header]
   layout = "basic" # valid options: basic, hamburger, hybrid, custom
   # logo = "img/logo.jpg"
+  # logoDark = "img/dark-logo.jpg"
   showTitle = true
 
 [footer]
