@@ -19,5 +19,8 @@ hugo.linux
 # Lighthouse generated output
 .lighthouseci
 
+# Compiled CSS
+/assets/css/compiled
+
 # Project specific files
 TODO
