@@ -136,7 +136,7 @@ Congoはテーマの機能を制御する多数の設定パラメーターを提
 |`header.logo`|_Not set_|`assets/` 内のロゴファイルへの相対パス。ロゴファイルは2倍の解像度で提供され、任意の画像サイズに対応している必要があります。|
 |`header.logoDark`|_Not set_|`dark` モード時に使用されるロゴファイルへの相対パス。|
 |`header.showTitle`|`true`|サイトのタイトルをヘッダーに表示するかどうか。|
-|`footer.showCopyright`|`true`|サイトフッターにコピーライト文字列を表示するかどうか。[言語と国際化](#言語と国際化)の `copyright` パラメータを使って文字列自体をカスタマイズできます。|
+|`footer.showCopyright`|`true`|サイトフッターにコピーライト文字列を表示するかどうか。[言語と国際化](#言語と国際化)の `copyright` パラメーターを使って文字列自体をカスタマイズできます。|
 |`footer.showThemeAttribution`|`true`|"Powered by Hugo & Congo" といった帰属表示をフッターに表示するかどうか。この表示を無効にする場合は、サイト上の他の場所（例えば、アバウトページなど）でテーマの帰属を表示することを検討してください。|
 |`footer.showAppearanceSwitcher`|`false`|フッターに外観スイッチャーを表示するかどうか。訪問者の設定を保持するためにブラウザのローカルストレージが使用されます。|
 |`footer.showScrollToTop`|`true`|`true` に設定すると、最上部にスクロールする矢印が表示されます。|
@@ -163,7 +163,7 @@ Congoはテーマの機能を制御する多数の設定パラメーターを提
 |`list.showBreadcrumbs`|`false`|リストページのヘッダーにパンくずリストを表示するかどうか。|
 |`list.showTableOfContents`|`false`|リストページに目次を表示するかどうか。|
 |`list.showTaxonomies`|`false`|リストページに関連するTaxonomiesを表示するかどうか。|
-|`list.showSummary`|`false`|リストページに記事の要約を表示するかどうか。もし[フロントマター]({{< ref "front-matter" >}})で要約が提供されていない場合、[サイト設定](#サイト設定)の `summaryLength` パラメータを使って要約が自動生成されます。|
+|`list.showSummary`|`false`|リストページに記事の要約を表示するかどうか。もし[フロントマター]({{< ref "front-matter" >}})で要約が提供されていない場合、[サイト設定](#サイト設定)の `summaryLength` パラメーターを使って要約が自動生成されます。|
 |`list.groupByYear`|`true`|リストページで記事を年ごとにグループ化するかどうか。|
 |`list.paginationWidth`|`1`|リストページを切り詰める際に、現在のページの両側にいくつのページネーションリンクを出力するか。 `1` の場合、現在のページの両側に1つのリンクを出力します。 _最初のページ_ と _最後のページ_ へのリンクは常に表示され、この値に追加されます。|
 |`sitemap.excludedKinds`|`["taxonomy", "term"]`|生成される `/sitemap.xml` から除外されるべきコンテンツの種類。許容される値については[Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds)を参照してください。|

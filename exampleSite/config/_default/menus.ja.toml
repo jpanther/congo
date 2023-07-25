@@ -21,7 +21,7 @@
   weight = 20
 
 [[main]]
-  name = "利用者"
+  name = "利用例"
   pageRef = "users"
   weight = 30
 
