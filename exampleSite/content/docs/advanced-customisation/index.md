@@ -20,7 +20,7 @@ Before leaping into it, first a quick note about [Hugo project structure](https:
 **In summary:** Never directly edit the theme files. Only make customisations in your Hugo project's sub-directories, not in the themes directory itself.
 {{< /alert >}}
 
-Congo is built to take advantage of all the standard Hugo practices. It is designed to allow all aspects of the theme to be customised and overriden without changing any of the core theme files. This allows for a seamless upgrade experience while giving you total control over the look and feel of your website.
+Congo is built to take advantage of all the standard Hugo practices. It is designed to allow all aspects of the theme to be customised and overridden without changing any of the core theme files. This allows for a seamless upgrade experience while giving you total control over the look and feel of your website.
 
 In order to achieve this, you should never manually adjust any of the theme files directly. Whether you install using Hugo modules, as a git submodule or manually include the theme in your `themes/` directory, you should always leave these files intact.
 

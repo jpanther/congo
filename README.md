@@ -17,7 +17,7 @@ Congo is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.
 - Highly customisable configuration
 - Multiple homepage layouts
 - Flexible with any content types, taxonomies and menus
-- Multilingual content support inlcuding support for RTL languages
+- Multilingual content support including support for RTL languages
 - Ability to link to posts on third-party websites
 - Client-side site search powered by Fuse.js
 - Diagrams and visualisations using Mermaid

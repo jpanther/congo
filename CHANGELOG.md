@@ -272,7 +272,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Breadcrumb display can now be can now be specificed in front matter for articles and list pages
+- Breadcrumb display can now be can now be specified in front matter for articles and list pages
 - Italian translation ([#209](https://github.com/jpanther/congo/pull/209))
 
 ### Changed
@@ -572,7 +572,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Dark mode toggle with new theme parameters for managing light/dark appearance
 - French translation ([#18](https://github.com/jpanther/congo/pull/18))
 - Author bio in article footer
-- Grouping by year can now be specificed in front matter on list pages
+- Grouping by year can now be specified in front matter on list pages
 
 ### Changed
 
