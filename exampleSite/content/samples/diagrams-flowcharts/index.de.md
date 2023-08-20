@@ -8,7 +8,7 @@ tags: ["Mermaid", "Beispiele", "Diagramm", "Shortcodes"]
 
 Mermaid-Diagramme werden in Congo mit dem Shortcode `mermaid` unterstützt. Füge einfach das Diagramm-Markup in den Shortcode ein. Congo gestaltet Mermaid-Diagramme automatisch so, dass sie der Konfiguration des Parameters `colorScheme` entsprechen.
 
-Weitere Details findest du in der [Mermaid-Shortcode]-Dokumentation ({{< ref "docs/shortcodes#mermaid" >}}).
+Weitere Details findest du in der [Mermaid-Shortcode]-Dokumentation ({{< ref path="docs/shortcodes#mermaid" lang="en">}}).
 
 Die folgenden Beispiele sind eine kleine Auswahl aus der [offiziellen Mermaid-Dokumentation](https://mermaid-js.github.io/mermaid/). Du kannst auch [die Quelle der Seite](https://raw.githubusercontent.com/jpanther/congo/dev/exampleSite/content/samples/diagrams-flowcharts/index.de.md) auf GitHub aufrufen, um das Markup zu sehen.
 

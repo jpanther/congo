@@ -11,7 +11,7 @@ KaTeX kann verwendet werden, um mathematische Notationen in Artikeln darzustelle
 
 {{< katex >}}
 
-Congo bindet die KaTeX-Assets nur dann in das Projekt ein, wenn die mathematische Notation verwendet wird. Damit dies funktioniert, kann einfach der Shortcode [`katex`]({{< ref "docs/shortcodes#katex" >}}) in den Artikel eingefügt werden. Jede KaTeX-Syntax auf dieser Seite wird dann automatisch gerendert.
+Congo bindet die KaTeX-Assets nur dann in das Projekt ein, wenn die mathematische Notation verwendet wird. Damit dies funktioniert, kann einfach der Shortcode [`katex`]({{< ref path="docs/shortcodes#katex" lang="en" >}}) in den Artikel eingefügt werden. Jede KaTeX-Syntax auf dieser Seite wird dann automatisch gerendert.
 
 Die Online-Referenz der [unterstützten TeX-Funktionen](https://katex.org/docs/supported.html) zeigt Syntax-Beispiele.
 

@@ -9,7 +9,7 @@ tags: ["Icons", "Beispiele", "Shortcodes"]
 showDateUpdated: true
 ---
 
-Congo hat integrierte Unterstützung für eine Reihe von Icons von [FontAwesome 6](https://fontawesome.com/icons). Diese können entweder über den Partial [icon]({{< ref "docs/partials#icon" >}}) oder Shortcode [icon]({{< ref "docs/shortcodes#icon" >}}) in deine Website eingebunden werden.
+Congo hat integrierte Unterstützung für eine Reihe von Icons von [FontAwesome 6](https://fontawesome.com/icons). Diese können entweder über den Partial [icon]({{< ref path="docs/partials#icon" lang="en" >}}) oder Shortcode  [icon]({{< ref path="docs/shortcodes#icon" lang="en">}}) in deine Website eingebunden werden.
 
 Darüber hinaus werden auch benutzerdefinierte Icons vollständig unterstützt. Du kannst deine eigenen SVG-Icon-Assets im Ordner `assets/icons/` im Stammverzeichnis deines Projekts ablegen. Alle Icons in diesem Verzeichnis stehen dann im gesamten Theme zur Verfügung.
 
