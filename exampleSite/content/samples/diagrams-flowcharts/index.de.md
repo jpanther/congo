@@ -1,5 +1,5 @@
 ---
-title: "Diagramme und Flussdiagramme Flowcharts"
+title: "Diagramme und Flussdiagramme"
 date: 2019-03-06
 description: "Leitfaden zur Verwendung von Mermaid in Congo"
 summary: "Mit Mermaid ist es einfach, Diagramme und Flussdiagramme zu Artikeln hinzuzufügen."

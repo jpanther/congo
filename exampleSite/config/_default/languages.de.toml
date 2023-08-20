@@ -7,7 +7,7 @@ copyright = "&copy; 2023 Congo contributors"
 
 [params]
   isoCode = "de-de"
-  displayName = ":flag-de:"
+  displayName = ":de:"
   rtl = false
 
   dateFormat = "2. January 2006"
