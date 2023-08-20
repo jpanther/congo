@@ -140,6 +140,6 @@ H<sub>2</sub>O
 
 X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
-Drücke <kbd>STRG</kbd>+<kbd>ALT</kbd>+<kbd>Entfernen</kbd>, um die Sitzung zu beenden.
+Drücke <kbd>STRG</kbd>+<kbd>ALT</kbd>+<kbd>Entf</kbd>, um die Sitzung zu beenden.
 
 Die meisten <mark>Salamander</mark> sind nachtaktiv und jagen nach Insekten, Würmern und anderen kleinen Lebewesen.
