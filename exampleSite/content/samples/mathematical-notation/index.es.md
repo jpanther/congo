@@ -9,38 +9,41 @@ Una breve muestra de notación matemática en Congo.
 
 <!--more-->
 
-{{< katex >}}
-
-Congo solo incluirá los assets de KaTeX en su proyecto si utiliza notación matemática. Para que esto funcione, simplemente incluya el [`katex` shortcode]({{< ref path="docs/shortcodes#katex" lang="en" >}}) dentro del artículo. Cualquier sintaxis de KaTeX en esa página se renderizará automáticamente.
+Congo sólo incluirá los recursos de KaTeX en su proyecto si hace uso de la notación matemática. Para que esto funcione, congo proporciona un shortcode [`katex`]({{< ref path="docs/shortcodes#katex" lang="en" >}}) que puede usarse con `katex block` o `katex inline`.
+Cualquier sintaxis KaTeX dentro del shortcode se renderizará automáticamente.
 
 Utilice la documentación en línea de [funciones TeX admitidas](https://katex.org/docs/supported.html) para conocer la sintaxis disponible.
 
 ## Notación en línea
 
-La notación en línea se puede generar envolviendo la expresión en los delimitadores `\\(` y `\\)`.
+La notación inline puede generarse envolviendo la expresión en el shortcode `katex inline` o `katex`.
 
 **Ejemplo:**
 
 ```tex
 % KaTeX notación en línea
-Notación en línea: \\(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\\)
+Notación en línea: {{</* katex inline */>}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{</* /katex */>}}
+Versión abreviada: {{</* katex */>}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{</* /katex */>}}
 ```
 
-Notación en línea: \\(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\\)
+Notación en línea: {{< katex inline >}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{< /katex >}}
+
+Versión abreviada: {{< katex >}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{< /katex >}}
+
 
 ## Notación en bloque
 
-Alternativamente, la notación en bloque se puede generar usando delimitadores `$$`. Esto generará la expresión en su propio bloque HTML.
+Alternativamente, puede generarse una notación en bloque utilizando el parámetro `block`. Esto mostrará la expresión en su propio bloque HTML.
 
 **Ejemplo:**
 
 ```tex
 % KaTeX notación en bloque
-$$
+{{</* katex block */>}}
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$
+{{</* /katex */>}}
 ```
 
-$$
+{{< katex block >}}
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$
+{{< /katex >}}

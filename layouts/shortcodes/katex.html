@@ -1,1 +1,8 @@
-{{/* Nothing to see here */}}
+{{ $mode := .Get 0 }}
+{{ if eq $mode "block" }}
+  $${{.Inner}}$$
+{{ else if or (eq $mode "inline") (eq $mode nil) }}
+  \({{.Inner}}\)
+{{ else }}
+  {{ errorf "Invalid katex mode: expected block or inline" }}
+{{ end }}

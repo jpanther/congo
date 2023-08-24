@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Spanish translation of example site samples ([#606](https://github.com/jpanther/congo/pull/606))
 - Japanese translation of docs and example site ([#618](https://github.com/jpanther/congo/pull/618))
 - German translation of example site ([#631](https://github.com/jpanther/congo/pull/631))
+- Properly render KaTeX formulas by adding `block` or `inline` parameter to `katex` shortcode [#634](https://github.com/jpanther/congo/pull/634)
 
 ### Changed
 
