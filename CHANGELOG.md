@@ -23,8 +23,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- TypeError is output to console when viewing leaf pages ([#596](https://github.com/jpanther/congo/pull/596))
-- URL to Congo project in footer used deprecated git.io short link ([#605](https://github.com/jpanther/congo/pull/605))
+- Prominent images in content and site layout are lazy loaded ([#591](https://github.com/jpanther/congo/issues/591))
+- TypeError is output to console when viewing leaf pages ([#596](https://github.com/jpanther/congo/issues/596))
+- URL to Congo project in footer used deprecated git.io short link ([#605](https://github.com/jpanther/congo/issues/605))
 - Various typos in the docs and example site ([#608](https://github.com/jpanther/congo/pull/608), [#609](https://github.com/jpanther/congo/pull/609), [#613](https://github.com/jpanther/congo/pull/613))
 - Incorrect `render` value is used in the 'external' archetype ([#630](https://github.com/jpanther/congo/pull/630))
 

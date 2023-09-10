@@ -9,9 +9,6 @@
         height="{{ div $logo.Height 2 }}"
         class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{ if $logo_dark }} hidden dark:flex{{ end }}"
         alt="{{ .Site.Title }}"
-        {{ if .Site.Params.enableImageLazyLoading | default true }}
-          loading="lazy"
-        {{ end }}
       />
       {{- if $logo_dark }}
       <img
@@ -20,9 +17,6 @@
         height="{{ div $logo_dark.Height 2 }}"
         class="max-h-[10rem] max-w-[10rem] object-scale-down object-left dark:hidden"
         alt="{{ .Site.Title }}"
-        {{ if .Site.Params.enableImageLazyLoading | default true }}
-          loading="lazy"
-        {{ end }}
       />
       {{- end}}
     </a>
