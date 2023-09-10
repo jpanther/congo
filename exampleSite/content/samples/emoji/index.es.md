@@ -16,4 +16,4 @@ El reemplazo de emojis es automático en Congo, por lo que puedes usar las forma
 
 **Ejemplo:** `see_no_evil` :see_no_evil:, `hear_no_evil` :hear_no_evil:, `speak_no_evil` :speak_no_evil:.
 
-La [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) es una referencia útil para los códigos abreviados de los emojis.
+[Emojipedia](https://emojipedia.org/) es una referencia útil para los códigos abreviados de los emojis.

@@ -16,4 +16,4 @@ Congo全体で絵文字（Emoji）をサポートしています。絵文字は�
 
 **例:** `see_no_evil` :see_no_evil:, `hear_no_evil` :hear_no_evil:, `speak_no_evil` :speak_no_evil:
 
-[Emoji cheat sheet](http://www.emoji-cheat-sheet.com/)は、絵文字を探すための便利なリファレンスです。
+[Emojipedia](https://emojipedia.org/)は、絵文字を探すための便利なリファレンスです。

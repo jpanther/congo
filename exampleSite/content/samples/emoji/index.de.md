@@ -16,4 +16,4 @@ Die Ersetzung von Emoji erfolgt in Congo automatisch, so dass du in deinen Inhal
 
 **Beispiele für Kurzzeichen:** `see_no_evil` :see_no_evil:, `hear_no_evil` :hear_no_evil:, `speak_no_evil` :speak_no_evil:.
 
-Der [Emoji-Spickzettel](http://www.emoji-cheat-sheet.com/) ist eine nützliche Referenz für Emoji-Kurzzeichen.
+[Emojipedia](https://emojipedia.org/) ist eine nützliche Referenz für Emoji-Kurzzeichen.
