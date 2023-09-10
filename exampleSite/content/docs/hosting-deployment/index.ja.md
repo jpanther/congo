@@ -95,16 +95,13 @@ jobs:
   publish = "public"
 
 [build.environment]
+  HUGO_VERSION = "0.118.2"
   NODE_ENV = "production"
   GO_VERSION = "1.20"
   TZ = "UTC"  # Set to preferred timezone
 
 [context.production.environment]
-  HUGO_VERSION = "0.112.7"
   HUGO_ENV = "production"
-
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.112.7"
 ```
 
 上の例は、CongoをHugoモジュールとしてデプロイすることを想定しています。別の方法でテーマをインストールした場合は、ビルドコマンドを `hugo --gc --minify -b $URL` に変更してください。
