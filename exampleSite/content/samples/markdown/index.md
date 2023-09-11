@@ -9,6 +9,10 @@ This article offers a sample of basic Markdown formatting that can be used in Co
 
 <!--more-->
 
+## Image
+
+![sample image](thumb-surendran-mp-IhWYiwSxm8g-unsplash.jpg)
+
 ## Headings
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
