@@ -1,15 +1,12 @@
 languageCode = "ja"
 languageName = "日本語"
+languageDirection = "ltr"
 weight = 2
 
 title = "Congo"
 copyright = "&copy; 2023 Congo contributors"
 
 [params]
-  isoCode = "ja"
-  displayName = ":jp:"
-  rtl = false
-
   dateFormat = "2006年1月2日"
 
   mainSections = ["samples"]

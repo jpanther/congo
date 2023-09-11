@@ -23,6 +23,8 @@ Die vollständige Liste der integrierten Icons und ihre entsprechenden Namen fin
 | blogger              | {{< icon blogger >}}              |
 | bug                  | {{< icon bug >}}                  |
 | check                | {{< icon check >}}                |
+| chevron-down         | {{< icon chevron-down >}}         |
+| chevron-up           | {{< icon chevron-up >}}           |
 | circle-info          | {{< icon circle-info >}}          |
 | codepen              | {{< icon codepen >}}              |
 | comment              | {{< icon comment >}}              |
@@ -35,6 +37,7 @@ Die vollständige Liste der integrierten Icons und ihre entsprechenden Namen fin
 | foursquare           | {{< icon foursquare >}}           |
 | github               | {{< icon github >}}               |
 | gitlab               | {{< icon gitlab >}}               |
+| globe                | {{< icon globe >}}                |
 | google               | {{< icon google >}}               |
 | hashnode             | {{< icon hashnode >}}             |
 | instagram            | {{< icon instagram >}}            |
@@ -68,6 +71,7 @@ Die vollständige Liste der integrierten Icons und ihre entsprechenden Namen fin
 | tag                  | {{< icon tag >}}                  |
 | telegram             | {{< icon telegram >}}             |
 | tiktok               | {{< icon tiktok >}}               |
+| translate            | {{< icon translate >}}            |
 | triangle-exclamation | {{< icon triangle-exclamation >}} |
 | tumblr               | {{< icon tumblr >}}               |
 | twitch               | {{< icon twitch >}}               |

@@ -89,14 +89,12 @@ Congoは現在、以下の言語に対応しています:
 <!-- prettier-ignore-start -->
 |Name|Default|Description|
 |---|---|---|
-|`languageCode`|`"en"`|このファイルの言語コード。トップレベル言語 (例 `en`)またはサブ変数 (例 `en-au`)で、ファイル名の `[language-code]` と一致する必要があります。Hugoはこの値が常に小文字であることを期待しています。HTMLに正しく準拠するためには、大文字と小文字を区別する `params.isoCode` パラメーターを設定してください。|
+|`languageCode`|`"en"`|このファイルの言語コード。トップレベル言語 (例 `en`)またはサブ変数 (例 `en-AU`)で、ファイル名の `[language-code]` と一致する必要があります。|
 |`languageName`|`"English"`|言語名。|
+|`languageDirection`|`"ltr"`|RTL言語かどうか。 `"rtl"` に設定すると、コンテンツを右から左にリフローする。CongoはRTL言語とLTR言語の同時使用を完全にサポートしており、動的に両方の言語に調整します。|
 |`weight`|`1`|多言語サイトを構築する際の優先順序。|
 |`title`|`"Congo"`|ウェブサイトのタイトル。サイトのヘッダーとフッターに表示されます。|
 |`copyright`|_Not set_|サイトのフッターに表示する著作権メッセージを含むMarkdown文字列。何も指定されない場合、Congoは `title` を使って自動的にコピーライト文字列を生成します。|
-|`params.isoCode`|`"en"`|HTMLメタデータ用のISO言語コード。トップレベル言語 (例 `en`)またはサブバリアント (例 `en-AU`)です。|
-|`params.displayName`|`"EN"`|ウェブサイトに表示される際に使用される言語名。|
-|`params.rtl`|`false`|RTL言語かどうか。 `true` に設定すると、コンテンツを右から左にリフローする。CongoはRTL言語とLTR言語の同時使用を完全にサポートしており、動的に両方の言語に調整します。|
 |`params.dateFormat`|`"2 January 2006"`|日付の書式。許容される書式については、[Hugo docs](https://gohugo.io/functions/format/#gos-layout-string)を参照してください。|
 |`params.mainSections`|_Not set_|最近の記事リストに表示するセクション。指定されていない場合は、記事の数が最も多いセクションが使われます。|
 |`params.description`|_Not set_|ウェブサイトの説明。これはサイトのメタデータに使用されます。|

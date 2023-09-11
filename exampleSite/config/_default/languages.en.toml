@@ -1,15 +1,12 @@
-languageCode = "en-au"
+languageCode = "en-AU"
 languageName = "English (Australia)"
+languageDirection = "ltr"
 weight = 1
 
 title = "Congo"
 copyright = "&copy; 2023 Congo contributors"
 
 [params]
-  isoCode = "en-AU"
-  displayName = ":flag-au:"
-  rtl = false
-
   dateFormat = "2 January 2006"
 
   mainSections = ["samples"]

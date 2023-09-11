@@ -1,15 +1,12 @@
-languageCode = "de-de"
+languageCode = "de-DE"
 languageName = "Deutsch (Deutschland)"
+languageDirection = "ltr"
 weight = 4
 
 title = "Congo"
 copyright = "&copy; 2023 Congo contributors"
 
 [params]
-  isoCode = "de-de"
-  displayName = ":de:"
-  rtl = false
-
   dateFormat = "2. January 2006"
 
   mainSections = ["samples"]

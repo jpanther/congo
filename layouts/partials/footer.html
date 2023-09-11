@@ -4,7 +4,7 @@
     <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
       <ul class="flex list-none flex-col sm:flex-row">
         {{ range .Site.Menus.footer }}
-          <li class="group mb-1 ltr:text-right rtl:text-left sm:mb-0 sm:me-7 sm:last:me-0">
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
             {{ if eq .Params.action "search" }}
               {{ $.Scratch.Add "searchCount" 1 }}
               {{ if $.Site.Params.enableSearch | default false }}
@@ -46,6 +46,9 @@
                   {{ partial "icon.html" "sun" }}
                 </span>
               </button>
+            {{ else if eq .Params.action "locale" }}
+              {{ $.Scratch.Add "localeCount" 1 }}
+              {{ partial "translations.html" (dict "ctx" . "dir" "up") }}
             {{ else }}
               <a
                 href="{{ .URL }}"
@@ -95,29 +98,37 @@
         </p>
       {{ end }}
     </div>
-    {{/* Appearance switcher */}}
-    {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
-      <div
-        class="{{ if .Site.Params.footer.showScrollToTop | default true -}}
-          me-14
-        {{- end }} cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-      >
-        <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
-          <div
-            class="flex h-12 w-12 items-center justify-center dark:hidden"
-            title="{{ i18n "footer.dark_appearance" }}"
-          >
-            {{ partial "icon.html" "moon" }}
-          </div>
-          <div
-            class="hidden h-12 w-12 items-center justify-center dark:flex"
-            title="{{ i18n "footer.light_appearance" }}"
-          >
-            {{ partial "icon.html" "sun" }}
-          </div>
-        </button>
-      </div>
-    {{ end }}
+    <div class="flex flex-row items-center">
+      {{/* Locale switcher */}}
+      {{ if and (.IsTranslated) (eq ($.Scratch.Get "localeCount") 0) }}
+        <div>
+          {{ partial "translations.html" (dict "ctx" . "dir" "up") }}
+        </div>
+      {{ end }}
+      {{/* Appearance switcher */}}
+      {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
+        <div
+          class="{{ if .Site.Params.footer.showScrollToTop | default true -}}
+            me-14
+          {{- end }} cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="{{ i18n "footer.dark_appearance" }}"
+            >
+              {{ partial "icon.html" "moon" }}
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="{{ i18n "footer.light_appearance" }}"
+            >
+              {{ partial "icon.html" "sun" }}
+            </div>
+          </button>
+        </div>
+      {{ end }}
+    </div>
   </div>
   {{/* Extend footer - eg. for extra scripts, etc. */}}
   {{ if templates.Exists "partials/extend-footer.html" }}

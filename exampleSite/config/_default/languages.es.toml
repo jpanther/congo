@@ -1,15 +1,12 @@
-languageCode = "es-mx"
+languageCode = "es-MX"
 languageName = "Español (México)"
+languageDirection = "ltr"
 weight = 2
 
 title = "Congo"
 copyright = "&copy; 2023 Congo contributors"
 
 [params]
-  isoCode = "es-MX"
-  displayName = ":flag-mx:"
-  rtl = false
-
   dateFormat = "2 January 2006"
 
   mainSections = ["samples"]

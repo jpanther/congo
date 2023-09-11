@@ -2,17 +2,11 @@
 {{- partial "partials/functions/init.html" . -}}
 <!DOCTYPE html>
 <html
-  lang="{{ with .Site.Params.isoCode | default (.Site.LanguageCode | default "en") }}
-    {{- . -}}
-  {{ end }}"
-  dir="{{ if .Site.Params.rtl | default false -}}
-    rtl
-  {{- else -}}
-    ltr
-  {{- end }}"
+  lang="{{- site.Language.LanguageCode | default "" -}}"
+  dir="{{- site.Language.LanguageDirection | default "ltr" -}}"
   class="scroll-smooth"
-  data-default-appearance="{{ .Site.Params.defaultAppearance | default "light" }}"
-  data-auto-appearance="{{ .Site.Params.autoSwitchAppearance | default "true" }}"
+  data-default-appearance="{{- .Site.Params.defaultAppearance | default "light" -}}"
+  data-auto-appearance="{{- .Site.Params.autoSwitchAppearance | default "true" -}}"
 >
   {{- partial "head.html" . -}}
   <body

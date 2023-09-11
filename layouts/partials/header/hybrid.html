@@ -3,7 +3,6 @@
     {{/* Site logo/title */}}
     <div class="z-40 flex flex-row items-center">
       {{ partial "logo.html" . }}
-      {{ partial "translations.html" . }}
     </div>
     {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
       {{/* Hamburger menu */}}
@@ -17,7 +16,7 @@
           class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
         >
           <ul
-            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 ltr:text-right rtl:text-left sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
           >
             <li class="mb-1">
               <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
@@ -84,6 +83,9 @@
                         {{ end }}
                       </span>
                     </button>
+                  {{ else if eq .Params.action "locale" }}
+                    {{ $.Scratch.Add "localeCount" 1 }}
+                    {{ partial "translations.html" . }}
                   {{ else }}
                     <a
                       href="{{ .URL }}"
@@ -121,7 +123,7 @@
         </div>
       </label>
       {{/* Basic menu */}}
-      <ul class="hidden list-none flex-row ltr:text-right rtl:text-left sm:flex">
+      <ul class="hidden list-none flex-row text-end sm:flex">
         {{ if .Site.Menus.main }}
           {{ range .Site.Menus.main }}
             <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
@@ -182,6 +184,9 @@
                     {{ end }}
                   </span>
                 </button>
+              {{ else if eq .Params.action "locale" }}
+                {{ $.Scratch.Add "localeCount" 1 }}
+                {{ partial "translations.html" . }}
               {{ else }}
                 <a
                   href="{{ .URL }}"

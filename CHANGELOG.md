@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- New portable locale picker that can be placed in any menu using the `locale` action ([#583](https://github.com/jpanther/congo/issues/583))
+- New icons for `chevron-down`, `chevron-up`, `globe` and `translate`
 - Plausible Analytics support ([#584](https://github.com/jpanther/congo/pull/584))
 - Spanish translation of example site samples ([#606](https://github.com/jpanther/congo/pull/606))
 - Japanese translation of docs and example site ([#618](https://github.com/jpanther/congo/pull/618))
@@ -15,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- ⚠️ Renamed the `params.rtl` language parameter to `languageDirection` as this is now supported by Hugo ([#583](https://github.com/jpanther/congo/issues/583))
 - Upgrade to Mermaid v10.4.0 ([#577](https://github.com/jpanther/congo/pull/577), [#582](https://github.com/jpanther/congo/pull/582), [#626](https://github.com/jpanther/congo/pull/626), [#638](https://github.com/jpanther/congo/pull/638))
 - Upgrade to KaTeX v0.16.8 ([#590](https://github.com/jpanther/congo/pull/590))
 - Upgrade to Tailwind v3.3.3 ([#602](https://github.com/jpanther/congo/pull/602))
@@ -28,6 +31,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - URL to Congo project in footer used deprecated git.io short link ([#605](https://github.com/jpanther/congo/issues/605))
 - Various typos in the docs and example site ([#608](https://github.com/jpanther/congo/pull/608), [#609](https://github.com/jpanther/congo/pull/609), [#613](https://github.com/jpanther/congo/pull/613))
 - Incorrect `render` value is used in the 'external' archetype ([#630](https://github.com/jpanther/congo/pull/630))
+- Minor CSS improvements, mainly relating to RTL styling
+
+### Removed
+
+- Locales no longer appear next to the site name/logo as they are now part of the menu system ([#583](https://github.com/jpanther/congo/issues/583))
+- Language parameters `isoCode` and `displayName` are no longer supported ([#583](https://github.com/jpanther/congo/issues/583))
+- Meta `content-language` tag as it was not conveying the intended data (which is already inclded via the HTML `lang` attribute)
 
 ## [2.6.1] - 2023-06-04
 

@@ -23,6 +23,8 @@ Congoは[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | blogger              | {{< icon blogger >}}              |
 | bug                  | {{< icon bug >}}                  |
 | check                | {{< icon check >}}                |
+| chevron-down         | {{< icon chevron-down >}}         |
+| chevron-up           | {{< icon chevron-up >}}           |
 | circle-info          | {{< icon circle-info >}}          |
 | codepen              | {{< icon codepen >}}              |
 | comment              | {{< icon comment >}}              |
@@ -35,6 +37,7 @@ Congoは[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | foursquare           | {{< icon foursquare >}}           |
 | github               | {{< icon github >}}               |
 | gitlab               | {{< icon gitlab >}}               |
+| globe                | {{< icon globe >}}                |
 | google               | {{< icon google >}}               |
 | hashnode             | {{< icon hashnode >}}             |
 | instagram            | {{< icon instagram >}}            |
@@ -68,6 +71,7 @@ Congoは[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | tag                  | {{< icon tag >}}                  |
 | telegram             | {{< icon telegram >}}             |
 | tiktok               | {{< icon tiktok >}}               |
+| translate            | {{< icon translate >}}            |
 | triangle-exclamation | {{< icon triangle-exclamation >}} |
 | tumblr               | {{< icon tumblr >}}               |
 | twitch               | {{< icon twitch >}}               |
