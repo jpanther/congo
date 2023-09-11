@@ -4,6 +4,7 @@
 
 theme = "congo"
 defaultContentLanguage = "en"
+disableHugoGeneratorInject = true
 
 enableRobotsTXT = true
 paginate = 15
