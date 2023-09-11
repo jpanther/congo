@@ -22,6 +22,8 @@
             {{- (.Fill "160x120 smart").RelPermalink }}
             160w, {{- (.Fill "320x240 smart").RelPermalink }} 2x"
             src="{{ (.Fill "160x120 smart").RelPermalink }}"
+            width="160"
+            height="120"
           {{ end }}
           {{ if $.Site.Params.enableImageLazyLoading | default true }}
             loading="lazy"

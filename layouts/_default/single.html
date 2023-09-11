@@ -20,6 +20,8 @@
             {{ if eq .MediaType.SubType "svg" }}
               src="{{ .RelPermalink }}"
             {{ else }}
+              width="{{ .Width }}"
+              height="{{ .Height }}"
               {{ if lt .Width 660 }}
                 src="{{ .RelPermalink }}"
               {{ else }}
