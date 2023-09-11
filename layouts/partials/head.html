@@ -43,6 +43,11 @@
     {{ $jsSearch := resources.Get "js/search.js" }}
     {{ $assets.Add "js" (slice $jsFuse $jsSearch) }}
   {{ end }}
+  {{ if .Site.Params.enableQuicklink | default false }}
+    {{ $jsQuicklink := resources.Get "lib/quicklink/quicklink.umd.js" }}
+    {{ $jsQuicklinkInit := resources.Get "js/quicklink.js" }}
+    {{ $assets.Add "js" (slice $jsQuicklink $jsQuicklinkInit) }}
+  {{ end }}
   {{ if .Site.Params.enableCodeCopy | default false }}
     {{ $jsCode := resources.Get "js/code.js" }}
     {{ $assets.Add "js" (slice $jsCode) }}
