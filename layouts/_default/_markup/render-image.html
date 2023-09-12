@@ -2,6 +2,7 @@
 {{ $altText := .Text }}
 {{ $caption := .Title }}
 {{ $lazyLoad := $.Page.Site.Params.enableImageLazyLoading | default true }}
+{{ $webp := $.Page.Site.Params.enableWebp | default true }}
 {{ if findRE "^https?" $url.Scheme }}
   <figure>
     <img
@@ -24,7 +25,7 @@
   {{ with $resource }}
     <figure>
       <picture>
-        {{ if ne .MediaType.SubType "svg" }}
+        {{ if (and (ne .MediaType.SubType "svg") $webp) }}
           <source 
             {{ if lt .Width 660 }}
               {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
