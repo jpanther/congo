@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - ⚠️ Renamed the `params.rtl` language parameter to `languageDirection` as this is now supported by Hugo ([#583](https://github.com/jpanther/congo/issues/583))
+- Robots.txt file now allows all by default without concern for whether the environment is set to production ([#620](https://github.com/jpanther/congo/pull/620))
 - Upgrade to Mermaid v10.4.0 ([#577](https://github.com/jpanther/congo/pull/577), [#582](https://github.com/jpanther/congo/pull/582), [#626](https://github.com/jpanther/congo/pull/626), [#638](https://github.com/jpanther/congo/pull/638))
 - Upgrade to KaTeX v0.16.8 ([#590](https://github.com/jpanther/congo/pull/590))
 - Upgrade to Tailwind v3.3.3 ([#602](https://github.com/jpanther/congo/pull/602))
