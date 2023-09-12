@@ -1,0 +1,80 @@
+{{ $url := urls.Parse .src }}
+{{ $altText := .alt }}
+{{ $class := .class | default "mx-auto my-0 rounded-md" }}
+
+{{ $lazyLoad := .context.Page.Site.Params.enableImageLazyLoading | default true }}
+{{ $webp := .context.Page.Site.Params.enableWebp | default true }}
+
+{{ if findRE "^https?" $url.Scheme }}
+  <img
+    class="{{ $class }}"
+    src="{{ $url.String }}"
+    alt="{{ $altText }}" 
+    {{ if $lazyLoad }}
+      loading="lazy"
+    {{ end }}
+  />
+{{ else }}
+  {{ $resource := "" }}
+  {{ if .context.Page.Resources.GetMatch ($url.String) }}
+    {{ $resource = .context.Page.Resources.GetMatch ($url.String) }}
+  {{ else if resources.GetMatch ($url.String) }}
+    {{ $resource = resources.Get ($url.String) }}
+  {{ end }}
+  {{ with $resource }}
+    <picture>
+      {{ if (and (ne .MediaType.SubType "svg") $webp) }}
+        <source 
+          {{ if lt .Width 660 }}
+            {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+              src="{{ .RelPermalink }}"
+            {{ end }}
+          {{ else }}
+            srcset="
+              {{- (.Resize "330x webp").RelPermalink }} 330w,
+              {{- (.Resize "660x webp").RelPermalink }} 660w,
+              {{- (.Resize "1024x webp").RelPermalink }} 1024w,
+              {{- (.Resize "1320x webp").RelPermalink }} 2x"
+            src="{{ (.Resize "660x webp").RelPermalink }}" 
+          {{ end }}
+          type="image/webp" 
+        />
+      {{ end }}
+      <img
+        class="{{ $class }}"
+        {{ if eq .MediaType.SubType "svg" }}
+          src="{{ .RelPermalink }}"
+        {{ else }}
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+          decoding="async"
+          {{ if lt .Width 660 }}
+            src="{{ .RelPermalink }}"
+          {{ else }}
+            srcset="
+            {{- (.Resize "330x").RelPermalink }} 330w,
+            {{- (.Resize "660x").RelPermalink }} 660w,
+            {{- (.Resize "1024x").RelPermalink }} 1024w,
+            {{- (.Resize "1320x").RelPermalink }} 2x"
+            src="{{ (.Resize "660x").RelPermalink }}"
+          {{ end }}
+        {{ end }}
+        alt="{{ $altText }}"
+        {{ if $lazyLoad }}
+          loading="lazy"
+        {{ end }}
+      />
+    </picture>
+  {{ else }}
+    <img
+      class="{{ $class }}"
+      src="{{ $url.String }}"
+      alt="{{ $altText }}"
+      {{ if $lazyLoad }}
+        loading="lazy"
+      {{ end }}
+    />
+  {{ end }}
+{{ end }}
+
+
