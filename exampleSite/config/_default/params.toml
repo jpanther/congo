@@ -13,6 +13,7 @@ enableSearch = true
 enableCodeCopy = true
 enableImageLazyLoading = true
 enableWebp = true
+enableLqip = true
 
 # robots = ""
 fingerprintAlgorithm = "sha256"
