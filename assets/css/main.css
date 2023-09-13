@@ -73,6 +73,11 @@ body:has(#menu-controller:checked) {
   @apply rtl:mr-0;
 }
 
+/* LQIP */
+picture > img {
+  backdrop-filter: blur(10px);
+}
+
 /* Code Copy */
 .highlight-wrapper {
   @apply block;
