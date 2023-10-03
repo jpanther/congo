@@ -24,7 +24,7 @@
   {{ end }}
   {{ with $resource }}
     {{ if (and (ne .MediaType.SubType "svg") $lqip) }}
-      {{ $lqip := (.Resize "20x webp").Content | base64Encode }}
+      {{ $lqip := (.Resize "20x webp q20").Content | base64Encode }}
       <picture 
         style="background: url(data:image/webp;base64,{{ $lqip }}); background-size: cover"
         class="{{ $class }}"
