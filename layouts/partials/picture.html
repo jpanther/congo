@@ -40,13 +40,33 @@
           type="image/webp" 
         />
       {{ end }}
+      {{ $width := ""}}
+      {{ $height := ""}}
+      {{ if eq .MediaType.SubType "svg" }}
+        {{ $svgContent := $resource.Content }}
+        {{ range (findRESubmatch `width=["']?(\d*)` $svgContent 1) }}
+          {{ $width = index . 1 }}
+        {{ end }}
+        {{ range (findRESubmatch `height=["']?(\d*)` $svgContent 1) }}
+          {{ $height = index . 1 }}
+        {{ end }}
+        {{ if (eq "" $width $height) }}
+          {{ range (findRESubmatch `viewBox=["']?(\d*) (\d*) (\d*) (\d*)` $svgContent 1) }}
+            {{ $width = index . 3 }}
+            {{ $height = index . 4 }}
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ $width = .Width }}
+        {{ $height = .Height }}
+      {{ end}}
       <img
         class="{{ $class }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
         {{ if eq .MediaType.SubType "svg" }}
           src="{{ .RelPermalink }}"
         {{ else }}
-          width="{{ .Width }}"
-          height="{{ .Height }}"
           decoding="async"
           {{ if lt .Width 660 }}
             src="{{ .RelPermalink }}"
