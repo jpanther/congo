@@ -16,7 +16,9 @@
   />
 {{ else }}
   {{ $resource := "" }}
-  {{ if .context.Page.Resources.GetMatch ($url.String) }}
+  {{ if .resource }}
+    {{ $resource = .resource }}
+  {{ else if .context.Page.Resources.GetMatch ($url.String) }}
     {{ $resource = .context.Page.Resources.GetMatch ($url.String) }}
   {{ else if resources.GetMatch ($url.String) }}
     {{ $resource = resources.Get ($url.String) }}
