@@ -44,18 +44,18 @@
       {{ $height := ""}}
       {{ if eq .MediaType.SubType "svg" }}
         {{ $svgContent := $resource.Content }}
-        {{ range (findRESubmatch `width=["']?(\d*)` $svgContent 1) }}
+        {{ range (findRESubmatch `<svg[^>]*width=["']([.0-9]*)["'a-zA-Z]` $svgContent 1) }}
           {{ $width = index . 1 }}
         {{ end }}
-        {{ range (findRESubmatch `height=["']?(\d*)` $svgContent 1) }}
+        {{ range (findRESubmatch `<svg[^>]*height=["']([.0-9]*)["'a-zA-Z]` $svgContent 1) }}
           {{ $height = index . 1 }}
         {{ end }}
         {{ if (eq "" $width $height) }}
-          {{ range (findRESubmatch `viewBox=["']?(\d*) (\d*) (\d*) (\d*)` $svgContent 1) }}
-            {{ $width = index . 3 }}
-            {{ $height = index . 4 }}
-          {{ end }}
+        {{ range (findRESubmatch `<svg[^>]*viewBox=["']?([.0-9]*) ([.0-9]*) ([.0-9]*) ([.0-9]*)` $svgContent 1) }}
+          {{ $width = index . 3 }}
+          {{ $height = index . 4 }}
         {{ end }}
+      {{ end }}
       {{ else }}
         {{ $width = .Width }}
         {{ $height = .Height }}
