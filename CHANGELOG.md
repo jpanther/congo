@@ -39,7 +39,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Locales no longer appear next to the site name/logo as they are now part of the menu system ([#583](https://github.com/jpanther/congo/issues/583))
 - Language parameters `isoCode` and `displayName` are no longer supported ([#583](https://github.com/jpanther/congo/issues/583))
-- Meta `content-language` tag as it was not conveying the intended data (which is already inclded via the HTML `lang` attribute)
+- Meta `content-language` tag as it was not conveying the intended data (which is already included via the HTML `lang` attribute)
 
 ## [2.6.1] - 2023-06-04
 
