@@ -27,6 +27,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | chevron-up           | {{< icon chevron-up >}}           |
 | circle-info          | {{< icon circle-info >}}          |
 | codepen              | {{< icon codepen >}}              |
+| coffee               | {{< icon coffee >}}               |
 | comment              | {{< icon comment >}}              |
 | dev                  | {{< icon dev >}}                  |
 | dribbble             | {{< icon dribbble >}}             |
@@ -77,5 +78,6 @@ The full list of built-in icons and their corresponding names can referenced bel
 | twitch               | {{< icon twitch >}}               |
 | twitter              | {{< icon twitter >}}              |
 | whatsapp             | {{< icon whatsapp >}}             |
+| x-twitter            | {{< icon x-twitter >}}            |
 | xmark                | {{< icon xmark >}}                |
 | youtube              | {{< icon youtube >}}              |
