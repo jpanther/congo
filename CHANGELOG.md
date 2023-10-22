@@ -19,8 +19,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - ⚠️ Renamed the `params.rtl` language parameter to `languageDirection` as this is now supported by Hugo ([#583](https://github.com/jpanther/congo/issues/583))
 - Robots.txt file now allows all by default without concern for whether the environment is set to production ([#620](https://github.com/jpanther/congo/pull/620))
-- Upgrade to Mermaid v10.4.0 ([#577](https://github.com/jpanther/congo/pull/577), [#582](https://github.com/jpanther/congo/pull/582), [#626](https://github.com/jpanther/congo/pull/626), [#638](https://github.com/jpanther/congo/pull/638))
-- Upgrade to KaTeX v0.16.8 ([#590](https://github.com/jpanther/congo/pull/590))
+- Refactored the `head.html` partial to improve perceived performance on page load
+- Upgrade to Mermaid v10.5.0 ([#577](https://github.com/jpanther/congo/pull/577), [#582](https://github.com/jpanther/congo/pull/582), [#626](https://github.com/jpanther/congo/pull/626), [#638](https://github.com/jpanther/congo/pull/638), [#663](https://github.com/jpanther/congo/pull/663))
+- Upgrade to KaTeX v0.16.9 ([#590](https://github.com/jpanther/congo/pull/590), [#664](https://github.com/jpanther/congo/pull/664))
 - Upgrade to Tailwind v3.3.3 ([#602](https://github.com/jpanther/congo/pull/602))
 - Upgrade to ChartJS v4.3.3 ([#616](https://github.com/jpanther/congo/pull/616), [#627](https://github.com/jpanther/congo/pull/627), [#635](https://github.com/jpanther/congo/pull/635))
 - Upgrade to Typography v0.5.10 ([#641](https://github.com/jpanther/congo/pull/641))
@@ -34,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Incorrect `render` value is used in the 'external' archetype ([#630](https://github.com/jpanther/congo/pull/630))
 - Images are missing `width` and `height` attributes ([#645](https://github.com/jpanther/congo/pull/645))
 - Minor CSS improvements, mainly relating to RTL styling
+- Minor typos
 
 ### Removed
 
