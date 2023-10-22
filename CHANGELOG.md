@@ -11,12 +11,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - New portable locale picker that can be placed in any menu using the `locale` action ([#583](https://github.com/jpanther/congo/issues/583))
-- New icons for `chevron-down`, `chevron-up`, `globe` and `translate`
+- New icons for `chevron-down`, `chevron-up`, `globe`, `translate`, `coffee` and `x-twitter` ([#669](https://github.com/jpanther/congo/pull/669))
 - Plausible Analytics support ([#584](https://github.com/jpanther/congo/pull/584))
 - Spanish translation of example site samples ([#606](https://github.com/jpanther/congo/pull/606))
 - Japanese translation of docs and example site ([#618](https://github.com/jpanther/congo/pull/618))
 - German translation of example site ([#631](https://github.com/jpanther/congo/pull/631))
-- New icons - `coffee` and `x-twitter` ([#669](https://github.com/jpanther/congo/pull/669))
 
 ### Changed
 
