@@ -34,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Various typos in the docs and example site ([#608](https://github.com/jpanther/congo/pull/608), [#609](https://github.com/jpanther/congo/pull/609), [#613](https://github.com/jpanther/congo/pull/613))
 - Incorrect `render` value is used in the 'external' archetype ([#630](https://github.com/jpanther/congo/pull/630))
 - Images are missing `width` and `height` attributes ([#645](https://github.com/jpanther/congo/pull/645))
+- Taxonomy tags aren't padded when wrapping onto a new line ([#671](https://github.com/jpanther/congo/pull/671))
 - Minor CSS improvements, mainly relating to RTL styling
 - Minor typos
 
