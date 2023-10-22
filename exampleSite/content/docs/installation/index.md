@@ -151,6 +151,10 @@ Hugo will automatically update any modules that are required for your project. I
 
 Then simply rebuild your site and check everything works as expected.
 
+{{< alert >}}
+When updating modules, sometimes Hugo will cache an older version of the theme. If this happens, clear your local cache by using the `hugo mod clean` command and then rebuild your site.
+{{< /alert >}}
+
 ### Update using git
 
 Git submodules can be updated using the `git` command. Simply execute the following command and the latest version of the theme will be downloaded into your local repository:
