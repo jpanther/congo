@@ -29,7 +29,6 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [jeremic.ca](https://jeremic.ca)                                       | Personal site and Blog          |
 | [rohn.tech](https://rohn.tech)                                         | Personal site                   |
 | [klimafreundlicher-kochen.de](https://www.klimafreundlicher-kochen.de) | Food blog (in German)           |
-| [seyslee.github.io](https://seyslee.github.io)                         | Tech blog (in Korean)           |
 | [datanalyze.be](https://datanalyze.be/)                                | Professional site               |
 | [sneaky-potato.github.io](https://sneaky-potato.github.io/)            | Professional site and Blog      |
 | [kelset.dev](https://kelset.dev)                                       | Personal site                   |
@@ -39,24 +38,18 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [Bible Multi Apps](https://hotlittlewhitedog.gitlab.io/biblemulti)     | Personal site and Blog          |
 | [Jh123x](https://jh123x.com/)                                          | Personal site and Blog          |
 | [sforzando LLC. and Inc.](https://sfz.dev/)                            | Corporate site and Blog         |
-| [aidansmith.me](https://aidansmith.me/)                                | Personal Site                   |
-| [nunocoracao.com](https://nunocoracao.com)                             | Personal site and Blog          |
 | [szegedkungfu.hu](https://balance-se.github.io/)                       | Sports association site         |
 | [jcransom.com](https://www.jcransom.com/)                              | Personal Site and Blog          |
 | [cbrincoveanu.com](https://www.cbrincoveanu.com/)                      | Personal site and Blog          |
 | [medical-humanities](https://medical-humanities.org)                   | Academic site                   |
 | [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog          |
 | [major.io](https://major.io)                                           | Personal site and Blog          |
-| [bayas.dev](https://bayas.dev)                                         | Personal site and Blog          |
 | [顾宇的博客](https://www.guyu.me/)                                     | Personal Blog (in Chinese)      |
 | [cgutierr-zgz.github.io](https://cgutierr-zgz.github.io/)              | Personal site and Tech blog     |
 | [adam.sr](https://adam.sr)                                             | Personal site and Blog          |
-| [datadi.murgi.org](https://datadi.murgi.org)                           | Personal site and Blog          |
-| [shim.web.id](https://shim.web.id)                                     | Personal Blog (in Indonesian)   |
 | [kpavlov.me](https://kpavlov.me)                                       | Personal site and Blog          |
 | [pfisterer.dev](https://pfisterer.dev)                                 | Personal site and Blog          |
 | [davidrothera.me](https://davidrothera.me)                             | Personal site and Blog          |
-| [ethantroy.com](https://ethantroy.com)                                 | Personal Site and Blog          |
 | [sug.bitprism.net](https://sug.bitprism.net)                           | Personal Site and Blog          |
 | [arjuns.me](https://arjuns.me)                                         | Personal Site and Blog          |
 | [statistix.be](https://statistix.be/)                                  | Professional site               |
@@ -68,6 +61,7 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [spiffyeight77.com](https://spiffyeight77.com/)                        | Personal blog                   |
 | [Tomy's Blog](https://blog.tomy.me)                                    | Personal site and Blog          |
 | [Beerjoa Blog](https://blog.beerjoa.dev)                               | Personal site and Blog          |
+| [simaosilva.com](https://simaosilva.com)                               | Personal Site                   |
+| [kom.al](https://kom.al)                                               | Personal Site                   |
 
-<!-- :shushing_face: -->
 **¿Usuaria de congo?** Para agregar tu sitio a esta lista, [haz un pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
