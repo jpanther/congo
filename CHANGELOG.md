@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.0] - 2023-10-23
+
 ### Added
 
 - New portable locale picker that can be placed in any menu using the `locale` action ([#583](https://github.com/jpanther/congo/issues/583))
@@ -743,7 +745,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.6.1...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.0...HEAD
+[2.7.0]: https://github.com/jpanther/congo/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/jpanther/congo/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/jpanther/congo/compare/v2.5.4...v2.6.0
 [2.5.4]: https://github.com/jpanther/congo/compare/v2.5.3...v2.5.4
