@@ -75,7 +75,11 @@ jobs:
 
 Push the config file to GitHub and the action should automatically run. It may fail the first time and you'll need to visit the **Settings > Pages** section of your GitHub repo to check the source is correct. It should be set to use the `gh-pages` branch.
 
-{{< screenshot src="github-pages-source.jpg" alt="Screen capture of GitHub Pages source" >}}
+{{< screenshot src="github-pages-source.jpg" alt="Screen capture of GitHub Pages source settings" >}}
+
+You should also visit the **Settings > Actions > General** section and check that the workflow permissions allow actions to make changes to your repo.
+
+{{< screenshot src="github-workflow-permissions.jpg" alt="Screen capture of GitHub Workflow Permissions settings" >}}
 
 Once the settings are configured, re-run the action and the site should build and deploy correctly. You can consult the actions log to check everything deployed successfully.
 
