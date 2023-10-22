@@ -3,11 +3,10 @@
     {{/* Site logo/title */}}
     <div class="flex flex-row items-center">
       {{ partial "logo.html" . }}
-      {{ partial "translations.html" . }}
     </div>
     {{/* Main menu */}}
     {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
-      <ul class="flex list-none flex-col ltr:text-right rtl:text-left sm:flex-row">
+      <ul class="flex list-none flex-col text-end sm:flex-row">
         {{ if .Site.Menus.main }}
           {{ range .Site.Menus.main }}
             <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
@@ -68,6 +67,9 @@
                     {{ end }}
                   </span>
                 </button>
+              {{ else if eq .Params.action "locale" }}
+                {{ $.Scratch.Add "localeCount" 1 }}
+                {{ partial "translations.html" . }}
               {{ else }}
                 <a
                   href="{{ .URL }}"

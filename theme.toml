@@ -9,7 +9,7 @@ homepage = "https://github.com/jpanther/congo/"
 demosite = "https://jpanther.github.io/congo/"
 
 tags = ["blog", "minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
-features = ["syntax higlighting", "dark mode", "emoji"]
+features = ["syntax highlighting", "dark mode", "emoji"]
 
 [author]
   name = "James Panther"

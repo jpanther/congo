@@ -20,6 +20,8 @@
             {{ if eq .MediaType.SubType "svg" }}
               src="{{ .RelPermalink }}"
             {{ else }}
+              width="{{ .Width }}"
+              height="{{ .Height }}"
               {{ if lt .Width 660 }}
                 src="{{ .RelPermalink }}"
               {{ else }}
@@ -31,9 +33,6 @@
               {{ end }}
             {{ end }}
             alt="{{ $.Params.featureAlt | default $.Params.coverAlt | default "" }}"
-            {{ if $.Site.Params.enableImageLazyLoading | default true }}
-              loading="lazy"
-            {{ end }}
           />
           {{ with $.Params.coverCaption }}
             <figcaption class="mb-6 -mt-3 text-center">{{ . | markdownify }}</figcaption>

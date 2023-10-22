@@ -16,4 +16,4 @@ Emoji replacements are automatic throughout Congo, so you can use shorthand code
 
 **Example:** `see_no_evil` :see_no_evil:, `hear_no_evil` :hear_no_evil:, `speak_no_evil` :speak_no_evil:.
 
-The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference for emoji shorthand codes.
+[Emojipedia](https://emojipedia.org/) is a useful reference for emoji shorthand codes.

@@ -1,11 +1,6 @@
 <head>
   <meta charset="utf-8" />
-  {{ with site.Params.htmlCode | default .Site.LanguageCode }}
-    <meta http-equiv="content-language" content="{{ . }}" />
-  {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="rgb(255,255,255)" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   {{/* Title */}}
   {{ if .IsHome -}}
     <title>{{ .Site.Title | emojify }}</title>
@@ -14,24 +9,16 @@
     <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}</title>
     <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
   {{- end }}
-  {{/* Metadata */}}
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
-  {{ with union .Site.Params.keywords .Params.keywords -}}
-    <meta name="keywords" content="{{ delimit . `, `}}" />
-  {{- end }}
-  {{ with .Site.Params.robots }}
-    <meta name="robots" content="{{ . }}" />
-  {{ end }}
-  {{ with .Params.robots }}
-    <meta name="robots" content="{{ . }}" />
-  {{ end }}
-  <link rel="canonical" href="{{ .Permalink }}" />
-  {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink ($.Site.Title | emojify) | safeHTML }}
-  {{ end -}}
   {{/* Asset bundles */}}
   {{ $assets := newScratch }}
   {{ $algorithm := .Site.Params.fingerprintAlgorithm | default "sha256" }}
+  {{ $jsAppearance := resources.Get "js/appearance.js" }}
+  {{ $jsAppearance = $jsAppearance | resources.Minify | resources.Fingerprint $algorithm }}
+  <script
+    type="text/javascript"
+    src="{{ $jsAppearance.RelPermalink }}"
+    integrity="{{ $jsAppearance.Data.Integrity }}"
+  ></script>
   {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (lower .Site.Params.colorScheme | default "congo")) }}
   {{ if not $cssScheme }}
     {{ $cssScheme = resources.Get "css/schemes/congo.css" }}
@@ -50,9 +37,6 @@
     href="{{ $bundleCSS.RelPermalink }}"
     integrity="{{ $bundleCSS.Data.Integrity }}"
   />
-  {{ $jsAppearance := resources.Get "js/appearance.js" }}
-  {{ $jsAppearance = $jsAppearance | resources.Minify | resources.Fingerprint $algorithm }}
-  <script type="text/javascript" src="{{ $jsAppearance.RelPermalink }}" integrity="{{ $jsAppearance.Data.Integrity }}"></script>
   {{ if .Site.Params.enableSearch | default false }}
     {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
     {{ $jsSearch := resources.Get "js/search.js" }}
@@ -62,14 +46,48 @@
     {{ $jsCode := resources.Get "js/code.js" }}
     {{ $assets.Add "js" (slice $jsCode) }}
   {{ end }}
-  {{ if .Site.Params.rtl | default false }}
+  {{ if eq (site.Language.LanguageDirection | default "ltr") "rtl" }}
     {{ $jsRTL := resources.Get "js/rtl.js" }}
     {{ $assets.Add "js" (slice $jsRTL) }}
   {{ end }}
   {{ if $assets.Get "js" }}
     {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint $algorithm }}
-    <script defer type="text/javascript" id="script-bundle" src="{{ $bundleJS.RelPermalink }}" integrity="{{ $bundleJS.Data.Integrity }}" data-copy="{{ i18n "code.copy" }}" data-copied="{{ i18n "code.copied" }}"></script>
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="{{ $bundleJS.RelPermalink }}"
+      integrity="{{ $bundleJS.Data.Integrity }}"
+      data-copy="{{ i18n "code.copy" }}"
+      data-copied="{{ i18n "code.copied" }}"
+    ></script>
   {{ end }}
+  {{/* Metadata */}}
+  <meta
+    name="description"
+    content="{{ with .Description }}
+      {{ . }}
+    {{ else }}
+      {{ if .IsPage }}
+        {{ .Summary }}
+      {{ else }}
+        {{ with .Site.Params.description }}{{ . }}{{ end }}
+      {{ end }}
+    {{ end }}"
+  />
+  {{ with union .Site.Params.keywords .Params.keywords -}}
+    <meta name="keywords" content="{{ delimit . `, ` }}" />
+  {{- end }}
+  {{ with .Site.Params.robots }}
+    <meta name="robots" content="{{ . }}" />
+  {{ end }}
+  {{ with .Params.robots }}
+    <meta name="robots" content="{{ . }}" />
+  {{ end }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink ($.Site.Title | emojify) | safeHTML }}
+  {{ end -}}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}
@@ -79,6 +97,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}" />
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
   {{ end }}
+  <meta name="theme-color" content="rgb(255,255,255)" />
   {{/* Site Verification */}}
   {{ with .Site.Params.verification.google }}
     <meta name="google-site-verification" content="{{ . }}" />
@@ -110,6 +129,6 @@
   {{ partial "analytics.html" . }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}
   {{ if templates.Exists "partials/extend-head.html" }}
-    {{ partial "extend-head.html" .Site }}
+    {{ partial "extend-head.html" . }}
   {{ end }}
 </head>

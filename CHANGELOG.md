@@ -6,6 +6,48 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.0] - 2023-10-23
+
+### Added
+
+- New portable locale picker that can be placed in any menu using the `locale` action ([#583](https://github.com/jpanther/congo/issues/583))
+- New icons for `chevron-down`, `chevron-up`, `globe` and `translate`
+- Plausible Analytics support ([#584](https://github.com/jpanther/congo/pull/584))
+- Spanish translation of example site samples ([#606](https://github.com/jpanther/congo/pull/606))
+- Japanese translation of docs and example site ([#618](https://github.com/jpanther/congo/pull/618))
+- German translation of example site ([#631](https://github.com/jpanther/congo/pull/631))
+- New icons - `coffee` and `x-twitter` ([#669](https://github.com/jpanther/congo/pull/669))
+
+### Changed
+
+- ⚠️ Renamed the `params.rtl` language parameter to `languageDirection` as this is now supported by Hugo ([#583](https://github.com/jpanther/congo/issues/583))
+- Robots.txt file now allows all by default without concern for whether the environment is set to production ([#620](https://github.com/jpanther/congo/pull/620))
+- Refactored the `head.html` partial to improve perceived performance on page load
+- Upgrade to Mermaid v10.5.1 ([#577](https://github.com/jpanther/congo/pull/577), [#582](https://github.com/jpanther/congo/pull/582), [#626](https://github.com/jpanther/congo/pull/626), [#638](https://github.com/jpanther/congo/pull/638), [#663](https://github.com/jpanther/congo/pull/663), [#674](https://github.com/jpanther/congo/pull/674))
+- Upgrade to KaTeX v0.16.9 ([#590](https://github.com/jpanther/congo/pull/590), [#664](https://github.com/jpanther/congo/pull/664))
+- Upgrade to Tailwind v3.3.3 ([#602](https://github.com/jpanther/congo/pull/602))
+- Upgrade to ChartJS v4.3.3 ([#616](https://github.com/jpanther/congo/pull/616), [#627](https://github.com/jpanther/congo/pull/627), [#635](https://github.com/jpanther/congo/pull/635))
+- Upgrade to Typography v0.5.10 ([#641](https://github.com/jpanther/congo/pull/641))
+
+### Fixed
+
+- Prominent images in content and site layout are lazy loaded ([#591](https://github.com/jpanther/congo/issues/591))
+- TypeError is output to console when viewing leaf pages ([#596](https://github.com/jpanther/congo/issues/596))
+- URL to Congo project in footer used deprecated git.io short link ([#605](https://github.com/jpanther/congo/issues/605))
+- Various typos in the docs and example site ([#608](https://github.com/jpanther/congo/pull/608), [#609](https://github.com/jpanther/congo/pull/609), [#613](https://github.com/jpanther/congo/pull/613))
+- Incorrect `render` value is used in the 'external' archetype ([#630](https://github.com/jpanther/congo/pull/630))
+- Images are missing `width` and `height` attributes ([#645](https://github.com/jpanther/congo/pull/645))
+- Extended head partial does not include page context ([#658](https://github.com/jpanther/congo/pull/658))
+- Taxonomy tags aren't padded when wrapping onto a new line ([#671](https://github.com/jpanther/congo/pull/671))
+- Minor CSS improvements, mainly relating to RTL styling
+- Minor typos
+
+### Removed
+
+- Locales no longer appear next to the site name/logo as they are now part of the menu system ([#583](https://github.com/jpanther/congo/issues/583))
+- Language parameters `isoCode` and `displayName` are no longer supported ([#583](https://github.com/jpanther/congo/issues/583))
+- Meta `content-language` tag as it was not conveying the intended data (which is already included via the HTML `lang` attribute)
+
 ## [2.6.1] - 2023-06-04
 
 ### Changed
@@ -267,7 +309,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Breadcrumb display can now be can now be specificed in front matter for articles and list pages
+- Breadcrumb display can now be can now be specified in front matter for articles and list pages
 - Italian translation ([#209](https://github.com/jpanther/congo/pull/209))
 
 ### Changed
@@ -567,7 +609,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Dark mode toggle with new theme parameters for managing light/dark appearance
 - French translation ([#18](https://github.com/jpanther/congo/pull/18))
 - Author bio in article footer
-- Grouping by year can now be specificed in front matter on list pages
+- Grouping by year can now be specified in front matter on list pages
 
 ### Changed
 
@@ -703,7 +745,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.6.1...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.0...HEAD
+[2.7.0]: https://github.com/jpanther/congo/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/jpanther/congo/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/jpanther/congo/compare/v2.5.4...v2.6.0
 [2.5.4]: https://github.com/jpanther/congo/compare/v2.5.3...v2.5.4

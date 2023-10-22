@@ -1,0 +1,25 @@
+languageCode = "de-DE"
+languageName = "Deutsch (Deutschland)"
+languageDirection = "ltr"
+weight = 4
+
+title = "Congo"
+copyright = "&copy; 2023 Congo contributors"
+
+[params]
+  dateFormat = "2. January 2006"
+
+  mainSections = ["samples"]
+  description = "Ein leistungsstarkes, leichtgewichtiges Theme für Hugo, das mit Tailwind CSS erstellt wurde."
+
+[author]
+  name = "Congo"
+  image = "img/author.jpg"
+  headline = "Nicht dein Durschnitts-Theme!"
+  bio = "Dies ist ein Beispiel für eine Autorenbiografie, und obwohl hier ein Stockfoto eines Hundes zu sehen ist, wurde dieser Artikel tatsächlich von einem Menschen verfasst. :dog:"
+  links = [
+    { twitter = "https://twitter.com/" },
+    { facebook = "https://facebook.com/" },
+    { linkedin = "https://linkedin.com/" },
+    { youtube = "https://youtube.com/" },
+  ]

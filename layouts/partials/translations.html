@@ -1,16 +1,60 @@
-{{ if .IsTranslated }}
-  {{ $currentLang := .Page.Lang }}
-  <ul class="flex list-none flex-row">
-    {{ range .AllTranslations }}
-      {{ if ne $currentLang .Lang }}
-        <li class="ml-2">
-          <a
-            href="{{ .RelPermalink }}"
-            class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-            >{{ .Site.Params.displayName | emojify }}</a
+{{- $ctx := "" -}}
+{{- $dir := default "down" -}}
+{{- if (reflect.IsMap . ) -}}
+  {{- $ctx = .ctx -}}
+  {{- $dir = cond (not .dir) nil .dir -}}
+{{- else -}}
+  {{- $ctx = . -}}
+{{- end -}}
+{{ with page }}
+  {{ if .IsTranslated }}
+    {{ $currentLang := .Page.Lang }}
+    {{ if site.IsMultiLingual }}
+      <div class="relative group">
+        <button
+          class="flex items-center justify-end w-full transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+        >
+          {{ partial "icon.html" "translate" }}<span class="text-sm">{{ .Lang | upper }}</span
+          ><span class="text-[0.6rem]"
+            >{{ partial "icon.html" (cond (eq $dir "down") "chevron-down" "chevron-up") }}</span
           >
-        </li>
-      {{ end }}
+        </button>
+        {{ if eq $dir "down" }}
+          <div class="invisible w-full h-2 bg-transparent group-hover:visible"></div>
+        {{ end }}
+        <div
+          class="{{ cond (eq $dir "down") "top-8" "bottom-7" }} invisible absolute ltr:right-0 rtl:left-0 z-50 flex flex-col whitespace-nowrap rounded border border-neutral-300 bg-neutral text-start text-base shadow group-hover:visible dark:border-neutral-600 dark:bg-neutral-800"
+        >
+          {{ $siteLanguages := site.Languages }}
+          {{ $pageLang := .Page.Lang }}
+          {{ range .Page.AllTranslations }}
+            {{ $translation := . }}
+            {{ range $siteLanguages }}
+              {{ if eq $translation.Lang .Lang }}
+                {{ $selected := false }}
+                <div class="flex flex-grow">
+                  {{ if eq $pageLang .Lang }}
+                    <a
+                      href="{{ $translation.RelPermalink }}"
+                      class="flex items-center justify-between w-full px-2 py-1 bg-primary-100 dark:bg-primary-900"
+                      >{{ .LanguageName }}<span
+                        class="w-6 ms-2 text-primary-600 dark:text-primary-400"
+                        >{{ partial "icon.html" "check" }}</span
+                      ></a
+                    >
+                  {{ else }}
+                    <a
+                      href="{{ $translation.RelPermalink }}"
+                      class="w-full py-1 pe-10 ps-2 decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                      >{{ .LanguageName }}</a
+                    >
+                  {{ end }}
+                </div>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
     {{ end }}
-  </ul>
+  {{ end }}
 {{ end }}

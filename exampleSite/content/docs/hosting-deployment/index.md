@@ -75,7 +75,11 @@ jobs:
 
 Push the config file to GitHub and the action should automatically run. It may fail the first time and you'll need to visit the **Settings > Pages** section of your GitHub repo to check the source is correct. It should be set to use the `gh-pages` branch.
 
-{{< screenshot src="github-pages-source.jpg" alt="Screen capture of GitHub Pages source" >}}
+{{< screenshot src="github-pages-source.jpg" alt="Screen capture of GitHub Pages source settings" >}}
+
+You should also visit the **Settings > Actions > General** section and check that the workflow permissions allow actions to make changes to your repo.
+
+{{< screenshot src="github-workflow-permissions.jpg" alt="Screen capture of GitHub Workflow Permissions settings" >}}
 
 Once the settings are configured, re-run the action and the site should build and deploy correctly. You can consult the actions log to check everything deployed successfully.
 
@@ -95,16 +99,13 @@ Then in the root of your site repository, create a `netlify.toml` file:
   publish = "public"
 
 [build.environment]
+  HUGO_VERSION = "0.118.2"
   NODE_ENV = "production"
   GO_VERSION = "1.20"
   TZ = "UTC"  # Set to preferred timezone
 
 [context.production.environment]
-  HUGO_VERSION = "0.112.7"
   HUGO_ENV = "production"
-
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.112.7"
 ```
 
 This configuration assumes you are deploying Congo as a Hugo module. If you have installed the theme using another method, change the build command to simply `hugo --gc --minify -b $URL`.

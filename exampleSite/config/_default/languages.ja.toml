@@ -1,0 +1,25 @@
+languageCode = "ja"
+languageName = "日本語"
+languageDirection = "ltr"
+weight = 2
+
+title = "Congo"
+copyright = "&copy; 2023 Congo contributors"
+
+[params]
+  dateFormat = "2006年1月2日"
+
+  mainSections = ["samples"]
+  description = "Tailwind CSSをベースに開発された強力で軽量なHugo向けテーマ"
+
+[author]
+  name = "Congo"
+  image = "img/author.jpg"
+  headline = "ただならぬテーマ!"
+  bio = "これは著者の経歴の例で、ここには犬の画像があるが、実際には人間が作成したものである。 :dog:"
+  links = [
+    { twitter = "https://twitter.com/" },
+    { facebook = "https://facebook.com/" },
+    { linkedin = "https://linkedin.com/" },
+    { youtube = "https://youtube.com/" },
+  ]

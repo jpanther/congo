@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/stale@v8
         with:
-          days-before-stale: 30
-          days-before-close: 14
+          days-before-stale: 120
+          days-before-close: 30
           stale-issue-label: "stale"
           exempt-issue-labels: "wip"
           stale-pr-label: "stale"
@@ -23,10 +23,10 @@ jobs:
 
             If you are still experiencing this issue, please review the issue history and add a reply with any requested and/or additional information in order to keep the issue open.
 
-            This issue will automactically close in 14 days if no further activity occurs.
+            This issue will automatically close in 30 days if no further activity occurs.
           stale-pr-message: >
             This pull request has been automatically marked as stale because it has not had any recent activity.
 
             Please review the PR history and add a reply with any requested information. If no information has been requested, it may be that this contribution does not fit with the project objectives, or does not adhere to the [contributing guidelines](https://github.com/jpanther/congo/blob/dev/CONTRIBUTING.md). If this is in error, please add a reply with further details.
 
-            This PR will automactically close in 14 days if no further activity occurs.
+            This PR will automatically close in 30 days if no further activity occurs.
