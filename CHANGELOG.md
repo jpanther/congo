@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- JavaScript error setting theme colour when site is loaded in dark mode ([#676](https://github.com/jpanther/congo/issues/676))
+
 ## [2.7.0] - 2023-10-23
 
 ### Added
