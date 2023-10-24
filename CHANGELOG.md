@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Minor refactor to improve memory efficiency in search results ([#650](https://github.com/jpanther/congo/pull/650))
+- Links in Markdown content are now portable ([#655](https://github.com/jpanther/congo/pull/655))
+
 ### Fixed
 
 - JavaScript error setting theme colour when site is loaded in dark mode ([#676](https://github.com/jpanther/congo/issues/676))
