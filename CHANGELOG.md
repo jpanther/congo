@@ -6,17 +6,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.1] - 2023-10-24
+
+### Changed
+
+- Minor refactor to improve memory efficiency in search results ([#650](https://github.com/jpanther/congo/pull/650))
+- Links in Markdown content are now portable ([#655](https://github.com/jpanther/congo/pull/655))
+
+### Fixed
+
+- JavaScript error setting theme colour when site is loaded in dark mode ([#676](https://github.com/jpanther/congo/issues/676))
+
 ## [2.7.0] - 2023-10-23
 
 ### Added
 
 - New portable locale picker that can be placed in any menu using the `locale` action ([#583](https://github.com/jpanther/congo/issues/583))
-- New icons for `chevron-down`, `chevron-up`, `globe` and `translate`
+- New icons for `chevron-down`, `chevron-up`, `globe`, `translate`, `coffee` and `x-twitter` ([#669](https://github.com/jpanther/congo/pull/669))
 - Plausible Analytics support ([#584](https://github.com/jpanther/congo/pull/584))
 - Spanish translation of example site samples ([#606](https://github.com/jpanther/congo/pull/606))
 - Japanese translation of docs and example site ([#618](https://github.com/jpanther/congo/pull/618))
 - German translation of example site ([#631](https://github.com/jpanther/congo/pull/631))
-- New icons - `coffee` and `x-twitter` ([#669](https://github.com/jpanther/congo/pull/669))
 
 ### Changed
 
@@ -745,7 +755,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.0...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.1...HEAD
+[2.7.1]: https://github.com/jpanther/congo/compare/v2.7.0...v2.7.1
 [2.7.0]: https://github.com/jpanther/congo/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/jpanther/congo/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/jpanther/congo/compare/v2.5.4...v2.6.0
