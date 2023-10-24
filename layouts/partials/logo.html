@@ -5,17 +5,29 @@
     <a href="{{ "" | relLangURL }}" class="mr-2">
       <img
         src="{{ $logo.RelPermalink }}"
-        width="{{ div $logo.Width 2 }}"
-        height="{{ div $logo.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{ if $logo_dark }} hidden dark:flex{{ end }}"
+        {{- if eq $logo.MediaType.SubType "svg" }}
+          width="25"
+          height="25"
+          class="m-0 p-0 object-scale-down object-left{{ if $logo_dark }} hidden dark:flex{{ end }}"
+        {{- else }}  
+          width="{{ div $logo.Width 2 }}"
+          height="{{ div $logo.Height 2 }}"
+          class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{ if $logo_dark }} hidden dark:flex{{ end }}"
+        {{- end }}  
         alt="{{ .Site.Title }}"
       />
       {{- if $logo_dark }}
       <img
         src="{{ $logo_dark.RelPermalink }}"
-        width="{{ div $logo_dark.Width 2 }}"
-        height="{{ div $logo_dark.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left dark:hidden"
+        {{- if eq $logo_dark.MediaType.SubType "svg" }}
+          width="25"
+          height="25"
+          class="m-0 p-0 object-scale-down object-left{{ if $logo }} !dark:hidden{{ end }}"
+        {{- else }}
+          width="{{ div $logo_dark.Width 2 }}"
+          height="{{ div $logo_dark.Height 2 }}"
+          class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{ if $logo }} !dark:hidden{{ end }}"
+        {{- end }}
         alt="{{ .Site.Title }}"
       />
       {{- end}}

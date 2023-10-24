@@ -7,3 +7,6 @@
 {{ if ne .Params.logo nil }}
   {{ warnf "[CONGO] Theme parameter `logo` has been renamed to `header.logo`. Please update your site configuration." }}
 {{ end }}
+{{ if eq .Params.header.logo .Params.header.logo_dark }}
+  {{-  warnf "[CONGO] Interactions with a single resource via multiple distinct resource handles can be problematic. It is recommended to only declare `header.logo_dark` when it is distinct from `header.logo`." }}
+{{- end }}
