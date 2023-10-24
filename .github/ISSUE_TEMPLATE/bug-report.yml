@@ -10,6 +10,7 @@ body:
         Before proceeding, please ensure the issue you're reporting is:
           - not caused by local customisations in your project
           - reproducible using the latest stable release of the theme
+          - not due to the local Hugo cache being out of date (run `hugo mod clean` to clear the cache)
           - not already covered by an open issue ([check open issues](https://github.com/jpanther/congo/issues))
           - not a general question or feature request (use [GitHub Discussions](https://github.com/jpanther/congo/discussions) instead)
 
@@ -24,8 +25,8 @@ body:
     id: theme-version
     attributes:
       label: Theme version
-      description: What version of the theme are you using? If you have not tested this issue with the latest theme release, please do so before submitting a bug report.
-      placeholder: eg. v2.6.0
+      description: What version of Congo are you using? An easy way to check the version of the code running in your environment is by verifying the theme version comment at the top of the `main.css` file in the built output of your site.
+      placeholder: eg. v2.7.1
     validations:
       required: true
   - type: input
@@ -33,7 +34,7 @@ body:
     attributes:
       label: Hugo version
       description: What version of Hugo are you using? Please provide the output of the `hugo version` command.
-      placeholder: eg. hugo v0.114.0+extended darwin/arm64
+      placeholder: eg. hugo v0.119.0+extended darwin/arm64
     validations:
       required: true
   - type: dropdown
