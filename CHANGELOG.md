@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade to Tailwind v3.3.4 ([#681](https://github.com/jpanther/congo/pull/681))
+
 ### Fixed
 
 - Extra whitespace added after links ([#679](https://github.com/jpanther/congo/issues/679))
