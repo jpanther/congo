@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
+- Empty block is output when locale switcher is hidden ([#678](https://github.com/jpanther/congo/issues/678))
 - Extra whitespace added after links ([#679](https://github.com/jpanther/congo/issues/679))
 
 ## [2.7.1] - 2023-10-24
