@@ -8,7 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- Upgrade to Tailwind v3.3.4 ([#681](https://github.com/jpanther/congo/pull/681))
+- Upgrade to Tailwind v3.3.5 ([#681](https://github.com/jpanther/congo/pull/681), [#686](https://github.com/jpanther/congo/pull/686))
+- Upgrade to Mermaid v10.6.0 ([#684](https://github.com/jpanther/congo/pull/684))
+- Upgrade to FuseJS v7.0.0 ([#685](https://github.com/jpanther/congo/pull/685))
 
 ### Fixed
 
