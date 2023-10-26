@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.2] - 2023-10-26
+
+### Changed
+
+- Upgrade to Tailwind v3.3.5 ([#681](https://github.com/jpanther/congo/pull/681), [#686](https://github.com/jpanther/congo/pull/686))
+- Upgrade to Mermaid v10.6.0 ([#684](https://github.com/jpanther/congo/pull/684))
+- Upgrade to FuseJS v7.0.0 ([#685](https://github.com/jpanther/congo/pull/685))
+
+### Fixed
+
+- Empty block is output when locale switcher is hidden ([#678](https://github.com/jpanther/congo/issues/678))
+- Extra whitespace added after links ([#679](https://github.com/jpanther/congo/issues/679))
+
 ## [2.7.1] - 2023-10-24
 
 ### Changed
@@ -755,7 +768,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.1...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.2...HEAD
+[2.7.2]: https://github.com/jpanther/congo/compare/v2.7.1...v2.7.2
 [2.7.1]: https://github.com/jpanther/congo/compare/v2.7.0...v2.7.1
 [2.7.0]: https://github.com/jpanther/congo/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/jpanther/congo/compare/v2.6.0...v2.6.1

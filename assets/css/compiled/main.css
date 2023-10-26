@@ -1,6 +1,6 @@
-/*! Congo v2.7.1 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.7.2 | MIT License | https://github.com/jpanther/congo */
 
-/*! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -1140,8 +1140,7 @@ body:has(#menu-controller:checked) {
 }
 
 .toc ul ul {
-  -webkit-padding-start: 1rem;
-          padding-inline-start: 1rem;
+  padding-inline-start: 1rem;
 }
 
 .toc a {
@@ -1848,8 +1847,7 @@ body:has(#menu-controller:checked) {
 }
 
 .-ms-5 {
-  -webkit-margin-start: -1.25rem;
-          margin-inline-start: -1.25rem;
+  margin-inline-start: -1.25rem;
 }
 
 .-mt-3 {
@@ -1885,18 +1883,15 @@ body:has(#menu-controller:checked) {
 }
 
 .me-14 {
-  -webkit-margin-end: 3.5rem;
-          margin-inline-end: 3.5rem;
+  margin-inline-end: 3.5rem;
 }
 
 .me-2 {
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 .me-4 {
-  -webkit-margin-end: 1rem;
-          margin-inline-end: 1rem;
+  margin-inline-end: 1rem;
 }
 
 .ml-2 {
@@ -1908,13 +1903,11 @@ body:has(#menu-controller:checked) {
 }
 
 .ms-1 {
-  -webkit-margin-start: 0.25rem;
-          margin-inline-start: 0.25rem;
+  margin-inline-start: 0.25rem;
 }
 
 .ms-2 {
-  -webkit-margin-start: 0.5rem;
-          margin-inline-start: 0.5rem;
+  margin-inline-start: 0.5rem;
 }
 
 .mt-0 {
@@ -2363,38 +2356,31 @@ body:has(#menu-controller:checked) {
 }
 
 .pe-10 {
-  -webkit-padding-end: 2.5rem;
-          padding-inline-end: 2.5rem;
+  padding-inline-end: 2.5rem;
 }
 
 .pe-2 {
-  -webkit-padding-end: 0.5rem;
-          padding-inline-end: 0.5rem;
+  padding-inline-end: 0.5rem;
 }
 
 .pe-3 {
-  -webkit-padding-end: 0.75rem;
-          padding-inline-end: 0.75rem;
+  padding-inline-end: 0.75rem;
 }
 
 .pe-4 {
-  -webkit-padding-end: 1rem;
-          padding-inline-end: 1rem;
+  padding-inline-end: 1rem;
 }
 
 .pe-5 {
-  -webkit-padding-end: 1.25rem;
-          padding-inline-end: 1.25rem;
+  padding-inline-end: 1.25rem;
 }
 
 .ps-2 {
-  -webkit-padding-start: 0.5rem;
-          padding-inline-start: 0.5rem;
+  padding-inline-start: 0.5rem;
 }
 
 .ps-5 {
-  -webkit-padding-start: 1.25rem;
-          padding-inline-start: 1.25rem;
+  padding-inline-start: 1.25rem;
 }
 
 .pt-3 {
@@ -2979,8 +2965,7 @@ body:has(#menu-controller:checked) {
   }
 
   .sm\:me-7 {
-    -webkit-margin-end: 1.75rem;
-            margin-inline-end: 1.75rem;
+    margin-inline-end: 1.75rem;
   }
 
   .sm\:flex {
@@ -3030,8 +3015,7 @@ body:has(#menu-controller:checked) {
   }
 
   .sm\:pe-6 {
-    -webkit-padding-end: 1.5rem;
-            padding-inline-end: 1.5rem;
+    padding-inline-end: 1.5rem;
   }
 
   .sm\:pt-10 {
@@ -3044,13 +3028,11 @@ body:has(#menu-controller:checked) {
   }
 
   .sm\:last\:me-0:last-child {
-    -webkit-margin-end: 0px;
-            margin-inline-end: 0px;
+    margin-inline-end: 0px;
   }
 
   .sm\:last\:me-0\.5:last-child {
-    -webkit-margin-end: 0.125rem;
-            margin-inline-end: 0.125rem;
+    margin-inline-end: 0.125rem;
   }
 }
 
@@ -3108,8 +3090,7 @@ body:has(#menu-controller:checked) {
   }
 
   .lg\:ps-8 {
-    -webkit-padding-start: 2rem;
-            padding-inline-start: 2rem;
+    padding-inline-start: 2rem;
   }
 }
 

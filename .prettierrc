@@ -1,9 +1,11 @@
 {
+  "plugins": ["prettier-plugin-go-template"],
   "goTemplateBracketSpacing": true,
   "htmlWhitespaceSensitivity": "css",
   "printWidth": 100,
   "singleQuote": false,
   "tabWidth": 2,
+  "useTabs": false,
   "trailingComma": "es5",
   "overrides": [
     {
