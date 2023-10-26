@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.2] - 2023-10-26
+
 ### Changed
 
 - Upgrade to Tailwind v3.3.5 ([#681](https://github.com/jpanther/congo/pull/681), [#686](https://github.com/jpanther/congo/pull/686))
@@ -766,7 +768,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.1...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.2...HEAD
+[2.7.2]: https://github.com/jpanther/congo/compare/v2.7.1...v2.7.2
 [2.7.1]: https://github.com/jpanther/congo/compare/v2.7.0...v2.7.1
 [2.7.0]: https://github.com/jpanther/congo/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/jpanther/congo/compare/v2.6.0...v2.6.1
