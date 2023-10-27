@@ -3,7 +3,9 @@
     {{ with .Site.Author.image }}
       {{ $authorImage := resources.Get . }}
       {{ if $authorImage }}
-        {{ $authorImage := $authorImage.Fill "192x192 Center" }}
+        {{- if ne $authorImage.MediaType.SubType "svg" }}
+          {{ $authorImage := $authorImage.Fill "192x192 Center" }}
+        {{- end }}
         <img
           class="!mb-0 !mt-0 me-4 h-24 w-24 rounded-full"
           width="96"
