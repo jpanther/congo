@@ -71,6 +71,7 @@ La lista completa de íconos incorporados y sus nombres correspondientes se pued
 | sun                  | {{< icon sun >}}                  |
 | tag                  | {{< icon tag >}}                  |
 | telegram             | {{< icon telegram >}}             |
+| threads              | {{< icon threads >}}              |
 | tiktok               | {{< icon tiktok >}}               |
 | translate            | {{< icon translate >}}            |
 | triangle-exclamation | {{< icon triangle-exclamation >}} |
