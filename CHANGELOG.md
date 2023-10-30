@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.3] - 2023-10-31
+
+### Fixed
+
+- Article metadata HTML is output as text when using Hugo v0.120.0 ([#689](https://github.com/jpanther/congo/pull/689))
+
 ## [2.7.2] - 2023-10-26
 
 ### Changed
@@ -768,7 +774,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.2...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.3...HEAD
+[2.7.3]: https://github.com/jpanther/congo/compare/v2.7.2...v2.7.3
 [2.7.2]: https://github.com/jpanther/congo/compare/v2.7.1...v2.7.2
 [2.7.1]: https://github.com/jpanther/congo/compare/v2.7.0...v2.7.1
 [2.7.0]: https://github.com/jpanther/congo/compare/v2.6.1...v2.7.0
