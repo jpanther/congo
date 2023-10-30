@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Article metadata HTML is output as text when using Hugo v0.120.0 ([#689](https://github.com/jpanther/congo/pull/689))
+
 ## [2.7.2] - 2023-10-26
 
 ### Changed
