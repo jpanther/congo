@@ -1,0 +1,85 @@
+{{ $img := .img }}
+{{ $alt := .alt }}
+{{ $class := .class }}
+{{ $lazy := .lazy }}
+{{ $webp := .webp }}
+{{ $lqip := .lqip }}
+
+{{ with $img }}
+  {{ if (eq .MediaType.SubType "svg") }}
+    {{ $width := ""}}
+    {{ $height := ""}}
+    {{ $svgContent := .Content }}
+    {{ range (findRESubmatch `<svg[^>]*width=["']([.0-9]*)["'a-zA-Z]` $svgContent 1) }}
+      {{ $width = index . 1 }}
+    {{ end }}
+    {{ range (findRESubmatch `<svg[^>]*height=["']([.0-9]*)["'a-zA-Z]` $svgContent 1) }}
+      {{ $height = index . 1 }}
+    {{ end }}
+    {{ if (eq "" $width $height) }}
+      {{ range (findRESubmatch `<svg[^>]*viewBox=["']?([.0-9]*) ([.0-9]*) ([.0-9]*) ([.0-9]*)` $svgContent 1) }}
+        {{ $width = index . 3 }}
+        {{ $height = index . 4 }}
+      {{ end }}
+    {{ end }}
+    {{ if (eq "" $width $height) }}
+      {{ warnf "Can't detect width and height for SVG %s" .RelPermalink }}
+      {{/* do not use lazy without dimensions */}}
+      {{ $lazy = false }}
+    {{ end }}
+    <picture {{ with $class }} class="{{ . }}" {{ end }}>
+      <img
+        src="{{ .RelPermalink }}"
+        {{ with $width }} width="{{ . }}" {{ end }}
+        {{ with $height }} height="{{ . }}" {{ end }}
+        {{ with $class }} class="{{ . }}" {{ end }}
+        {{ with $alt }} alt="{{ . }}" {{ end }}
+        {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
+      >
+    </picture>
+  {{ else }}
+    <picture 
+      {{ with $class }} class="{{ . }}" {{ end }}
+      {{ if $lqip }}
+        {{ $bg := (.Resize "20x webp q20").Content | base64Encode }}
+        style="background-image:url(data:image/webp;base64,{{ $bg }});background-size:cover"
+      {{ end }}
+    >
+    {{ if $webp }}
+      <source 
+        {{ if lt .Width 660 }}
+          {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+            src="{{ .RelPermalink }}"
+          {{ end }}
+        {{ else }}
+          srcset="
+            {{- (.Resize "330x webp").RelPermalink }} 330w,
+            {{- (.Resize "660x webp").RelPermalink }} 660w,
+            {{- (.Resize "1024x webp").RelPermalink }} 1024w,
+            {{- (.Resize "1320x webp").RelPermalink }} 2x"
+          src="{{ (.Resize "660x webp").RelPermalink }}" 
+        {{ end }}
+        type="image/webp" 
+      />
+    {{ end }}
+      <img
+        src="{{ .RelPermalink }}"
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+        {{ with $class }} class="{{ . }}" {{ end }}
+        {{ with $alt }} alt="{{ . }}" {{ end }}
+        {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
+        {{ if lt .Width 660 }}
+          src="{{ .RelPermalink }}"
+        {{ else }}
+          srcset="
+          {{- (.Resize "330x").RelPermalink }} 330w,
+          {{- (.Resize "660x").RelPermalink }} 660w,
+          {{- (.Resize "1024x").RelPermalink }} 1024w,
+          {{- (.Resize "1320x").RelPermalink }} 2x"
+          src="{{ (.Resize "660x").RelPermalink }}"
+        {{ end }}
+      >
+    </picture>
+  {{ end }}
+{{ end }}
