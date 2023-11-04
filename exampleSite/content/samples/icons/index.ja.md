@@ -71,6 +71,7 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | sun                  | {{< icon sun >}}                  |
 | tag                  | {{< icon tag >}}                  |
 | telegram             | {{< icon telegram >}}             |
+| threads              | {{< icon threads >}}              |
 | tiktok               | {{< icon tiktok >}}               |
 | translate            | {{< icon translate >}}            |
 | triangle-exclamation | {{< icon triangle-exclamation >}} |
