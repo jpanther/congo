@@ -1,5 +1,5 @@
-{{ $link := .Destination }}
-{{ $isRemote := strings.HasPrefix $link "http" }}
+{{- $link := .Destination -}}
+{{- $isRemote := strings.HasPrefix $link "http" -}}
 {{- if not $isRemote }}
   {{ $url := urls.Parse .Destination }}
   {{ if $url.Path }}
