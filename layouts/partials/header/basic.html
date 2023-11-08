@@ -9,7 +9,7 @@
       <ul class="flex flex-col list-none text-end sm:flex-row">
         {{ if .Site.Menus.main }}
           {{ range .Site.Menus.main }}
-            {{ if and (eq .Params.action "locale") (and (not page.IsTranslated) (not site.IsMultiLingual)) }}
+            {{ if and (eq .Params.action "locale") (or (not page.IsTranslated) (not site.IsMultiLingual)) }}
               {{ continue }}
             {{ end }}
             <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
