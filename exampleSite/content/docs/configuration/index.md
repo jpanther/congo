@@ -98,11 +98,6 @@ The default file can be used as a template to create additional languages, or re
 |`params.dateFormat`|`"2 January 2006"`|How dates are formatted in this language. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|
 |`params.mainSections`|_Not set_|The sections that should be displayed in the recent articles list. If not provided the section with the greatest number of articles is used.|
 |`params.description`|_Not set_|The website description. This will be used in the site metadata.|
-|`author.name`|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
-|`author.image`|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `assets/` folder.|
-|`author.headline`|_Not set_|A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.|
-|`author.bio`|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers.|
-|`author.links`|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
 <!-- prettier-ignore-end -->
 
 ### Menus
@@ -175,6 +170,11 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`verification.bing`|_Not set_|The site verification string provided by Bing to be included in the site metadata.|
 |`verification.pinterest`|_Not set_|The site verification string provided by Pinterest to be included in the site metadata.|
 |`verification.yandex`|_Not set_|The site verification string provided by Yandex to be included in the site metadata.|
+|`author.name`|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
+|`author.image`|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `assets/` folder.|
+|`author.headline`|_Not set_|A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.|
+|`author.bio`|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers.|
+|`author.links`|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
 <!-- prettier-ignore-end -->
 
 ## Other configuration files
