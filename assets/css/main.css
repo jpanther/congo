@@ -3,10 +3,6 @@
 @tailwind base;
 @tailwind components;
 
-p {
-  @apply text-justify;
-}
-
 body a,
 body button {
   @apply transition-colors;
@@ -61,6 +57,35 @@ body:has(#menu-controller:checked) {
 .prose div.min-w-0.max-w-prose > *:first-child {
   @apply mt-3;
 }
+
+/* UI */
+.ui {
+  @apply text-base md:text-lg max-w-xl dark:text-neutral-300;
+}
+.ui a {
+  @apply dark:text-primary-400 text-primary-600 font-medium;
+}
+.ui a:hover {
+  @apply bg-primary-600 no-underline text-neutral dark:text-neutral;
+}
+.ui p {
+  @apply mb-2;
+}
+.ui p:last-child {
+  @apply mb-0;
+}
+
+.ui-home {
+  @apply grid gap-12 grid-cols-12;
+}
+
+.ui-block {
+  @apply p-6;
+  @apply col-span-12 col-start-1;
+}
+
+
+
 
 /* Table of Contents */
 .toc ul,
