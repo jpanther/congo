@@ -44,7 +44,7 @@ Congoを使用して構築された実際のウェブサイト。
 | [medical-humanities](https://medical-humanities.org)                   | Academic site                   |
 | [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog          |
 | [major.io](https://major.io)                                           | Personal site and Blog          |
-| [顾宇的博客](https://www.guyu.me/)                                     | Personal Blog (in Chinese)      |
+| [顾宇的博客](https://www.guyu.me/)                                       | Personal Blog (in Chinese)      |
 | [cgutierr-zgz.github.io](https://cgutierr-zgz.github.io/)              | Personal site and Tech blog     |
 | [adam.sr](https://adam.sr)                                             | Personal site and Blog          |
 | [kpavlov.me](https://kpavlov.me)                                       | Personal site and Blog          |
@@ -63,5 +63,6 @@ Congoを使用して構築された実際のウェブサイト。
 | [Beerjoa Blog](https://blog.beerjoa.dev)                               | Personal site and Blog          |
 | [simaosilva.com](https://simaosilva.com)                               | Personal Site                   |
 | [kom.al](https://kom.al)                                               | Personal Site                   |
+| [andrea.mortaro.it](https://andrea.mortaro.it)                         | Personal Site and Blog          |
 
 **Congoを使っていますか？** あなたのウェブサイトを加えるために[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)を投げてください。
