@@ -1,0 +1,52 @@
+{
+ "themeColors": [
+    { "cherry": {
+        "neutral": "neutral",
+        "primary": "rose",
+        "secondary": "green"
+      }
+    },
+    { "congo": { 
+        "neutral": "gray",
+        "primary": "violet",
+        "secondary": "fuchsia"
+      }
+    },
+    { "fire": {
+        "neutral": "stone",
+        "primary": "orange",
+        "secondary": "rose"
+        }
+    },
+    { "ocean": {
+        "neutral": "slate",
+        "primary": "blue",
+        "secondary": "cyan"
+        }
+    },
+    { "sapphire": {
+        "neutral": "slate",
+        "primary": "indigo",
+        "secondary": "pink"
+      }
+    },
+    { "avocado": {
+        "neutral": "stone",
+        "primary": "lime",
+        "secondary": "emerald"
+      }
+    },    
+    { "slate": {
+        "neutral": "gray",
+        "primary": "slate",
+        "secondary": "gray"
+      }
+    }
+  ],
+  "colorWeights": {
+    "neutral": "400",
+    "primary": "600",
+    "secondary": "400"
+  },
+  "fallbackWeight": "100"
+}
