@@ -93,7 +93,7 @@
                     <a
                       href="{{ .URL }}"
                       title="{{ .Title }}"
-                      onclick="document.getElementById('menu-controller').checked=false"
+                      onclick="close_menu()"
                       {{ with .Params.target }}target="{{ . }}"{{ end }}
                       >{{ with .Params.icon }}
                         <span
