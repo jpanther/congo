@@ -117,8 +117,8 @@
   {{/* Schema */}}
   {{ partial "schema.html" . }}
   {{/* Me */}}
-  {{ with .Site.Params.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
-  {{ with .Site.Params.Author.links }}
+  {{ with .Site.Language.Params.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
+  {{ with .Site.Language.Params.Author.links }}
     {{ range $links := . }}
       {{ range $name, $url := $links }}<link href="{{ $url }}" rel="me" />{{ end }}
     {{ end }}

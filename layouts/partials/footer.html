@@ -86,7 +86,7 @@
           {{- else }}
             &copy;
             {{ now.Format "2006" }}
-            {{ .Site.Params.Author.name | markdownify | emojify }}
+            {{ .Site.Language.Params.Author.name | markdownify | emojify }}
           {{- end }}
         </p>
       {{ end }}

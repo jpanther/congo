@@ -11,3 +11,15 @@ copyright = "&copy; 2023 Congo contributors"
 
   mainSections = ["samples"]
   description = "Un tema poderoso y liviano para Hugo creado con Tailwind CSS."
+
+[params.author]
+  name = "Congo"
+  image = "img/author.jpg"
+  headline = "¡No es tu tema ordinario!"
+  bio = "Esta es una biografía de autor de ejemplo, y aunque aquí hay una foto de un perro, este artículo en realidad fue creado por un ser humano. :dog:"
+  links = [
+    { x-twitter = "https://twitter.com/" },
+    { facebook = "https://facebook.com/" },
+    { linkedin = "https://linkedin.com/" },
+    { youtube = "https://youtube.com/" },
+  ]
