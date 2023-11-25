@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.5] - 2023-11-25
+
 ### Added
 
 - Ukrainian translation ([#703](https://github.com/jpanther/congo/pull/703))
@@ -795,7 +797,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.4...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.5...HEAD
+[2.7.5]: https://github.com/jpanther/congo/compare/v2.7.4...v2.7.5
 [2.7.4]: https://github.com/jpanther/congo/compare/v2.7.3...v2.7.4
 [2.7.3]: https://github.com/jpanther/congo/compare/v2.7.2...v2.7.3
 [2.7.2]: https://github.com/jpanther/congo/compare/v2.7.1...v2.7.2
