@@ -1,7 +1,7 @@
 article:
   anchor_label: "Anker"
   date: "{{ .Date }}"
-  date_updated: "Bijgwerkt: {{ .Date }}"
+  date_updated: "Bijgewerkt: {{ .Date }}"
   draft: "Concept"
   edit_title: "Bewerk inhoud"
   reading_time:

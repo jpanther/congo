@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.5] - 2023-11-25
+
+### Added
+
+- Ukrainian translation ([#703](https://github.com/jpanther/congo/pull/703))
+- Bulgarian translation ([#718](https://github.com/jpanther/congo/pull/718))
+
+### Changed
+
+- Updated Dutch translation ([#696](https://github.com/jpanther/congo/pull/696))
+- Upgrade to Mermaid v10.6.1 ([#697](https://github.com/jpanther/congo/pull/697))
+
+### Fixed
+
+- Some files have unnecessary execute permissions ([#714](https://github.com/jpanther/congo/pull/714))
+- Empty block is output when locale switcher is hidden ([#699](https://github.com/jpanther/congo/pull/699))
+
 ## [2.7.4] - 2023-11-05
 
 ### Fixed
@@ -780,7 +797,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.4...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.5...HEAD
+[2.7.5]: https://github.com/jpanther/congo/compare/v2.7.4...v2.7.5
 [2.7.4]: https://github.com/jpanther/congo/compare/v2.7.3...v2.7.4
 [2.7.3]: https://github.com/jpanther/congo/compare/v2.7.2...v2.7.3
 [2.7.2]: https://github.com/jpanther/congo/compare/v2.7.1...v2.7.2

@@ -53,6 +53,7 @@ The theme currently supports the following languages out of the box:
 | :gb: **English (default)**              | `en`    |
 | :egypt: Arabic                          | `ar`    |
 | :bangladesh: Bengali                    | `bn`    |
+| :bulgaria: Bulgarian                    | `bg`    |
 | :cn: Chinese - Simplified (China)       | `zh-cn` |
 | :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
 | :flag-cz: Czech                         | `cs`    |
@@ -73,6 +74,7 @@ The theme currently supports the following languages out of the box:
 | :slovakia: Slovak                       | `sk`    |
 | :es: Spanish (Spain)                    | `es`    |
 | :tr: Turkish                            | `tr`    |
+| :ukraine: Ukrainian                     | `uk`    |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
