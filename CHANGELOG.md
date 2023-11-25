@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Ukrainian translation ([#703](https://github.com/jpanther/congo/pull/703))
+- Bulgarian translation ([#718](https://github.com/jpanther/congo/pull/718))
+
+### Changed
+
+- Updated Dutch translation ([#696](https://github.com/jpanther/congo/pull/696))
+- Upgrade to Mermaid v10.6.1 ([#697](https://github.com/jpanther/congo/pull/697))
+
+### Fixed
+
+- Some files have unnecessary execute permissions ([#714](https://github.com/jpanther/congo/pull/714))
+- Empty block is output when locale switcher is hidden ([#699](https://github.com/jpanther/congo/pull/699))
+
 ## [2.7.4] - 2023-11-05
 
 ### Fixed
