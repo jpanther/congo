@@ -46,6 +46,7 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | kickstarter          | {{< icon kickstarter >}}          |
 | lastfm               | {{< icon lastfm >}}               |
 | lightbulb            | {{< icon lightbulb >}}            |
+| line                 | {{< icon line >}}                 |
 | link                 | {{< icon link >}}                 |
 | linkedin             | {{< icon linkedin >}}             |
 | list                 | {{< icon list >}}                 |

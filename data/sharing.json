@@ -38,5 +38,10 @@
     "icon": "telegram",
     "title": "sharing.telegram",
     "url": "https://telegram.me/share/url?text=%s&url=%s"
+  },
+  "line": {
+    "icon": "line",
+    "title": "sharing.line",
+    "url": "https://line.me/R/share?text=%s%s"
   }
 }
