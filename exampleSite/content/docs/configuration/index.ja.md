@@ -53,6 +53,7 @@ Congoは現在、以下の言語に対応しています:
 | :gb: **English (default)**              | `en`    |
 | :egypt: Arabic                          | `ar`    |
 | :bangladesh: Bengali                    | `bn`    |
+| :bulgaria: Bulgarian                    | `bg`    |
 | :cn: Chinese - Simplified (China)       | `zh-cn` |
 | :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
 | :flag-cz: Czech                         | `cs`    |
@@ -73,6 +74,7 @@ Congoは現在、以下の言語に対応しています:
 | :slovakia: Slovak                       | `sk`    |
 | :es: Spanish (Spain)                    | `es`    |
 | :tr: Turkish                            | `tr`    |
+| :ukraine: Ukrainian                     | `uk`    |
 
 翻訳文字列を含むカスタムファイルを `i18n/[code].yaml` に作成することでデフォルトの翻訳をオーバーライドできます。このメソッドを使って新しい言語を追加することもできます。新しい翻訳をコミュニティと共有したい場合、[Pull Request](https://github.com/jpanther/congo/pulls)を作ってください。
 
