@@ -51,6 +51,8 @@ sharing:
   pinterest: "Pin na Pinterest"
   reddit: "Odoslať na Reddit"
   twitter: "Tweet na Twitteri"
+  telegram: "Zdieľaj na Telegram"
+  line: "Zdieľaj na LINE"
 
 shortcode:
   recent_articles: "Nedávne"

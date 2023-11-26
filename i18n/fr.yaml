@@ -51,6 +51,8 @@ sharing:
   pinterest: "Poster sur Pinterest"
   reddit: "Poster sur Reddit"
   twitter: "Tweeter"
+  telegram: "Partager sur Telegram"
+  line: "Partager sur LINE"
 
 shortcode:
   recent_articles: "Articles récents"
