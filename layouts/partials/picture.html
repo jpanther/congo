@@ -57,9 +57,17 @@
             {{- (.Resize "660x webp").RelPermalink }} 660w
             {{ if gt .Width 1024 }}
               ,{{ (.Resize "1024x webp").RelPermalink }} 1024w
+            {{ else }}
+              {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+                ,{{ .RelPermalink }} {{ .Width }}w
+              {{ end }}
             {{ end }}
             {{ if gt .Width 1320 }}
               ,{{ (.Resize "1320x webp").RelPermalink }} 2x
+            {{ else }}
+              {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+                ,{{ .RelPermalink }} {{ .Width }}w
+              {{ end }}
             {{ end }}"
           src="{{ (.Resize "660x webp").RelPermalink }}" 
         {{ end }}
@@ -81,9 +89,13 @@
           {{- (.Resize "660x").RelPermalink }} 660w
           {{ if gt .Width 1024 }}
             ,{{ (.Resize "1024x").RelPermalink }} 1024w
+          {{ else }}
+            ,{{ .RelPermalink }} {{ .Width }}w
           {{ end }}
           {{ if gt .Width 1320 }}
             ,{{ (.Resize "1320x").RelPermalink }} 2x
+          {{ else }}
+            ,{{ .RelPermalink }} {{ .Width }}w
           {{ end }}"
           src="{{ (.Resize "660x").RelPermalink }}"
         {{ end }}
