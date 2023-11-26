@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.7.6] - 2023-11-26
+
+### Fixed
+
+- Some Mermaid diagram elements not styled correctly in dark mode ([#706](https://github.com/jpanther/congo/issues/706))
+
 ## [2.7.5] - 2023-11-25
 
 ### Added
@@ -797,7 +803,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.5...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.6...HEAD
+[2.7.6]: https://github.com/jpanther/congo/compare/v2.7.5...v2.7.6
 [2.7.5]: https://github.com/jpanther/congo/compare/v2.7.4...v2.7.5
 [2.7.4]: https://github.com/jpanther/congo/compare/v2.7.3...v2.7.4
 [2.7.3]: https://github.com/jpanther/congo/compare/v2.7.2...v2.7.3
