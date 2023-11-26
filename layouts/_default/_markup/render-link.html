@@ -9,7 +9,7 @@
       {{ $link = printf "%s%s" .RelPermalink $fragment }}
     {{ else }}
       {{- if hasSuffix $url.Path ".md" }}
-        {{ warnf "Can't resolve: %s" .Destination }}
+        {{ warnf "[CONGO] Can't resolve: %s" .Destination }}
       {{ end -}}
     {{ end -}}
   {{ end -}}
