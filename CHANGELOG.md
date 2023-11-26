@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Warning when building if links to markdown files cannot be resolved ([#691](https://github.com/jpanther/congo/pull/691))
 
+### Changed
+
+- Refactored image logic into a new `picture.html` partial ([#693](https://github.com/jpanther/congo/pull/693))
+
 ### Removed
 
 - Fathom Analytics custom domain parameter as this is no longer supported by Fathom
