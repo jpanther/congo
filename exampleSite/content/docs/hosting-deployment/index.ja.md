@@ -75,7 +75,7 @@ jobs:
 
 設定ファイルをGitHubにプッシュすると、アクションが自動的に実行されるはずです。初回は失敗するかもしれないので、GitHubリポジトリの **Settings > Pages** にアクセスして、ソースが正しいか確認してください。 `gh-pages` ブランチを使うように設定されているべきです。
 
-{{< screenshot src="github-pages-source.jpg" alt="Screen capture of GitHub Pages source" >}}
+![Screen capture of GitHub Pages source](github-pages-source.jpg?2x=true)
 
 設定が完了したら、アクションを再実行し、サイトを正しくビルドしてデプロイします。すべてが正常にデプロイされたことを確認するためにアクションログを参照することができます。
 
@@ -83,7 +83,7 @@ jobs:
 
 [Netlify](https://www.netlify.com)にデプロイするには、Netlify側に新しいデプロイサイトを作成し、ソースコードとリンクします。Netlify UIでは、ビルド設定は空白のまま、使用するドメインだけを設定する必要があります。
 
-{{< screenshot src="netlify-build-settings.jpg" alt="Screen capture of Netlify build settings" >}}
+![Screen capture of Netlify build settings](netlify-build-settings.jpg?2x=true)
 
 次に、サイト・リポジトリのルートに `netlify.toml` ファイルを作成します:
 
@@ -114,7 +114,7 @@ jobs:
 
 新しい**静的サイト**を作成し、プロジェクトのコード・リポジトリにリンクします。そして、ビルドコマンドを `hugo --gc --minify` に、公開ディレクトリを `public` に設定するだけです。
 
-{{< screenshot src="render-settings.jpg" alt="Screen capture of Render settings" >}}
+![Screen capture of Render settings](render-settings.jpg?2x=true)
 
 あなたが変更をリポジトリにプッシュするたびに、自動的にビルドとデプロイを行います。
 

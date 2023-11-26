@@ -75,11 +75,11 @@ jobs:
 
 Push the config file to GitHub and the action should automatically run. It may fail the first time and you'll need to visit the **Settings > Pages** section of your GitHub repo to check the source is correct. It should be set to use the `gh-pages` branch.
 
-{{< screenshot src="github-pages-source.jpg" alt="Screen capture of GitHub Pages source settings" >}}
+![Screen capture of GitHub Pages source settings](github-pages-source.jpg?2x=true)
 
 You should also visit the **Settings > Actions > General** section and check that the workflow permissions allow actions to make changes to your repo.
 
-{{< screenshot src="github-workflow-permissions.jpg" alt="Screen capture of GitHub Workflow Permissions settings" >}}
+![Screen capture of GitHub Workflow Permissions settings](github-workflow-permissions.jpg?2x=true)
 
 Once the settings are configured, re-run the action and the site should build and deploy correctly. You can consult the actions log to check everything deployed successfully.
 
@@ -87,7 +87,7 @@ Once the settings are configured, re-run the action and the site should build an
 
 To deploy to [Netlify](https://www.netlify.com), create a new continuous deployment site and link it to your source code. The build settings can be left blank in the Netlify UI. You will only need to configure the domain you'll be using.
 
-{{< screenshot src="netlify-build-settings.jpg" alt="Screen capture of Netlify build settings" >}}
+![Screen capture of Netlify build settings](netlify-build-settings.jpg?2x=true)
 
 Then in the root of your site repository, create a `netlify.toml` file:
 
@@ -117,7 +117,7 @@ Deploying to [Render](https://render.com) is very straightforward and all config
 
 Create a new **Static Site** and link it to your project's code repository. Then simply configure the build command to be `hugo --gc --minify` and publish directory to be `public`.
 
-{{< screenshot src="render-settings.jpg" alt="Screen capture of Render settings" >}}
+![Screen capture of Render settings](render-settings.jpg?2x=true)
 
 The site will automatically build and deploy whenever you push a change to your repo.
 
