@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Some Mermaid diagram elements not styled correctly in dark mode ([#706](https://github.com/jpanther/congo/issues/706))
+
 ## [2.7.5] - 2023-11-25
 
 ### Added
