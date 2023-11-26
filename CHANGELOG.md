@@ -8,10 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Warning when building if links to markdown files cannot be resolved ([#691](https://github.com/jpanther/congo/pull/691))
+- Automatic support for WebP images ([#693](https://github.com/jpanther/congo/pull/693))
+- Warning when building if links to Markdown files cannot be resolved ([#691](https://github.com/jpanther/congo/pull/691))
 
 ### Changed
 
+- ⚠️ Hugo extended version is now required when building sites
 - Refactored image logic into a new `picture.html` partial ([#693](https://github.com/jpanther/congo/pull/693))
 
 ### Removed
