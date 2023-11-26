@@ -20,7 +20,7 @@
 
 <figure>
   {{- with $img -}}
-    {{ partial "pictureDefaults.html" (dict "img" . "alt" $altText "class" $class "x2" $x2) }}
+    {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "x2" $x2) }}
   {{- else -}}
     <img src="{{ .Destination | safeURL }}" alt="{{ $altText }}" class="{{ $class }}"/>
   {{- end -}}

@@ -18,7 +18,7 @@
     {{ with $href }}<a href="{{ . }}">{{ end }}
 
     {{- with $img -}}
-      {{ partial "pictureDefaults.html" (dict "img" . "alt" $altText "class" $class) }}
+      {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class) }}
     {{- else -}}
       <img src="{{ $url.String }}" alt="{{ $altText }}" class="{{ $class }}"/>
     {{- end -}}

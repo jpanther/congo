@@ -12,7 +12,7 @@
       {{ $altText = (.Get "caption") | markdownify | plainify }}
     {{ end }}
 
-    {{ partial "pictureDefaults.html" (dict "img" $image "alt" $altText "x2" true) }}
+    {{ partial "picture.html" (dict "img" $image "alt" $altText "x2" true) }}
 
     {{- if .Get "href" }}</a>{{ end -}}
     {{- if .Get "caption" -}}

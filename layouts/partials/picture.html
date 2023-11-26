@@ -1,10 +1,10 @@
 {{ $img := .img }}
 {{ $alt := .alt }}
 {{ $class := .class }}
-{{ $lazy := .lazy }}
-{{ $webp := .webp }}
-{{ $lqip := .lqip }}
-{{ $x2 := .x2 }}
+{{ $lazy := .lazy | default $.Page.Site.Params.enableImageLazyLoading | default true }}
+{{ $webp := .webp | default $.Page.Site.Params.enableImageWebp | default true }}
+{{ $lqip := .lqip | default false }}
+{{ $x2 := .x2 | default false }}
 
 {{ with $img }}
   {{ if (eq .MediaType.SubType "svg") }}
