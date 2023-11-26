@@ -4,6 +4,7 @@
 {{ $lazy := .lazy }}
 {{ $webp := .webp }}
 {{ $lqip := .lqip }}
+{{ $x2 := .x2 | default false }}
 
 {{ with $img }}
   {{ if (eq .MediaType.SubType "svg") }}
@@ -45,6 +46,12 @@
         style="background-image:url(data:image/webp;base64,{{ $bg }});background-size:cover"
       {{ end }}
     >
+    {{ $width := .Width }}
+    {{ $height := .Height }}
+    {{ if $x2 }}
+      {{ $width = div .Width 2 }}
+      {{ $height = div .Height 2 }}
+    {{ end }}
     {{ if $webp }}
       <source 
         {{ if lt .Width 660 }}
@@ -76,8 +83,8 @@
     {{ end }}
       <img
         src="{{ .RelPermalink }}"
-        width="{{ .Width }}"
-        height="{{ .Height }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
         {{ with $class }} class="{{ . }}" {{ end }}
         {{ with $alt }} alt="{{ . }}" {{ end }}
         {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
