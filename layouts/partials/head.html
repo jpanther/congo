@@ -47,7 +47,7 @@
     {{ $jsCode := resources.Get "js/code.js" }}
     {{ $assets.Add "js" (slice $jsCode) }}
   {{ end }}
-  {{ if eq .Site.Params.header.layout "hamburger" }}
+  {{ if or (eq .Site.Params.header.layout "hamburger") (eq .Site.Params.header.layout "hybrid") }}
     {{ $jsMenu := resources.Get "js/menu.js" }}
     {{ $assets.Add "js" (slice $jsMenu) }}
   {{ end }}
