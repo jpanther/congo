@@ -68,7 +68,6 @@ fingerprintAlgorithm = "sha256"
 
 [fathomAnalytics]
   # site = "ABC12345"
-  # domain = "llama.yoursite.com"
 
 [plausibleAnalytics]
   # domain = "blog.yoursite.com"
