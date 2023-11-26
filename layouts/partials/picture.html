@@ -54,9 +54,13 @@
         {{ else }}
           srcset="
             {{- (.Resize "330x webp").RelPermalink }} 330w,
-            {{- (.Resize "660x webp").RelPermalink }} 660w,
-            {{- (.Resize "1024x webp").RelPermalink }} 1024w,
-            {{- (.Resize "1320x webp").RelPermalink }} 2x"
+            {{- (.Resize "660x webp").RelPermalink }} 660w
+            {{ if gt .Width 1024 }}
+              ,{{ (.Resize "1024x webp").RelPermalink }} 1024w
+            {{ end }}
+            {{ if gt .Width 1320 }}
+              ,{{ (.Resize "1320x webp").RelPermalink }} 2x
+            {{ end }}"
           src="{{ (.Resize "660x webp").RelPermalink }}" 
         {{ end }}
         type="image/webp" 
@@ -74,9 +78,13 @@
         {{ else }}
           srcset="
           {{- (.Resize "330x").RelPermalink }} 330w,
-          {{- (.Resize "660x").RelPermalink }} 660w,
-          {{- (.Resize "1024x").RelPermalink }} 1024w,
-          {{- (.Resize "1320x").RelPermalink }} 2x"
+          {{- (.Resize "660x").RelPermalink }} 660w
+          {{ if gt .Width 1024 }}
+            ,{{ (.Resize "1024x").RelPermalink }} 1024w
+          {{ end }}
+          {{ if gt .Width 1320 }}
+            ,{{ (.Resize "1320x").RelPermalink }} 2x
+          {{ end }}"
           src="{{ (.Resize "660x").RelPermalink }}"
         {{ end }}
       >
