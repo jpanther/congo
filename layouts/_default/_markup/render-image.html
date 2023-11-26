@@ -10,7 +10,7 @@
     {{ $img = resources.Get $path }}
 {{ end -}}
 
-{{/* https://github.com/gohugoio/hugo/pull/10666/files */}}
+{{/* https://github.com/gohugoio/hugo/pull/10666 */}}
 {{- $params := $url.Query -}}
 {{- $x2Param := $params.Get "2x" -}}
 {{- $x2 := false -}}

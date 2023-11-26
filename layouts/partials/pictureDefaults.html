@@ -1,7 +1,7 @@
 {{ $img := .img }}
 {{ $alt := .alt }}
 {{ $class := .class }}
-{{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
+{{ $lazy := .lazy | default $.Page.Site.Params.enableImageLazyLoading | default true }}
 {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
 {{ $lqip := false }}
 {{ $x2 := .x2 }}

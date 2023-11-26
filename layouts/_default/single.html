@@ -17,7 +17,7 @@
         <div class="prose">
           {{ $altText := $.Params.featureAlt | default $.Params.coverAlt | default "" }}
           {{ $class := "mb-6 -mt-4 rounded-md" }}
-          {{ partial "pictureDefaults.html" (dict "img" . "alt" $altText "class" $class) }}
+          {{ partial "pictureDefaults.html" (dict "img" . "alt" $altText "class" $class "lazy" false) }}
           {{ with $.Params.coverCaption }}
             <figcaption class="mb-6 -mt-3 text-center">{{ . | markdownify }}</figcaption>
           {{ end }}
