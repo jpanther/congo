@@ -54,7 +54,7 @@
     {{ end }}
     {{ if $webp }}
       <source 
-        {{ if lt .Width 660 }}
+        {{ if or (lt .Width 660) $x2 }}
           {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
             src="{{ .RelPermalink }}"
           {{ end }}
@@ -64,17 +64,12 @@
             {{- (.Resize "660x webp").RelPermalink }} 660w
             {{ if gt .Width 1024 }}
               ,{{ (.Resize "1024x webp").RelPermalink }} 1024w
-            {{ else }}
-              {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
-                ,{{ .RelPermalink }} {{ .Width }}w
-              {{ end }}
             {{ end }}
             {{ if gt .Width 1320 }}
               ,{{ (.Resize "1320x webp").RelPermalink }} 2x
-            {{ else }}
-              {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
-                ,{{ .RelPermalink }} {{ .Width }}w
-              {{ end }}
+            {{ end }}
+            {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+              ,{{ .RelPermalink }} {{ .Width }}w
             {{ end }}"
           src="{{ (.Resize "660x webp").RelPermalink }}" 
         {{ end }}
@@ -88,7 +83,7 @@
         {{ with $class }} class="{{ . }}" {{ end }}
         {{ with $alt }} alt="{{ . }}" {{ end }}
         {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
-        {{ if lt .Width 660 }}
+        {{ if or (lt .Width 660) $x2 }}
           src="{{ .RelPermalink }}"
         {{ else }}
           srcset="
@@ -96,14 +91,11 @@
           {{- (.Resize "660x").RelPermalink }} 660w
           {{ if gt .Width 1024 }}
             ,{{ (.Resize "1024x").RelPermalink }} 1024w
-          {{ else }}
-            ,{{ .RelPermalink }} {{ .Width }}w
           {{ end }}
           {{ if gt .Width 1320 }}
             ,{{ (.Resize "1320x").RelPermalink }} 2x
-          {{ else }}
-            ,{{ .RelPermalink }} {{ .Width }}w
-          {{ end }}"
+          {{ end }}
+          ,{{ .RelPermalink }} {{ .Width }}w"
           src="{{ (.Resize "660x").RelPermalink }}"
         {{ end }}
       >
