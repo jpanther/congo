@@ -12,7 +12,7 @@
 
 {{/* https://github.com/gohugoio/hugo/pull/10666/files */}}
 {{- $params := $url.Query -}}
-{{- $x2Param := $params.Get "x2" -}}
+{{- $x2Param := $params.Get "2x" -}}
 {{- $x2 := false -}}
 {{- if eq $x2Param "true" -}}
     {{- $x2 = true  -}}
