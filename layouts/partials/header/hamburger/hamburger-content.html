@@ -1,0 +1,118 @@
+<input type="checkbox" id="menu-controller" class="hidden" />
+<div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+    {{ partial "icon.html" "bars" }}
+</div>
+<div
+    id="menu-wrapper"
+    class="fixed inset-0 z-30 invisible w-full h-full m-auto overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50"
+>
+    <ul
+    class="flex flex-col w-full px-6 py-6 mx-auto overflow-visible list-none max-w-7xl text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+    >
+    <li class="mb-1">
+        <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+        >{{ partial "icon.html" "xmark" }}</span
+        >
+    </li>
+    {{ if .Site.Menus.main }}
+        {{ range .Site.Menus.main }}
+        {{ if and (eq .Params.action "locale") (or (not page.IsTranslated) (not site.IsMultiLingual)) }}
+            {{ continue }}
+        {{ end }}
+        <li class="mb-1 group">
+            {{ if eq .Params.action "search" }}
+            {{ $.Scratch.Add "searchCount" 1 }}
+            {{ if $.Site.Params.enableSearch | default false }}
+                <button
+                id="search-button-{{ $.Scratch.Get "searchCount" }}"
+                title="{{ .Title | default (i18n "search.open_button_title") }}"
+                >
+                {{ with .Params.icon | default "search" }}
+                    <span
+                    class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                    >
+                    {{- partial "icon.html" . -}}
+                    </span>
+                {{- end -}}{{- if .Params.showName | default true -}}
+                    <span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >{{ .Name | markdownify | emojify }}</span
+                    >
+                {{ end }}
+                </button>
+            {{ end }}
+            {{ else if eq .Params.action "appearance" }}
+            {{ $.Scratch.Add "switchCount" 1 }}
+            <button
+                id="appearance-switcher-{{ $.Scratch.Get "switchCount" }}"
+                type="button"
+                aria-label="appearance switcher"
+            >
+                <span
+                class="inline transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:hidden"
+                title="{{ i18n "footer.dark_appearance" }}"
+                >
+                {{ with .Params.icon | default "moon" }}
+                    {{- partial "icon.html" . -}}
+                {{- end -}}
+                {{- if .Params.showName | default true -}}
+                    <span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >{{ .Name | markdownify | emojify }}</span
+                    >
+                {{ end }}
+                </span>
+                <span
+                class="hidden transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:inline"
+                title="{{ i18n "footer.light_appearance" }}"
+                >
+                {{ with .Params.icon | default "sun" }}
+                    {{- partial "icon.html" . -}}
+                {{- end -}}
+                {{- if .Params.showName | default true -}}
+                    <span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >{{ .Name | markdownify | emojify }}</span
+                    >
+                {{ end }}
+                </span>
+            </button>
+            {{ else if eq .Params.action "locale" }}
+            {{ $.Scratch.Add "localeCount" 1 }}
+            {{ partial "translations.html" . }}
+            {{ else }}
+            <a
+                href="{{ .URL }}"
+                title="{{ .Title }}"
+                onclick="close_menu()"
+                {{ with .Params.target }}target="{{ . }}"{{ end }}
+                >{{ with .Params.icon }}
+                <span
+                    class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                >
+                    {{- partial "icon.html" . -}}
+                </span>
+                {{- end -}}{{- if .Params.showName | default true -}}
+                <span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >{{ .Name | markdownify | emojify }}</span
+                >
+                {{ end }}</a
+            >
+            {{ end }}
+        </li>
+        {{ end }}
+        {{ if and ($.Site.Params.enableSearch | default false) (eq ($.Scratch.Get "searchCount") 0) }}
+        <li class="mb-1 group">
+            <button id="search-button-m0" title="{{ i18n "search.open_button_title" }}">
+            <span
+                class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+            >
+                {{ partial "icon.html" "search" }}
+            </span>
+            </button>
+        </li>
+        {{ end }}
+    {{ end }}
+    </ul>
+</div>
