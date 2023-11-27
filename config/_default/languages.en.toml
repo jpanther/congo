@@ -12,7 +12,7 @@ title = "Congo"
   # mainSections = ["section1", "section2"]
   # description = "My awesome website"
 
-[author]
+[params.author]
   # name = "Your name here"
   # image = "img/author.jpg"
   # headline = "I'm only human"
