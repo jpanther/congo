@@ -7,7 +7,7 @@
     {{/* Hamburger menu */}}
     {{ if or .Site.Menus.main (.Site.Params.enableSearch | default false) }}
       <label id="menu-button" for="menu-controller" class="block">
-        {{ partial "header/hamburger/hamburger-content.html" }}
+        {{ partial "header/hamburger/hamburger-content.html" . }}
       </label>
     {{ end }}
   </nav>
