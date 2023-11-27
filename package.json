@@ -37,6 +37,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-tailwindcss": "^0.5.7",
+    "quicklink": "^2.3.0",
     "rimraf": "^5.0.5",
     "tailwindcss": "^3.3.5",
     "vendor-copy": "^3.0.1"
@@ -70,6 +71,10 @@
     {
       "from": "node_modules/fuse.js/dist/fuse.min.js",
       "to": "assets/lib/fuse/fuse.min.js"
+    },
+    {
+      "from": "node_modules/quicklink/dist/quicklink.umd.js",
+      "to": "assets/lib/quicklink/quicklink.umd.js"
     }
   ]
 }
