@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - ⚠️ Hugo extended version is now required when building sites
+- ⚠️ Author params block in language configuration has been moved to `params.author` ([#704](https://github.com/jpanther/congo/pull/704))
 - Refactored image logic into a new `picture.html` partial ([#693](https://github.com/jpanther/congo/pull/693))
 
 ### Removed
