@@ -51,6 +51,8 @@ sharing:
   pinterest: "שיתוף בפינטרסט"
   reddit: "שליחה לרדיט"
   twitter: "ציוץ בטוויטר"
+  telegram: "שיתוף בטלגרם"
+  line: "שיתוף בליין"
 
 shortcode:
   recent_articles: "חדשים"

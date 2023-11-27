@@ -51,6 +51,8 @@ sharing:
   pinterest: "Pinterestでピンする"
   reddit: "Redditに投稿する"
   twitter: "Twitterに投稿する"
+  telegram: "Telegramでシェアする"
+  line: "LINEでシェアする"
 
 shortcode:
   recent_articles: "最近の記事"

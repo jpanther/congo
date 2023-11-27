@@ -51,6 +51,8 @@ sharing:
   pinterest: "Pune pe Pinterest"
   reddit: "Postează pe Reddit"
   twitter: "Scrie pe Twitter"
+  telegram: "Trimite pe Telegram"
+  line: "Trimite pe LINE"
 
 shortcode:
   recent_articles: "Cele mai noi"

@@ -55,6 +55,8 @@ sharing:
   pinterest: "Зберегти на Pinterest"
   reddit: "Опублікувати на Reddit"
   twitter: "Поширити на Twitter"
+  telegram: "Поширити на Telegram"
+  line: "Поширити на LINE"
 
 shortcode:
   recent_articles: "Недавні дописи"

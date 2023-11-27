@@ -51,6 +51,8 @@ sharing:
   pinterest: "Partilhar no Pinterest"
   reddit: "Partilhar no Reddit"
   twitter: "Partilhar no Twitter"
+  telegram: "Partilhar pelo Telegram"
+  line: "Partilhar pelo LINE"
 
 shortcode:
   recent_articles: "Recente"
