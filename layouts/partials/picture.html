@@ -81,66 +81,64 @@
         type="image/webp" 
       />
     {{ end }}
-    {{ with $img }}
-      {{ $orientation := 1 }}
-      {{ with .Exif }}
-        {{ $orientation = .Tags.Orientation }}
-      {{ end }}
-      {{ if eq $orientation 1 }}
-      <img
+    {{ $orientation := 1 }}
+    {{ with .Exif }}
+      {{ $orientation = .Tags.Orientation }}
+    {{ end }}
+    {{ if eq $orientation 1 }}
+    <img
+      src="{{ .RelPermalink }}"
+      width="{{ $width }}"
+      height="{{ $height }}"
+      {{ with $class }} class="{{ . }}" {{ end }}
+      {{ with $alt }} alt="{{ . }}" {{ end }}
+      {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
+      {{ if lt .Width 660 }}
         src="{{ .RelPermalink }}"
-        width="{{ $width }}"
-        height="{{ $height }}"
-        {{ with $class }} class="{{ . }}" {{ end }}
-        {{ with $alt }} alt="{{ . }}" {{ end }}
-        {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
-        {{ if lt .Width 660 }}
-          src="{{ .RelPermalink }}"
+      {{ else }}
+        srcset="
+        {{- (.Resize "330x").RelPermalink }} 330w,
+        {{- (.Resize "660x").RelPermalink }} 660w
+        {{ if gt .Width 1024 }}
+          ,{{ (.Resize "1024x").RelPermalink }} 1024w
         {{ else }}
-          srcset="
-          {{- (.Resize "330x").RelPermalink }} 330w,
-          {{- (.Resize "660x").RelPermalink }} 660w
-          {{ if gt .Width 1024 }}
-            ,{{ (.Resize "1024x").RelPermalink }} 1024w
-          {{ else }}
-            ,{{ .RelPermalink }} {{ .Width }}w
-          {{ end }}
-          {{ if gt .Width 1320 }}
-            ,{{ (.Resize "1320x").RelPermalink }} 2x
-          {{ else }}
-            ,{{ .RelPermalink }} {{ .Width }}w
-          {{ end }}"
-          src="{{ (.Resize "660x").RelPermalink }}"
+          ,{{ .RelPermalink }} {{ .Width }}w
         {{ end }}
-      >
-      {{ else if (eq $orientation 8) }}
-      <img
-        src="{{ (.Resize "r90").RelPermalink }}"
-        width="{{ $width }}"
-        height="{{ $height }}"
-        {{ with $class }} class="{{ . }}" {{ end }}
-        {{ with $alt }} alt="{{ . }}" {{ end }}
-        {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
-        {{ if lt .Width 660 }}
-          src="{{ .RelPermalink }}"
+        {{ if gt .Width 1320 }}
+          ,{{ (.Resize "1320x").RelPermalink }} 2x
         {{ else }}
-          srcset="
-          {{- (.Resize "330x r90").RelPermalink }} 330w,
-          {{- (.Resize "660x r90").RelPermalink }} 660w
-          {{ if gt .Width 1024 }}
-            ,{{ (.Resize "1024x r90").RelPermalink }} 1024w
-          {{ else }}
-            ,{{ .RelPermalink }} {{ .Width }}w
-          {{ end }}
-          {{ if gt .Width 1320 }}
-            ,{{ (.Resize "1320x r90").RelPermalink }} 2x
-          {{ else }}
-            ,{{ .RelPermalink }} {{ .Width }}w
-          {{ end }}"
-          src="{{ (.Resize "660x r90").RelPermalink }}"
-        {{ end }}
-      >
+          ,{{ .RelPermalink }} {{ .Width }}w
+        {{ end }}"
+        src="{{ (.Resize "660x").RelPermalink }}"
       {{ end }}
+    >
+    {{ else if (eq $orientation 8) }}
+    <img
+      src="{{ (.Resize "r90").RelPermalink }}"
+      width="{{ $width }}"
+      height="{{ $height }}"
+      {{ with $class }} class="{{ . }}" {{ end }}
+      {{ with $alt }} alt="{{ . }}" {{ end }}
+      {{ with $lazy }} loading="lazy" decoding="async" {{ end }}
+      {{ if lt .Width 660 }}
+        src="{{ .RelPermalink }}"
+      {{ else }}
+        srcset="
+        {{- (.Resize "330x r90").RelPermalink }} 330w,
+        {{- (.Resize "660x r90").RelPermalink }} 660w
+        {{ if gt .Width 1024 }}
+          ,{{ (.Resize "1024x r90").RelPermalink }} 1024w
+        {{ else }}
+          ,{{ .RelPermalink }} {{ .Width }}w
+        {{ end }}
+        {{ if gt .Width 1320 }}
+          ,{{ (.Resize "1320x r90").RelPermalink }} 2x
+        {{ else }}
+          ,{{ .RelPermalink }} {{ .Width }}w
+        {{ end }}"
+        src="{{ (.Resize "660x r90").RelPermalink }}"
+      {{ end }}
+    >
     {{ end }}
     </picture>
   {{ end }}
