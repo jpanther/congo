@@ -59,6 +59,12 @@ body:has(#menu-controller:checked) {
 }
 
 /* Table of Contents */
+.toc {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+
 .toc ul,
 .toc li {
   @apply list-none px-0 leading-snug;
