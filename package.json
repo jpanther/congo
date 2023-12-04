@@ -30,7 +30,7 @@
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "chart.js": "^4.4.0",
+    "chart.js": "^4.4.1",
     "fuse.js": "^7.0.0",
     "katex": "^0.16.9",
     "mermaid": "^10.6.1",
