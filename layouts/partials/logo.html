@@ -1,28 +1,26 @@
-{{- if .Site.Params.header.logo }}
-  {{- $logo := resources.Get .Site.Params.header.logo }}
-  {{- $logo_dark := resources.Get .Site.Params.header.logoDark }}
-  {{- if $logo }}
-    <a href="{{ "" | relLangURL }}" class="mr-2">
-      <img
-        src="{{ $logo.RelPermalink }}"
-        width="{{ div $logo.Width 2 }}"
-        height="{{ div $logo.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left{{ if $logo_dark }} hidden dark:flex{{ end }}"
-        alt="{{ .Site.Title }}"
-      />
-      {{- if $logo_dark }}
-      <img
-        src="{{ $logo_dark.RelPermalink }}"
-        width="{{ div $logo_dark.Width 2 }}"
-        height="{{ div $logo_dark.Height 2 }}"
-        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left dark:hidden"
-        alt="{{ .Site.Title }}"
-      />
-      {{- end}}
+{{- if $.Page.Site.Params.header.logo }}
+  {{- $logo := resources.Get $.Page.Site.Params.header.logo }}
+  {{- $logo_dark := resources.Get $.Page.Site.Params.header.logoDark }}
+  {{- $logoAlt := $.Page.Site.Title -}} 
+  {{- $logoClass     := "max-h-[10rem] max-w-[10rem] object-scale-down object-left flex" -}}
+  {{- $logoDarkClass := (print $logoClass " hidden dark:flex")  -}}
+  {{- if $logo_dark -}}
+    {{- $logoClass = (print $logoClass " dark:hidden" ) -}}
+  {{- end }}  
+  {{- if or $logo $logo_dark -}}
+    <a href="{{ "" | relLangURL }}" class="mr-2">  
+  {{- end }}
+  {{- with $logo }}
+    {{- partial "picture.html" (dict "img" . "alt" $logoAlt "class" $logoClass "lazy" false "webp" false ) -}}
+  {{- end -}}
+  {{- with $logo_dark }}
+    {{- partial "picture.html" (dict "img" . "alt" $logoAlt "class" $logoDarkClass "lazy" false "webp" false ) -}}
+  {{- end -}}
+  {{- if or $logo $logo_dark -}}
     </a>
   {{- end }}
 {{- end }}
-{{- if .Site.Params.header.showTitle | default true }}
+{{- if $.Page.Site.Params.header.showTitle | default true }}
   <a
     class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
     rel="me"
