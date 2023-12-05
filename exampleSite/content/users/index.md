@@ -64,5 +64,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [simaosilva.com](https://simaosilva.com)                               | Personal Site                   |
 | [kom.al](https://kom.al)                                               | Personal Site                   |
 | [andrea.mortaro.it](https://andrea.mortaro.it)                         | Personal Site and Blog          |
+| [yoganath.me](https://yoganath.me)                                     | Personal Site and Blog          |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
