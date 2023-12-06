@@ -4,7 +4,6 @@
     {{ $lazy := .Params.enableImageLazyLoading|default  .Site.Params.enableImageLazyLoading | default true }}
     {{ $altText := ($.Site.Language.Params.Author.name | default "Author") }}
     {{ with .Site.Language.Params.Author.image }}
-      {{- warnf "called. AuthorImage %s should be shown."  . }}
       {{ $authorImage := resources.Get . }}
       {{ if $authorImage }}
         {{ $imgClass := "!mb-0 !mt-0 me-4 w-24 h-auto rounded-full" }}
