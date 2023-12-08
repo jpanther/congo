@@ -1,5 +1,4 @@
 {{ if .Params.showAuthor | default (.Site.Params.article.showAuthor | default true) }}
-{{- warnf "%s called. Author %s should be shown." .Page.File .Site.Language.Params.Author.name }}
   <div class="flex">
     {{ $lazy := .Params.enableImageLazyLoading|default  .Site.Params.enableImageLazyLoading | default true }}
     {{ $altText := ($.Site.Language.Params.Author.name | default "Author") }}
