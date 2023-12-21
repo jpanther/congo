@@ -52,6 +52,7 @@ La lista completa de íconos incorporados y sus nombres correspondientes se pued
 | list                 | {{< icon list >}}                 |
 | mastodon             | {{< icon mastodon >}}             |
 | medium               | {{< icon medium >}}               |
+| mendeley             | {{< icon mendeley>}}              |
 | microsoft            | {{< icon microsoft >}}            |
 | mobile               | {{< icon mobile >}}               |
 | moon                 | {{< icon moon >}}                 |
@@ -79,6 +80,7 @@ La lista completa de íconos incorporados y sus nombres correspondientes se pued
 | tumblr               | {{< icon tumblr >}}               |
 | twitch               | {{< icon twitch >}}               |
 | twitter              | {{< icon twitter >}}              |
+| weibo                | {{< icon weibo >}}                |
 | whatsapp             | {{< icon whatsapp >}}             |
 | x-twitter            | {{< icon x-twitter >}}            |
 | xmark                | {{< icon xmark >}}                |
