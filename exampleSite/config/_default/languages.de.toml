@@ -22,4 +22,5 @@ copyright = "&copy; 2023 Congo contributors"
     { facebook = "https://facebook.com/" },
     { linkedin = "https://linkedin.com/" },
     { youtube = "https://youtube.com/" },
+    { google-scholar = "https://scholar.google.com/"},
   ]
