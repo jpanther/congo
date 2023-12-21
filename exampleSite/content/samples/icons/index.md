@@ -40,6 +40,7 @@ The full list of built-in icons and their corresponding names can referenced bel
 | gitlab               | {{< icon gitlab >}}               |
 | globe                | {{< icon globe >}}                |
 | google               | {{< icon google >}}               |
+| google scholar | {{< icon google-scholar >}} |
 | hashnode             | {{< icon hashnode >}}             |
 | instagram            | {{< icon instagram >}}            |
 | keybase              | {{< icon keybase >}}              |
