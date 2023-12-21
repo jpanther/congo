@@ -59,4 +59,5 @@ title = "Congo"
   #   { whatsapp = "https://wa.me/phone-number" },
   #   { x-twitter = "https://twitter.com/username" },
   #   { youtube = "https://youtube.com/username" },
+  #   { mendeley = "https://www.mendeley.com/" },
   # ]
