@@ -53,6 +53,7 @@ sharing:
   twitter: "Partilhar no Twitter"
   telegram: "Partilhar pelo Telegram"
   line: "Partilhar pelo LINE"
+  weibo: "Partilhar pelo Weibo"
 
 shortcode:
   recent_articles: "Recente"

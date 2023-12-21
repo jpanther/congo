@@ -52,6 +52,7 @@ sharing:
   twitter: "Twitter'da Tweetle"
   telegram: "Telegram'da paylaş"
   line: "LINE'da paylaş"
+  weibo: "Weibo'da paylaş"
 
 shortcode:
   recent_articles: "Güncel"

@@ -53,6 +53,7 @@ sharing:
   twitter: "Tweet di Twitter"
   telegram: "Bagikan ke Telegram"
   line: "Bagikan ke LINE"
+  weibo: "Bagikan ke Weibo"
 
 shortcode:
   recent_articles: "Terbaru"
