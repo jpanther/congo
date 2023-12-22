@@ -40,6 +40,7 @@ Die vollständige Liste der integrierten Icons und ihre entsprechenden Namen fin
 | gitlab               | {{< icon gitlab >}}               |
 | globe                | {{< icon globe >}}                |
 | google               | {{< icon google >}}               |
+| google-scholar       | {{< icon google-scholar >}}       |
 | hashnode             | {{< icon hashnode >}}             |
 | instagram            | {{< icon instagram >}}            |
 | keybase              | {{< icon keybase >}}              |

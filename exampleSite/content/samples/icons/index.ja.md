@@ -40,6 +40,7 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | gitlab               | {{< icon gitlab >}}               |
 | globe                | {{< icon globe >}}                |
 | google               | {{< icon google >}}               |
+| google-scholar       | {{< icon google-scholar >}}       |
 | hashnode             | {{< icon hashnode >}}             |
 | instagram            | {{< icon instagram >}}            |
 | keybase              | {{< icon keybase >}}              |
