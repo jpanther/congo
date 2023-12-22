@@ -2,6 +2,6 @@ i18n:
 - changed-files:
   - any-glob-to-any-file: i18n/*
 
-Documentation:
+documentation:
 - changed-files:
   - any-glob-to-any-file: '**/*.md'
