@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Hamburger menu is not dismissed when links are clicked ([#705](https://github.com/jpanther/congo/pull/705))
+- KaTeX, table and code elements wider than the page are not formatted correctly ([#753](https://github.com/jpanther/congo/pull/753))
 
 ### Removed
 
