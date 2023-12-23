@@ -43,5 +43,10 @@
     "icon": "line",
     "title": "sharing.line",
     "url": "https://line.me/R/share?text=%s%s"
+  },
+  "weibo": {
+    "icon": "weibo",
+    "title":"sharing.weibo",
+    "url": "https://service.weibo.com/share/share.php?url=%s&appkey=&title=%s&pic=&ralateUid=&lang"
   }
 }

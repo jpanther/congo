@@ -53,6 +53,7 @@ sharing:
   twitter: "Twitter에 트윗하기"
   telegram: "Telegram에 공유하기"
   line: "LINE에 공유하기"
+  weibo: "Weibo에 공유하기"
 
 shortcode:
   recent_articles: "최신 글"

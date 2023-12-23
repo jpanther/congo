@@ -53,6 +53,7 @@ sharing:
   twitter: "ציוץ בטוויטר"
   telegram: "שיתוף בטלגרם"
   line: "שיתוף בליין"
+  # weibo: "Share on Weibo"
 
 shortcode:
   recent_articles: "חדשים"
