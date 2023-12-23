@@ -62,7 +62,7 @@ Best of all there's nothing you need to change! Simply insert standard Markdown 
 
 This update packs performance improvements throughout. A key objective for this release was to improve Lighthouse scores and Congo now scores a perfect 100 on all four metrics.
 
-{{< screenshot src="lighthouse.jpg" >}}
+![](lighthouse.jpg?2x=true)
 
 There's too many individual changes to highlight them here but the results speak for themselves. If you want to dig deeper, you can [view the Lighthouse report](lighthouse.html). Real world performance will vary based upon server configuration.
 
