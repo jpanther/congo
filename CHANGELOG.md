@@ -33,7 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Removed
 
-- Fathom Analytics custom domain parameter as this is no longer supported by Fathom
+- Fathom Analytics custom domain parameter, as this is no longer supported by Fathom
 
 ## [2.7.6] - 2023-11-26
 
