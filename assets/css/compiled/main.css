@@ -1188,8 +1188,8 @@ body:has(#menu-controller:checked) {
 .copy-button {
   visibility: hidden;
   position: absolute;
-  right: 0px;
   top: 0px;
+  right: 0px;
   z-index: 10;
   width: 5rem;
   cursor: pointer;
@@ -1240,7 +1240,7 @@ body:has(#menu-controller:checked) {
 /* Fix long KaTeX equations on mobile (see https://katex.org/docs/issues.html#css-customization) */
 
 .katex-display {
-  overflow: auto hidden
+  overflow: auto hidden;
 }
 
 /* Fix long tables breaking out of article on mobile */
