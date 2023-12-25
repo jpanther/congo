@@ -5,7 +5,7 @@ import logging
 import requests
 import os
 
-from typing import Tuple
+from typing import Tuple, List
 
 
 DEFAULT_FONTAWESOME_VERSION = "v6.5.1"
@@ -14,13 +14,17 @@ DEFAULT_BASE_URL = (
     % DEFAULT_FONTAWESOME_VERSION
     + "%s.svg"
 )
+DEFAULT_BASE_PATH = os.path.join(os.getcwd(), "..")
 DEFAULT_ICON_PATH = os.path.join(
-    os.getcwd(),
-    "..",
+    DEFAULT_BASE_PATH,
     "assets",
     "icons",
 )
 DEFAULT_SVG_ATTR = {"fill": "currentColor"}
+DEFAULT_ICON_DOCS = os.path.join(
+    DEFAULT_BASE_PATH, "exampleSite", "content", "samples", "icons"
+)
+DEFAULT_TABLE_DELIMITER = "| -------------------- | --------------------------------- |"
 
 
 def download_icon(download_url: str) -> None:
@@ -39,8 +43,55 @@ def update_svg_to_theme(svg: bytes) -> bytes:
         svg_elem[k] = v
 
     # Remove comments
-    return re.sub(r'<!.*?->','', str(soup))
+    return re.sub(r"<!.*?->", "", str(soup))
 
+
+def update_docs(icon_name: str) -> None:
+    """Update icon to docs"""
+    files = get_folder_md(DEFAULT_ICON_DOCS)
+    for file in files:
+        # Parse Table
+        logging.debug(f"reading {file}")
+        with open(file) as f:
+            file_data = f.read()
+        table_fmt, table = parse_table(file_data)
+        table.append(str(table[0]).replace("amazon", icon_name))
+
+        # Write Doc
+        print(table_fmt)
+        with open(file, "w") as f:
+            f.write(
+                "\n".join(
+                    (
+                        table_fmt,
+                        DEFAULT_TABLE_DELIMITER,
+                        "\n".join(sorted(table)),
+                    )
+                )
+            )
+
+
+def get_folder_md(dir_path: str) -> List[str]:
+    return list(
+        map(
+            lambda path: os.path.join(dir_path, path),
+            filter(lambda x: x.endswith(".md"), os.listdir(dir_path)),
+        )
+    )
+
+
+def parse_table(table_str: str) -> Tuple[str, List[str]]:
+    """Parse the table to a list of (article_fmt, (icon_name, icon_shortcode))"""
+    headers, table = table_str.split(DEFAULT_TABLE_DELIMITER)
+    return headers.strip(), list(
+        filter(
+            lambda x: len(x.strip()) > 0,
+            map(
+                lambda x: x.strip(),
+                table.split("\n"),
+            ),
+        )
+    )
 
 
 def save_file(name: str, svg: str) -> None:
@@ -125,3 +176,7 @@ if __name__ == "__main__":
     save_file(icon_name, final_svg)
 
     # Write to docs (TODO)
+    logging.debug("updating")
+    update_docs(icon_name)
+
+    logging.info("done!")
