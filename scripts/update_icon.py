@@ -15,7 +15,7 @@ DEFAULT_BASE_URL = (
     + "%s.svg"
 )
 DEFAULT_BASE_PATH = os.path.join(os.getcwd(), "..")
-DEFAULT_ICON_PATH = os.path.join(
+DEFAULT_ICON_DIR_PATH = os.path.join(
     DEFAULT_BASE_PATH,
     "assets",
     "icons",
@@ -99,7 +99,7 @@ def save_file(name: str, svg: str) -> None:
     logging.debug(f"saving icon to {file_name}")
     with open(
         os.path.join(
-            DEFAULT_ICON_PATH,
+            DEFAULT_ICON_DIR_PATH,
             file_name,
         ),
         "w",
@@ -141,8 +141,6 @@ def parse_args() -> Tuple[str, str, int]:
     parse_res = parser.parse_args()
     url = DEFAULT_BASE_URL % parse_res.name
     if parse_res.url is not None:
-        if len(parse_res.url) != 1:
-            raise ValueError("Invalid URL arguments. Use -h for help.")
         url = parse_res.url[0]
 
     log_level = logging.DEBUG if parse_res.verbose else logging.INFO
@@ -175,7 +173,7 @@ if __name__ == "__main__":
     logging.debug("saving icon to assets")
     save_file(icon_name, final_svg)
 
-    # Write to docs (TODO)
+    # Write to docs
     logging.debug("updating")
     update_docs(icon_name)
 
