@@ -21,7 +21,7 @@ DEFAULT_ICON_DIR_PATH = os.path.join(
     "icons",
 )
 DEFAULT_SVG_ATTR = {"fill": "currentColor"}
-DEFAULT_ICON_DOCS = os.path.join(
+DEFAULT_ICON_DOCS_DIR = os.path.join(
     DEFAULT_BASE_PATH, "exampleSite", "content", "samples", "icons"
 )
 DEFAULT_TABLE_DELIMITER = "| -------------------- | --------------------------------- |"
@@ -48,7 +48,7 @@ def update_svg_to_theme(svg: bytes) -> bytes:
 
 def update_docs(icon_name: str) -> None:
     """Update icon to docs"""
-    files = get_folder_md(DEFAULT_ICON_DOCS)
+    files = get_folder_md(DEFAULT_ICON_DOCS_DIR)
     for file in files:
         # Parse Table
         logging.debug(f"reading {file}")
@@ -58,7 +58,6 @@ def update_docs(icon_name: str) -> None:
         table.append(str(table[0]).replace("amazon", icon_name))
 
         # Write Doc
-        print(table_fmt)
         with open(file, "w") as f:
             f.write(
                 "\n".join(
@@ -161,20 +160,25 @@ if __name__ == "__main__":
     logging.info(f"Using URL: {icon_url}")
     logging.info(f"Using Icon Name: {icon_name}")
 
-    # Download Icon
-    logging.debug(f"fetching icon at {icon_url}")
-    svg_content = download_icon(icon_url)
+    try:
+        # Download Icon
+        logging.debug(f"fetching icon at {icon_url}")
+        svg_content = download_icon(icon_url)
 
-    # Patch svg attrs
-    logging.debug(f"updating svg attrs")
-    final_svg = update_svg_to_theme(svg_content)
+        # Patch svg attrs
+        logging.debug(
+            f"remove svg comments and update svg attrs with {DEFAULT_SVG_ATTR}"
+        )
+        final_svg = update_svg_to_theme(svg_content)
 
-    # Save file
-    logging.debug("saving icon to assets")
-    save_file(icon_name, final_svg)
+        # Save file
+        logging.debug(f"saving icon to {DEFAULT_ICON_DIR_PATH}")
+        save_file(icon_name, final_svg)
 
-    # Write to docs
-    logging.debug("updating")
-    update_docs(icon_name)
-
-    logging.info("done!")
+        # Write to docs
+        logging.debug(f"updating docs from {DEFAULT_ICON_DOCS_DIR} dir")
+        update_docs(icon_name)
+    except Exception as e:
+        logging.critical(f"error adding icon {str(e)}")
+    else:
+        logging.info(f"{icon_name} added successfully")
