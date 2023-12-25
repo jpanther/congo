@@ -59,9 +59,15 @@ body:has(#menu-controller:checked) {
 }
 
 /* Table of Contents */
+.toc {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+
 .toc ul,
 .toc li {
-  @apply list-none px-0 leading-snug;
+  @apply px-0 leading-snug list-none;
 }
 .toc ul ul {
   @apply ps-4;
@@ -84,7 +90,7 @@ body:has(#menu-controller:checked) {
   @apply visible;
 }
 .copy-button {
-  @apply invisible absolute right-0 top-0 z-10 w-20 cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-neutral-200 py-1 font-mono text-sm text-neutral-700 opacity-90 dark:bg-neutral-600 dark:text-neutral-200;
+  @apply absolute top-0 right-0 z-10 invisible w-20 py-1 font-mono text-sm cursor-pointer whitespace-nowrap rounded-bl-md rounded-tr-md bg-neutral-200 text-neutral-700 opacity-90 dark:bg-neutral-600 dark:text-neutral-200;
 }
 .copy-button:hover,
 .copy-button:focus,
@@ -96,23 +102,40 @@ body:has(#menu-controller:checked) {
   @apply absolute -z-10 opacity-5;
 }
 
+/* Fix long KaTeX equations on mobile (see https://katex.org/docs/issues.html#css-customization) */
+.katex-display {
+  overflow: auto hidden;
+}
+
+/* Fix long tables breaking out of article on mobile */
+table {
+  display: block;
+  overflow: auto;
+}
+
+/* Fix long inline code sections breaking out of article on mobile */
+code {
+  word-wrap: break-word; /* All browsers since IE 5.5+ */
+  overflow-wrap: break-word; /* Renamed property in CSS3 draft spec */
+}
+
 /* -- Chroma Highlight -- */
 /* Background */
 .chroma {
-  @apply rounded-md bg-neutral-50 py-3 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply py-3 rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
 }
 .chroma pre {
-  @apply m-0 p-0;
+  @apply p-0 m-0;
 }
 /* LineTable */
 .chroma .lntable {
-  @apply m-0 block w-auto overflow-auto text-base;
+  @apply block w-auto m-0 overflow-auto text-base;
 }
 /* LineNumbersTable */
 /* LineNumbers */
 .chroma .lnt,
 .chroma .ln {
-  @apply mr-2 px-2 text-neutral-600 dark:text-neutral-300;
+  @apply px-2 mr-2 text-neutral-600 dark:text-neutral-300;
 }
 .chroma .lntd {
   @apply p-0 align-top;
@@ -274,7 +297,7 @@ body:has(#menu-controller:checked) {
 }
 /* CommentHashbang */
 .chroma .ch {
-  @apply font-semibold italic text-neutral-500 dark:text-neutral-400;
+  @apply italic font-semibold text-neutral-500 dark:text-neutral-400;
 }
 /* GenericEmph */
 .chroma .ge {

@@ -40,6 +40,7 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | gitlab               | {{< icon gitlab >}}               |
 | globe                | {{< icon globe >}}                |
 | google               | {{< icon google >}}               |
+| google-scholar       | {{< icon google-scholar >}}       |
 | hashnode             | {{< icon hashnode >}}             |
 | instagram            | {{< icon instagram >}}            |
 | keybase              | {{< icon keybase >}}              |
@@ -52,6 +53,7 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | list                 | {{< icon list >}}                 |
 | mastodon             | {{< icon mastodon >}}             |
 | medium               | {{< icon medium >}}               |
+| mendeley             | {{< icon mendeley>}}              |
 | microsoft            | {{< icon microsoft >}}            |
 | mobile               | {{< icon mobile >}}               |
 | moon                 | {{< icon moon >}}                 |
@@ -79,6 +81,7 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | tumblr               | {{< icon tumblr >}}               |
 | twitch               | {{< icon twitch >}}               |
 | twitter              | {{< icon twitter >}}              |
+| weibo                | {{< icon weibo >}}                |
 | whatsapp             | {{< icon whatsapp >}}             |
 | x-twitter            | {{< icon x-twitter >}}            |
 | xmark                | {{< icon xmark >}}                |
