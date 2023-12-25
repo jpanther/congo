@@ -114,7 +114,7 @@ def parse_args() -> Tuple[str, str, int]:
     2. Icon Representation :str
     3. Log Level: int
     """
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="This script adds an icon to this congo theme and updates the relevant documentation.")
     parser.add_argument(
         "-v",
         "--verbose",
