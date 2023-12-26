@@ -44,7 +44,7 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [medical-humanities](https://medical-humanities.org)                   | Academic site                   |
 | [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog          |
 | [major.io](https://major.io)                                           | Personal site and Blog          |
-| [顾宇的博客](https://www.guyu.me/)                                       | Personal Blog (in Chinese)      |
+| [顾宇的博客](https://www.guyu.me/)                                     | Personal Blog (in Chinese)      |
 | [cgutierr-zgz.github.io](https://cgutierr-zgz.github.io/)              | Personal site and Tech blog     |
 | [adam.sr](https://adam.sr)                                             | Personal site and Blog          |
 | [kpavlov.me](https://kpavlov.me)                                       | Personal site and Blog          |

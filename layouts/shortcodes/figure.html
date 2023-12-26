@@ -14,6 +14,7 @@
     {{ $img = resources.Get $path }}
   {{ end -}}
 
+  <!-- prettier-ignore -->
   <figure{{ with $class }} class="{{ . }}"{{ end }}>
     {{ with $href }}<a href="{{ . }}">{{ end }}
 

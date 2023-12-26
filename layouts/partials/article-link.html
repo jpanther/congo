@@ -1,4 +1,4 @@
-<article class="mt-6 flex max-w-prose flex-row">
+<article class="flex flex-row mt-6 max-w-prose">
   {{- $images := $.Resources.ByType "image" }}
   {{- $thumbnail := $images.GetMatch (.Params.thumbnail | default "*thumb*") }}
   {{- $feature := $images.GetMatch (.Params.feature | default "*feature*") | default $thumbnail }}
@@ -21,9 +21,7 @@
             class="w-24 rounded-md sm:w-40" srcset="
             {{- (.Fill "160x120 smart").RelPermalink }}
             160w, {{- (.Fill "320x240 smart").RelPermalink }} 2x"
-            src="{{ (.Fill "160x120 smart").RelPermalink }}"
-            width="160"
-            height="120"
+            src="{{ (.Fill "160x120 smart").RelPermalink }}" width="160" height="120"
           {{ end }}
           {{ if $.Site.Params.enableImageLazyLoading | default true }}
             loading="lazy"
@@ -44,7 +42,7 @@
             >{{ $.Title | emojify }}</a
           >
           <span
-            class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500"
+            class="text-xs align-top cursor-default text-neutral-400 dark:text-neutral-500"
             title="{{ i18n "list.externalurl_title" }}"
           >
             <span class="rtl:hidden">&#8599;</span>
@@ -71,7 +69,7 @@
       {{ partial "article-meta.html" . }}
     </div>
     {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
-      <div class="prose py-1 dark:prose-invert">
+      <div class="py-1 prose dark:prose-invert">
         {{ .Summary | emojify }}
       </div>
     {{ end }}

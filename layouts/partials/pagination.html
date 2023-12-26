@@ -4,7 +4,6 @@
   {{- if gt .TotalPages 1 }}
     {{- $start := math.Max 1 (sub .PageNumber $width) }}
     {{- $end := math.Min .TotalPages (add $start (mul $width 2)) }}
-
     <ul class="flex flex-row mt-8">
       {{- with .Prev }}
         <li>
@@ -18,7 +17,6 @@
           </a>
         </li>
       {{- end }}
-
       {{- with .First }}
         {{- if gt $currentPageNumber (add 1 $width) }}
           <li class="mx-1 min-w-[1.8rem] text-center">
@@ -35,7 +33,6 @@
           {{- end }}
         {{- end }}
       {{- end }}
-
       {{- range $i := seq $start $end }}
         <li class="mx-1 min-w-[1.8rem] text-center">
           {{- if eq $.Paginator.PageNumber $i }}
@@ -57,7 +54,6 @@
           {{- end }}
         </li>
       {{- end }}
-
       {{- with .Last }}
         {{- if and (lt $currentPageNumber (sub .TotalPages $width)) (lt $end .TotalPages) }}
           {{- if lt $currentPageNumber (sub .TotalPages (add $width 1)) }}
@@ -74,7 +70,6 @@
           </li>
         {{- end }}
       {{- end }}
-
       {{- with .Next }}
         <li>
           <a

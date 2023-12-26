@@ -9,7 +9,7 @@
   "trailingComma": "es5",
   "overrides": [
     {
-      "files": ["*.html"],
+      "files": ["*.html", "layouts/_default/*.json"],
       "options": {
         "parser": "go-template"
       }

@@ -14,4 +14,5 @@
     {{ end -}}
   {{ end -}}
 {{ end -}}
+<!-- prettier-ignore -->
 <a href="{{ $link | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isRemote }} target="_blank" rel="noreferrer"{{ end }}>{{- .Text | safeHTML -}}</a>
