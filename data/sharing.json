@@ -46,7 +46,7 @@
   },
   "weibo": {
     "icon": "weibo",
-    "title":"sharing.weibo",
+    "title": "sharing.weibo",
     "url": "https://service.weibo.com/share/share.php?url=%s&appkey=&title=%s&pic=&ralateUid=&lang"
   }
 }

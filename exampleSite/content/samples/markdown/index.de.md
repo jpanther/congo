@@ -67,7 +67,7 @@ Tabellen sind nicht Teil der Markdown-Kernspezifikation, aber Hugo unterstützt 
 ### Code-Block mit backticks
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -134,7 +134,7 @@ Tabellen sind nicht Teil der Markdown-Kernspezifikation, aber Hugo unterstützt 
 
 ## Andere Elemente — abbr, sub, sup, kbd, mark
 
-<abbr title="Graphics Interchange Format">GIF</abbr>  ist ein Bitmap-Bildformat.
+<abbr title="Graphics Interchange Format">GIF</abbr> ist ein Bitmap-Bildformat.
 
 H<sub>2</sub>O
 

@@ -1,5 +1,6 @@
 {{ if .Get "src" }}
   {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+  <!-- prettier-ignore -->
   <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "href" -}}
       <a href="{{ .Get "href" }}">
