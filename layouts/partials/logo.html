@@ -3,6 +3,7 @@
   {{- $logo_dark := resources.Get .Site.Params.header.logoDark }}
   {{- if $logo }}
     <a href="{{ "" | relLangURL }}" class="mr-2">
+      <!-- prettier-ignore-attribute -->
       <img
         src="{{ $logo.RelPermalink }}"
         width="{{ div $logo.Width 2 }}"

@@ -4,7 +4,7 @@
   {{- if gt .TotalPages 1 }}
     {{- $start := math.Max 1 (sub .PageNumber $width) }}
     {{- $end := math.Min .TotalPages (add $start (mul $width 2)) }}
-    <ul class="flex flex-row mt-8">
+    <ul class="mt-8 flex flex-row">
       {{- with .Prev }}
         <li>
           <a
@@ -39,7 +39,7 @@
             <span
               aria-current="page"
               aria-label="Page {{ $i }}"
-              class="block font-semibold rounded bg-primary-200 text-primary-700 dark:bg-primary-400 dark:text-neutral-800"
+              class="block rounded bg-primary-200 font-semibold text-primary-700 dark:bg-primary-400 dark:text-neutral-800"
             >
               {{ $i }}
             </span>

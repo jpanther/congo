@@ -1192,8 +1192,8 @@ body:has(#menu-controller:checked) {
 .copy-button {
   visibility: hidden;
   position: absolute;
-  top: 0px;
   right: 0px;
+  top: 0px;
   z-index: 10;
   width: 5rem;
   cursor: pointer;
