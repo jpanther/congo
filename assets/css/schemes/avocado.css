@@ -12,6 +12,7 @@
   --color-neutral-700: 68, 64, 60;
   --color-neutral-800: 41, 37, 36;
   --color-neutral-900: 28, 25, 23;
+  --color-neutral-950: 12, 10, 9;
   /* Lime */
   --color-primary-50: 247, 254, 231;
   --color-primary-100: 236, 252, 203;
@@ -23,6 +24,7 @@
   --color-primary-700: 77, 124, 15;
   --color-primary-800: 63, 98, 18;
   --color-primary-900: 54, 83, 20;
+  --color-primary-950: 26, 46, 5;
   /* Emerald */
   --color-secondary-50: 236, 253, 245;
   --color-secondary-100: 209, 250, 229;
@@ -34,4 +36,5 @@
   --color-secondary-700: 4, 120, 87;
   --color-secondary-800: 6, 95, 70;
   --color-secondary-900: 6, 78, 59;
+  --color-secondary-950: 2, 44, 34;
 }
