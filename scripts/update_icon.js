@@ -49,6 +49,7 @@ const get_file = async (url) => {
   if (response.status >= 400) {
     throw new Error("Could not download icon / icon not found");
   }
+  console.log("File retrieved!");
   return response.text();
 };
 
@@ -67,7 +68,6 @@ const add_documentation = async (icon_name) => {
     const file_path = `${DOC_DIR}/${file}`;
     const file_contents = fs.readFileSync(file_path, "utf8");
     const file_result = process_file(file_contents, icon_name);
-    console.log(file_result);
     // Save file_result to file_path
     fs.writeFile(file_path, file_result, function (err) {
       if (err) throw err;
@@ -84,7 +84,6 @@ const add_documentation = async (icon_name) => {
 const process_file = (file_contents, icon_name) => {
   const [headers, table] = file_contents.split(DEFAULT_TABLE_DELIMITER);
   const table_rows = table.split("\n").map((x) => x.trim()).filter((row) => row !== "");
-  console.log(table_rows);
   table_rows.push(table_rows[0].replace("amazon", icon_name));
   table_rows.sort();
   const new_table = table_rows.join("\n");
