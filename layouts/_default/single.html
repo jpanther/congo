@@ -13,7 +13,6 @@
       <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
         {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
       </div>
-      ß
       {{ with $feature }}
         <div class="prose">
           {{ $altText := $.Params.featureAlt | default $.Params.coverAlt | default "" }}
