@@ -66,5 +66,6 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [yoganath.me](https://yoganath.me)                                     | Personal Site and Blog          |
 | [josh-v.com](https://josh-v.com)                                       | Personal Site and Tech blog     |
 | [rshmhrj.io](https://rshmhrj.io/)                                      | Personal Site and Tech blog     |
+| [jamesjarvis.io](https://jamesjarvis.io)                               | Personal Site and Blog          |
 
 **¿Usuaria de congo?** Para agregar tu sitio a esta lista, [haz un pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
