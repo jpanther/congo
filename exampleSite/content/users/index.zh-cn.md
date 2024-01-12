@@ -67,5 +67,6 @@ showEdit: false
 | [josh-v.com](https://josh-v.com)                                       | Personal Site and Tech blog     |
 | [rshmhrj.io](https://rshmhrj.io/)                                      | Personal Site and Tech blog     |
 | [jamesjarvis.io](https://jamesjarvis.io)                               | Personal Site and Blog          |
+| [jnsgr.uk](https://jnsgr.uk)                                           | Personal site and blog          |
 
 **想成为Congo的用户？** 要将您的网站添加到此列表中，请提交[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)来添加。

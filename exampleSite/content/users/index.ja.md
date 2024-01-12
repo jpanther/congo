@@ -67,5 +67,6 @@ Congoを使用して構築された実際のウェブサイト。
 | [josh-v.com](https://josh-v.com)                                       | Personal Site and Tech blog     |
 | [rshmhrj.io](https://rshmhrj.io/)                                      | Personal Site and Tech blog     |
 | [jamesjarvis.io](https://jamesjarvis.io)                               | Personal Site and Blog          |
+| [jnsgr.uk](https://jnsgr.uk)                                           | Personal site and blog          |
 
 **Congoを使っていますか？** あなたのウェブサイトを加えるために[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)を投げてください。
