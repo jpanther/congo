@@ -120,6 +120,10 @@
   {{ with .Site.Params.verification.yandex }}
     <meta name="yandex-verification" content="{{ . }}" />
   {{ end }}
+  {{ with $.Params.externalUrl }}
+    <meta http-equiv="refresh" content="0; url={{ . }}" />
+  {{ else }}
+  {{ end }}
   {{/* Social */}}
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
