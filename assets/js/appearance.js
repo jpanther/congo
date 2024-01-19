@@ -8,9 +8,13 @@ function getCSSValue(varName) {
 
 function setThemeColor() {
   var metaThemeColor = document.querySelector("meta[name=theme-color]");
+  var metaAppleMobileWebAppStatusBarStyle = document.querySelector("meta[name=apple-mobile-web-app-status-bar-style]");
   document.documentElement.classList.contains("dark")
     ? metaThemeColor.setAttribute("content", getCSSValue("--color-neutral-800"))
     : metaThemeColor.setAttribute("content", getCSSValue("--color-neutral"));
+  document.documentElement.classList.contains("dark")
+    ? metaAppleMobileWebAppStatusBarStyle.setAttribute("content", getCSSValue("--color-neutral-800"))
+    : metaAppleMobileWebAppStatusBarStyle.setAttribute("content", getCSSValue("--color-neutral"));
   return true;
 }
 
