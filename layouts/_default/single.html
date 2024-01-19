@@ -10,9 +10,17 @@
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
-        {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
-      </div>
+      {{ if or
+        (.Params.showDate | default (.Site.Params.article.showDate | default true))
+        (and (.Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false)) (ne (partial "functions/date.html" .Date) (partial "functions/date.html" .Lastmod)))
+        (and (.Params.showWordCount | default (.Site.Params.article.showWordCount | default false)) (ne .WordCount 0))
+        (and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0))
+        (.Params.showEdit | default (.Site.Params.article.showEdit | default false))
+      }}
+        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+          {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
+        </div>
+      {{ end }}
       {{ with $feature }}
         <div class="prose">
           {{ $altText := $.Params.featureAlt | default $.Params.coverAlt | default "" }}
