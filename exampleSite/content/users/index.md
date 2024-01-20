@@ -66,5 +66,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [yoganath.me](https://yoganath.me)                                     | Personal Site and Blog          |
 | [josh-v.com](https://josh-v.com)                                       | Personal Site and Tech blog     |
 | [rshmhrj.io](https://rshmhrj.io/)                                      | Personal Site and Tech blog     |
+| [jamesjarvis.io](https://jamesjarvis.io)                               | Personal Site and Blog          |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
