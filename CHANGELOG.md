@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Support for Tailwind '950' colour variants ([#751](https://github.com/jpanther/congo/pull/751))
 - Table of contents will now scroll if taller than the browser height ([#733](https://github.com/jpanther/congo/pull/733))
 - Korean translation ([#731](https://github.com/jpanther/congo/pull/731))
+- Chinese translation of Example site and Docs ([#776](https://github.com/jpanther/congo/pull/776))
 
 ### Changed
 
@@ -24,13 +25,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - ⚠️ Author params block in language configuration has been moved to `params.author` ([#704](https://github.com/jpanther/congo/pull/704))
 - Refactored image logic into a new `picture.html` partial ([#693](https://github.com/jpanther/congo/pull/693))
 - Upgrade to ChartJS v4.4.1 ([#736](https://github.com/jpanther/congo/pull/736))
-- Upgrade to Tailwind v3.4.0 ([#737](https://github.com/jpanther/congo/pull/737), [#752](https://github.com/jpanther/congo/pull/752), [#759](https://github.com/jpanther/congo/pull/759))
+- Upgrade to Tailwind v3.4.1 ([#737](https://github.com/jpanther/congo/pull/737), [#752](https://github.com/jpanther/congo/pull/752), [#759](https://github.com/jpanther/congo/pull/759), [#774](https://github.com/jpanther/congo/pull/774))
+- Upgrade to Mermaid v10.7.0 ([#782](https://github.com/jpanther/congo/pull/782))
 - Updated Japanese translation ([#750](https://github.com/jpanther/congo/pull/750))
 
 ### Fixed
 
 - Hamburger menu is not dismissed when links are clicked ([#705](https://github.com/jpanther/congo/pull/705))
 - KaTeX, table and code elements wider than the page are not formatted correctly ([#753](https://github.com/jpanther/congo/pull/753))
+- Status bar styling is not applied in Safari on iOS ([#789](https://github.com/jpanther/congo/pull/789))
 
 ### Removed
 
