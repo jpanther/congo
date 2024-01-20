@@ -33,6 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Hamburger menu is not dismissed when links are clicked ([#705](https://github.com/jpanther/congo/pull/705))
 - KaTeX, table and code elements wider than the page are not formatted correctly ([#753](https://github.com/jpanther/congo/pull/753))
+- 'ß' character is output at the top of articles ([#764](https://github.com/jpanther/congo/pull/764))
 - Status bar styling is not applied in Safari on iOS ([#789](https://github.com/jpanther/congo/pull/789))
 
 ### Removed
