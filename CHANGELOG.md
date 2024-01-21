@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.8.0] - 2024-01-22
+
 ### Added
 
 - Quicklink support ([#646](https://github.com/jpanther/congo/pull/646))
@@ -839,7 +841,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.6...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.8.0...HEAD
+[2.8.0]: https://github.com/jpanther/congo/compare/v2.7.6...v2.8.0
 [2.7.6]: https://github.com/jpanther/congo/compare/v2.7.5...v2.7.6
 [2.7.5]: https://github.com/jpanther/congo/compare/v2.7.4...v2.7.5
 [2.7.4]: https://github.com/jpanther/congo/compare/v2.7.3...v2.7.4
