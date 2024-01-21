@@ -1798,10 +1798,6 @@ code {
   top: 5rem;
 }
 
-.top-8 {
-  top: 2rem;
-}
-
 .top-\[100vh\] {
   top: 100vh;
 }
@@ -2000,20 +1996,12 @@ code {
   height: 3rem;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
-.h-36 {
-  height: 9rem;
-}
-
 .h-8 {
   height: 2rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-full {
