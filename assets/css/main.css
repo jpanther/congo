@@ -1,4 +1,4 @@
-/*! Congo v2.7.6 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.8.0 | MIT License | https://github.com/jpanther/congo */
 
 @tailwind base;
 @tailwind components;
@@ -59,6 +59,12 @@ body:has(#menu-controller:checked) {
 }
 
 /* Table of Contents */
+.toc {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+
 .toc ul,
 .toc li {
   @apply list-none px-0 leading-snug;
@@ -94,6 +100,23 @@ body:has(#menu-controller:checked) {
 }
 .copy-textarea {
   @apply absolute -z-10 opacity-5;
+}
+
+/* Fix long KaTeX equations on mobile (see https://katex.org/docs/issues.html#css-customization) */
+.katex-display {
+  overflow: auto hidden;
+}
+
+/* Fix long tables breaking out of article on mobile */
+table {
+  display: block;
+  overflow: auto;
+}
+
+/* Fix long inline code sections breaking out of article on mobile */
+code {
+  word-wrap: break-word; /* All browsers since IE 5.5+ */
+  overflow-wrap: break-word; /* Renamed property in CSS3 draft spec */
 }
 
 /* -- Chroma Highlight -- */

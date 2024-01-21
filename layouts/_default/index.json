@@ -9,6 +9,7 @@
     "summary" (.Summary | emojify | safeJS)
     "content" (.Plain | emojify | safeJS)
     "permalink" .RelPermalink
-  ) -}}
+    )
+  -}}
 {{- end -}}
 {{- $index | jsonify -}}

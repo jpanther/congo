@@ -10,18 +10,21 @@ tags: ["partials", "analytics", "privacy", "comments", "favicons", "icon", "docs
 
 ## Analytics
 
-Congo provides built-in support for Fathom Analytics and Google Analytics. Fathom is a paid alternative to Google Analytics that respects user privacy. If you're interested you can use this affiliate link to [receive $10 credit](https://usefathom.com/ref/RLAJSV) and try the service.
+Congo provides support for various analytics providers out of the box, as well as the ability to include custom code for any provider of your choice. If you don't currently have an analytics provider, check out Fathom Analytics.
 
 ### Fathom Analytics
 
-To enable Fathom Analytics support, simply provide your Fathom site code in the `config/_default/params.toml` file. If you also use the custom domain feature of Fathom and would like to serve their script from your domain, you can also additionally provide the `domain` configuration value. If you don't provide a `domain` value, the script will load directly from Fathom DNS.
+Fathom Analytics is a privacy-first service that is a great alternative to Google Analytics. It allows you to get all the visitor information you need, without spying on them. As a Congo user, you can use this affiliate link to [receive $10 credit](https://usefathom.com/ref/RLAJSV) and try the service.
+
+[![Fathom Analytics. Website analytics without compromise. Zero cookies, GDPR compliant, and privacy-first. Start a free trial.](fathom-analytics.jpg)](https://usefathom.com/ref/RLAJSV)
+
+To enable Fathom Analytics support, simply provide your Fathom site code in the `config/_default/params.toml` file. The script will load in your site directly from the Fathom Analytics CDN.
 
 ```toml
 # config/_default/params.toml
 
 [fathomAnalytics]
   site = "ABC12345"
-  domain = "llama.yoursite.com"
 ```
 
 ### Plausible Analytics

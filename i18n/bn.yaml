@@ -51,6 +51,9 @@ sharing:
   pinterest: "পিন্টারেস্টে পিন করুন"
   reddit: "রেড্ডিটে জমা দিন"
   twitter: "ট্যুইট করুন"
+  telegram: "টেলিগ্রামে শেয়ার করুন"
+  line: "লাইনে শেয়ার করুন"
+  # weibo: "Share on Weibo"
 
 shortcode:
   recent_articles: "সাম্প্রতিক"

@@ -12,7 +12,7 @@ copyright = "&copy; 2023 Congo contributors"
   mainSections = ["samples"]
   description = "Tailwind CSSをベースに開発された強力で軽量なHugo向けテーマ"
 
-[author]
+[params.author]
   name = "Congo"
   image = "img/author.jpg"
   headline = "ただならぬテーマ!"

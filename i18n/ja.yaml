@@ -47,10 +47,13 @@ sharing:
   email: " Eメールを送る"
   facebook: "Facebookでシェアする"
   linkedin: "LinkedInでシェアする"
-  # mastodon: "Toot on Mastodon"
+  mastodon: "Mastodonに投稿する"
   pinterest: "Pinterestでピンする"
   reddit: "Redditに投稿する"
   twitter: "Twitterに投稿する"
+  telegram: "Telegramでシェアする"
+  line: "LINEでシェアする"
+  weibo: "Weiboでシェアする"
 
 shortcode:
   recent_articles: "最近の記事"

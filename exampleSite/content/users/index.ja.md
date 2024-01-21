@@ -39,12 +39,11 @@ Congoを使用して構築された実際のウェブサイト。
 | [Jh123x](https://jh123x.com/)                                          | Personal site and Blog          |
 | [sforzando LLC. and Inc.](https://sfz.dev/)                            | Corporate site and Blog         |
 | [szegedkungfu.hu](https://balance-se.github.io/)                       | Sports association site         |
-| [jcransom.com](https://www.jcransom.com/)                              | Personal Site and Blog          |
 | [cbrincoveanu.com](https://www.cbrincoveanu.com/)                      | Personal site and Blog          |
 | [medical-humanities](https://medical-humanities.org)                   | Academic site                   |
 | [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog          |
 | [major.io](https://major.io)                                           | Personal site and Blog          |
-| [顾宇的博客](https://www.guyu.me/)                                       | Personal Blog (in Chinese)      |
+| [顾宇的博客](https://www.guyu.me/)                                     | Personal Blog (in Chinese)      |
 | [cgutierr-zgz.github.io](https://cgutierr-zgz.github.io/)              | Personal site and Tech blog     |
 | [adam.sr](https://adam.sr)                                             | Personal site and Blog          |
 | [kpavlov.me](https://kpavlov.me)                                       | Personal site and Blog          |
@@ -64,5 +63,13 @@ Congoを使用して構築された実際のウェブサイト。
 | [simaosilva.com](https://simaosilva.com)                               | Personal Site                   |
 | [kom.al](https://kom.al)                                               | Personal Site                   |
 | [andrea.mortaro.it](https://andrea.mortaro.it)                         | Personal Site and Blog          |
+| [yoganath.me](https://yoganath.me)                                     | Personal Site and Blog          |
+| [josh-v.com](https://josh-v.com)                                       | Personal Site and Tech blog     |
+| [rshmhrj.io](https://rshmhrj.io/)                                      | Personal Site and Tech blog     |
+| [jamesjarvis.io](https://jamesjarvis.io)                               | Personal Site and Blog          |
+| [jnsgr.uk](https://jnsgr.uk)                                           | Personal site and blog          |
+| [stupidjoey.net](https://stupidjoey.net)                               | Personal Site and Tech blog     |
+| [aminelch.github.io](https://aminelch.github.io)                       | Personal Site and Blog          |
+| [robertboscacci.com](https://robertboscacci.com)                       | Personal Site and Blog          |
 
 **Congoを使っていますか？** あなたのウェブサイトを加えるために[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)を投げてください。

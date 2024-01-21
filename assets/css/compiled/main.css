@@ -1,6 +1,6 @@
-/*! Congo v2.7.6 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.8.0 | MIT License | https://github.com/jpanther/congo */
 
-/*! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -32,9 +32,11 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -44,12 +46,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -121,8 +125,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -131,8 +137,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -1094,32 +1104,32 @@ body:has(#menu-controller:checked) {
 
 /* RTL support */
 
-:is([dir="rtl"] .prose blockquote) {
+.prose blockquote:where([dir="rtl"], [dir="rtl"] *) {
   border-left-width: 0px;
   border-right-width: 4px;
   padding-right: 1rem;
 }
 
-:is([dir="rtl"] .prose ul > li),:is([dir="rtl"] 
-.prose ol > li) {
+.prose ul > li:where([dir="rtl"], [dir="rtl"] *),
+.prose ol > li:where([dir="rtl"], [dir="rtl"] *) {
   margin-right: 1.75rem;
   padding-left: 0px;
   padding-right: 0.5rem;
 }
 
-:is([dir="rtl"] .prose ol > li):before,:is([dir="rtl"] 
-.prose ul > li):before {
+.prose ol > li:where([dir="rtl"], [dir="rtl"] *):before,
+.prose ul > li:where([dir="rtl"], [dir="rtl"] *):before {
   left: auto;
   right: 0.25rem;
 }
 
-:is([dir="rtl"] .prose thead td:first-child),:is([dir="rtl"] 
-.prose thead th:first-child) {
+.prose thead td:first-child:where([dir="rtl"], [dir="rtl"] *),
+.prose thead th:first-child:where([dir="rtl"], [dir="rtl"] *) {
   padding-right: 0px;
 }
 
-:is([dir="rtl"] .prose thead td:last-child),:is([dir="rtl"] 
-.prose thead th:last-child) {
+.prose thead td:last-child:where([dir="rtl"], [dir="rtl"] *),
+.prose thead th:last-child:where([dir="rtl"], [dir="rtl"] *) {
   padding-left: 0px;
 }
 
@@ -1130,6 +1140,12 @@ body:has(#menu-controller:checked) {
 }
 
 /* Table of Contents */
+
+.toc {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
 
 .toc ul,
 .toc li {
@@ -1154,7 +1170,7 @@ body:has(#menu-controller:checked) {
   color: rgba(var(--color-neutral-400), var(--tw-text-opacity));
 }
 
-:is([dir="rtl"] .toc ul > li) {
+.toc ul > li:where([dir="rtl"], [dir="rtl"] *) {
   margin-right: 0px;
 }
 
@@ -1223,6 +1239,28 @@ body:has(#menu-controller:checked) {
   position: absolute;
   z-index: -10;
   opacity: 0.05;
+}
+
+/* Fix long KaTeX equations on mobile (see https://katex.org/docs/issues.html#css-customization) */
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+/* Fix long tables breaking out of article on mobile */
+
+table {
+  display: block;
+  overflow: auto;
+}
+
+/* Fix long inline code sections breaking out of article on mobile */
+
+code {
+  word-wrap: break-word;
+  /* All browsers since IE 5.5+ */
+  overflow-wrap: break-word;
+  /* Renamed property in CSS3 draft spec */
 }
 
 /* -- Chroma Highlight -- */
@@ -1760,10 +1798,6 @@ body:has(#menu-controller:checked) {
   top: 5rem;
 }
 
-.top-8 {
-  top: 2rem;
-}
-
 .top-\[100vh\] {
   top: 100vh;
 }
@@ -1962,20 +1996,12 @@ body:has(#menu-controller:checked) {
   height: 3rem;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
-.h-36 {
-  height: 9rem;
-}
-
 .h-8 {
   height: 2rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-full {
@@ -2776,38 +2802,6 @@ body:has(#menu-controller:checked) {
   opacity: 1;
 }
 
-:is([dir="ltr"] .ltr\:right-0) {
-  right: 0px;
-}
-
-:is([dir="ltr"] .ltr\:block) {
-  display: block;
-}
-
-:is([dir="ltr"] .ltr\:inline) {
-  display: inline;
-}
-
-:is([dir="ltr"] .ltr\:hidden) {
-  display: none;
-}
-
-:is([dir="rtl"] .rtl\:left-0) {
-  left: 0px;
-}
-
-:is([dir="rtl"] .rtl\:block) {
-  display: block;
-}
-
-:is([dir="rtl"] .rtl\:inline) {
-  display: inline;
-}
-
-:is([dir="rtl"] .rtl\:hidden) {
-  display: none;
-}
-
 :is(.dark .dark\:inline) {
   display: inline;
 }
@@ -2953,12 +2947,6 @@ body:has(#menu-controller:checked) {
   color: rgba(var(--color-primary-400), var(--tw-text-opacity));
 }
 
-@media print {
-  .print\:hidden {
-    display: none;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:mb-0 {
     margin-bottom: 0px;
@@ -3097,5 +3085,43 @@ body:has(#menu-controller:checked) {
 @media (min-width: 1280px) {
   .xl\:w-1\/5 {
     width: 20%;
+  }
+}
+
+.ltr\:right-0:where([dir="ltr"], [dir="ltr"] *) {
+  right: 0px;
+}
+
+.ltr\:block:where([dir="ltr"], [dir="ltr"] *) {
+  display: block;
+}
+
+.ltr\:inline:where([dir="ltr"], [dir="ltr"] *) {
+  display: inline;
+}
+
+.ltr\:hidden:where([dir="ltr"], [dir="ltr"] *) {
+  display: none;
+}
+
+.rtl\:left-0:where([dir="rtl"], [dir="rtl"] *) {
+  left: 0px;
+}
+
+.rtl\:block:where([dir="rtl"], [dir="rtl"] *) {
+  display: block;
+}
+
+.rtl\:inline:where([dir="rtl"], [dir="rtl"] *) {
+  display: inline;
+}
+
+.rtl\:hidden:where([dir="rtl"], [dir="rtl"] *) {
+  display: none;
+}
+
+@media print {
+  .print\:hidden {
+    display: none;
   }
 }

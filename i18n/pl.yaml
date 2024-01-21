@@ -51,6 +51,9 @@ sharing:
   pinterest: "Udostępnij na Pinterest"
   reddit: "Udostępnij na Reddit"
   twitter: "Udostępnij na Twitter"
+  telegram: "Udostępnij na Telegram"
+  line: "Udostępnij na LINE"
+  weibo: "Udostępnij na Weibo"
 
 shortcode:
   recent_articles: "Ostatnie"

@@ -176,7 +176,7 @@ Congoでのダークモードの動作方法が変更され、より柔軟に設
 
 ファビコンを除くすべてのassetsが、Hugo Pipesにて最適化されるようになりました。テーマがあなたのファイルを見つけるためには、以前の `static/` から `assets/` ディレクトリに移動する必要があります。主に、著者画像とサイトロゴです:
 
-`static/me.jpg` **&rarr;** `assets/me.jpg`  
+`static/me.jpg` **&rarr;** `assets/me.jpg`
 `static/logo.jpg` **&rarr;** `assets/logo.jpg`
 
 著者画像やサイトロゴを提供した場合は、これらのアセットを `static/` から `assets/` に移動するだけです。同じディレクトリ構造を使用している場合、テーマはこれらのファイルがどこにあるかを自動的に認識します。新しいパスを指定したい場合は、 `logo` と `author.image` の設定値を適宜更新してください。
@@ -195,5 +195,4 @@ Congo 2.0では `figure` ショートコードの振る舞いが変わります�
 
 エラーに遭遇した場合は、設定が正しいことを確認し、[ドキュメント]({{<ref "docs" >}})を参照してください。テーマに同梱されている設定ファイルの例には、デフォルトのパラメーターがすべて含まれており、出発点として最適です。
 
-
-🙋‍♀️  それでもまだ助けが必要な場合は、[GitHub Discussions](https://github.com/jpanther/congo/discussions)で遠慮なく質問してください。
+🙋‍♀️ それでもまだ助けが必要な場合は、[GitHub Discussions](https://github.com/jpanther/congo/discussions)で遠慮なく質問してください。

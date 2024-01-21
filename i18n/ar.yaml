@@ -51,6 +51,9 @@ sharing:
   pinterest: "تثبيت على بينتريست"
   reddit: "نشر على ريديت"
   twitter: "تغريد على تويتر"
+  telegram: "شارك على تيليجرام"
+  line: "شارك على لاين"
+  # weibo: "Share on Weibo"
 
 shortcode:
   recent_articles: "حديثًا"

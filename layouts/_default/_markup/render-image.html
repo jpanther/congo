@@ -1,64 +1,30 @@
 {{ $url := urls.Parse .Destination }}
 {{ $altText := .Text }}
 {{ $caption := .Title }}
-{{ $lazyLoad := $.Page.Site.Params.enableImageLazyLoading | default true }}
-{{ if findRE "^https?" $url.Scheme }}
-  <figure>
-    <img
-      class="mx-auto my-0 rounded-md"
-      src="{{ $url.String }}"
-      alt="{{ $altText }}" 
-      {{ if $lazyLoad }}
-        loading="lazy"
-      {{ end }}
-    />
-    {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
-  </figure>
-{{ else }}
-  {{ $resource := "" }}
-  {{ if $.Page.Resources.GetMatch ($url.String) }}
-    {{ $resource = $.Page.Resources.GetMatch ($url.String) }}
-  {{ else if resources.GetMatch ($url.String) }}
-    {{ $resource = resources.Get ($url.String) }}
-  {{ end }}
-  {{ with $resource }}
-    <figure>
-      <img
-        class="mx-auto my-0 rounded-md"
-        {{ if eq .MediaType.SubType "svg" }}
-          src="{{ .RelPermalink }}"
-        {{ else }}
-          width="{{ .Width }}"
-          height="{{ .Height }}"
-          {{ if lt .Width 660 }}
-            src="{{ .RelPermalink }}"
-          {{ else }}
-            srcset="
-            {{- (.Resize "330x").RelPermalink }} 330w,
-            {{- (.Resize "660x").RelPermalink }} 660w,
-            {{- (.Resize "1024x").RelPermalink }} 1024w,
-            {{- (.Resize "1320x").RelPermalink }} 2x"
-            src="{{ (.Resize "660x").RelPermalink }}"
-          {{ end }}
-        {{ end }}
-        alt="{{ $altText }}"
-        {{ if $lazyLoad }}
-          loading="lazy"
-        {{ end }}
-      />
-      {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
-    </figure>
-  {{ else }}
-    <figure>
-      <img
-        class="mx-auto my-0 rounded-md"
-        src="{{ $url.String }}"
-        alt="{{ $altText }}"
-        {{ if $lazyLoad }}
-          loading="lazy"
-        {{ end }}
-      />
-      {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
-    </figure>
-  {{ end }}
-{{ end }}
+{{ $class := "mx-auto my-0 rounded-md" }}
+
+{{ $file := $url.Path }}
+{{ $img := .Page.Resources.GetMatch $file }}
+{{- if and (not $img) .Page.File }}
+  {{ $path := path.Join .Page.File.Dir $file }}
+  {{ $img = resources.Get $path }}
+{{ end -}}
+
+{{/* https://github.com/gohugoio/hugo/pull/10666 */}}
+{{- $params := $url.Query -}}
+{{- $x2Param := $params.Get "2x" -}}
+{{- $x2 := false -}}
+{{- if eq $x2Param "true" -}}
+  {{- $x2 = true -}}
+{{- end -}}
+
+<figure>
+  {{- with $img -}}
+    {{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
+    {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+    {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "x2" $x2 "lazy" $lazy "webp" $webp) }}
+  {{- else -}}
+    <img src="{{ .Destination | safeURL }}" alt="{{ $altText }}" class="{{ $class }}" />
+  {{- end -}}
+  {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

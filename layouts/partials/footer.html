@@ -2,12 +2,12 @@
   {{/* Footer menu */}}
   {{ if .Site.Menus.footer }}
     <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
-      <ul class="flex flex-col list-none sm:flex-row">
+      <ul class="flex list-none flex-col sm:flex-row">
         {{ range .Site.Menus.footer }}
           {{ if and (eq .Params.action "locale") (or (not page.IsTranslated) (not site.IsMultiLingual)) }}
             {{ continue }}
           {{ end }}
-          <li class="mb-1 group text-end sm:mb-0 sm:me-7 sm:last:me-0">
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
             {{ if eq .Params.action "search" }}
               {{ $.Scratch.Add "searchCount" 1 }}
               {{ if $.Site.Params.enableSearch | default false }}
@@ -17,7 +17,7 @@
                 >
                   {{ with .Params.icon }}
                     <span
-                      class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                      class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
                     >
                       {{- partial "icon.html" . -}}
                     </span>
@@ -37,13 +37,13 @@
                 aria-label="appearance switcher"
               >
                 <span
-                  class="inline transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:hidden"
+                  class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
                   title="{{ i18n "footer.dark_appearance" }}"
                 >
                   {{ partial "icon.html" "moon" }}
                 </span>
                 <span
-                  class="hidden transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600 dark:inline"
+                  class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
                   title="{{ i18n "footer.light_appearance" }}"
                 >
                   {{ partial "icon.html" "sun" }}
@@ -59,7 +59,7 @@
                 {{ with .Params.target }}target="{{ . }}"{{ end }}
                 >{{ with .Params.icon }}
                   <span
-                    class="transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+                    class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
                   >
                     {{- partial "icon.html" . -}}
                   </span>
@@ -86,7 +86,7 @@
           {{- else }}
             &copy;
             {{ now.Format "2006" }}
-            {{ .Site.Author.name | markdownify | emojify }}
+            {{ .Site.Language.Params.Author.name | markdownify | emojify }}
           {{- end }}
         </p>
       {{ end }}
@@ -117,13 +117,13 @@
         >
           <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
             <div
-              class="flex items-center justify-center w-12 h-12 dark:hidden"
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
               title="{{ i18n "footer.dark_appearance" }}"
             >
               {{ partial "icon.html" "moon" }}
             </div>
             <div
-              class="items-center justify-center hidden w-12 h-12 dark:flex"
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
               title="{{ i18n "footer.light_appearance" }}"
             >
               {{ partial "icon.html" "sun" }}

@@ -59,7 +59,7 @@ Las tablas no forman parte de la especificación principal de Markdown, pero Hug
 ### Markdown dentro de las tablas
 
 | Cursiva   | Negritas    | Código   |
-| --------- | ----------  | -------- |
+| --------- | ----------- | -------- |
 | _Cursiva_ | **Negrita** | `Código` |
 
 ## Bloques de código
@@ -67,7 +67,7 @@ Las tablas no forman parte de la especificación principal de Markdown, pero Hug
 ### Bloque de código con acentos graves
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

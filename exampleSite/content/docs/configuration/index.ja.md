@@ -100,11 +100,11 @@ Congoは現在、以下の言語に対応しています:
 |`params.dateFormat`|`"2 January 2006"`|日付の書式。許容される書式については、[Hugo docs](https://gohugo.io/functions/format/#gos-layout-string)を参照してください。|
 |`params.mainSections`|_Not set_|最近の記事リストに表示するセクション。指定されていない場合は、記事の数が最も多いセクションが使われます。|
 |`params.description`|_Not set_|ウェブサイトの説明。これはサイトのメタデータに使用されます。|
-|`author.name`|_Not set_|著者の名前。これは記事のフッターと、プロフィールレイアウトが使用されている場合にホームページに表示されます。|
-|`author.image`|_Not set_|著者の画像ファイルへのパス。画像は縦横比1:1で、 `assets/` に置くこと。|
-|`author.headline`|_Not set_|著者の見出しを含むMarkdown文字列。プロフィールのトップページで著者の名前の下に表示されます。|
-|`author.bio`|_Not set_|著者の経歴を含むMarkdown文字列。記事のフッターに表示されます。|
-|`author.links`|_Not set_|著者の詳細とともに表示するリンク。設定ファイルにはリンクの例が含まれており、コメントを外すだけで有効にすることができます。リンクが表示される順番は、配列に表示される順番によって決まります。 `assets/icons/` に対応するSVGアイコンを用意することで、カスタムリンクを追加することもできます。|
+|`params.author.name`|_Not set_|著者の名前。これは記事のフッターと、プロフィールレイアウトが使用されている場合にホームページに表示されます。|
+|`params.author.image`|_Not set_|著者の画像ファイルへのパス。画像は縦横比1:1で、 `assets/` に置くこと。|
+|`params.author.headline`|_Not set_|著者の見出しを含むMarkdown文字列。プロフィールのトップページで著者の名前の下に表示されます。|
+|`params.author.bio`|_Not set_|著者の経歴を含むMarkdown文字列。記事のフッターに表示されます。|
+|`params.author.links`|_Not set_|著者の詳細とともに表示するリンク。設定ファイルにはリンクの例が含まれており、コメントを外すだけで有効にすることができます。リンクが表示される順番は、配列に表示される順番によって決まります。 `assets/icons/` に対応するSVGアイコンを用意することで、カスタムリンクを追加することもできます。|
 <!-- prettier-ignore-end -->
 
 ### メニュー
@@ -169,7 +169,6 @@ Congoはテーマの機能を制御する多数の設定パラメーターを提
 |`sitemap.excludedKinds`|`["taxonomy", "term"]`|生成される `/sitemap.xml` から除外されるべきコンテンツの種類。許容される値については[Hugo docs](https://gohugo.io/templates/section-templates/#page-kinds)を参照してください。|
 |`taxonomy.showTermCount`|`true`|TaxonomiesのリストにTermごとの記事数を表示するかどうか。|
 |`fathomAnalytics.site`|_Not set_|Fathom Analyticsによって生成されたウェブサイトのサイトコード。詳細は[アナリティクス]({{< ref "partials#アナリティクス" >}})を参照してください。|
-|`fathomAnalytics.domain`|_Not set_|Fathom Analyticsでカスタムドメインを使用している場合、カスタムドメインから`script.js`を提供するためにここに指定します。|
 |`verification.google`|_Not set_|サイトのメタデータに含めるGoogleが提供するサイト検証文字列。|
 |`verification.bing`|_Not set_|サイトのメタデータに含めるBingが提供するサイト検証文字列。|
 |`verification.pinterest`|_Not set_|サイトのメタデータに含めるPinterestが提供するサイト検証文字列。|

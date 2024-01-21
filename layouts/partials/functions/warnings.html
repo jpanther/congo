@@ -7,3 +7,6 @@
 {{ if ne .Params.logo nil }}
   {{ warnf "[CONGO] Theme parameter `logo` has been renamed to `header.logo`. Please update your site configuration." }}
 {{ end }}
+{{ if .Author }}
+  {{ warnf "[CONGO] Theme parameter `author` block in `languages.xx.toml` has been renamed to `params.author`. Please update your site configuration." }}
+{{ end }}

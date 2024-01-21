@@ -51,6 +51,9 @@ sharing:
   pinterest: "Megosztás a Pinteresten"
   reddit: "Megosztás a Redditen"
   twitter: "Megosztás a Twitteren"
+  telegram: "Megosztás a Telegramon"
+  line: "Megosztás a LINE-on"
+  weibo: "Megosztás a Weibo-on"
 
 shortcode:
   recent_articles: "Friss"

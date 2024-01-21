@@ -51,6 +51,9 @@ sharing:
   pinterest: "Pin op Pinterest"
   reddit: "Verzend naar Reddit"
   twitter: "Tweet op Twitter"
+  telegram: "Deel op Telegram"
+  line: "Deel op LINE"
+  weibo: "Deel op Weibo"
 
 shortcode:
   recent_articles: "Recent"

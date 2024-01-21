@@ -55,6 +55,9 @@ sharing:
   pinterest: "Поделиться на Pinterest"
   reddit: "Опубликовать на Reddit"
   twitter: "Опубликовать на Twitter"
+  telegram: "Поделиться на Telegram"
+  line: "Поделиться на LINE"
+  weibo: "Поделиться на Weibo"
 
 shortcode:
   recent_articles: "Последние"

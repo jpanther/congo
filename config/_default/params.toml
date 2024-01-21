@@ -12,6 +12,7 @@ autoSwitchAppearance = true
 enableSearch = false
 enableCodeCopy = false
 enableImageLazyLoading = true
+enableImageWebp = true
 
 # robots = ""
 fingerprintAlgorithm = "sha256"
@@ -50,7 +51,7 @@ fingerprintAlgorithm = "sha256"
   showTaxonomies = false
   showWordCount = false
   showComments = false
-  # sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "reddit", "linkedin", "email"]
+  # sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "telegram", "line", "weibo"]
 
 [list]
   showBreadcrumbs = false
@@ -68,7 +69,6 @@ fingerprintAlgorithm = "sha256"
 
 [fathomAnalytics]
   # site = "ABC12345"
-  # domain = "llama.yoursite.com"
 
 [plausibleAnalytics]
   # domain = "blog.yoursite.com"
