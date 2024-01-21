@@ -1,8 +1,8 @@
 {{ $img := .img }}
 {{ $alt := .alt }}
 {{ $class := .class }}
-{{ $lazy := .lazy | default $.Page.Site.Params.enableImageLazyLoading | default true }}
-{{ $webp := .webp | default $.Page.Site.Params.enableImageWebp | default true }}
+{{ $lazy := .lazy }}
+{{ $webp := .webp }}
 {{ $lqip := .lqip | default false }}
 {{ $x2 := .x2 | default false }}
 

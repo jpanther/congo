@@ -20,7 +20,9 @@
 
 <figure>
   {{- with $img -}}
-    {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "x2" $x2) }}
+    {{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
+    {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+    {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "x2" $x2 "lazy" $lazy "webp" $webp) }}
   {{- else -}}
     <img src="{{ .Destination | safeURL }}" alt="{{ $altText }}" class="{{ $class }}" />
   {{- end -}}

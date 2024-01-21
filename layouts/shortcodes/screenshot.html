@@ -13,7 +13,9 @@
       {{ $altText = (.Get "caption") | markdownify | plainify }}
     {{ end }}
 
-    {{ partial "picture.html" (dict "img" $image "alt" $altText "x2" true) }}
+    {{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
+    {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+    {{ partial "picture.html" (dict "img" $image "alt" $altText "x2" true "lazy" $lazy "webp" $webp) }}
 
     {{- if .Get "href" }}</a>{{ end -}}
     {{- if .Get "caption" -}}
