@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Weibo sharing links ([#756](https://github.com/jpanther/congo/pull/756))
 - Support for Tailwind '950' colour variants ([#751](https://github.com/jpanther/congo/pull/751))
 - Table of contents will now scroll if taller than the browser height ([#733](https://github.com/jpanther/congo/pull/733))
+- External URL article stubs now auto-redirect if leaf pages are generated ([#778](https://github.com/jpanther/congo/pull/778))
 - Korean translation ([#731](https://github.com/jpanther/congo/pull/731))
 - Chinese translation of Example site and Docs ([#776](https://github.com/jpanther/congo/pull/776))
 
