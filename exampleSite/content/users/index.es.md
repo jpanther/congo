@@ -69,5 +69,6 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [jamesjarvis.io](https://jamesjarvis.io)                               | Personal Site and Blog          |
 | [jnsgr.uk](https://jnsgr.uk)                                           | Personal site and blog          |
 | [stupidjoey.net](https://stupidjoey.net)                               | Personal Site and Tech blog     |
+| [aminelch.github.io](https://aminelch.github.io)                       | Personal Site and Blog          |
 
 **¿Usuaria de congo?** Para agregar tu sitio a esta lista, [haz un pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
