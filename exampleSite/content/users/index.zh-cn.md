@@ -1,8 +1,8 @@
 ---
-title: "Users"
+title: "用户"
 date: 2020-08-14
 draft: false
-description: "Some real-life Congo examples."
+description: "Congo的使用用户。"
 slug: "users"
 tags: ["users", "sample"]
 showDate: false
@@ -12,10 +12,10 @@ showEdit: false
 ---
 
 {{< lead >}}
-Real websites that have been built using Congo.
+使用Congo构建的真实网站
 {{< /lead >}}
 
-The list below is just a handful of the websites that are built using the Congo theme. Check them out to discover some great examples of what the theme can do.
+下面的列表包含了一些使用Congo主题构建的网站。你可以查看这些网站 ，发现一些展示Congo功能的优秀示例。
 
 | Website                                                                | Details                         |
 | ---------------------------------------------------------------------- | ------------------------------- |
@@ -72,4 +72,4 @@ The list below is just a handful of the websites that are built using the Congo 
 | [aminelch.github.io](https://aminelch.github.io)                       | Personal Site and Blog          |
 | [robertboscacci.com](https://robertboscacci.com)                       | Personal Site and Blog          |
 
-**Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
+**想成为Congo的用户？** 要将您的网站添加到此列表中，请提交[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)来添加。

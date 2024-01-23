@@ -17,7 +17,7 @@ Sitios web reales que se han creado con Congo.
 
 La lista a continuación es solo un puñado de sitios web creados con el tema Congo. Échales un vistazo para descubrir algunos excelentes ejemplos de lo que el tema puede hacer.
 
-| Website                                                                | Detalles                        |
+| Website                                                                | Details                         |
 | ---------------------------------------------------------------------- | ------------------------------- |
 | [jamespanther.com](https://jamespanther.com)                           | Personal site - Theme author    |
 | [antoinesoetewey.com](https://antoinesoetewey.com/)                    | Personal site                   |
@@ -39,7 +39,6 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [Jh123x](https://jh123x.com/)                                          | Personal site and Blog          |
 | [sforzando LLC. and Inc.](https://sfz.dev/)                            | Corporate site and Blog         |
 | [szegedkungfu.hu](https://balance-se.github.io/)                       | Sports association site         |
-| [jcransom.com](https://www.jcransom.com/)                              | Personal Site and Blog          |
 | [cbrincoveanu.com](https://www.cbrincoveanu.com/)                      | Personal site and Blog          |
 | [medical-humanities](https://medical-humanities.org)                   | Academic site                   |
 | [boyersnet.com](https://boyersnet.com)                                 | Personal site and Blog          |
@@ -64,5 +63,13 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [simaosilva.com](https://simaosilva.com)                               | Personal Site                   |
 | [kom.al](https://kom.al)                                               | Personal Site                   |
 | [andrea.mortaro.it](https://andrea.mortaro.it)                         | Personal Site and Blog          |
+| [yoganath.me](https://yoganath.me)                                     | Personal Site and Blog          |
+| [josh-v.com](https://josh-v.com)                                       | Personal Site and Tech blog     |
+| [rshmhrj.io](https://rshmhrj.io/)                                      | Personal Site and Tech blog     |
+| [jamesjarvis.io](https://jamesjarvis.io)                               | Personal Site and Blog          |
+| [jnsgr.uk](https://jnsgr.uk)                                           | Personal site and blog          |
+| [stupidjoey.net](https://stupidjoey.net)                               | Personal Site and Tech blog     |
+| [aminelch.github.io](https://aminelch.github.io)                       | Personal Site and Blog          |
+| [robertboscacci.com](https://robertboscacci.com)                       | Personal Site and Blog          |
 
 **¿Usuaria de congo?** Para agregar tu sitio a esta lista, [haz un pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).

@@ -20,10 +20,10 @@
           >
         </button>
         {{ if eq $dir "down" }}
-          <div class="invisible h-2 w-full bg-transparent group-hover:visible"></div>
+          <div class="invisible w-full bg-transparent group-hover:visible"></div>
         {{ end }}
         <div
-          class="{{ cond (eq $dir "down") "top-8" "bottom-7" }} invisible absolute z-50 flex flex-col whitespace-nowrap rounded border border-neutral-300 bg-neutral text-start text-base shadow group-hover:visible ltr:right-0 rtl:left-0 dark:border-neutral-600 dark:bg-neutral-800"
+          class="{{ if not (eq $dir "down") }} bottom-7 {{ end }} invisible absolute z-50 flex flex-col whitespace-nowrap rounded border border-neutral-300 bg-neutral text-start text-base shadow group-hover:visible ltr:right-0 rtl:left-0 dark:border-neutral-600 dark:bg-neutral-800"
         >
           {{ $siteLanguages := site.Languages }}
           {{ $pageLang := .Page.Lang }}

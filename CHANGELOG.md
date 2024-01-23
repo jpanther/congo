@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.8.0] - 2024-01-22
+
 ### Added
 
 - Quicklink support ([#646](https://github.com/jpanther/congo/pull/646))
@@ -16,7 +18,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Weibo sharing links ([#756](https://github.com/jpanther/congo/pull/756))
 - Support for Tailwind '950' colour variants ([#751](https://github.com/jpanther/congo/pull/751))
 - Table of contents will now scroll if taller than the browser height ([#733](https://github.com/jpanther/congo/pull/733))
+- External URL article stubs now auto-redirect if leaf pages are generated ([#778](https://github.com/jpanther/congo/pull/778))
 - Korean translation ([#731](https://github.com/jpanther/congo/pull/731))
+- Chinese translation of Example site and Docs ([#776](https://github.com/jpanther/congo/pull/776))
 
 ### Changed
 
@@ -24,13 +28,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - ⚠️ Author params block in language configuration has been moved to `params.author` ([#704](https://github.com/jpanther/congo/pull/704))
 - Refactored image logic into a new `picture.html` partial ([#693](https://github.com/jpanther/congo/pull/693))
 - Upgrade to ChartJS v4.4.1 ([#736](https://github.com/jpanther/congo/pull/736))
-- Upgrade to Tailwind v3.4.0 ([#737](https://github.com/jpanther/congo/pull/737), [#752](https://github.com/jpanther/congo/pull/752), [#759](https://github.com/jpanther/congo/pull/759))
+- Upgrade to Tailwind v3.4.1 ([#737](https://github.com/jpanther/congo/pull/737), [#752](https://github.com/jpanther/congo/pull/752), [#759](https://github.com/jpanther/congo/pull/759), [#774](https://github.com/jpanther/congo/pull/774))
+- Upgrade to Mermaid v10.7.0 ([#782](https://github.com/jpanther/congo/pull/782))
 - Updated Japanese translation ([#750](https://github.com/jpanther/congo/pull/750))
 
 ### Fixed
 
 - Hamburger menu is not dismissed when links are clicked ([#705](https://github.com/jpanther/congo/pull/705))
 - KaTeX, table and code elements wider than the page are not formatted correctly ([#753](https://github.com/jpanther/congo/pull/753))
+- 'ß' character is output at the top of articles ([#764](https://github.com/jpanther/congo/pull/764))
+- Article metadata element is output when there is no metadata to display ([#786](https://github.com/jpanther/congo/pull/786))
+- Header elements not vertically centered when using locale switcher ([#788](https://github.com/jpanther/congo/pull/788))
 
 ### Removed
 
@@ -833,7 +841,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.6...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.8.0...HEAD
+[2.8.0]: https://github.com/jpanther/congo/compare/v2.7.6...v2.8.0
 [2.7.6]: https://github.com/jpanther/congo/compare/v2.7.5...v2.7.6
 [2.7.5]: https://github.com/jpanther/congo/compare/v2.7.4...v2.7.5
 [2.7.4]: https://github.com/jpanther/congo/compare/v2.7.3...v2.7.4

@@ -1,8 +1,8 @@
 {{ $img := .img }}
 {{ $alt := .alt }}
 {{ $class := .class }}
-{{ $lazy := .lazy | default $.Page.Site.Params.enableImageLazyLoading | default true }}
-{{ $webp := .webp | default $.Page.Site.Params.enableImageWebp | default true }}
+{{ $lazy := .lazy }}
+{{ $webp := .webp }}
 {{ $lqip := .lqip | default false }}
 {{ $x2 := .x2 | default false }}
 
@@ -57,7 +57,7 @@
         <source
           {{ if lt .Width 660 }}
             {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
-              src="{{ .RelPermalink }}"
+              srcset="{{ .RelPermalink }}"
             {{ end }}
           {{ else }}
             srcset=" {{- (.Resize "330x webp").RelPermalink }} 330w,
@@ -70,19 +70,18 @@
               {{ end }}
             {{ end }}
             {{ if gt .Width 1320 }}
-              ,{{ (.Resize "1320x webp").RelPermalink }} 2x
+              ,{{ (.Resize "1320x webp").RelPermalink }} 1320w
             {{ else }}
               {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
                 ,{{ .RelPermalink }} {{ .Width }}w
               {{ end }}
             {{ end }}"
-            src="{{ (.Resize "660x webp").RelPermalink }}"
           {{ end }}
+          sizes="100vw"
           type="image/webp"
         />
       {{ end }}
       <img
-        src="{{ .RelPermalink }}"
         width="{{ $width }}"
         height="{{ $height }}"
         {{ with $class }}class="{{ . }}"{{ end }}
@@ -91,20 +90,20 @@
         {{ if lt .Width 660 }}
           src="{{ .RelPermalink }}"
         {{ else }}
+          src="{{ (.Resize "660x").RelPermalink }}"
           srcset=" {{- (.Resize "330x").RelPermalink }} 330w,
-          {{- (.Resize "660x").RelPermalink }}
-          660w
+          {{- (.Resize "660x").RelPermalink }} 660w
           {{ if gt .Width 1024 }}
             ,{{ (.Resize "1024x").RelPermalink }} 1024w
           {{ else }}
             ,{{ .RelPermalink }} {{ .Width }}w
           {{ end }}
           {{ if gt .Width 1320 }}
-            ,{{ (.Resize "1320x").RelPermalink }} 2x
+            ,{{ (.Resize "1320x").RelPermalink }} 1320w
           {{ else }}
             ,{{ .RelPermalink }} {{ .Width }}w
           {{ end }}"
-          src="{{ (.Resize "660x").RelPermalink }}"
+          sizes="100vw"
         {{ end }}
       />
     </picture>
