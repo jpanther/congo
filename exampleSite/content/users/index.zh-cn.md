@@ -71,5 +71,6 @@ showEdit: false
 | [stupidjoey.net](https://stupidjoey.net)                               | Personal Site and Tech blog     |
 | [aminelch.github.io](https://aminelch.github.io)                       | Personal Site and Blog          |
 | [robertboscacci.com](https://robertboscacci.com)                       | Personal Site and Blog          |
+| [gorbe.io](https://www.gorbe.io)                                       | Business Site and Blog          |
 
 **想成为Congo的用户？** 要将您的网站添加到此列表中，请提交[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)来添加。
