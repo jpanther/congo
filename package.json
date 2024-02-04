@@ -34,7 +34,7 @@
     "fuse.js": "^7.0.0",
     "katex": "^0.16.9",
     "mermaid": "^10.7.0",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "quicklink": "^2.3.0",
