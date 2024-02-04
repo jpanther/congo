@@ -173,6 +173,7 @@ Congoはテーマの機能を制御する多数の設定パラメーターを提
 |`verification.bing`|_Not set_|サイトのメタデータに含めるBingが提供するサイト検証文字列。|
 |`verification.pinterest`|_Not set_|サイトのメタデータに含めるPinterestが提供するサイト検証文字列。|
 |`verification.yandex`|_Not set_|サイトのメタデータに含めるYandexが提供するサイト検証文字列。|
+|`verification.mastodon`|_Not set_|サイトのメタデータに含めるMastodonが提供するサイト検証文字列。|
 <!-- prettier-ignore-end -->
 
 ## その他の設定ファイル

@@ -120,6 +120,9 @@
   {{ with .Site.Params.verification.yandex }}
     <meta name="yandex-verification" content="{{ . }}" />
   {{ end }}
+  {{ with .Site.Params.verification.mastodon }}
+    <link rel="me" href="{{ . }}" />
+  {{ end }}
   {{ with $.Params.externalUrl }}
     <meta http-equiv="refresh" content="0; url={{ . }}" />
   {{ end }}

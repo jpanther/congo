@@ -177,6 +177,7 @@ Congo 提供了大量的配置参数，用于控制主题的功能。下表概�
 |`verification.bing`|_未设置_|由 Bing 提供的要包含在站点元数据中的站点验证字符串。|
 |`verification.pinterest`|_未设置_|由 Pinterest 提供的要包含在站点元数据中的站点验证字符串。|
 |`verification.yandex`|_未设置_|由 Yandex 提供的要包含在站点元数据中的站点验证字符串。|
+|`verification.mastodon`|_未设置_|由 Mastodon 提供的要包含在站点元数据中的站点验证字符串。|
 
 ## 其他配置文件
 

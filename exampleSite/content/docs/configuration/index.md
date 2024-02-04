@@ -179,6 +179,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`verification.bing`|_Not set_|The site verification string provided by Bing to be included in the site metadata.|
 |`verification.pinterest`|_Not set_|The site verification string provided by Pinterest to be included in the site metadata.|
 |`verification.yandex`|_Not set_|The site verification string provided by Yandex to be included in the site metadata.|
+|`verification.mastodon`|_Not set_|The site verification string provided by Mastodon to be included in the site metadata.|
 <!-- prettier-ignore-end -->
 
 ## Other configuration files
