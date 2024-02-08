@@ -54,8 +54,8 @@ The theme currently supports the following languages out of the box:
 | :egypt: Arabic                          | `ar`    |
 | :bangladesh: Bengali                    | `bn`    |
 | :bulgaria: Bulgarian                    | `bg`    |
-| :cn: Chinese - Simplified (China)       | `zh-cn` |
-| :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
+| :cn: Chinese - Simplified (China)       | `zh-hans` |
+| :taiwan: Chinese - Traditional (Taiwan) | `zh-hant` |
 | :flag-cz: Czech                         | `cs`    |
 | :netherlands: Dutch                     | `nl`    |
 | :finland: Finnish                       | `fi`    |
