@@ -15,4 +15,5 @@
   {{ end -}}
 {{ end -}}
 <!-- prettier-ignore -->
+{{- /* the two "-" around this block removes the newline introduced by the HTML comment above */ -}}
 <a href="{{ $link | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isRemote }} target="_blank" rel="noreferrer"{{ end }}>{{- .Text | safeHTML -}}</a>
