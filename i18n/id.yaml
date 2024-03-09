@@ -54,6 +54,7 @@ sharing:
   telegram: "Bagikan ke Telegram"
   line: "Bagikan ke LINE"
   weibo: "Bagikan ke Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Terbaru"

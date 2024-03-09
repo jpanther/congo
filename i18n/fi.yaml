@@ -54,6 +54,7 @@ sharing:
   telegram: "Jaa Telegramissa"
   line: "Jaa LINEssä"
   weibo: "Jaa Weibossä"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Viimeaikaiset"
