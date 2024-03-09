@@ -1,4 +1,4 @@
-/*! Congo v2.8.0 | MIT License | https://github.com/jpanther/congo */
+/*! Congo v2.8.1 | MIT License | https://github.com/jpanther/congo */
 
 /*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
 
@@ -1254,13 +1254,18 @@ table {
   overflow: auto;
 }
 
+@media (min-width: 768px) {
+  table {
+    display: table;
+  }
+}
+
 /* Fix long inline code sections breaking out of article on mobile */
 
 code {
   word-wrap: break-word;
   /* All browsers since IE 5.5+ */
   overflow-wrap: break-word;
-  /* Renamed property in CSS3 draft spec */
 }
 
 /* -- Chroma Highlight -- */
