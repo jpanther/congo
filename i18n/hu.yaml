@@ -54,6 +54,7 @@ sharing:
   telegram: "Megosztás a Telegramon"
   line: "Megosztás a LINE-on"
   weibo: "Megosztás a Weibo-on"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Friss"

@@ -54,6 +54,7 @@ sharing:
   telegram: "Condividi su Telegram"
   line: "Condividi su LINE"
   weibo: "Condividi su Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Recenti"
