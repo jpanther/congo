@@ -54,6 +54,7 @@ sharing:
   telegram: "شارك على تيليجرام"
   line: "شارك على لاين"
   # weibo: "Share on Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "حديثًا"

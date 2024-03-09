@@ -54,6 +54,7 @@ sharing:
   telegram: "Sdílejte na Telegram"
   line: "Sdílejte na LINE"
   weibo: "Sdílejte na Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Nedávné"
