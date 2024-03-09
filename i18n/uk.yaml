@@ -58,6 +58,7 @@ sharing:
   telegram: "Поширити на Telegram"
   line: "Поширити на LINE"
   weibo: "Поширити на Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Недавні дописи"

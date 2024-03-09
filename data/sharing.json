@@ -34,6 +34,11 @@
     "title": "sharing.twitter",
     "url": "https://twitter.com/intent/tweet/?url=%s&text=%s"
   },
+  "x-twitter": {
+    "icon": "x-twitter",
+    "title": "sharing.x-twitter",
+    "url": "https://x.com/intent/tweet/?url=%s&text=%s"
+  },
   "telegram": {
     "icon": "telegram",
     "title": "sharing.telegram",
