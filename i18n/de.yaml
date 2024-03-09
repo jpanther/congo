@@ -54,6 +54,7 @@ sharing:
   telegram: "Auf Telegram teilen"
   line: "Auf LINE teilen"
   weibo: "Auf Weibo teilen"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Neue Beiträge"

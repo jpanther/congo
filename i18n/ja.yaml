@@ -54,6 +54,7 @@ sharing:
   telegram: "Telegramでシェアする"
   line: "LINEでシェアする"
   weibo: "Weiboでシェアする"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "最近の記事"

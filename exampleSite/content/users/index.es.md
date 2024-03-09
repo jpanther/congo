@@ -71,5 +71,7 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [stupidjoey.net](https://stupidjoey.net)                               | Personal Site and Tech blog     |
 | [aminelch.github.io](https://aminelch.github.io)                       | Personal Site and Blog          |
 | [robertboscacci.com](https://robertboscacci.com)                       | Personal Site and Blog          |
+| [gorbe.io](https://www.gorbe.io)                                       | Business Site and Blog          |
+| [techwolf12.nl](https://techwolf12.nl)                       | Personal Site and Tech Blog          |
 
 **¿Usuaria de congo?** Para agregar tu sitio a esta lista, [haz un pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).

@@ -54,6 +54,7 @@ sharing:
   telegram: "টেলিগ্রামে শেয়ার করুন"
   line: "লাইনে শেয়ার করুন"
   # weibo: "Share on Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "সাম্প্রতিক"
