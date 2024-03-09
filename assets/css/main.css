@@ -109,14 +109,13 @@ body:has(#menu-controller:checked) {
 
 /* Fix long tables breaking out of article on mobile */
 table {
-  display: block;
-  overflow: auto;
+  @apply block overflow-auto md:table;
 }
 
 /* Fix long inline code sections breaking out of article on mobile */
 code {
   word-wrap: break-word; /* All browsers since IE 5.5+ */
-  overflow-wrap: break-word; /* Renamed property in CSS3 draft spec */
+  @apply break-words;
 }
 
 /* -- Chroma Highlight -- */

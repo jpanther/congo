@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - `x-twitter` option missing when using sharing links ([#809](https://github.com/jpanther/congo/issues/809))
 - Chinese default config contains incorrect `author` block name ([#807](https://github.com/jpanther/congo/pull/807))
 - Links in articles are prefixed with a blank space ([#813](https://github.com/jpanther/congo/pull/813))
+- HTML tables would not fill the container width on desktop ([#826](https://github.com/jpanther/congo/issues/826))
 
 ## [2.8.0] - 2024-01-22
 
