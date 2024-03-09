@@ -54,6 +54,7 @@ sharing:
   telegram: "Telegram에 공유하기"
   line: "LINE에 공유하기"
   weibo: "Weibo에 공유하기"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "최신 글"

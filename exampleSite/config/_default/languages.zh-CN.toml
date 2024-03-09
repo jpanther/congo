@@ -12,7 +12,7 @@ copyright = "&copy; 2023 Congo contributors"
   mainSections = ["samples"]
   description = "一款基于Tailwindcss的强大且轻量的Hugo主题"
 
-[author]
+[params.author]
   name = "Congo"
   image = "img/author.jpg"
   headline = "非凡的主题！"
