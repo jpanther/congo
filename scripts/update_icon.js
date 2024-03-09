@@ -1,8 +1,8 @@
 const jsdom = require("jsdom");
 const fs = require("fs");
 
+const SVG_FILE_DIR = 'node_modules/@fortawesome/fontawesome-free/svgs/brands';
 const DOC_DIR = "./exampleSite/content/samples/icons";
-const FONTAWESOME_VERSION = "v6.5.1";
 const DEFAULT_TABLE_DELIMITER = "| -------------------- | --------------------------------- |";
 
 /**
@@ -12,8 +12,7 @@ const DEFAULT_TABLE_DELIMITER = "| -------------------- | ----------------------
  */
 const add_icon_to_congo = async (icon_name) => {
   try {
-    const icon_url = create_icon_url(icon_name, FONTAWESOME_VERSION);
-    const file = await get_file(icon_url);
+    const file = await get_file(icon_name);
     const final_svg = modify_svg_string(file);
     const icon_download_path = create_icon_download_path(icon_name);
     save_file(icon_download_path, final_svg);
@@ -31,12 +30,8 @@ const modify_svg_string = (svg_string) => {
     svg.querySelector("path").setAttribute("fill", "currentColor");
     return svg.outerHTML;
   } catch (e) {
-    throw new Error("Invalid SVG file");
+    throw new Error("Invalid SVG file" + e);
   }
-};
-
-const create_icon_url = (icon_name, fontawesome_version) => {
-  return `https://site-assets.fontawesome.com/releases/${fontawesome_version}/svgs/brands/${icon_name}.svg`;
 };
 
 const create_icon_download_path = (icon_name) => {
@@ -44,13 +39,7 @@ const create_icon_download_path = (icon_name) => {
 };
 
 const get_file = async (url) => {
-  console.log("Getting file at " + url + "...");
-  const response = await fetch(url);
-  if (response.status >= 400) {
-    throw new Error("Could not download icon / icon not found");
-  }
-  console.log("File retrieved!");
-  return response.text();
+  return fs.readFileSync(SVG_FILE_DIR + `/${url}.svg`, "utf8");
 };
 
 const save_file = (file_path, file) => {
@@ -84,11 +73,15 @@ const add_documentation = async (icon_name) => {
 const process_file = (file_contents, icon_name) => {
   const [headers, table] = file_contents.split(DEFAULT_TABLE_DELIMITER);
   const table_rows = table.split("\n").map((x) => x.trim()).filter((row) => row !== "");
-  table_rows.push(table_rows[0].replace("amazon", icon_name));
+  table_rows.push(create_table_row(icon_name));
   table_rows.sort();
   const new_table = table_rows.join("\n");
   return `${headers.trimEnd()}\n${DEFAULT_TABLE_DELIMITER}\n${new_table}\n`;
 };
+
+const create_table_row = (name) => {
+  return `| ${name}                | {{< icon ${name} >}}                |`
+}
 
 const get_md_docs = () => {
   return fs.readdirSync(DOC_DIR).filter((file) => file.endsWith(".md"));

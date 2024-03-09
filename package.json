@@ -78,5 +78,8 @@
       "from": "node_modules/quicklink/dist/quicklink.umd.js",
       "to": "assets/lib/quicklink/quicklink.umd.js"
     }
-  ]
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1"
+  }
 }
