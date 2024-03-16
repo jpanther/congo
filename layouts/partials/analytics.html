@@ -10,5 +10,15 @@
       src="{{ default "https://plausible.io/js/script.js" site.Params.plausibleAnalytics.script }}"
     ></script>
   {{ end }}
+  {{ with site.Params.umamiAnalytics }}
+    {{- $region := "eu" }}
+    {{- if isset . "region" }}
+      {{- $region = .region }}
+    {{- end }}
+    <script defer 
+      src="https://{{ $region }}.umami.is/script.js" 
+      data-website-id="{{ .site }}">
+    </script>
+  {{ end }}
   {{ template "_internal/google_analytics.html" . }}
 {{ end }}

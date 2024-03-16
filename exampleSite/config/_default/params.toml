@@ -71,6 +71,10 @@ fingerprintAlgorithm = "sha256"
 [fathomAnalytics]
   # site = "ABC12345"
 
+#[umamiAnalytics]
+#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"  
+#  region = "eu"  # Can be either "eu" or "us"
+
 [verification]
   # google = ""
   # bing = ""
