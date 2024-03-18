@@ -73,5 +73,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [robertboscacci.com](https://robertboscacci.com)                       | Personal Site and Blog          |
 | [gorbe.io](https://www.gorbe.io)                                       | Business Site and Blog          |
 | [techwolf12.nl](https://techwolf12.nl)                       | Personal Site and Tech Blog          |
+| [kylecapehart.com](https://kylecapehart.com/)                          | Personal Site and Blog          |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
