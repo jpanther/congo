@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Tamil translation ([#830](https://github.com/jpanther/congo/pull/830))
+
 ## [2.8.1] - 2024-03-09
 
 ### Changed
