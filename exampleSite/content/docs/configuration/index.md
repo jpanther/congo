@@ -74,6 +74,7 @@ The theme currently supports the following languages out of the box:
 | :ru: Russian                            | `ru`    |
 | :slovakia: Slovak                       | `sk`    |
 | :es: Spanish (Spain)                    | `es`    |
+| :flag-lk: Tamil                         | `ta`    |
 | :tr: Turkish                            | `tr`    |
 | :ukraine: Ukrainian                     | `uk`    |
 
