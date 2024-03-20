@@ -40,6 +40,18 @@ To enable Plausible analytics support, simply provide the domain of the website 
   script = "https://plausible.yoursite.com/js/script.js"
 ```
 
+### Umami Analytics
+
+To enable support for Umami Analytics, insert the *tracking code token* provided by Umami into the `site` parameter to monitor the site. You can also insert a `region` parameter to indicate the region of Umami Analytics servers that you want to connect to. The values can be `eu` or `us`. Refer to [getting started section at umami.is](https://umami.is/docs/getting-started) for more details.
+
+```toml
+# config/_default/params.toml
+
+[umamiAnalytics]
+  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"  
+  region = "eu"  # can be either "eu" or "us"
+```
+
 ### Google Analytics
 
 Google Analytics support is provided through the internal Hugo partial. Simply provide the `googleAnalytics` key in the `config/_default/config.toml` file and the script will be added automatically.
