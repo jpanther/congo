@@ -1,0 +1,60 @@
+article:
+  anchor_label: "Neo"
+  date: "{{ .Date }}"
+  date_updated: "Đã cập nhật: {{ .Date }}"
+  draft: "Bản nháp"
+  edit_title: "Chỉnh sửa"
+  reading_time:
+    one: "{{ .Count }} phút"
+    other: "{{ .Count }} phút"
+  reading_time_title: "Thời gian đọc"
+  table_of_contents: "Mục lục"
+  word_count:
+    one: "{{ .Count }} từ"
+    other: "{{ .Count }} từ"
+
+author:
+  byline_title: "Tác giả"
+
+code:
+  copy: "Sao chép"
+  copied: "Đã sao chép"
+
+error:
+  404_title: "Không tìm thấy trang :confused:"
+  404_error: "Lỗi 404"
+  404_description: "Có vẻ như trang bạn yêu cầu không tồn tại."
+
+footer:
+  dark_appearance: "Chuyển sang giao diện tối"
+  light_appearance: "Chuyển sang giao diện sáng"
+  powered_by: "Cung cấp bởi {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Liên kết đến trang web bên ngoài"
+  no_articles: "Chưa có bài viết ở đây."
+
+nav:
+  scroll_to_top_title: "Cuộn lên trên cùng"
+  skip_to_main: "Chuyển đến nội dung chính"
+
+search:
+  open_button_title: "Tìm kiếm (/)"
+  close_button_title: "Đóng (Esc)"
+  input_placeholder: "Tìm kiếm"
+
+sharing:
+  email: "Gửi qua email"
+  facebook: "Chia sẻ lên Facebook"
+  linkedin: "Chia sẻ lên LinkedIn"
+  mastodon: "Toot trên Mastodon"
+  pinterest: "Pin lên Pinterest"
+  reddit: "Gửi lên Reddit"
+  twitter: "Tweet lên Twitter"
+  telegram: "Chia sẻ lên Telegram"
+  line: "Chia sẻ lên LINE"
+  weibo: "Chia sẻ lên Weibo"
+  x-twitter: "Đăng lên X"
+
+shortcode:
+  recent_articles: "Gần đây"
