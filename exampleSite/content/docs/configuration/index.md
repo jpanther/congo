@@ -127,6 +127,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |Name|Default|Description|
 |---|---|---|
 |`colorScheme`|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `cherry`, `fire`, `ocean`, `sapphire` and `slate`. Refer to the [Colour Schemes]({{< ref "getting-started#colour-schemes" >}}) section for more details.|
+|`defaultThemeColor`|`"#FFFFFF"`|The original value (before any scripts modify it) to use for the `theme-color` meta tag. The meta tag will be changed based on the theme (`light` or `dark`) but it is useful for services that source the original value this tag to display an accent color (e.g. Discord)|
 |`defaultAppearance`|`"light"`|The default theme appearance, either `light` or `dark`.|
 |`autoSwitchAppearance`|`true`|Whether the theme appearance automatically switches based upon the visitor's operating system preference. Set to `false` to force the site to always use the `defaultAppearance`.|
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
