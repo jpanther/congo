@@ -751,6 +751,11 @@ video {
   margin-bottom: 2em;
 }
 
+.prose :where(video):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .prose :where(kbd):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   font-weight: 600;
   font-family: inherit;
@@ -948,11 +953,6 @@ video {
 .prose :where(picture > img):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.prose :where(video):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
 
 .prose :where(li):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
