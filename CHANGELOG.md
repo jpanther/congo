@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Upgrade to KaTeX v0.16.10 ([#839](https://github.com/jpanther/congo/pull/839))
-- Upgrade to Typography v0.5.11 ([#841](https://github.com/jpanther/congo/pull/841))
+- Upgrade to Typography v0.5.12 ([#841](https://github.com/jpanther/congo/pull/841), [#860](https://github.com/jpanther/congo/pull/860))
 - Upgrade to Tailwind v3.4.3 ([#843](https://github.com/jpanther/congo/pull/843))
 
 ## [2.8.1] - 2024-03-09
