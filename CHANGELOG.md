@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Tamil translation ([#830](https://github.com/jpanther/congo/pull/830))
+- Vietnamese translation ([#845](https://github.com/jpanther/congo/pull/845))
+- Swedish translation ([#852](https://github.com/jpanther/congo/pull/852))
 
 ## [2.8.1] - 2024-03-09
 

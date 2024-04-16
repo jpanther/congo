@@ -74,5 +74,6 @@ Congoを使用して構築された実際のウェブサイト。
 | [gorbe.io](https://www.gorbe.io)                                       | Business Site and Blog          |
 | [techwolf12.nl](https://techwolf12.nl)                                 | Personal Site and Tech Blog     |
 | [kylecapehart.com](https://kylecapehart.com/)                          | Personal Site and Blog          |
+| [hosni.info](https://hosni.info/)                                      | Personal site and Tech Blog     |
 
 **Congoを使っていますか？** あなたのウェブサイトを加えるために[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)を投げてください。

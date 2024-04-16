@@ -74,5 +74,6 @@ La lista a continuación es solo un puñado de sitios web creados con el tema Co
 | [gorbe.io](https://www.gorbe.io)                                       | Business Site and Blog          |
 | [techwolf12.nl](https://techwolf12.nl)                                 | Personal Site and Tech Blog     |
 | [kylecapehart.com](https://kylecapehart.com/)                          | Personal Site and Blog          |
+| [hosni.info](https://hosni.info/)                                      | Personal site and Tech Blog     |
 
 **¿Usuaria de congo?** Para agregar tu sitio a esta lista, [haz un pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).

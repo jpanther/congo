@@ -74,5 +74,6 @@ showEdit: false
 | [gorbe.io](https://www.gorbe.io)                                       | Business Site and Blog          |
 | [techwolf12.nl](https://techwolf12.nl)                                 | Personal Site and Tech Blog     |
 | [kylecapehart.com](https://kylecapehart.com/)                          | Personal Site and Blog          |
+| [hosni.info](https://hosni.info/)                                      | Personal site and Tech Blog     |
 
 **想成为Congo的用户？** 要将您的网站添加到此列表中，请提交[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)来添加。
