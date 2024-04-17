@@ -1,0 +1,60 @@
+article:
+  anchor_label: "Ankare"
+  date: "{{ .Date }}"
+  date_updated: "Uppdaterad: {{ .Date }}"
+  draft: "Utkast"
+  edit_title: "Redigera innehåll"
+  reading_time:
+    one: "{{ .Count }} min"
+    other: "{{ .Count }} min"
+  reading_time_title: "Lästid"
+  table_of_contents: "Innehållsförteckning"
+  word_count:
+    one: "{{ .Count }} ord"
+    other: "{{ .Count }} ord"
+
+author:
+  byline_title: "Författare"
+
+code:
+  copy: "Kopiera"
+  copied: "Kopierat"
+
+error:
+  404_title: "Sidan hittades inte :confused:"
+  404_error: "Error 404"
+  404_description: "Den sida du har begärt verkar inte finnas."
+
+footer:
+  dark_appearance: "Byt till mörkt utseende"
+  light_appearance: "Byt till ljust utseende"
+  powered_by: "Drivs av {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Länk till extern webbplats"
+  no_articles: "Det finns inga artiklar att visa här ännu."
+
+nav:
+  scroll_to_top_title: "Scrolla till början"
+  skip_to_main: "Hoppa till huvudinnehåll"
+
+search:
+  open_button_title: "Sök (/)"
+  close_button_title: "Stäng (Esc)"
+  input_placeholder: "Sök"
+
+sharing:
+  email: "Skicka via e-post"
+  facebook: "Dela på Facebook"
+  linkedin: "Dela på LinkedIn"
+  mastodon: "Dela på Mastodon"
+  pinterest: "Fäst på Pinterest"
+  reddit: "Publicera på Reddit"
+  twitter: "Twittra på Twitter"
+  telegram: "Dela på Telegram"
+  line: "Dela på LINE"
+  weibo: "Dela på Weibo"
+  x-twitter: "Publicera på X"
+
+shortcode:
+  recent_articles: "Senaste"
