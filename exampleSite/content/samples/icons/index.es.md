@@ -21,6 +21,7 @@ La lista completa de íconos incorporados y sus nombres correspondientes se pued
 | apple                | {{< icon apple >}}                |
 | bars                 | {{< icon bars >}}                 |
 | blogger              | {{< icon blogger >}}              |
+| bluesky              | {{< icon bluesky >}}              |
 | bug                  | {{< icon bug >}}                  |
 | check                | {{< icon check >}}                |
 | chevron-down         | {{< icon chevron-down >}}         |
