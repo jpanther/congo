@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- New icon for `bluesky` ([#851](https://github.com/jpanther/congo/pull/851))
+
 ## [2.8.2] - 2024-04-17
 
 ### Added
