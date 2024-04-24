@@ -1,20 +1,22 @@
 {{ if .Get "src" }}
   {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+  <!-- prettier-ignore -->
   <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "href" -}}
       <a href="{{ .Get "href" }}">
     {{- end -}}
-    <img src="{{ $image.RelPermalink }}"
-      {{- if or (.Get "alt") (.Get "caption") }}
-        alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
-      {{- end -}}
-      {{ if .Site.Params.enableImageLazyLoading | default true }}
-        loading="lazy"
-      {{ end }}
-      width="100%"
-      height="auto"
-      style="max-width:{{ div $image.Width 2 }}px; max-height:{{ div $image.Height 2 }}px;"
-    />
+
+    {{ $altText := "" }}
+    {{ with .Get "alt" }}
+      {{ $altText = . }}
+    {{ else }}
+      {{ $altText = (.Get "caption") | markdownify | plainify }}
+    {{ end }}
+
+    {{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
+    {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+    {{ partial "picture.html" (dict "img" $image "alt" $altText "x2" true "lazy" $lazy "webp" $webp) }}
+
     {{- if .Get "href" }}</a>{{ end -}}
     {{- if .Get "caption" -}}
       <figcaption>

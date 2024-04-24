@@ -20,7 +20,7 @@
         </div>
       </div>
     {{ end }}
-    <div class="min-w-0 min-h-0 max-w-prose grow">
+    <div class="min-h-0 min-w-0 max-w-prose grow">
       {{ .Content | emojify }}
     </div>
   </section>
@@ -31,7 +31,7 @@
           <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
             {{ .Key }}
           </h2>
-          <hr class="border-dotted w-36 border-neutral-400" />
+          <hr class="w-36 border-dotted border-neutral-400" />
           {{ range .Pages }}
             {{ partial "article-link.html" . }}
           {{ end }}
@@ -44,8 +44,8 @@
     </section>
     {{ partial "pagination.html" . }}
   {{ else }}
-    <section class="mt-10 prose dark:prose-invert">
-      <p class="py-8 border-t">
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8">
         <em>{{ i18n "list.no_articles" | emojify }}</em>
       </p>
     </section>

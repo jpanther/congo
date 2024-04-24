@@ -12,6 +12,7 @@
   --color-neutral-700: 64, 64, 64;
   --color-neutral-800: 38, 38, 38;
   --color-neutral-900: 23, 23, 23;
+  --color-neutral-950: 10, 10, 10;
   /* Rose */
   --color-primary-50: 255, 241, 242;
   --color-primary-100: 255, 228, 230;
@@ -23,6 +24,7 @@
   --color-primary-700: 190, 18, 60;
   --color-primary-800: 159, 18, 57;
   --color-primary-900: 136, 19, 55;
+  --color-primary-950: 76, 5, 25;
   /* Green */
   --color-secondary-50: 240, 253, 244;
   --color-secondary-100: 220, 252, 231;
@@ -34,4 +36,5 @@
   --color-secondary-700: 21, 128, 61;
   --color-secondary-800: 22, 101, 52;
   --color-secondary-900: 20, 83, 45;
+  --color-secondary-950: 5, 46, 22;
 }

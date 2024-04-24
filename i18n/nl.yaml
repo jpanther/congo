@@ -1,7 +1,7 @@
 article:
   anchor_label: "Anker"
   date: "{{ .Date }}"
-  date_updated: "Bijgwerkt: {{ .Date }}"
+  date_updated: "Bijgewerkt: {{ .Date }}"
   draft: "Concept"
   edit_title: "Bewerk inhoud"
   reading_time:
@@ -51,6 +51,10 @@ sharing:
   pinterest: "Pin op Pinterest"
   reddit: "Verzend naar Reddit"
   twitter: "Tweet op Twitter"
+  telegram: "Deel op Telegram"
+  line: "Deel op LINE"
+  weibo: "Deel op Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Recent"

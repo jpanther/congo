@@ -60,6 +60,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "latest"
+          extended: true
 
       - name: Build
         run: hugo --minify

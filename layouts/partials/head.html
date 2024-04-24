@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="rgb(255,255,255)" />
+  <meta name="theme-color" content="{{ .Site.Params.defaultThemeColor | default "#ffffff" }}" />
   {{/* Title */}}
   {{ if .IsHome -}}
     <title>{{ .Site.Title | emojify }}</title>
@@ -43,9 +43,18 @@
     {{ $jsSearch := resources.Get "js/search.js" }}
     {{ $assets.Add "js" (slice $jsFuse $jsSearch) }}
   {{ end }}
+  {{ if .Site.Params.enableQuicklink | default false }}
+    {{ $jsQuicklink := resources.Get "lib/quicklink/quicklink.umd.js" }}
+    {{ $jsQuicklinkInit := resources.Get "js/quicklink.js" }}
+    {{ $assets.Add "js" (slice $jsQuicklink $jsQuicklinkInit) }}
+  {{ end }}
   {{ if .Site.Params.enableCodeCopy | default false }}
     {{ $jsCode := resources.Get "js/code.js" }}
     {{ $assets.Add "js" (slice $jsCode) }}
+  {{ end }}
+  {{ if or (eq .Site.Params.header.layout "hamburger") (eq .Site.Params.header.layout "hybrid") }}
+    {{ $jsMenu := resources.Get "js/menu.js" }}
+    {{ $assets.Add "js" (slice $jsMenu) }}
   {{ end }}
   {{ if eq (site.Language.LanguageDirection | default "ltr") "rtl" }}
     {{ $jsRTL := resources.Get "js/rtl.js" }}
@@ -111,14 +120,17 @@
   {{ with .Site.Params.verification.yandex }}
     <meta name="yandex-verification" content="{{ . }}" />
   {{ end }}
+  {{ with $.Params.externalUrl }}
+    <meta http-equiv="refresh" content="0; url={{ . }}" />
+  {{ end }}
   {{/* Social */}}
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{/* Schema */}}
   {{ partial "schema.html" . }}
   {{/* Me */}}
-  {{ with .Site.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
-  {{ with .Site.Author.links }}
+  {{ with .Site.Language.Params.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
+  {{ with .Site.Language.Params.Author.links }}
     {{ range $links := . }}
       {{ range $name, $url := $links }}<link href="{{ $url }}" rel="me" />{{ end }}
     {{ end }}

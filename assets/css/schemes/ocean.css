@@ -12,6 +12,7 @@
   --color-neutral-700: 51, 65, 85;
   --color-neutral-800: 30, 41, 59;
   --color-neutral-900: 15, 23, 42;
+  --color-neutral-950: 2, 6, 23;
   /* Blue */
   --color-primary-50: 239, 246, 255;
   --color-primary-100: 219, 234, 254;
@@ -23,6 +24,7 @@
   --color-primary-700: 29, 78, 216;
   --color-primary-800: 30, 64, 175;
   --color-primary-900: 30, 58, 138;
+  --color-primary-950: 23, 37, 8;
   /* Cyan */
   --color-secondary-50: 236, 254, 255;
   --color-secondary-100: 207, 250, 254;
@@ -34,4 +36,5 @@
   --color-secondary-700: 14, 116, 144;
   --color-secondary-800: 21, 94, 117;
   --color-secondary-900: 22, 78, 99;
+  --color-secondary-950: 8, 51, 69;
 }

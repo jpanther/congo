@@ -10,37 +10,30 @@
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-        {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
-      </div>
+      {{ if or
+        (.Params.showDate | default (.Site.Params.article.showDate | default true))
+        (and (.Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false)) (ne (partial "functions/date.html" .Date) (partial "functions/date.html" .Lastmod)))
+        (and (.Params.showWordCount | default (.Site.Params.article.showWordCount | default false)) (ne .WordCount 0))
+        (and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0))
+        (.Params.showEdit | default (.Site.Params.article.showEdit | default false))
+      }}
+        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+          {{ partial "article-meta.html" (dict "context" . "scope" "single") }}
+        </div>
+      {{ end }}
       {{ with $feature }}
         <div class="prose">
-          <img
-            class="mb-6 -mt-4 rounded-md"
-            {{ if eq .MediaType.SubType "svg" }}
-              src="{{ .RelPermalink }}"
-            {{ else }}
-              width="{{ .Width }}"
-              height="{{ .Height }}"
-              {{ if lt .Width 660 }}
-                src="{{ .RelPermalink }}"
-              {{ else }}
-                srcset="
-                {{- (.Resize "330x").RelPermalink }} 330w,
-                {{- (.Resize "660x").RelPermalink }} 660w,
-                {{- (.Resize "1024x").RelPermalink }} 1024w,
-                {{- (.Resize "1320x").RelPermalink }} 2x"
-              {{ end }}
-            {{ end }}
-            alt="{{ $.Params.featureAlt | default $.Params.coverAlt | default "" }}"
-          />
+          {{ $altText := $.Params.featureAlt | default $.Params.coverAlt | default "" }}
+          {{ $class := "mb-6 -mt-4 rounded-md" }}
+          {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+          {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "lazy" false "webp" $webp) }}
           {{ with $.Params.coverCaption }}
-            <figcaption class="mb-6 -mt-3 text-center">{{ . | markdownify }}</figcaption>
+            <figcaption class="-mt-3 mb-6 text-center">{{ . | markdownify }}</figcaption>
           {{ end }}
         </div>
       {{ end }}
     </header>
-    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       {{ if and (.Params.showTableOfContents | default (.Site.Params.article.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
         <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
           <div class="toc pe-5 print:hidden lg:sticky lg:top-10">
@@ -48,11 +41,11 @@
           </div>
         </div>
       {{ end }}
-      <div class="min-w-0 min-h-0 max-w-prose grow">
+      <div class="min-h-0 min-w-0 max-w-prose grow">
         {{ .Content | emojify }}
       </div>
     </section>
-    <footer class="pt-8 max-w-prose print:hidden">
+    <footer class="max-w-prose pt-8 print:hidden">
       {{ partial "author.html" . }}
       {{ partial "sharing-links.html" . }}
       {{ partial "article-pagination.html" . }}

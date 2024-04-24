@@ -1,0 +1,60 @@
+article:
+  anchor_label: "Котва"
+  date: "{{ .Date }}"
+  date_updated: "Обновено: {{ .Date }}"
+  draft: "Чернова"
+  edit_title: "Редактиране на съдържание"
+  reading_time:
+    one: "{{ .Count }} минута"
+    other: "{{ .Count }} минути"
+  reading_time_title: "Време за четене"
+  table_of_contents: "Съдържание"
+  word_count:
+    one: "{{ .Count }} дума"
+    other: "{{ .Count }} думи"
+
+author:
+  byline_title: "Автор"
+
+code:
+  copy: "Копирай"
+  copied: "Копирано"
+
+error:
+  404_title: "Страницата не е намерена :confused:"
+  404_error: "Грешка 404"
+  404_description: "Изглежда, че страницата, която търсите не съществува."
+
+footer:
+  dark_appearance: "Превключи към тъмна тема"
+  light_appearance: "Превключи към светла тема"
+  powered_by: "Осъществено чрез {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Връзка към външен сайт"
+  no_articles: "Тук няма статии за прелистване."
+
+nav:
+  scroll_to_top_title: "Превърти до началото"
+  skip_to_main: "Преминаване към основното съдържание"
+
+search:
+  open_button_title: "Търсене (/)"
+  close_button_title: "Затвори (Esc)"
+  input_placeholder: "Търси"
+
+sharing:
+  email: "Изпращане по имейл"
+  facebook: "Споделяне във Facebook"
+  linkedin: "Споделяне в LinkedIn"
+  mastodon: "Публикуване в Mastodon"
+  pinterest: "Пин в Pinterest"
+  reddit: "Публикуване в Reddit"
+  twitter: "Туит в Twitter"
+  telegram: "Споделете в Telegram"
+  line: "Споделете в LINE"
+  weibo: "Споделете в Weibo"
+  # x-twitter: "Post on X"
+
+shortcode:
+  recent_articles: "Последни"

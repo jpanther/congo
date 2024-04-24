@@ -6,6 +6,106 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Umami Analytics support ([#832](https://github.com/jpanther/congo/pull/832))
+- Theme parameter to set a default HTML theme colour ([#849](https://github.com/jpanther/congo/pull/849))
+- New icon for `bluesky` ([#851](https://github.com/jpanther/congo/pull/851))
+
+## [2.8.2] - 2024-04-17
+
+### Added
+
+- Tamil translation ([#830](https://github.com/jpanther/congo/pull/830))
+- Vietnamese translation ([#845](https://github.com/jpanther/congo/pull/845))
+- Swedish translation ([#852](https://github.com/jpanther/congo/pull/852))
+
+### Changed
+
+- Upgrade to KaTeX v0.16.10 ([#839](https://github.com/jpanther/congo/pull/839))
+- Upgrade to Typography v0.5.12 ([#841](https://github.com/jpanther/congo/pull/841), [#860](https://github.com/jpanther/congo/pull/860))
+- Upgrade to Tailwind v3.4.3 ([#843](https://github.com/jpanther/congo/pull/843))
+
+### Fixed
+
+- Background color inconsistent on mobile when dark mode enabled ([#796](https://github.com/jpanther/congo/issues/796))
+
+## [2.8.1] - 2024-03-09
+
+### Changed
+
+- Upgrade to ChartJS v4.4.2 ([#817](https://github.com/jpanther/congo/pull/817))
+- Upgrade to Mermaid v10.9.0 ([#825](https://github.com/jpanther/congo/pull/825))
+
+### Fixed
+
+- Table of Contents missing left border detail ([#794](https://github.com/jpanther/congo/issues/794))
+- `x-twitter` option missing when using sharing links ([#809](https://github.com/jpanther/congo/issues/809))
+- Chinese default config contains incorrect `author` block name ([#807](https://github.com/jpanther/congo/pull/807))
+- Links in articles are prefixed with a blank space ([#813](https://github.com/jpanther/congo/pull/813))
+- HTML tables would not fill the container width on desktop ([#826](https://github.com/jpanther/congo/issues/826))
+
+## [2.8.0] - 2024-01-22
+
+### Added
+
+- Quicklink support ([#646](https://github.com/jpanther/congo/pull/646))
+- Automatic support for WebP images ([#693](https://github.com/jpanther/congo/pull/693))
+- Warning when building if links to Markdown files cannot be resolved ([#691](https://github.com/jpanther/congo/pull/691))
+- Ability to share articles to Telegram and Line ([#719](https://github.com/jpanther/congo/pull/719))
+- New icons for `line`, `google-scholar`, `mendeley` and `weibo` ([#719](https://github.com/jpanther/congo/pull/719), [#755](https://github.com/jpanther/congo/pull/755), [#756](https://github.com/jpanther/congo/pull/756))
+- Weibo sharing links ([#756](https://github.com/jpanther/congo/pull/756))
+- Support for Tailwind '950' colour variants ([#751](https://github.com/jpanther/congo/pull/751))
+- Table of contents will now scroll if taller than the browser height ([#733](https://github.com/jpanther/congo/pull/733))
+- External URL article stubs now auto-redirect if leaf pages are generated ([#778](https://github.com/jpanther/congo/pull/778))
+- Korean translation ([#731](https://github.com/jpanther/congo/pull/731))
+- Chinese translation of Example site and Docs ([#776](https://github.com/jpanther/congo/pull/776))
+
+### Changed
+
+- ⚠️ Hugo extended version is now required when building sites
+- ⚠️ Author params block in language configuration has been moved to `params.author` ([#704](https://github.com/jpanther/congo/pull/704))
+- Refactored image logic into a new `picture.html` partial ([#693](https://github.com/jpanther/congo/pull/693))
+- Upgrade to ChartJS v4.4.1 ([#736](https://github.com/jpanther/congo/pull/736))
+- Upgrade to Tailwind v3.4.1 ([#737](https://github.com/jpanther/congo/pull/737), [#752](https://github.com/jpanther/congo/pull/752), [#759](https://github.com/jpanther/congo/pull/759), [#774](https://github.com/jpanther/congo/pull/774))
+- Upgrade to Mermaid v10.7.0 ([#782](https://github.com/jpanther/congo/pull/782))
+- Updated Japanese translation ([#750](https://github.com/jpanther/congo/pull/750))
+
+### Fixed
+
+- Hamburger menu is not dismissed when links are clicked ([#705](https://github.com/jpanther/congo/pull/705))
+- KaTeX, table and code elements wider than the page are not formatted correctly ([#753](https://github.com/jpanther/congo/pull/753))
+- 'ß' character is output at the top of articles ([#764](https://github.com/jpanther/congo/pull/764))
+- Article metadata element is output when there is no metadata to display ([#786](https://github.com/jpanther/congo/pull/786))
+- Header elements not vertically centered when using locale switcher ([#788](https://github.com/jpanther/congo/pull/788))
+
+### Removed
+
+- Fathom Analytics custom domain parameter, as this is no longer supported by Fathom
+
+## [2.7.6] - 2023-11-26
+
+### Fixed
+
+- Some Mermaid diagram elements not styled correctly in dark mode ([#706](https://github.com/jpanther/congo/issues/706))
+
+## [2.7.5] - 2023-11-25
+
+### Added
+
+- Ukrainian translation ([#703](https://github.com/jpanther/congo/pull/703))
+- Bulgarian translation ([#718](https://github.com/jpanther/congo/pull/718))
+
+### Changed
+
+- Updated Dutch translation ([#696](https://github.com/jpanther/congo/pull/696))
+- Upgrade to Mermaid v10.6.1 ([#697](https://github.com/jpanther/congo/pull/697))
+
+### Fixed
+
+- Some files have unnecessary execute permissions ([#714](https://github.com/jpanther/congo/pull/714))
+- Empty block is output when locale switcher is hidden ([#699](https://github.com/jpanther/congo/pull/699))
+
 ## [2.7.4] - 2023-11-05
 
 ### Fixed
@@ -780,7 +880,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.7.4...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.8.2...HEAD
+[2.8.2]: https://github.com/jpanther/congo/compare/v2.8.1...v2.8.2
+[2.8.1]: https://github.com/jpanther/congo/compare/v2.8.0...v2.8.1
+[2.8.0]: https://github.com/jpanther/congo/compare/v2.7.6...v2.8.0
+[2.7.6]: https://github.com/jpanther/congo/compare/v2.7.5...v2.7.6
+[2.7.5]: https://github.com/jpanther/congo/compare/v2.7.4...v2.7.5
 [2.7.4]: https://github.com/jpanther/congo/compare/v2.7.3...v2.7.4
 [2.7.3]: https://github.com/jpanther/congo/compare/v2.7.2...v2.7.3
 [2.7.2]: https://github.com/jpanther/congo/compare/v2.7.1...v2.7.2

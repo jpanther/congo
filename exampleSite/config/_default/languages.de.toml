@@ -12,7 +12,7 @@ copyright = "&copy; 2023 Congo contributors"
   mainSections = ["samples"]
   description = "Ein leistungsstarkes, leichtgewichtiges Theme für Hugo, das mit Tailwind CSS erstellt wurde."
 
-[author]
+[params.author]
   name = "Congo"
   image = "img/author.jpg"
   headline = "Nicht dein Durschnitts-Theme!"

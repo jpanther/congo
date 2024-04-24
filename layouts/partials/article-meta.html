@@ -50,7 +50,7 @@
     (and (ne $scope "single") (.Params.showTaxonomies | default (.Site.Params.list.showTaxonomies | default (.Site.Params.article.showTaxonomies | default false))))
     (and (eq $scope "single") (.Params.showTaxonomies | default (.Site.Params.article.showTaxonomies | default false)))
   }}
-    <div class="flex flex-wrap my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
       {{ range $taxonomy, $terms := .Site.Taxonomies }}
         {{ if (gt (len ($context.GetTerms $taxonomy)) 0) }}
           {{ range $context.GetTerms $taxonomy }}

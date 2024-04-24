@@ -51,6 +51,10 @@ sharing:
   pinterest: "Pune pe Pinterest"
   reddit: "Postează pe Reddit"
   twitter: "Scrie pe Twitter"
+  telegram: "Trimite pe Telegram"
+  line: "Trimite pe LINE"
+  weibo: "Trimite pe Weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Cele mai noi"

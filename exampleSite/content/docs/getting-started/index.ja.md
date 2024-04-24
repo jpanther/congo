@@ -38,7 +38,7 @@ languageCode = "en"
 
 title = "My awesome website"
 
-[author]
+[params.author]
 name = "My name"
 image = "img/author.jpg"
 headline = "A generally awesome human"
@@ -48,7 +48,7 @@ links = [
 ]
 ```
 
-`[author]` はウェブサイト上でどのように著者情報を表示するかを決定します。画像はサイトの `assets/` に置きましょう。リンクはリストの記述順に沿って表示されます。
+`[params.author]` はウェブサイト上でどのように著者情報を表示するかを決定します。画像はサイトの `assets/` に置きましょう。リンクはリストの記述順に沿って表示されます。
 
 各設定に関する詳細情報は、[設定]({{< ref "configuration" >}})セクションで説明されています。
 
@@ -100,7 +100,7 @@ Congoは、テーマ全体で使用される3色のパレットを定義して�
 
 ## コンテンツの整理
 
-Congoは特定のコンテンツタイプを強制しません。そのため、自由にコンテンツを定義することができます。静的なサイトには_pages_、ブログには_posts_、ポートフォリオには_projects_がいいかもしれません。
+Congoは特定のコンテンツタイプを強制しません。そのため、自由にコンテンツを定義することができます。静的なサイトには*pages*、ブログには*posts*、ポートフォリオには*projects*がいいかもしれません。
 
 ### ディレクトリ構造
 
