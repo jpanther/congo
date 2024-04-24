@@ -6,8 +6,8 @@
     {{- $logoAlt = . -}}
   {{- end -}}
   {{- $logoClass := "max-h-[10rem] max-w-[10rem] object-scale-down object-left flex" -}}
+  {{- $logoDarkClass := (print $logoClass " hidden dark:flex") -}}
   {{- if $logo_dark -}}
-    {{- $logoDarkClass := (print $logoClass " hidden dark:flex") -}}
     {{- $logoClass = (print $logoClass " dark:hidden" ) -}}
   {{- end }}  
   {{- if or $logo $logo_dark -}}
