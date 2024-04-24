@@ -1,6 +1,7 @@
 i18n:
-  - i18n/*
+  - changed-files:
+      - any-glob-to-any-file: i18n/*
 
 documentation:
-  - "*.md"
-  - exampleSite/content/*
+  - changed-files:
+      - any-glob-to-any-file: "**/*.md"

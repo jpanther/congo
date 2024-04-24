@@ -52,9 +52,9 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 表はMarkdownのコア仕様には含まれていませんが、Hugoはサポートしています。
 
 | 名前  | 年齢 |
-| ----- | --- |
-| Bob   | 27  |
-| Alice | 23  |
+| ----- | ---- |
+| Bob   | 27   |
+| Alice | 23   |
 
 ### 表中のMarkdown
 
@@ -67,7 +67,7 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 ### Code block with backticks
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

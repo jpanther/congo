@@ -1,0 +1,60 @@
+article:
+  anchor_label: "앵커"
+  date: "{{ .Date }}"
+  date_updated: "수정됨: {{ .Date }}"
+  draft: "초안"
+  edit_title: "편집"
+  reading_time:
+    one: "{{ .Count }} 분"
+    other: "{{ .Count }} 분"
+  reading_time_title: "읽는 데 걸리는 시간"
+  table_of_contents: "목차"
+  word_count:
+    one: "{{ .Count }} 자"
+    other: "{{ .Count }} 자"
+
+author:
+  byline_title: "글쓴이"
+
+code:
+  copy: "복사"
+  copied: "복사됨"
+
+error:
+  404_title: "페이지를 찾을 수 없어요 :confused:"
+  404_error: "Error 404"
+  404_description: "요청하신 페이지를 찾을 수 없어요."
+
+footer:
+  dark_appearance: "다크 모드로 전환"
+  light_appearance: "라이트 모드로 전환"
+  powered_by: "Powered by {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "외부 사이트 링크"
+  no_articles: "아직 글이 존재하지 않아요."
+
+nav:
+  scroll_to_top_title: "위로 스크롤"
+  skip_to_main: "메인 콘텐츠로 이동하기"
+
+search:
+  open_button_title: "검색 (/)"
+  close_button_title: "닫기 (Esc)"
+  input_placeholder: "검색"
+
+sharing:
+  email: "email로 보내기"
+  facebook: "Facebook에 공유하기"
+  linkedin: "LinkedIn에 공유하기"
+  mastodon: "Mastodon에 게시하기"
+  pinterest: "Pinterest에 핀하기"
+  reddit: "Reddit에 게시하기"
+  twitter: "Twitter에 트윗하기"
+  telegram: "Telegram에 공유하기"
+  line: "LINE에 공유하기"
+  weibo: "Weibo에 공유하기"
+  # x-twitter: "Post on X"
+
+shortcode:
+  recent_articles: "최신 글"

@@ -1,6 +1,6 @@
 {{- partial "partials/functions/warnings.html" .Site -}}
 {{- partial "partials/functions/init.html" . -}}
-<!DOCTYPE html>
+<!doctype html>
 <html
   lang="{{- site.Language.LanguageCode | default "" -}}"
   dir="{{- site.Language.LanguageDirection | default "ltr" -}}"
@@ -10,13 +10,13 @@
 >
   {{- partial "head.html" . -}}
   <body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
-        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
         href="#main-content"
-        ><span class="font-bold pe-2 text-primary-600 dark:text-primary-400">&darr;</span
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
         >{{ i18n "nav.skip_to_main" }}</a
       >
     </div>
@@ -26,7 +26,7 @@
     {{ else }}
       {{ partial "partials/header/basic.html" . }}
     {{ end }}
-    <div class="relative flex flex-col grow">
+    <div class="relative flex grow flex-col">
       <main id="main-content" class="grow">
         {{ block "main" . }}{{ end }}
         {{ if and (.Site.Params.footer.showScrollToTop | default true) (gt .WordCount 200) }}

@@ -10,9 +10,9 @@
   {{ if .IsTranslated }}
     {{ $currentLang := .Page.Lang }}
     {{ if site.IsMultiLingual }}
-      <div class="relative group">
+      <div class="group relative">
         <button
-          class="flex items-center justify-end w-full transition-colors group-dark:hover:text-primary-400 group-hover:text-primary-600"
+          class="group-dark:hover:text-primary-400 flex w-full items-center justify-end transition-colors group-hover:text-primary-600"
         >
           {{ partial "icon.html" "translate" }}<span class="text-sm">{{ .Lang | upper }}</span
           ><span class="text-[0.6rem]"
@@ -20,10 +20,10 @@
           >
         </button>
         {{ if eq $dir "down" }}
-          <div class="invisible w-full h-2 bg-transparent group-hover:visible"></div>
+          <div class="invisible w-full bg-transparent group-hover:visible"></div>
         {{ end }}
         <div
-          class="{{ cond (eq $dir "down") "top-8" "bottom-7" }} invisible absolute ltr:right-0 rtl:left-0 z-50 flex flex-col whitespace-nowrap rounded border border-neutral-300 bg-neutral text-start text-base shadow group-hover:visible dark:border-neutral-600 dark:bg-neutral-800"
+          class="{{ if not (eq $dir "down") }} bottom-7 {{ end }} invisible absolute z-50 flex flex-col whitespace-nowrap rounded border border-neutral-300 bg-neutral text-start text-base shadow group-hover:visible ltr:right-0 rtl:left-0 dark:border-neutral-600 dark:bg-neutral-800"
         >
           {{ $siteLanguages := site.Languages }}
           {{ $pageLang := .Page.Lang }}
@@ -36,9 +36,9 @@
                   {{ if eq $pageLang .Lang }}
                     <a
                       href="{{ $translation.RelPermalink }}"
-                      class="flex items-center justify-between w-full px-2 py-1 bg-primary-100 dark:bg-primary-900"
+                      class="flex w-full items-center justify-between bg-primary-100 px-2 py-1 dark:bg-primary-900"
                       >{{ .LanguageName }}<span
-                        class="w-6 ms-2 text-primary-600 dark:text-primary-400"
+                        class="ms-2 w-6 text-primary-600 dark:text-primary-400"
                         >{{ partial "icon.html" "check" }}</span
                       ></a
                     >

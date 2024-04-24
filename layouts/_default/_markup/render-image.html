@@ -6,8 +6,8 @@
 {{ $file := $url.Path }}
 {{ $img := .Page.Resources.GetMatch $file }}
 {{- if and (not $img) .Page.File }}
-    {{ $path := path.Join .Page.File.Dir $file }}
-    {{ $img = resources.Get $path }}
+  {{ $path := path.Join .Page.File.Dir $file }}
+  {{ $img = resources.Get $path }}
 {{ end -}}
 
 {{/* https://github.com/gohugoio/hugo/pull/10666 */}}
@@ -15,14 +15,16 @@
 {{- $x2Param := $params.Get "2x" -}}
 {{- $x2 := false -}}
 {{- if eq $x2Param "true" -}}
-    {{- $x2 = true  -}}
+  {{- $x2 = true -}}
 {{- end -}}
 
 <figure>
   {{- with $img -}}
-    {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "x2" $x2) }}
+    {{ $lazy := $.Page.Site.Params.enableImageLazyLoading | default true }}
+    {{ $webp := $.Page.Site.Params.enableImageWebp | default true }}
+    {{ partial "picture.html" (dict "img" . "alt" $altText "class" $class "x2" $x2 "lazy" $lazy "webp" $webp) }}
   {{- else -}}
-    <img src="{{ .Destination | safeURL }}" alt="{{ $altText }}" class="{{ $class }}"/>
+    <img src="{{ .Destination | safeURL }}" alt="{{ $altText }}" class="{{ $class }}" />
   {{- end -}}
   {{ with $caption }}<figcaption class="text-center">{{ . | markdownify }}</figcaption>{{ end }}
 </figure>

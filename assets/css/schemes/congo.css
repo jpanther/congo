@@ -12,6 +12,7 @@
   --color-neutral-700: 63, 63, 70;
   --color-neutral-800: 39, 39, 42;
   --color-neutral-900: 24, 24, 27;
+  --color-neutral-950: 3, 7, 18;
   /* Violet */
   --color-primary-50: 245, 243, 255;
   --color-primary-100: 237, 233, 254;
@@ -23,6 +24,7 @@
   --color-primary-700: 109, 40, 217;
   --color-primary-800: 91, 33, 182;
   --color-primary-900: 76, 29, 149;
+  --color-primary-950: 46, 16, 101;
   /* Fuchsia */
   --color-secondary-50: 253, 244, 255;
   --color-secondary-100: 250, 232, 255;
@@ -34,4 +36,5 @@
   --color-secondary-700: 162, 28, 175;
   --color-secondary-800: 134, 25, 143;
   --color-secondary-900: 112, 26, 117;
+  --color-secondary-950: 74, 4, 78;
 }

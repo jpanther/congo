@@ -53,6 +53,8 @@ sharing:
   twitter: "Tweet no Twitter"
   telegram: "Compartilhar pelo Telegram"
   line: "Compartilhar pelo LINE"
+  weibo: "Compartilhar pelo weibo"
+  # x-twitter: "Post on X"
 
 shortcode:
   recent_articles: "Recente"

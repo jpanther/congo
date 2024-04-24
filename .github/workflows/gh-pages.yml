@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "latest"
           extended: true
@@ -29,7 +29,7 @@ jobs:
         run: hugo --minify --themesDir ../.. --buildDrafts --baseURL https://jpanther.github.io/congo/
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/stable' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
