@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Theme parameter to set a default HTML theme colour ([#849](https://github.com/jpanther/congo/pull/849))
 - New icon for `bluesky` ([#851](https://github.com/jpanther/congo/pull/851))
 
+### Changed
+
+- Upgrade to Typography v0.5.13 ([#864](https://github.com/jpanther/congo/pull/864))
+
 ## [2.8.2] - 2024-04-17
 
 ### Added
