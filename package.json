@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.12",
+    "@tailwindcss/typography": "^0.5.13",
     "chart.js": "^4.4.2",
     "fuse.js": "^7.0.0",
     "katex": "^0.16.10",
