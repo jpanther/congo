@@ -5,7 +5,7 @@
   {{ $altText := .Get "alt" }}
   {{ $caption := .Get "caption" }}
   {{ $href := .Get "href" }}
-  {{ $class := .Get "class" }}
+  {{ $class := default "mx-auto my-0 rounded-md" (.Get "class") }}
 
   {{ $file := $url.Path }}
   {{ $img := .Page.Resources.GetMatch $file }}

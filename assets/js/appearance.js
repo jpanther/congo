@@ -39,6 +39,7 @@ if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
+  setThemeColor();
   var switchers = document.querySelectorAll("[id^='appearance-switcher']");
   switchers.forEach((switcher) => {
     switcher.addEventListener("click", () => {

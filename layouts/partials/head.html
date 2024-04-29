@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="rgb(255,255,255)" />
+  <meta name="theme-color" content="{{ .Site.Params.defaultThemeColor | default "#ffffff" }}" />
   {{/* Title */}}
   {{ if .IsHome -}}
     <title>{{ .Site.Title | emojify }}</title>

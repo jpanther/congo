@@ -1,0 +1,60 @@
+article:
+  anchor_label: "நங்கூரம்"
+  date: "{{ .Date }}"
+  date_updated: "புதுப்பிக்கப்பட்டது: {{ .Date }}"
+  draft: "வரைவு"
+  edit_title: "உள்ளடக்கத்தைத் திருத்தவும்"
+  reading_time:
+    one: "{{ .Count }} நிமிடம்"
+    other: "{{ .Count }} நிமிடங்கள்"
+  reading_time_title: "படிப்பதற்கு எடுக்கும் நேரம்"
+  table_of_contents: "பொருளடக்கம்"
+  word_count:
+    one: "{{ .Count }} சொல்"
+    other: "{{ .Count }} சொற்கள்"
+
+author:
+  byline_title: "நூலாசிரியர்"
+
+code:
+  copy: "நகலெடுக்கவும்"
+  copied: "நகலெடுக்கப்பட்டது"
+
+error:
+  404_title: "பக்கம் கிடைக்கவில்லை :confused:"
+  404_error: "பிழை 404"
+  404_description: "நீங்கள் கோரிய பக்கம் இல்லை என்று தெரிகிறது."
+
+footer:
+  dark_appearance: "இருண்ட தோற்றத்திற்கு மாறவும்"
+  light_appearance: "ஒளி தோற்றத்திற்கு மாறவும்"
+  powered_by: "{{ .Hugo }} &amp; {{ .Congo }} மூலம் இயக்கப்படுகிறது"
+
+list:
+  externalurl_title: "வெளிப்புற தளத்திற்கான இணைப்பு"
+  no_articles: "இங்கே பட்டியலிட இன்னும் கட்டுரைகள் எதுவும் இல்லை."
+
+nav:
+  scroll_to_top_title: "மேலே உருட்டவும்"
+  skip_to_main: "முக்கிய உள்ளடக்கத்திற்கு செல்க"
+
+search:
+  open_button_title: "தேடு (/)"
+  close_button_title: "மூடு (Esc)"
+  input_placeholder: "தேடு"
+
+sharing:
+  email: "மின்னஞ்சல் மூலம் அனுப்பவும்"
+  facebook: "Facebook இல் பகிரவும்"
+  linkedin: "LinkedIn இல் பகிரவும்"
+  mastodon: "Mastodon இல் டூட் செய்யவும்"
+  pinterest: "Pinterest இல் பின் செய்யவும்"
+  reddit: "Reddit க்கு சமர்ப்பிக்கவும்"
+  twitter: "Twitter இல் ட்வீட் செய்யுங்கள்"
+  telegram: "Telegram இல் பகிரவும்"
+  line: "LINE இல் பகிரவும்"
+  weibo: "Weibo இல் பகிரவும்"
+  x-twitter: "X இல் இடுகையிடவும்"
+
+shortcode:
+  recent_articles: "சமீபத்திய கட்டுரைகள்"
