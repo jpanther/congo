@@ -16,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Upgrade to Typography v0.5.13 ([#864](https://github.com/jpanther/congo/pull/864))
 
+### Fixed
+
+- Featured images overlap page title when article metadata hidden ([#827](https://github.com/jpanther/congo/issues/827))
+
 ## [2.8.2] - 2024-04-17
 
 ### Added

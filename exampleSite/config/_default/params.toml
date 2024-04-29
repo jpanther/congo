@@ -72,7 +72,7 @@ fingerprintAlgorithm = "sha256"
   # site = "ABC12345"
 
 #[umamiAnalytics]
-#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"  
+#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 #  region = "eu"  # Can be either "eu" or "us"
 
 [verification]
