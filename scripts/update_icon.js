@@ -1,7 +1,7 @@
 const jsdom = require("jsdom");
 const fs = require("fs");
 
-const SVG_FILE_DIR = 'node_modules/@fortawesome/fontawesome-free/svgs/brands';
+const SVG_FILE_DIR = "node_modules/@fortawesome/fontawesome-free/svgs/brands";
 const DOC_DIR = "./exampleSite/content/samples/icons";
 const DEFAULT_TABLE_DELIMITER = "| -------------------- | --------------------------------- |";
 
@@ -72,7 +72,10 @@ const add_documentation = async (icon_name) => {
  */
 const process_file = (file_contents, icon_name) => {
   const [headers, table] = file_contents.split(DEFAULT_TABLE_DELIMITER);
-  const table_rows = table.split("\n").map((x) => x.trim()).filter((row) => row !== "");
+  const table_rows = table
+    .split("\n")
+    .map((x) => x.trim())
+    .filter((row) => row !== "");
   table_rows.push(create_table_row(icon_name));
   table_rows.sort();
   const new_table = table_rows.join("\n");
@@ -80,8 +83,8 @@ const process_file = (file_contents, icon_name) => {
 };
 
 const create_table_row = (name) => {
-  return `| ${name}                | {{< icon ${name} >}}                |`
-}
+  return `| ${name}                | {{< icon ${name} >}}                |`;
+};
 
 const get_md_docs = () => {
   return fs.readdirSync(DOC_DIR).filter((file) => file.endsWith(".md"));
