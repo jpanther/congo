@@ -9,7 +9,8 @@
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
     "example": "hugo server --bind 0.0.0.0 -p 8008 --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ ",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "add-icon": "node scripts/index.js add-icon"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "chart.js": "^4.4.2",
     "fuse.js": "^7.0.0",
+    "jsdom": "^23.0.1",
     "katex": "^0.16.10",
     "mermaid": "^10.9.0",
     "prettier": "^3.2.5",
@@ -76,5 +78,8 @@
       "from": "node_modules/quicklink/dist/quicklink.umd.js",
       "to": "assets/lib/quicklink/quicklink.umd.js"
     }
-  ]
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1"
+  }
 }
