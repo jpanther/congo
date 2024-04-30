@@ -21,6 +21,7 @@ Die vollständige Liste der integrierten Icons und ihre entsprechenden Namen fin
 | apple                | {{< icon apple >}}                |
 | bars                 | {{< icon bars >}}                 |
 | blogger              | {{< icon blogger >}}              |
+| bluesky              | {{< icon bluesky >}}              |
 | bug                  | {{< icon bug >}}                  |
 | check                | {{< icon check >}}                |
 | chevron-down         | {{< icon chevron-down >}}         |

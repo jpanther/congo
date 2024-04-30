@@ -66,6 +66,7 @@ Congoは現在、以下の言語に対応しています:
 | :indonesia: Indonesian                  | `id`    |
 | :it: Italian                            | `it`    |
 | :jp: Japanese                           | `ja`    |
+| :kr: Korean                             | `ko`    |
 | :poland: Polish                         | `pl`    |
 | :brazil: Portuguese (Brazil)            | `pt-br` |
 | :portugal: Portuguese (Portugal)        | `pt-pt` |
@@ -73,8 +74,11 @@ Congoは現在、以下の言語に対応しています:
 | :ru: Russian                            | `ru`    |
 | :slovakia: Slovak                       | `sk`    |
 | :es: Spanish (Spain)                    | `es`    |
+| :sweden: Swedish                        | `sv`    |
+| :flag-lk: Tamil                         | `ta`    |
 | :tr: Turkish                            | `tr`    |
 | :ukraine: Ukrainian                     | `uk`    |
+| :vietnam: Vietnamese                    | `vi`    |
 
 翻訳文字列を含むカスタムファイルを `i18n/[code].yaml` に作成することでデフォルトの翻訳をオーバーライドできます。このメソッドを使って新しい言語を追加することもできます。新しい翻訳をコミュニティと共有したい場合、[Pull Request](https://github.com/jpanther/congo/pulls)を作ってください。
 
@@ -125,6 +129,7 @@ Congoはテーマの機能を制御する多数の設定パラメーターを提
 |Name|Default|Description|
 |---|---|---|
 |`colorScheme`|`"congo"`|使用する配色。有効な値は `congo` (デフォルト), `avocado`, `cherry`, `fire`, `ocean`, `sapphire`, `slate` です。詳しくは [カラースキーム]({{< ref "getting-started#カラースキーム" >}})セクションを参照してください。|
+|`defaultThemeColor`|`"#FFFFFF"`|まだ翻訳されていません。|
 |`defaultAppearance`|`"light"`|デフォルトのテーマ外観、 `light` または `dark` のいずれか。|
 |`autoSwitchAppearance`|`true`|テーマの外観を訪問者のオペレーティングシステムの設定に基づいて自動的に切り替えるかどうか。常に `defaultAppearance` を使うようにするには `false` を設定します。|
 |`enableSearch`|`false`|サイト内検索を有効にするかどうか。検索機能を有効にするには `true` を設定します。検索機能は、[サイト設定](#サイト設定)の `outputs.home` が正しく設定されているかどうかに依存することに注意してください。|

@@ -15,9 +15,9 @@ jobs:
           days-before-stale: 120
           days-before-close: 30
           stale-issue-label: "stale"
-          exempt-issue-labels: "wip"
+          exempt-issue-labels: "wip,help wanted,dependencies"
           stale-pr-label: "stale"
-          exempt-pr-labels: "wip"
+          exempt-pr-labels: "wip,help wanted,dependencies"
           stale-issue-message: >
             This issue has been automatically marked as stale because it has not had any recent activity.
 

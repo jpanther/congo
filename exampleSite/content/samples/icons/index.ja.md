@@ -21,6 +21,7 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | apple                | {{< icon apple >}}                |
 | bars                 | {{< icon bars >}}                 |
 | blogger              | {{< icon blogger >}}              |
+| bluesky              | {{< icon bluesky >}}              |
 | bug                  | {{< icon bug >}}                  |
 | check                | {{< icon check >}}                |
 | chevron-down         | {{< icon chevron-down >}}         |

@@ -48,33 +48,33 @@ Congo 针对完整的多语言网站进行了优化，并且主题assets中已�
 
 该主题目前支持以下语言：
 
-| 语言                                   | 代码    |
-| --------------------------------------- | ------- |
-| :gb: **英语（默认）**                   | `en`    |
-| :egypt: 阿拉伯语                         | `ar`    |
-| :bangladesh: 孟加拉语                   | `bn`    |
-| :bulgaria: 保加利亚语                   | `bg`    |
-| :cn: 中文 - 简体（中国）                 | `zh-cn` |
-| :taiwan: 中文 - 繁体（台湾）             | `zh-tw` |
-| :flag-cz: 捷克语                         | `cs`    |
-| :netherlands: 荷兰语                    | `nl`    |
-| :finland: 芬兰语                         | `fi`    |
-| :fr: 法语                               | `fr`    |
-| :de: 德语                               | `de`    |
-| :israel: 希伯来语                       | `he`    |
-| :hungary: 匈牙利语                      | `hu`    |
-| :indonesia: 印尼语                       | `id`    |
-| :it: 意大利语                           | `it`    |
-| :jp: 日语                               | `ja`    |
-| :poland: 波兰语                          | `pl`    |
-| :brazil: 葡萄牙语（巴西）                | `pt-br` |
-| :portugal: 葡萄牙语（葡萄牙）            | `pt-pt` |
-| :romania: 罗马尼亚语                     | `ro`    |
-| :ru: 俄语                               | `ru`    |
-| :slovakia: 斯洛伐克语                     | `sk`    |
-| :es: 西班牙语（西班牙）                  | `es`    |
-| :tr: 土耳其语                            | `tr`    |
-| :ukraine: 乌克兰语                       | `uk`    |
+| 语言                          | 代码    |
+| ----------------------------- | ------- |
+| :gb: **英语（默认）**         | `en`    |
+| :egypt: 阿拉伯语              | `ar`    |
+| :bangladesh: 孟加拉语         | `bn`    |
+| :bulgaria: 保加利亚语         | `bg`    |
+| :cn: 中文 - 简体（中国）      | `zh-cn` |
+| :taiwan: 中文 - 繁体（台湾）  | `zh-tw` |
+| :flag-cz: 捷克语              | `cs`    |
+| :netherlands: 荷兰语          | `nl`    |
+| :finland: 芬兰语              | `fi`    |
+| :fr: 法语                     | `fr`    |
+| :de: 德语                     | `de`    |
+| :israel: 希伯来语             | `he`    |
+| :hungary: 匈牙利语            | `hu`    |
+| :indonesia: 印尼语            | `id`    |
+| :it: 意大利语                 | `it`    |
+| :jp: 日语                     | `ja`    |
+| :poland: 波兰语               | `pl`    |
+| :brazil: 葡萄牙语（巴西）     | `pt-br` |
+| :portugal: 葡萄牙语（葡萄牙） | `pt-pt` |
+| :romania: 罗马尼亚语          | `ro`    |
+| :ru: 俄语                     | `ru`    |
+| :slovakia: 斯洛伐克语         | `sk`    |
+| :es: 西班牙语（西班牙）       | `es`    |
+| :tr: 土耳其语                 | `tr`    |
+| :ukraine: 乌克兰语            | `uk`    |
 
 默认翻译可以通过在 `i18n/[code].yaml` 中创建自定义文件来覆盖，其中包含翻译字符串。您还可以使用此方法添加新语言。如果您希望与社区分享新的翻译，请[Pull Request](https://github.com/jpanther/congo/pulls)。
 
@@ -125,6 +125,7 @@ Congo 提供了大量的配置参数，用于控制主题的功能。下表概�
 |名称|默认值|描述|
 |---|---|---|
 |`colorScheme`|`"congo"`|要使用的主题颜色方案。有效值为 `congo`（默认）、`avocado`、`cherry`、`fire`、`ocean`、`sapphire` 和 `slate`。有关详细信息，请参阅[颜色方案]({{< ref "getting-started#颜色方案" >}})部分。|
+|`defaultThemeColor`|`"#FFFFFF`|`theme-color` meta 标签的原值（在脚本修改它之前）。meta 标签会根据所选主题而变化（`light` 或 `dark`），但是一些软件（例如 Discord）会使用该标签的原值来显示主题色。|
 |`defaultAppearance`|`"light"`|默认的主题外观，可以是 `light` 或 `dark`。|
 |`autoSwitchAppearance`|`true`|主题外观是否根据访问者的操作系统首选项自动切换。设置为 `false` 以始终使用 `defaultAppearance`。|
 |`enableSearch`|`false`|是否启用站内搜索。设置为 `true` 以启用搜索功能。请注意，搜索功能取决于 [站点配置](#site-configuration) 中的 `outputs.home` 设置正确。|
@@ -177,6 +178,7 @@ Congo 提供了大量的配置参数，用于控制主题的功能。下表概�
 |`verification.bing`|_未设置_|由 Bing 提供的要包含在站点元数据中的站点验证字符串。|
 |`verification.pinterest`|_未设置_|由 Pinterest 提供的要包含在站点元数据中的站点验证字符串。|
 |`verification.yandex`|_未设置_|由 Yandex 提供的要包含在站点元数据中的站点验证字符串。|
+<!-- prettier-ignore-end -->
 
 ## 其他配置文件
 

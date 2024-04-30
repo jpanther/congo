@@ -54,6 +54,7 @@ function add_to_top_elem() {
 
 window.addEventListener("DOMContentLoaded", (event) => {
   add_to_top_elem();
+  setThemeColor();
   var switchers = document.querySelectorAll("[id^='appearance-switcher']");
   switchers.forEach((switcher) => {
     switcher.addEventListener("click", () => {
