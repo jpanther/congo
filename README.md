@@ -28,7 +28,7 @@ Congo is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.
 - Heading anchors, Tables of Contents, Code copy, Buttons, Badges and more
 - HTML and Emoji support in articles 🎉
 - SEO friendly with links for sharing to social media
-- Fathom Analytics and Google Analytics support
+- Fathom Analytics, Plausible Analytics, Umami Analytics and Google Analytics support
 - RSS feeds, Favicons and comments support
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Optimised for performance and accessibility with perfect Lighthouse scores

@@ -125,6 +125,7 @@ Congo 提供了大量的配置参数，用于控制主题的功能。下表概�
 |名称|默认值|描述|
 |---|---|---|
 |`colorScheme`|`"congo"`|要使用的主题颜色方案。有效值为 `congo`（默认）、`avocado`、`cherry`、`fire`、`ocean`、`sapphire` 和 `slate`。有关详细信息，请参阅[颜色方案]({{< ref "getting-started#颜色方案" >}})部分。|
+|`defaultThemeColor`|`"#FFFFFF`|`theme-color` meta 标签的原值（在脚本修改它之前）。meta 标签会根据所选主题而变化（`light` 或 `dark`），但是一些软件（例如 Discord）会使用该标签的原值来显示主题色。|
 |`defaultAppearance`|`"light"`|默认的主题外观，可以是 `light` 或 `dark`。|
 |`autoSwitchAppearance`|`true`|主题外观是否根据访问者的操作系统首选项自动切换。设置为 `false` 以始终使用 `defaultAppearance`。|
 |`enableSearch`|`false`|是否启用站内搜索。设置为 `true` 以启用搜索功能。请注意，搜索功能取决于 [站点配置](#site-configuration) 中的 `outputs.home` 设置正确。|
