@@ -48,37 +48,39 @@ Congo is optimised for full multilingual websites and theme assets are translate
 
 The theme currently supports the following languages out of the box:
 
-| Language                                | Code    |
-| --------------------------------------- | ------- |
-| :gb: **English (default)**              | `en`    |
-| :egypt: Arabic                          | `ar`    |
-| :bangladesh: Bengali                    | `bn`    |
-| :bulgaria: Bulgarian                    | `bg`    |
-| :cn: Chinese - Simplified (China)       | `zh-cn` |
-| :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
-| :flag-cz: Czech                         | `cs`    |
-| :netherlands: Dutch                     | `nl`    |
-| :finland: Finnish                       | `fi`    |
-| :fr: French                             | `fr`    |
-| :de: German                             | `de`    |
-| :israel: Hebrew                         | `he`    |
-| :hungary: Hungarian                     | `hu`    |
-| :indonesia: Indonesian                  | `id`    |
-| :it: Italian                            | `it`    |
-| :jp: Japanese                           | `ja`    |
-| :kr: Korean                             | `ko`    |
-| :poland: Polish                         | `pl`    |
-| :brazil: Portuguese (Brazil)            | `pt-br` |
-| :portugal: Portuguese (Portugal)        | `pt-pt` |
-| :romania: Romanian                      | `ro`    |
-| :ru: Russian                            | `ru`    |
-| :slovakia: Slovak                       | `sk`    |
-| :es: Spanish (Spain)                    | `es`    |
-| :sweden: Swedish                        | `sv`    |
-| :flag-lk: Tamil                         | `ta`    |
-| :tr: Turkish                            | `tr`    |
-| :ukraine: Ukrainian                     | `uk`    |
-| :vietnam: Vietnamese                    | `vi`    |
+| Language                                | Code         |
+| --------------------------------------- | ------------ |
+| :gb: **English (default)**              | `en`         |
+| :egypt: Arabic                          | `ar`         |
+| :bangladesh: Bengali                    | `bn`         |
+| :bulgaria: Bulgarian                    | `bg`         |
+| :cn: Chinese - Simplified               | `zh-Hans`    |
+| :cn: Chinese - Simplified (China)       | `zh-Hans-CN` |
+| :taiwan: Chinese - Traditional          | `zh-Hant`    |
+| :taiwan: Chinese - Traditional (Taiwan) | `zh-Hant-TW` |
+| :flag-cz: Czech                         | `cs`         |
+| :netherlands: Dutch                     | `nl`         |
+| :finland: Finnish                       | `fi`         |
+| :fr: French                             | `fr`         |
+| :de: German                             | `de`         |
+| :israel: Hebrew                         | `he`         |
+| :hungary: Hungarian                     | `hu`         |
+| :indonesia: Indonesian                  | `id`         |
+| :it: Italian                            | `it`         |
+| :jp: Japanese                           | `ja`         |
+| :kr: Korean                             | `ko`         |
+| :poland: Polish                         | `pl`         |
+| :brazil: Portuguese (Brazil)            | `pt-br`      |
+| :portugal: Portuguese (Portugal)        | `pt-pt`      |
+| :romania: Romanian                      | `ro`         |
+| :ru: Russian                            | `ru`         |
+| :slovakia: Slovak                       | `sk`         |
+| :es: Spanish (Spain)                    | `es`         |
+| :sweden: Swedish                        | `sv`         |
+| :flag-lk: Tamil                         | `ta`         |
+| :tr: Turkish                            | `tr`         |
+| :ukraine: Ukrainian                     | `uk`         |
+| :vietnam: Vietnamese                    | `vi`         |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 

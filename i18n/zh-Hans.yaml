@@ -1,0 +1,59 @@
+article:
+  anchor_label: "锚点"
+  date: "{{ .Date }}"
+  date_updated: "更新于 {{ .Date }}"
+  draft: "草稿"
+  edit_title: "编辑内容"
+  reading_time:
+    other: "{{ .Count }} 分钟"
+  reading_time_title: "预计阅读"
+  table_of_contents: "目录"
+  word_count:
+    one: "{{ .Count }} 字"
+    other: "{{ .Count }} 字"
+
+author:
+  byline_title: "作者"
+
+code:
+  copy: "复制"
+  copied: "已复制"
+
+error:
+  404_title: "找不到网页 :confused:"
+  404_error: "404 错误"
+  404_description: "您请求的页面似乎不存在。"
+
+footer:
+  dark_appearance: "切换为深色模式"
+  light_appearance: "切换为浅色模式"
+  powered_by: "由 {{ .Hugo }} &amp; {{ .Congo }} 强力驱动"
+
+list:
+  externalurl_title: "链接到外部网站"
+  no_articles: "这里还没有任何文章可以列出。"
+
+nav:
+  scroll_to_top_title: "回到顶部"
+  skip_to_main: "跳到主要内容"
+
+search:
+  open_button_title: "搜索 (/)"
+  close_button_title: "关闭 (Esc)"
+  input_placeholder: "搜索"
+
+sharing:
+  email: "通过电子邮件发送"
+  facebook: "分享到 Facebook"
+  linkedin: "分享到 LinkedIn"
+  mastodon: "嘟嘟到 Mastodon"
+  pinterest: "钉到 Pinterest"
+  reddit: "提交到 Reddit"
+  twitter: "分享到 Twitter"
+  telegram: "分享到 Telegram"
+  line: "分享到 LINE"
+  weibo: "分享到 微博"
+  # x-twitter: "Post on X"
+
+shortcode:
+  recent_articles: "最近的文章"
