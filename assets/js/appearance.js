@@ -39,17 +39,24 @@ if (document.documentElement.getAttribute("data-auto-appearance") === "true") {
 }
 
 function add_to_top_elem() {
-  var body = document.body,
-    html = document.documentElement;
+  var body = document.body;
+  var html = document.documentElement;
 
-  const height = Math.max(
-    body.scrollHeight,
-    body.offsetHeight,
-    html.clientHeight,
-    html.scrollHeight,
-    html.offsetHeight
-  ) - 150;
-  document.getElementById("to-top").hidden = height < window.innerHeight;
+  const height =
+    Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    ) - 150;
+
+  const elem = document.getElementById("to-top");
+  if (elem === null || elem === undefined) {
+    return;
+  }
+
+  elem.hidden = height < window.innerHeight;
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {

@@ -29,10 +29,12 @@
     <div class="relative flex grow flex-col">
       <main id="main-content" class="grow">
         {{ block "main" . }}{{ end }}
+      </main>
+      {{ if .Site.Params.footer.showScrollToTop | default true }}
         <div
           class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
           id="to-top"
-          hidden
+          hidden="{{ .Site.Params.footer.showScrollToTop | default true -}}"
         >
           <a
             href="#the-top"
@@ -43,7 +45,7 @@
             &uarr;
           </a>
         </div>
-      </main>
+      {{ end }}
       {{- partial "footer.html" . -}}
       {{ if .Site.Params.enableSearch | default false }}
         {{- partial "search.html" . -}}
