@@ -53,7 +53,7 @@
         {{ $width = div .Width 2 }}
         {{ $height = div .Height 2 }}
       {{ end }}
-      {{ if $webp }}
+      {{ if and $webp (ne .MediaType.SubType "gif") }}
         <source
           {{ if lt .Width 660 }}
             {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
