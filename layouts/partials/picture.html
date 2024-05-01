@@ -24,7 +24,7 @@
       {{ end }}
     {{ end }}
     {{ if (eq "" $width $height) }}
-      {{ warnf "Can't detect width and height for SVG %s" .RelPermalink }}
+      {{ warnf "[CONGO] Can't detect width and height for SVG %s" .RelPermalink }}
       {{/* do not use lazy without dimensions */}}
       {{ $lazy = false }}
     {{ end }}
