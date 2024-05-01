@@ -2,6 +2,7 @@
 /assets/lib/
 
 /layouts/_default/_markup/*.html
+/layouts/partials/picture.html
 /layouts/shortcodes/figure.html
 /layouts/shortcodes/screenshot.html
 
