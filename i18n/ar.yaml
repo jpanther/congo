@@ -51,6 +51,7 @@ sharing:
   pinterest: "تثبيت على بينتريست"
   reddit: "نشر على ريديت"
   twitter: "تغريد على تويتر"
+  # threads: "Post on Threads"
   telegram: "شارك على تيليجرام"
   line: "شارك على لاين"
   # weibo: "Share on Weibo"

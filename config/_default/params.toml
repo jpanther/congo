@@ -53,7 +53,7 @@ fingerprintAlgorithm = "sha256"
   showTaxonomies = false
   showWordCount = false
   showComments = false
-  # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "telegram", "line", "weibo"]
+  # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "threads", "telegram", "line", "weibo"]
 
 [list]
   showBreadcrumbs = false
@@ -78,7 +78,7 @@ fingerprintAlgorithm = "sha256"
   # script = ""
 
 #[umamiAnalytics]
-#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"  
+#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 #  region = "eu"  # can be either "eu" or "us"
 
 [verification]

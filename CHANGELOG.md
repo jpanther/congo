@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Umami Analytics support ([#832](https://github.com/jpanther/congo/pull/832))
 - Theme parameter to set a default HTML theme colour ([#849](https://github.com/jpanther/congo/pull/849))
 - New icon for `bluesky` ([#851](https://github.com/jpanther/congo/pull/851))
+- Support for article sharing to Threads ([#869](https://github.com/jpanther/congo/issues/869))
 
 ### Changed
 

@@ -50,6 +50,7 @@ sharing:
   pinterest: "Pinterest'te pinle"
   reddit: "Reddit'te gönder"
   twitter: "Twitter'da Tweetle"
+  # threads: "Post on Threads"
   telegram: "Telegram'da paylaş"
   line: "LINE'da paylaş"
   weibo: "Weibo'da paylaş"

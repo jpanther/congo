@@ -51,6 +51,7 @@ sharing:
   pinterest: "Pin no Pinterest"
   reddit: "Postar no Reddit"
   twitter: "Tweet no Twitter"
+  # threads: "Post on Threads"
   telegram: "Compartilhar pelo Telegram"
   line: "Compartilhar pelo LINE"
   weibo: "Compartilhar pelo weibo"

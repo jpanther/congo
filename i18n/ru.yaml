@@ -55,6 +55,7 @@ sharing:
   pinterest: "Поделиться на Pinterest"
   reddit: "Опубликовать на Reddit"
   twitter: "Опубликовать на Twitter"
+  # threads: "Post on Threads"
   telegram: "Поделиться на Telegram"
   line: "Поделиться на LINE"
   weibo: "Поделиться на Weibo"

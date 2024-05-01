@@ -51,6 +51,7 @@ sharing:
   pinterest: "Pinterest에 핀하기"
   reddit: "Reddit에 게시하기"
   twitter: "Twitter에 트윗하기"
+  # threads: "Post on Threads"
   telegram: "Telegram에 공유하기"
   line: "LINE에 공유하기"
   weibo: "Weibo에 공유하기"
