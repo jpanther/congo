@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Featured images overlap page title when article metadata hidden ([#827](https://github.com/jpanther/congo/issues/827))
 - Inconsistent picture rendering between `figure` shortcode and Markdown render hook ([#828](https://github.com/jpanther/congo/issues/828))
 - Animated GIF files are static when `enableImageWebp` is enabled ([#866](https://github.com/jpanther/congo/issues/866))
+- Next article pagination link animation is inverted ([#870](https://github.com/jpanther/congo/issues/870))
 
 ## [2.8.2] - 2024-04-17
 
