@@ -11,6 +11,6 @@ demosite = "https://jpanther.github.io/congo/"
 tags = ["blog", "minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
 features = ["syntax highlighting", "dark mode", "emoji"]
 
-[author]
+[params.author]
   name = "James Panther"
   homepage = "https://jamespanther.com/"
