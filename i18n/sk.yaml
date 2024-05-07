@@ -51,6 +51,7 @@ sharing:
   pinterest: "Pin na Pinterest"
   reddit: "Odoslať na Reddit"
   twitter: "Tweet na Twitteri"
+  # threads: "Post on Threads"
   telegram: "Zdieľaj na Telegram"
   line: "Zdieľaj na LINE"
   weibo: "Zdieľaj na Weibo"

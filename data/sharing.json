@@ -39,6 +39,11 @@
     "title": "sharing.x-twitter",
     "url": "https://x.com/intent/tweet/?url=%s&text=%s"
   },
+  "threads": {
+    "icon": "threads",
+    "title": "sharing.threads",
+    "url": "https://www.threads.net/intent/post?text=%s %s"
+  },
   "telegram": {
     "icon": "telegram",
     "title": "sharing.telegram",

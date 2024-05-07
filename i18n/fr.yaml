@@ -51,6 +51,7 @@ sharing:
   pinterest: "Poster sur Pinterest"
   reddit: "Poster sur Reddit"
   twitter: "Tweeter"
+  # threads: "Post on Threads"
   telegram: "Partager sur Telegram"
   line: "Partager sur LINE"
   weibo: "Partager sur Weibo"
