@@ -50,7 +50,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [pfisterer.dev](https://pfisterer.dev)                                 | Personal site and Blog          |
 | [davidrothera.me](https://davidrothera.me)                             | Personal site and Blog          |
 | [sug.bitprism.net](https://sug.bitprism.net)                           | Personal Site and Blog          |
-| [arjuns.me](https://arjuns.me)                                         | Personal Site and Blog          |
 | [statistix.be](https://statistix.be/)                                  | Professional site               |
 | [sathyabh.at](https://sathyabh.at)                                     | Personal Site and Blog          |
 | [leonidasv.com](https://leonidasv.com/)                                | Personal site and Blog          |
@@ -77,5 +76,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [hosni.info](https://hosni.info/)                                      | Personal site and Tech Blog     |
 | [mattstrayer.com](https://www.mattstrayer.com/)                        | Personal Site and Blog          |
 | [noamlerner.com](https://www.noamlerner.com/)                          | Personal blog (English/Hebrew)  |
+| [jneidel.com](https://jneidel.com)                                     | Personal site and blog          |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
