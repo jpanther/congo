@@ -77,5 +77,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [mattstrayer.com](https://www.mattstrayer.com/)                        | Personal Site and Blog          |
 | [noamlerner.com](https://www.noamlerner.com/)                          | Personal blog (English/Hebrew)  |
 | [jneidel.com](https://jneidel.com)                                     | Personal site and blog          |
+| [fernando.info](https://www.fernando.info)                             | Personal site                   |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
