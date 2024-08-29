@@ -1,0 +1,61 @@
+article:
+  anchor_label: "Anchor"
+  date: "{{ .Date }}"
+  date_updated: "Oppdatert: {{ .Date }}"
+  draft: "Utkast"
+  edit_title: "Rediger innhold"
+  reading_time:
+    one: "{{ .Count }} min"
+    other: "{{ .Count }} min"
+  reading_time_title: "Lesetid"
+  table_of_contents: "Innholdsfortegnelse"
+  word_count:
+    one: "{{ .Count }} ord"
+    other: "{{ .Count }} ord"
+
+author:
+  byline_title: "Forfatter"
+
+code:
+  copy: "Kopier"
+  copied: "Kopiert"
+
+error:
+  404_title: "Side ikke funnet :confused:"
+  404_error: "Feil 404"
+  404_description: "Finner ikke siden du ser etter."
+
+footer:
+  dark_appearance: "Bytt til mørk modus"
+  light_appearance: "Bytt til lys modus"
+  powered_by: "Powered by {{ .Hugo }} &amp; {{ .Congo }}"
+
+list:
+  externalurl_title: "Lenke til ekstern side"
+  no_articles: "Det finnes ingen artikler å vise her ennå."
+
+nav:
+  scroll_to_top_title: "Scroll til toppen"
+  skip_to_main: "Hopp til hovedinnholdet"
+
+search:
+  open_button_title: "Søk (/)"
+  close_button_title: "Lukk (Esc)"
+  input_placeholder: "Søk"
+
+sharing:
+  email: "Send via e-post"
+  facebook: "Del på Facebook"
+  linkedin: "Del på LinkedIn"
+  mastodon: "Toot på Mastodon"
+  pinterest: "Pin på Pinterest"
+  reddit: "Post til Reddit"
+  twitter: "Tweet på Twitter"
+  threads: "Post på Threads"
+  telegram: "Del på Telegram"
+  line: "Del på LINE"
+  weibo: "Del på Weibo"
+  x-twitter: "Post på X"
+
+shortcode:
+  recent_articles: "Nylig publisert"
