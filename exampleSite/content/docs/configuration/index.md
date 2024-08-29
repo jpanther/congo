@@ -48,40 +48,38 @@ Congo is optimised for full multilingual websites and theme assets are translate
 
 The theme currently supports the following languages out of the box:
 
-| Language                       | Code         |
-| ------------------------------ | ------------ |
-| **English (default)**          | `en`         |
-| Arabic                         | `ar`         |
-| Bengali                        | `bn`         |
-| Bulgarian                      | `bg`         |
-| Chinese - Simplified           | `zh-Hans`    |
-| Chinese - Simplified (China)   | `zh-Hans-CN` |
-| Chinese - Traditional          | `zh-Hant`    |
-| Chinese - Traditional (Taiwan) | `zh-Hant-TW` |
-| Czech                          | `cs`         |
-| Dutch                          | `nl`         |
-| Finnish                        | `fi`         |
-| French                         | `fr`         |
-| German                         | `de`         |
-| Hebrew                         | `he`         |
-| Hungarian                      | `hu`         |
-| Indonesian                     | `id`         |
-| Italian                        | `it`         |
-| Japanese                       | `ja`         |
-| Korean                         | `ko`         |
-| Norwegian - Bokmål             | `nb`         |
-| Polish                         | `pl`         |
-| Portuguese (Brazil)            | `pt-br`      |
-| Portuguese (Portugal)          | `pt-pt`      |
-| Romanian                       | `ro`         |
-| Russian                        | `ru`         |
-| Slovak                         | `sk`         |
-| Spanish (Spain)                | `es`         |
-| Swedish                        | `sv`         |
-| Tamil                          | `ta`         |
-| Turkish                        | `tr`         |
-| Ukrainian                      | `uk`         |
-| Vietnamese                     | `vi`         |
+| Language              | Code      |
+| --------------------- | --------- |
+| **English (default)** | `en`      |
+| Arabic                | `ar`      |
+| Bengali               | `bn`      |
+| Bulgarian             | `bg`      |
+| Chinese - Simplified  | `zh-Hans` |
+| Chinese - Traditional | `zh-Hant` |
+| Czech                 | `cs`      |
+| Dutch                 | `nl`      |
+| Finnish               | `fi`      |
+| French                | `fr`      |
+| German                | `de`      |
+| Hebrew                | `he`      |
+| Hungarian             | `hu`      |
+| Indonesian            | `id`      |
+| Italian               | `it`      |
+| Japanese              | `ja`      |
+| Korean                | `ko`      |
+| Norwegian - Bokmål    | `nb`      |
+| Polish                | `pl`      |
+| Portuguese (Brazil)   | `pt-br`   |
+| Portuguese (Portugal) | `pt-pt`   |
+| Romanian              | `ro`      |
+| Russian               | `ru`      |
+| Slovak                | `sk`      |
+| Spanish (Spain)       | `es`      |
+| Swedish               | `sv`      |
+| Tamil                 | `ta`      |
+| Turkish               | `tr`      |
+| Ukrainian             | `uk`      |
+| Vietnamese            | `vi`      |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
