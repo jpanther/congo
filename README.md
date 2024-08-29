@@ -71,7 +71,7 @@ Detailed instructions for each method can be found in the [Installation](https:/
 
    > **Note:** Do not overwrite the `module.toml` file you created above!
 
-   You will find these theme config files in the Hugo cache directory, or [download a copy](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/jpanther/congo/tree/stable/config/_default) from GitHub.
+   You will find these theme config files in the Hugo cache directory, or [download a copy](https://github.com/jpanther/congo/tree/stable/config/_default) from GitHub.
 
 5. Follow the [Getting Started](https://jpanther.github.io/congo/docs/getting-started/) instructions to configure your website.
 
