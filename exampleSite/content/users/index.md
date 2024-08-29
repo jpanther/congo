@@ -76,5 +76,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [victoryuan.com](https://victoryuan.com)                               | Personal Site and blog            |
 | [chenyu.blog](https://chenyu.blog)                                     | Personal site and blog            |
 | [g-snipes.github.io](https://g-snipes.github.io./)                     | Personal site and Music/Tech blog |
+| [aimtune.dev](https://aimtune.dev/)                                    | Personal blog (Turkish/English)   |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
