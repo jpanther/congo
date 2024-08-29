@@ -52,6 +52,7 @@ sharing:
   reddit: "Публикуване в Reddit"
   twitter: "Туит в Twitter"
   telegram: "Споделете в Telegram"
+  # threads: "Post on Threads"
   line: "Споделете в LINE"
   weibo: "Споделете в Weibo"
   # x-twitter: "Post on X"

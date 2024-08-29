@@ -6,6 +6,37 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.9.0] - 2024-08-29
+
+### Added
+
+- New `profile` shortcode
+- Umami Analytics support ([#832](https://github.com/jpanther/congo/pull/832))
+- Theme parameter to set a default HTML theme colour ([#849](https://github.com/jpanther/congo/pull/849))
+- New icon for `bluesky` ([#851](https://github.com/jpanther/congo/pull/851))
+- Support for article sharing to Threads ([#869](https://github.com/jpanther/congo/issues/869))
+- Norwegian Bokmål translation ([#872](https://github.com/jpanther/congo/pull/872))
+- Breadcrumb metadata to page schema ([#885](https://github.com/jpanther/congo/pull/885))
+
+### Changed
+
+- ⚠️ Simplified Chinese language code has changed from `zh-cn` to `zh-Hans`
+- ⚠️ Traditional Chinese language code has changed from `zh-tw` to `zh-Hant`
+- Scroll to top links now use JavaScript to determine when to display ([#806](https://github.com/jpanther/congo/pull/806))
+- Upgrade to Tailwind v3.4.10 ([#930](https://github.com/jpanther/congo/pull/930))
+- Upgrade to Typography v0.5.15 ([#864](https://github.com/jpanther/congo/pull/864), [#927](https://github.com/jpanther/congo/pull/927))
+- Upgrade to ChartJS v4.4.4 ([#881](https://github.com/jpanther/congo/pull/881),[#928](https://github.com/jpanther/congo/pull/928))
+- Upgrade to KaTeX v0.16.11 ([#925](https://github.com/jpanther/congo/pull/925))
+- Upgrade to Mermaid v11.0.2 ([#880](https://github.com/jpanther/congo/pull/880), [#926](https://github.com/jpanther/congo/pull/926))
+
+### Fixed
+
+- Featured images overlap page title when article metadata hidden ([#827](https://github.com/jpanther/congo/issues/827))
+- Inconsistent picture rendering between `figure` shortcode and Markdown render hook ([#828](https://github.com/jpanther/congo/issues/828))
+- Animated GIF files are static when `enableImageWebp` is enabled ([#866](https://github.com/jpanther/congo/issues/866))
+- Next article pagination link animation is inverted ([#870](https://github.com/jpanther/congo/issues/870))
+- Unsafe URL warning in README link ([#901](https://github.com/jpanther/congo/pull/901))
+
 ## [2.8.2] - 2024-04-17
 
 ### Added
@@ -874,7 +905,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Fully documented
 
-[Unreleased]: https://github.com/jpanther/congo/compare/v2.8.2...HEAD
+[Unreleased]: https://github.com/jpanther/congo/compare/v2.9.0...HEAD
+[2.9.0]: https://github.com/jpanther/congo/compare/v2.8.2...v2.9.0
 [2.8.2]: https://github.com/jpanther/congo/compare/v2.8.1...v2.8.2
 [2.8.1]: https://github.com/jpanther/congo/compare/v2.8.0...v2.8.1
 [2.8.0]: https://github.com/jpanther/congo/compare/v2.7.6...v2.8.0

@@ -48,37 +48,38 @@ Congo is optimised for full multilingual websites and theme assets are translate
 
 The theme currently supports the following languages out of the box:
 
-| Language                                | Code    |
-| --------------------------------------- | ------- |
-| :gb: **English (default)**              | `en`    |
-| :egypt: Arabic                          | `ar`    |
-| :bangladesh: Bengali                    | `bn`    |
-| :bulgaria: Bulgarian                    | `bg`    |
-| :cn: Chinese - Simplified (China)       | `zh-cn` |
-| :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
-| :flag-cz: Czech                         | `cs`    |
-| :netherlands: Dutch                     | `nl`    |
-| :finland: Finnish                       | `fi`    |
-| :fr: French                             | `fr`    |
-| :de: German                             | `de`    |
-| :israel: Hebrew                         | `he`    |
-| :hungary: Hungarian                     | `hu`    |
-| :indonesia: Indonesian                  | `id`    |
-| :it: Italian                            | `it`    |
-| :jp: Japanese                           | `ja`    |
-| :kr: Korean                             | `ko`    |
-| :poland: Polish                         | `pl`    |
-| :brazil: Portuguese (Brazil)            | `pt-br` |
-| :portugal: Portuguese (Portugal)        | `pt-pt` |
-| :romania: Romanian                      | `ro`    |
-| :ru: Russian                            | `ru`    |
-| :slovakia: Slovak                       | `sk`    |
-| :es: Spanish (Spain)                    | `es`    |
-| :sweden: Swedish                        | `sv`    |
-| :flag-lk: Tamil                         | `ta`    |
-| :tr: Turkish                            | `tr`    |
-| :ukraine: Ukrainian                     | `uk`    |
-| :vietnam: Vietnamese                    | `vi`    |
+| Language              | Code      |
+| --------------------- | --------- |
+| **English (default)** | `en`      |
+| Arabic                | `ar`      |
+| Bengali               | `bn`      |
+| Bulgarian             | `bg`      |
+| Chinese - Simplified  | `zh-Hans` |
+| Chinese - Traditional | `zh-Hant` |
+| Czech                 | `cs`      |
+| Dutch                 | `nl`      |
+| Finnish               | `fi`      |
+| French                | `fr`      |
+| German                | `de`      |
+| Hebrew                | `he`      |
+| Hungarian             | `hu`      |
+| Indonesian            | `id`      |
+| Italian               | `it`      |
+| Japanese              | `ja`      |
+| Korean                | `ko`      |
+| Norwegian - Bokmål    | `nb`      |
+| Polish                | `pl`      |
+| Portuguese (Brazil)   | `pt-br`   |
+| Portuguese (Portugal) | `pt-pt`   |
+| Romanian              | `ro`      |
+| Russian               | `ru`      |
+| Slovak                | `sk`      |
+| Spanish (Spain)       | `es`      |
+| Swedish               | `sv`      |
+| Tamil                 | `ta`      |
+| Turkish               | `tr`      |
+| Ukrainian             | `uk`      |
+| Vietnamese            | `vi`      |
 
 The default translations can be overridden by creating a custom file in `i18n/[code].yaml` that contains the translation strings. You can also use this method to add new languages. If you'd like to share a new translation with the community, please [open a pull request](https://github.com/jpanther/congo/pulls).
 
@@ -129,6 +130,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |Name|Default|Description|
 |---|---|---|
 |`colorScheme`|`"congo"`|The theme colour scheme to use. Valid values are `congo` (default), `avocado`, `cherry`, `fire`, `ocean`, `sapphire` and `slate`. Refer to the [Colour Schemes]({{< ref "getting-started#colour-schemes" >}}) section for more details.|
+|`defaultThemeColor`|`"#FFFFFF"`|The original value (before any scripts modify it) to use for the `theme-color` meta tag. The meta tag will be changed based on the theme (`light` or `dark`) but it is useful for services that source the original value this tag to display an accent color (e.g. Discord)|
 |`defaultAppearance`|`"light"`|The default theme appearance, either `light` or `dark`.|
 |`autoSwitchAppearance`|`true`|Whether the theme appearance automatically switches based upon the visitor's operating system preference. Set to `false` to force the site to always use the `defaultAppearance`.|
 |`enableSearch`|`false`|Whether site search is enabled. Set to `true` to enable search functionality. Note that the search feature depends on the `outputs.home` setting in the [site configuration](#site-configuration) being set correctly.|
@@ -165,7 +167,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`article.showTaxonomies`|`false`|Whether or not the taxonomies related to this article are displayed.|
 |`article.showWordCount`|`false`|Whether or not article word counts are displayed.|
 |`article.showComments`|`false`|Whether or not the [comments partial]({{< ref "partials#comments" >}}) is included after the article footer.|
-|`article.sharingLinks`|_Not set_|An array of sharing links to display at the end of each article. Valid options include `facebook`, `x-twitter`, `mastodon`, `pinterest`, `reddit`, `linkedin`, `email`, `telegram` and `line`. When not provided, or set to `false`, no links will be displayed.|
+|`article.sharingLinks`|_Not set_|An array of sharing links to display at the end of each article. Valid options include `facebook`, `x-twitter`, `mastodon`, `pinterest`, `reddit`, `linkedin`, `email`, `threads`, `telegram` and `line`. When not provided, or set to `false`, no links will be displayed.|
 |`list.showBreadcrumbs`|`false`|Whether or not breadcrumbs are displayed in the header on list pages.|
 |`list.showTableOfContents`|`false`|Whether or not the table of contents is displayed on list pages.|
 |`list.showTaxonomies`|`false`|Whether or not the taxonomies related to this article are displayed on list pages.|
@@ -178,6 +180,8 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`plausibleAnalytics.domain`|_Not set_|Enter the domain of the website you want to track. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
 |`plausibleAnalytics.event`|_Not set_|Plausible api event proxied URL. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
 |`plausibleAnalytics.script`|_Not set_|Plausible analysis script proxied URL. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
+|`umamiAnalytics.site`|_Not set_|The tracking code generated by Umami Analytics for the website. Refer to the [Analytics docs]({{< ref "partials#analytics" >}}) for more details.|
+|`umamiAnalytics.region`|`eu`|Select the Umami Analytics server region to connect to. The value is a string that can be either `eu` or `us`.|
 |`verification.google`|_Not set_|The site verification string provided by Google to be included in the site metadata.|
 |`verification.bing`|_Not set_|The site verification string provided by Bing to be included in the site metadata.|
 |`verification.pinterest`|_Not set_|The site verification string provided by Pinterest to be included in the site metadata.|

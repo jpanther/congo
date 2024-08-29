@@ -51,6 +51,7 @@ sharing:
   pinterest: "Pinterestでピンする"
   reddit: "Redditに投稿する"
   twitter: "Twitterに投稿する"
+  # threads: "Post on Threads"
   telegram: "Telegramでシェアする"
   line: "LINEでシェアする"
   weibo: "Weiboでシェアする"

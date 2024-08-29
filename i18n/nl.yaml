@@ -51,6 +51,7 @@ sharing:
   pinterest: "Pin op Pinterest"
   reddit: "Verzend naar Reddit"
   twitter: "Tweet op Twitter"
+  # threads: "Post on Threads"
   telegram: "Deel op Telegram"
   line: "Deel op LINE"
   weibo: "Deel op Weibo"

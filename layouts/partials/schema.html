@@ -1,3 +1,17 @@
+{{- define "partials/inline/breadcrumbData" -}}
+  {{- $scratchCtx := .scratch -}}
+  {{- with .parent }}
+    {{ partial "inline/breadcrumbData" (dict "scratch" $scratchCtx "parent" .Parent) }}
+    {{- $scratchCtx.Add "listItem" (slice (dict 
+      "@type" "ListItem"
+      "position" ($scratchCtx.Get "count")
+      "name" (.Title | humanize | title)
+      "item" .Permalink
+    )) -}}
+    {{- $scratchCtx.Add "count" 1 -}}
+  {{- end }}
+{{- end -}}
+
 {{ if .IsHome -}}
   <script type="application/ld+json">
   {
@@ -46,4 +60,33 @@
     "wordCount": "{{ .WordCount }}"
   }
   </script>
-{{ end }}
+  {{- /* Source: https://bullaki.com/projects/web-design/seo-with-hugo-5-breadcrumbs/ */}}
+  {{- $scratch := newScratch -}}
+  {{- $scratch.Set "count" 1 -}}
+  {{ partial "inline/breadcrumbData" (dict "scratch" $scratch "parent" .Parent) }}
+
+  {{- with index (.GetTerms "categories") 0 -}}
+    {{- $scratch.Add "listItem" (slice (dict 
+      "@type" "ListItem"
+      "position" ($scratch.Get "count")
+      "name" .LinkTitle
+      "item" .Permalink
+    )) -}}
+    {{- $scratch.Add "count" 1 -}}
+  {{- end }}
+  
+  
+  {{- $scratch.Add "listItem" (slice (dict 
+    "@type" "ListItem"
+    "position" ($scratch.Get "count")
+    "name" (.Title | humanize | title)
+  )) -}}
+  
+  {{- $scratch.SetInMap "breadcrumb" "@context" "https://schema.org" -}}
+  {{- $scratch.SetInMap "breadcrumb" "@type" "BreadcrumbList" -}}
+  {{- $scratch.SetInMap "breadcrumb" "itemListElement" ($scratch.Get "listItem") -}}
+  
+  <script type="application/ld+json">
+    {{ $scratch.Get "breadcrumb" | jsonify (dict "prefix" " " "indent" "  ") | safeJS }}
+  </script>
+{{- end }}

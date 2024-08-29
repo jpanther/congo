@@ -1,8 +1,8 @@
 ---
-title: "利用例"
+title: "用户"
 date: 2020-08-14
 draft: false
-description: "Congoの実用例。"
+description: "Congo的使用用户。"
 slug: "users"
 tags: ["users", "sample"]
 showDate: false
@@ -12,10 +12,10 @@ showEdit: false
 ---
 
 {{< lead >}}
-Congoを使用して構築された実際のウェブサイト。
+使用Congo构建的真实网站
 {{< /lead >}}
 
-以下は、Congoを使って構築されたウェブサイトのほんの一握りです。このテーマでできることの素晴らしさをご覧ください。
+下面的列表包含了一些使用Congo主题构建的网站。你可以查看这些网站 ，发现一些展示Congo功能的优秀示例。
 
 | Website                                                                | Details                           |
 | ---------------------------------------------------------------------- | --------------------------------- |
@@ -79,4 +79,4 @@ Congoを使用して構築された実際のウェブサイト。
 | [aimtune.dev](https://aimtune.dev/)                                    | Personal blog (Turkish/English)   |
 | [blog.ny4.dev](https://blog.ny4.dev)                                   | Personal site and blog (en/zh)    |
 
-**Congoを使っていますか？** あなたのウェブサイトを加えるために[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)を投げてください。
+**想成为Congo的用户？** 要将您的网站添加到此列表中，请提交[Pull Request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md)来添加。

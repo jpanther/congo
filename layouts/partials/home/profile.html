@@ -3,28 +3,7 @@
     h-full
   {{ end }} flex flex-col items-center justify-center text-center"
 >
-  <header class="mb-3 flex flex-col items-center">
-    {{ $lazy := .Params.enableImageLazyLoading | default .Site.Params.enableImageLazyLoading | default true }}
-    {{ $altText := ($.Site.Language.Params.Author.name | default "Author") }}
-    {{ with .Site.Language.Params.Author.image }}
-      {{ $authorImage := resources.Get . }}
-      {{ if $authorImage }}
-        {{ $imgClass := "mb-2 h-auto w-36 rounded-full" }}
-        {{ partial "picture.html" (dict "img" $authorImage "alt" $altText "class" $imgClass "lazy" $lazy) }}
-      {{ end }}
-    {{ end }}
-    <h1 class="text-4xl font-extrabold">
-      {{ .Site.Language.Params.Author.name | default .Site.Title }}
-    </h1>
-    {{ with .Site.Language.Params.Author.headline }}
-      <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
-        {{ . | markdownify | emojify }}
-      </h2>
-    {{ end }}
-    <div class="mt-1 text-2xl">
-      {{ partialCached "author-links.html" . }}
-    </div>
-  </header>
+  {{ partial "profile.html" }}
   <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
 </article>
 <section>

@@ -1,6 +1,6 @@
 {
   "name": "hugo-congo-theme",
-  "version": "2.8.2",
+  "version": "2.9.0",
   "description": "Congo theme for Hugo",
   "scripts": {
     "preinstall": "rimraf assets/lib",
@@ -9,7 +9,8 @@
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
     "example": "hugo server --bind 0.0.0.0 -p 8008 --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/congo/ ",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "add-icon": "node scripts/index.js add-icon"
   },
   "repository": {
     "type": "git",
@@ -29,17 +30,18 @@
   },
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.12",
-    "chart.js": "^4.4.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "chart.js": "^4.4.4",
     "fuse.js": "^7.0.0",
-    "katex": "^0.16.10",
-    "mermaid": "^10.9.0",
-    "prettier": "^3.2.5",
+    "jsdom": "^25.0.0",
+    "katex": "^0.16.11",
+    "mermaid": "^11.0.2",
+    "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.5.14",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "quicklink": "^2.3.0",
-    "rimraf": "^5.0.5",
-    "tailwindcss": "^3.4.3",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.10",
     "vendor-copy": "^3.0.1"
   },
   "vendorCopy": [],
@@ -76,5 +78,8 @@
       "from": "node_modules/quicklink/dist/quicklink.umd.js",
       "to": "assets/lib/quicklink/quicklink.umd.js"
     }
-  ]
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0"
+  }
 }

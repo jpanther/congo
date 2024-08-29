@@ -28,7 +28,7 @@ Congo is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.
 - Heading anchors, Tables of Contents, Code copy, Buttons, Badges and more
 - HTML and Emoji support in articles 🎉
 - SEO friendly with links for sharing to social media
-- Fathom Analytics and Google Analytics support
+- Fathom Analytics, Plausible Analytics, Umami Analytics and Google Analytics support
 - RSS feeds, Favicons and comments support
 - Advanced customisation using simple Tailwind colour definitions and styles
 - Optimised for performance and accessibility with perfect Lighthouse scores
@@ -71,7 +71,7 @@ Detailed instructions for each method can be found in the [Installation](https:/
 
    > **Note:** Do not overwrite the `module.toml` file you created above!
 
-   You will find these theme config files in the Hugo cache directory, or [download a copy](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/jpanther/congo/tree/stable/config/_default) from GitHub.
+   You will find these theme config files in the Hugo cache directory, or [download a copy](https://github.com/jpanther/congo/tree/stable/config/_default) from GitHub.
 
 5. Follow the [Getting Started](https://jpanther.github.io/congo/docs/getting-started/) instructions to configure your website.
 

@@ -9,6 +9,8 @@ colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
 
+defaultThemeColor = "#FFFFFF"
+
 enableSearch = false
 enableCodeCopy = false
 enableImageLazyLoading = true
@@ -51,7 +53,7 @@ fingerprintAlgorithm = "sha256"
   showTaxonomies = false
   showWordCount = false
   showComments = false
-  # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "telegram", "line", "weibo"]
+  # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "threads", "telegram", "line", "weibo"]
 
 [list]
   showBreadcrumbs = false
@@ -74,6 +76,10 @@ fingerprintAlgorithm = "sha256"
   # domain = "blog.yoursite.com"
   # event = ""
   # script = ""
+
+#[umamiAnalytics]
+#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#  region = "eu"  # can be either "eu" or "us"
 
 [verification]
   # google = ""

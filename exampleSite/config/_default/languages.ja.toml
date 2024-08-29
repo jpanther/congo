@@ -4,7 +4,7 @@ languageDirection = "ltr"
 weight = 2
 
 title = "Congo"
-copyright = "&copy; 2023 Congo contributors"
+copyright = "&copy; 2024 Congo contributors"
 
 [params]
   dateFormat = "2006年1月2日"
