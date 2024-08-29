@@ -38,7 +38,7 @@
     "mermaid": "^11.0.2",
     "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.6.5",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "quicklink": "^2.3.0",
     "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.3",
