@@ -234,3 +234,23 @@ B-->C[Profit]
 {{< /mermaid >}}
 
 You can see some additional Mermaid examples on the [diagrams and flowcharts samples]({{< ref "diagrams-flowcharts" >}}) page.
+
+## Profile
+
+The `profile` shortcode inserts a block displaying the site author's details. The same template is used on Congo's homepage layouts, but can also be inserted in any article content. It has one optional parameter:
+
+<!-- prettier-ignore-start -->
+|Parameter|Description|
+|---|---|
+|`align`|The alignment of the profile elements - valid options include `start`, `center` and `end`. If no value is provided, the `center` alignment will be used.|
+<!-- prettier-ignore-end -->
+
+The template is populated using the author parameters set in the [Language Configuration]({{< ref "configuration#configuration" >}}).
+
+**Example:**
+
+```md
+{{</* profile align="center" */>}}
+```
+
+{{< profile align="center" >}}
