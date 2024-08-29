@@ -48,37 +48,38 @@ Congoは完全な多言語ウェブサイト用に最適化されており、テ
 
 Congoは現在、以下の言語に対応しています:
 
-| Language                                | Code    |
-| --------------------------------------- | ------- |
-| :gb: **English (default)**              | `en`    |
-| :egypt: Arabic                          | `ar`    |
-| :bangladesh: Bengali                    | `bn`    |
-| :bulgaria: Bulgarian                    | `bg`    |
-| :cn: Chinese - Simplified (China)       | `zh-cn` |
-| :taiwan: Chinese - Traditional (Taiwan) | `zh-tw` |
-| :flag-cz: Czech                         | `cs`    |
-| :netherlands: Dutch                     | `nl`    |
-| :finland: Finnish                       | `fi`    |
-| :fr: French                             | `fr`    |
-| :de: German                             | `de`    |
-| :israel: Hebrew                         | `he`    |
-| :hungary: Hungarian                     | `hu`    |
-| :indonesia: Indonesian                  | `id`    |
-| :it: Italian                            | `it`    |
-| :jp: Japanese                           | `ja`    |
-| :kr: Korean                             | `ko`    |
-| :poland: Polish                         | `pl`    |
-| :brazil: Portuguese (Brazil)            | `pt-br` |
-| :portugal: Portuguese (Portugal)        | `pt-pt` |
-| :romania: Romanian                      | `ro`    |
-| :ru: Russian                            | `ru`    |
-| :slovakia: Slovak                       | `sk`    |
-| :es: Spanish (Spain)                    | `es`    |
-| :sweden: Swedish                        | `sv`    |
-| :flag-lk: Tamil                         | `ta`    |
-| :tr: Turkish                            | `tr`    |
-| :ukraine: Ukrainian                     | `uk`    |
-| :vietnam: Vietnamese                    | `vi`    |
+| Language                       | Code    |
+| ------------------------------ | ------- |
+| **English (default)**          | `en`    |
+| Arabic                         | `ar`    |
+| Bengali                        | `bn`    |
+| Bulgarian                      | `bg`    |
+| Chinese - Simplified (China)   | `zh-cn` |
+| Chinese - Traditional (Taiwan) | `zh-tw` |
+| Czech                          | `cs`    |
+| Dutch                          | `nl`    |
+| Finnish                        | `fi`    |
+| French                         | `fr`    |
+| German                         | `de`    |
+| Hebrew                         | `he`    |
+| Hungarian                      | `hu`    |
+| Indonesian                     | `id`    |
+| Italian                        | `it`    |
+| Japanese                       | `ja`    |
+| Korean                         | `ko`    |
+| Norwegian - Bokmål             | `nb`    |
+| Polish                         | `pl`    |
+| Portuguese (Brazil)            | `pt-br` |
+| Portuguese (Portugal)          | `pt-pt` |
+| Romanian                       | `ro`    |
+| Russian                        | `ru`    |
+| Slovak                         | `sk`    |
+| Spanish (Spain)                | `es`    |
+| Swedish                        | `sv`    |
+| Tamil                          | `ta`    |
+| Turkish                        | `tr`    |
+| Ukrainian                      | `uk`    |
+| Vietnamese                     | `vi`    |
 
 翻訳文字列を含むカスタムファイルを `i18n/[code].yaml` に作成することでデフォルトの翻訳をオーバーライドできます。このメソッドを使って新しい言語を追加することもできます。新しい翻訳をコミュニティと共有したい場合、[Pull Request](https://github.com/jpanther/congo/pulls)を作ってください。
 

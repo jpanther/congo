@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Theme parameter to set a default HTML theme colour ([#849](https://github.com/jpanther/congo/pull/849))
 - New icon for `bluesky` ([#851](https://github.com/jpanther/congo/pull/851))
 - Support for article sharing to Threads ([#869](https://github.com/jpanther/congo/issues/869))
+- Norwegian Bokmål translation ([#872](https://github.com/jpanther/congo/pull/872))
 - Breadcrumb metadata to page schema ([#885](https://github.com/jpanther/congo/pull/885))
 
 ### Changed
