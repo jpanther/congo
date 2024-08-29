@@ -36,7 +36,7 @@
     "jsdom": "^24.1.1",
     "katex": "^0.16.10",
     "mermaid": "^10.9.1",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "quicklink": "^2.3.0",
