@@ -30,18 +30,18 @@
   },
   "homepage": "https://github.com/jpanther/congo#readme",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.13",
-    "chart.js": "^4.4.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "chart.js": "^4.4.4",
     "fuse.js": "^7.0.0",
-    "jsdom": "^24.0.0",
-    "katex": "^0.16.10",
-    "mermaid": "^10.9.0",
-    "prettier": "^3.2.5",
+    "jsdom": "^25.0.0",
+    "katex": "^0.16.11",
+    "mermaid": "^11.0.2",
+    "prettier": "^3.3.3",
     "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.5.14",
+    "prettier-plugin-tailwindcss": "^0.6.6",
     "quicklink": "^2.3.0",
-    "rimraf": "^5.0.5",
-    "tailwindcss": "^3.4.3",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.10",
     "vendor-copy": "^3.0.1"
   },
   "vendorCopy": [],
@@ -80,6 +80,6 @@
     }
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2"
+    "@fortawesome/fontawesome-free": "^6.6.0"
   }
 }
