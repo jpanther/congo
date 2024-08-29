@@ -48,33 +48,38 @@ Congo 针对完整的多语言网站进行了优化，并且主题assets中已�
 
 该主题目前支持以下语言：
 
-| 语言                          | 代码    |
-| ----------------------------- | ------- |
-| :gb: **英语（默认）**         | `en`    |
-| :egypt: 阿拉伯语              | `ar`    |
-| :bangladesh: 孟加拉语         | `bn`    |
-| :bulgaria: 保加利亚语         | `bg`    |
-| :cn: 中文 - 简体（中国）      | `zh-cn` |
-| :taiwan: 中文 - 繁体（台湾）  | `zh-tw` |
-| :flag-cz: 捷克语              | `cs`    |
-| :netherlands: 荷兰语          | `nl`    |
-| :finland: 芬兰语              | `fi`    |
-| :fr: 法语                     | `fr`    |
-| :de: 德语                     | `de`    |
-| :israel: 希伯来语             | `he`    |
-| :hungary: 匈牙利语            | `hu`    |
-| :indonesia: 印尼语            | `id`    |
-| :it: 意大利语                 | `it`    |
-| :jp: 日语                     | `ja`    |
-| :poland: 波兰语               | `pl`    |
-| :brazil: 葡萄牙语（巴西）     | `pt-br` |
-| :portugal: 葡萄牙语（葡萄牙） | `pt-pt` |
-| :romania: 罗马尼亚语          | `ro`    |
-| :ru: 俄语                     | `ru`    |
-| :slovakia: 斯洛伐克语         | `sk`    |
-| :es: 西班牙语（西班牙）       | `es`    |
-| :tr: 土耳其语                 | `tr`    |
-| :ukraine: 乌克兰语            | `uk`    |
+| 语言                  | 代码      |
+| --------------------- | --------- |
+| **English (default)** | `en`      |
+| Arabic                | `ar`      |
+| Bengali               | `bn`      |
+| Bulgarian             | `bg`      |
+| Chinese - Simplified  | `zh-Hans` |
+| Chinese - Traditional | `zh-Hant` |
+| Czech                 | `cs`      |
+| Dutch                 | `nl`      |
+| Finnish               | `fi`      |
+| French                | `fr`      |
+| German                | `de`      |
+| Hebrew                | `he`      |
+| Hungarian             | `hu`      |
+| Indonesian            | `id`      |
+| Italian               | `it`      |
+| Japanese              | `ja`      |
+| Korean                | `ko`      |
+| Norwegian - Bokmål    | `nb`      |
+| Polish                | `pl`      |
+| Portuguese (Brazil)   | `pt-br`   |
+| Portuguese (Portugal) | `pt-pt`   |
+| Romanian              | `ro`      |
+| Russian               | `ru`      |
+| Slovak                | `sk`      |
+| Spanish (Spain)       | `es`      |
+| Swedish               | `sv`      |
+| Tamil                 | `ta`      |
+| Turkish               | `tr`      |
+| Ukrainian             | `uk`      |
+| Vietnamese            | `vi`      |
 
 默认翻译可以通过在 `i18n/[code].yaml` 中创建自定义文件来覆盖，其中包含翻译字符串。您还可以使用此方法添加新语言。如果您希望与社区分享新的翻译，请[Pull Request](https://github.com/jpanther/congo/pulls)。
 

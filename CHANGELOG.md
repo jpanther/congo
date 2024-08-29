@@ -18,6 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- ⚠️ Simplified Chinese language code has changed from `zh-cn` to `zh-Hans`
+- ⚠️ Traditional Chinese language code has changed from `zh-tw` to `zh-Hant`
 - Scroll to top links now use JavaScript to determine when to display ([#806](https://github.com/jpanther/congo/pull/806))
 - Upgrade to Tailwind v3.4.10 ([#930](https://github.com/jpanther/congo/pull/930))
 - Upgrade to Typography v0.5.15 ([#864](https://github.com/jpanther/congo/pull/864), [#927](https://github.com/jpanther/congo/pull/927))
