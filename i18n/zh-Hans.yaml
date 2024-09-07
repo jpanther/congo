@@ -55,6 +55,7 @@ sharing:
   line: "分享到 LINE"
   weibo: "分享到 微博"
   # x-twitter: "Post on X"
+  # xing: "Share on XING"
 
 shortcode:
   recent_articles: "最近的文章"

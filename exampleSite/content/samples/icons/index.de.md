@@ -86,4 +86,5 @@ Die vollständige Liste der integrierten Icons und ihre entsprechenden Namen fin
 | whatsapp             | {{< icon whatsapp >}}             |
 | x-twitter            | {{< icon x-twitter >}}            |
 | xmark                | {{< icon xmark >}}                |
+| xing                 | {{< icon xing >}}                 |
 | youtube              | {{< icon youtube >}}              |

@@ -56,6 +56,7 @@ sharing:
   line: "LINE இல் பகிரவும்"
   weibo: "Weibo இல் பகிரவும்"
   x-twitter: "X இல் இடுகையிடவும்"
+  # xing: "Share on XING"
 
 shortcode:
   recent_articles: "சமீபத்திய கட்டுரைகள்"
