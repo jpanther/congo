@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade to Tailwind v3.4.11 ([#934](https://github.com/jpanther/congo/pull/934))
+- Upgrade to Mermaid v11.1.0 ([#931](https://github.com/jpanther/congo/pull/931))
+
+### Fixed
+
+- Example site not building due to an issue in the `zh-Hans` translated content ([#944](https://github.com/jpanther/congo/issues/944))
+
 ## [2.9.0] - 2024-08-29
 
 ### Added

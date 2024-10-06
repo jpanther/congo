@@ -1,6 +1,6 @@
 ---
 title: "高级定制"
-date: 2020年8月8日
+date: 2020-08-08
 draft: false
 description: "学习如何手动构建 Congo。"
 summary: "Congo 支持高级定制，包括修改底层的 Tailwind 配置，手动构建主题以及提供自定义 CSS。"
