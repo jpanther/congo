@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- ⚠️ Required Hugo version is now 0.124.0 or later
+- Adopted new `hugo.IsMultilingual` parameter ([#921](https://github.com/jpanther/congo/pull/921))
 - Upgrade to Tailwind v3.4.11 ([#934](https://github.com/jpanther/congo/pull/934))
 - Upgrade to Mermaid v11.1.0 ([#931](https://github.com/jpanther/congo/pull/931))
 
