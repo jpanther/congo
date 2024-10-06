@@ -78,5 +78,6 @@ The list below is just a handful of the websites that are built using the Congo 
 | [g-snipes.github.io](https://g-snipes.github.io./)                     | Personal site and Music/Tech blog |
 | [aimtune.dev](https://aimtune.dev/)                                    | Personal blog (Turkish/English)   |
 | [blog.ny4.dev](https://blog.ny4.dev)                                   | Personal site and blog (en/zh)    |
+| [socrabytes.github.io](https://socrabytes.github.io)                   | Personal site and Tech Blog       |
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
