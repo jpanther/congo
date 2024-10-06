@@ -25,7 +25,7 @@
             </li>
             {{ if .Site.Menus.main }}
               {{ range .Site.Menus.main }}
-                {{ if and (eq .Params.action "locale") (or (not page.IsTranslated) (not site.IsMultiLingual)) }}
+                {{ if and (eq .Params.action "locale") (or (not page.IsTranslated) (not hugo.IsMultilingual)) }}
                   {{ continue }}
                 {{ end }}
                 <li class="group mb-1">
