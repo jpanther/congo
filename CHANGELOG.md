@@ -11,8 +11,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - ⚠️ Required Hugo version is now 0.128.0 or later
 - Adopted new `hugo.IsMultilingual` parameter ([#921](https://github.com/jpanther/congo/pull/921))
 - Adopted new `pagination.pagerSize` config parameter ([#945](https://github.com/jpanther/congo/issues/945))
-- Upgrade to Tailwind v3.4.11 ([#934](https://github.com/jpanther/congo/pull/934))
-- Upgrade to Mermaid v11.1.0 ([#931](https://github.com/jpanther/congo/pull/931))
+- Upgrade to Tailwind v3.4.13 ([#934](https://github.com/jpanther/congo/pull/934), [#947](https://github.com/jpanther/congo/pull/947))
+- Upgrade to Mermaid v11.3.0 ([#931](https://github.com/jpanther/congo/pull/931), [#946](https://github.com/jpanther/congo/pull/946))
 
 ### Fixed
 
