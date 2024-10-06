@@ -58,5 +58,10 @@
     "icon": "weibo",
     "title": "sharing.weibo",
     "url": "https://service.weibo.com/share/share.php?url=%s&appkey=&title=%s&pic=&ralateUid=&lang"
+  },
+  "xing": {
+    "icon": "xing",
+    "title": "sharing.xing",
+    "url": "https://www.xing.com/spi/shares/new?url=%s&follow_url=https://www.xing.com/profile/Philip_Wille"
   }
 }

@@ -56,6 +56,7 @@ sharing:
   line: "Partilhar pelo LINE"
   weibo: "Partilhar pelo Weibo"
   # x-twitter: "Post on X"
+  # xing: "Share on XING"
 
 shortcode:
   recent_articles: "Recente"

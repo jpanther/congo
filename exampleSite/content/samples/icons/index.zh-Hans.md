@@ -82,4 +82,5 @@ Congo内置了对多个[FontAwesome 6](https://fontawesome.com/icons)图标的�
 | whatsapp             | {{< icon whatsapp >}}             |
 | x-twitter            | {{< icon x-twitter >}}            |
 | xmark                | {{< icon xmark >}}                |
+| xing                 | {{< icon xing >}}                 |
 | youtube              | {{< icon youtube >}}              |

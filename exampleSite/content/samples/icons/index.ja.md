@@ -86,4 +86,5 @@ Congo は[FontAwesome 6](https://fontawesome.com/icons)のアイコンをサポ�
 | whatsapp             | {{< icon whatsapp >}}             |
 | x-twitter            | {{< icon x-twitter >}}            |
 | xmark                | {{< icon xmark >}}                |
+| xing                 | {{< icon xing >}}                 |
 | youtube              | {{< icon youtube >}}              |

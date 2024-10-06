@@ -60,6 +60,7 @@ sharing:
   line: "Поширити на LINE"
   weibo: "Поширити на Weibo"
   # x-twitter: "Post on X"
+  # xing: "Share on XING"
 
 shortcode:
   recent_articles: "Недавні дописи"
