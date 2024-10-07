@@ -62,6 +62,6 @@
   "xing": {
     "icon": "xing",
     "title": "sharing.xing",
-    "url": "https://www.xing.com/spi/shares/new?url=%s&follow_url=https://www.xing.com/profile/Philip_Wille"
+    "url": "https://www.xing.com/spi/shares/new?url=%s"
   }
 }
