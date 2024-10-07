@@ -51,12 +51,12 @@ sharing:
   pinterest: "釘到 Pinterest"
   reddit: "發送到 Reddit"
   twitter: "推到 Twitter"
-  # threads: "Post on Threads"
+  threads: "發送到 Threads"
   telegram: "分享到 Telegram"
   line: "分享到 LINE"
-  weibo: "分享到 微博"
-  # x-twitter: "Post on X"
-  # xing: "Share on XING"
+  weibo: "分享到微博"
+  x-twitter: "發送到 X"
+  xing: "分享到 XING"
 
 shortcode:
   recent_articles: "最近的文章"
