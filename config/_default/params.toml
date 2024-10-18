@@ -7,6 +7,11 @@
 
 colorScheme = "congo"
 defaultAppearance = "light" # valid options: light or dark
+[divineRGBVals]
+  debug = false
+  themeColorMap = "congo"
+  tailwindMap = "twcolormap"
+
 autoSwitchAppearance = true
 
 defaultThemeColor = "#FFFFFF"

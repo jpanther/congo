@@ -1,0 +1,273 @@
+{{- /* util/divineRGBVal  consume a tailwind color name and weight, return RGB val in hex format. */ -}}
+{{- $rgbItchy        :=                newScratch -}}
+{{- $themeColors     :=                newScratch -}}
+{{- $debug           :=                (site.Params.divineRGBVals.debug|default false) -}}
+{{- $rgbItchy.Set    "logPrefix"       "[util/divineRGBVal.html] " -}}
+{{- $rgbItchy.Set    "debugPrefix"     (print "[DEBUG]" ( $rgbItchy.Get "logPrefix" )) -}}
+{{- if $debug -}}
+{{-   warnf "%s Debug enabled" ( $rgbItchy.Get "debugPrefix") -}}
+{{- end -}}
+{{- $rgbItchy.Set    "needThemeLookup" false -}}
+{{- $rgbItchy.Set    "twLookupSource"  (site.Params.divineRGBVals.tailwindMap |default nil ) -}}
+{{- $rgbItchy.Set    "returnVal"       "#000000" -}}
+{{- $rgbItchy.Set    "themeSource"     (site.Params.divineRGBVals.themeColorMap|default "site.Data.congo") -}}
+{{- $rgbItchy.Set    "twLookupSource"  (site.Params.divineRGBVals.tailwindMap |default nil ) -}}
+{{- $rgbItchy.Set    "schemeColors"    nil -}}
+{{- $rgbItchy.Set    "primary"         (site.Params.divineRGBVals.primary |default nil) -}}
+{{- $rgbItchy.Set    "secondary"       (site.Params.divineRGBVals.secondary |default nil) -}}
+{{- $rgbItchy.Set    "neutral"         (site.Params.divineRGBVals.neutral |default nil) -}}
+{{- $colorSchemeName :=                $rgbItchy.Get "scheme" -}}
+{{- $ctx             :=                .context -}}
+{{- $color           :=                (.color|default nil) -}}
+{{- $shade           :=                (.shade|default nil) -}}
+{{- $scheme          :=                (.scheme |default nil ) -}}
+{{- $return          :=                (.return |default "RGB" ) -}}
+{{- $validReturns    :=                slice "RGB" "TWColor" "TWColorShade" -}}
+{{- if in $validReturns $return -}}
+{{-   if and $debug (ne $return "RGB") -}}
+{{-     warnf "%s ---- Return set to: %s " ( $rgbItchy.Get "debugPrefix") (string $return) -}}
+{{-   end -}}
+{{-   $rgbItchy.Set  "return"          $return -}}
+{{- else -}}
+{{-   warnf "%s xxxx Unsupported value of %s set for return. Setting to 'RGB' instead." ($rgbItchy.Get "logPrefix") $return  -}}
+{{-   $rgbItchy.Set  "return"          "RGB" -}}
+{{- end -}}
+{{- if $scheme -}}
+{{-   $rgbItchy.Set  "scheme" $scheme -}}
+{{-   if ne $scheme ( site.Params.colorScheme ) -}}
+{{-     $rgbItchy.Set "needThemeLookup" true -}}
+{{-     if $debug -}}
+{{-       warnf "%s ..-. Requested colorScheme '%s' differs from scheme '%s' read from site.Params.colorScheme. Lookup will be necessary." ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "scheme") (site.Params.colorScheme) -}}
+{{-     end -}}
+{{-   end -}}
+{{- else -}}
+{{-   $rgbItchy.Set "scheme" ( site.Params.colorScheme ) -}}
+{{-   if $debug -}}
+{{-     warnf "%s ..-. Theme colorScheme not provided on invocation. Read '%s' from site.Params.colorScheme." ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "scheme") -}}
+{{-   end -}}
+{{- end -}}
+{{- if $shade -}}
+{{-   if $debug -}}
+{{-     warnf "%s .+.. Shade given: %s " ( $rgbItchy.Get "debugPrefix") (string $shade) -}}
+{{-   end -}}
+{{-   if (strings.HasSuffix $shade "0") -}}
+{{-     $rgbItchy.Set "shade" (string $shade) -}}
+{{-     if $debug -}}
+{{-       warnf "%s .-.. Shade ends with 0 : %s " ($rgbItchy.Get "debugPrefix") ($rgbItchy.Get "shade") -}}
+{{-     end -}}
+{{-   end -}}
+{{- end -}}
+{{- if $color -}}
+{{-   if $debug -}}
+{{-     warnf "%s +... Color given: %s " ( $rgbItchy.Get "debugPrefix") $color -}}
+{{-   end -}}
+{{-   if and ( strings.Contains $color "-" ) (strings.HasSuffix $color "0") -}}
+{{-     if $debug -}}
+{{-       warnf "%s -... Color %s seems to be a tailwind-style (color)-(shade)" ( $rgbItchy.Get "debugPrefix") $color -}}
+{{-     end -}}
+{{- /* TODO: There has to be a better way to achieve this ????? */ -}}
+{{-     $c := strings.Split $color "-" -}}
+{{-     $col := delimit (first 1 $c) "" -}}
+{{-     $shd := delimit ( last 1 $c) "" -}}
+{{-     if $debug -}}
+{{-       warnf "%s --.. Color/Shade: %s %s " ( $rgbItchy.Get "debugPrefix") $col $shd -}}
+{{-     end -}}
+{{-     if and ($shade) (ne $shd (string $shade)) -}}
+{{-       warnf "%s --.. We were fed a tailwind-style color-shade ( %s ) and a shade (%s). %s and %s are not the same value. Please provide one or the other. " ( $rgbItchy.Get "logPrefix") $color (string $shade) $shd (string $shade) -}}
+{{-     else -}}
+{{-       $rgbItchy.Set "color" $col -}}
+{{-       $rgbItchy.Set "shade" $shd -}}
+{{-       if $debug -}}
+{{-         warnf "%s ++.. Set Scratch vars Color: %s Shade: %s " ( $rgbItchy.Get "debugPrefix") ( $rgbItchy.Get "color") ( $rgbItchy.Get "shade") -}}
+{{-       end -}}
+{{-     end -}}
+{{-   else -}}
+{{-     if $debug -}}
+{{-       warnf "%s --.. Color '%s' doesn't seem to be a tailwind-style (color)-(shade) combo. " ( $rgbItchy.Get "debugPrefix") $color -}}
+{{-     end -}}
+{{-     $rgbItchy.Set "color" $color -}}
+{{-   end -}}
+{{-   if in ( slice "primary" "secondary" "neutral") ($rgbItchy.Get "color") -}}
+{{-     if $debug -}}
+{{-       warnf "%s -.-. Color '%s' references a theme-abstracted value. Further divination required" ( $rgbItchy.Get "debugPrefix")  ($rgbItchy.Get "color") -}}
+{{-     end -}}
+{{-     $rgbItchy.Set "needThemeLookup" true -}}
+{{-     if not ($rgbItchy.Get "shade") -}}
+{{-       $rgbItchy.Set "shade" ($rgbItchy.Get "color") -}}
+{{-       if $debug -}}
+{{-         warnf "%s .--. Desired Shade unknown. Will lookup theme-value default for %s" ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "color") -}}
+{{-       end -}}
+{{-     end -}}
+{{-   end -}}
+{{- end -}}
+{{- if ($rgbItchy.Get "shade") -}}
+{{-   if $debug -}}
+{{-     warnf "%s .+.. Desired Shade: %s" ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "shade") -}}
+{{-   end -}}
+{{- else -}}
+{{-   $rgbItchy.Set "needThemeLookup" true -}}
+{{-   $rgbItchy.Set "shade" ($rgbItchy.Get "color") -}}
+{{-   if $debug -}}
+{{-     warnf "%s .--. Desired Shade unknown. Will lookup default for %s" ( $rgbItchy.Get "logPrefix") ($rgbItchy.Get "shade") -}}
+{{-   end -}}
+{{- end -}}
+{{- /* 
+At this point, we should know if 
+- we need to lookup theme-specific colormap
+- we need to lookup default shades
+*/ -}}
+{{- if ($rgbItchy.Get "needThemeLookup") -}}
+{{- /*   We need to lookup theme-specific information to return the requested color */ -}}
+{{-   if not (strings.HasSuffix ($rgbItchy.Get "shade") "0") -}}
+{{-     if $debug -}}
+{{-       warnf "%s .--? Shade not provided on invocation. Determining fallback value for '%s'." ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "shade") -}}
+{{-     end -}}
+{{-     with $themeData := (index site.Data ($rgbItchy.Get "themeSource")) -}}
+{{-       range $wK, $wV := $themeData.colorWeights -}}
+{{-         if $debug -}}
+{{-           warnf "%s .--. Iterating default weights: %s %s" ( $rgbItchy.Get "debugPrefix") $wK ($rgbItchy.Get "shade") -}}
+{{-         end -}}
+{{-         if eq $wK ($rgbItchy.Get "shade") -}}
+{{-           $rgbItchy.Set "shade" $wV -}}
+{{-           if $debug -}}
+{{-             warnf "%s .+-. Found weight for K:%s. Set shade to:%s" ( $rgbItchy.Get "debugPrefix") $wK ($rgbItchy.Get "shade") -}}
+{{-           end -}}
+{{-         end -}}
+{{-       end -}}
+{{-       if not (strings.HasSuffix ($rgbItchy.Get "shade") "0") -}}
+{{-         if $debug -}}
+{{-           warnf "%s +--. Default shade for %s not found. Fetching fallback value." ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "shade") -}}
+{{-         end -}}
+{{-         $rgbItchy.Set "shade" $themeData.fallbackWeight -}}
+{{-         warnf "%s .+-. Shade value set to fallback: %s." ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "shade") -}}
+{{-       end -}}
+{{- /*    shade should be set no matter what now. */ -}}
+{{-     else -}}
+{{-       errorf "%s xxx. Theme DataFile %s not accessible, and color shade not provided. Sorry Charlie."  ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "themeSource") -}}
+{{-     end -}}
+{{-   end -}}
+{{-   if and (eq ($rgbItchy.Get "primary") nil) (eq ($rgbItchy.Get "secondary") nil) (eq ($rgbItchy.Get "neutral") nil) -}}
+{{- /*     we need to find the Tailwind colors for our theme.  */ -}}
+{{-     if $debug -}}
+{{-       warnf "%s -.-? %s Scheme Color names unknown. Shortcut this by setting Site params.divineRGBVals.(primary,secondary,neutral) to the values discerned from divination."  ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "scheme") -}}
+{{-     end -}}
+{{-     with $themeData := (index site.Data ($rgbItchy.Get "themeSource")) -}}
+{{-       if $debug -}}
+{{-         warnf "%s ..-? Theme Datafile %s Accessible " ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "themeSource") -}}
+{{-       end -}}
+{{-         range $tK, $tV := $themeData.themeColors -}}
+{{-           if and (reflect.IsMap $tV) (eq ($rgbItchy.Get "primary") nil) (eq ($rgbItchy.Get "secondary") nil) (eq ($rgbItchy.Get "neutral") nil) -}}
+{{-             if $debug -}}
+{{-               warnf "%s -.-?  Iterating themeData: K:%d V:%s " ( $rgbItchy.Get "debugPrefix") $tK $tV -}}
+{{-             end -}}
+{{-             range $label, $blob := $tV -}}
+{{-               if $debug -}}
+{{-                 warnf "%s ..-? Evaluating Scheme %d Name:%s " ( $rgbItchy.Get "debugPrefix") $tK $label -}}
+{{-               end -}}
+{{-               if eq $label ($rgbItchy.Get "scheme") -}}
+{{- /*             we got a match. assign the match to an element in our scratch object */ -}}
+{{-                 $rgbItchy.Set "schemeColors"   $blob -}}
+{{-                 if $debug -}}
+{{-                   warnf "%s ..*? Matched Scheme %s! P: %s, S: %s N: %s " ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "scheme")  ($rgbItchy.Get "schemeColors").primary ($rgbItchy.Get "schemeColors").secondary ($rgbItchy.Get "schemeColors").neutral  }}
+{{-                 end -}}
+{{-                 range $colorRole, $colorName := $blob -}}
+{{-                   $rgbItchy.Set $colorRole $colorName -}}
+{{-                   if not ($themeColors.Get $colorRole) -}}
+{{-                     $themeColors.Set $colorRole $colorName -}}
+{{-                   end -}}
+{{-                   if $debug -}}
+{{-                     warnf "%s +.+? Setting the value of scratch object $rgbItchy.%s. Reading it Back to verify: %s"  ( $rgbItchy.Get "debugPrefix") $colorRole ($rgbItchy.Get $colorRole) -}}
+{{-                   end -}}
+{{-                 end -}}
+{{-                 break -}}
+{{-               end -}}
+{{-             end -}}
+{{-           else -}}
+{{-             break -}}
+{{-           end -}}
+{{-         end -}}
+{{-     else -}}
+{{- /*   We don't have the lookup file for the theme's colors. */ -}}
+{{-       errorf "%s ..x. Theme DataFile %s not accessible, but required to proceed. Sorry.."  ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "themeSource") -}}
+{{-     end -}}
+{{-   else -}}
+{{-     if $debug -}}
+{{-       range $colorRole := slice "primary" "secondary" "neutral" -}}
+{{-         warnf "%s +... %s color set in params as %s"  ( $rgbItchy.Get "debugPrefix") $colorRole ($rgbItchy.Get $colorRole) -}}
+{{-       end -}}
+{{-     end -}}
+{{-   end -}}
+{{- /*   we have the Tailwind colors for the requested scheme.  */ -}}
+{{-   range $colorRole := slice "primary" "secondary" "neutral" -}}
+{{-     if eq $colorRole ( $rgbItchy.Get "color") -}}
+{{-       $rgbItchy.Set "color" ($rgbItchy.Get $colorRole) -}}
+{{-       if $debug -}}
+{{-         warnf "%s +.+? Color %s disambiguated to %s"  ( $rgbItchy.Get "debugPrefix") $colorRole ($rgbItchy.Get $colorRole) -}}
+{{-       end -}}
+{{-       if or (eq  ($rgbItchy.Get "return") "TWColor") (eq ($rgbItchy.Get "return") "TWColorShade" )  -}}
+{{-         if $debug -}}
+{{-           warnf "%s +..+ Returning the Tailwind Color Name for %s %s requested: %s " ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "scheme") $colorRole ($rgbItchy.Get "color") -}}
+{{-         end -}}
+{{-         if eq ($rgbItchy.Get "return") "TWColor" -}}
+{{-           $rgbItchy.Set "returnVal"  (printf "%s" ($rgbItchy.Get "color") ) -}}
+{{-           if $debug -}}
+{{-             warnf "%s *.** returnVal set to color: %s " ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "returnVal") -}}
+{{-           end -}}
+{{-         else if eq ($rgbItchy.Get "return") "TWColorShade" -}} 
+{{-           $rgbItchy.Set "returnVal"  (printf "%s-%s" ($rgbItchy.Get "color") ($rgbItchy.Get "shade") ) -}}
+{{-           if $debug -}}
+{{-             warnf "%s **** returnVal set to color-shade: %s " ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "returnVal") -}}
+{{-           end -}}
+{{-         end -}}
+{{-       end -}}
+{{-     else if $debug -}}
+{{-       warnf "%s +.+? Role %s is %s"  ( $rgbItchy.Get "debugPrefix")  $colorRole ($rgbItchy.Get $colorRole) -}}
+{{-     end -}}
+{{-   end -}}
+{{- else -}}
+{{- /* the lookup in question doesn't need theme-scoped data. just tailwind.  */ -}}
+{{- end -}}
+{{- if eq ( $rgbItchy.Get "return") "RGB"  -}}
+{{-    with $tailwind := (index site.Data ($rgbItchy.Get "twLookupSource")) -}}{{- /* We have the map of tailwind colors to RGB Vals. */ -}}
+{{-      if $debug -}}
+{{-        warnf "%s ...- Tailwind ColorMap Datafile %s Accessible" ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "twLookupSource") -}}
+{{-      end -}}
+{{-      $col := default nil -}}
+{{-      $shd := default nil -}}
+{{-      $val := default nil -}}
+{{-      range $tK, $tV := $tailwind -}}
+{{-        if not $col -}}
+{{-          range $cName, $cVals := $tV }}
+{{-            if $debug -}}
+{{-              warnf "%s *..- Evaluating Tailwind Mapdata %d:%s %s " ( $rgbItchy.Get "debugPrefix") $tK $cName ($rgbItchy.Get "color") -}}
+{{-            end -}}
+{{-            if eq $cName ($rgbItchy.Get "color") -}}
+{{-              if $debug -}}
+{{-                warnf "%s **.+ Found color %s %s"  ( $rgbItchy.Get "debugPrefix") $tK ($rgbItchy.Get "color") -}}
+{{-              end -}}
+{{-              $col = $cVals -}}
+{{-              range $sNum, $sVal := $cVals }}
+{{-                if $debug -}}
+{{-                  warnf "%s **.- Evaluating %d:%s Shades :%s %s " ( $rgbItchy.Get "debugPrefix") $tK $cName $sNum ($rgbItchy.Get "shade") -}}
+{{-                end -}}
+{{-                if eq $sNum ($rgbItchy.Get "shade") -}}
+{{-                  if $debug -}}
+{{-                    warnf "%s **.+ Found  %s:%d RGBVal: %s"  ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "color") $sNum  $sVal -}}
+{{-                  end -}}
+{{-                  $rgbItchy.Set "returnVal" $sVal -}}
+{{-                  if $debug -}}
+{{-                    warnf "%s **** ReturnVal set %s"  ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "returnVal") -}}
+{{-                  end -}}
+{{- /*                 return ( $rgbItchy.Get "returnVal" ) */ -}}
+{{-                end -}}
+{{-              end -}}
+{{-            end -}}
+{{-          end -}}
+{{-        end -}}
+{{-      end -}}
+{{-    else -}}
+{{- /*   We don't have the map of tailwind colors to RGB Vals. */ -}}
+{{-      errorf "%s ...x Tailwind ColorMap Datafile %s not accessible."  ( $rgbItchy.Get "debugPrefix") ($rgbItchy.Get "twLookupSource") -}}
+{{-    end -}}
+{{-  end -}}
+{{-  return ( $rgbItchy.Get "returnVal" ) -}}
