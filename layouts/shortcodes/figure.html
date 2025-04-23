@@ -1,5 +1,5 @@
 {{ if .Get "default" }}
-  {{ template "_internal/shortcodes/figure.html" . }}
+  {{ partial "shortcodes/figure.html" . }}
 {{ else }}
   {{ $url := urls.Parse (.Get "src") }}
   {{ $altText := .Get "alt" }}
