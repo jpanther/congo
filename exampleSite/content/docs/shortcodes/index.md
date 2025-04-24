@@ -114,13 +114,26 @@ data: {
 
 You can see some additional Chart.js examples on the [charts samples]({{< ref "charts" >}}) page.
 
-## Figure
+## Congo-figure ⚠️ 
 
-Congo includes a `figure` shortcode for adding images to content. The shortcode replaces the base Hugo functionality in order to provide additional performance benefits.
+⚠️ Congo includes it's own enhanced variant of the hugo's `figure` shortcode to include images in content: `congo-figure`  
+{{< details summary="➡ Click here to learn more about why this changed ⬅" >}}
+---
+
+In previous version, The shortcode overloaded the embedded `figure` shortcode to provide additional functionality and performance benefits.
+
+With the introduction of Hugo 0.146.x in April 2025, the functionality being used to call the embedded shortcode was [removed](https://github.com/gohugoio/hugo/issues/13553)
+
+Subsequently the practice of re-using an embedded shortcode's name, and providing a mechanism to fall-through to the embedded shortcode's functionality has been [classified as an antipattern](https://discourse.gohugo.io/t/conditional-overloading-of-an-embedded-shortcode-post-0-146-0/54481).
+
+Theme authors have been encouraged to [instead adopt a wrapper-style pattern](https://github.com/halogenica/beautifulhugo/pull/532#issuecomment-2818924671).
+
+---
+{{< /details >}}
 
 When a provided image is a page resource, it will be optimised using Hugo Pipes and scaled in order to provide images appropriate to different device resolutions. If a static asset or URL to an external image is provided, it will be included as-is without any image processing by Hugo.
 
-The `figure` shortcode accepts six parameters:
+The `congo-figure` shortcode accepts six parameters:
 
 <!-- prettier-ignore-start -->
 |Parameter|Description|
@@ -142,7 +155,7 @@ Congo also supports automatic conversion of images included using standard Markd
 **Example:**
 
 ```md
-{{</* figure
+{{</* congo-figure
     src="abstract.jpg"
     alt="Abstract purple artwork"
     caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)"
@@ -153,7 +166,11 @@ Congo also supports automatic conversion of images included using standard Markd
 ![Abstract purple artwork](abstract.jpg "Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)")
 ```
 
-{{< figure src="abstract.jpg" alt="Abstract purple artwork" caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)" >}}
+{{< congo-figure src="abstract.jpg" alt="Abstract purple artwork" caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)" >}}
+
+Fallback functionality example:
+
+{{< congo-figure default=true src="abstract.jpg" alt="Abstract purple artwork" caption="Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)" >}}
 
 ## Gist
 
@@ -162,7 +179,7 @@ The `gist` shortcode can be used to embed a GitHub Gist. It requires two unnamed
 **Example:**
 
 ```md
-{{</* jpanther 26292111fe1eb8e31c60f6dbfef9df28 */>}}
+{{</* gist jpanther 26292111fe1eb8e31c60f6dbfef9df28 */>}}
 ```
 
 {{< gist jpanther 26292111fe1eb8e31c60f6dbfef9df28 >}}
@@ -266,3 +283,4 @@ The template is populated using the author parameters set in the [Language Confi
 ```
 
 {{< profile align="center" >}}
+

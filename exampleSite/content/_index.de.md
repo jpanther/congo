@@ -24,6 +24,6 @@ Dies ist eine Demo-Site, die vollständig mit Congo erstellt wurde. Sie enthält
   </span>
 </div>
 
-{{< figure src="festivities.svg" class="m-auto mt-6 max-w-prose" >}}
+{{< congo-figure src="festivities.svg" class="m-auto mt-6 max-w-prose" >}}
 
 Schau dir die [Beispielseiten]({{< ref "samples" >}}) an, um ein Gefühl für die Möglichkeiten von Congo zu bekommen. Wenn dir gefällt, was du siehst, dann schau dir sich das Projekt auf [Github](https://github.com/jpanther/congo) an oder lies die [Installationsanleitung]({{< ref path="docs/installation" lang="en">}}), um loszulegen.

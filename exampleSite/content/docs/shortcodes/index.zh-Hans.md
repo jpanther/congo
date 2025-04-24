@@ -153,7 +153,7 @@ Congo 还支持使用标准 Markdown 语法包含的图像的自动转换。只�
 ![抽象紫色艺术品](abstract.jpg "照片由[Jr Korpa](https://unsplash.com/@jrkorpa)拍摄，来自[Unsplash](https://unsplash.com/)")
 ```
 
-{{< figure src="abstract.jpg" alt="抽象紫色艺术品" caption="照片由[Jr Korpa](https://unsplash.com/@jrkorpa)拍摄，来自[Unsplash](https://unsplash.com/)" >}}
+{{< congo-figure src="abstract.jpg" alt="抽象紫色艺术品" caption="照片由[Jr Korpa](https://unsplash.com/@jrkorpa)拍摄，来自[Unsplash](https://unsplash.com/)" >}}
 
 ## Icon
 

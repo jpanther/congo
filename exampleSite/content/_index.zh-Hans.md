@@ -24,6 +24,6 @@ description: "这是一个基于Hugo的主题Congo示例。"
   </span>
 </div>
 
-{{< figure src="festivities.svg" class="m-auto mt-6 max-w-prose" >}}
+{{< congo-figure src="festivities.svg" class="m-auto mt-6 max-w-prose" >}}
 
 探索 [示例页面]({{< ref "samples" >}}) 以感受Congo的强大功能。如果你喜欢该主题，请在 [Github](https://github.com/jpanther/congo) 上查看该项目，或阅读 [安装指南]({{< ref "docs/installation" >}}) 开始使用。

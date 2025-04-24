@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### [3.0.0] - 2025-04-xx 
+
+- ⚠️ Required Hugo version is now 0.146.0 or later
+- ⚠️ `figure` shortcode renamed to `congo-figure` to align with evolving practices as hugo matures. See upstream [thread](https://discourse.gohugo.io/t/conditional-overloading-of-an-embedded-shortcode-post-0-146-0/54481/3), [issue](https://github.com/gohugoio/hugo/issues/13553#issuecomment-2819173746)
+
 ### Fixed
 
 - Shortcodes placed after code blocks with line numbers are rendered with incorrect spacing ([#987](https://github.com/jpanther/congo/issues/987))
