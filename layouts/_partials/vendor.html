@@ -1,16 +1,34 @@
 {{ $algorithm := .Site.Params.fingerprintAlgorithm | default "sha256" }}
-{{/* Mermaid */}}
+{{/* Mermaid (optionally with svg-pan-zoom) */}}
 {{ if .Page.HasShortcode "mermaid" }}
   {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
   {{ $mermaidConfig := resources.Get "js/mermaid.js" }}
   {{ $mermaidConfig := $mermaidConfig | resources.Minify }}
-  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint $algorithm }}
-  <script
-    defer
-    type="text/javascript"
-    src="{{ $mermaidJS.Permalink }}"
-    integrity="{{ $mermaidJS.Data.Integrity }}"
-  ></script>
+  {{ if .Site.Params.mermaid.panZoom }}
+    {{ $svgPanZoomLib := resources.Get "lib/svg-pan-zoom/svg-pan-zoom.min.js" }}
+    {{ $mermaidJS := slice $mermaidLib $svgPanZoomLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint $algorithm }}
+    <script>window.mermaidPanZoom=true;</script>
+    <style>
+      .mermaid-panzoom svg{max-width:none!important}
+      .mermaid:fullscreen,.mermaid:-webkit-full-screen{background:var(--tw-prose-body,#fff);padding:2rem;overflow:hidden}
+      .mermaid:fullscreen svg,.mermaid:-webkit-full-screen svg{width:100%!important;height:100%!important}
+      .dark .mermaid:fullscreen,.dark .mermaid:-webkit-full-screen{background:#1a202c}
+    </style>
+    <script
+      defer
+      type="text/javascript"
+      src="{{ $mermaidJS.Permalink }}"
+      integrity="{{ $mermaidJS.Data.Integrity }}"
+    ></script>
+  {{ else }}
+    {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint $algorithm }}
+    <script
+      defer
+      type="text/javascript"
+      src="{{ $mermaidJS.Permalink }}"
+      integrity="{{ $mermaidJS.Data.Integrity }}"
+    ></script>
+  {{ end }}
 {{ end }}
 {{/* Chart */}}
 {{ if .Page.HasShortcode "chart" }}
