@@ -24,3 +24,4 @@ TODO
 
 # MacOS 
 .DS_Store
+.npm/
