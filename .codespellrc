@@ -1,6 +1,6 @@
 [codespell]
 # Ref: https://github.com/codespell-project/codespell#using-a-config-file
-skip = .git,.gitignore,.gitattributes,*.svg,package-lock.json,i18n,*.css,*.min.*,.codespellrc
+skip = .git,.gitignore,.gitattributes,*.svg,package-lock.json,i18n,*.css,*.min.*,.codespellrc,*/lib/*,.npm,.cache,lighthouse.html,samples,*.de.toml,*.es.toml,*.de.md,*.es.md,*.ja.toml,*.zh-Hans.toml
 check-hidden = true
-# ignore-regex = 
+# ignore-regex =
 # ignore-words-list =
