@@ -16,7 +16,7 @@ In addition to all the [default Hugo shortcodes](https://gohugo.io/content-manag
 
 The input is written in Markdown so you can format it however you please.
 
-By default, the alert is presented with an exclaimation triangle icon. To change the icon, include the icon name in the shortcode. Check out the [icon shortcode](#icon) for more details on using icons.
+By default, the alert is presented with an exclamation triangle icon. To change the icon, include the icon name in the shortcode. Check out the [icon shortcode](#icon) for more details on using icons.
 
 **Example:**
 

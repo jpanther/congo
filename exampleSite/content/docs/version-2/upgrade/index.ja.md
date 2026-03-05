@@ -85,7 +85,7 @@ Congo 2.0では新しいテーマ設定パラメーターが多数導入され�
 言語設定ファイルはこのような構造になっています:
 
 ```toml
-# config/_default/languagues.en.toml
+# config/_default/languages.en.toml
 
 languageCode = "en"
 languageName = "English"
