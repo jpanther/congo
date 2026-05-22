@@ -51,7 +51,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-- `figure` shortcode would load recursively when using the `default` paramater ([#1074](https://github.com/jpanther/congo/issues/1074))
+- `figure` shortcode would load recursively when using the `default` parameter ([#1074](https://github.com/jpanther/congo/issues/1074))
 - Some partials not loading due to incorrect file paths ([#1075](https://github.com/jpanther/congo/pull/1075))
 
 ## [2.12.0] - 2025-06-22

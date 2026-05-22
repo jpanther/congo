@@ -86,7 +86,7 @@ The new image resizing features also provide full control over `alt` and `title`
 
 ## A whole lot more
 
-There's countless other minor changes to explore. From being able to display taxonomies on articles and list pages, to using the new `headline` author parameter to customise your homepage. There's also improved JSON-LD strucured data which further optimises SEO performance. Plus the entire theme has had extra polish to ensure a consistent design language.
+There's countless other minor changes to explore. From being able to display taxonomies on articles and list pages, to using the new `headline` author parameter to customise your homepage. There's also improved JSON-LD structured data which further optimises SEO performance. Plus the entire theme has had extra polish to ensure a consistent design language.
 
 :rocket: Check out the [full changelog](https://github.com/jpanther/congo/blob/dev/CHANGELOG.md) to learn more.
 

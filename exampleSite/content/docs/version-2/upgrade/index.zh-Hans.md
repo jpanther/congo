@@ -85,7 +85,7 @@ Congo 2.0 引入了许多新的主题配置参数。虽然主题会适应现有�
 语言配置文件遵循以下结构：
 
 ```toml
-# config/_default/languagues.en.toml
+# config/_default/languages.en.toml
 
 languageCode = "en"
 languageName = "English"
@@ -108,7 +108,7 @@ rtl = false
 语言配置文件遵循以下结构：
 
 ```toml
-# config/_default/languagues.en.toml
+# config/_default/languages.en.toml
 
 languageCode = "en"
 languageName = "English"
