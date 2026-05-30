@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Support for [standard.site](https://standard.site) publications and documents. Set `standardSite.publicationAtUri` to add a `site.standard.publication` discovery hint to the home page, and `standardSite.documentAtUri` on article front matter to add `site.standard.document` and `site.standard.publication` `<link>` tags to article pages.
+
 ## [2.14.0] - 2026-05-23
 
 ### Added

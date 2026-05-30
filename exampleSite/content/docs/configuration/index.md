@@ -189,6 +189,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`verification.bing`|_Not set_|The site verification string provided by Bing to be included in the site metadata.|
 |`verification.pinterest`|_Not set_|The site verification string provided by Pinterest to be included in the site metadata.|
 |`verification.yandex`|_Not set_|The site verification string provided by Yandex to be included in the site metadata.|
+|`standardSite.publicationAtUri`|_Not set_|The AT-URI of the [standard.site](https://standard.site) publication record for this site. When set, a `site.standard.publication` discovery hint `<link>` is added to the home page. Refer to the [Partials docs]({{< ref "partials#standardsite" >}}) for details.|
 <!-- prettier-ignore-end -->
 
 ## Other configuration files

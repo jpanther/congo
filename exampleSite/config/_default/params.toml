@@ -80,3 +80,6 @@ fingerprintAlgorithm = "sha256"
   # bing = ""
   # pinterest = ""
   # yandex = ""
+
+[standardSite]
+  # publicationAtUri = "at://did:plc:abc123/site.standard.publication/rkey"

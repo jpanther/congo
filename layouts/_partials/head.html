@@ -124,6 +124,8 @@
   {{ with .Site.Params.verification.yandex }}
     <meta name="yandex-verification" content="{{ . }}" />
   {{ end }}
+  {{/* standard.site */}}
+  {{ partial "standard-site.html" . }}
   {{ with $.Params.externalUrl }}
     <meta http-equiv="refresh" content="0; url={{ . }}" />
   {{ end }}

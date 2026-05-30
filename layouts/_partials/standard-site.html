@@ -1,0 +1,25 @@
+{{/*
+  Emit standard.site link tags.
+
+  - The home page emits a `site.standard.publication` discovery hint
+    when `standardSite.publicationAtUri` is set.
+  - Pages with `standardSite.documentAtUri` in their front matter emit
+    a `site.standard.document` verification link, and also re-emit the
+    publication link so consumers like Bluesky can resolve the parent
+    publication without an extra round-trip.
+
+  See https://standard.site/docs/verification/ and
+  https://github.com/bluesky-social/atproto/discussions/4978.
+*/}}
+{{ $documentAtUri := "" }}
+{{ with .Params.standardSite }}
+  {{ $documentAtUri = .documentAtUri }}
+{{ end }}
+{{ if or .IsHome $documentAtUri }}
+  {{ with .Site.Params.standardSite.publicationAtUri }}
+    <link rel="site.standard.publication" href="{{ . | safeURL }}" />
+  {{ end }}
+{{ end }}
+{{ with $documentAtUri }}
+  <link rel="site.standard.document" href="{{ . | safeURL }}" />
+{{ end }}

@@ -49,4 +49,5 @@ Front matter parameter default values are inherited from the theme's [base confi
 |`showSummary`|`list.showSummary`|Whether or not the article summary should be displayed on list pages.|
 |`summary`|Auto generated using `summaryLength` (see [site configuration]({{< ref "configuration#site-configuration" >}}))|When `showSummary` is enabled, this is the Markdown string to be used as the summary for this article.|
 |`xml`|`true` unless excluded by `sitemap.excludedKinds`|Whether or not this article is included in the generated `/sitemap.xml` file.|
+|`standardSite.documentAtUri`|_Not set_|The AT-URI of the [standard.site](https://standard.site) `site.standard.document` record for this article. When set, Congo emits `site.standard.document` and `site.standard.publication` `<link>` tags in the article `<head>`. Refer to the [Partials docs]({{< ref "partials#standardsite" >}}) for details.|
 <!-- prettier-ignore-end -->

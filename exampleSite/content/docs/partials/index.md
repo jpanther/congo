@@ -113,6 +113,16 @@ Custom icons can be added by providing your own icon assets in the `assets/icons
 
 Icons can also be used in article content by calling the [icon shortcode]({{< ref "shortcodes#icon" >}}).
 
+## Standard.site
+
+[Standard.site](https://standard.site) defines shared AT Protocol lexicons for long-form publishing. Congo can advertise a site as a `site.standard.publication` and individual articles as `site.standard.document` records by emitting the appropriate `<link>` tags in the page `<head>`.
+
+To enable this feature, set the AT-URI of your publication record on the `standardSite.publicationAtUri` site parameter. When set, Congo adds a `site.standard.publication` discovery hint `<link>` tag to the home page.
+
+To associate an individual article with its `site.standard.document` record, set the AT-URI on the `standardSite.documentAtUri` front matter parameter. When set, Congo emits both a `site.standard.document` verification `<link>` and a `site.standard.publication` reference on that article so consumers like Bluesky can render enhanced link cards without an extra lookup.
+
+You are still responsible for serving the `/.well-known/site.standard.publication` endpoint required by the [standard.site verification spec](https://standard.site/docs/verification/). The simplest way is to place a plain-text file containing your publication AT-URI at `static/.well-known/site.standard.publication`. Make sure your host serves it with a `Content-Type` of `text/plain`.
+
 ## Extensions
 
 Congo also provides for a number of extension partials that allow for expanding upon base functionality.
