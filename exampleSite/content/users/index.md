@@ -81,5 +81,7 @@ The list below is just a handful of the websites that are built using the Congo 
 | [OrO-c的博客](https://blog.oroc.top)                             | Personal site and Literary blog (in Chinese) |
 | [probablyalex.com](https://probablyalex.com)                     | Personal Site and Debate/Tech Blog           |
 | [ebourgess.dev](https://ebourgess.dev)                           | Personal Site and Blog                       |
+| [rxcodelab.github.io](https://rxcodelab.github.io)               | Personal blog (Pharmacy, Tech, Data)         |
+
 
 **Congo user?** To add your site to this list, [submit a pull request](https://github.com/jpanther/congo/blob/dev/exampleSite/content/users/index.md).
